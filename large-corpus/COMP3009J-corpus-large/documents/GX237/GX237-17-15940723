@@ -1,0 +1,461 @@
+The opinion in support of the decision being entered today was not written for publication in a law journal and is not binding precedent of the Board.
+Paper No. 27 UNITED STATES PATENT AND TRADEMARK OFFICE ____________ BEFORE THE BOARD OF PATENT APPEALS AND INTERFERENCES ____________ Ex parte HIDEAKI SHINOTSUKA and MASAYUKI CHATANI ____________ Appeal No. 1997-1665 Application No. 08/289,134 ____________ ON BRIEF ____________ Before KRASS, BARRETT, and BARRY, Administrative Patent Judges.
+BARRY, Administrative Patent Judge.
+DECISION ON APPEAL This is a decision on appeal under 35 U.S.C. Â§ 134 from the rejection of claims 1-17.
+We affirm-in-part.
+BACKGROUND The invention at issue in this appeal relates to handwriting recognition.
+While handwriting recognizers are
+well known, prior recognizers exhibit several deficiencies.
+Most notably, the complicated processes performed thereby are slow.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 2
+The inventive handwriting recognizer includes a display and a transparent input tablet formed thereon. "writes" on the tablet with a stylus.
+A user
+The coordinates of the
+movement of the stylus on the tablet, which represent the user's handwriting, are recorded and the "strokes" of the stylus and are displayed.
+Certain featured characteristics of
+the coordinate data are calculated, i.e., extracted.
+Specifically, the characteristics may include a direction and length of lines, a radius and center angle of arcs, an angle made by lines or the vertex angle of loops, and a number of loops represented by the data.
+By calculating and considering
+only these certain characteristics of the handwriting, the invention can recognize handwriting quickly.
+Claim 1, which is representative for our purposes, follows: 1.
+A handwriting input display apparatus comprising: display means for displaying either a line segment or a character, corresponding to a calculation result of a computer; tablet means, at least a portion of which is transparent, and formed on said display means, for providing coordinate data in response to an operation;
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 3
+at least one input handwriting storing means for storing input handwriting corresponding to said coordinate data provided from said tablet means in response to said operation; means for detecting a feature portion of said coordinate data which corresponds to a set of one or more characteristics of said input handwriting stored in said input handwriting storing means; means for comparing said feature portion of said coordinate data handwriting with a feature portion of a gesture stored in a previously employed gesture data base; and means for determining that said operation is a gesture when said feature portion of said coordinate data is similar to the feature portion of said gesture based on a comparison with a predetermined level of similarity and executing the corresponding gesture; wherein: when either the line segment or the character is being displayed on said display, said feature portion of said coordinate data is provided by said tablet means and in response to said feature portion of said coordinate data, a preselected command is performed to change a display condition of said line segment or said character.
+The references relied on in rejecting the claims follow:
+Shojima et al.
+(Shojima) 24, 1987 Agulnick et al.
+(Agulnick)
+4,653,107 5,347,295
+Mar.
+Sep. 13, 1994 filed Oct. 31, 1990
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 4
+1994
+Capps et al.
+(Capps)
+5,367,453 filed Aug.
+Nov. 22, 2, 1993.
+Claims 1-5 and 12-16 stand rejected under 35 U.S.C. Â§ 103 as obvious over Capps in view of Shojima.
+Claims 6-11 and 17
+stand rejected under 35 U.S.C. Â§ 103 as obvious over Capps in view of Shojima further in view of Agulnick.
+Rather than repeat the
+arguments of the appellants or examiner in toto, we refer the reader to the briefs1 and answer for the respective details thereof.
+OPINION In deciding this appeal, we considered the subject matter on appeal and the rejection advanced by the examiner.
+Furthermore, we duly considered the arguments and evidence of the appellants and examiner.
+After considering the totality
+of the record, we are persuaded that the examiner did not err in rejecting claims 1, 12, 13, and 16.
+We are also persuaded,
+We rely on and refer to the amended appeal brief, (Paper No. 23), in lieu of the original appeal brief, (Paper No. 15), because the latter was defective.
+(Paper No. 22.)
+1
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 5
+however, that he erred in rejecting claims 2-11, 14, 15, and 17.
+Accordingly, we affirm-in-part.
+We begin by noting the following principles from In re Rijckaert, 9 F.3d 1531, 1532, 28 USPQ2d 1955, 1956 (Fed.
+Cir. 1993).
+In rejecting claims under 35 U.S.C.
+Section 103, the examiner bears the initial burden of presenting a prima facie case of obviousness.
+In re Oetiker, 977 F.2d 1443, 1445, 24 USPQ2d 1443, 1444 (Fed.
+Cir. 1992)....
+"A prima facie case of obviousness is established when the teachings from the prior art itself would appear to have suggested the claimed subject matter to a person of ordinary skill in the art."
+In re Bell, 991 F.2d 781, 782, 26 USPQ2d 1529, 1531 (Fed.
+Cir. 1993) (quoting In re Rinehart, 531 F.2d 1048, 1051, 189 USPQ 143, 147 (CCPA 1976)).
+If the examiner fails to establish a prima facie case, the rejection is improper and will be overturned.
+In re Fine, 837 F.2d 1071, 1074, 5 USPQ2d 1596, 1598 (Fed.
+Cir. 1988).
+We next find that the references represent the level of ordinary skill in the art.
+See In re GPAC Inc., 57 F.3d 1573,
+1579, 35 USPQ2d 1116, 1121 (Fed.
+Cir. 1995) (finding that the Board of Patent Appeals and Interference did not err in concluding that the level of ordinary skill was best determined by the references of record); In re Oelrich, 579
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 6
+F.2d 86, 91, 198 USPQ 210, 214 (CCPA 1978) ("[T]he PTO usually must evaluate ... the level of ordinary skill solely on the cold words of the literature.").
+Of course, "`[e]very patent
+application and reference relies to some extent upon knowledge of persons skilled in the art to complement that [which is] disclosed ....'"
+In re Bode, 550 F.2d 656, 660, 193 USPQ 12,
+16 (CCPA 1977) (quoting In re Wiggins, 488 F.2d 538, 543, 179 USPQ 421, 424 (CCPA 1973)).
+Those persons "must be presumed
+to know something" about the art "apart from what the references disclose."
+In re Jacoby, 309 With these
+F.2d 513, 516, 135 USPQ 317, 319 (CCPA 1962).
+principles in mind, we address the obviousness vel non of the following groups of claims: Â· Â· Â· Â· Â· Â· Â· Â· Â· claims claim claims claims claims claim claim claims claim 2 1, 12, and 13
+3-5 6 and 7 8 and 9 10 11 14, 15, and 17 16.
+Claims 1, 12, and 13
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 7
+When the appeal brief was filed, 37 C.F.R. Â§ 1.192(c)(7) (1998) included the following provisions.
+For each ground of rejection which appellant contests and which applies to a group of two or more claims, the Board shall select a single claim from the group and shall decide the appeal as to the ground of rejection on the basis of that claim alone unless a statement is included that the claims of the group do not stand or fall together and ... appellant explains why the claims of the group are believed to be separately patentable.
+Merely pointing out differences in what the claims cover is not an argument ... why the claims are separately patentable.
+In general, claims that are not argued separately stand or fall together.
+In re Kaslow, 707 F.2d 1366, 1376, 217 USPQ When the patentability of
+1089, 1096 (Fed.
+Cir. 1983).
+dependent claims in particular is not argued separately, the claims stand or fall with the claims from which they depend.
+In re King, 801 F.2d 1324, 1325, 231 USPQ 136, 137 (Fed.
+Cir. 1986); In re Sernaker, 702 F.2d 989, 991, 217 USPQ 1, 3 (Fed.
+Cir. 1983).
+Here, the patentability of dependent claims 12 and 13 is not argued separately from the patentability of independent claim 1.
+To the contrary, the appellants state, "[c]laims 1,
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 8
+12, and 13 stand or fall together as a group."
+6.)
+(Appeal Br. at
+We accordingly select claim 1 to represent the group.
+The appellants make four arguments.
+First, they argue,
+"the proposed combination of prior art teachings fails to disclose or suggest the claimed 'means for detecting a feature portion of said coordinate data which corresponds to a set of one or more characteristics of said input handwriting stored in said input handwriting storing means.'"
+(Appeal Br. at 9.)
+They add, "Capps teaches nothing about comparing a feature portion of coordinate data with data in a gesture data base and certainly fails to teach 'means for determining' the result of any such comparison."
+(Id. at 13.)
+"In the patentability context, claims are to be given their broadest reasonable interpretations.
+Moreover,
+limitations are not to be read into the claims from the specification."
+In re Van Geuns, 988 F.2d 1181, 1184, 26
+USPQ2d 1057, 1059 (Fed.
+Cir. 1993)(citing In re Zletz, 893 F.2d 319, 321, 13 USPQ2d 1320, 1322 (Fed.
+Cir. 1989)).
+Here,
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 9
+representative claim 1 specifies in pertinent part the following limitations: means for detecting a feature portion of said coordinate data which corresponds to a set of one or more characteristics of said input handwriting stored in said input handwriting storing means; means for comparing said feature portion of said coordinate data handwriting with a feature portion of a gesture stored in a previously employed gesture data base ....
+Giving the claim its broadest reasonable interpretation, the limitations recite detecting features of coordinate data corresponding to characteristics of input handwriting and comparing the features with data in a gesture database.
+Capps would have suggested the limitations.
+reference teaches inputting handwriting.
+The
+Specifically,
+"information is input into the pen-based computer system 10 by 'writing' on the screen of display assembly 20 with the stylus 38."
+Col. 5, ll. 9-11.
+For example, Figure 4a of Capps shows
+"an ink object 'I' [that] has been entered into the computer system 10 and is displayed on the screen 52."
+24.
+Col. 8, ll. 23-
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 10
+The reference also teaches generating coordinate data corresponding to characteristics of input handwriting.
+Specifically, "[i]nformation concerning the location of the stylus 38 on the screen of the display assembly 20 is input into the CPU 12 ....
+Typically, this information comprises
+the Cartesian (i.e. x 
+Col. 5, ll. 11-17.
+Capps suggests comparing the features with data in a gesture database.
+Specifically, Figure 4b of the reference
+shows that "the ink object I has been recognized by a word recognizer of the system 10 and is replaced with the word object W." Col. 8, ll. 25-27.
+Persons skilled in the art
+would have understood that such word recognition involved comparing features of the ink object I with the word object W.
+For example, Capps incorporates by reference the disclosure
+of a preferred word recognizer found in copending U.S. Application Serial No. 08/068,443, col. 8, ll.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 11
+27-33, which issued as U.S. Patent 5,367,453 (Beernink).
+The
+incorporated disclosure "includes the steps of: a) receiving a handwritten stroke; b) normalizing the stroke; c) matching the normalized stroke against a stroke database to obtain at least one character part interpretation; and d) recognizing a handwritten object using one or more of the character part interpretations."
+attached).
+Beernink, col. 2, ll. 45-49 (copy
+We are persuaded that these teaching would have
+suggested the limitations of "means for detecting ...; means for comparing ...."
+Second, the appellants argue, "Capps ... certainly fails to teach 'means for determining' the result of any such comparison."
+(Appeal Br. at 13.)
+Representative claim 1
+specifies in pertinent part the following limitations: "means for determining that said operation is a gesture when said feature portion of said coordinate data is similar to the feature portion of said gesture based on a comparison with a predetermined level of similarity ...."
+Giving the claim its
+broadest reasonable interpretation, the limitations recite determining that an operation is a gesture based on similarity
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 12
+between the features of the coordinate data and the data in the gesture database.
+Capps would have suggested the limitations.
+The
+reference defines a "gesture" to include a "recognizable stroke on the screen 52."
+Col. 7, ll. 50-53.
+According to
+this definition, the ink object I, which Figure 4a shows to be the handwritten word "more," is a gesture.
+As aforementioned,
+comparison of the ink object against a gesture database, yields recognition as the the word object W, which Figure 4b We are persuaded
+shows to be the typewritten word "more."
+that these teaching would have suggested the limitations of "means for determining that said operation is a gesture when said feature portion of said coordinate data is similar to the feature portion of said gesture based on a comparison with a predetermined level of similarity ...."
+Third, the appellants argue, "Capps cannot teach ...
+'in response to said feature portion of said coordinate data, a preselected command is performed to change a display condition of said line segment or said character.'"
+(Appeal Br. at 11.)
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 13
+Representative claim 1 specifies in pertinent part the following limitations: "in response to said feature portion of said coordinate data, a preselected command is performed to change a display condition of said line segment or said character."
+Giving the claim its broadest reasonable
+interpretation, the limitations recite changing the display of a character in response to the features of the coordinate data.
+Capps would have suggested the limitations.
+The
+reference teaches changing the display of a character.
+Specifically, "the selected word object W (as seen in FIG. 6b) is replaced with the word chosen from the correction list.
+For example, if a
+user selected the word 'bore' from the correction list C of FIG. 6a, the word 'bore' would replace the word 'more' of FIG. 6b."
+Col. 10, ll. 17-22.
+Capps also teaches that the display
+of a character is changed in response to the features of the coordinate data.
+Specifically, the correction list is Col. 8, ll. 41 - col.
+generated based on the word object W. 9, l. 27.
+As aforementioned, the word object W was generated
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 14
+based on features of the coordinate data representing the ink object I.
+We are persuaded that these teaching would have
+suggested the limitations of "in response to said feature portion of said coordinate data, a preselected command is performed to change a display condition of said line segment or said character."
+Fourth, the appellants argue, "there can be no motivation or suggestion to make the combination of prior art teachings suggested by the Examiner."
+art belies the argument.
+(Appeal Br. at 17.)
+The prior
+"`[T]he question is whether there is
+something in the prior art as a whole to suggest the desirability, and thus the obviousness, of making the combination.'"
+In re Beattie, 974 F.2d 1309, 1311-12, 24
+USPQ2d 1040, 1042 (Fed.
+Cir. 1992) (quoting Lindemann Maschinenfabrik GMBH v. American Hoist 
+Cir. 1984)).
+Here, Capps invites the use of known handwriting recognizers.
+Specifically, "any number of commercially
+available word recognition systems can be used to convert an
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 15
+inked object into a recognized word object for the purposes of the present invention."
+Col. 8, ll. 37-40.
+Shojima, in turn, teaches a handwriting recognizer offering several advantages.
+Specifically, "it is an object
+of the present invention to provide an on-line recognition method and apparatus for a handwritten pattern which automatically separates patterns, which does not depend on the order of strokes, the number of strokes and the inclination of the pattern and which operates at a high speed."
+Col. 3, ll. 18-23.
+We are
+persuaded that Capps' invitation to use known handwriting recognizer and Shojima's teaching of automatic separation, independence from the order and number of strokes and the inclination of a pattern, and high speed would have suggested the desirability, and thus the obviousness, of combining Shojima' s teaching of handwriting recognition with Capps' teaching.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 16
+Therefore, we affirm the rejection of claims 1, 12, and 13 as obvious over Capps in view of Shojima. claim 2.
+Next, we address
+Claim 2 The appellants argue, "the asserted combination of prior art references fails to teach or suggest the features of claim 2."
+(Appeal Br. at 15.)
+Claim 2 specifies in pertinent part
+the following limitations: "a plurality of line segments are displayed on said display, and said operation serves to bridge for bridging at least three line segments, said command rearranges at least said three line segments at an equidistant interval to be displayed."
+Accordingly, the limitations
+require rearranging line segments at an equidistant interval.
+The examiner fails to show a suggestion of the limitations in the prior art.
+He admits, "CAPPS is silent
+about bridging or rearranging of the line segments ...."
+(Examiner's Answer at 6.)
+Faced with this silence, the
+examiner alleges, "Shojima however discloses a plurality of line segments being displayed on the display and ... the
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 17
+command rearranges at least three line segments at an equidistant interval to be displayed (figure 10 (a)-(d))."
+(Id.)
+The reference, however, does not support the allegation.
+Although Shojima shows a triangle constituted by three segments, i.e., three sides, fig. 9(a), there is no indication that the sides are rearranged in any way, let alone at an equidistant interval.
+The figures on which the examiner
+relies merely show "[t]he code wrapping by the segment connection list L3 and the normalized segment list L2 ...."
+Col. 8, ll. 50-52.
+The examiner fails to allege, let alone
+show, that Agulnick cures this deficiency.
+In view of the deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "a plurality of line segments are displayed on said display, and said operation serves to bridge for bridging at least three line segments, said command rearranges at least said three line segments at an equidistant interval to be displayed."
+Therefore, we reverse the rejection of claim 2 as
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 18
+obvious over Capps in view of Shojima. claims 3-5.
+Next, we address
+Claims 3-5 The appellants argue that "the prior art references fail to teach or suggest" the features of claims 3-5.
+at 15.)
+(Appeal Br.
+Claim 3-5 each specifies in pertinent part the
+following limitations: "a plurality of line segments are displayed, and said operation serves to designate an intersecting angle between at least two line segments, said command rearranging at least said two line segments at a predetermined angle for representation."
+Accordingly, the limitations require
+rearranging line segments at a predetermined angle.
+The examiner fails to show a suggestion of the limitations in the prior art.
+He admits, "CAPPS is silent
+about rearranging various line segments at a preselected angle ...."
+(Examiner's Answer at 6.)
+Faced with this silence, the
+examiner alleges, "Shojima, however discloses a plurality of line segments being displayed (figure 10 (a)-(d)), rearranging
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 19
+each of the line segments at a preselected angle (figure 5, step 630 and figure 12 (a)) ...."
+(Id.)
+The reference, however, does not support the allegation.
+Although Shojima shows a triangle comprising three segments, i.e., three sides, fig. 9(a), there is no indication that the sides are rearranged in any way, let alone at an equidistant interval.
+The figures on which the examiner relies merely Col. 6, l. 36.
+show "a difference calculation step 630 ...."
+The examiner fails to allege, let alone show, that Agulnick cures this deficiency.
+In view of this deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "a plurality of line segments are displayed, and said operation serves to designate an intersecting angle between at least two line segments, said command rearranging at least said two line segments at a predetermined angle for representation."
+Therefore, we reverse the rejection of Next, we
+claims 3-5 as obvious over Capps in view of Shojima. address claims 6-9.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 20
+Claims 6-9 The appellants argue that the prior art references fail to teach or suggest the features of claims 6-9.
+at 15-16.)
+(Appeal Br.
+Claim 6 and 7 each specifies in pertinent part the
+following limitations: "a plurality of line segments are displayed on said display, and said operation serves to cause said at least two line segments to intersect each other adjacent to a first set of end points of said two line segments, said command rearranging said first set of end points of at least two line segments so as to align said first set of end points on a common straight line."
+Claim 8 and 9
+each specifies in pertinent part the following limitations: "a plurality of line segments are displayed on said display, and said operation serves to enter parallel lines at a predetermined angle with respect to said at least two line segments, said command rearranging said at least two line segments in parallel to each other."
+Accordingly, the
+limitations require rearranging line segments to align end points on a common straight line or to be parallel.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 21
+The examiner fails to show a suggestion of the limitations in the prior art.
+He admits, "CAPPS and Shojima
+fails to disclose operation means to cause two line segments to intersect (claim 6), arrange on straight lines (claim 7), arrange in parallel (claim 8) ...."
+(Examiner's Answer at 7.)
+Faced with this failure, the examiner alleges, "Agulnick however, disclose such operations being performed by a graphic recognizing system wherein plurality of line segments are being displayed and at least two of the line segments are rearranged on a common straight line, rearranged on a [sic] two common straight lines, parallel to each other (figure 42, elements 895 and 900 and column 10, lines 1-31)."
+(Id.)
+The reference, however, does not support the allegation.
+The section of Agulnick on which the examiner relies teaches moving a paragraph to another location.
+Col. 10, ll. 30-31.
+There is no suggestion of rearranging lines in any way, let alone to align end points on a common straight line or to be parallel.
+In view of this deficiency, we are not persuaded
+that teachings from the prior art would have suggested the limitations of "a plurality of line segments are displayed on
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 22
+said display, and said operation serves to cause said at least two line segments to intersect each other adjacent to a first set of end points of said two line segments, said command rearranging said first set of end points of at least two line segments so as to align said first set of end points on a common straight line" or "a plurality of line segments are displayed on said display, and said operation serves to enter parallel lines at a predetermined angle with respect to said at least two line segments, said command rearranging said at least two line segments in parallel to each other."
+Therefore, we reverse the rejection of claims 6-9 as obvious over Capps in view of Shojima further in view of Agulnick.
+Next, we address claim 10.
+Claim 10 The appellants argue that the prior art references fail to teach or suggest the features of claim 10.
+15-16.)
+(Appeal Br. at
+Claim 10 specifies in pertinent part the following
+limitations: "said operation further serves to temporarily stop execution thereof, the execution of said command being temporarily stopped until a release operation is performed."
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 23
+Accordingly, the limitations require temporarily stopping execution of a command.
+The examiner fails to show a suggestion of the limitations in the prior art.
+He admits, "CAPPS is silent
+about the operation being temporarily stopped ...."
+(Examiner's Answer at 8.)
+The examiner fails to allege, let Faced with
+alone show, that Shojima cures this deficiency.
+the deficiency, the examiner alleges, "Agulnick, however, discloses stop operation being performed until a release operation is performed (column 17, lines 1-14 and [sic])."
+(Id.)
+The reference, however, does not support the allegation.
+The section of Agulnick on which the examiner relies teaches "sensing of the proximity of the stylus tip to the display surface of the computer ...."
+Col. 17, ll. 3-4.
+There is no
+suggestion of stopping an operation.
+In view of this
+deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "said operation further serves to temporarily stop execution thereof, the
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 24
+execution of said command being temporarily stopped until a release operation is performed."
+Therefore, we reverse the
+rejection of claim 10 as obvious over Capps in view of Shojima further in view of Agulnick.
+Next, we address claim 11.
+Claim 11 The appellants argue that the prior art references fail to teach or suggest the features of claim 11.
+15-16.)
+(Appeal Br. at
+Claim 11 specifies in pertinent part the following
+limitations: "a plurality of characters are displayed on said display, and said operation serves to enter a straight line with a predetermined relationship with respect to said at least two characters, said command aligning said at least two characters for representation."
+require aligning characters.
+Accordingly, the limitations
+The examiner fails to show a suggestion of the limitations in the prior art.
+He admits, "CAPPS is silent
+about aligning at least two characters with straight line ...."
+(Examiner's Answer at 8.)
+The examiner fails to
+allege, let alone show, that Shojima cures this deficiency.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 25
+Faced with the deficiency, the examiner alleges, "Agulnick, however, inherently discloses a plurality of characters being displayed on the display and the operation serves to enter a straight line with a predetermined relationship with respect to at least two characters, the command aligning at least two characters for representation (column 10, lines 21-63)."
+(Id.)
+The reference, however, does not support the allegation.
+Although the section of Agulnick on which the examiner relies teaches moving attributes of objects, col. 10 ll. 24-25, there is no suggestion of aligning the objects.
+In view of this
+deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "a plurality of characters are displayed on said display, and said operation serves to enter a straight line with a predetermined relationship with respect to said at least two characters, said command aligning said at least two characters for representation."
+Therefore, we reverse the rejection of claim
+11 as obvious over Capps in view of Shojima further in view of Agulnick.
+Next, and last, we address claims 14-17.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 26
+Claims 14-17 The appellants make the following argument.
+[T]he prior art combination asserted by the Examiner fails to teach "a direction and a length of a straight line of a line segment," (claim 14); "a radius and a center angle of an arc," (claim 15); "an angle of a vertex," (claim 16); and "a number of loops defined by said handwriting," (claim 17) which are extracted from a feature portion of coordinate data representing handwritten input, which are then compared to a data base of line directions and lengths, radii and center angles of arcs, angles of vertex, and numbers of loops in order to recognize the handwritten input.
+(Appeal Br. at 16.)
+Claim 14 specifies in pertinent part the
+following limitations: "said set of one or more characteristics of said input handwriting comprises a direction and a length of a straight line of a line segment."
+Claim 15 specifies in pertinent part the following limitations: "said set of one or more characteristics of said input handwriting comprises a radius and a center angle of an arc."
+Claim 16 specifies in pertinent part the following
+limitations: "said set of one or more characteristics of said input handwriting comprises an angle of a vertex."
+Claim 17
+specifies in pertinent part the following limitations: "said set of one or more characteristics of said input handwriting
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 27
+comprises a number of loops defined by said handwriting."
+Accordingly claims 14, 15, 16, and 17 require detecting a direction and a length of a straight line of a line segment, a radius and a center angle of an arc, an angle of a vertex, and a number of loops defined by said handwriting, respectively.
+Regarding claim 14 the examiner alleges, "CAPPS discloses set of one or more characteristics of the input handwriting comprises a direction and a length of a straight line of a line segment (figure 2, element 56b)."
+(Appeal Br. at 6.)
+The reference, however, does not support the allegation.
+Although the drawing element of Capps on which the examiner relies shows "a second header bar 56b, col. 5, l. 58, which is a line, there is no suggestion of detecting the length of the bar.
+The examiner fails to allege, let alone show, that
+Shojima cures this deficiency.
+In view of this deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "said set of one or more characteristics of
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 28
+said input handwriting comprises a direction and a length of a straight line of a line segment."
+Therefore, we reverse the
+rejection of claim 14 as obvious over Capps in view of Shojima.
+Regarding claim 15 the examiner admits, "CAPPS is silent about various characteristics of input hand [sic] handwriting ...."
+(Examiner's Answer at 7.)
+Faced with the silence he
+alleges, "Shojima discloses a set of one characteristic of the input handwriting comprises [sic] a radius and a center angle of an arc (figure 7d)."
+(Id.)
+The reference, however, does
+not support the allegation.
+Although the figure of Shojima on
+which the examiner relies shows an arc, there is no suggestion of detecting the radius or center angle of the arc.
+In view of this deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "said set of one or more characteristics of said input handwriting comprises a radius and a center angle of an arc."
+Therefore, we reverse the rejection of claim 15
+as obvious over Capps in view of Shojima.
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 29
+Regarding claim 16 the examiner asserts, "Shojima discloses a set of one characteristic of the input handwriting comprises an angle of a vertex (figure 12a )."
+Answer at 7.)
+(Examiner's
+The reference supports the assertion.
+Specifically, Shojima calculates the angle of each vertex of each triangle shown in Figure 12 to obtain "angle difference data."
+Col. 9, l. 44.
+The angle difference data inter alia Col. 10, l. 3.
+are used to perform handwriting recognition.
+In view of calculation, we are
+persuaded that teachings from
+the prior art would have suggested the limitations of "said set of one or more characteristics of said input handwriting comprises an angle of a vertex."
+Therefore, we affirm the
+rejection of claim 16 as obvious over Capps in view of Shojima.
+Regarding claim 17 the examiner admits, "CAPPS is silent about various characteristics of input hand [sic] handwriting ...."
+(Examiner's Answer at 8.)
+Faced with the deficiency he
+alleges, "Shojima discloses a set of one characteristic of the input handwriting comprises a number of loops defined by the handwriting (figure 39, elements 847 and 870)."
+(Id.)
+The
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 30
+reference, however, does not support the allegation.
+Specifically, Shojima omits a Figure 39.
+Although Agulnick
+includes a Figure 39, the Figure merely shows "an object being dragged."
+Col. 5, l. 59.
+There is no suggestion of detecting
+a number of loops defined by handwriting.
+In view of this deficiency, we are not persuaded that teachings from the prior art would have suggested the limitations of "said set of one or more characteristics of said input handwriting comprises a number of loops defined by said handwriting."
+Therefore, we reverse the rejection of
+claim 17 as obvious over Capps in view of Shojima further in view of Agulnick.
+Our affirmance are based only on the arguments made in the briefs.
+Arguments not made therein are not before us, are
+not at issue, and are considered waived.
+CONCLUSION In summary, the rejection of claims 1, 12, 13, and 16 under 35 U.S.C. Â§ 103 as obvious over Capps in view of Shojima
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 31
+is affirmed.
+The rejection of claims 2-5 and 12-15 under 35
+U.S.C. Â§ 103 as obvious over Capps in view of Shojima is reversed.
+Furthermore, the rejection of claims 6-11 and 17
+under 35 U.S.C. Â§ 103 as obvious over Capps in view of Shojima further in view of Agulnick is also reversed.
+No time period for taking any subsequent action in connection with this appeal may be extended under 37 C.F.R. Â§ 1.136(a).
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 32
+AFFIRMED-IN-PART
+ERROL A. KRASS Administrative Patent Judge
+LEE E. BARRETT Administrative Patent Judge
+LANCE LEONARD BARRY Administrative Patent Judge
+) ) ) ) ) ) BOARD OF PATENT ) APPEALS ) AND ) INTERFERENCES ) ) ) ) )
+Appeal No. 1997-1665 Application No. 08/289,134
+Page 33
+LLB:pgg Ronald P. Kananen Rader, Fishman 

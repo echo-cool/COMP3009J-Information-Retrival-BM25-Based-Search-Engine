@@ -1,0 +1,235 @@
+"Linux Gazette...making Linux just a little more fun!" __________________________________________________________________ Spare Cycles Needed for Promoting Linux By Bill Duncan, bduncan@teamlinux.org __________________________________________________________________ Ever wish you could do more to promote Linux and yet you never seem to have enough time? Now for a few pennies worth of electricity per day you can put your Linux machine to work promoting Linux! There are a number of distributed computing projects in progress or being organized, and Linux Advocacy teams are one method available to us which can help raise the visibility of Linux.
+What I'd like to describe in this article is one such effort called the RSA Data Security Secret-Key Challenge.
+This article will describe what the project is; why we are doing this and how it might benefit Linux and how to get started.
+There is also a section on who is involved; other links for further information and when to get involved at the end.
+__________________________________________________________________
+What? __________________________________________________________________
+The Secret-Key Challenge is a contest sponsored by RSA Data Security which is being used primarily to further research into the strength of encryption standards.
+The DES challenge was won back in June.
+RSA is offering a $10,000US prize to the winning team which breaks the RC5-32/12/7 challenge which uses a 56 bit key.
+The challenge has been running since January 28th, 1997.
+The status of the various challenges can be seen here.
+The method being used for cracking the code by the various groups is a brute force check of the entire 2^56 keyspace.
+To give you an idea of the magnitude of the problem, consider that a single fast Pentium Pro based system would take in excess of 4000 years to run through the entire keyspace.
+A 200 Mhz Pentium would take about 9000 years.
+__________________________________________________________________
+Why? __________________________________________________________________
+Promoting Linux
+Promoting Linux is the main reason we are participating in this effort.
+We would like to raise public awareness of Linux, and this seems like one of many good avenues for doing it.
+It is a relatively easy and fun way to get a large number of Linux users involved in a publicity effort.
+Linux is in one of those "chicken-and-egg" situations at the moment.
+We need to make more software companies aware that Linux is a market force to be recconned with.
+With more software, it will be easier to convince more users, which will convince more companies etc.
+A snowball effect is what we need to break off the plateau we're on.
+There are many operating system advocacy groups participating in the effort.
+One of the strongest ones at the moment is Apple.
+It seems like they've been putting all their available systems into the effort and are currently ranked number one in the Bovine effort.
+This is the one to beat! The other Linux advocacy group linux@linuxnet.org is in second place on Bovine, but they do not seem to have a presence in the Cyberian effort.
+The group we are involved with, rc5@teamlinux.org is moving up from behind very quickly on Bovine, and are consistantly in the Top 20 teams on Cyberian for the key rates.
+Naturally we hope that you'll consider the team which we are involved with, but both Linux teams have similar goals and reasons for being, and either team would be a good choice.
+Helping to Change Encryption Restrictions
+To prove that 56-bit encryption is insufficient.
+It is high time for the U.S. government to rethink the current encryption export policies and standards.
+Stronger encryption is readily available and the belief that "bad-guys" might restrict themselves to using encryption that could be tapped by the government does not make sense.
+Having Fun!
+It is fun to watch your system work on the project, see the results and get into mild competitions with other teams.
+Your system is probably idle most of the time and it is satisfying to know that all of the "idle-cycles" can now be put to productive use!
+Most groups and teams have some methods available for looking at the statistics.
+Check into these sites on a regular basis, and see how well your team is doing! The competitive aspect can spur growth as it motivates people to get other people involved.
+This is good! __________________________________________________________________
+How? __________________________________________________________________
+There are three overall efforts working on the RSA RC5 Challenge that we know of.
+Each one has different client programs to run and different procedures to follow.
+They also each have their own pros and cons.
+Each overall effort is also divided up into "teams".
+We believe that only the first two groups have active Linux Advocacy groups, but we may be mistaken.
+(The third group had a team called Linux!, but did not have a web address or a way to contact them which we could see.)
+* The Bovine RC5 Cracking Effort Headquarters * The Cyberian RC5-56 Project CommCentre * Infinite Monkeys RC5 Coordinated Attack
+You will need to pick a team.
+Either of the Linux teams will make a good choice and both teams have instructions for setting up which you can read on their respective Websites.
+See the section below for more of a description on both teams.
+The team we are involved with, Team Linux, has members involved with both Bovine and Cyberian, so we will describe both here.
+We will also assume that you are using a Linux machine, although we (Team Linux) don't restrict you to using Linux.
+Our feeling on the matter is that the other machines on our team are "Linux Sympathasizers" or "Linux Wannabee" machines! ;-)
+All groups work on the basis of keyservers handing out work for the distributed systems, or client systems (that's you and me) to work on.
+There is very little network traffic to do this.
+Basically the keyservers hand out a range of keys to work on.
+Your system then checks each key by brute force and contacts the keyserver again when it needs more work to do.
+The programs work at very low priority (nice-level) so that you shouldn't notice any change in interactive sessions, effectively only using "idle cycles".
+The client system also tells the server which range it has checked so that the numbers can show up in your team's statistics.
+(This is the fun part.)
+The following will not be an exhaustive description of either system but will give you a few pointers on setting up.
+For more information, see your team's Web pages.
+Hopefully, this get you started and show you how easy it is.
+__________________________________________________________________
+Bovine Clients
+The Bovine effort has a lot going for it.
+They are well organized; have fast client programs for a number of platforms; have checked a larger portion of the key space and will be giving away a larger portion of the winnings (should they win).
+They have stated that they will give $8000US of the winnings to Project Gutenberg which is a very worthwhile cause.
+They are keeping $1000US and will give $1000US to the winning team.
+Both Linux teams will be giving all the prize money away.
+The linux@linuxnet.org group will be donating the money to Linux International, while the Team Linux group is leaving it to members to vote on, and may well end up doing the same.
+Team Linux is also in discussions with several other companies about additional sponsorship for a worthy Linux cause.
+We will have an announcement about this soon.
+Both linux@linuxnet.org and the team we are involved with, Team Linux (with an email of crusader@mo.net) are represented in this group.
+You may pick either team if you choose to use the Bovine system.
+The first thing to do is to get a copy of the client program and unpack the archive into an empty directory.
+At the time of this writing, the latest version was v2 build 4 and the Linux archive contains:
+-rwxrwxr-x bovine/rc5 292892 Aug 7 05:06 1997 rc5v2b4/rc5v2 -rw-rw-r-- bovine/rc5 2085 Aug 6 22:11 1997 rc5v2b4/README.TXT
+You'll notice that the files are containted in a subdirectory relative to where you unpack them.
+So if you unpack in your home directory you will create a subdirectory called rc5v2b4 containing the files.
+(I also create a symlink [symbolic link] here, to make typing easier.
+Pick a name which is easier to type such as bovine.
+You can then use this as an alias.)
+ln -s rc5v2b4 bovine
+The Bovine system uses one program which both does the key checking and also maintains a cache of keys, contacting a keyserver when it needs more work, and checking in the finished blocks.
+Configuring the Bovine client involves running the client program with the -config option.
+You will then be presented with a menu, which should be similar to the one reproduced here:
+CLIENT CONFIG MENU ------------------ 1) Email to report as [default:rc5@distributed.net] ==
+The important one to change is "1".
+This email address you add here determines which team your blocks will be counted for.
+This is case sensitive, and does not tolerate typos, so be careful when typing this in and double check.
+Press the "1" key, followed by the "Enter" key and you will be presented with the following prompt:
+Email to report as (64 characters max) [rc5@distributed.net] --
+If you decide to count your blocks for linux@linuxnet.org then enter it here.
+If you decide to work with Team Linux then you need to enter crusader@mo.net.
+(The reason we don't use rc5@teamlinux.org on Bovine is that we received our teamlinux.org domain after actually starting the effort.
+The Bovine group was unwilling to move our stats to the new email address so we had to keep the old one to maintain our block counts.
+The crusader@mo.net email address actually belongs to Eric P. Anderson, who started Team Linux.)
+Fine Tuning
+If you are only connected to the net part time, you should consider buffering a larger number of blocks.
+Assuming that you connect once per day, you'll need to get at least a day's worth and maybe a bit more, for good measure.
+(The limit is 200 on the latest clients I think.)
+If you are connected to the 'Net full time, then you can leave this at the default setting.
+I also suggest that you define a log file, perhaps /var/tmp/bovine.log might be a good choice.
+This is all you really need to define unless you have specific needs, such as getting around a firewall.
+(These subjects are beyond the scope of this article, and you should consult the Bovine Client Documentation for more help if you run into difficulties.
+They also maintain several mailing lists where you might find additional help.)
+At this point, save the setup by pressing the "0" key, and you should be ready to test it out.
+The configuration file which is saved is called rc5v2.ini, and is placed in the current directory.
+Test it out! Type the name of the program and watch it go! (We usually leave it running with a spare xterm or on one of the text consoles.
+One nice thing about the Bovine client is that it gives you feedback on how far through each block it is.)
+__________________________________________________________________
+Cyberian Clients
+Personally, we find the Cyberian Effort more satisfying, although it is not without its problems.
+They have been going through some difficulties on their server in the last week while one of the key developers was away in China.
+(This should be cleared up by the time you read this.)
+They also only have one server whereas Bovine have many, so Cyberian are currently more prone to having problems.
+Lastly, they have not been working as long as Bovine, so have not checked as much of the keyspace.
+On the positive side, Cyberian have far better stats which make them much more fun to be involved with.
+Currently, the Bovine stats are only updated once per day and do not give you access to your individual numbers.
+The Cyberian stats are updated every 10 minutes or so and gives you a list of all of the team members as well as your overall team statistics.
+This is a great boon for people getting involved as they can see themselves up on the board within minutes! Cyberian also has many more categories of numbers and graphs to delight the people involved.
+Lastly, the Bovine effort is offering $1000US to the winning team, while the Cyberian effort is offering $5000US.
+This would mean more money for a worthwhile Linux effort, should one of the Linux teams win.
+Note that the Bovine group is giving the bulk of the money to a worthwhile cause, it's just not a Linux cause.)
+At the time of this writing, we believe that the only Linux advocacy group here is Team Linux.
+The email address they are using here is: rc5@teamlinux.org.
+First, you need to download their client program.
+Pick the appropriate one for your architecture.
+We assume that most of us will be using the "Client v3.04 for Linux [X86]" although others are available.
+This tar archive will unpack in your current directory so you should make a directory for it: $HOME/cyberian, for example, then change to that directory.
+Unpacking with tar tvzf Linux-x86.bin304.tgz will give you the following files:
+-rwxrwxr-x tic0/tic0 20315 Jul 25 15:08 1997 rc5client -rwxrwxr-x tic0/tic0 18093 Jul 25 15:08 1997 sa_simple
+The Cyberian system uses these two programs: one (rc5client) which checks the keys and the other (sa_simple) which maintains the cache and contacts the server when necessary.
+Both programs will list the available options if you run the program with "-\?".
+(The backslash may be necessary to escape the question mark on some shells.)
+You will need to contact the server to load the initial cache of blocks at this point.
+For now, run
+sa_simple -1
+If everything works OK, you should see a message saying that the server has been contacted and that your cache has been loaded.
+If the program has difficulty contacting the server, you will see repeated messages to that effect.
+If this condition lasts more than ten minutes or so, then there may be a problem.
+See the Cyberian or Team Linux Websites for more details.
+It may be a networking issue, or it may be that their server is still having some problems.
+The Cyberian system does not use configuration files, nor does it create logfiles; so all options must be supplied on the command line.
+(We like to use logfiles to maintain a record of what was done and to see what it is doing occasionally.)
+You can automate this by creating a shell script such as the following:
+#!/bin/sh # # Run the Cyberian client programs: # (This version is for part-time connections, full-time connections don't # use the -1 option on sa_simple, or the -q option on rc5client) #
+MY_EMAIL=yourname@yourdomain # Change This!!! TEAM="rc5@teamlinux.org" LOW_WATER_MARK=500 HIGH_WATER_MARK=1000
+export TEAM HIGH_WATER_MARK LOW_WATER_MARK MY_EMAIL
+sa_simple -1 -l $LOW_WATER_MARK -h $HIGH_WATER_MARK 
+rc5client -t $TEAM -e $MY_EMAIL -N -q -n19 
+With a shell script such as this you can find out what is happening at any time by doing a "tail -f /var/tmp/rc5client.log" or "tail -f /var/tmp/sa_simple.log".
+(In fact, we just leave a few xterms running with a tiny font, so we can keep an eye on them while doing other things.)
+Assuming that everything is running OK, you can start seeing your own email address in your team's statistics in a very short period of time.
+After a few hours of processing, make a connection to the net again (if you are dialing in part time), and run sa_simple -1 by itself.
+After the server has acknowledged your blocks, you should be able to do a search and see your email address show up here in about 15 minutes!
+Another nice feature which we like about Cyberian is the ability to see what is left in the cache.
+This is very useful for users with part-time connections.
+The following is a script we use to summarize what is in the cache.
+You can use this as is, or even modify it to give you estimates of the number of hours left.
+If you have trouble cutting and pasting from here, you can find it on the Team Linux site.
+#!/bin/sh # # @(#) cache.sh - summarize rc5 cache information dump # Author: Bill Duncan, bduncan@teamlinux.org # # Note: make sure rc5client is in your PATH.
+I assume current directory.
+PATH=$PATH:
+rc5client -d | awk ' BEGIN { F = "%-6s %4d %s\n" } FNR == 1 { next } NF 
+This script will give you a display such as the following:
+122:59 27 COMPLETED REPORTING 125:47 101 COMPLETED REPORTING 137:15 93 COMPLETED 137:15 125 COMPLETED REPORTING 150:26 1 RESERVED 150:26 4
+5 NOT DONE 346 DONE 351 TOTAL IN CACHE
+This display tells us that we need to connect to the server soon as we only have 5 blocks to go before running out! The numbers down the left column are the number of hours and minutes left before that block expires.
+The middle column is the number of blocks with that specific expiry.
+The rest of the line is a status, with "RESERVED" being the block currently being worked on and no status means that the group has not been started yet.
+__________________________________________________________________
+Stats, Numbers and Graphs __________________________________________________________________
+As we have mentioned elsewhere, the Cyberian group pay more attention to the statistics and graphs, which we tend to think are more fun for people.
+Both groups tend to pay alot of attention to the blocks already completed.
+This is like saying that someone has bought 10,000 losing lottery tickets vs. someone else who has only bought 10.
+The prize is not given to the group with the most losing tickets! Both teams have an equal chance of buying the next winning lottery ticket!!
+More important is the current rate at which the tickets are being bought, or in our case, the rate at which key blocks are being checked.
+If you compare teams on that basis, it gives a more realistic relative probability on which team will find the secret key and win the prize money.
+Having said all that, watching the numbers and the graphs, and comparing your team's numbers with other teams is all part of the fun.
+The Bovine stats recently had an overhaul but is still only updated once per day.
+For example: only team statistics are shown, without mentioning individual efforts.
+The Cyberian stats and their search facility are a joy to use.
+They provide almost instant feedback for anyone getting involved as you can usually find your entries within minutes of contacting the server.
+You can also see how your contribution has helped the overall team effort.
+__________________________________________________________________
+Who? __________________________________________________________________
+So Where do I Sign Up?
+Why two teams? Why don't we just join up with the other team, and combine our numbers? We've been asked this probably the most since Eric Anderson started Team Linux.
+The reason is that we feel that "friendly" rivalry will benefit both teams and help get people excited about getting involved.
+The benefit to Linux will hopefully be greater participation and better visibility.
+Both teams have the same main goals in mind with promoting Linux the highest on the list.
+However, we both have different ways of going about this.
+The linux@linuxnet.org team has plenty going for it.
+It's been around a lot longer and has accumulated a much larger total number of blocks checked.
+They have openly stated that they will donate the entire $1000 to Linux International if they win.
+They seem to have two sets of Web pages and you can access the second set here.
+The Team Linux group have stated that they will donate all of any prize money or other revenue directly to a Linux group of the members' choosing.
+Any administrative costs will be paid for out of our own pocket.
+Since Team Linux is also involved in the Cyberian effort, the prize money may very well be $5000US for Team Linux, or $1000US if the key is found through the Bovine effort.
+Team Linux is also in discussion with several companies about up-ing the anti, possibly by having them match the prize money available, or perhaps some other method which does not rely on chance nearly as much.
+We should have an announcement on this soon.
+We would like to encourage you to get involved in either team and compete in the spirit of Linux, for the benefit of Linux.
+As long as the competition remains friendly, it will be healthy and help out.
+__________________________________________________________________
+The Future of Distributed Computing __________________________________________________________________
+Getting tens of thousands of computers working on a common problem is an awesome technical accomplishment.
+It is made all the more interesting by the fact that the computers are spread out world-wide, some of them available full-time, some not, with different hardware and operating systems.
+Having them all owned by different people and organizations, each with their own agenda and motivations adds yet another dimension to the task.
+Some papers and sites on the topic of distributed systems and related subjects which we've found:
+* Condor is a project at University of Wisconsin-Madison which has been going on for about 10 years.
+They have published a number of interesting papers on what they call High Throughput Computing (HTC).
+They are the movers and shakers for the third group working on the RSA Challenge called Infinite Monkeys.
+* Yahoo have a whole section devoted to distributed computing.
+There is a good collection of material here, with many universities being represented.
+* The GREAT Internet Mersenne Prime Search is another way to use those spare cycles.
+* In Search Of The Optimal 20 
+It looks like this might ramp up to be a very big thing by next Spring.
+They are looking to put hundreds of thousands of machines to work.
+Let's make sure they do a Linux client program! * As we all know, lots of cool research has come from the folks at Xerox PARC (Palo Alto Research Center), including probably the first windowing environment.
+It's not surprising to find that they have a number of papers on the subject.
+There is one which looks particularly interesting in a section called allocating time on idle computers: C. A. Waldspurger et al., Spawn: A Distributed Computational Economy, 1992.
+Unfortunately, it has been taken off-line.
+I seem to recall something like this published some years ago, possibly in Byte, although no reference could be found.
+While researching the Xerox PARC site, we came across a section called the Dynamics of Computation Area.
+You have to see this, if for no other reason, to see the graphic depicting many small distributed efforts overtaking one large effort!! __________________________________________________________________
+When? __________________________________________________________________
+Do it now!!
+It's easy.
+You'll have plenty of help.
+And once you are set up, you can let your system do the rest! __________________________________________________________________
+Copyright Â© 1997, Bill Duncan Published in Issue 21 of the Linux Gazette, September 1997 __________________________________________________________________
+[ TABLE OF CONTENTS ] [ 

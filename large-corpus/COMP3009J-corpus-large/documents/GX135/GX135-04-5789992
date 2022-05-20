@@ -1,0 +1,16 @@
+Full Text Button for patent number 6513763 US 6,513,763 B1 Mode-conversion method for model railroad decoders Anthony John Ireland, 97 Park Dr., Norcross, Ga. 30071 (US) Filed on Jan. 03, 2002, as Appl.
+No. 10/38,310.
+Int. Cl.^7B61L 25/00
+U.S. Cl. 246--122R 19 Claims
+OG exemplary drawing
+13.
+An apparatus for allowing voltage accurate mode-conversion of a model railroad decoder connected to a motor and to layout tracks, comprising:
+a) said motor with two motor leads,
+b) a mode switch arrangement with make-break electrical connections that selectively and individually connect each one of two track leads to just one of said two motor leads of said motor,
+c) said model railroad decoder, further comprising:
+(i) an input-rectifying bridge connected to said two track pickup leads and which rectifies track voltages,
+(ii) a decoder controller logic means that executes control and detection algorithms based on voltage sample measurements and that can detect the motor connection configuration,
+(iii) an H-bridge control circuit controlled by said decoder controller logic means, with two output leads individually connected to said two motor leads,
+(iv) a track voltage sample connection to provide track voltage samples to said decoder controller logic means,
+(v) a motor voltage sample link to provide motor voltage samples to said decoder controller logic means,
+whereby said model railroad decoder detects the connection configuration of said mode switch arrangement and will not allow operation of said H-bridge control circuit if any of said two motor leads is connected directly to any of said two track leads, thus permitting safe and accurate voltage mode-conversion on conventional energy track power, and compatible operation coupled to other conventional locomotives.

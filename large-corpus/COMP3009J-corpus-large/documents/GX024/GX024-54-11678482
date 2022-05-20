@@ -1,0 +1,542 @@
+Skip page top navigation to main text HHS Logo/Office of Regulatory Affairs Banner and Link to ORA Home page ORA Start Page | Search | News | About ORA | FDA - Centers | Compliance Reference and link to Start Page of this section FDA Banner/Link to FDA Home Page ____________________ Search About ORA | Compliance Ref | Federal-State | Inspection Ref | Import Program | Science Ref | Site Map | V1.3 Skip Subsection TOC to Main Text Compliance Ref Start Page Compliance Program Manual (CPGM) Policy Guides (CPGs) Regulatory Procs Manual (RPM) Application Integrity Policy Bioresearch Monitoring Program Electronic Records; Electronic Signatures, 21 CFR Part 11 Contacts topic FDA Debarment List Disqualified /Restricted/ Assurcance List for Clinical Investigators Public Health Service (PHS) Administrative Actions Listings Title 21 Code of Federal Regulations (21 CFR Part 11) Electronic Records; Electronic Signatures Final Rule Published in the Federal Register Web page issued: March, 2000; reformatted June 01, 2001(with updated email addresses for FDA contacts) tc _____________________________________________________ Page 2 of 4 Previous Page 1 | 2 | 3 | 4 Next Page 3 _____________________________________________________ VI. Definitions (Sec. 11.3)
+37.
+One comment questioned the incorporation in proposed Sec. 11.3(a) of definitions under section 201 of the act (21 U.S.C. 321), noting that other FDA regulations (such as 21 CFR parts 807 and 820) lack such incorporation, and suggested that it be deleted.
+The agency has retained the incorporation by reference to definitions under section 201 of the act because those definitions are applicable to part 11.
+38.
+One comment suggested adding the following definition for the term ``digital signature:'' ``data appended to, or a cryptographic transformation of, a data unit that allows a recipient of the data unit to prove the source and integrity of the data unit and protect against forgery, e.g., by the recipient.''
+The agency agrees that the term digital signature should be defined and has added new Sec. 11.3(b)(5) to provide a definition for digital signature that is consistent with the Federal Information Processing Standard 186, issued May 19, 1995, and effective December 1, 1995, by the U.S. Department of Commerce, National Institute of Standards and Technology (NIST).
+Generally, a digital signature is ``an electronic signature based upon cryptographic methods of originator authentication, computed by using a set of rules and a set of parameters such that the identity of the signer and the integrity of the data can be verified.''
+FDA advises that the set of rules and parameters is established in each digital signature standard.
+39.
+Several comments suggested various modifications of the proposed definition of biometric/behavioral links, and suggested revisions that would exclude typing a password or identification code which, the comments noted, is a repeatable action.
+The comments suggested that actions be unique and measurable to meet the intent of a biometric method.
+The agency agrees that the proposed definition of biometric/ behavioral links should be revised to clarify the agency's intent that repetitive actions alone, such as typing an identification code and password, are not considered to be biometric in nature.
+Because comments also indicated that it would be preferable to simplify the term, the agency is changing the term ``biometric/behavioral link'' to ``biometrics.''
+Accordingly, Sec. 11.3(b)(3) defines the term ``biometrics'' to mean ``a method of verifying an individual's identity based on measurement of the individual's physical feature(s) or repeatable action(s) where those features and/or actions are both unique to that individual and measurable.''
+40.
+One comment said that the agency should identify what biometric methods are acceptable to verify a person's identity and what validation acceptance criteria the agency has used to determine that biometric technologies are superior to other methods, such as use of identification codes and passwords.
+The agency believes that there is a wide variety of acceptable technologies, regardless of whether they are based on biometrics, and regardless of the particular type of biometric mechanism that may be used.
+Under part 11, electronic signatures that employ at least two distinct identification components such as identification codes and passwords, and electronic signatures based on biometrics are equally acceptable substitutes for traditional handwritten signatures.
+Furthermore, all electronic record systems are subject to the same requirements of subpart B of part 11 regardless of the electronic signature technology being used.
+These provisions include requirements for validation.
+Regarding the comment's suggestion that FDA apply quantitative acceptance criteria, the agency is not seeking to set specific numerical standards or statistical performance criteria in determining the threshold of acceptability for any type of technology.
+If such standards were to be set for biometrics-based electronic signatures, similar numerical performance and reliability requirements would have to be applied to other technologies as well.
+The agency advises, however, that the differences between system controls for biometrics- based electronic signatures and other electronic signatures are a result of the premise that biometrics-based electronic signatures, by their nature, are less prone to be compromised than other methods such as identification codes and passwords.
+Should it become evident that additional controls are warranted for biometrics-based electronic signatures, the agency will propose to revise part 11 accordingly.
+41.
+Proposed Sec. 11.3(b)(4) defined a closed system as an environment in which there is communication among multiple persons, and where system access is restricted to people who are part of the organization that operates the system.
+Many comments requested clarification of the term ``organization'' and stated that the rule should account for persons who, though not strictly employees of the operating organization, are nonetheless obligated to it in some manner, or who would otherwise be granted system access by the operating organization.
+As examples of such persons, the comments cited outside contractors, suppliers, temporary employees, and consultants.
+The comments suggested a variety of alternative wording, including a change of emphasis from organizational membership to organizational control over system access.
+One comment requested clarification of whether the rule intends to address specific disciplines within a company.
+Based on the comments, the agency has revised the proposed definition of closed system to state ``an environment in which system access is controlled by persons who are responsible for the content of electronic records that are on the system.''
+The agency agrees that the most important factor in classifying a system as closed or open is whether the persons responsible for the content of the electronic records control access to the system containing those records.
+A system is closed if access is controlled by persons responsible for the content of the records.
+If those persons do not control such access, then the system is open because the records may be read, modified, or compromised by others to the possible detriment of the persons responsible for record content.
+Hence, those responsible for the records would need to take appropriate additional measures in an open system to protect those records from being read, modified, destroyed, or otherwise compromised by unauthorized and potentially unknown parties.
+The agency does not believe it is necessary to codify the basis or criteria for authorizing system access, such as existence of a fiduciary
+[[Page 13441]]
+responsibility or contractual relationship.
+By being silent on such criteria, the rule affords maximum flexibility to organizations by permitting them to determine those criteria for themselves.
+42.
+Concerning the proposed definition of closed system, one comment suggested adding the words ``or devices'' after ``persons'' because communications may involve nonhuman entities.
+The agency does not believe it is necessary to adopt the suggested revision because the primary intent of the regulation is to address communication among humans, not devices.
+43.
+One comment suggested defining a closed system in terms of functional characteristics that include physical access control, having professionally written and approved procedures with employees and supervisors trained to follow them, conducting investigations when abnormalities may have occurred, and being under legal obligation to the organization responsible for operating the system.
+The agency agrees that the functional characteristics cited by the comment are appropriate for a closed system, but has decided that it is unnecessary to include them in the definition.
+The functional characteristics themselves, however, such as physical access controls, are expressed as requirements elsewhere in part 11.
+44.
+Two comments said that the agency should regard as closed a system in which dial-in access via public phone lines is permitted, but where access is authorized by, and under the control of, the organization that operates the system.
+The agency advises that dial-in access over public phone lines could be considered part of a closed system where access to the system that holds the electronic records is under the control of the persons responsible for the content of those records.
+The agency cautions, however, that, where an organization's electronic records are stored on systems operated by third parties, such as commercial online services, access would be under control of the third parties and the agency would regard such a system as being open.
+The agency also cautions that, by permitting access to its systems by public phone lines, organizations lose the added security that results from restricting physical access to computer terminal and other input devices.
+In such cases, the agency believes firms would be prudent to implement additional security measures above and beyond those controls that the organization would use if the access device was within its facility and commensurate with the potential consequences of such unauthorized access.
+Such additional controls might include, for example, use of input device checks, caller identification checks (phone caller identification), call backs, and security cards.
+45.
+Proposed Sec. 11.3(b)(5) defined electronic record as a document or writing comprised of any combination of text, graphic representation, data, audio information, or video information, that is created, modified, maintained, or transmitted in digital form by a computer or related system.
+Many comments suggested revising the proposed definition to reflect more accurately the nature of electronic records and how they differ from paper records.
+Some comments suggested distinguishing between machine readable records and paper records created by machine.
+Some comments noted that the term ``document or writing'' is inappropriate for electronic records because electronic records could be any combination of pieces of information assembled (sometimes on a transient basis) from many noncontiguous places, and because the term does not accurately describe such electronic information as raw data or voice mail.
+Two comments suggested that the agency adopt definitions of electronic record that were established, respectively, by the United Nations Commission on International Trade Law (UNCITRAL) Working Group on Electronic Data Interchange, and the American National Standards Institute/Institute of Electrical and Electronic Engineers Software Engineering (ANSI/IEEE) Standard (729- 1983).
+The agency agrees with the suggested revisions and has revised the definition of ``electronic record'' to emphasize this unique nature and to clarify that the agency does not regard a paper record to be an electronic record simply because it was created by a computer system.
+The agency has removed ``document or writing'' from this definition and elsewhere in part 11 for the sake of clarity, simplicity, and consistency.
+However, the agency believes it is preferable to adapt or modify the words ``document'' and ``writing'' to electronic technologies rather than discard them entirely from the lexicon of computer technology.
+The agency is aware that the terms ``document'' and ``electronic document'' are used in contexts that clearly do not intend to describe paper.
+Therefore, the agency considers the terms ``electronic record'' and ``electronic document'' to be generally synonymous and may use the terms ``writing,'' ``electronic document,'' or ``document'' in other publications to describe records in electronic form.
+The agency believes that such usage is a prudent conservation of language and is consistent with the use of other terms and expressions that have roots in older technologies, but have nonetheless been adapted to newer technologies.
+Such terms include telephone ``dialing,'' internal combustion engine ``horse power,'' electric light luminance expressed as ``foot candles,'' and (more relevant to computer technology) execution of a ``carriage return.''
+Accordingly, the agency has revised the definition of electronic record to mean ``any combination of text, graphics, data, audio, pictorial, or other information representation in digital form that is created, modified, maintained, archived, retrieved, or distributed by a computer system.''
+46.
+Proposed Sec. 11.3(b)(6) defined an electronic signature as the entry in the form of a magnetic impulse or other form of computer data compilation of any symbol or series of symbols, executed, adopted or authorized by a person to be the legally binding equivalent of the person's handwritten signature.
+One comment supported the definition as proposed, noting its consistency with dictionary definitions (Random House Dictionary of the English Language, Unabridged Ed. 1983, and American Heritage Dictionary, 1982).
+Several other comments, however, suggested revisions.
+One comment suggested replacing ``electronic signature'' with ``computer based signature,'' ``authentication,'' or ``computer based authentication'' because ``electronic signature'' is imprecise and lacks clear and recognized meaning in the information security and legal professions.
+The comment suggested a definition closer to the UNCITRAL draft definition: (1) [a] method used to identify the originator of the data message and to indicate the originator's approval of the information contained therein; and (2) that method is as reliable as was appropriate for the purpose for which the data message was generated or communicated, in the light of all circumstances, including any agreement between the originator and the addressee of the data message.
+One comment suggested replacing ``electronic signature'' with ``electronic identification'' or ``electronic authorization'' because the terms include many types of technologies that are not easily distinguishable and because the preamble to the proposed rule gave a rationale for using ``electronic signature'' that was too ``esoteric for practical consideration.''
+[[Page 13442]]
+The agency disagrees that ``electronic signature'' as proposed should be replaced with other terms and definitions.
+As noted in the preamble to the proposed rule, the agency believes that it is vital to retain the word ``signature'' to maintain the equivalence and significance of various electronic technologies with the traditional handwritten signature.
+By not using the word ``signature,'' people may treat the electronic alternatives as less important, less binding, and less in need of controls to prevent falsification.
+The agency also believes that use of the word signature provides a logical bridge between paper and electronic technologies that facilitates the general transition from paper to electronic environments.
+The term helps people comply with current FDA regulations that specifically call for signatures.
+Nor does the agency agree that this reasoning is beyond the reach of practical consideration.
+The agency declines to accept the suggested UNCITRAL definition because it is too narrow in context in that there is not always a specified message addressee for electronic records required by FDA regulations (e.g., a batch production record does not have a specific ``addressee'').
+47.
+Concerning the proposed definition of ``electronic signature,'' other comments suggested deletion of the term ``magnetic impulse'' to render the term media neutral and thus allow for such alternatives as an optical disk.
+Comments also suggested that the term ``entry'' was unclear and recommended its deletion.
+Two comments suggested revisions that would classify symbols as an electronic signature only when they are committed to permanent storage because not every computer entry is a signature and processing to permanent storage must occur to indicate completion of processing.
+The agency advises that the proposal did not limit electronic signature recordings to ``magnetic impulse'' because the proposed definition added, ``or other form of computer data * * *.''
+However, in keeping with the agency's intent to accept a broad range of technologies, the terms ``magnetic impulse'' and ``entry'' have been removed from the proposed definition.
+The agency believes that recording of computer data to ``permanent'' storage is not a necessary or warranted qualifier because it is not relevant to the concept of equivalence to a handwritten signature.
+In addition, use of the qualifier regarding permanent storage could impede detection of falsified records if, for example, the signed falsified record was deleted after a predetermined period (thus, technically not recorded to ``permanent'' storage).
+An individual could disavow a signature because the record had ceased to exist.
+For consistency with the proposed definition of handwritten signature, and to clarify that electronic signatures are those of individual human beings, and not those of organizations (as included in the act's definition of ``person''), FDA is changing ``person'' to ``individual'' in the final rule.
+Accordingly, Sec. 11.3(b)(7) defines electronic signature as a computer data compilation of any symbol or series of symbols executed, adopted, or authorized by an individual to be the legally binding equivalent of the individual's handwritten signature.
+48.
+Proposed Sec. 11.3(b)(7) (redesignated Sec. 11.3(b)(8) in the final rule) defined ``handwritten signature'' as the name of an individual, handwritten in script by that individual, executed or adopted with the present intention to authenticate a writing in a permanent form.
+The act of signing with a writing or marking instrument such as a pen or stylus is preserved.
+The proposed definition also stated that the scripted name, while conventionally applied to paper, may also be applied to other devices which capture the written name.
+Many comments addressed this proposed definition.
+Two comments suggested that it be deleted on the grounds it is redundant and that, when handwritten signatures are recorded electronically, the result fits the definition of electronic signature.
+The agency disagrees that the definition of handwritten signature should be deleted.
+In stating the criteria under which electronic signatures may be used in place of traditional handwritten signatures, the agency believes it is necessary to define handwritten signature.
+In addition, the agency believes that it is necessary to distinguish handwritten signatures from electronic signatures because, with handwritten signatures, the traditional act of signing one's name is preserved.
+Although the handwritten signature recorded electronically and electronic signatures, as defined in part 11, may both ultimately result in magnetic impulses or other forms of computerized symbol representations, the means of achieving those recordings and, more importantly, the controls needed to ensure their reliability and trustworthiness are quite different.
+In addition, the agency believes that a definition for handwritten signature is warranted to accommodate persons who wish to implement record systems that are combinations of paper and electronic technologies.
+49.
+Several comments suggested replacing the reference to ``scripted name'' in the proposed definition of handwritten signature with ``legal mark'' so as to accommodate individuals who are physically unable to write their names in script.
+The comments asserted that the term ``legal mark'' would bring the definition to closer agreement with generally recognized legal interpretations of signature.
+The agency agrees and has added the term ``legal mark'' to the definition of handwritten signature.
+50.
+One comment recommended that the regulation state that, when the handwritten signature is not the result of the act of signing with a writing or marking instrument, but is applied to another device that captures the written name, a system should verify that the owner of the signature has authorized the use of the handwritten signature.
+The agency declines to accept this comment because, if the act of signing or marking is not preserved, the type of signature would not be considered a handwritten signature.
+The comment appears to be referring to instances in which one person authorizes someone else to use his or her stamp or device.
+The agency views this as inappropriate when the signed record does not clearly show that the stamp owner did not actually execute the signature.
+As discussed elsewhere in this preamble, the agency believes that where one person authorizes another to sign a document on his or her behalf, the second person must sign his or her own name (not the name of the first person) along with some notation that, in doing so, he or she is acting in the capacity, or on behalf, of the first person.
+51.
+One comment suggested that where handwritten signatures are captured by devices, there should be a register of manually written signatures to enable comparison for authenticity and the register also include the typed names of individuals.
+The agency agrees that the practice of establishing a signature register has merit, but does not believe that it is necessary, in light of other part 11 controls.
+As noted elsewhere in this preamble (in the discussion of proposed Sec. 11.50), the agency agrees that human readable displays of electronic records must display the name of the signer.
+52.
+Several comments suggested various editorial changes to the proposed definition of handwritten signature including: (1) Changing the word ``also'' in the last sentence to ``alternatively,'' (2) clarifying the
+[[Page 13443]]
+difference between the words ``individual'' and ``person,'' (3) deleting the words ``in a permanent form,'' and (4) changing ``preserved'' to ``permitted.''
+One comment asserted that the last sentence of the proposed definition was unnecessary.
+The agency has revised the definition of handwritten signature to clarify its intent and to keep the regulation as flexible as possible.
+The agency believes that the last sentence of the proposed definition is needed to address devices that capture handwritten signatures.
+The agency is not adopting the suggestion that the word ``preserved'' be changed to ``permitted'' because ``preserved'' more accurately states the agency's intent and is a qualifier to help distinguish handwritten signatures from others.
+The agency advises that the word ``individual'' is used, rather than ``person,'' because the act's definition of person extends beyond individual human beings to companies and partnerships.
+The agency has retained the term ``permanent'' to discourage the use of pencils, but recognizes that ``permanent'' does not mean eternal.
+53.
+One comment asked whether a signature that is first handwritten and then captured electronically (e.g., by scanning) is an electronic signature or a handwritten signature, and asked how a handwritten signature captured electronically (e.g., by using a stylus-sensing pad device) that is affixed to a paper copy of an electronic record would be classified.
+FDA advises that when the act of signing with a stylus, for example, is preserved, even when applied to an electronic device, the result is a handwritten signature.
+The subsequent printout of the signature on paper would not change the classification of the original method used to execute the signature.
+54.
+One comment asserted that a handwritten signature recorded electronically should be considered to be an electronic signature, based on the medium used to capture the signature.
+The comment argued that the word signature should be limited to paper technology.
+The agency disagrees and believes it is important to classify a signature as handwritten based upon the preserved action of signing with a stylus or other writing instrument.
+55.
+One comment asked if the definition of handwritten signature encompasses handwritten initials.
+The agency advises that, as revised, the definition of handwritten signature includes handwritten initials if the initials constitute the legal mark executed or adopted with the present intention to authenticate a writing in a permanent form, and where the method of recording such initials involves the act of writing with a pen or stylus.
+56.
+Proposed Sec. 11.3(b)(8) (redesignated as Sec. 11.3(b)(9) in the final rule) defined an open system as an environment in which there is electronic communication among multiple persons, where system access extends to people who are not part of the organization that operates the system.
+Several comments suggested that, for simplicity, the agency define ``open system'' as any system that does not meet the definition of a closed system.
+One comment suggested that the definition be deleted on the grounds it is redundant, and that it is the responsibility of individual firms to take appropriate steps to ensure the validity and security of applications and information, regardless of whether systems are open or closed.
+Other comments suggested definitions of ``open system'' that were opposite to what they suggested for a closed system.
+The agency has revised the definition of open system to mean ``an environment in which system access is not controlled by persons who are responsible for the content of electronic records that are on the system.''
+The agency believes that, for clarity, the definition should stand on its own rather than as any system that is not closed.
+The agency rejects the suggestion that the term need not be defined at all because FDA believes that controls for open systems merit distinct provisions in part 11 and defining the term is basic to understanding which requirements apply to a given system.
+The agency agrees that companies have the responsibility to take steps to ensure the validity and security of their applications and information.
+However, FDA finds it necessary to establish part 11 as minimal requirements to help ensure that those steps are, in fact, acceptable.
+VII.
+Electronic Records--Controls for Closed Systems (Sec. 11.10)
+The introductory paragraph of proposed Sec. 11.10 states that: Closed systems used to create, modify, maintain, or transmit electronic records shall employ procedures and controls designed to ensure the authenticity, integrity, and confidentiality of electronic records, and to ensure that the signer cannot readily repudiate the signed record as not genuine.
+* * * The rest of the section lists specific procedures and controls.
+57.
+One comment expressed full support for the list of proposed controls, calling them generally appropriate and stated that the agency is correctly accommodating the fluid nature of various electronic record and electronic signature technologies.
+Another comment, however, suggested that controls should not be implemented at the time electronic records are first created, but rather only after a document is accepted by a company.
+The agency disagrees with this suggestion.
+To ignore such controls at a stage before official acceptance risks compromising the record.
+For example, if ``preacceptance'' records are signed by technical personnel, it is vital to ensure the integrity of their electronic signatures to prevent record alteration.
+The need for such integrity is no less important at preacceptance stages than at later stages when managers officially accept the records.
+The possibility exists that some might seek to disavow, or avoid FDA examination of, pertinent records by declaring they had not been formally ``accepted.''
+In addition, FDA routinely can and does inspect evolving paper documents (e.g., standard operating procedures and validation protocols) even though they have yet to receive a firm's final acceptance.
+58.
+One comment said proposed Sec. 11.10 contained insufficient requirements for firms to conduct periodic inspection and monitoring of their own systems and procedures to ensure compliance with the regulations.
+The comment also called for a clear identification of the personnel in a firm who would be responsible for system implementation, operation, change control, and monitoring.
+The agency does not believe it is necessary at this time to codify a self-auditing requirement, as suggested by the comment.
+Rather, the agency intends to afford organizations flexibility in establishing their own internal mechanisms to ensure compliance with part 11.
+Self- audits, however, may be considered as a general control, within the context of the introductory paragraph of Sec. 11.10.
+The agency encourages firms to conduct such audits periodically as part of an overall approach to ensure compliance with FDA regulations generally.
+Likewise, the agency does not believe it is necessary or practical to codify which individuals in an organization should be responsible for compliance with various provisions of part 11.
+However, ultimate responsibility for part 11 will generally rest with persons responsible for electronic record content, just as responsibility for compliance with paper record requirements generally lies with those responsible for the record's content.
+[[Page 13444]]
+59.
+Several comments interpreted proposed Sec. 11.10 as applying all procedures and controls to closed systems and suggested revising it to permit firms to apply only those procedures and controls they deem necessary for their own operations, because some requirements are excessive in some cases.
+The agency advises that, where a given procedure or control is not intended to apply in all cases, the language of the rule so indicates.
+Specifically, use of operational checks (Sec. 11.10(f)) and device checks (Sec. 11.10(h)) is not required in all cases.
+The remaining requirements do apply in all cases and are, in the agency's opinion, the minimum needed to ensure the trustworthiness and reliability of electronic record systems.
+In addition, certain controls that firms deem adequate for their routine internal operations might nonetheless leave records vulnerable to manipulation and, thus, may be incompatible with FDA's responsibility to protect public health.
+The suggested revision would effectively permit firms to implement various controls selectively and possibly shield records from FDA, employ unqualified personnel, or permit employees to evade responsibility for fraudulent use of their electronic signatures.
+The agency believes that the controls in Sec. 11.10 are vital, and notes that almost all of them were suggested by comments on the ANPRM.
+The agency believes the wording of the regulation nonetheless permits firms maximum flexibility in how to meet those requirements.
+60.
+Two comments suggested that the word ``confidentiality'' in the introductory paragraph of proposed Sec. 11.10 be deleted because it is unnecessary and inappropriate.
+The comments stated that firms should determine if certain records need to be confidential, and that as long as records could not be altered or deleted without appropriate authority, it would not matter whether they could read the records.
+The agency agrees that not all records required by FDA need to be kept confidential within a closed system and has revised the reference in the introductory paragraph of Sec. 11.10 to state ``* * * and, when appropriate, the confidentiality of electronic records.''
+The agency believes, however that the need for retaining the confidentiality of certain records is not diminished because viewers cannot change them.
+It may be prudent for persons to carefully assess the need for record confidentiality.
+(See, e.g., 21 CFR 1002.42, Confidentiality of records furnished by dealers and distributors, with respect to certain radiological health products.)
+In addition, FDA's obligation to retain the confidentiality of information it receives in some submissions hinges on the degree to which the submitter maintains confidentiality, even within its own organization.
+(See, e.g., 21 CFR 720.8(b) with respect to cosmetic ingredient information in voluntary filings of cosmetic product ingredient and cosmetic raw material composition statements.)
+61.
+One comment asked if the procedures and controls required by proposed Sec. 11.10 were to be built into software or if they could exist in written form.
+The agency expects that, by their nature, some procedures and controls, such as use of time-stamped audit trails and operational checks, will be built into hardware and software.
+Others, such as validation and determination of personnel qualifications, may be implemented in any appropriate manner regardless of whether the mechanisms are driven by, or are external to, software or hardware.
+To clarify this intent, the agency has revised the introductory paragraph of proposed Sec. 11.10 to read, in part, ``Persons who use closed systems to create, modify * * *.''
+Likewise, for clarity and consistency, the agency is introducing the same phrase, ``persons who use * * *'' in Secs. 11.30 and 11.300.
+62.
+One comment contended that the distinction between open and closed systems should not be predominant because a $100,000 transaction in a closed system should not have fewer controls than a $1 transaction in an open system.
+The agency believes that, within part 11, firms have the flexibility they need to adjust the extent and stringency of controls based on any factors they choose, including the economic value of the transaction.
+The agency does not believe it is necessary to modify part 11 at this time so as to add economic criteria.
+63.
+One comment suggested that the reference to repudiation in the introductory paragraph of Sec. 11.10 should be deleted because repudiation can occur at any time in legal proceedings.
+Another comment, noting that the proposed rule appeared to address only nonrepudiation of a signer, said the rule should address nonrepudiation of record ``genuineness'' or extend to nonrepudiation of submission, delivery, and receipt.
+The comment stated that some firms provide nonrepudiation services that can prevent someone from successfully claiming that a record has been altered.
+In response to the first comment, the agency does not agree that the reference to repudiation should be deleted because reducing the likelihood that someone can readily repudiate an electronic signature as not his or her own, or that the signed record had been altered, is vital to the agency's basic acceptance of electronic signatures.
+The agency is aware that the need to deter such repudiation has been addressed in many forums and publications that discuss electronic signatures.
+Absent adequate controls, FDA believes some people would be more likely to repudiate an electronically-signed record because of the relative ease with which electronic records may be altered and the ease with which one individual could impersonate another.
+The agency notes, however, that the rule does not call for nonrepudiation as an absolute guarantee, but requires that the signer cannot ``readily'' repudiate the signature.
+In response to the second comment, the agency agrees that it is also important to establish nonrepudiation of submission, delivery, and receipt of electronic records, but advises that, for purposes of Sec. 11.10, the agency's intent is to limit nonrepudiation to the genuineness of the signer's record.
+In other words, an individual should not be able to readily say that: (1) He or she did not, in fact, sign the record; (2) a given electronic record containing the individual's signature was not, in fact, the record that the person signed; or (3) the originally signed electronic record had been altered after having been signed.
+64.
+Proposed Sec. 11.10(a) states that controls for closed systems are to include the validation of systems to ensure accuracy, reliability, consistent intended performance, and the ability to conclusively discern invalid or altered records.
+Many comments objected to this proposed requirement because the word ``conclusively'' inferred an unreasonably high and unattainable standard, one which is not applied to paper records.
+The agency intends to apply the same validation concepts and standards to electronic record and electronic signature systems as it does to paper systems.
+As such, FDA does not intend the word ``conclusively'' to suggest an unattainable absolute and has, therefore, deleted the word from the final rule.
+65.
+One comment suggested qualifying the proposed validation requirement in Sec. 11.10(a) to state that validation be performed ``where
+[[Page 13445]]
+necessary'' and argued that validation of commercially available software is not necessary because such software has already been thoroughly validated.
+The comment acknowledged that validation may be required for application programs written by manufacturers and others for special needs.
+The agency disagrees with the comment's claim that all commercial software has been validated.
+The agency believes that commercial availability is no guarantee that software has undergone ``thorough validation'' and is unaware of any regulatory entity that has jurisdiction over general purpose software producers.
+The agency notes that, in general, commercial software packages are accompanied not by statements of suitability or compliance with established standards, but rather by disclaimers as to their fitness for use.
+The agency is aware of the complex and sometimes controversial issues in validating commercial software.
+However, the need to validate such software is not diminished by the fact that it was not written by those who will use the software.
+In the future, the agency may provide guidance on validation of commercial software used in electronic record systems.
+FDA has addressed the matter of software validation in general in such documents as the ``Draft Guideline for the Validation of Blood Establishment Computer Systems,'' which is available from the Manufacturers Assistance and Communications Staff, Center for Biologics Evaluation and Research (HFM-42), Food and Drug Administration, 1401 Rockville Pike, Rockville, MD 20852-1448, 301-594-2000.
+This guideline is also available by sending e-mail to the following Internet address: CBER__INFO@A1.CBER.FDA.GOV).
+For the purposes of part 11, however, the agency believes it is vital to retain the validation requirement.
+66.
+One comment requested an explanation of what was meant by the phrase ``consistent intended'' in proposed Sec. 11.10(a) and why ``consistent performance'' was not used instead.
+The comment suggested that the rule should distinguish consistent intended performance from well-recognized service ``availability.''
+The agency advises that the phrase ``consistent intended performance'' relates to the general principle of validation that planned and expected performance is based upon predetermined design specifications (hence, ``intended'').
+This concept is in accord with the agency's 1987 ``Guideline on General Principles of Process Validation,'' which is available from the Division of Manufacturing and Product Quality, Center for Drug Evaluation and Research (HFD-320), Food and Drug Administration, 7520 Standish Pl., Rockville, MD 20855, 301-594-0093).
+This guideline defines validation as establishing documented evidence that provides a high degree of assurance that a specific process will consistently produce a product meeting its predetermined specifications and quality attributes.
+The agency believes that the comment's concepts are accommodated by this definition to the extent that system ``availability'' may be one of the predetermined specifications or quality attributes.
+67.
+One comment said the rule should indicate whether validation of systems does, or should, require any certification or accreditation.
+The agency believes that although certification or accreditation may be a part of validation of some systems, such certification or accreditation is not necessary in all cases, outside of the context of any such approvals within an organization itself.
+Therefore, part 11 is silent on the matter.
+68.
+One comment said the rule should clarify whether system validation should be capable of discerning the absence of electronic records, in light of agency concerns about falsification.
+The comment added that the agency's concerns regarding invalid or altered records can be mitigated by use of cryptographically enhanced methods, including secure time and date stamping.
+The agency does not believe that it is necessary at this time to include an explicit requirement that systems be capable of detecting the absence of records.
+The agency advises that the requirement in Sec. 11.10(e) for audit trails of operator actions would cover those actions intended to delete records.
+Thus, the agency would expect firms to document such deletions, and would expect the audit trail mechanisms to be included in the validation of the electronic records system.
+69.
+Proposed Sec. 11.10(b) states that controls for closed systems must include the ability to generate true copies of records in both human readable and electronic form suitable for inspection, review, and copying by the agency, and that if there were any questions regarding the ability of the agency to perform such review and copying, persons should contact the agency.
+Several comments objected to the requirement for ``true'' copies of electronic records.
+The comments asserted that information in an original record (as may be contained in a database) may be presented in a copy in a different format that may be more usable.
+The comments concluded that, to generate precise ``true'' copies of electronic records, firms may have to retain the hardware and software that had been used to create those records in the first place (even when such hardware and software had been replaced by newer systems).
+The comments pointed out that firms may have to provide FDA with the application logic for ``true'' copies, and that this may violate copyright provisions.
+One comment illustrated the difference between ``true'' copies and other equally reliable, but not exact, copies of electronic records by noting that pages from FDA's paper publications (such as the CFR and the Compliance Policy Guidance Manual) look quite different from electronic copies posted to FDA's bulletin board.
+The comments suggested different wording that would effectively require accurate and complete copies, but not necessarily ``true'' copies.
+The agency agrees that providing exact copies of electronic records in the strictest meaning of the word ``true'' may not always be feasible.
+The agency nonetheless believes it is vital that copies of electronic records provided to FDA be accurate and complete.
+Accordingly, in Sec. 11.10(b), ``true'' has been replaced with ``accurate and complete.''
+The agency expects that this revision should obviate the potential problems noted in the comments.
+The revision should also reduce the costs of providing copies by making clear that firms need not maintain obsolete equipment in order to make copies that are ``true'' with respect to format and computer system.
+70.
+Many comments objected to the proposed requirement that systems be capable of generating electronic copies of electronic records for FDA inspection and copying, although they generally agreed that it was appropriate to provide FDA with readable paper copies.
+Alternative wording was suggested that would make providing electronic copies optional, such that persons could provide FDA with nothing but paper copies if they so wished.
+The comments argued that providing FDA with electronic copies was unnecessary, unjustified, not practical considering the different types of computer systems that may be in use, and would unfairly limit firms in their selection of hardware and software if they could only use systems that matched FDA's capabilities (capabilities which, it was argued, would not be uniform throughout the United States).
+One comment suggested that the rule specify
+[[Page 13446]]
+a particular format, such as ASCII, for electronic copies to FDA.
+The agency disagrees with the assertion that FDA need only be provided with paper copies of electronic records.
+To operate effectively, the agency must function on the same technological plane as the industries it regulates.
+Just as firms realize efficiencies and benefits in the use of electronic records, FDA should be able to conduct audits efficiently and thoroughly using the same technology.
+For example, where firms perform computerized trend analyses of electronic records to improve their processes, FDA should be able to use computerized methods to audit electronic records (on site and off, as necessary) to detect trends, inconsistencies, and potential problem areas.
+If FDA is restricted to reviewing only paper copies of those records, the results would severely impede its operations.
+Inspections would take longer to complete, resulting in delays in approvals of new medical products, and expenditure of additional resources both by FDA (in performing the inspections and transcribing paper records to electronic format) and by the inspected firms, which would generate the paper copies and respond to questions during the resulting lengthened inspections.
+The agency believes that it also may be necessary to require that persons furnish certain electronic copies of electronic records to FDA because paper copies may not be accurate and complete if they lack certain audit trail (metadata) information.
+Such information may have a direct bearing on record trustworthiness and reliability.
+These data could include information, for example, on when certain items of electronic mail were sent and received.
+The agency notes that people who use different computer systems routinely provide each other with electronic copies of electronic records, and there are many current and developing tools to enable such sharing.
+For example, at a basic level, records may be created in, or transferred to, the ASCII format.
+Many different commercial programs have the capability to import from, and export to, electronic records having different formats.
+Firms use electronic data interchange (commonly known as EDI) and agreed upon transaction set formats to enable them to exchange copies of electronic records effectively.
+Third parties are also developing portable document formats to enable conversion among several diverse formats.
+Concerning the ability of FDA to handle different formats of electronic records, based upon the emergence of format conversion tools such as those mentioned above, the agency's experience with electronic submissions such as computer assisted new drug applications (commonly known as CANDA's), and the agency's planned Submissions Management and Review Tracking System (commonly known as SMART), FDA is confident that it can work with firms to minimize any formatting difficulties.
+In addition, substitution of the words ``accurate and complete'' for ``true,'' as discussed in comment 69, should make it easier for firms to provide FDA with electronic copies of their electronic records.
+FDA does not believe it is necessary to specify any particular format in part 11 because it prefers, at this time, to afford industry and the agency more flexibility in deciding which formats meet the capabilities of all parties.
+Accordingly, the agency has revised proposed Sec. 11.10(b) to read: The ability to generate accurate and complete copies of records in both human readable and electronic form suitable for inspection, review, and copying by the agency.
+Persons should contact the agency if there are any questions regarding the ability of the agency to perform such review and copying of the electronic records.
+71.
+Proposed Sec. 11.10(c) states that procedures and controls for closed systems must include the protection of records to enable their accurate and ready retrieval throughout the records retention period.
+One firm commented that, because it replaces systems often (about every 3 years), it may have to retain supplanted systems to meet these requirements.
+Another comment suggested that the rule be modified to require records retention only for as long as ``legally mandated.''
+The agency notes that, as discussed in comment 70 of this document, persons would not necessarily have to retain supplanted hardware and software systems provided they implemented conversion capabilities when switching to replacement technologies.
+The agency does not believe it is necessary to add the qualifier ``legally mandated'' because the retention period for a given record will generally be established by the regulation that requires the record.
+Where the regulations do not specify a given time, the agency would expect firms to establish their own retention periods.
+Regardless of the basis for the retention period, FDA believes that the requirement that a given electronic record be protected to permit it to be accurately and readily retrieved for as long as it is kept is reasonable and necessary.
+72.
+Proposed Sec. 11.10(e) would require the use of time-stamped audit trails to document record changes, all write-to-file operations, and to independently record the date and time of operator entries and actions.
+Record changes must not obscure previously recorded information and such audit trail documentation must be retained for a period at least as long as required for the subject electronic documents and must be available for agency review and copying.
+Many comments objected to the proposed requirement that all write- to-file operations be documented in the audit trail because it is unnecessary to document all such operations.
+The comments said that this would require audit trails for such automated recordings as those made to internal buffers, data swap files, or temporary files created by word processing programs.
+The comments suggested revising Sec. 11.10(e) to require audit trails only for operator entries and actions.
+Other comments suggested that audit trails should cover: (1) Operator data inputs but not actions, (2) only operator changes to records, (3) only critical write-to-file information, (4) operator changes as well as all actions, (5) only new entries, (6) only systems where data can be altered, (7) only information recorded by humans, (8) information recorded by both humans and devices, and (9) only entries made upon adoption of the records as official.
+One comment said audit trails should not be required for data acquisition systems, while another comment said audit trails are critical for data acquisition systems.
+It is the agency's intent that the audit trail provide a record of essentially who did what, wrote what, and when.
+The write-to-file operations referenced in the proposed rule were not intended to cover the kind of ``background'' nonhuman recordings the comments identified.
+The agency considers such operator actions as activating a manufacturing sequence or turning off an alarm to warrant the same audit trail coverage as operator data entries in order to document a thorough history of events and those responsible for such events.
+Although FDA acknowledges that not every operator ``action,'' such as switching among screen displays, need be covered by audit trails, the agency is concerned that revising the rule to cover only ``critical'' operations would result in excluding much information and actions that are necessary to document events thoroughly.
+[[Page 13447]]
+The agency believes that, in general, the kinds of operator actions that need to be covered by an audit trail are those important enough to memorialize in the electronic record itself.
+These are actions which, for the most part, would be recorded in corresponding paper records according to existing recordkeeping requirements.
+The agency intends that the audit trail capture operator actions (e.g., a command to open a valve) at the time they occur, and operator information (e.g., data entry) at the time the information is saved to the recording media (such as disk or tape), in much the same manner as such actions and information are memorialized on paper.
+The audit trail need not capture every keystroke and mistake that is held in a temporary buffer before those commitments.
+For example, where an operator records the lot number of an ingredient by typing the lot number, followed by the ``return key'' (where pressing the return key would cause the information to be saved to a disk file), the audit trail need not record every ``backspace delete'' key the operator may have previously pressed to correct a typing error.
+Subsequent ``saved'' corrections made after such a commitment, however, must be part of the audit trail.
+At this time, the agency's primary concern relates to the integrity of human actions.
+Should the agency's experience with part 11 demonstrate a need to require audit trails of device operations and entries, the agency will propose appropriate revisions to these regulations.
+Accordingly, the agency has revised proposed Sec. 11.10(e) by removing reference to all write-to-file operations and clarifying that the audit trail is to cover operator entries and actions that create, modify, or delete electronic records.
+73.
+A number of comments questioned whether proposed Sec. 11.10(e) mandated that the audit trail be part of the electronic record itself or be kept as a separate record.
+Some comments interpreted the word ``independently'' as requiring a separate record.
+Several comments focused on the question of whether audit trails should be generated manually under operator control or automatically without operator control.
+One comment suggested a revision that would require audit trails to be generated by computer, because the system, not the operator, should record the audit trail.
+Other comments said the rule should facilitate date and time recording by software, not operators, and that the qualifier ``securely'' be added to the language describing the audit trail.
+One comment, noting that audit trails require validation and qualification to ensure that time stamps are accurate and independent, suggested that audit trails be required only when operator actions are witnessed.
+The agency advises that audit trail information may be contained as part of the electronic record itself or as a separate record.
+FDA does not intend to require one method over the other.
+The word ``independently'' is intended to require that the audit trail not be under the control of the operator and, to prevent ready alteration, that it be created independently of the operator.
+To maintain audit trail integrity, the agency believes it is vital that the audit trail be created by the computer system independently of operators.
+The agency believes it would defeat the purpose of audit trails to permit operators to write or change them.
+The agency believes that, at this time, the source of such independent audit trails may effectively be within the organization that creates the electronic record.
+However, the agency is aware of a situation under which time and date stamps are provided by trusted third parties outside of the creating organization.
+These third parties provide, in effect, a public electronic notary service.
+FDA will monitor development of such services in light of part 11 to determine if a requirement for such third party services should be included in these regulations.
+For now, the agency considers the advent of such services as recognition of the need for strict objectivity in recording time and date stamps.
+The agency disagrees with the premise that only witnessed operator actions need be covered by audit trails because the opportunities for record falsification are not limited to cases where operator actions are witnessed.
+Also, the need for validating audit trails does not diminish the need for their implementation.
+FDA agrees with the suggestion that the proposed rule be revised to require a secure audit trail--a concept inherent in having such a control at all.
+Accordingly, proposed Sec. 11.10(e) has been revised to require use of ``secure, computer-generated'' audit trails.
+74.
+A few comments objected to the requirement that time be recorded, in addition to dates, and suggested that time be recorded only when necessary and feasible.
+Other comments specifically supported the requirement for recording time, noting that time stamps make electronic signatures less vulnerable to fraud and abuse.
+The comments noted that, in any setting, there is a need to identify the date, time, and person responsible for adding to or changing a value.
+One of the comments suggested that the rule require recording the reason for making changes to electronic records.
+Other comments implicitly supported recording time.
+FDA believes that recording time is a critical element in documenting a sequence of events.
+Within a given day a number of events and operator actions may take place, and without recording time, documentation of those events would be incomplete.
+For example, without time stamps, it may be nearly impossible to determine such important sequencing as document approvals and revisions and the addition of ingredients in drug production.
+Thus, the element of time becomes vital to establishing an electronic record's trustworthiness and reliability.
+The agency notes that comments on the ANPRM frequently identified use of date/time stamps as an important system control.
+Time recording, in the agency's view, can also be an effective deterrent to records falsification.
+For example, event sequence codes alone would not necessarily document true time in a series of events, making falsification of that sequence easier if time stamps are not used.
+The agency believes it should be very easy for firms to implement time stamps because there is a clock in every computer and document management software, electronic mail systems and other electronic record/electronic applications, such as digital signature programs, commonly apply date and time stamps.
+The agency does not intend that new technologies, such as cryptographic technologies, will be needed to comply with this requirement.
+The agency believes that implementation of time stamps should be feasible in virtually all computer systems because effective computer operations depend upon internal clock or timing mechanisms and, in the agency's experience, most computer systems are capable of precisely recording such time entries as when records are saved.
+The agency is implementing the time stamp requirement based on the understanding that all current computers, electronic document software, electronic mail, and related electronic record systems include such technologies.
+The agency also understands that time stamps are applied automatically by these systems, meaning firms would not have to install additional hardware, software, or incur additional burden to implement this control.
+In recognition of this, the agency wishes to clarify that a primary intent of this provision is to ensure that people take reasonable measures to
+[[Page 13448]]
+ensure that those built in time stamps are accurate and that people do not alter them casually so as to readily mask unauthorized record changes.
+The agency advises that, although part 11 does not specify the time units (e.g., tenth of a second, or even the second) to be used, the agency expects the unit of time to be meaningful in terms of documenting human actions.
+The agency does not believe part 11 needs to require recording the reason for record changes because such a requirement, when needed, is already in place in existing regulations that pertain to the records themselves.
+75.
+One comment stated that proposed Sec. 11.10(e) should not require an electronic signature for each write-to-file operation.
+The agency advises that Sec. 11.10(e) does not require an electronic signature as the means of authenticating each write-to-file operation.
+The agency expects the audit trail to document who did what and when, documentation that can be recorded without electronic signatures themselves.
+76.
+Several comments, addressing the proposed requirement that record changes not obscure previously recorded information, suggested revising proposed Sec. 11.10(e) to apply only to those entries intended to update previous information.
+The agency disagrees with the suggested revision because the rewording is too narrow.
+The agency believes that some record changes may not be ``updates'' but significant modifications or falsifications disguised as updates.
+All changes to existing records need to be documented, regardless of the reason, to maintain a complete and accurate history, to document individual responsibility, and to enable detection of record falsifications.
+77.
+Several comments suggested replacing the word ``document'' with ``record'' in the phrase ``Such audit trails shall be retained for a period at least as long as required for the subject electronic documents * * *'' because not all electronic documents are electronic records and because the word document connotes paper.
+As discussed in section III.D. of this document, the agency equates electronic documents with electronic records, but for consistency, has changed the phrase to read ``Such audit trail documentation shall be retained for a period at least as long as that required for the subject electronic records * * *.''
+78.
+Proposed Sec. 11.10(k)(ii) (Sec. 11.10(k)(2) in this regulation) addresses electronic audit trails as a systems documentation control.
+One comment noted that this provision appears to be the same as the audit trail provision of proposed Sec. 11.10(e) and requested clarification.
+The agency wishes to clarify that the kinds of records subject to audit trails in the two provisions cited by the comment are different.
+Section 11.10(e) pertains to those records that are required by existing regulations whereas Sec. 11.10(k)(2) covers the system documentation records regarding overall controls (such as access privilege logs, or system operational specification diagrams).
+Accordingly, the first sentence of Sec. 11.10(e) has been revised to read ``Use of secure, computer-generated, time-stamped audit trails to independently record and date the time of operator entries and actions that create, modify, or delete electronic records.''
+79.
+Proposed Sec. 11.10(f) states that procedures and controls for closed systems must include the use of operational checks to enforce permitted sequencing of events, as appropriate.
+Two comments requested clarification of the agency's intent regarding operational checks.
+The agency advises that the purpose of performing operational checks is to ensure that operations (such as manufacturing production steps and signings to indicate initiation or completion of those steps) are not executed outside of the predefined order established by the operating organization.
+80.
+Several comments suggested that, for clarity, the phrase ``operational checks'' be modified to ``operational system checks.''
+The agency agrees that the added modifier ``system'' more accurately reflects the agency's intent that operational checks be performed by the computer systems and has revised proposed Sec. 11.10(f) accordingly.
+81.
+Several comments suggested revising proposed Sec. 11.10(f) to clarify what is to be checked.
+The comments suggested that ``steps'' in addition to ``events'' be checked, only critical steps be checked, and that ``records'' also be checked.
+The agency intends the word ``event'' to include ``steps'' such as production steps.
+For clarity, however, the agency has revised proposed Sec. 11.10(f) by adding the word ``steps.''
+The agency does not, however, agree that only critical steps need be subject to operational checks because a given specific step or event may not be critical, yet it may be very important that the step be executed at the proper time relative to other steps or events.
+The agency does not believe it necessary to add the modifier ``records'' to proposed Sec. 11.10(f) because creation, deletion, or modification of a record is an event.
+Should it be necessary to create, delete, or modify records in a particular sequence, operational system checks would ensure that the proper sequence is followed.
+82.
+Proposed Sec. 11.10(g) states that procedures and controls for closed systems must include the use of authority checks to ensure that only authorized individuals use the system, electronically sign a record, access the operation or device, alter a record, or perform the operation at hand.
+One comment suggested that the requirement for authority checks be qualified with the phrase ``as appropriate,'' on the basis that it would not be necessary for certain parts of a system, such as those not affecting an electronic record.
+The comment cited pushing an emergency stop button as an example of an event that would not require an authority check.
+Another comment suggested deleting the requirement on the basis that some records can be read by all employees in an organization.
+The agency advises that authority checks, and other controls under Sec. 11.10, are intended to ensure the authenticity, integrity, and confidentiality of electronic records, and to ensure that signers cannot readily repudiate a signed record as not genuine.
+Functions outside of this context, such as pressing an emergency stop button, would not be covered.
+However, even in this example, the agency finds it doubtful that a firm would permit anyone, such as a stranger from outside the organization, to enter a facility and press the stop button at will regardless of the existence of an emergency.
+Thus, there would likely be some generalized authority checks built into the firm's operations.
+The agency believes that few organizations freely permit anyone from within or without the operation to use their computer system, electronically sign a record, access workstations, alter records, or perform operations.
+It is likely that authority checks shape the activities of almost every organization.
+The nature, scope, and mechanism of performing such checks is up to the operating organization.
+FDA believes, however, that performing such checks is one of the most fundamental measures to ensure the integrity and trustworthiness of electronic records.
+Proposed Sec. 11.10(g) does not preclude all employees from being permitted to read certain electronic records.
+However, the fact that some records may be read by all employees would not
+[[Page 13449]]
+justify deleting the requirement for authority checks entirely.
+The agency believes it is highly unlikely that all of a firm's employees would have authority to read, write, and sign all of its electronic records.
+83.
+One comment said authority checks are appropriate for document access but not system access, and suggested that the phrase ``access the operation or device'' be deleted.
+The comment added, with respect to authority checks on signing records, that in many organizations, more than one individual has the authority to sign documents required under FDA regulations and that such authority should be vested with the individual as designated by the operating organization.
+Another comment said proposed Sec. 11.10(g) should explicitly require access authority checks and suggested that the phrase ``use the system'' be changed to ``access and use the system.''
+The comment also asked for clarification of the term ``device.''
+The agency disagrees that authority checks should not be required for system access because, as discussed in comment 82 of this document, it is unlikely that a firm would permit any unauthorized individuals to access its computer systems.
+System access control is a basic security function because system integrity may be impeached even if the electronic records themselves are not directly accessed.
+For example, someone could access a system and change password requirements or otherwise override important security measures, enabling individuals to alter electronic records or read information that they were not authorized to see.
+The agency does not believe it necessary to add the qualifier ``access and'' because Sec. 11.10(d) already requires that system access be limited to authorized individuals.
+The agency intends the word ``device'' to mean a computer system input or output device and has revised proposed Sec. 11.10(g) to clarify this point.
+Concerning signature authority, FDA advises that the requirement for authority checks in no way limits organizations in authorizing individuals to sign multiple records.
+Firms may use any appropriate mechanism to implement such checks.
+Organizations do not have to embed a list of authorized signers in every record to perform authority checks.
+For example, a record may be linked to an authority code that identifies the title or organizational unit of people who may sign the record.
+Thus, employees who have that corresponding code, or belong to that unit, would be able to sign the record.
+Another way to implement controls would be to link a list of authorized records to a given individual, so that the system would permit the individual to sign only records in that list.
+84.
+Two comments addressed authority checks within the context of PDMA and suggested that such checks not be required for drug sample receipt records.
+The comments said that different individuals may be authorized to accept drug samples at a physician's office, and that the large number of physicians who would potentially qualify to receive samples would be too great to institute authority checks.
+The agency advises that authority checks need not be automated and that in the context of PDMA such checks would be as valid for electronic records as they are for paper sample requests because only licensed practitioners or their designees may accept delivery of drug samples.
+The agency, therefore, acknowledges that many individuals may legally accept samples and, thus, have the authority to sign electronic receipts.
+However, authority checks for electronic receipts could nonetheless be performed by sample manufacturer representatives by using the same procedures as the representatives use for paper receipts.
+Accordingly, the agency disagrees with the comment that proposed Sec. 11.10(g) should not apply to PDMA sample receipts.
+The agency also advises that under PDMA, authority checks would be particularly important in the case of drug sample request records because only licensed practitioners may request drug samples.
+Accordingly, proposed Sec. 11.10(g) has been revised to read: ``Use of authority checks to ensure that only authorized individuals can use the system, electronically sign a record, access the operation or computer system input or output device, alter a record, or perform the operation at hand.''
+85.
+Proposed Sec. 11.10(h) states that procedures and controls for closed systems must include the use of device (e.g., terminal) location checks to determine, as appropriate, the validity of the source of data input or operational instruction.
+Several comments objected to this proposed requirement and suggested its deletion because it is: (1) Unnecessary (because the data source is always known by virtue of system design and validation); (2) problematic with respect to mobile devices, such as those connected by modem; (3) too much of a ``how to;'' (4) not explicit enough to tell firms what to do; (5) unnecessary in the case of PDMA; and (6) technically challenging.
+One comment stated that a device's identification, in addition to location, may be important and suggested that the proposed rule be revised to require device identification as well.
+FDA advises that, by use of the term ``as appropriate,'' it does not intend to require device checks in all cases.
+The agency believes that these checks are warranted where only certain devices have been selected as legitimate sources of data input or commands.
+In such cases, the device checks would be used to determine if the data or command source was authorized.
+In a network, for example, it may be necessary for security reasons to limit issuance of critical commands to only one authorized workstation.
+The device check would typically interrogate the source of the command to ensure that only the authorized workstation, and not some other device, was, in fact, issuing the command.
+The same approach applies for remote sources connected by modem, to the extent that device identity interrogations could be made automatically regardless of where the portable devices were located.
+To clarify this concept, the agency has removed the word ``location'' from proposed Sec. 11.10(h).
+Device checks would be necessary under PDMA when the source of commands or data is relevant to establishing authenticity, such as when licensed practitioners order drug samples directly from the manufacturer or authorized distributor without the intermediary of a sales representative.
+Device checks may also be useful to firms in documenting and identifying which sales representatives are transmitting drug sample requests from licensed practitioners.
+FDA believes that, although validation may demonstrate that a given terminal or workstation is technically capable of sending information from one point to another, validation alone would not be expected to address whether or not such device is authorized to do so.
+86.
+Proposed Sec. 11.10(i) states that procedures and controls for closed systems must include confirmation that persons who develop, maintain, or use electronic record or signature systems have the education, training, and experience to perform their assigned tasks.
+Several comments objected to the word ``confirmation'' because it is redundant with, or more restrictive than, existing regulations, and suggested alternate wording, such as ``evidence.''
+Two comments interpreted the proposed wording as requiring that checks of personnel qualifications be performed automatically by computer systems that perform database type
+[[Page 13450]]
+matches between functions and personnel training records.
+The agency advises that, although there may be some overlap in proposed Sec. 11.10(i) and other regulations regarding the need for personnel to be properly qualified for their duties, part 11 is specific to functions regarding electronic records, an issue that other regulations may or may not adequately address.
+Therefore, the agency is retaining the requirement.
+The agency does not intend to require that the check of personnel qualifications be performed automatically by a computer system itself (although such automation is desirable).
+The agency has revised the introductory paragraph of Sec. 11.10, as discussed in section VII. of this document, to clarify this point.
+The agency agrees that another word should be used in place of ``confirmation,'' and for clarity has selected ``determination.''
+87.
+One comment suggested that the word ``training'' be deleted because it has the same meaning as ``education'' and ``experience,'' and objected to the implied requirement for records of employee training.
+Another comment argued that applying this provision to system developers was irrelevant so long as systems perform as required and have been appropriately validated.
+The comment suggested revising proposed Sec. 11.10(i) to require employees to be trained only ``as necessary.''
+One comment, noting that training and experience are very important, suggested expanding proposed Sec. 11.10(i) to require appropriate examination and certification of persons who perform certain high-risk, high-trust functions and tasks.
+The agency regards this requirement as fundamental to the proper operation of a facility.
+Personnel entrusted with important functions must have sufficient training to do their jobs.
+In FDA's view, formal education (e.g., academic studies) and general industry experience would not necessarily prepare someone to begin specific, highly technical tasks at a given firm.
+Some degree of on-the-job training would be customary and expected.
+The agency believes that documentation of such training is also customary and not unreasonable.
+The agency also disagrees with the assertion that personnel qualifications of system developers are irrelevant.
+The qualifications of personnel who develop systems are relevant to the expected performance of the systems they build and their ability to explain and support these systems.
+Validation does not lessen the need for personnel to have the education, training, and experience to do their jobs properly.
+Indeed, it is highly unlikely that poorly qualified developers would be capable of producing a system that could be validated.
+The agency advises that, although the intent of proposed Sec. 11.10(i) is to address qualifications of those personnel who develop systems within an organization, rather than external ``vendors'' per se, it is nonetheless vital that vendor personnel are likewise qualified to do their work.
+The agency agrees that periodic examination or certification of personnel who perform certain critical tasks is desirable.
+However, the agency does not believe that at this time a specific requirement for such examination and certification is necessary.
+88.
+Proposed Sec. 11.10(j) states that procedures and controls for closed systems must include the establishment of, and adherence to, written policies that hold individuals accountable and liable for actions initiated under their electronic signatures, so as to deter record and signature falsification.
+Several comments suggested changing the word ``liable'' to ``responsible'' because the word ``responsible'' is broader, more widely understood by employees, more positive and inclusive of elements of honesty and trust, and more supportive of a broad range of disciplinary measures.
+One comment argued that the requirement would not deter record or signature falsification because employee honesty and integrity cannot be regulated.
+The agency agrees because, although the words ``responsible'' and ``liable'' are generally synonymous, ``responsible'' is preferable because it is more positive and supportive of a broad range of disciplinary measures.
+There may be a general perception that electronic records and electronic signatures (particularly identification codes and passwords) are less significant and formal than traditional paper records and handwritten signatures.
+Individuals may therefore not fully equate the seriousness of electronic record falsification with paper record falsification.
+Employees need to understand the gravity and consequences of signature or record falsification.
+Although FDA agrees that employee honesty cannot be ensured by requiring it in a regulation, the presence of strong accountability and responsibility policies is necessary to ensure that employees understand the importance of maintaining the integrity of electronic records and signatures.
+89.
+Several comments expressed concern regarding employee liability for actions taken under their electronic signatures in the event that such signatures are compromised, and requested ``reasonable exceptions.''
+The comments suggested revising proposed Sec. 11.10(j) to hold people accountable only where there has been intentional falsification or corruption of electronic data.
+The agency considers the compromise of electronic signatures to be a very serious matter, one that should precipitate an appropriate investigation into any causative weaknesses in an organization's security controls.
+The agency nonetheless recognizes that where such compromises occur through no fault or knowledge of individual employees, there would be reasonable limits on the extent to which disciplinary action would be taken.
+However, to maintain emphasis on the seriousness of such security breeches and deter the deliberate fabrication of ``mistakes,'' the agency believes Sec. 11.10 should not provide for exceptions that may lessen the import of such a fabrication.
+90.
+One comment said the agency should consider the need for criminal law reform because current computer crime laws do not address signatures when unauthorized access or computer use is not an issue.
+Another comment argued that proposed Sec. 11.10(j) should be expanded beyond ``individual'' accountability to include business entities.
+The agency will consider the need for recommending legislative initiatives to address electronic signature falsification in light of the experience it gains with this regulation.
+The agency does not believe it necessary to address business entity accountability specifically in Sec. 11.10 because the emphasis is on actions and accountability of individuals, and because individuals, rather than business entities, apply signatures.
+91.
+One comment suggested that proposed Sec. 11.10(j) should be deleted because it is unnecessary because individuals are presumably held accountable for actions taken under their authority, and because, in some organizations, individuals frequently delegate authority to sign their names.
+As discussed in comments 88 to 90 of this document, the agency has concluded that this section is necessary.
+Furthermore it does not limit delegation of authority as described in the comment.
+However, where one individual signs his or her name on behalf of someone else, the signature applied should be that of the delegatee, with some notation of that fact, and not the name of the delegator.
+This is the
+[[Page 13451]]
+same procedure commonly used on paper documents, noted as ``X for Y.'' 92.
+Proposed Sec. 11.10(k) states that procedures and controls for closed systems must include the use of appropriate systems documentation controls, including: (1) Adequate controls over the distribution, access to, and use of documentation for system operation and maintenance; and (2) records revision and change control procedures to maintain an electronic audit trail that documents time-sequenced development and modification of records.
+Several comments requested clarification of the type of documents covered by proposed Sec. 11.10(k).
+One comment noted that this section failed to address controls for record retention.
+Some comments suggested limiting the scope of systems documentation to application and configurable software, or only to software that could compromise system security or integrity.
+Other comments suggested that this section should be deleted because some documentation needs wide distribution within an organization, and that it is an onerous burden to control user manuals.
+The agency advises that Sec. 11.10(k) is intended to apply to systems documentation, namely, records describing how a system operates and is maintained, including standard operating procedures.
+The agency believes that adequate controls over such documentation are necessary for various reasons.
+For example, it is important for employees to have correct and updated versions of standard operating and maintenance procedures.
+If this documentation is not current, errors in procedures and/or maintenance are more likely to occur.
+Part 11 does not limit an organization's discretion as to how widely or narrowly any document is to be distributed, and FDA expects that certain documents will, in fact, be widely disseminated.
+However, some highly sensitive documentation, such as instructions on how to modify system security features, would not routinely be widely distributed.
+Hence, it is important to control distribution of, access to, and use of such documentation.
+Although the agency agrees that the most critical types of system documents would be those directly affecting system security and integrity, FDA does not agree that control over system documentation should only extend to security related software or to application or configurable software.
+Documentation that relates to operating systems, for example, may also have an impact on security and day-to-day operations.
+The agency does not agree that it is an onerous burden to control documentation that relates to effective operation and security of electronic records systems.
+Failure to control such documentation, as discussed above, could permit and foster records falsification by making the enabling instructions for these acts readily available to any individual.
+93.
+Concerning the proposed requirement for adequate controls over documentation for system operation and maintenance, one comment suggested that it be deleted because it is under the control of system vendors, rather than operating organizations.
+Several comments suggested that the proposed provision be deleted because it duplicates Sec. 11.10(e) with respect to audit trails.
+Some comments also objected to maintaining the change control procedures in electronic form and suggested deleting the word ``electronic'' from ``electronic audit trails.''
+The agency advises that this section is intended to apply to systems documentation that can be changed by individuals within an organization.
+If systems documentation can only be changed by a vendor, this provision does not apply to the vendor's customers.
+The agency acknowledges that systems documentation may be in paper or electronic form.
+Where the documentation is in paper form, an audit trail of revisions need not be in electronic form.
+Where systems documentation is in electronic form, however, the agency intends to require the audit trail also be in electronic form, in accordance with Sec. 11.10(e).
+The agency acknowledges that, in light of the comments, the proposed rule may not have been clear enough regarding audit trails addressed in Sec. 11.10(k) compared to audit trails addressed in Sec. 11.10(e) and has revised the final rule to clarify this matter.
+The agency does not agree, however, that the audit trail provisions of Sec. 11.10(e) and (k), as revised, are entirely duplicative.
+Section 11.10(e) applies to electronic records in general (including systems documentation); Sec. 11.10(k) applies exclusively to systems documentation, regardless of whether such documentation is in paper or electronic form.
+As revised, Sec. 11.10(k) now reads as follows: (k) Use of appropriate controls over systems documentation including: (1) Adequate controls over the distribution of, access to, and use of documentation for system operation and maintenance.
+(2) Revision and change control procedures to maintain an audit trail that documents time-sequenced development and modification of systems documentation.
+.
+_____________________________________________________
+Page Updated: June 01, 2001 tc _____________________________________________________
+Page 2 of 4
+Page 1 | 2 | 3 | 4 Next (Page3)
+Up to page top DHHS Agencies Page ORA Start Page New/Updated on ORA Web Search ORA Web FDA Home Page Compliance Reference Start Page FDA Web Search Page Send mail envelope icon Contact FDA V1.2 r2j FDA Privacy Statement Accessibility 01/11/2003

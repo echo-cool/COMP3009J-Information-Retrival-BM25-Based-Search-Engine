@@ -1,0 +1,550 @@
+An Assessment of Seismic Monitoring in the United States Requirement for an Advanced National Seismic System By U.S. Geological Survey U.S. Geological Survey Circular 1188 U.S. Department of the Interior U.S. Geological Survey U.S. Department of the Interior Bruce Babbitt, Secretary U.S. Geological Survey Charles G. Groat, Director Free on application to U.S. Geological Survey, Information Services Box 25286, Federal Center Denver, CO 80225 Any use of trade, product, or firm names in this publication is for descriptive purposes only and does not imply endorsement by the U.S. Government ISBN=0-607-92932-4 Contents Executive Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2 Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2 1.
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5 2.
+Assessment of existing systems and networks . . . . . . . . . . . . . . . . . . . .
+11 2.1 2.2 2.3 2.4 2.5 2.6 2.7 Basic concepts in seismic monitoring . . . . . . . . . . . .
+Survey of seismic monitoring networks in the United Regional and national monitoring centers . . . . . . . .
+The USGS role in seismic monitoring . . . . . . . . . . . .
+Progress in modernization of seismic networks . . .
+International comparisons . . . . . . . . . . . . . . . . . . . . .
+Summary of the problem . . . . . . . . . . . . . . . . . . . . . . .
+......
+States ......
+......
+......
+......
+......
+.. .
+..
+..
+..
+..
+.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11 12 13 14 14 15 16 3.
+Overview of an Advanced National Seismic System . . . . . . . . . . . . . .
+19 3.1 3.2 3.3 3.4 3.5 Steps toward an Advanced National Seismic Vision and mission of an advanced system .
+Fundamental goals . . . . . . . . . . . . . . . . . . . . .
+Operational concepts . . . . . . . . . . . . . . . . . . .
+Strategic plan and actions required . . . . . . .
+System .......
+.......
+.......
+....... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+19 20 20 21 21 4.
+An Advanced National Seismic System: Infrastructure requirements 25 4.1 4.2 4.3 4.4 4.5 4.6 National seismic monitoring . . . . . . . . . . . . . . . . . .
+Regional seismic monitoring . . . . . . . . . . . . . . . . . .
+Urban seismic monitoring . . . . . . . . . . . . . . . . . . . .
+Regional and national network operation centers Data management and distribution centers . . . . .
+Portable seismograph arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+25 25 25 26 27 27 5.
+Information products and services . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31 5.1 5.2 5.3 5.4 Time-critical information Data and information for General information and Summary . . . . . . . . . . . . for public safety . . . long-term earthquake expert services . . . . .
+...................
+.... loss ....
+....
+......... reduction .........
+.........
+.. .
+..
+.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31 32 34 34 6.
+Action items for an Advanced National Seismic System . . . . . . . . . . .
+39 6.1 6.2 6.3 6.4 6.5 6.6 Key steps for implementation . . . .
+Funding for an Advanced National Standards and performance goals Partnerships . . . . . . . . . . . . . . . . . .
+Management plan . . . . . . . . . . . . . .
+Challenge and opportunity . . . . . . .
+.......
+Seismic .......
+.......
+.......
+.......
+.......
+System .......
+.......
+.......
+.......
+.. .
+..
+..
+..
+.. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+39 39 43 43 44 45 7.
+Appendices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47 7.1 7.2 7.3 7.4 7.5 7.6 Excerpts from Public Law 105-47 . . .
+Assessment workshop participants Acronyms . . . . . . . . . . . . . . . . . . . . . .
+Inventory of seismic stations . . . . . . .
+USGS-supported regional networks .
+Map showing general distribution of .......
+.......
+.......
+.......
+....... seismic .........
+.........
+.........
+.........
+......... networks.
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47 48 50 51 54 55 iii Executive Summary This report monitoring Public Law monitoring monitoring report.
+is an assessment of the status, needs, and associated costs of seismic in the United States.
+It is submitted in compliance with a directive of 105-47.
+It sets down the requirement for an effective, national seismic strategy and an advanced system linking national, regional, and urban networks.
+A broad spectrum of opinion was sought in developing this Seismic monitoring is vital to meet the Nation's needs for timely and accurate information used in reducing the loss of life and property from earthquakes, tsunamis, and volcanic eruptions.
+An Advanced National Seismic System is needed to organize, modernize, standardize, and stabilize seismic monitoring in the United States.
+Modernized seismic monitoring can provide (1) alerts within a few seconds of imminent strong earthquake shaking, (2) rapid assessments of the distribution and severity of earthquake shaking (for use in emergency response), (3) warnings of a possible tsunami from an off-shore earthquake, (4) warnings of volcanic eruptions, (5) information for correctly characterizing earthquake hazards and for improving building codes, and (6) critically needed data on the response of buildings and structures during earthquakes, for safe, cost-effective design, engineering, and construction practices in earthquake-prone regions.
+Today, various institutions engaged in seismic monitoring in the United States face many persistent problems and challenges.
+Outdated, inadequate equipment and the lack of stable, long-term support are the most serious issues.
+Monitoring coverage is based on an uneven patchwork of networks loosely coordinated on a volunteer basis.
+Network operators must worry more about financial survival than about enhancing services and products.
+Modernization of equipment is slow and piecemeal at best.
+Valuable opportunities are being lost to issue earthquake alerts, to expedite and focus emergency response, and to collect the data needed over the long term to develop improved hazard assessments and engineering practices.
+An Advanced National Seismic System is required to organize and manage data collection and distribution, and to provide new products and services.
+Engineering, emergency response, and seismological interests will be served by this new approach.
+Increased financial support is necessary to modernize the seismic monitoring infrastructure and to provide for stable, long-term operations.
+The cost of the modernization effort is estimated at $170 million, with $47 million needed annually for operations.
+Inevitably, a catastrophic earthquake in the United States will result in the implementation of a system based on the actions described and the justifications given in this report.
+Thus, the question is not "what to do?" or "why do it?" but "when?".
+We are losing valuable opportunities with every earthquake to protect and to learn; these opportunities and lessons are lost without modern, effective seismic monitoring.
+1 Preface In fulfillment of the requirements of Public Law 105-47,1 the U.S. Geological Survey (USGS) submits this report of an assessment of seismic monitoring in the United States.
+This report includes statements of the Nation's needs for seismic monitoring and recommendations for meeting those needs.
+Rather than submit a report based on the views of a single government agency, the USGS involved a broad cross section of the seismic monitoring community in developing this document.
+Approximately 50 participants 2 attended a 3-day work shop in Denver, Colorado, in June 1998.
+Attendees included those with expertise and experience in emergency response management, seismic monitoring for engineering design, and seismic monitoring on national and regional scales.
+The participants provided the views and concepts that form the basis of this report.
+Acknowledgments This report was written by Harley Benz and John Filson of the U.S. Geological Survey, Walter Arabasz of the University of Utah, and Lind Gee of the University of California, Berkeley.
+Ray Buland, Art Frankel, Jim Goltz, Willie Lee, Steve Malone, Robert Nigbor, Paul Okubo, David Oppenheimer, Woody Savage, Kaye Shedlock, Dave Simpson, and Carl Stepp are recognized for their contributions.
+Attendees of the National Seismic Monitoring Assessment Workshop held June 8-10, 1998, in Denver, Colorado, are acknowledged for their ideas and concepts that formed the basis for this report.
+Thanks to Joyce Costello and Eleanor M. Omdahl for the layout and design of this report.
+1See 2See appendix 7.1.
+appendix 7.2.
+2 Seventy-five million Americans in 39 States are exposed to significant earthquake risk.
+1.
+Introduction Earthquakes and volcanic eruptions cannot be avoided and pose a national problem.
+Earthquakes and volcanic eruptions are natural hazards that cannot be controlled or reasonably avoided.
+Future losses of life and property due to earthquakes and volcanic activity in the United States and its territories are certain to occur.
+Thirty-nine States are exposed to significant earthquake risk.
+Six Western States are also exposed to significant volcanic hazards.
+Seventy-five million people, including 46 million outside California, live in metropolitan areas in the United States at moderate to high earthquake risk.
+According to new estimates by the Federal Emergency Management Agency (FEMA), the average annualized loss to the Nation's general building stock and essential facilities from earthquakes nationwide is approximately $4.4 billion.
+The history of large earthquakes in the United States includes several events whose repeat occurrence today would cause catastrophic losses.
+These historic earthquakes include violent shocks in southeastern Missouri in 1811 and 1812; southern California in 1857; the Island of Hawaii in 1868; Charleston, South Carolina, in 1886; southern Alaska in 1899; and northern California in 1906.
+Forceful reminders of the economic losses from earthquakes are illustrated by recent damaging urban earthquakes, such as Loma Prieta (1989) $6 billion; Northridge (1994) $40 billion; and Kobe (1995) $100 billion.
+Seismic monitoring is the foundation upon which all earthquake mitigation practices are built.
+Although the future occurrence of earthquakes and volcanic eruptions is inevitable, catastrophic losses are not.
+Proper mitigation practices and informed emergency response procedures can greatly reduce the impacts of these events.
+The implementation of effective mitigation practices involves long and complex processes.
+These processes require (1) quantitative assessment of the consequences of the hazard, (2) development of proper building designs, practices, and codes, (3) effective land-use planning, and (4) acceptance and implementation of mitigation practices by governments at all levels.
+Seismic monitoring provides the necessary foundation of basic data on which the first three of these elements are based, and without which they could not be developed, let alone acted upon.
+More specifically, direct applications of seismic monitoring include the following: Earthquake Emergency Response.
+Seismic monitoring can provide, within a few minutes, timely information on the location and size of an earthquake and on the geographic distribution and severity of ground shaking.
+This information is becoming increasingly critical for effective response by emergency management officials and crisis managers, especially in urban areas with growing populations and complex and costly infrastructures.
+5 Seismic monitoring also is necessary for hazard warning, assessment, and research.
+Warning of Volcanic Eruptions.
+Because most volcanic eruptions are preceded by seismic activity, seismic monitoring of active and potentially active volcanic centers is important.
+For example, seismic activity beginning in March 1980 preceded the eruption of Mount St. Helens in May of that year.
+Seismic monitoring of volcanoes is necessary to provide warning of eruptions.
+Warning of Tsunamis.
+The first warning that an offshore earthquake may have generated a tsunami (tidal wave) comes from seismic monitoring.
+Coastal areas of Alaska, California, Hawaii, Oregon, Puerto Rico, and Washington are all vulnerable to disastrous tsunamis.
+Seismic Hazard Assessment.
+Information on the likely level and character of ground shaking that can be expected at any site from future earthquakes is completely dependent on data from seismic monitoring.
+This information, in turn, is the basic foundation for setting guidelines in building codes for earthquake-resistant design and construction.
+Earthquake Engineering.
+Recordings of strong ground motion in structures and on the ground near the source of large earthquakes are essential for safe, cost-effective design and construction practices for every type of structure in earthquake-prone regions, including homes, buildings, bridges, highways, airports, utility grids, dams, oil pipelines, and other critical facilities.
+Scientific Research.
+Data from seismic monitoring networks are fundamental to a better understanding of earthquake occurrence and effects and of the processes that cause volcanic eruptions and tsunamis.
+These data contribute greatly both to basic science and to practical research, such as the study of the influence of source effects, wave propagation effects, and local site-response effects on destructive ground shaking.
+Public Information.
+Any earthquake or other seismic disturbance that humans sense or feel creates alarm and immediately raises the questions, "What happened? Where? How bad?" The general public and news media turn to seismologists operating monitoring networks for the answers.
+Education.
+Seismic monitoring centers serve as focal points for educating the public about earthquake and volcano hazards and safety.
+The centers also serve as training grounds for students pursuing careers in earth sciences and engineering, and they provide special expertise to assist public policymakers, design professionals, and planners in the implementation of mitigation practices.
+6 This report stresses the need for an Advanced National Seismic System.
+Given the importance of seismic monitoring, the central theme of this report is the requirement for and the timeliness of creating the physical and informational infrastructure of an Advanced National Seismic System.
+Section 2 gives a detailed assessment of existing seismic monitoring networks in the United States.
+Section 3 presents an overview of the planned Advanced National Seismic System, together with a strategic plan for achieving it.
+Following sections then describe three essential aspects of the proposed system: section 4, infrastructure required; section 5, information products and services; and section 6, estimated costs and action items for achieving the advanced system.
+7 The United States National Seismograph Network (USNSN) is the backbone of seismic monitoring for the Nation, but regional seismic networks that represent critical elements of a National Seismic System face severe problems and challenges.
+2.
+Assessment of Existing Systems and Networks An assessment of seismic monitoring networks in the United States requires definition of some basic terms,3 documentation of the inadequacies in our national and regional infrastructure for seismic monitoring, a comparison of the slow progress toward modernization being made in U.S. national monitoring compared with more rapid progress in other countries, and a summary of a problem that demands our national attention.
+2.1 Basic Concepts in Seismic Monitoring Seismic monitoring systems consist of sensors, recorders, and data analysis centers.
+Seismic monitoring systems record any disturbances that generate seismic (elastic) waves, which propagate through the Earth and produce vibration or shaking of the ground at the Earth's surface.
+The general term "seismic event" is used to indicate any such disturbance.
+In addition to earthquakes, other seismic disturbances that can be dangerous or disruptive include volcanic eruptions, quarry blasts, sonic booms, mine collapses, meteorite impacts, and underground nuclear testing.
+In simple terms, seismic monitoring requires (1) a sensor (seismometer) that converts vibratory ground motion into an electric signal, (2) a local recorder or a communication network that transmits this signal to a data center, and (3) analysis at this center that combines the signals from many seismometers to determine a location, magnitude peak acceleration, and other parameters that characterize the source and nature of the event.
+Existing seismic monitoring systems are of two conventional types, weak and strong motion.
+Most of the exist ing systems monitor either weak seismic motions or strong ground shaking.
+Weak-motion monitoring systems use very sensitive sensors that can record weak vibrations in narrow frequency ranges both from small local earthquakes and from distant moderate to large earthquakes.
+These sensitive monitoring systems are essential for continuous surveillance and for characterizing many important details of earthquake occurrence throughout the United States and the world.
+These systems represent the traditional approach to seismic monitoring.
+Because they are "designed" for the study of small earthquakes, in most cases they cannot record large, nearby earthquakes with high fidelity.
+One of the primary products of these systems is a list, or bulletin, giving the location and magnitude of seismic events in the region covered by the sensor network over a given period of time.
+Strong-motion monitoring systems use sensors with low sensitivity (called accelerometers) that can record strong, potentially damaging shaking either of the ground or of manmade structures.
+Strong motion is generally associated with earthquakes greater than about magnitude 4 or 5.
+Strong-motion recordings provide fundamental data for engineering design and construction practices and for seismic design criteria for building codes.
+The primary data and results from these systems are records of strong shaking and empirical relationships showing the attenuation of strong ground shaking with increasing distance from the source.
+3See appendix 7.3 for list of acronyms used in this report.
+11 Historical differences in instrumen tation and interests have divided seis mic monitoring efforts.
+These two distinct systems developed due to differences in monitoring interests and instrumentation.
+The engineering community was interested in recording only the very strong shaking of the ground and structures, and the instruments needed for this purpose were incapable of recording small or distant earthquakes.
+Seismologists were interested in detecting and locating as many events as possible for defining the seismicity associated with active tectonic and volcanic structures.
+The instruments used for these purposes were driven off scale by the strong shaking from nearby events.
+Traditionally, a seismograph consists of a seismometer and a recording system.
+The amplitude, or dynamic range, and resolution are measures of the ability of the instrument and recorder to faithfully record both very weak and very strong vibrations.
+The frequency range, or bandwidth, is a measure of the ability of the instrument to record a wide band of frequencies of seismic motion.
+The ideal seismograph has high dynamic range and resolution and broad-band recording capability.
+Today's modern seismographs can serve multiple needs.
+For the purposes of this report, a modern seismograph records seismic data in digital format over a broad range of frequencies and amplitudes extending from the background Earth noise to as high as two times Earth's gravitational acceleration.
+Seismographs developed after the mid-1980's are capable of capturing the full range of frequencies and amplitudes that convey the rich details of information embedded in seismic waves.
+To use a simple analogy, an earthquake can be compared to a symphonic orchestra playing a passage that involves all of the instruments; however, outdated, weak-motion listening devices miss the high and low ranges of the music and produce distorted sound when the volume increases.
+Outdated, analog strong-motion devices will record only the last of the crescendo.
+A modern seismic monitoring system should capture both weak and strong motion to provide the full range and spectrum of seismic information available and, through combined analysis, provide practical results that greatly exceed those previously realized in independent operations.
+2.2 Survey of Seismic Monitoring Networks in the United States In the summer of 1998, a survey was taken of all weak-motion and the major strong-motion networks operating in the United States and its territories (summary given in appendix 7.4).
+Forty-one individual networks were surveyed.
+These range from small networks of three or four stations operated by a single individual at a small college to networks of hundreds of seismographs with a relatively large staff to maintain the recording and processing infrastructure.
+Two semi-amateur networks (Public Seismic Network and Princeton Earth Physics Project) are operated by private individuals or school groups with little or no external operational support other than perhaps some startup equipment and advice from professionals.
+Some network operations are mission-specific, such as the Hawaii Volcano Observatory of the USGS or the National Oceanic and Atmospheric Administration (NOAA), Pacific and Alaska Tsunami Warning Centers; others such as the 12 Southern California Seismic Network have multiple missions, supporting agencies, and clients.
+Some networks are financed entirely by the USGS, some by other Federal or State agencies, some by private corporations, and many by a mix of all of these.
+Seismic monitoring networks in the United States are operating with outdated equipment.
+The variety of sizes and operating institutions for these networks is evident in the summary table of appendix 7.4.
+Note that, under the instrument types, for most networks, modern broad-band instruments (type "BB") make up only a small or nonexistent part of their seismograph stations.
+Only 6 percent of currently operating seismographs in the United States can accurately record both very small and fairly large earthquakes on-scale.
+Similarly, far fewer than half of the strongmotion instruments (type "SM") currently operating have digital recording capability, which is needed to record on-scale both moderate earthquakes and rare, very large events, and to provide rapid access to the data.
+This inventory of regional seismic monitoring networks in the United States shows that most were installed in the 1960's and 1970's chiefly as research networks designed to provide relatively fine scale information on the spatial distribution and characteristics of small to moderate-sized earthquakes.
+Their original equipment served this mission well but became outdated in the 1980's as digital instrumentation, improved sensors, and an expanded mission evolved.
+Similarly, most of the strong-motion networks in the United States predate digital technology and, although still useful, do not meet the current needs of engineers and emergency management officials.
+2.3 Regional and National Monitoring Centers Regional monitoring centers perform the important function of analyzing and distributing seismic data and information on earthquakes in seismically active areas.
+Regional centers also provide local expertise on earthquake hazards information for the local engineering and emergency management communities and for the general public, and they provide training for undergraduates and graduate students pursuing careers in seismology and related fields.
+Regional centers have developed on an ad hoc basis over the last 30 years.
+They have received funding from various sources for various purposes, with limited sustained support and central direction.
+The National Earthquake Information Center (NEIC) is operated by the USGS and provides uniform coverage for seismic events greater than about magnitude 3.5 for most of the United States, and for damaging earthquakes worldwide.
+The NEIC provides coverage in areas outside those covered by regional networks and provides important, independent reporting of earthquakes within areas of regional coverage.
+The NEIC contributes critical data and information for NOAA's tsunami warning operations, the National Warning Center, the Federal Emergency Management Agency, the Office of Foreign Disaster Assistance, and the Red Cross, as well as to all State emergency management offices.
+The NEIC also provides other information and educational products, such as definitive earthquake catalogs, seismicity maps, and publications on the earthquake history of the United States.
+13 2.4 The USGS Role in Seismic Monitoring The USGS has the assigned Federal responsibility to "monitor seismic activity" in the United States.
+4 It fulfills its role in seismic monitoring in the United States by Operating the United States National Seismograph Network (USNSN), a skeletal network of 56 broad-band seismograph stations widely spaced throughout the United States.
+The USGS has the responsibility for monitoring seismic activity in the United States.
+Operating the National Earthquake Information Center, which reports on all earthquakes in the United States large enough to be felt by humans, and all major earthquakes worldwide.
+Operating the United States National Strong Motion Program, a network of approximately 600 instruments specifically designed to record strong ground shaking.
+Contributing funding, and sometimes staff, to the operation of 16 regional seismic networks in many, but not all, seismically active areas of the United States.
+A list of regional monitoring activities supported by the USGS is given in appendix 7.5.
+Most of the USGS funding for national and regional moni toring goes toward operation and maintenance of existing networks.
+The USGS funding available for seismic monitoring is provided annually through the Federal budget cycle.
+Funding for seismic monitoring must compete with other priorities and programs within the USGS, the Department of the Interior, and the Federal Government as a whole.
+In FY 1999, this funding is $14 million for domestic monitoring and $3.8 million for global monitoring.
+(See section 2.6 for comparison with other countries.)
+The USGS provides its support to regional network operations through 3-year cooperative agreements.
+Most of the USGS funding is applied to the operation and maintenance of seismic networks, the routine analysis of data, and the dissemination of results.
+Current funding available to the USGS, given its other responsibilities under the National Earthquake Hazards Reduction Program (NEHRP), is not adequate for a comprehensive modernization of the seismic networks it supports.
+2.5 Progress in Modernization of Seismic Networks Limited progress has been made over the past two decades in modernizing seismic networks.
+Most of this progress has been due to supplemental funding provided by other agencies or interests to networks supported by the USGS.
+The United States National Seismograph Network (USNSN).
+The USNSN was founded by the USGS in the late 1980's with funding from the Nuclear Regulatory Commission (NRC).
+The USNSN and 4Public Law 101-614.
+14 the Global Seismograph Network (GSN) are the primary sources of data for the NEIC.
+Previously, NEIC had relied on data from selected stations in regional networks.
+The data were very limited in frequency bandwidth and dynamic range, and they were transmitted to NEIC over expensive and unreliable conventional telephone circuits.
+The NRC funding allowed more than 50 modern stations nationwide with dedicated satellite communication links to NEIC.
+Limited modernization of USGSsupported networks has been possible only with funding from other sources.
+Southern California.
+Following the 1994 Northridge earthquake, a 5-year, $20 million project named TriNet, funded largely by FEMA and involving the collaboration of the USGS, California Institute of Technology, and the California Division of Mines and Geology, was formed in southern California.
+TriNet has integrated weak- and strong-motion monitoring to improve regional earthquake monitoring for a broad array of earthquake and engineering research and to provide rapid earthquake information for emergency response and recovery in damaging earthquakes.
+Pacific Northwest Tsunami Warning.
+NOAA, USGS, and the States of Alaska, California, Hawaii, Oregon, and Washington are upgrading some of their existing seismic stations for improved tsunami monitoring and public warning.
+These efforts are a significant first step in addressing the needed modernization of a few specific regions and missions; however, they do not address broad, national needs.
+Global Seismograph Network.
+The Incorporated Research Institutions for Seismology (IRIS) in collaboration with the USGS and the University of California, San Diego, developed the GSN for collection of data at worldwide sites.
+Designed primarily for research and monitoring of specific areas, the GSN was initially funded by the National Science Foundation (NSF) and the Department of Defense.
+The extraordinary effort required to develop the GSN and to provide easy access to its data gave rise to the development of the IRIS Data Management Center, a pioneering resource for the distribution of seismological data and information.
+In all these cases, funding for improvements has come from other agencies with specific goals and needs.
+Consequently, these individual developments have not been well coordinated, resulting in uneven and ad hoc progress toward addressing the Nation's seismic monitoring needs.
+However, these developments demonstrate that the seismology community has the technical expertise and experience needed to develop an Advanced National Seismic System.
+2.6 International Comparisons Like the United States, Japan and Taiwan have had similar problems with outdated seismic networks, but, unlike the United States, they have acted in recent years to replace outmoded equipment with new digital seismic monitoring systems on 15 Japan and Taiwan are far ahead of the United States.
+local, regional, and national scales.
+Japan is in the process of upgrading its national infrastructure for monitoring seismic events.
+After the 1995 Kobe earthquake, Japan doubled its annual federal earthquake research and monitoring budget to $144 million, not including salaries, which would approximately double this figure.
+In comparison, the USGS spends $15 million annually on all its domestic seismic monitoring operations, including salaries.
+Although the USGS budget for seismic monitoring does not represent the total Federal dollars spent on earthquake and volcano monitoring activities, it does represent the majority of funding.
+The Japanese and Taiwanese have appropriated large budgets to modernize their strong-motion networks--about $300 million in Japan and about $40 million in Taiwan for implementing modern digital equipment.
+By contrast, almost all of the strong-motion equipment in the United States is part of an old analog system, and the budget for the United States National Strong Motion Program (funded by the USGS) is $2.8 million in FY 1999.
+2.7 Summary of the Problem Seismic monitoring in the United States is patchwork, modernization is piecemeal, and funding for operations is too little and unstable.
+Seismic monitoring in the United States faces many problems and challenges, the most notable of which are Outdated, inadequate instrumentation.
+Separation of functions between strong- and weak-motion monitoring systems.
+Lack of uniform geographic coverage in areas at risk.
+Lack of uniform operational standards.
+A structure that, at best, is an uneven patchwork of loosely confederated networks with different equipment, operations, products, and funding sources.
+Lack of a stated Federal commitment to provide long-term support, oversight, and modernization for seismic monitoring throughout the Nation.
+16 The concept and implementation plan for a National Seismic System emerged from the needs of the academic, engineering, and emergency response communities.
+3.
+Overview of an Advanced National Seismic System 3.1 Steps Toward an Advanced National Seismic System The seed of a National Seismic System was planted in the 1980's.
+The concept of a National Seismic System originally emerged in the 1980's as a desirable way to unify seismic monitoring in the United States.
+The motivation was and still is to create a framework for modernizing instrumentation and revolutionizing the data available for research, engineering, and public safety.
+A 1989 report published by the USGS entitled, "National Seismic System Science Plan" articulated the great scientific and practical value such a system would have.
+The 1989 report drew from reports by the National Research Council in 1980 and 1983, which addressed seismic monitoring needs in the United States.
+A report by the National Research Council in 1990 entitled, "Assessing the Nation's Earthquakes, The Health and Future of Regional Seismograph Networks" strongly supported the creation of a National Seismic System.
+As a matter of great practical importance, the report underscored the need for the Federal Government to "establish a more rational, coordinated, and stable means of support for the seismic networks of the United States."
+The future of seismic monitoring in the United States still hinges on this issue.
+A volunteer, grass roots effort start ed in 1993, with no funding for implementation.
+A first-generation National Seismic System was established in 1993 through the formation of the Council of the National Seismic System (CNSS).
+The CNSS is a national consortium of seismic network operators, now including 30 institutions and agencies throughout the United States, involved in the permanent operation of seismic networks.
+What exists today as a National Seismic System was formed through coordination and limited data exchange between regional seismic networks and the USNSN.
+One of the fundamental shortcomings of this system, among others already described in section 2, is the lack of integration between weak- and strong-motion networks.
+An action plan for the improved acquisition and dissemination of strong-motion data was put forward in 1997 in a NSF report entitled, "Vision 2005: An Action Plan for Strong Motion Programs to Mitigate Earthquake Losses in Urban Areas."
+The aim of the plan is to advance earthquake engineering, emergency response and recovery, and earthquake design practice.
+The need to expand the gathering of strong-motion data in the United States had been persistently identified in earlier reports by the National Research Council in 1982, 1985, 1987, and 1989.
+Strong-motion networks begin a national system approach.
+In 1998 the Consortium of Organizations for Strong-Motion Observation Systems (COSMOS) was formed, fulfilling a primary need identified in the 1997 NSF Vision 2005 report.
+A first-order goal of the COSMOS is to provide a continuing strong link between the users of strong-motion data and the organizations that operate strong-motion networks.
+The engineering community recognizes that traditional instrumentation and strategies for monitoring earthquakes no longer provide adequate data and information for mitigating earthquake hazards in buildings and structures.
+19 3.2 Vision and Mission of an Advanced System At a workshop on this report, the concept of a com bined, advanced system emerged.
+The vision of a next-generation National Seismic System crystallized in the preparation of the present report to Congress.
+The process of writing this report brought together seismologists from the CNSS and earthquake engineers from COSMOS and resulted in a plan that combines integrated seismographic monitoring on all scales with strong-motion recording and structural-response monitoring focused on urban areas at risk.
+The mission of the Advanced National Seismic System is to provide accurate and timely data and information on seismic events and their effects on buildings and structures, employing modern monitoring methods and technologies.
+3.3 Fundamental Goals The national workshop participants who worked together in June 1998 to shape the core message of this report (see Preface) reached a consensus on four fundamental goals for an Advanced National Seismic System.
+Four goals require equipment modernization, new monitoring concepts, and rapid dissemi nation of informa tion.
+Establish and maintain an advanced infrastructure for seismic monitoring throughout the United States that operates with high performance standards, gathers critical technical data, and effectively provides information products and services to meet the Nation's needs.
+An Advanced National Seismic System should consist of modern seismographs, communication networks, data processing centers, and welltrained personnel; such an integrated system would constantly record and analyze seismic data and provide timely and reliable information on earthquakes and other seismic disturbances.
+Continuously monitor earthquakes and other seismic disturbances throughout the United States, including earthquakes that may cause a tsunami or precede a volcanic eruption, with special focus on regions of moderate to high hazard and risk.
+Thoroughly measure strong earthquake shaking at ground sites and in buildings and critical structures.
+Focus should be in urban areas and near major active fault zones to gather greatly needed data and information for reducing earthquake impacts on buildings and structures.
+Automatically broadcast information when a significant earthquake occurs, for immediate assessment of its impact.
+Where feasible, for sites at distance from the epicenter, broadcast an early warning seconds before strong shaking arrives.
+Provide similar capabilities for automated warning and alert for tsunamis and volcanic eruptions.
+20 3.4 Operational Concepts An Advanced National Seismic System, to be effective and efficient, must be based on operational concepts that are different from those under which networks have worked for the past half century.
+The new system must break the mold of weak- and strong-motion net works operated for separate and limit ed objectives and interests.
+The interrelated components of a National Seismic System must function in a well-organized way.
+The system should be designed, created, and operated using a systems engineering approach to ensure that both the whole and its parts meet the desired performance goals in a costeffective way.
+An Advanced National Seismic System must deliver useful and timely information products and services, as well as collect technical information to meet both immediate and long-term needs of the Nation.
+Advances in earthquake science and engineering require the gathering of new highquality data.
+At the same time, a publicly funded Advanced National Seismic System requires emphasis on innovative and dedicated customer service to all users needing information and assistance.
+3.5 Strategic Plan and Actions Required Four basic, required components are needed to construct an Advanced National Seismic System that effectively achieves the four fundamental goals--modern instrumentation, tools for effective distribution of earthquake data and information, performance standards, and leadership.
+The strategic plan for building the desired system has six key elements.
+Integrate existing capabilities and expertise of regional seismic networks, strong-motion networks, and the U.S. National Seismograph Network, and use a systems engineering approach to create a master plan for nationwide seismic monitoring and information flow, including performance goals, standards, and procedures.
+Modernize and expand the infrastructure necessary for monitoring earthquakes and volcanoes.
+These tasks will require expansion of the USNSN, complete modernization of regional networks, and integration of these with new instrumentation in urban areas at risk from damaging earthquakes.
+Install robust capabilities (hardware and software) for real-time data acquisition and processing and for the automated exchange of seismic network data among the national and regional network-recording centers that will be linked under an Advanced National Seismic System.
+This retooling must be comprehensive and systematic.
+21 Establish an effective data management scheme for the integration, archiving, and distribution of seismic data collected by all monitoring elements of the advanced system.
+Develop interagency and public-private collaboration for enhancing the infrastructure and advancing the goals of the system.
+(Monitoring in urban areas for earthquake safety is one notable example of potential collaboration with the private sector, where the private sector would have its interests, needs, and involvement integrated into an Advanced National Seismic System.)
+Optimize the use of real-time seismic information through training and public education as part of a responsiveness to the constant evolution of digital technology and ongoing change affecting all segments of our society.
+(Collaboration with the Federal Emergency Management Agency in conducting drills and exercises based on real-time simulations of earthquake information is one example.)
+22 Obsolete seismic monitoring equipment dominates most seismic networks in the United States.
+4.
+An Advanced National Seismic System: Infrastructure Requirements To fulfill the Nation's needs for mitigating earthquake and volcano hazards, the obsolete equipment that dominates most seismic monitoring networks throughout the country must be replaced.
+This section outlines the infrastructure needed to meet the vision, goals, and requirements of an Advanced National Seismic System.
+4.1 National Seismic Monitoring Expand the national monitoring network to 100 stations.
+The USNSN should be expanded to 100 modern seismographs, from its present configuration of 56 stations, to provide uniform coverage in areas not covered by regional networks.
+The USNSN supplies the primary data used for national seismic monitoring provided by NEIC.
+It furnishes monitoring and reporting capabilities for the continental United States in places where none other exists, critical real-time data for tsunami hazards monitoring, enhanced reporting and response capabilities for regional networks in seismically active areas, and data for general scientific research.
+With an average spacing of about 500 km between stations, the present USNSN is too sparse to fulfill its mission.
+4.2 Regional Seismic Monitoring Modernize regional moni toring with 1,000 modern seismographs.
+A total of 1,000 modern regional seismograph stations are needed to replace existing analog equipment within the regional seismic networks.
+Regional seismic networks provide improved space-time resolution of seismicity and comprehensive characterization of seismic sources and active tectonic processes in regions of moderate to high seismic hazard and risk.
+A comprehensive review is required to identify hazardous regions targeted for seismic monitoring on a regional to local scale.
+This task includes ensuring that all potentially active volcanoes in the United States are monitored by at least three seismographic stations within 20 km. 4.3 Urban Seismic Monitoring The scarcity of recordings of strong earthquake shaking in urban areas underscores the basic need for achieving economically and socially acceptable earthquake resistance in both existing and new construction.
+The existing instrumentation in metropolitan areas at risk from damaging earthquakes, such as San Francisco, Los Angeles, Seattle, Salt Lake City, Anchorage, Reno, Memphis, St. Louis, Charleston, S.C., Boston, and New York City, is insufficient to meet the present needs of the emergency management, engineering, and research communities.
+Improving strong-motion monitoring in urban areas requires significant increases in the number of instruments over existing inventory (appendix 7.4).
+Install dense net works for strongmotion monitoring in urban areas.
+An additional 3,000 free-field (ground-based) strong-motion seismographs should be installed in densely populated areas at risk to strong ground shaking; these will aid in rapid notification for emergency response and recovery following a 25 damaging earthquake.
+Data will be analyzed at and results distributed from regional data centers.
+Measurements of strong ground shaking can now be obtained relatively inexpensively using modern instrumentation technology.
+These instruments would be deployed in urban areas at risk to large, damaging earthquakes, such as San Francisco, Los Angeles, Seattle, Salt Lake City, Anchorage, Reno, Memphis, St. Louis, Charleston, S.C., Boston, and New York City.
+Instruments would also be placed on or at critical facilities such as bridges, freeway overpasses and exchanges, and power plants.
+Install additional instruments for strong-motion monitoring in struc tures.
+Another 3,000 strong-motion instruments should be installed in buildings and structures to resolve outstanding issues in engineering design practice.
+The strongmotion instruments described here are intended to provide data on critical structures, facilities, and buildings for emergency response applications and for engineering research and applications.
+These instruments are a subset of 10,000 instruments identified for deployment in structures in the NSF-sponsored report entitled, "Vision 2005: An Action Plan for Strong Motion Programs to Mitigate Earthquake Losses in Urban Areas."
+Table 3 (in subsection 6.2 below) gives an assessment of the number of stations needed in various urban areas.
+4.4
+Regional and National Network Operation Centers To ensure rapid and authoritative notification of potentially damaging earthquakes, national and regional seismic monitoring centers must have in place robust capabilities (hardware and software) for real-time data acquisition and processing and for the automated exchange of data and results.
+These tasks require modern, modular computer systems using common infrastructure (operating systems, communications protocols, and so on); robust applications software; and integration of all signals from ground-deformation sensors, including Global Positioning System (GPS).
+Regional network centers need mod ernization for rou tine monitoring and emergency response functions.
+Regional network data centers need to be modernized according to uniform standards that will allow them to communicate with each other, a national center, and the public in the same language.
+The centers need sustained support so that development and planning can be carried out on other than a piecemeal basis.
+Standard data acquisition and processing software will be used to simplify the exchange of information and data between regional centers and the national center.
+In large urban areas with moderate to high seismic risk, regional monitoring centers will produce maps, based on strong-motion data, showing the distribution of strong ground shaking following significant earthquakes.
+NEIC will be in central leadership role of any national system.
+The National Earthquake Information Center functions as the focal point for all seismic monitoring in the United States.
+As such, it must lead in setting standards for data formats, data processing, and data exchange.
+It should serve, and has served, as a backup for all regional networks and data centers.
+It must be able to replicate their services should a regional center fail due to a major earthquake, power loss, or other extreme event, as one did during the Loma Prieta and Northridge earthquakes.
+It needs to modernize and expand its data and information products and associated dissemination procedures.
+26 4.5 Data Management and Distribution Centers Long-term investigations of earthquake and volcanic processes and effects require investment in data management facilities to organize and distribute raw seismic data for research purposes.
+NEIC is the national distribution point for parametric earthquake data, earthquake catalogs, and general earthquake information; larger, more specialized facilities are needed to archive and distribute raw seismic data.
+On national and regional scales, the seismological community has significant experience in archiving and distributing data through the IRIS Data Management Center and various regional centers such as the Northern California Earthquake Data Center.
+As part of an Advanced National Seismic System, these facilities would be expanded to accommodate the increased data, or new facilities modeled on the IRIS center and the northern California center would be established elsewhere to respond to the needs and requirements of the research community.
+Archiving and distribution of large volumes of seismic data are necessary functions of an advanced system.
+4.6 Portable Seismograph Arrays In regions prone to earthquakes where instrumentation is sparse, or where important earthquake hazard issues need to be resolved, seismologists resort to deploying temporary networks of sensors following earthquakes.
+These networks allow monitoring of aftershocks and can contribute to increased understanding of local earthquake effects.
+For example, portable seismometers, if deployed quickly, can help determine the cause of concentrated or unusually severe damage.
+To facilitate these studies, an Advanced National Seismic System should develop two portable seismograph networks, each consisting of 25 modern seismographs, to supplement permanent network monitoring, on a temporary basis, for aftershock studies and other strategic recording, especially in areas where permanent network instrumentation is inadequate.
+The portable seismograph arrays and accessory equipment should be maintained and operated so that one set is located in the eastern and one in the western parts of the United States.
+27 Seismic monitoring systems provide information for immediate public safety, preparedness and risk management, research, education, and building design.
+5.
+Information Products and Services A new system means new prod ucts and services.
+An Advanced National Seismic System will provide better data, more complete and timely information, and enhanced services to a wide range of technical and nontechnical users.
+The many national needs for seismic monitoring information can be grouped into the following three basic categories: Information needs for immediate public safety and emergency response when the dangers of an earthquake, tsunami, or volcanic eruption arise.
+Long-term needs for technical data to advance science, engineering, and hazard assessment so that vulnerability and losses in future earthquakes can be reduced.
+Ongoing needs for information and services, including expert assistance, in arenas such as education and awareness, public policymaking, planning and designing, and disaster preparedness and risk management.
+In each of these three categories, the flow of information and data under an Advanced National Seismic System requires a coordinated information infrastructure suitably adapted to the World Wide Web and other communication pathways of our changing information age.
+In emergency situations, the system must reliably deliver needed information, the information must be accurate and authoritative, and all available information from the system must be integrated for convenient access.
+For research purposes, effective data management will ensure standards for data recording, processing, and exchange that will lead to the timely integration and archiving of data and facilitate data retrieval.
+These strategies will result in comprehensive information products for general use and decision making.
+5.1 Time-Critical Information for Public Safety A National Seismic System can provide time-critical information on earthquakes, tsunamis, or volcanic eruptions.
+In the case of damaging or disruptive earthquakes, it will provide valuable information for rapid alert, response, assessment of impact, and recovery.
+An earthquake early warning can give a few seconds notice of imminent strong shaking.
+Earthquake early warning is an emerging application of seismic monitoring technology that offers the automated capability (where instrumentation is in place) to recognize when an earthquake is in progress and to provide seconds to tens of seconds of warning before the onset of strong shaking at a site, depending on its distance from the epicenter.
+Early warnings can enable individuals in vulnerable situations to protect themselves or others.
+School children could take cover to avoid injury from falling structural debris or nonstructural building components.
+Surgeons can suspend delicate operations.
+Businesses and industries can stop critical processes such as the handling of toxic substances and protect assets such as active data bases.
+Utilities and transportation lifelines can take preventive action to avoid major service disruptions.
+31 Rapid notification can help direct allocation of emer gency response resources.
+Broadcasting post-earthquake notifications of the location, size, and distribution of strong shaking where strong-motion instruments are in place allows appropriate emergency response and recovery actions to begin.
+Authoritative earthquake information products for emergency response applications will provide response agencies with an immediate understanding of the scope of the event, the levels of mobilization required, and to some extent, the types of resources needed to respond effectively and to allocate available resources efficiently .
+Delivering emergency response information will involve State and local emergency service agencies, which are responsible for taking actions based on earthquake notification provided by the National Seismic System and, in some cases, for delivering hazard warnings to the population.
+Providing rapid seismic information to any large and complex urban area--and indeed to the Nation--requires careful planning, well-considered management, and clear lines of organizational responsibility.
+Local and regional broadcast news media will be included in the information delivery system as partners, and partnership with other parts of the private sector will also be developed.
+Training and public education are required for effective use of real-time seismic information--especially earthquake early warnings.
+An appropriate public response to an early warning will require close and careful coordination among those who generate, deliver, and use this information.
+Technology transfer, training, and public education will be important to ensure that new products of upgraded seismic networks, such as near-real-time ground shaking maps, are understood and used successfully in managing emergencies, promoting greater safety, and improving recovery.
+The Federal Emergency Management Agency has played a major role in promoting emergency management training.
+FEMA is in a strategic position of leadership to promote the use of new real- time technologies.
+Training and public education are important to ensure effective response.
+5.2 Data and Information for Long-Term Earthquake Loss Reduction Data from seismic networks are the foundation for all seismic hazard assessments and basic research on earthquake and volcano processes.
+Seismic networks are a primary source of data and information for understanding and defending against the dangers of earthquakes.
+Advances in earthquake science and engineering inevitably are made based on experience and data from actual earthquakes.
+Long-term gains in earthquake safety depend on the sustained gathering of technical data through seismic monitoring.
+Although the seismological data collected by the National Seismic System will be of value for both basic and applied research, we emphasize their practical value for reducing earthquake losses.
+A comprehensive national seismicity catalog is the foundation for evaluating earthquake potential, for wide-ranging research in earthquake science, and for reliable earthquake hazard assessments at national, regional, and local scales.
+Identifying and characterizing earthquake source zones and understanding the physics of earthquakes are essential to basic earthquake hazard research.
+Identifying active faults, space-time patterns of occurrence, and rupture processes of earthquakes leads to improved hazard assessments.
+32 Understanding earthquake source and propagation effects from large earthquakes is at the heart of earthquake engineering and hazards assessment.
+Understanding how strong shaking propagates and how the Earth responds to strong shaking influences the design and performance of structures and critical facilities.
+Validating and calibrating earthquake loss-reduction tools are fundamental to modern emergency management response and recovery.
+Basic to this process is an understanding of the assumptions and models used in developing new microzonation maps for ground shaking and liquefaction hazards in urban areas and in developing loss estimation programs such as HAZUS, now used by FEMA nationwide for forecasting earthquake losses.
+An Advanced National Seismic System will provide strong-motion data needed to resolve outstanding issues in engineering design practice.
+Strong-motion measurements are needed (1) to define expected free-field ground motion (that is, shaking of the ground on which structures are built) for use as inputs in evaluating performance of structures and systems and (2) to improve and validate modeling and analysis procedures used in assessing seismic performance of structures.
+The following data and information will directly contribute to earthquake safety through improvements in seismic-resistant design of buildings, dams, bridges, industrial facilities, and lifelines: Measurements and site-specific ground motion and site response to help predict future free-field ground motion at a specific site and, in the case of nearby damaged structures, to determine ground motion to which those structures were subjected.
+Measurements of structural response and soil-structure interactions to improve seismic-resistant design of all structural types.
+Ancillary measurements for selected structures to enable a complete analysis of response to strong ground shaking.
+These measurements include constitutive properties of soils, ground displacements, transient stresses and strains in structural elements, and hydrodynamic pressures.
+Strong-motion data to address the specialized needs of researchers and practitioners in the engineering community.
+Special attention will be given to their needs for (1) standardized high-quality processing of time-history recordings of strong ground acceleration, (2) the availability of derived data from the direct recordings, such as velocity, displacement, and spectra (response and Fourier), (3) important information relevant to the original data recordings, and (4) ancillary measurements where available.
+Strong-motion data are the basis for advances in earthquake-resistant design and construction practices.
+33 5.3 General Information and Expert Services The third category of national needs associated with seismic monitoring is the need for information and services, including expert assistance, to individuals and groups involved in activities such as education and awareness, public policymaking, planning and designing, and preparedness and risk management.
+Human responsiveness, not just Web sites and other Internet outlets of information, must be provided.
+National and regional data centers serve the public as sources of earthquake safety information.
+The National Earthquake Information Center in Golden, Colorado, is a national outlet for earthquake information and information products and also is the recording center of the USNSN.
+Modernization of the NEIC will allow it to Play a strong leadership role in the planning, development, and coordination of the products and services of the advanced system.
+Provide national and worldwide seismic monitoring with 24-hour/7day staffing and reporting capability.
+Provide improved customer services to emergency management agencies, news media, and the public in general.
+Regional earthquake network centers also serve as regional information centers and provide key leadership and expertise at regional, State, and local levels in advancing earthquake safety.
+An important part of the plan for an Advanced National Seismic System is to provide resources to enable regional seismic network centers to Create useful and important region-specific information products (for example, maps, data bases, reports, publications, Web sites) directly arising from seismic monitoring.
+Serve as local/regional information outlets and repositories of expertise, especially for expert assistance to public policymakers, safety officials, planning and regulatory agencies, local businesses, news media, and the general public.
+Ensure the long-term availability of seismological expertise through the education and training of the Nation's professional seismologists.
+5.4 Summary In summary, an Advanced National Seismic System will result in Improved earthquake and volcano hazard assessment (1) by bridging the gap between observation and implementation of hazard reduction strategies, (2) through better probabilistic hazard assessment from better definition of seismically active faults and volcanoes, and (3) through compilation of a complete catalog of earthquakes for the Nation.
+34 Timely dissemination of earthquake information for emergency management activities through better real-time warning of tsunami-producing earthquakes, authoritative earthquake and volcano early warnings and notification, and predictions of the distribution of strong ground shaking in urban areas.
+Better evaluations of the damage experienced by structures in strong ground shaking through new observations of strong shaking in urban areas exposed to high earthquake hazard.
+Acquisition of new data for basic research on earthquake and volcano processes, propagation and site effects due to Earth structure, and prediction of ground motions for future, large damaging earthquakes in urban areas.
+35 Earthquakes, tsunamis, and volcanic eruptions are national problems that require national strategies to mitigate their effects.
+6.
+Action Items for an Advanced National Seismic System 6.1 Key Steps for Implementation The strategic plan for creating an Advanced National Seismic System (see section 3) calls for building upon existing regional seismic networks, strong-motion networks, and the USNSN to integrate nationwide seismic monitoring and its information flow.
+Major investments in hardware, software, and communications are required (section 4).
+Key steps for implementing the plan are the following: Secure participation commitment of all networks that will become either national, regional, or urban components of the advanced system.
+Secure funding commitment for new equipment and for stable longterm support of operations and service.
+Set standards and performance goals to ensure quality control and effective results.
+Establish and enhance partnerships to leverage and maximize all available resources.
+Develop and implement a management plan to ensure that the diverse elements of the National Seismic System are organized into a whole that will perform effectively as a true system.
+Success depends on: committed participation, stable funding, standardization, partnerships, and planning.
+6.2 Funding for an Advanced National Seismic System There are two chief funding needs beyond current support for the advanced system--modernization and stable operations.
+Approximately $170 million is needed for equipment to modernize seismic monitoring in the United States.
+Modernization and reconfiguration.
+Existing networks will require the purchase and installation of new equipment and the reconfiguration of certain regional networks to meet new operational requirements, such as early earthquake notification.
+These costs are estimated in table 1.
+These costs may decrease if equipment is purchased in large orders or if technological advances reduce the cost of manufacturing.
+Nevertheless, a major investment of this magnitude will be needed, spread over a 5- to 10-year time period, to achieve the required modernization of seismic monitoring in the United States.
+Stable operational support.
+Seismic networks must be operated on a stable funding base.
+Estimated annual operating costs are given in table 2.
+Approximately $47 million will be needed each year to maintain and operate an advanced system.
+39 Distribution of Urban Stations.
+A preliminary estimate of the distribution of seismic stations in various urban areas is given in table 3.
+This distribution is based, in part, on the level of seismic hazard and the population at risk.
+In practice this distribution may change somewhat depending on the degree of development of urban seismic networks supported by State and local governments and other interests.
+A map showing the general distribution of the various types of stations is given in appendix 7.6.
+Table 1.
+Costs for expansion and modernization for an Advanced National Seismic System.
+[These costs (in 1999 dollars) include USGS overhead expenses ] 40 Table 2.
+Annual operating costs for an Advanced National Seismic System at full operation.
+[These costs (in 1999 dollars) include USGS overhead expenses.
+Existing USGS support of domestic seismic net works, $14 million, could be applied to these costs] 41 Table 3.
+Approximate number of seismic stations needed, for various urban areas.
+[The number for each area is based in part on a rough estimate of seismic risk.
+A relative risk factor was determined by multiplying the hazard by the population.
+The earthquake hazard is given in terms of the severity of ground shaking (in percent of gravity) that has a 10 percent chance of being exceeded in the next 50 years.
+The number of stations needed may vary depending on State and local involvement in developing urban seismic networks.
+Only a few stations are placed in areas of low hazard with very high population] 42 6.3 Standards and Performance Goals The advanced system must perform as a unit adhering to common goals and standards.
+Standards, performance goals, and uniform procedures are critical to the success of an Advanced National Seismic System.
+These must govern the whole range of system operations from the installation and calibration of instruments to communication protocols, data archiving, and the distribution of data and information.
+Standards for the collection, exchange, and archiving of seismic data, including standardized data formats and standardized operating practices, will ensure quality control and efficiency in making data quickly and widely available.
+Performance goals for network monitoring will come from a comprehensive review of regions throughout the Nation where seismic monitoring is most needed.
+This review will result in specific plans to ensure such things as continuous surveillance and reliable delivery of time-critical information in emergency situations, and real-time responsiveness of the national system 24 hours a day, every day of every year.
+Standardized information products will ensure that both technical and nontechnical users throughout the Nation receive professional highquality, "user friendly" service.
+Standards for data collection and processing will not necessarily require seismic network operators to stop using existing hardware and software.
+Rather, they will prescribe guidelines that network operators and other potential participants must meet to integrate their instruments and data into the National Seismic System.
+6.4 Partnerships Many different Federal, State, and local agencies, as well as private companies, are now involved in seismic monitoring activities in the United States.
+The inclusion of most of these in the listing in appendix 7.4 reflects the current substantial cooperation between operators of weak-motion seismic networks (under the CNSS consortium) and operators of strong-motion seismic networks (under the COSMOS consortium).
+Because the need for seismic information spans the interests of many public and private organizations, a true National Seismic System with real-time capabilities offers unprecedented opportunities for mutually advantageous partnerships to modernize seismic monitoring.
+These partnerships include the following: All interests need to be brought into the management and support of the advanced system.
+43 Interagency partnerships relating, for example, to emergency response and recovery; the safety of dams, mines, and nuclear facilities; risk management of public assets; improved building codes and seismic design; and comprehensive test ban treaty monitoring.
+State-Federal partnerships in high-risk, densely populated regions where existing seismic monitoring is inadequate or in hazardous regions where needs for monitoring have been neglected, perhaps because of relatively low population or inadequate resources.
+Public-private partnerships in urban areas at risk where instruments are needed to measure strong ground motion in structures or in sparsely populated areas where denser instrumental coverage may be needed to enhance the safety of commercial facilities and infrastructure.
+International partnerships relating, for example, to common vulnerability to earthquake, volcano, and tsunami hazards--variously affecting regions among the United States and Canada, Mexico, the Pacific Basin, and the Caribbean Basin.
+To date, coordination among existing seismic networks has not been fully achieved, chiefly because of different missions and scales of operation.
+An Advanced National Seismic System, however, introduces compelling advantages for participation in the system.
+For both publicly funded and privately funded network operators, the rapid integration of their data with those from the entire seismic community will provide a more complete assessment of any seismic disturbance than would be apparent from their data alone.
+Individual network operators will also benefit from the new technologies and streamlined procedures planned for the National Seismic System.
+6.5 Management Plan The dynamics of information technology are increasingly leading institutions and organizations to become more distributed than hierarchical.
+The success of an Advanced National Seismic System will require a combination of (1) purposeful systems management to ensure performance of the system as a system and (2) consortium-type decision making to accommodate the multi-jurisdictional, cooperative nature of the subelements of the system, namely the participating seismic networks.
+The USGS should assume primary responsibility for management of an Advanced National Seismic System, based on its assigned Federal responsibility for national seismic monitoring, as well as its central role in the operation and funding of current seismic monitoring activities in the United States (section 2).
+44 The management of the system should be based on the strong implementation and continu ance of consensusbased decisions.
+CNSS and COSMOS, the national consortia of institutions and agencies that coordinate operations at permanent seismic networks in the United States, will have both advisory and collaborative roles in managing the advanced system and a collaborative role in establishing standards, performance goals, and standardized procedures for the system.
+Network operators participating in the advanced system will directly operate their subelements of the system, in coordination with the USGS, and will participate in decision making for the system through CNSS and COSMOS.
+A useful (but admittedly imperfect) analogy for the Advanced National Seismic System is the air traffic system in the United States.
+Individual air traffic control centers (like seismic networks) have significant responsibilities in operating their parts of the system, but a systems manager in the form of the Federal Aviation Administration (like the proposed role of the USGS) is clearly needed to oversee and safeguard performance of the complex system, to enforce standards, and to ensure that the Nation's relevant needs are well served.
+6.6 Challenge and Opportunity The paramount challenge for seismic monitoring in the United States, emphasized in section 2, is the persistent lack of a stated Federal commitment to provide stable long-term support and oversight for seismic monitoring throughout the Nation.
+As more people and more societal infrastructure become concentrated in areas vulnerable to earthquake, volcano, and tsunami dangers, problems are growing.
+Numerous national policy reports since 1980 (see section 3) have repeatedly identified the need for leadership and action by the Federal Government to modernize the Nation's infrastructure for seismic monitoring, including strong-motion instrumentation.
+Some progress has been made in specific regions, but important nationwide needs remain unmet because current resources are simply inadequate.
+Why act now? First, modern seismology and information technology have dramatically increased the benefits that an Advanced National Seismic System offers today, compared to a decade ago.
+In our rapidly changing digital age, neglecting to modernize seismic monitoring is setting the stage for national failure on a farreaching scale.
+Second, network seismologists and earthquake engineers, by breaking down previous disciplinary barriers, are poised in an unprecedented way to make an Advanced National Seismic System a reality.
+Inevitably, a catastrophic earthquake in the United States will produce the courses of action urged in this report.
+Waiting to take these steps until after this event has occurred does the Nation no service.
+The opportunity to act and create a long overdue Advanced National Seismic System is here and now.
+45 7.
+Appendices 7.1 Excerpts from Public Law 105-47 Under Sec. 2 AUTHORIZATION OF REAL-TIME SEISMIC HAZARDS WARNING SYSTEM DEVELOPMENT AND OTHER ACTIVITIES (1) IN GENERAL--The Director shall provide for an assessment of regional seismic monitoring networks in the United States.
+The assessment shall address(A) the need to update the infrastructure used for collecting seismological data for research and monitoring of seismic events in the United States; (B) the need for expanding the capability to record ground motions, especially in urban area engineering purposes; (C) the need to measure accurately large magnitude seismic events (as determined by the Director); (D) the need to acquire additional parametric data; and (E) projected costs for meeting the needs described in subparagraphs (A) through (D).
+(2) RESULTS--The Director shall transmit the results of the assessment conducted under this subsection to Congress not later than 1 year after the date of enactment of this Act.
+47 7.2 Assessment Workshop Participants Attendees - National Seismic Monitoring Assessment Workshop June 8-10, 1998, Denver, Colorado.
+Arabasz, Walter University of Utah Bausch, Douglas Northern Arizona University Benz, Harley U.S. Geological Survey Borcherdt, Roger U.S. Geological Survey Bortugno, Edward California Office of Emergency Services Buland, Ray U.S. Geological Survey Chapman, Martin Virginia Polytechnic Institute Doll, Charles Massachusetts Institute of Technology Dreger, Doug University of California, Berkeley Ebel, John Weston Observatory, Boston College Filson, John U.S. Geological Survey Gee, Lind University of California, Berkeley Goltz, James California Institute of Technology Hansen, Roger University of Alaska Herrmann, Robert St. Louis University Hillenburg, Michael Federal Emergency Management Agency Johnson, Douglas Columbia University Kim, Won-Young Columbia University Lee, Willie U.S. Geological Survey Long, Leland Georgia Institute of Technology Malone, Steve University of Washington McCreery, Charles (Chip) National Oceanic 
+Inventory of Seismic Stations In the summer of 1998, the Council of the National Seismic System, at the request of the U.S. Geological Survey, conducted a survey of all seismic networks in the country in order to inventory the existing seismic stations, network support, operating procedures and products.
+A summary of the survey results is provided in the accompanying table and the details can be found on the Web at http://www.cnss.org/NETS.
+In summary, the 41 networks surveyed operate a total of 3,095 earthquake-monitoring stations in the U.S.
+Of these 1,505 are short-period (SP) stations of the older, limited capability type, 325 have more modern broad-band (BB) digital instruments, and 1,394 have strong-motion (SM) instruments, of which fewer than half have digital recording capability (some stations have more than one type of instrument).
+Of the 325 modern broad-band stations, almost 100 are part of the Public Seismic Network (PSN) or Princeton Earth Physics Project (PEPP) networks and thus do not necessarily have good calibration, optimum site locations, or continuous operation.
+Although all these networks are in some way involved in earthquake monitoring, many do not do routine processing and reporting of their data and only a few currently have robust automatic processing and event notification capability.
+Only the "Southern California Seismic Network" can rapidly report fairly comprehensive distribution and amplitude of shaking following a sizable earthquake in their region.
+In most regions of the country, the recording and reporting of strong-motion data are handled independently of the recording and reporting of seismicity data (location and magnitude of earthquakes).
+Currently, networks of strong-motion monitoring stations, like regional seismic networks, are operated by numerous organizations to fulfill their independent missions.
+The principal organizations are the Army Corps of Engineers, the U.S. Bureau of Reclamation, the California Division of Mines and Geology, and the U.S. Geological Survey.
+Other government and private-sector organizations operate more limited networks of instruments to support their independent missions.
+Principal among these are the U.S. Department of Energy, Pacific Gas and Electric Company and other electric utility companies, Metropolitan Water District of Southern California, Oregon Department of Transportation, Kaiser Permanente, and owners of individual large buildings and other structures.
+Many more public organizations and private-sector companies maintain a few strong-motion instruments to meet their earthquake safety needs.
+These monitoring activities are driven by the organizations' individual missions and to date have been largely conducted without coordination with respect to either installation of the instruments or dissemination of data (see subsection 3.1 regarding the new Consortium of Organizations for Strong-Motion Observations, COSMOS).
+51 Inventory of Seismic Stations operated by members of the CNSS and coop erating institu tions.
+52 53 7.5 USGS-Supported Regional Networks Region Southern California Southern California Northern California Northern California Data Center Pacific Northwest Pacific Northwest Pacific Northwest Alaska Sierra Nevada Utah Central United States Central United States Central United States Strong Motion New York New England New England Southeast United States Southeast United States Hawaii Institution California Institute of Technology University of California, San Diego U.S. Geological Survey University of California, Berkeley University of Washington University of Oregon Oregon State University University of Alaska University of Nevada, Reno University of Utah University of Memphis Saint Louis University Columbia University Columbia University Boston College Massachusetts Institute of Technology University of North Carolina University of South Carolina U.S. Geological Survey 54 7.6 Map Showing General Distribution of Seismic Networks 55

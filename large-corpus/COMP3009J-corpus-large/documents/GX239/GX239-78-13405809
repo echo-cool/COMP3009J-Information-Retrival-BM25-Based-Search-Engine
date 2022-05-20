@@ -1,0 +1,107 @@
+Dollar conducts first of two workshops on information technology concepts and tools Charles Dollar of Dollar Consulting conducted an all-day workshop on 22 January for over 150 archivists, records managers, information technology professionals, librarians, and others--the first in a series of six workshops being funded by a grant to Archives and History from the National Historical Publications and Records Commission.
+The six, part of the department's Electronic Records Training and Awareness Program, are being held over the next two years at the Archives and History Center in Columbia.
+The same grant is also funding three other presentations--on 10 September 2001 Rick Barry of Barry Associates presented a session at the annual conference of SC Information Technology Directors Association; John Phillips of Information Technology Decisions followed on 25 October with a half-day seminar at the annual conference of the SC Public Records Association.
+In the fall of 2002, Tom Ruller of the NY State Education Department will speak at the annual conference of the SC Archival Association.
+Dollar's four-session workshop focused on digital representation, file formats, storage media, and portability.
+Following are summaries of some of the points made:
+1: Digital representation of electronic records, the basics Digital information is represented by binary language expressed in streams of 1s and 0s that computer hardware and software must interpret through various coding schemes, some of which may be device/media specific.
+Examples of encoding schemes: * ASCII (American Standard Code for Information Interchange), a widely used scheme that specifies bit patterns for information.
+Files containing ASCII text are devoid of formatting information and can be produced and interpreted by many computer programs.
+* EBCDIC (Extended Binary Coded Decimal Interchange Code), an 8-bit code representing 256 characters; introduced in 1963 for main frame computers and used later by mini-computers.
+* Extended ASCII, introduced in the 1980s for personal computers (PC).
+* ISO (International Standards Organization) Standard 8859, an 8-bit code representing non-English languages.
+ISO 10646, Unicode, a 16-bit code built on 8-bit extended ASCII for representing over 65,000 languages.
+Vector graphics are mathematical representations of lines, colors, and shapes and are processible like ASCII.
+Bit map images are numerical representations of the variation of reflectance of a targeted area of picture elements (pixels) expressed as dots per inch (dpi). * the resolution, or granularity of detail, is directly correlated to the number of dots per inch--the higher the dots per inch the higher the resolution.
+* numerical values of pixels (bits per pixel) are: 1 or 0 for bi-tonal images; 1 to 8 for gray scale (produces 256 shades of gray); and 24 for color; an 8.5 x 11 inch page scanned at 200 bpi will contain 3,470,000 bits for bi-tonal; 29,920,000 for gray scale; and 89,760,000 for color.
+* unlike ASCII, bit map images carry no intelligence; index terms can be manually assigned or generated automatically through optical character recognition (OCR). * to reduce storage space, compression must be used.
+Images are compressed either by a loss-less or lossy technique; loss-less retains all data; lossy discards redundant data.
+* loss-less compression includes Run-Length Encoding (RLE), which represents recurring values for white or black; the widely-implemented Group 4 CCITT; Joint Bi-Level Image Group (JBIG), an ISO standard considered more efficient than Group 4; Graphics Interchange Format (GIF), accommodating bi-tonal, gray scale, and color; and Portable Network Graphics (PNG), adopted by the World Wide Web Consortium (W3C) and accommodating gray scale and true color.
+* lossy compression includes the Joint Photographic Experts Group (JPEG), which provides full color and gray scale; data loss is not easily detected with JPEG, and images can be presented in degrees of granularity for applications like thumbnail sketches.
+JPEG should not be used for archival records.
+The creation or capture of metadata is essential to the trustworthiness of electronic records.
+2: File formats File formats are "containers" that specify the logical structure of data, tell the operating system how to interpret the 1s and 0s, and specify the internal arrangement of data fields and digital objects.
+They also provide manipulation instructions like compression algorithms and information understood by software like MS Word, HTML, XML, TIFF, SQL.
+Basic file formats are text, vector data, image data, audio data, moving image data, and structured data (spreadsheets and databases).
+When selecting a file format, several criteria should be considered.
+One is a format that can be presented and used with various systems; another is one that is non-proprietary; and another is one that has a large market share and is supported by multiple vendors.
+Text formats * ASCII, can be interpreted by different computer programs.
+* Proprietary word processing formats, used for software like Microsoft Word and Word Perfect; backward compatibility is important as new versions are introduced.
+* Rich Text Format (RTF) is an 'open" format, meaning its specifications have been published and are widely available.
+* RTF replicates the original "look" of documents and uses common formatting instructions.
+A Microsoft or Word Perfect RTF reader can read an RTF document.
+* Extensible Markup Language (XML) is a subset/extension of Structured General Markup Language (SGML) and identifies the elements of a document.
+XML focuses on the structure of digital objects not their rendition.
+XML is sponsored by the World Wide Web Consortium (W3C) and supported by multiple vendors.
+Vector data are mathematical descriptions of geometric entities and are employed by applications like Geographic Information Systems (GIS), Computer-Aided Design (CAD), and Computer-Aided Manufacturing (CAM).
+*
+Scalable Vector Graphics (SVG) is XML-based, highly compact, and interactive.
+A vector graphic can be resized to fit a particular display screen (e.g. cell phone screen, PDA).
+Image data include Tagged Image File Format (TIFF), Joint Photographic Experts Group (JPEG), Graphic Image Format (GIF), Portable Network Graphics (PNG), and Portable Document Format (PDF).
+* TIFF is widely used in digital photography.
+* JPEG is an ISO standard that is largely concerned with compressing full-color or gray scale images for human viewing.
+Widely implemented, especially in digital photography, JPEG contains a proprietary (IBM) component.
+* GIF uses loss-less compression accommodating bi-tonal, gray scale, and color.
+GIF employs a proprietary compression algorithm LZW, lacks capability to correct errors, and is limited to 256 values for a single pixel, which does not work well with "true color."
+* PNG uses a loss-less compression algorithm (LZ77) and provides true color up to 45 values per pixel and gray scale up to 16 bits per pixel.
+It is hardware and platform independent and is extensible.
+The World Wide Web Consortium has adopted it as a replacement for GIF, but it is not widely used.
+* Adobe Acrobat PDF, although a proprietary file format, is widely used, and new versions have backward compatibility.
+It is rendered on Adobe's widely available and free Acrobat Reader.
+Acrobat accommodates any combination of text, images, and graphics and is device and resolution independent.
+The latest version (5.0) allows some revisions, has password protection, and can be converted to RTF.
+Web pages can be captured in PDF along with the embedded links if they are still live.
+Audio and moving image data include the Motion Pictures Expert Group (MPEG), an international standard that enables the compression of bit streams containing moving images and audio or sound signals; it uses JPEG compression.
+Structured data formats include spreadsheets and databases.
+* A spreadsheet is made up of a two-dimensional matrix of intersecting rows and columns (cells) that contain numeric data.
+Spreadsheet software like Microsoft Excel provide backward compatibility.
+Data Interchange Format (DIF) is a generic file format for spreadsheets.
+* Basic database structures include "flat" file, hierarchical, and relational; "flat" files are made up of rows and columns with the columns representing data elements or values and the rows containing the data records or instances for each column; hierarchical databases have a tree structure that organizes information under a main heading, or level, with sub-levels that are organized into subordinate ranks or grades.
+The main level for census data, for example, would be US, under which would be state, then county, and so forth; relational databases are made up of tables that are organized into columns and rows like flat files--each column is identified by a name, and each row contains data for each column.
+Because each table is related to one or more other tables, reports containing data drawn from different databases can be extracted or generated.
+3: Storage media Digital information is stored mainly on either magnetic or optical media, both of which are growing tremendously in capacity and decreasing correspondingly in cost.
+Criteria for choosing media for long term storage would include high storage capacity, high data transfer rate, twenty-year life expectancy, established and stable market presence, affordability, and suitability.
+For long-term storage, magnetic media are recommended over optical and include digital linear tape and 3480/90 cartridges.
+The Norsam Corporation has developed a long-term/archival storage medium called HD-Rosetta.
+It uses ion beam technology to etch both eye-readable and bit mapped digital images (TIFF or PDF) onto stainless steel 2-inch discs.
+Magnetic media includes hard disks and magnetic tape.
+Access to information on a hard disk is direct and speedy.
+Access to it on magnetic tape, where one record follows another, is sequential and relatively slower.
+All magnetic media are adversely affected by excessive heat, humidity, and gas pollutants.
+An environment of 10 degrees C (50 degrees F) with a relative humidity of 25 percent and air filters would provide the best storage conditions for magnetic media.
+* Magnetic reel tape was introduced in 1951 and "standardized" by IBM in 1953.
+Tape cartridges like the IBM 3480 have replaced reel tapes.
+Storage capacity has increased steadily, but the medium provides no backward compatibility.
+* Digital linear tape, introduced in 1985, records data in serpentine tracks using multiple read/write heads.
+It can store 2 to 12 gigabytes at 1 to 40 megabytes per second.
+It is a well-established technology and is backward compatible * 4 millimeter Digital Audio Tape can store 2 to 12 gigabytes at .5 to 2 megabytes per second.
+It is a thin, tensilized tape that is vulnerable to atmospheric pollutants.
+* Other magnetic media employing thin tensilized tape include the 8 mm "Exabyte" and quarter inch cartridge (QIC), both also vulnerable to atmospheric pollutants.
+Optical media come in three basic types: ROM (read only), WORM (write once), and RW (re-writeable).
+* CD-ROM complies with the ISO 9660 standard for physical layout and format of recorded information.
+DVD-ROM can store up to 4 gigabytes and conforms to an "industry" standard for DVD compatibility but is incompatible with CD-ROM.
+* WORM disks come in four kinds depending on how digital signals are recorded: ablative, thermal-bubble, bi-metallic alloy, and organic dye.
+These disks include CD-R (ISO standard), DVD-R ("industry" standard), 5.25 inch (ISO standard), 12 inch (no standard), and 14 inch (Eastman Kodak product).
+* RW comes either in magneto-optical or phase change form; both allow old information to be erased and new added.
+Storage conditions * National Media Lab recommends: 20 degrees C (68 FÃ¯Â¿Â½5) and 30 percent relative humidity;15 degrees C (59 FÃ¯Â¿Â½5) and 40 percent relative humidity; 10 degrees C (50 FÃ¯Â¿Â½5) and 50 percent relative humidity * An air filtration system to remove pollutants * Prohibition against smoking and food * An annual check of tapes and disks to identify uncorrectable errors--all in units of under 50; a random sample of 20 percent for units between 50 and 1800; and a random sample of 384 for units of over 1800.
+A finding of ten or more errors would require recopying.
+* The rewinding of open reel tapes under controlled tension.
+* Documentation of all readability checks and re-copying.
+4: Portability and persistence Electronic records that have portability and persistence are those that have been maintained so they can be used, preserved, and accessed over a long time.
+The primary impediments to long-term preservation and access are technological obsolescence, fragile storage media, and hardware/software dependence.
+Two alternative strategies for portability and persistence are emulation and migration.
+Emulation was developed by Jeff Rothenberg of the Rand Corporation who describes it as a "process in which one computer is used to reproduce the behaviour of another computer with such fidelity that the emulation can be used in place of the original computer."
+Still considered theoretical, his strategy supports executable "digital originals" and requires the native application and emulator of the original platform.
+Migration strives to ensure usable and trustworthy electronic records for as long as necessary without regard for platform.
+It converts electronic records to technology-neutral file formats and requires backward compatibility.
+Migration preserves the processibility of records but potentially risks losing the "look and feel" of the original format and some original information.
+* Technology-neutral text formats are RTF, PDF, SGML, HTML, and XML.
+In selecting one, evaluate its multi-media capability, navigability, persistence over time, processibility, file size, and file integrity.
+* Technology-neutral vector graphic formats include Initial Graphics Exchange (IGES), Computer Graphics Metafile (CGM), and (SVG).
+* Technology-neutral graphic image formats are TIFF, GIF, PNG, and PDF.
+Guidelines for selecting a file format * Gauge requirements for long-term access.
+* Use technology-neutral file formats that: + have published specifications + are non-proprietary controlled (e.g. W3C, ANSI) + are widely implemented + run on multiple platforms + run in multiple application environments + have substantial market place penetration * Avoid proprietary, single vendor products because they: + protect vendors rather than users.
++ are impediments to interoperability and digital information portability + can create intractable future problems.
++ are costly in the long run.
+* Use mainstream products.
+* If PDF is used, retain an electronic copy in native application format for potential transferability * XML has the strong potential to support long-term access to useable and trustworthy electronic records.

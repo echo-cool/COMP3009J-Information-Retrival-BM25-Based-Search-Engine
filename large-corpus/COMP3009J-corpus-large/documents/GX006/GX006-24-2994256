@@ -1,0 +1,32 @@
+Berkeley Genome Pipeline VISTA Genome Browser - GenomeVISTA - VISTA / rVISTA - Contact - About Us - Cite Us How the genomes were aligned Aligning large vertebrate genomes that are structurally complex poses a variety of problems not encountered on smaller scales.
+Such genomes are rich in repetitive elements and contain multiple segmental duplications, which increases the difficulty of identifying true orthologous DNA segments in alignments.
+The sizes of the sequences make many alignment algorithms designed for comparing single proteins extremely inefficient when processing large genomic intervals.
+We integrated both local and global alignment tools and developed a suite of programs for automatically aligning large vertebrate genomes and identifying conserved non-coding regions in the alignments.
+Our method (Couronne et al, 2003) uses the BLAT (Kent, 2002) local alignment program to find anchors on the base genome to identify regions of possible homology for a query sequence.
+These regions are postprocessed to find the best candidates which are then globally aligned using the AVID (Bray et al, 2003) or LAGAN (Brudno et al, 2003) global alignment programs.
+In the last step conserved non-coding segments are identified using VISTA.
+Our methods are fast and the resulting alignments exhibit a high degree of sensitivity, covering more than 90% of known coding exons in the human genome.
+The pipeline software is a suite of Perl programs that is buit on a MySQL database platform.
+The scheduler gets control data from the database, builds a queue of jobs, and dispatches them to a PC cluster for execution.
+The main program, running on each node of the cluster, processes individual sequences.
+A Perl library acts as an interface between the database and the above programs.
+The use of a separate library allows the programs to function independently of the database schema.
+The library also improves on the standard Perl MySQL database interface package by providing auto-reconnect functionality and improved error handling.
+1.
+O.Couronne, A.Poliakov, N.Bray, T.Ishkhanov, D.Ryaboy, E.Rubin, L.Pachter, I.Dubchak.
+2003.
+Strategies and Tools for Whole-Genome Alignments.
+Genome Research, 13:7.
+2.
+W.J.Kent.
+2002.
+BLAT - The BLAST-Like Alignment Tool.Genome Research, 12:656.
+3.
+N.Bray, I.Dubchak, L.Pachter.
+2003.
+AVID: A Global Alignment Program.
+Genome Research, 13:97.
+4.
+M.Brudno, C.Do, G.Cooper, M.F.Kim, E.Davydov, E.D.Green, A.Sidow, S.Batzoglou.
+LAGAN and Multi-LAGAN: Efficient Tools for Large-Scale Multiple Alignment of Genomic DNA.
+2003 Genome Research 13:721.

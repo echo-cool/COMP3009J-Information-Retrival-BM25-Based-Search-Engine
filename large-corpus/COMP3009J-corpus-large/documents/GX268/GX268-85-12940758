@@ -1,0 +1,214 @@
+COLORADO DEPARTMENT OF TRANSPORTATION STAFF BRIDGE BRIDGE DETAIL MANUAL Chapter: Effective: Supersedes: 6 April 12, 2000 September 19, 1980 GENERAL LAYOUT 6.1 PURPOSE This drawing is to be a general layout in plan, longitudinal section, and typical transverse section of the structure, showing the physical aspects and features of the structure and surrounding terrain.
+6.2 RESPONSIBILITY
+This drawing shall be prepared and checked in the design unit.
+The graphic presentation of information on this drawing shall be the responsibility of the individual preparing the drawing.
+6.3 SCALES at the correct Dview and twist plan view for Elevation view w.
+General Layout shall be drawn to full scale in model space, project coordinates on a copy of the roadway electronics file.
+in floating model space can then be utilized to rotate the illustration, without affecting the project coordinates.
+The shall be drawn to full scale, and illustrated below the Plan vie
+Suggested zoom scales for presenting the Plan and Elevation views in paper space are as follows: 1:5, 1:10, or 1:20.
+The Typical Section shall be drawn to full scale in model space.
+Suggested zoom scales for presenting the typical section in paper space are as follows: 1:10 or 1:20.
+6.4 GUIDELINES FOR LAYING OUT STRUCTURES file and make file
+When detailing the General Layout, start by opening the electronic provided by the Region.
+Before doing anything, use the command save as save the drawing with another name like Genlay.
+After doing this you can all the changes and rotations that are needed, but the original Region with the original project coordinates are preserved.
+Either of the following two procedures will allow you to manipulate the Regions file without losing the project coordinates.
+Set your Angle Click on Click on Angle = Angle Pr Click OK Procedure 1 Find the angle of the Control Line or if you need to, develop a Layout Line.
+This is the line of your Y axis for the Bridge Geometry.
+Find the angle of the Control Line or Layout Line at the location of the structure and write it down for future reference.
+units Forma Units Decima ecisio to the maximum places.
+t l Degrees n = 8 places
+April 12, 2000
+Chapter No. 6
+Page 2 of 11
+This is the angle you are going to use to twist the drawing so that the Control Line or Layout Line of the structure will sit horizontally on the screen heading in the Ahead Station direction, with a 0.00000000 angle in the XY Plane.
+After finding this angle, twist the drawing: Command: DVIEW Select Objects: Hit Enter (to select everything) Type in: TW (for twist) New view twist 
+The angle will be negative if rotating to horizontal is in the clock-wise direction.
+Hit Enter Hit Enter to get out of the command.
+At this point, your drawing will have been twisted to get the Control Line or Layout Line sitting horizontally to your vision with Ahead Stationing to the right.
+The drawing will still retain the correct State Plane Coordinates of the original Roadway electronic file.
+The UCS (User Coordinate System) at this point is World.
+Your crosshairs may be sitting at an angle to horizontal on the screen.
+Any distances or coordinate ID you take at this point will still be related to the World coordinates.
+In order to set Command: Type in: Rotation up your project specific User Coordinate System: UCS Z (for ZAxis) Angle About Z Axis 
+Hit Enter Your crosshairs should now be straight and any distance taken horizontally should show a 0.00000000 angle in the XY Plane.
+Command: UCS Type in: O (for Origin) Origin point 
+Command: UCS Type in S (for Save) ?/Desired UCS name: Type in Plan To toggle to World coordinates and back to User coordinates: If you type in UCS, then W for World, you will go back to the World coordinate system.
+Then if you type in UCS, then R for Restore, then Plan, you go back to the user coordinate system that you setup for the Bridge Geometry coordinates.
+If you type in UCS, then R for Restore, then ?, AutoCad will ask you UCS name(s) to list 
+April 12, 2000
+Chapter No. 6
+Page 3 of 11
+Procedure 2 Type in: UCSFOLLOW 
+This should be the 0,0 point or reference point for the bridge geometry.
+POINT ON POSITIVE PORTION OF THE X-AXIS: Click on the end of the tangent.
+Those two points set up the x-axis of your system.
+POINT ON POSITIVE Y PORTION OF THE UCS XY PLANE: Click some arbitrary point on the positive side of the xaxis.
+Hit Enter to exit the command With UCSFOLLOW on, the drawing will rotate itself to your user coordinate system.
+Save your UCS: UCS: S for save.
+DESIRED UCS NAME: type in a name such as Plan.
+You can now toggle back and forth between World Coordinates and your saved user coordinate system.
+To toggle back to World Coordinates, once you have saved your user coordinate system: UCS: Hit Enter since 
+The drawing reverts back to the World Layout and the World Coordinate System.
+6.5 PLAN
+Listed below are items to be shown in the plan view of this drawing.
+(as applicable) 1.
+Horizontal Control Line: Projected Line, Survey Line, Centerline Roadway, Centerline Median, Centerline Structure, or others.
+Profile Grade Line or Lines; label and dimension to Horizontal Control Line.
+Alignment Information: Horizontal Curve Data, bearings, and station marks at 20 meters (100 feet) of upper and lower roadways.
+Give the station tie at centerline intersection.
+Skew angle of bridge.
+Label the Back Face of Abutments and Centerline of Piers.
+Stations at Back Face of Abutments and Centerline of Piers along Horizontal Control Line.
+Horizontal roadway dimensions of upper and lower roadways including traveled lane widths, shoulder widths, ditches, toe of slope, sidewalks, etc for the current and future alignments.
+For structures over Railroads, give the minimum horizontal clearance measured perpendicular from centerline of railroad tracks to piers and retaining walls adjacent to the tracks in metric and English units.
+The direction and name of the nearest town.
+The name and direction of flow for streams and canals.
+Use standard directional arrow for water flow.
+Show channel improvement dimension (Net Channel Width), verify from Hydraulics Report.
+If twin structures are shown, label each with its own structure number.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+April 12, 2000 13.
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+6.6
+Chapter No. 6
+Page 4 of 11
+Show approach slabs, if required.
+Location of minimum vertical clearance over Roadways, Railroads and Pathways.
+Show contour lines, when they are available.
+Standard North Arrow.
+All known utilities.
+Miscellaneous structures, such as retaining walls, pipes, etc.
+Show type of slope protection.
+If slope paving is used, show outline and define limits.
+Direction and rate of fill or cut slopes.
+Show approximate location of toe and top of slopes.
+Show existing structures (dashed), label with structure number, and note if the existing structure is to be removed.
+Title the General Layout plan view "PLAN".
+LONGITUDINAL SECTION
+Listed below are items to be shown in the Longitudinal Section of this drawing.
+(as applicable) 1.
+2.
+3.
+4.
+5.
+Show elevation lines at 1 meter (2 feet) intervals along each side and identify the elevations at 5 meters (20 feet) intervals.
+Label stations across the bottom at 20 meters (100 feet).
+Show span lengths and total overall length and where measured if located away from where section is taken.
+Label Back Face Abutments, Centerline Piers, and Centerline Bearings.
+Show Finished Grade Elevations at the back face of abutments and at centerline of piers and note where located, if other than where section is taken.
+If the bridge is on a straight grade, show grade and the station and elevation of the nearest P.I.
+If the bridge is on a vertical curve, use a profile grade diagram showing the grade back, grade ahead, the station and elevation of the P.I., the length of the vertical curve, and the location of the structure.
+This diagram shall be titled "PROFILE GRADE".
+Refer to Fig. 6-1.
+6.
+7.
+Figure 6-1 TYPICAL PROFILE GRADE DIAGRAM 8.
+9.
+Show the pile, caisson, or spread footing drawn to the correct elevation, when applicable.
+Show the slope protection.
+April 12, 2000 10.
+11.
+12.
+13.
+14.
+Chapter No. 6
+Page 5 of 11
+15.
+16.
+17.
+18.
+Show the "Existing Ground Line" (dashed) and indicate where located if other than where section is taken.
+Note "fixed" or "expansion" bearings (F or E) at Piers and Abutments.
+Show minimum actual vertical clearance to roadway or railroad below.
+For railroad, give clearance in metric and English Units.
+Show design high water elevation and verify from Hydraulics report.
+On stream crossings, show the drainage area and design discharge if the Hydraulics section does not supply a "BRIDGE HYDRAULIC INFORMATION" drawing.
+Channel changes and Roadway improvements shall be crosshatched and noted as "Unclassified Excavation (Included in Roadway Quantities)".
+Show approximate limits of scour.
+Title the longitudinal section "SECTION" with a note immediately below giving the line where the section was taken; such as "Taken at Horizontal Control Line" or "Taken at Profile Line".
+For parallel structures of the same type, a single longitudinal section will suffice.
+This section, titled "SECTION" is taken for one structure with a note giving the line where the section was taken and the structure number.
+Also note that the parallel structure is similar.
+Example: "Taken at Profile Line Str. No.
+R-03-Q, Str. No.
+R-03-R is similar except as noted."
+Span lengths, elevations, and other features which differ will be shown and labeled for each structure.
+Parallel structures of differing types will require a separate longitudinal section for each structure.
+The structure number will be included as part of the title such as "SECTION STR. NO. R-03-Q".
+6.7 TYPICAL SECTION
+Listed below are items to be shown in the Typical Section of this drawing.
+(as applicable) 1.
+2.
+3.
+4.
+5.
+6.
+7.
+Width of curbs, sidewalks, traveled lanes, shoulders, etc. and total width out to out.
+Label Projected Line or Horizontal Control Line.
+Location of Profile Line.
+Roadway slope or superelevation.
+Show bridge rail and indicate type.
+Type of girder.
+Structure depth.
+A. Prestressed girders and rolled beams; give depth of girder.
+B. Cast-in-place T-beams and box beams; give depth from top of concrete deck to bottom of beam.
+C. Welded plate girders; give depth of web.
+D. Parabolic girders of all types, give maximum and minimum depth.
+Show portion of typical pier above the finished ground line, when applicable.
+Do not show abutment.
+8.
+April 12, 2000 9.
+10.
+11.
+12.
+13.
+Chapter No. 6
+Page 6 of 11
+14.
+6.8
+For parallel structures, show a section for each structure.
+Show Electrical Conduits Show limits Structural Concrete Coating.
+Show Fence Chain Link, with height.
+Show Hot Bituminous Pavement and Waterproofing Membrane, Silica Fume overlay with Bridge Deck Finish (Sawed Grooves), or Concrete Sealer over Bridge Deck Finish (Sawed Grooves), as applicable.
+Title "TYPICAL SECTION".
+TITLE BLOCK
+The title block shall be titled "GENERAL LAYOUT".
+The structure number or numbers and the first initial and last name of the designer and detailer shall be filled in on each sheet.
+6.9 TYPICAL NOTES awing, when itary Loadi e Military completed NERAL INFOR applicable: ng Loading). set of plans, because the note MATION sheet.
+The following shall appear on the dr Live Loading: MS22 and Alternate Mil (Live Loading: HS 25-44 and Alternat This note shall be removed in the appears in the DESIGN DATA on the GE
+April 12, 2000
+Chapter No. 6
+Page 7 of 11
+April 12, 2000
+Chapter No. 6
+Page 8 of 11
+April 12, 2000
+Chapter No. 6
+Page 9 of 11
+April 12, 2000
+Chapter No. 6
+Page 10 of 11
+April 12, 2000
+Chapter No. 6
+Page 11 of 11

@@ -1,0 +1,260 @@
+Dennis M. DeCoste
+Jet Propulsion Laboratory, M/S 126-347 California Institute of Technology 4800 Oak Grove Drive Pasadena, California 91109, USA (818) 393-5366 dennis.decoste@jpl.nasa.gov http://www-aig.jpl.nasa.gov/home/decoste/ Citizenship: USA [decoste-aero99.gif] __________________________________________________________________
+Research
+* support vector machines (and other Mercer kernel methods), * efficient large-scale machine learning and data mining, * indexing trees (e.g. query-by-content search of time-series, image, and text data), * high-dimensional visualization and dimensionality reduction, * neural networks, Bayesian networks, and graphical models, * automated monitoring and diagnosis of engineered systems, * qualitative reasoning, constraint satisfaction, artificial intelligence.
+Education
+* Ph.D., Computer Science (emphasis: Artificial Intelligence), May 1994.
+University of Illinois at Urbana-Champaign. (thesis: "Goal-directed qualitative reasoning with partial states"; advisor: Prof. Kenneth D. Forbus).
+* M.S., Computer Science, May 1989 (5.0/5.0 GPA).
+University of Illinois at Urbana-Champaign.
+* B.S., Computer Science, May 1986 (5.0/5.0 GPA, Highest Honors).
+University of Illinois at Urbana-Champaign.
+Experience
+September 2003 - present Jet Propulsion Laboratory (JPL) / California Institute of Technology (Caltech).
+Principal Research Computer Scientist, Machine Learning Systems Group.
+Principal investigator for several data mining projects, including massive time-series and image data and kernel methods.
+April 1998 - September 2003 JPL / Caltech.
+Senior Researcher, Machine Learning Systems Group.
+Principal investigator for several data mining projects, with emphasis on massive time-series and image data.
+April 2003 - present University of California at Irvine.
+Lecturer, Department of Information and Computer Science.
+Classes taught: Data Mining (http://www.ics.uci.edu/~decoste/ICS278/), Spring 2003.
+May 2002 - present Sand Canyon Software.
+Consultant.
+Research and development of data mining algorithms for bank credit scoring applications.
+January 1997 - March 1998 JPL / Caltech.
+Senior Researcher and Technical Group Leader, Monitoring and Diagnosis Technology Group.
+Lead staff of six on several research and development projects.
+Principal investigator for summarization, visualization, data mining, anomaly detection, and diagnosis techniques, for real-time ground and onboard operations.
+June 1993 - January 1997, JPL / Caltech.
+Member of Technical Staff, Artificial Intelligence Group.
+Research and development on artificial intelligence, qualitative reasoning, and machine learning for monitoring and diagnosis tasks.
+August 1990 - May 1993, Northwestern University, Evanston, Illinois.
+Graduate Research Assistant, Institute for the Learning Sciences, Department of Computer Science.
+August 1986 - August 1990, University of Illinois, Urbana.
+Graduate Research Assistant, Qualitative Reasoning Group, Department of Computer Science.
+May 1986 - October 1986, Gould, Urbana, Illinois.
+Summer Intern.
+Develop and debug LISP interpreter/compiler product in C. May 1985 - August 1985, IBM Corporation, San Jose, CA. Summer Pre-professional, Santa Teresa Laboratory.
+Software development and debugging in PL/I.
+_______________________________________________________________
+Recent and Selected Projects (JPL)
+* ACTIVE AND TRANSFER LEARNING FOR MULTI-INSTRUMENT EARTH SCIENCE DATA PRODUCTS Principal Investigator.
+Funder: NASA Intelligent Systems Program, $300K/yr (FY03, FY04, FY05).
+Goal: Reduce the "ground truth" problem in applying advanced automated classifiers (e.g. support vector machines, SVMs) to learn automated classifiers for Earth science data (e.g. from the MISR imager onboard the Terra mission).
+Learn classifiers suitable for infusion into the NASA science data product system (DAACs).
+Research topics: efficient "active learning" and "transfer learning" machine learning techniques which exploit special geometry properties of kernel methods (e.g. SVMs).
+* KNOWLEDGE DISCOVERY FROM SIMULATORS.
+Principal Investigator.
+Co-I's: Dr. Hal Levison, Dr. Jorg-Micha Jahn, Dr. William Merline, Southwest Research Institute.
+Funder: NASA Intelligent Systems Program (CODE-R), $350K/yr (FY01, FY02, FY03).
+Goal: automated steering of simulators to discover science knowledge.
+Research topics include: active query learning, such as deciding what states to start simulator runs, to identify boundary conditions determining whether some science event (e.g. planet formation) occurs or not; parallelizing support vector machine training methods on Beowulfs.
+* TIME-SERIES PATTERN MATCHING.
+Principal Investigator.
+Co-I Dr. Padhraic Smyth, UC-Irvine.
+Funder: NASA Intelligent Systems Program (CODE-R), $300K/yr (FY01, FY02, FY03).
+Goal: Develop "Google-like" search engine for time-series data. (e.g. Space Shuttle engineering data).
+Research topics include: distance-based versus generative-based methods for time-series similarity measures, fast indexing methods, support vector machines and kernel methods, hidden Markov models.
+* BIOINFORMATICS JPL/CALTECH COLLABORATION Collaborators.
+PI's: Prof. Barbara Wold (Caltech, Biology) and Prof. Eric Mjolsness (UC-Irvine, Computer Science).
+Funder: NIH, Childrens Hospital Los Angeles, FY02, FY03.
+Research: develop new methods using support vector machines for effective feature selection, to reduce tens of thousands of microarray genes down to a handful of those most predictive of various target diseases (e.g. cancer).
+* MARS ROVER TRAVERSE SCIENCE Collaborators.
+PI's: Dr. Becky Castano and Michelle Judd, JPL.
+Funder: JPL IND and TMOT; NASA Intelligent Systems Program, FY02, FY03.
+Goal: classifiers and novelty detectors (e.g. one-class support vector machines and minmax probability machines) which rank which Mars rocks observed during rover traversals are most worthy of sending down to Earth over limited-bandwidths, due to their overall novelty and/or similarity to signatures of interest.
+Research includes: developing new kernel machine algorithms which retain theoretical advantages (e.g. of SVMs over neural networks) but are orders of magnitude more efficient, so suitable for embedding onboard rovers/spacecraft.
+* SMART RESOURCES.
+Principal Investigator.
+Funder: JPL TMOT, $60K (FY01).
+Goal: Develop algorithms for onboard learning/adaptation of resource models, suitable for planning and anomaly detection.
+Research topics include: automated adaptive modeling in highly- constrained computational contexts, compiling kernel methods for fast onboard classifiers.
+* ENVELOPE LEARNING FOR ENGINEERING DATA.
+Principal Investigator.
+Funding: FY01 $50K, FY00 $100K, FY99 $350K, FY98 $125K, FY97 $125K, FY96 $75K.
+Automated detection of anomalies in spacecraft time-series telemetry data (e.g. Mars Rover, Space Shuttle).
+Designed, implemented, and delivered the ELMER (Envelope Learning and Monitoring using Error Relaxation) engine (C++, MATLAB, Perl) and time-series visualization package (Java).
+Also, co-investigated (with Dr. Marie Levine of JPL) detection of thermal snap events in interferometer structures.
+Research topics include: regression over massive time-series databases (millions of examples, thousands of input dimensions), learning input-conditional error bars, feature selection, constructive neural networks, support vector machines, learning Bayesian networks.
+* ENGINEERING DATA SUMMARIZATION.
+Principal Investigator.
+Co-I: Jay Wyatt, JPL.
+Funding: FY01 $100K, FY00 $200K, FY99 $200K, FY98 $200K, FY97 $200K, FY96 $200K.
+Purpose: Periodic and event-driven summarization of both nominal and anomalous data --- for determining down-link and assessing health.
+Research: summarization and visualization of massive time-series data, clustering (e.g. HMMs), event detection using learned envelope functions.
+Resulting software flew onboard NASA Deep Space 1 mission (1999 Beacon Monitoring Technology flight experiment).
+* LEARNING TERRAIN CLASSIFICATION FOR AUTONOMOUS CROSS-COUNTRY NAVIGATION Co-Investigator (with PI Dr. Larry Matties and co-I Dr. R. Manduchi, JPL) Funding: DARPA, FY01 $400K.
+Research: real-time image classification and training of support vector machines training for massive image sets.
+* ELECTRONIC DOG NOSE Co-Investigator (with PI Dr. Michael Burl); FY00 $100K.
+Research: support vector machines for detecting chemicals from time-series sensor data (e.g. mine detection).
+* ADAPTIVE RESOURCE PROFILING FOR ROVERS.
+Principal Investigator.
+(FY98 $30K).
+Developed machine learning techniques and proof-of-concept demonstration for predicting resource usage and availability (e.g. battery power) by training on rover performance in Mars Yard.
+* NEWMAAP MONITORING SOFTWARE PROTOTYPE.
+Developed object-oriented spacecraft health monitoring software component, for the New Millenium Autonomy Architecture Prototype (NewMAAP) (an early prototype of the monitoring component of the NASA Deep Space 1 autonomous Remote Agent technology); 1996.
+* SELECTIVE MONITORING TRANSFER TO JOHNSON SPACE CENTER Principal Investigator (FY96 $200K, FY95 $200K).
+Extended and delivered SELMON fault detection tool to JSC Space Shuttle operations for evaluation in Mission Control Center.
+Languages/Systems Expertise
+C++/STL, C, MATLAB/Octave, Perl/Tk, Java, SQL, LISP, Python, assembly (Pentium/MMX/SSE and SPARC V9/VIS), UNIX (Linux, Solaris), X11, MS Windows.
+_______________________________________________________________
+Reviewing / Program Committees
+* International Conference on Machine Learning (ICML: Program Committee 2002 and 2003).
+* SIAM International Conference on Data Mining (2001, 2002, Program Committee 2003, 2004).
+* Symposium on Artificial Intelligence and Automation in Space (i-SAIRIS: 2003).
+* Neurocomputing journal (2002,2003).
+* Journal of Machine Learning Research (JMLR: 2002).
+* Applied Intelligence journal (2002, member of Review Board 2003).
+* Machine Learning journal (MLJ: 2000, 2001).
+* Artificial Intelligence journal (AIJ: 1991, 1992, 1997).
+* International J. of Advanced Computational Intelligence and Intelligent Informatics (IJACIII) (2003).
+* IEEE Transactions on Geoscience and Remote Sensing (2003).
+* ICML-2003 Workshop on Machine Learning Technologies for Autonomous Space Applications, Program Committee.
+* Program Committee, 2001.
+Workshop on Mining Scientific Datasets.
+Part of ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD), 2001.
+* Program Committee, 2003.
+Workshop on Mining Scientific Datasets.
+Part of SIAM International Conference on Data Mining, 2003.
+* National Conference on Artificial Intelligence (AAAI: 1996, 1998, Program Committee: 1997).
+* International Joint Conference on Artificial Intelligence (IJCAI: 1995, 1997).
+* IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE PAMI: 1998, 1999).
+* IEEE Transactions on Knowledge and Data Engineering (2000,2002).
+* Intelligent Systems journal: 1999, 2001.
+* Proposal review panel (JPL representative) for NASA Cross-Enterprise Technology Development Program (CETDP), 1999.
+* Proposal reviewer: NASA Small Business Innovation Research (SBIR) Program (1996-2002).
+* Proposal reviewer: Alzheimer's Association Grants program, 2001.
+* Book reviewer: "Learning with Kernels", by Bernhard Schoelkopf and Alex Smola, 2001.
+Selected Awards
+* NASA Space Act Award, Beacon Monitor Technology, 2002.
+* Nominee for JPL Software of Year 2000 Award -- Beacon Monitoring (my anomaly detection algorithms provided core technical component).
+* NASA Group Achievement Award, Selective Monitoring Development, 1995.
+Mentoring
+* Ph.D. thesis committee member for CMU student (Alexander Gray), 2001-2003.
+* NASA Fellowship advisor for CMU student (Alexander Gray; CMU advisor Andrew Moore), 2000-2003.
+* NASA Fellowship advisor for CMU student (Lonnie Chrisman; CMU advisor Reid Simmons), 1995-1996 * Research advisor for several summer / CO-OP students: + Rande Shern, Carnegie Mellon University (CMU), Summer 2001.
++ Kiri Wagstaff, Cornell University, Summer 2000.
++ Webster Stayman, Rensselaer Polytechnic Institute (RPI), January-August 1996.
++ Brad Banks, Massachusetts Institute of Technology (MIT), Summer 1995.
+Recent and Selected Invited Talks
+* Invited speaker, "Improving the Query-Time 'Bang Per Buck' of Support Vector Machines: Towards Robust Nonlinear Models for the (Amortized) Price of Linear Ones" Seminar on Computational Learning and Adaptation.
+Stanford University.
+February 27, 2003.
+* Invited tutorial, "Support Vector Machines for Environmental Science: Methods, Applications, and Challenges", American Meteorological Society, Long Beach, CA, February 10, 2003 * Invited speaker, "Powerful New Methods for Analyzing Massive Data Sets", Jet Propulsion Laboratory, lab-wide Seminar Series, February 26, 2002.
+* Invited tutorial, "Support Vector Machines and Other Kernel Methods: Key Concepts, Recent Advances, and Applications", Institute for Pure and Applied Mathematics (IPAM), Conference on Mathematical Challeges in Scientific Data Mining, UCLA, January 17, 2002.
+* Keynote speaker, "Mining Large NASA Datasets Using Support Vector Machines", Third Workshop on Mining Scientific Datasets, (part of the First SIAM International Conference on Data Mining), Chicago, IL, April 7, 2001.
+* Invited speaker, "Active Learning of Automated Terrain Classifiers from Large Multispectral MISR Image Datasets", MISR Science Team meeting, Pasadena, CA, June 6, 2001.
+* Invited speaker, "Massive Time-Series Data Mining via Envelope Learning and Monitoring".
+Seminar on Computational Learning and Adaptation.
+Stanford University.
+February 19, 1998.
+_______________________________________________________________
+Journal Publications
+* M. Lee, S. Keerthi, C. J. Ong, and D. DeCoste.
+An efficient method for computing leave-one-out error in support vector machines with Gaussian kernels.
+IEEE Transactions on Neural Networks, in press, 2003.
+* D. DeCoste and B. Schoelkopf.
+Training invariant support vector machines, Machine Learning Journal, Volume 46(1-3), 2002.
+* E. Mjolsness and D. DeCoste.
+Machine learning for science: state of the art and future prospects.
+Science, Volume 293, pp. 2051-2055, September 14 2001.
+* D. DeCoste.
+The significance of Kasparov versus Deep Blue and the future of computer chess.
+Journal of the International Computer Chess Association (ICCA), March 1998.
+* S. Chien, D. DeCoste, R. Doyle, P. Stolorz.
+Making an impact: Artificial Intelligence at the Jet Propulsion Laboratory, AI Magazine 18(1): Spring 1997.
+* D. DeCoste.
+Dynamic across-time measurement interpretation.
+In Artificial Intelligence: An International Journal, Volume 51(1-3), October 1991.
+Peer-Reviewed Conferences
+* T. Strohmann, A. Belitski, G. Grudic, D. DeCoste.
+Sparse greedy minimax probability machine classification, NIPS 2003, to appear.
+* D. DeCoste and D. Mazzoni.
+Fast query-optimized kernel machine classification via incremental approximate nearest support vectors.
+International Conference on Machine Learning (ICML), August 2003.
+* D. DeCoste.
+Anytime query-tuned kernel machines via Cholesky factorization.
+Proceedings of SIAM International Conference on Data Mining (SIAMDM03), May 2003.
+* E Clothiaux, L. Di Girolamo, A Nolin, J-P Muller, A. Braverman, D. DeCoste, D. Mazzoni, B. Yu, and T. Shi.
+Cloud detection and cloud top height assignment over the poles using MISR and MODIS level 1 and 2 data products.
+AMS Polar Cloud Conference, May 2003.
+* R. Castano, R. C. Anderson, T. Estlin, D. DeCoste, F. Fisher, D. Gaines, D. Mazzoni, M. Judd.
+Rover traverse science for increased mission science return.
+IEEE Aerospace Conference, March 2003.
+* R. C. Anderson, R. Castano, D. DeCoste, D. Mazzoni, J. Dohm.
+An automated approach for acquiring onboard rover science.
+Lunar and Planetary Science Conference, March 2003.
+* D. DeCoste.
+Anytime interval-valued outputs for kernel machines: fast support vector machine classification via distance geometry, International Conference on Machine Learning (ICML), July 2002.
+* R. Castano, R. Anderson, T. Estlin, D. Gaines, D. DeCoste, D. Mazzoni, M. Judd.
+Mars rover image data prioritization for increased mission science return.
+American Geophysical Union Fall Meeting, December 2002.
+* D. DeCoste.
+Visualizing Mercer kernel feature spaces via kernelized locally-linear embeddings.
+The 8th International Conference on Neural Information Processing (ICONIP-2001).
+November 2001.
+* D. DeCoste and K. Wagstaff.
+Alpha seeding for support vector machines.
+International Conference on Knowledge Discovery and Data Mining (KDD-2000), August 2000.
+* D. DeCoste and M.C. Burl.
+Distortion-invariant recognition via jittered queries.
+Computer Vision and Pattern Recognition (CVPR-2000), June 2000.
+* D. DeCoste and M. Levine.
+Automated event detection in space instruments: a case study using IPEX-2 data and support vector machines.
+SPIE Conference Astronomical Telescopes and Instrumentation, March 2000.
+* D. DeCoste.
+Learning envelopes for fault detection and state summarization.
+IEEE Aerospace Conference, March 2000.
+* T. Estlin, S. Hayati, A. Jain, J. Yen, G. Rabideau, R. Castano, R. Petras, S. Peters, D. DeCoste, E. Tunstel, S. Chien, E. Mjolsness, R. Steele, D. Mutz, A. Gray, and T. Mann.
+An Integrated Architecture for Cooperating Rovers.
+Proceedings of the Fifth International Symposium on Artificial Intelligence and Automation in Space, (i-SAIRAS-99), Noordwijk, the Netherlands, June 1999.
+* D. DeCoste.
+Adaptive resource profiling.
+Proceedings of the Fifth International Symposium on Artificial Intelligence, Robotics, and Automation for Space (i-SAIRAS-99), The Netherlands, June 1999.
+* D. DeCoste.
+Automated learning and monitoring of limit functions.
+Proceedings of i-SAIRAS-97, Japan, July 1997.
+* D. DeCoste.
+Mining multivariate time-series sensor data to discover behavior envelopes.
+Proceedings of the Third Conference on Knowledge Discovery and Data Mining (KDD-97), Newport Beach, CA, August 1997.
+* D. DeCoste.
+Bounds estimation via regression with asymmetric cost functions.
+Fifteenth International Joint Conference on Artificial Intelligence (IJCAI-97), (poster), Japan, August 1997.
+* J. Collins and D. DeCoste.
+CATMS: an ATMS which avoids label explosions.
+In Proceedings of the Ninth National Conference on Artificial Intelligence (AAAI-91), Los Angelos, CA, July 1991.
+* D. DeCoste.
+Dynamic across-time measurement interpretation.
+In Proceedings of the Eighth National Conference on Artificial Intelligence (AAAI-90), Boston, MA, July 1990.
+Book Chapters
+* K. Thearling, B. Becker, D. DeCoste, B. Mawby, M. Pilote, D. Sommerfield.
+Visualizing data mining models.
+Chapter in Issues in the Integration of Data Mining and Data Visualization, Springer-Verlag, 2001.
+* D. DeCoste.
+Visualizing massive multivariate time-series data.
+In Issues in the Integration of Data Mining and Data Visualization, Springer-Verlag, 2001.
+Selected Workshops / Technical Reports
+* D. DeCoste and M. Burl.
+Support vector machines and kernel Fisher discriminants: A case study using electronic nose data.
+Mining Scientific Datasets Workshop (KDD-2001), August 2001.
+* D. DeCoste, S. Finley, H. Hotz, G. Lanyi, A. Schlutsmeyer, R. Sherwood, M. Sue, J. Szijjarto, and E.J. Wyatt.
+Beacon Monitor Operations Experiment (BMOX) DS1 Technology Validation Report, JPL Technical Report, 2000.
+* E.J. Wyatt, D. DeCoste, A. Schlutsmeyer, R. Sherwood, and J. Szijjarto.
+Summarizing operational data from complex systems, NASA Tech Briefs, 24(11), November 2000.
+* D. DeCoste.
+Recent advances in SMO speed and accuracy, Neural Information Process Systems (NIPS) Workshop on Learning with Support Vectors, December 1999 * D. DeCoste.
+Automated monitoring with learned envelope functions, NASA Tech Briefs, 21(4), April 1997.
+* S. Chien, D. DeCoste, et al.
+Maintenance request generation, planning, and scheduling for highly reusable space transportation.
+Workshop Notes of International Workshop on Planning and Scheduling for Space Exploration and Science.
+Oxnard, CA, October 1997.
+* D. DeCoste.
+Learning and monitoring with families of high/low envelope functions: maximizing predictive precision while minimizing false alarms.
+JPL Technical Report D-13418, March 1996.
+* D. DeCoste.
+Goal-directed qualitative reasoning with partial states.
+Ph.D. thesis.
+University of Illinois at Urbana-Champaign.
+Also: Technical Report #57, Institute for the Learning Sciences at Northwestern University, Evanston, IL, August 1994.
+[For older and more publications, see http://www-aig.jpl.nasa.gov/home/decoste/dmd-pubs.html.]

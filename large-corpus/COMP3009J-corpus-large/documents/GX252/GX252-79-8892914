@@ -1,0 +1,434 @@
+Census 2000 Evaluation R.3.b June 6, 2002 American FactFinder System Requirements Study FINAL REPORT This evaluation study reports the results of research and analysis undertaken by the U.S. Census Bureau.
+It is part of a broad program, the Census 2000 Testing, Experimentation, and Evaluation (TXE) Program, designed to assess Census 2000 and to inform 2010 Census planning.
+Findings from the Census 2000 TXE Program reports are integrated into topic reports that provide context and background for broader interpretation of results.
+Prepared by Titan Systems Corporation/ System Resources Division Kevin A. Shaw, Project Manager Planning, Research, and Evaluation Division
+Intentionally Blank
+PREFACE
+Purpose of the System Requirements Study The main objective of the System Requirements Study is to assess the efficacy of the requirements definition processes that were employed by the U.S. Census Bureau during the planning stages of the Census 2000 automated systems.
+Accordingly, the report's main focus is on the effectiveness of requirements methodologies, including processes for coordination, communication, and documentation, and their impact on overall system functionality.
+The report also addresses certain contract management issues and their effect on system development and/or operational considerations.
+The System Requirements Study synthesizes the results from numerous interviews with a range of personnel--both U.S. Census Bureau staff and contractors--who were involved with the planning, development, operations, or management of Census 2000 systems.
+Our findings and recommendations in this report are qualitative in nature; they are based on the varied opinions and insights of those personnel who were interviewed.
+The intent is to use the results from this study to inform planning for future systems.
+Intentionally Blank
+CONTENTS EXECUTIVE SUMMARY ....... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . iii 1.
+2.
+3.
+4.
+BACKGROUND .......... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 METHODOLOGY ........ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3 LIMITS .................. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4 RESULTS ................ . . . . . .
+4.1 Requirements definition ... . . . . . .
+4.2 Requirements issues ...... . . . . . .
+4.3 Alignment with business processes 4.4 System deficiencies ...... . . . . . .
+4.5 Contract management practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4 5 6 8 9 9
+5.
+RECOMMENDATIONS .... . . . . . . . . . . .
+5.1 Customer identification and segmentation 5.2 System development methodology . . . . .
+5.3 User interface design ..... . . . . . . . . . . .
+5.4 Change control board ..... . . . . . . . . . . .
+.. .
+..
+..
+..
+11 11 12 12 13
+References ..................... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14 Participants ..................... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+15
+i
+Intentionally Blank
+ii
+EXECUTIVE SUMMARY Initially referred to during the developmental stages as the Data Access and Dissemination System, American FactFinder is an Internet enabled information system which provides an efficient means of making a wide range of census information (demographic, economic, and geographic) available to the U.S. Census Bureau personnel and external users.
+American FactFinder was designed for a range of users from novice to expert.
+Due to the diversity of system users, the system interface was designed to be interactive and user friendly to facilitate retrieval and use of information and data.
+The data sets employed were extensive and spanned numerous race categories over the nation's 50 states; 3,232 counties (and county equivalents); 50,161 places and county subdivisions; 66,304 neighborhoods (census tracts); and 8.3 million census blocks.
+This study presents information based on debriefings of personnel involved in the American FactFinder program.
+A contractor played a major role in designing, sizing, and operating the system.
+The decision to use contractor support stemmed from the realization that Internet technology was evolving rapidly and that outside expertise was needed to successfully implement a state-of-the-art system.
+Traditionally, the U.S. Census Bureau has relied on in-house staff to develop systems; Census 2000 represents a departure from that approach in that contractors were widely used for system development and operational activities.
+An iterative development process was employed using a cyclical building technique (design, build, and test) that allowed for continuous feedback and evaluation.
+The contractor was also a `partner' in the requirements definition process with the U.S. Census Bureau.
+The process included gathering requirements from key stakeholders, subject matter experts, and potential users via interviews and joint application development sessions.
+The results of the interviews were compiled and incorporated into Use Case documentation.
+With contract award taking place in April 1997, the principal contractor, IBM, had two years to develop, test, and deploy the system.
+A subcontractor with expertise in geographic information systems and mapping applications also was brought in to support the development of the system.
+The first production implementation of American FactFinder was in March 1999 and provided access to economic data, the American Community Survey, and 1990 Census data.
+A second implementation came in December 2000.
+It provided improved performance, addressed user comments and requests concerning the user interface, and scaled up the system to accommodate anticipated workloads associated with Census 2000 data.
+As with other systems that were developed to support Census 2000, American FactFinder did not benefit from an agency-wide standard process for requirements definition.
+A standardized methodology for developing requirements is critical in that it serves as the foundation for a system.
+The requirements methodology was provided by the contractor and the agency conducted analyses of security needs and user segmentation.
+Overall, American FactFinder was the right system for the job in that it succeeded in providing an effective, though not always easy-to-use, tool through which many different types of users could--for the first time--access census data on demand.
+iii
+The need to efficiently disseminate Census 2000 data was a main driver of American FactFinder.
+However, the system disseminates other census data that are generated by various program areas of the U.S. Census Bureau (i.e., economic censuses and surveys, demographic surveys, and the American Community Survey).
+The multi-faceted nature of the system and plans for further expansion require that this system remain active.
+Thus, unlike the other 11 automated systems that were evaluated specifically as supporting components of Census 2000, American FactFinder is a corporate system--not a dedicated Census 2000 system.
+This study adheres to the focus of the other 11 studies and assesses this system primarily from the perspective of its ability to disseminate Census 2000 data, although some inquiries of other sources of data were necessary to fully understand system requirements issues and how system functionality may have been impacted by other non-Census 2000 considerations.
+Major results of the study include: Â· System was a success.
+American FactFinder has been a major success for the U.S. Census Bureau from the standpoint of achieving a breakthrough in the delivery of voluminous data in an electronic format and in making these data available to external users.
+It also has achieved a reduction (though not elimination) in the use of traditional media (printed hardcopy, magnetic tape, etc.).
+The system holds great promise for escaping the limitations of pre-defined census data by making customized queries possible.
+In short, American FactFinder has been a visionary undertaking which is revolutionizing data dissemination.
+Protection of data deemed critical.
+Confidentiality was a major design factor from the outset.
+Given the need to prohibit unauthorized access to confidential microdata files and to minimize opportunities for `re-identification' (i.e., combining multiple data sources in an effort to equate census data with particular people), the U.S. Census Bureau has undertaken precautionary and effective efforts to ensure security and prevent unauthorized access to data.
+Iterative development approach was used.
+An evolutionary approach was used to develop the system that required constant "fine tuning" as development progressed.
+Census Bureau managers and Data Access and Dissemination System Program staff were aware, from the outset, that system development would be incremental because of the delivery cycles for Decennial Census, Economic Census, and American Community Survey data products.
+Thus, there was an underlying assumption for American FactFinder that the system would have to adapt to requirements growth and the contracting approach, development philosophy, and change control processes were governed by this awareness.
+While the approach helped to refine the system, and was necessary due to the dynamics of constantly changing requirements, the iterative process can be very resource intensive and time consuming in that the system is constantly being modified and enhanced.
+It did, however, have the advantage of allowing new functionality and technologies to be incorporated into American FactFinder, if needed.
+Â·
+Â·
+iv
+Â·
+Requirements identified throughout development.
+Changes to requirements were initiated throughout the development cycle in keeping with the iterative development approach.
+The Data Access and Dissemination System program updated requirements as information on Census 2000 dissemination needs became available.
+Adapting to the changing requirements had significant cost implications.
+Contractor interface was effective.
+Communication between the U.S. Census Bureau project management personnel and the contractor was frequent, well documented, and included an effective change control process.
+This process was especially important in view of the prototyping approach that was employed.
+Streamlined acquisition approach was used.
+The U.S. Census Bureau employed the Department of Commerce concept of operations for streamlined acquisition for its procurement methodology.
+This approach helped to explore system characteristics and development issues through pre-award, face-to-face meetings with vendors.
+Contractors were encouraged to utilize commercial-off-the-shelf software as a development tool due to software maintenance and other considerations.
+Â·
+Â·
+These and other findings have led to the following key recommendations: Â· Customer identification and segmentation - define user base early.
+The U.S. Census Bureau made extraordinary efforts between 1995 and 1997 to define the system user base and address their needs by conducting focus groups with internal and external customers, meeting with private sector organizations, surveying participants involved in beta testing of the system, and interviewing data users.
+It is recommended that the U.S. Census Bureau continue the practice of conducting customer segmentation analyses as early as possible in the system development process.
+The insights gleaned from such analyses are vital for prioritizing the features, functions, and interfaces of a system.
+System development methodology - establish agency-wide guidance.
+Requirements were developed without the benefit of formal agency guidelines which typically address such critical areas as the needed system functionality, user interfaces, data accessibility, report generation, and performance metrics.
+The absence of such guidelines increased the risk that American FactFinder might not be asked to do the right things.
+Although detailed requirements were gathered (with contractor assistance) using some widely accepted methodologies, they did not always produce understandable requirements.
+The requirements were managed by the Data Access and Dissemination System program staff and included a process to coordinate those requirements with internal U.S. Census Bureau data providers and external user organizations.
+User interface design - customize by user type.
+The system posed a major challenge to designers/developers in the sense that it needed to serve a very diverse set of users (i.e., it had to be "all things to all people").
+Based on interviews with numerous people involved with the development and operation of American FactFinder, the site navigation and usability features are getting mixed reviews.
+The system is still a work in progress and v
+Â·
+Â·
+the interface is continuing to evolve.
+It is recommended that future refinements of American FactFinder consider setting up user classes to make the system suitable for novices as well as power users.
+vi
+1.
+BACKGROUND The Titan Systems Corporation, System Resources Division (Titan/SRD) has been tasked by the Planning, Research, and Evaluation Division (PRED) of the U.S. Census Bureau to evaluate 12 systems used in the decennial census.
+This report is a study of the American FactFinder (AFF) system from the perspective of its ability to disseminate Census 2000 data.
+It addresses the extent to which the requirements definition process was successful in identifying needed system functionality and offers one of several evaluation approaches for examining these automated systems.
+The report results are intended to assist in the planning of similar systems for the 2010 census.
+AFF is different from the other systems being evaluated in that it is not dedicated to the decennial census.
+For example, other data sources such as economic surveys and the American Community Survey are also components of AFFÂ­and additional sources are likely to be added in the future.
+Consequently, some references to other sources of data were necessary to fully understand system requirements issues and how system functionality may have been impacted by other non-Census 2000 considerations.
+AFF is an Internet enabled information system which provides an efficient means of making a wide range of census information available to Census Bureau personnel and external users.
+The system is designed to be interactive and to allow for efficient dissemination, inquiry, and access to census data (demographic, economic, and geographic) which is generated by various program areas of the Census Bureau (data sets from decennial censuses, economic censuses and surveys, demographic surveys, and the American Community Survey (ACS)).
+Being interactive and accessible through the Internet, a major design goal of the AFF was (and still is) to provide a user friendly and intuitive interface to facilitate retrieval and use of information and data.
+AFF is revolutionizing the way the Census Bureau disseminates census data.
+In the past, census data were predefined and made available to users through a variety of traditional mechanisms (paper, magnetic tape, and floppy disk).
+In 1990, about 90 percent of the census results were in print.
+The Census Bureau recognized the need for more efficient, customizable, and timely dissemination of data and, in 1995, formed a working group consisting of representatives from different constituencies to lay the foundation of basic requirements for the system.
+A primary determination was that AFF should solicit direct inputs from customers regarding system content and design.
+The requirements for the system were collected in the Fall of that year through a series of meetings with internal staff and external data users.
+The results of that process defined a set of expectations (key requirements) to guide development of the system.
+The general characteristics that users envisioned for the system were that it be simple and intuitive to use, support a range of users from novice to expert, and provide fast and flexible access to all census data.
+1
+The desired key functional components were: Â· Â· Â· Â· Â· Â· Â· Provide users with access to census products, such as statistical briefs and abstracts, area profiles, economic indicators, press releases, summary data, geographic files, and maps.
+Provide users with access to Census Bureau data and allow creation of customized products by data theme and/or geographic area.
+Announce enhancements and changes made to the Data Access and Dissemination System (DADS) system.
+Provide users with an on-line help system for using the system and accessing census data.
+Provide users with an on-line feedback system for evaluations and suggestions for products and the DADS system.
+Provide users with links and pointers to relevant non-census federal data sets and nonfederal data sources.
+Allow users access to census data via multiple methods, such as Internet, Intranet, toll free numbers, and intermediaries such as the State Data Centers and their affiliates, Census Bureau Regional Offices, libraries, etc.
+In May 1997, the Census Bureau organized the 1997 National Conference on Census 2000 Partnerships to discuss the data needs of various private sector organizations and to determine how a system such as AFF could serve them.
+Then, in December 1997, joint application development (JAD) sessions were held to gather requirements from subject matter experts, and the Census Bureau conducted 60 interviews with potential users in Denver, Dallas, and Detroit.
+Representatives from the State Data Centers, local government, Congress, libraries, businesses, educational institutions, media, and community organizations were included in the interviews.
+According to the Program Master Plan for AFF, "the results of these interviews were used to validate and refine existing user requirements and to fulfill the overall requirement that the system be user-centered rather than data-centered".
+During the final design phases, the prime contractor conducted an extensive analysis of customer segmentation, concluding that four categories of users existed: Extractors, Manipulators, Profilers, and Surfers1.
+1 Extractors -- Expert users who download large amounts of raw data to conduct analyses.
+They are familiar with Census Bureau terminology and use Census Bureau data to perform their job.
+Manipulators -- Users of Census Bureau data who conduct searches and customize the output by manipulating data sets and formatting their own charts and tables.
+They are somewhat familiar with Census Bureau terminology and rely on speedy query functionality to build searches.
+Profilers -- Users who seek pre-packaged, easy-to-find information to answer specific questions.
+They accept information that is readily available and have a basic understanding of Census Bureau terminology.
+Surfers -- Casual users who visit the site out of curiosity or for non-professional reasons.
+Ease of use, entertainment, and interactivity appeal to these users.
+They are not familiar with the Census Bureau.
+2
+The forerunner of AFF, DADS, was prototyped in 1996 and 1997 and evolved into AFF in 1998.
+The first production implementation of AFF was in March 1999 and provided access to economic data, the American Community Survey (ACS), and 1990 census data.
+A second implementation occured in December 2000.
+It provided improved performance, addressed user comments and requests concerning the user interface, and scaled up the system to accommodate anticipated workloads associated with Census 2000 data.
+Currently, AFF is making voluminous demographic and economic data collected by the Census Bureau available via the Internet.
+Section II of the Program Master Plan for Census 2000 Decennial Dissemination and Inquiry System (December 1999) provides a comprehensive discussion of the evolution of AFF. Internet access to AFF allows for dissemination of information in a consistent manner to a broad base of users.
+Additionally, this type of access realizes the following benefits: (1) faster delivery of data; (2) better user interaction, service, and response time; (3) increased user/customer familiarity with Census Bureau products and their inherent value; and (4) the ability to effectively advertise and increase public awareness about the Census Bureau's products and services.
+Because of the paramount need for confidentiality and disclosure protection, the Census Bureau restricts access to data derived from microdata files.
+During development, the Census Bureau hired external experts to take part in testing confidentiality and disclosure protection mechanisms.
+The release and disclosure of data are subject to the approval of the Disclosure Review Board (DRB).
+2.
+METHODOLOGY The Titan/SRD Team interviewed key personnel for each of the Census 2000 automated systems using a structured approach centered around four fundamental areas.
+A set of questions under each of those areas was designed to explore: (1) the effectiveness of the requirements definition process; (2) how well the systems were aligned with business processes; (3) identification of any deficiencies in functionality or performance relative to actual operational needs; and (4) how effective the agency contract management activities were in regards to contractor performance.
+A similar, but separate, set of questions was designed for contractors who were identified as key personnel.
+The contractors were asked about the following areas: (1) the clarity of the statement of work and the impact of any changes to the specifications; (2) their interactions with government personnel and the technical direction they received; (3) the time line for completing the work; and (4) their impressions of the system's suitability and operational effectiveness.
+The purpose of the system requirements study is to summarize the results of interviews with key personnel by system.
+A variety of related system documentation was reviewed in connection with the interviews.
+The assessments provided in Section 4., Results, reflect the opinions and insights of key personnel associated with AFF who were interviewed by the Titan/SRD Team in March 2001.
+Those personnel had varying levels of knowledge about the AFF system based on 3
+their involvement with system planning, development, implementation, or operational issues.
+Section 5., Recommendations, provides value-added perspectives from the Titan/SRD Team that seek to illuminate issues for management consideration in the planning of future systems.
+3.
+LIMITS The following limits may apply to this system requirements study: The perception of people participating in the interview process can significantly influence the quality of information gathered.
+For instance, if there is a lack of communication about the purpose of the review, less than optimal results will be obtained and the findings may lack depth.
+Each interview was prefaced with an explanation about its purpose in order to gain user understanding and commitment.
+Â· In some cases, interviews were conducted several months, even years, after the participant had been involved in system development activities.
+This extended timeframe may cause certain issues to be overlooked or expressed in a different fashion (i.e., more positive or negative) than if the interviews had occurred just after system deployment.
+Each interview was completed within a one to two hour period, with some telephone followup to solicit clarification on interview results.
+Although a detailed questionnaire was devised to guide each interview and gather sufficient information for the study, it is not possible to review each aspect of a multi-year development cycle given the limited time available with each participant.
+Although this is a limitation, it is the opinion of the evaluators that sufficient information was gathered to support the objectives of the study.
+Every effort was made to identify key personnel and operational customers who actively participated in development efforts.
+In the case of AFF, most of the government personnel who participated in the study are still with the Census Bureau.
+The contractor interviewed for the study is still active on the AFF program.
+Â·
+Â·
+4.
+RESULTS This section contains findings that relate to the effectiveness of the requirements definition process used during the development of AFF.
+The requirements process establishes the foundation for a system and, as such, must be designed to thoroughly consider all technical and functional aspects of development and operation of the system.
+4
+4.1 Requirements definition As discussed above, between 1995 and 1997, the Census Bureau thoroughly explored the user base and made every effort to identify the full range of requirements to ensure that AFF would be a user-centered system.
+The requirements gathering exercise was not performed under the auspices of any standardized agency guidelines for system development.
+Requirements were defined in stages, but have effectively been changing on a continuous basis due to emerging requirements and user feedback.
+Part of the reason for this goes back to the Census Bureau's past reliance on in-house support for system development projects.
+The inhouse support gave rise to frequent and informal changes to requirements.
+The `culture' that grew out of this experience remains largely in place in spite of the fact that steady advancements in technology have shifted reliance to contractors who are usually required to work under a strict set of contractual parameters.
+This has contributed to tensions with contractors who, under the terms of most contracts, perform specific activities outlined in the statement of work (SOW) and work under the general technical direction of a Contracting Officer's Technical Representative (COTR).
+According to contracting principles, all new requirements should be negotiated with the contractor and then formally incorporated into the SOW.
+Frequent changes to requirements make it extremely difficult for contractors to succeed.
+This also greatly increases the risk of project failure and contributes to increased costs.
+In 1990, census data products were made available primarily through paper, magnetic tape, and CD-ROM media and consisted mostly of predefined materials.
+A driving force behind AFF was to make the bulk of data available electronically through Web browsers, and to ultimately allow retrieval of data that has been tailored to meet one's particular needs.
+AFF was designed to be built in three stages, or functionality tiers.
+The first tier was to consist of mostly canned reports (i.e., no further manipulation is possible) with limited functions available to the user.
+The second tier was to be more interactive, allowing such functions as data aggregation, limited manipulation, thematic mapping, and selection of geographic areas.
+The third tier was envisioned as a more advanced query system with such features as custom tabulations.
+Filtering techniques were to be employed as a confidentiality mechanism.
+Factors associated with charging and pricing for data products were discussed at length.
+An iterative development process was employed using a cyclical building technique (design, build, and test) that allowed for continuous feedback and evaluation.
+This approach employed prototyping and constant "fine tuning" of the system as development progressed.
+Census Bureau managers and DADS program staff were aware, from the outset, that DADS systems would have to be built incrementally because of the delivery cycles for Decennial Census, Economic Census, and American Community Survey data products.
+Thus, there was an underlying assumption for AFF that the system would have to adapt to requirements growth stemming from external policy pressures, uncertainties in data collection events, and Census Bureau requirements to conduct intensive data analyses that could not occur until late in the decennial process.
+The contracting
+5
+approach, development philosophy, and change control processes were governed by this awareness.
+An advantage of the iterative development process was that partial system functionality was available to users even while new functions were being developed for subsequent system iterations.
+While the iterative approach helped to refine the system, and was necessary due to the dynamics of constantly changing data dissemination requirements, the iterative process can be very resource intensive and time consuming in that the system is constantly being modified and enhanced.
+It did, however, have the advantage of allowing new technologies to be incorporated into AFF.
+Also, the system was designed around the concept of incremental expansion, so the iterative approach was actually consistent with the overall system design philosophy.
+The prime contractor, IBM, was a partner in the requirements definition process with the Census Bureau.
+The process included gathering requirements from key stakeholders, subject matter experts, and potential users via interviews and JAD sessions.
+The results of the interviews were compiled and incorporated into Use Case documentation.
+4.2 Requirements issues 4.2.1 Requirements methodology identified by the contractor Census formed a working group in 1995 to lay the foundation for the system.
+This was a proactive step towards defining a key set of requirements to guide development of the system; however, it was not an effort to produce a comprehensive set of system specifications and functional requirements.
+In view of the need to employ new technologies, the intent of the contract was to have the awardee(s) develop a systems approach for AFF.
+Once IBM was brought on board, a more formalized requirements process got underway as the contractor was engaged to work with the Census Bureau to develop a detailed set of requirements.
+This process included gathering requirements from key stakeholders, subject matter experts, and potential users via interviews and JAD sessions.
+Some interviewees expressed concern that the prime contractor was permitted to control the requirements definition process.
+The results of the interviews were compiled and incorporated into Use Case documentation.
+The contractor employed a development methodology, the SIMethod, which adopts the convention of Use Cases as the primary mechanism for gathering functional requirements.
+Although this is a widely used and technically sound approach to support development activities, several interviewees stated that it did not produce a hierarchical set of easy-to-understand requirements.
+Therefore, the thoroughness of the requirements may not be subject to validation by non-IT persons (e.g., subject matter experts) within the Census Bureau.
+The requirements were managed by the DADS program staff and included a process to coordinate with internal Census Bureau data providers and external user organizations.
+6
+Utilization of formal agency guidelines for developing requirements would have helped to ensure completeness of the requirements by setting a step-by-step approach to thoroughly address such critical areas as system functionality, user interfaces, data sources and accessibility, report generation, and performance metrics.
+The absence of such guidelines increased the risk that AFF might not be asked to do the right things.
+As a result of Congressional mandates, many agencies have adopted formal software development life-cycle (SDLC) methodologies.
+Formalized requirements guidelines should produce a document whose format and content promotes verification of the requirements by Census Bureau personnel.
+4.2.2 User base was defined early in the development process The Census Bureau made extraordinary efforts between 1995 and 1997 to define the system user base and address their needs by conducting focus groups with internal and external customers, meeting with private sector organizations, surveying participants involved in beta testing of the system, and interviewing data users.
+These sessions focused primarily on the partners and paying customers and less on the novice, non-paying users.
+This understanding of the user base contributed to the development of two AFF prototypes-the first to provide proof of concept and the second to test scalable design features for the Census 2000 production system.
+4.2.3 Requirements were identified throughout development Changes to requirements were initiated by the Census Bureau throughout the development cycle in keeping with the iterative development approach.
+The DADS program staff updated system requirements as information on Census 2000 data dissemination needs became available.
+User feedback reports were analyzed and developers gained better knowledge of system demands.
+Several aspects of Census 2000 dissemination needs, such as vastly expanded requirements for addressing race, impacted system design and resulted in a significant increase in costs.
+Another aspect of the system design, which had cost implications, was the Data Product Definition (DPP) system.
+It was identified after requirements were documented and resulted in a diversion of resources from AFF.
+Additionally, there were other changes partially due to the ongoing development of new files that were being used by AFF.
+General awareness that the system was evolving over time may have contributed to an atmosphere conducive to frequent changes in requirements.
+4.2.4 Change control board was established A Change Control Board (CCB) was used on a daily basis as the forum to review proposed changes and assess the cost, technical, and schedule risks associated with those changes.
+As problems with the system or proposed changes were identified, Program Change Requests (PCRs) were submitted to the CCB for evaluation, prioritization, and sizing of the effort required to implement the change.
+The prime contractor participated in the CCB and had significant influence on the decision making process.
+7
+4.3 Alignment with business processes This section contains findings that relate to how well AFF supported the specific business processes that were associated with the Census Bureau's objective to provide an efficient means of making census information available via the Internet to Census Bureau personnel and external users.
+4.3.1 System was considered effective AFF was the "right system for the job" in terms of achieving a breakthrough in the delivery of data in an electronic format.
+It also succeeded in making these data available, on demand, to a wide range of users (from novice to expert) and is helping to reduce (though not eliminate) reliance on the use of printed output and other traditional media.
+That having been said, of the three main requirements for AFF (see the general characteristics in Background Section), one has not been met to the extent envisioned.
+The requirement that the system be simple and intuitive to use has only been partially met.
+In general, it appears that the more experienced or familiar one is with census data, the easier the system is to use.
+The contractor and some interviewees suggested that several user levels be created, each with a separate interface.
+The DADS program staff and the contractor explored this option and determined that it was not viable due to resource constraints.
+In view of the findings in the Customer Segmentation and Critical Success Factor Analysis produced by IBM, this approach may have merit, but the implementation would have required enormous (and costly) programming overhead.
+During the interviews that Titan conducted, it was generally acknowledged that the system interface was good, but that site navigation could be improved and that getting to data was not as easy as it could be.
+Overall organization of the data has been cited as an area that could be improved.
+System response times for users have improved over time and were assessed as generally being satisfactory.
+This is a significant achievement as AFF makes a tremendous amount of data available to users.
+4.3.2 Information security was critical design factor Confidentiality was a major design factor from the outset.
+The Census Bureau used a Disclosure Review Board (DRB) to assess confidentiality issues.
+The DRB is a self-regulating mechanism within the Census Bureau that addresses data release and disclosure issues concerning subjectspecific areas.
+It is chaired by the Statistical Research Division (SRD) and includes representatives from each directorate.
+Given the need to prohibit unauthorized access to confidential microdata files and to minimize opportunities for `re-identification' (i.e., combining multiple data sources in an effort to equate census data with particular people), the Census Bureau contracted with the research facility, Carnegie Mellon, to test the adequacy of security provisions in AFF.
+To support information security, the IT area was responsible for assessing system access issues, implementing filters to ensure confidentiality, and preventing unauthorized access to AFF.
+4.4 System deficiencies 8
+This section contains findings that relate to any specific shortcomings that were identified with respect to the system's ability to accomplish what it was supposed to do.
+Recognizing that 100 percent success is rarely achievable, it is still worthwhile to assess deficiencies in the spirit of constructively identifying "lessons learned".
+Such insights can greatly contribute to improvements in future system development activities.
+As previously mentioned, AFF was a breakthrough system.
+Remarkably, there were very few deficiencies.
+The first production version suffered from performance problems and did not achieve the desired level of responsiveness.
+That problem has been corrected but other usability concerns remain such as the user interface and site navigation.
+The usability related feedback includes comments pertaining to information that is difficult to locate, confusing error messages, and unexpected search results.
+Although user feedback was limited in comparison to the overall user base, there are indications that usability could be improved.
+AFF posed a major challenge to designers/developers in the sense that it needed to serve a very diverse set of users (i.e., it had to be "all things to all people").
+Unlike most systems that are designed to be used by a highly targeted (narrow) user base, AFF customers include internal Census Bureau users, external data customers, and the general public.
+The external users can range from novice to expert.
+Additionally, AFF is being designed to permit customized queries, with the data being available in tabulated form (by data theme and/or by geographic area) or depicted graphically by a mapping engine.
+These requirements call for an extraordinarily sophisticated user interface.
+Based on interviews with numerous people involved with the development and operation of AFF, the site navigation and usability features are getting mixed reviews.
+AFF is still a work in progress and the interface is continuing to evolve in an effort to make the system suitable for novices as well as power users.
+4.5 Contract management practices This section contains findings that relate to the effectiveness of contract administration activities.
+Even when system requirements are well defined, ineffective management of contractors can lead to less than optimal results when the system is deployed.
+Consequently, it is beneficial to evaluate past practices to gain insights that can lead to improvements in system development efforts.
+4.5.1 Outside expertise was used A contractor played a major role in designing, sizing, and operating the system.
+With contract award taking place in April 1997, the principal contractor had two years to develop, test, and deploy the system.
+A subcontractor with expertise in geographic information systems and mapping applications also was brought in to support the development of AFF.
+The decision to use contractor support stemmed from the realization by Census Bureau staff that Internet technology was evolving rapidly and that outside expertise was needed in order to successfully implement a continuously evolving, state-of-the-art system.
+Traditionally, the Census Bureau has relied on in-house staff to develop systems; Census 2000 represents a departure from that approach in that contractors were widely used for selected system development and operational 9
+activities.
+The contract was intentionally structured to provide flexibility to allow the contractor and the DADS program staff to respond to anticipated data dissemination requirements from Census 2000.
+This structure allowed the team to work on a system that was evolutionary as opposed to being built once from a well-defined set of requirements as is most often the case.
+4.5.2 Department of Commerce contracting approach used for guidance The Census Bureau employed the Department of Commerce concept of operations for streamlined acquisition for its procurement methodology.
+This approach helped to explore system characteristics and development issues through pre-award, face-to-face meetings with vendors.
+Contractors were encouraged to utilize commercial-off-the-shelf (COTS) software as a development tool due to software maintenance and other considerations.
+In spite of the involvement of several contractors in the pre-award phase, there were no protests of the contract award.
+The advantage of the concept is that it allowed the Census Bureau to explore the merits of different technical approaches at a time when software development tools and Internet technology were rapidly changing.
+In effect, this created a competitive environment wherein vendors had to convince the Census Bureau of the superiority of their solutions in order to receive a contract award.
+The alternative would have been to award a separate contract to a consulting firm for technological assessment services.
+4.5.3 Communication with contractors was effective Communication between the Census Bureau project management personnel and the contractor was frequent, well documented, and included an effective change control process.
+The contractor personnel were co-located with Census Bureau employees.
+This was a key factor in facilitating communications between the two groups.
+The Census Bureau and contractors were able to quickly learn each others' methodologies and modes of operation.
+The change control process was especially important in view of the prototyping approach.
+Proposed changes were formally submitted through a Program Change Request (PCR), and these were evaluated for their potential impact on ongoing work, the effort required to implement the change, and their priority with respect to urgency.
+The change control process was a critical success factor in view of the prototyping approach taken to develop AFF.
+Frequent meetings during the design phase helped to bring about a consensus that was needed to reconcile a wide range of desires that were produced, in part, by the broad exposure of team members to the Internet.
+4.5.4 Contractor performance deemed successful The prime contractor was successful in supporting the development and operation of AFF, in spite of the fact that the contractor was not initially familiar with census data and had to deal with constantly changing requirements.
+One outstanding contribution was the analysis performed by the prime contractor to determine the customer segmentation for AFF/DADS.
+The focus of this analysis was to identify customer segments, what they value, and the critical factors that needed to be met for AFF to be successful.
+4.5.5 Integrated team structure used throughout development 10
+The Census Bureau outlined some of the requirements which were then submitted to the contractor.
+The remainder of the requirements, functional and non-functional were developed as a collaborative effort between the Census Bureau and its contractors.
+Integrated teams with a broad breadth of experience existed throughout various phases of the system's life-cycle.
+The subject matter expertise of the Census Bureau individuals, who were accustomed primarily to producing paper-based products, was supplemented by the expertise of the contractors who were able to meet the challenge of conversion to product delivery on a different medium (i.e., the Internet).
+Advocacy groups were set up, including individuals from the Regional Offices and the State Data Centers.
+These groups participated in design sessions and usability testing and provided frequent feedback.
+4.5.6 A flexible statement of work was developed The SOW was intended to be flexible and to accommodate the iterative nature of the system development process.
+From the contractor's perspective, the SOW adequately reflected the broad scope of work to be performed.
+This contract vehicle accommodated system stemming from technology and communications related issues.
+Overall, the timeline for completion of the work was reasonable.
+5.
+RECOMMENDATIONS This section synthesizes findings from the above sections and highlights opportunities for improvement that may apply to the Census Bureau's future system development activities.
+The recommendations reflect insights from the Titan/SRD analysts as well as opinions regarding "lessons learned" and internal "best practices" that were conveyed by Census Bureau personnel during interviews.
+5.1 Customer identification and segmentation - define user base early.
+The Census Bureau's early efforts to define the user base to ensure that AFF would be a usercentered system were well conceived.
+The re-examination of existing data and targeted interviews that were performed by the prime contractor succeeded in providing a more detailed understanding of the user base and the characteristics of their particular needs.
+Recommendation: It is recommended that the Census Bureau conduct customer segmentation analyses as early as possible in the system development process.
+Such analysis is vital in terms of profiling the user community and their needs.
+This information is invaluable with respect to prioritizing the features, functions, and interface of the system.
+It also serves to maintain a focus on the system users, which can sometimes be "lost" during the system coding/development stages (i.e., programmers often have a tendency to write as if they were the users).
+A mechanism to solicit feedback from the user community should also be incorporated into the system development process.
+11
+5.2 System development methodology - establish agency-wide guidance.
+From an overall system development perspective, a formal methodology provides the agency with guidance for project planning and management and provides a contractor with direction for the technical approach, types of documentation, and level of detail appropriate for each phase of the development life-cycle.
+Typically, SDLC methodologies cover requirements definition, system design, development, testing, deployment, and on-going maintenance phases.
+In the case of AFF, the DADS program staff relied on the developer to prepare a detailed set of requirements.
+Ideally, requirements should not be prepared by the same contractor tasked to develop the system as it may introduce risk caused by technical bias.
+A formal methodology would benefit the Census Bureau by establishing the structure and procedures for the specification and development of complex systems thereby ensuring the consistency and completeness of system development efforts.
+Recommendation: Establish an agency-wide system development life-cycle methodology using input from other federal agencies and established industry standards.
+This methodology should be implemented in conjunction with an organization devoted to standards and methodology development and to project management.
+Training and documentation should be made available to Census Bureau personnel, and representatives from the new organization should be available to coach development teams through each phase of the development life-cycle.
+5.3 User interface design - customize by user type.
+The user interface is a major requirements issue in that it impacts the overall system usability.
+Given the unusual requirement to develop a system for a broad range of users with varying abilities, it was essential that the requirements phase identify an appropriate user interface.
+With AFF, an interactive web-based application that is designed to search an enormous amount of data, many interviewees recommended that there should have been at least three different user levels, so that a suitable path option could be selected upon entering the site, depending on the user's level of sophistication and/or data searching objectives.
+For example, web surfers only need quick and easy access to pre-formatted information.
+Power users, on the other hand, have a need for a sophisticated interface as they are requesting access to specific subsets of data.
+These users are typically accustomed to formulating customized queries and are prepared to manipulate data.
+Recommendation: It is recommended that the design of the user interface be consistent with the sophistication of the various user types.
+The analysis of user types may indicate that multiple interfaces are necessary.
+In this context, the interface should reflect the user's view of data, and not require a knowledge of the Census Bureau's structure or data sources.
+5.4 Change control board - implement formalized change control processes.
+The concept of a Change Control Board is an effective means of identifying, assessing, prioritizing, and approving changes both in a development and production environment.
+Although a CCB can add a semblance of bureaucracy to the process, it is essential to ensure that 12
+any changes are promptly and methodically considered in light of the original requirements and available resources.
+AFF was an innovative undertaking for the Census Bureau in that it disseminates data from multiple sources in a web-based environment using different customer segments.
+A CCB was established to manage the complexities of the system development activities.
+A CCB is critical because: Â· Â· Â· Â· Informal change control processes create a potential for schedule slippages and cost overruns.
+Changes to data products generated from multiple sources must be carefully managed in order to maintain data quality and consistency.
+Changes must be assessed in light of their applicability to different customer segments.
+A formal change control board with adequate representation from Census Bureau managers, subject matter experts, and other government stakeholders balances the reliance on contractors to ensure program goals are met.
+Recommendation: Implement formalized change control processes as part of all development efforts.
+Include representatives from each stakeholder organization on the board to ensure a fair assessment of the business and technical risks involved with each change and to ensure conformance with agency objectives and system requirements.
+The requirements for change control and supporting documentation should be included in the system development methodology.
+13
+References Census 2000 Decennial Dissemination and Inquiry System, Program Master Plan (PMP), December 13, 1999.
+Prepared by the Decennial Management Division.
+Data Access and Dissemination System (DADS) Statement of Work (SOW), July 31, 2000.
+Data Access and Dissemination System 1998 (DADS98) Program Management Plan (PMP), Version 2.2, July 22, 1998.
+Prepared by IBM Global Government Industries.
+DADS98 Architecture (American FactFinder, Data Product Production), Version 3.0, DADS Architecture Team, September 1999.
+Prepared by IBM Global Solutions.
+Draft DADS2001 American FactFinder Functional Requirements, Version 2.0, May 30, 2000.
+Prepared by IBM.
+DADS2000 AFF Non-functional Requirements (Companion to Functional Requirements), Version 1.2, February 23, 2000.
+Prepared by IBM.
+AFF/DADS Customer Segmentation and Critical Success Factor Analysis, October 13, 1999.
+Prepared by IBM e-business Solutions for Government Team.
+American FactFinder: U.S. Bureau of the Census Works Towards Meeting the Needs of Users While Protecting Confidentiality, March 2001.
+Paper submitted at the Conference of European Statisticians by the U.S. Census Bureau.
+Census Bureau Touts New Data Delivery System, United States Department of Commerce News, CB01-CN.57, February 26, 2001.
+Prepared by Decennial Media Relations.
+14
+Participants Enrique Gomez Data Access and Dissemination System Office 2-2301, +1.301.457.2352 E.Enrique.Gomez@census.gov Data Access and Dissemination System Office 2-2325, +1.301.457.3504 William.K.Stuart@census.gov Data Access and Dissemination System Office 2-2325, +1.301.457.3505 Harold.M.Brooks@census.gov Data Access and Dissemination System Office 2-2325, +1.301.457.2312 Sandra.K.Rowland@census.gov Decennial Systems and Contracts Management Office 2-2303, +1.301.457.4074 Donald.R.Dwyer@census.gov Decennial Systems and Contracts Management Office DCPO-LANHAM, +1.301.429.5380 Derrell.A.Matthews@census.gov Decennial Systems and Contracts Management Office 2-2204, +1.301.457.4010 James.J.Marsden@census.gov Decennial Systems and Contracts Management Office 2-2204, +1.301.457.4008 Carolyn.R.Hay@census.gov Geography Division WP1-301, +1.301.457.1101 ttrainor@geo.census.gov
+William Stuart
+Hal Brooks2
+Sandra Rowland
+Don Dwyer
+Derrell Matthews
+James Marsden
+2
+Carolyn Hay
+2
+Tim Trainor
+2 Individual not interviewed for this study.
+15
+Participants - Continued Mark Wallace Economic Planning and Coordination Division 3-2572, +1.301.457.2621 Mark.E.Wallace@census.gov Demographic Statistical Methods Division 3-1657, +1.301.457.8047 Douglas.W.Hillmer@census.gov Population Division 3-2021, +1.301.457.2073 Louisa.F.Miller@census.gov Population Division 3-2024, +1.301.457.2442 Campbell.J.Gibson@census.gov Population Division 3-2372, +1.301.457.2408 Sherry.B.Pollock@census.gov Population Division 3-2374, +1.301.457.2429 Linda.M.Showalter@census.gov Housing and Household Economic Statistics Division 3-1444, +1.301.457.3237 William.S.Chapin@census.gov Housing and Household Economic Statistics Division 3-1071, +1.301.457.3188 Leonard.J.Norry@census.gov Marketing Services Office 3-3015, +1.301.457.4081 Joanne.Dickinson@census.go Demographic Surveys Division 3-3364, +1.301.457.3778 Cavan.Paul.Capps@census.gov
+Doug Hillmer
+Louisa Miller
+Campbell Gibson
+Sherry Pollock
+2
+Linda Showalter
+Bill Chapin
+Len Norry
+2
+Joanne Dickinson
+Cavan Capps
+2
+16
+Participants - Continued Jon Michael Fortier 2
+Director's Office 4-1015, +1.301.457.2354 Jon.M.Fortier@census.gov Director's Office 3-2037, +1.301.457.2092 Paula.J.Schneider@census.gov Decennial Management Division 2-2014, +1.301.457.4001 A.E.Pike.III@census.gov Decennial Management Division 2-1422, +1.301.457.4646 Jane.H.Ingold@census.gov Performance Engineering Corporation 1.301.457.3160 IBM 1.301.457.4004 IBM 1.301.457.8492
+Paula Schneider
+Ed Pike
+Jane Ingold (DMD Program Support) Gary Schaumburg John Somiak MaryJane Swope
+17

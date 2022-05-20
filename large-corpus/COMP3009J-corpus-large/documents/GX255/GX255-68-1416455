@@ -1,0 +1,565 @@
+Census 2000 Evaluation L.5 January 14, 2003 Operational Requirements Study: The Beta Site Systems Testing and Management Facility FINAL REPORT This evaluation study reports the results of research and analysis undertaken by the U.S. Census Bureau.
+It is part of a broad program, the Census 2000 Testing, Experimentation, and Evaluation (TXE) Program, designed to assess Census 2000 and to inform 2010 Census planning.
+Findings from the Census 2000 TXE Program reports are integrated into topic reports that provide context and background for broader interpretation of results.
+Prepared by Titan Systems Corporation/ System Resources Division Kevin A. Shaw, Project Manager Planning, Research, and Evaluation Division
+Intentionally Blank
+PREFACE Purpose of the Operational Requirements Study The main objective of the Operational Requirements Study is to assess the efficacy of the requirements definition process that was employed by the U.S. Census Bureau during the planning stages for the Beta Site.
+Accordingly, the report's main focus is on the effectiveness of requirements methodologies, including processes for coordination, communication, and documentation, and their impact on overall functionality of the Beta Site vis-a-vis its support for Census 2000 automated systems.
+The report also addresses certain contract management issues and their effect on operational considerations.
+The Operational Requirements Study synthesizes the results from numerous interviews with a range of personnel--both U.S. Census Bureau staff and contractors--who were either customers or were involved with the planning, development, and operation of the Beta Site.
+The findings in this report are qualitative in nature; they reflect the varied opinions and insights of those personnel who were interviewed.
+The intent of this study is to use the results obtained to inform future planning for the Beta Site activities.
+Intentionally Blank
+CONTENTS EXECUTIVE SUMMARY .......
+............................................. iii 1.
+2.
+3.
+4.
+BACKGROUND ........................................................1 METHODOLOGY ........
+.............................................
+3 LIMITS ...............................................................4 RESULTS .............................................................5 4.1 Requirements definition ................................................5 4.2 Requirements issues .....
+..............................................6 4.3 Alignment with business processes .......................................7 4.4 System deficiencies ..................................................11 4.5 Contract management practices .........................................13
+5.
+RECOMMENDATIONS .................................................14 5.1 Fully consider requirements for communication processes ....................
+15 5.2 Improve testers' knowledge about the purpose, use, and capabilities of the software ...............................................
+16 5.3 Major advancements in technology will require early scoping of the level of effort required from the Beta Site in 2010 ........................
+17 5.4 Educate users in the Beta Site functions ..................................
+17 5.5 Define and consolidate the network administration function and responsibilities . .
+19 5.6 Improve life-cycle model for the 2010 Census .............................
+19 References ............................................................
+21 Participants ............................................................
+22
+i
+Intentionally Blank
+ii
+EXECUTIVE SUMMARY This study assesses the extent to which the requirements for the Beta Site operation and its internal processes supported various automated systems used during Census 2000.
+The findings presented are qualitative in nature as they reflect the varied opinions and insights of the Beta Site operations personnel and customers who were interviewed by the Titan Systems Corporation.
+The Beta Site is a software evaluation facility within the U.S. Census Bureau that was involved in the testing and deployment of Census 2000 systems and related components.
+Its primary objective was to assess a system's deployment readiness; however, it also conducted security testing, provided software release services, and performed network monitoring and troubleshooting support.
+The Decennial Directorate charged the Decennial Systems and Contracts Management Office with the responsibility for ensuring integration of Census 2000 systems and the Beta Site was responsible for testing and releasing software into the production environment.
+Security evaluation was a distinct phase of the Beta Site testing.
+The Beta Site personnel worked in a cooperative fashion with the Information Technology Security Office to assure appropriate security considerations were proactively addressed.
+Overall, the structure of the testing processes and associated functions were comprehensive and were aligned to support the objectives of the Beta Site.
+It is important to note that the Beta Site was faced with the unique challenge of having to test applications in a non-traditional environment; that is, its primary task was to test applications that had a very short life-cycle.
+Many interviewees expressed appreciation for the thoroughness of the testing and cited instances of the Beta Site testers identifying faults in the software.
+The planning for the Beta Site support for Census 2000 began in mid-1996 and continued through the census to accommodate changing operational requirements, as needed.
+The physical site was constructed in Building 2 in the Suitland Federal Center in 1996.
+In addition to testing Census 2000 systems, over the next four years, the Beta Site had to address other challenges such as ramping up the testing infrastructure and performing Year 2000 compliance testing.
+According to a post-assessment study of the Beta Site that was prepared by the Decennial Management Division, from late Fiscal Year 1997 through Fiscal Year 2000 over 1,200 software tests were performed by the Beta Site and it maintained system configurations for over 8,000 personal computers and 570 servers during Census 2000.
+Given the success of Census 2000 and the unprecedented reliance on automated systems, it is evident that the Beta Site played an important role in the decennial census and contributed significantly to its success.
+Though originally established to evaluate Census 2000 systems, future plans call for the Beta Site to support both decennial and non-decennial operations.
+The Beta Site was staffed by a mix of both in-house staff and contractors.
+Major results of the study include:
+iii
+Â·
+Underlying concept of the Beta Site generally viewed as beneficial, but processes in need of improvement.
+Although the software validation role of the Beta Site operation was widely seen within the U.S. Census Bureau as being a necessary function, many of the Beta Site's customers expressed concerns over the efficiency, consistency, and timeliness of the testing processes that were employed.
+The requirements for the Beta Site should have focused more attention on the impact that its internal processes would have on customers' operations.
+Conversely, developers needed to factor in time for Beta Site testing in their development process.
+In this regard, the Beta Site personnel noted that, from their perspective, there were too many Urgent Requests which suggested to them a lack of proper planning/scheduling by the program offices.
+Responsibility for test plans was not fully addressed.
+The issue of who was responsible for developing test plans was not fully addressed.
+Although the Program Master Plan discussed the Beta Site Workflow and the "receipt of requirements," which included test plans, data, and cases from the developer, the preciseness of those requirements was never fully defined.
+The perception of the Beta Site staff was that responsibility for test plans was defined through meetings with customers.
+In discussions with testers and customers alike, it was evident that this issue was not fully resolved during the requirements phase.
+Communication could have been more effective.
+Early planning should have addressed requirements for two-way communications.
+Testers frequently worked with developers to fix specific problems, and in an effort to meet testing deadlines, were often available outside of normal working hours.
+Although a set of physical, logistical, and procedural requirements was outlined in April 1997, they did not adequately address the need for a structure to ensure effective communications between the Beta Site testers and developers.
+Interviews confirmed that the Beta Site process was often unclear to most customers, and this led to a significant number of communication difficulties, especially when the need arose to escalate issue resolution to a higher level.
+Some of these escalations may have been requested to gain exceptions to the Beta Site processes.
+General Service Administration contract support service utilized for the Beta Site.
+In 1997, the Beta Site management opted to use the services of the General Service Administration's Federal Systems Integration and Management Center as a means of acquiring a capable prime contractor for the Beta Site.
+The Federal Systems Integration and Management Center manages multiple-award contracts with qualified system integrators who can be competitively selected in a relatively short period of time.
+By utilizing this service, the Beta Site management took advantage of these contracts that were already in place to expeditiously acquire a qualified systems integrator.
+Resources permitting, it may have been beneficial for the Beta Site to use the Federal Systems Integration and Management Center in the requirements planning area.
+Network administration and configuration responsibilities within the decennial environment.
+Requirements did not give adequate consideration to the complexities of managing the Census 2000 systems in a networked environment and the division of iv
+Â·
+Â·
+Â·
+Â·
+responsibilities within the U.S. Census Bureau's technical management infrastructure was problematic.
+This was a crucial issue in view of the size of the network.
+During the decennial census, network administration and configuration issues arose between the Technologies Management Office and the Beta Site.
+These and other findings have led to the following recommendations: Â· Fully consider requirements for communication processes.
+The communications "gap" could have been narrowed if the Beta Site had initiated a more effective outreach program aimed at improving the dialog with customers and to help manage expectations.
+A public relations campaign to raise the level of awareness of the Beta Site's objectives and processes would have led to greater understanding about its role, and perhaps increased acceptance in the customer community.
+As part of requirements, the Beta Site should plan to implement such a program to inform customers about the purpose of the Beta Site, including its methodology and procedures.
+On the other hand, developers need to understand that the applications and development environment does not replicate the production environment.
+Applications must first function on the Beta Site standardized platform before testing can begin.
+Improve testers' knowledge about the purpose, use, and capabilities of the software.
+Testers were widely perceived as being very competent.
+The volume and variety of applications requiring processing by the Beta Site in a short period of time often made it difficult to determine the characteristics of the software and apply appropriate testing.
+This environment can result in communication problems, unnecessary re-testing cycles, and delays in software releases.
+Testers need to have a good understanding of the software they are charged with testing.
+The requirements process should have explored the need for this knowledge and how to impart it, preferably through a collaborative approach between developers and testers.
+A lot of frustration can be traced back to this very issue, not always involving testers in early planning efforts.
+Given the extraordinary challenges of having to prepare for the testing of myriad decennial systems in a compressed timeframe, the requirements for the Beta Site should have addressed a need for a more effective software familiarization process and/or direct involvement with the developer to address this potential problem.
+Developers did not always provide sufficient supporting documentation to assist testers in gaining an understanding of the underlying logic and structure of the applications.
+Successful testing depends upon comprehensive documentation.
+Major advancements in technology will require early scoping of the level of effort required from the Beta Site in 2010.
+Given the high probability of increased reliance on automated systems in 2010 and the rapid pace of technological change, the Beta Site will likely play an even larger role in the next decennial census.
+The Beta Site will have to be prepared to test more applications that employ technologies that are far more sophisticated than those used in the Census 2000 environment.
+It is recommended that the U.S. Census Bureau initiate early planning efforts to enable the Beta Site operation to v
+Â·
+Â·
+scope out its requirements for physical, technical, and personnel resources so that it can accommodate an increased testing workload in the next decennial census.
+Â· Improve life-cycle model for the 2010 Census.
+Given the lack of agency guidelines for requirements planning and a system development life-cycle model, the software testing function has not benefitted from a structured or disciplined approach to software development.
+Such an approach would have greatly facilitated testing by contributing toward more disciplined software and testing processes.
+Current trends in industry are leading to the adoption of the Capability Maturity Model.
+The model is a multi-layered structure, developed by the Software Engineering Institute (research center sponsored by the Department of Defense and operated by Carnegie Mellon University), which outlines principles and practices that should be addressed in order to improve software quality and process management.
+It is recommended that the U.S. Census Bureau evaluate the Capability Maturity Model and the tools which can support its implementation well in advance of the next decennial census.
+During an interview with the Beta Site management, the Titan Team learned that compliance tools leading to Level 3 certification are already being investigated.
+The Capability Maturity Model holds great promise for future testing operations and should be adopted; however, this goal can only be accomplished when all participants in the software development process adhere to the procedures set forth by the model's methodology.
+vi
+1.
+BACKGROUND The Titan Systems Corporation, System Resources Division (Titan/SRD) was tasked by the Planning, Research, and Evaluation Division (PRED) of the U.S. Census Bureau to conduct an operational requirements study of the Beta Site with respect to the support that facility provided during the decennial census.
+The Beta Site is a software evaluation center within the Census Bureau that was involved in the testing and deployment of Census 2000 automated systems and related components.
+Testing focused on ensuring operational compatibility with the Census Bureau's computing environment and on identifying software errors that could affect a system's ability to support census operations.
+Given the success of Census 2000 and its unprecedented reliance on automated systems, it is evident that the Beta Site played an important role in the decennial census and contributed significantly to its success.
+This study assesses the extent to which the requirements for the Beta Site operation and its processes supported various automated systems used during Census 2000.
+It offers one of several evaluation approaches for examining this operation and is intended to assist in the planning for future software testing, integration, or management operations that may be involved in supporting the 2010 Census.
+The facility is an organizational component under the Decennial Systems and Contracts Management Office (DSCMO).
+The primary objectives of the Beta Site were to assess a system's deployment readiness and ensure system compatibility and interoperability with the Census Bureau's networked computing environment.
+However, it also had a range of other functions and was responsible for conducting security testing; monitoring system performance and the configuration of personal computers (PCs) and servers in field offices; providing expert assistance to solve complex technical problems; releasing software; and maintaining version control for Census 2000 systems.
+Software that is subjected to evaluation by the Beta Site is prioritized to receive either "Normal" or "Urgent" testing.
+The Census Bureau has established a bypass mechanism known as an "Emergency Release" that allows critical software to be released without the benefit of testing by the Beta Site.
+This category could apply to business issues (compliance with legal or administrative rulings) or because testing was delayed and jeopardized the software deployment schedule.
+"Urgent" and "Emergency Release" testing requests required special approvals from Census Bureau senior management.
+Since the Beta Site testing function was used to evaluate multiple Census 2000 systems, the range of equipment required for testing and the technical skill sets of the Beta Site personnel were diverse.
+The Beta Site was configured with hardware and software that replicated the operating environment for Census Bureau field offices.
+1
+The Beta Site was able to provide testing services for applications that were developed by nondecennial areas within the Census Bureau.
+For example, a unique set of keying programs was required for two different island area forms (one application for the Pacific region and another for the U.S. Virgin Islands).
+These PC-based applications were developed at the National Processing Center (NPC), but were comprehensively tested by the Beta Site, which also maintained version control of the deployed software.
+The Beta Site also played an extraordinary role in supporting a major Census 2000 applicationÂ­the American FactFinder.
+Even though the system was not required to undergo testing in the Beta Site, the facility nonetheless assisted with load testing and helped to validate the software testing methodology.
+After the 1988 Dress Rehearsal, the Census Bureau opened the Beta Site in Baltimore, MD at the same location as the Baltimore Processing Office.
+All hardware, software, data communication devices, and expert staff were supplied by the Digital Equipment Corporation (DEC) under the Family of Minicomputers Contract.
+Only hardware tests were conducted at the Beta Site.
+Since there were no software testers at the Beta Site, each software release was tested for security concerns by the Census Bureau's Security Office.
+Once an application was loaded and the Security Office completed the review, a form was signed by representatives from the Beta Site and the Security Office as well as the Application Representative.
+It was then faxed to Headquarters (HQ).
+Once the Associate Director for Management Services signed the form, software could be released.
+All software was released via dedicated data lines from the Beta Site to the 12 Regional Census Centers (RCCs) and the seven Processing Offices (POs).
+HQ mailed tapes to the District Offices (DOs).
+For 1990, other major activities of the Beta Site included: Â· Writing, installing and managing an automated Problem Referral and Resolution System.
+One system was for the RCCs and DOs, one for the POs, and one for Geography Division.
+Each problem referred by a decentralized site was sent via DECmail to the Beta Site, reviewed, and then forwarded to the appropriate HQ person.
+An automated response was sent from HQ to the decentralized sites.
+Developing the VMS (Virtual Memory System) software that was written, tested, and maintained at the Beta Site (two DEC VMS experts were on site).
+Preparing the Computer Operations Manual which was used by the Systems Administrators in the RCCs and the POs.
+Â· Â·
+In preparation for Census 2000, the Census Bureau planned to test all production systems (including hardware and software testing, as appropriate) to ensure consistency in decennial processes at HQ, the Local Census Offices (LCOs - formerly called District Offices in 1990), the RCCs, the National Processing Center in Jeffersonville, IN, and selected HQ systems.
+The data capture systems were not part of the Beta Site testing for 2000.
+Planning the Beta Site activities for Census 2000 began in mid-1996 and continued through the census to accommodate changing operational requirements, as needed.
+The site was constructed in 1996 and opened soon 2
+afterwards.
+After RCC and LCO servers were installed in the fall of 1997, application software testing began in January 1998.
+For Census 2000, the Information Technology (IT) Directorate recommended that the Beta Site be located at the Bowie Computer Center.
+The Decennial Directorate decided to build the Beta Site at HQ in Building SFC-2, so that customers could easily use the site.
+For Census 2000, the Beta Site operated three shifts, whereas in 1990 there were two shifts.
+Future plans are to make the Beta Site more permanent and to incorporate additional software testing for both decennial and non-decennial operations.
+The DSCMO was responsible for releasing software to the VMS/NT systems in the NPC, the Unix systems in the RCCs, and the Novell-Novell Directory Services (NDS) systems in the Accuracy and Coverage Evaluation Regional Offices (ACEROs), RCCs, and LCOs.
+No changes to the system could occur unless specified by an appropriate Change Control Board (CCB).
+There were CCBs that covered the following systems: RCC, LCO, Novell, and VMS.
+Application software changes were approved by teams of developers responsible for writing the software.
+The Beta Site was responsible for the configuration management of these systems.
+In March 2001, the Decennial Management Division (DMD) prepared a high level assessment of successes and lessons learned for the Beta Site.
+This document noted, among other things, that from late FY 1997 through FY 2000, over 1,200 software tests were performed by the Beta Site and that it managed to maintain system configurations for over 8,000 PCs and 570 servers during Census 2000.
+It further noted that the Beta Site effectively utilized commercial-off-the-shelf (COTS) systems management utilities to facilitate configuration management, system monitoring, and Year 2000 (Y2K) testing activities.
+To assure success in implementing major software systems and to solve complex problems, the Beta Site relied on outside technical expertise for support in Unix, Novell, Oracle, and IBM specific areas.
+The assessment prepared by DMD cited a number of lessons learned that are also echoed below in Section 4, Results.
+2.
+METHODOLOGY In view of the Beta Site's involvement in testing selected Census 2000 automated systems, PRED directed Titan/SRD to assess how the requirements for software testing impacted the deployment, performance and functionality of the Census 2000 automated systems.
+This evaluation was accomplished through an extensive literature review and numerous interviews with personnel who were either involved with the Beta Site operations or who were customers that were supported by the Beta Site.
+The interviews covered three main areas: (1) establishment of the Beta Site facility; (2) definition of Beta Site processes; and (3) the effectiveness of the Beta Site operation.
+The references cited in this evaluation provided supplemental information.
+The assessments provided in Section 4., Results, reflect the opinions and insights of key personnel who were interviewed by the Titan/SRD Team in July and August 2001.
+Section 5.,
+3
+Recommendations, provides value added perspectives from the Titan/SRD Team that seek to illuminate issues for management consideration in the planning of future systems.
+We applied quality assurance procedures throughout the creation of this report.
+They encompassed how we determined evaluation methods, created specifications for project procedures, analyzed data, and prepared this report.
+Study participants reviewed the results of this system requirements study.
+Comments have been incorporated to the fullest possible extent.
+3.
+LIMITS The following limits may apply to this operational requirements study: Â· The perception of those persons participating in the interview process can significantly influence the quality of information gathered.
+For instance, if there is a lack of communication about the purpose the review, less than optimal results will be obtained and the findings may lack depth.
+Each interview was prefaced with an explanation about its purpose in order to gain user understanding and commitment.
+In some cases, interviews were conducted several months, even years, after the participant had been involved in system development activities.
+This extended timeframe may cause certain issues to be overlooked or expressed in a different fashion (i.e., more positive or negative) than if the interviews had occurred just after system deployment.
+Each interview was completed within a one to two hour period, with some telephone follow-up to solicit clarification on interview results.
+Although a detailed questionnaire was devised to guide each interview and gather sufficient information for the evaluation, it is not possible to review each aspect of all of the Beta Site testing cycles performed, given the limited time available with each participant.
+Although this is a limitation, it is the opinion of the evaluators that sufficient information was gathered to support the objectives of the evaluation.
+Every effort was made to identify key personnel and operational customers who actively participated in the beta testing process.
+In the case of the Beta Test site, some of the government personnel who participated in the study are no longer with the Census Bureau.
+Some contractors interviewed for the study are also no longer active on the program.
+Â·
+Â·
+Â·
+4.
+RESULTS This section contains findings relating to the requirements issues surrounding the establishment of the Beta Site facility, its personnel, and associated software testing processes.
+The 4
+requirements process establishes the foundation for an operation and, therefore, must thoroughly consider all functional aspects, features, and services that need to be performed/provided for that operation to be successful.
+Failure to methodically and adequately identify requirements increases the likelihood of operational inefficiencies.
+4.1 Requirements definition Planning for the Beta Site started in mid-1996 and centered around several factors.
+First, there was a need to acquire a wide variety of equipment that was necessary to simulate the environment in the field.
+Second, there was a need for testing tools such as WINRunner and Load Runner (both packages were developed by Mercury Interactive).
+WINRunner is a functional testing tool that ensures Web-based applications and other systems work as expected by capturing, verifying and replaying user interactions automatically.
+LoadRunner is a load testing tool that predicts system behavior and performance.
+Third, there was a need for software distribution and version control tools.
+The Avanti Task Manager was selected to automate the tasking and scheduling of software distribution to ensure that the correct software was resident on servers.
+A fourth factor was a recognized need to separate the software development environment from the test environment.
+The Beta Site was intended to be a temporary operation, owned by the government and operated by contractors.
+It was designed to support census operations that would be performed in the decentralized sites, but support for HQ systems could also be made available at the option of individual program managers.
+In April 1997, a compact set of requirements was drawn up for: equipment and software systems; acquisition and funding; major operations; and administration.
+This early document was essentially a framework and lacked the specificity or detail normally associated with a full requirements study.
+5
+4.2 Requirements issues 4.2.1 Responsibility for test plans not fully addressed Although the Program Master Plan (PMP) and the Decennial Software Testing Methodology document discussed the Beta Site Workflow and the "receipt of requirements," which included test plans, data, and cases from the developer, the preciseness of those requirements was never fully understood.
+This was evident during discussions with testers and customers alike.
+This was a very fundamental matter which should have been resolved during the requirements phase.
+As a matter of practice, developers usually prepared the test plans.
+Owing to the lack of a formalized system development methodology within the Census Bureau, when the test plans were submitted they were not often accompanied with sufficient supporting documentation to assist testers with gaining an understanding of the underlying logic and structure of the application.
+Thus, requirements for test plans should have addressed not only who was responsible for developing them, but also what other documentation needed to be provided to facilitate the testing process.
+The time and resources that were consumed as a result of not having fully addressed the test plan issue is unknown.
+4.2.2 Separate testing environment could reduce risk Testing was not completely isolated from the production environment.
+Although there are no known instances of testing being affected, this approach increased risks as it had the potential to unintentionally impact "live" systems and users, and vice versa.
+The risk was mitigated by implementing separate subnets.
+Although the Beta Site ultimately successfully tested and deployed decennial applications, the issue of establishing a separate test environment for those applications does not appear to have been given sufficient consideration.
+4.2.3 Successful approach to meeting requirements for IT security Security evaluation of decennial software was a distinct phase of the Beta Site testing.
+The Beta Site personnel worked in a cooperative fashion with the IT Security Office to assure appropriate security considerations were considered up front.
+This was in contrast to the 1990 decennial census when communication between the Beta Site and the Security Office was often more problematic.
+The Beta Site personnel met regularly with the Security Office to discuss security matters and to ensure that development efforts adhered to security considerations.
+The Beta Site developed a security plan, which was reviewed and tested by the Security Office, and employed a two-pronged strategy that: (1) defined what needed to be addressed in terms of security considerations and (2) ensured through a sampling process that the testing was performed correctly.
+The Security Office worked proactively with developers, prior to the onset of testing, to advise them on specific security areas that needed to be addressed while the software was under development.
+6
+The Security Office felt that this would facilitate the "building in" of adequate security controls in the system rather than waiting for testing to reveal "holes" in the software, and then having to correct the problems and initiate re-testing.
+The IT Security Office sat in on some of the testing to ensure security procedures were being followed.
+According to Security Office personnel, the Beta Site personnel considered security as a very serious matter and kept the security team well informed.
+Therefore, potential security issues were addressed proactively.
+As a result, no significant security problems were identified in the Census 2000 software that was deployed.
+4.2.4 Network administration and configuration responsibilities for Census 2000 systems unclear Requirements did not give adequate consideration to the complexities of managing the Census 2000 systems in a networked environment.
+As such, the division of responsibilities within the Census Bureau's technical management infrastructure was problematic.
+This was a crucial issue in view of the size of the network.
+Although the Technologies Management Office (TMO) was responsible for day-to-day network management activities, the Beta Site assumed Level 3 support for census applications.
+This support has an element of network management/monitoring associated with it and encompassed Novell NDS support functions.
+The Beta Site also did integration testing involving Novell utilities.
+According to the Beta Site personnel, the absorption of these functions came about due to concerns of capabilities in TMO and the fact that the Beta Site was a three shift operation that might be better suited to provide support for decennial systems.
+Friction existed between the Beta Site and TMO, in part as a result of organizational changes that took place near the time the Beta Site was created in conjunction with the fast growth of the decennial process.
+As a result, roles between organizations were not always clearly defined.
+4.3 Alignment with business processes This section contains findings that relate to how well the Beta Site supported the deployment of Census 2000 automated systems.
+Designing the Beta Site facility and processes for this objective was, in the decennial census environment, a challenging task due to the need to simulate, to the extent possible, many different technical operating environments in the field.
+Additionally, the Beta Site distributed software releases and provided software version control for selected decennial systems.
+The inability to perform these critical services would have jeopardized many Census 2000 operations.
+Thus, it was essential for the Beta Site to provide expeditious testing and deployment of time-sensitive software.
+7
+4.3.1 Software testing processes were structured to support Decennial Directorate's objectives The Beta Site served as a means of conducting an independent evaluation of Census 2000 systems before they were released for use in data collection and processing activities.
+The intent of this function was essentially to ensure the viability of decennial software.
+As defined in the PMP for the Beta Site Test Facility, a normal four day testing cycle was instituted and consisted of the following series of tests: Â· Â· Â· Â· System Testing Â­ test a single application from beginning to end.
+Regression Testing Â­ ensure that changes made to an application did not introduce new problems.
+Performance Testing Â­ assess the accuracy of the data and performance time.
+Y2K Testing Â­ evaluate application for Year 2000 compliance.
+Other types of special tests such as integration testing and fail/recovery testing were not part of the normal four day cycle.
+Overall, the structure of the testing processes and associated functions (e.g., software release procedures) were comprehensive and were aligned to support the objectives of the Beta Site.
+4.3.2 Local environment subject to unauthorized changes Due to local configuration changes that were unauthorized and deviated from approved standards, there was no assurance that applications validated by the Beta Site testing would work upon release.
+This situation could arise, for example, if locally initiated configuration changes were made at RCC/LCO/ACERO locations to address specific needs.
+Such changes could cause software to fail in local offices and give rise to the false appearance that the Beta Site testing was not adequately supporting business activities.
+A software "lock down" policy was viewed by some as a possible solution to this problem, but never adopted because (1) this was beyond the purview of the Beta Site and (2) the Beta Site recognized the complexities involved in system management at the local level.
+The configuration management issue should be thoroughly assessed by senior management at the Census Bureau prior to the next decennial.
+It is recommended that all locally proposed changes to software must be approved before implementation.
+Though the problematic aspects of local configuration changes did not appear to have been factored into the requirements planning, the Beta Site personnel stated that they attempted to be flexible by modifying the testing environment(s) within the Beta Site to reflect local configurations to the extent possible (not all interviewees agreed with this assertion).
+The Beta Site could not guarantee that applications would work, if it was not apprised of such locally implemented changes.
+8
+4.3.3 Beta Site concept perceived positively within the Census Bureau, but implementation processes could be improved While the concept underlying the Beta Site operation was generally acknowledged as being good, the Beta Site was often criticized as being too documentation intensive and overly stringent.
+Several customers perceived a lack of sensitivity to deployment schedules, e.g., some Urgent Requests were denied and the Beta Site could not always work with the program office to resolve problems real-time.
+Several interviewees felt that this reduced the effectiveness of the Beta Site with respect to its mission of supporting the deployment of Census 2000 automated systems.
+The need for documentation was not disputed; however, the rigidity of documentation requirements was often an issue.
+Interviewees felt that many re-submissions of tests would have been unnecessary if problems of a cosmetic or very minor nature had been addressed more informally.
+Some customers of the Beta Site remarked that they did not feel like customers due to the perceived burden of having to meet changing documentation requirements.
+The Beta Site processes improved over time, but initially they appeared to be subject to frequent changes.
+The Beta Site personnel acknowledged that there was indeed a "learning curve" at the beginning.
+They also recognized that there was some resistance to beta testing.
+This is not an unexpected phenomenon, however, and should be put into perspective, as internal resistance is common to most new processes, regardless of the nature of the organization.
+Some of the process-related criticism may have been intensified by time pressures that customers were working under and the rush to get the software approved and deployed in time for Census 2000.
+Regarding the time pressures, the Beta Site personnel noted that, from their perspective, there were too many Urgent Requests, which suggested to them a lack of proper planning or scheduling on behalf of the program offices and developers.
+Also, because of impending deadlines, the Beta Site personnel perceived that at times there were instances where insufficient alpha testing was performed.
+In any case, in an effort to handle the testing deadlines, the Beta Site personnel were available to work outside of normal working hours, including weekends, and encouraged customers to work with them to expedite testing.
+Customers did not always take advantage of this opportunity, and this had the effect of calling into question the degree of urgency.
+4.3.4 Improved problem escalation system needed Some interviewees indicated that testing problems and delays needed to be escalated to a higher level.
+One source of problems stemmed from a lack of consistency in the application testing methodology that was employed by different testers.
+There was also a relatively high turnover rate in the position of Beta Release Manager which gave rise to the need to escalate some problems to senior management's attention.
+It was at this level that many problems were solved.
+It would have been advantageous if a more effective problem resolution mechanism would have been implemented at a lower level in the Beta Site.
+Such a mechanism could have reduced the frustration level felt by those who were under considerable pressure to deploy decennial systems.
+Given the criticality of decennial applications, it may also have helped to institute a cross9
+organizational body (such as a CCB) to assess ongoing dialogue between the Beta Site operation and the program offices.
+4.3.5 Beta Site's extraordinary role in supporting American FactFinder (AFF) and the Island Area Forms Due to cost constraints and other practical considerations, the AFF did not undergo testing as a decennial application in the Beta Site environment.
+Although not required to, the Beta Site assisted the AFF development effort by performing load testing and by reviewing the software testing methodology that was devised by the developer and government staff.
+According to AFF Program Management, the Beta Site's timely support and expertise was a contributing factor to the success of this system.
+In addition, the Beta Site provided support to DMD near the end of 2000 for the testing of Island Area forms.
+The keys for processing these forms were different in content and structure than the rest of the census.
+Although these programs were not developed by a decennial entity, the Beta Site was requested to perform testing.
+The Beta Site found significant errors in the software, which would have been "show stoppers."
+It provided a methodology and process as well as specific details regarding problems.
+Excellent lines of communication existed between the Beta Site and DMD personnel involved in this process.
+4.3.6 Simulated environment used for testing The Beta Site made every effort to simulate the production environment, but could not always precisely reproduce all variables such as loading factors and true component configurations.
+This limitation was perceived as a deficiency by some interviewees who would prefer full end-to-end testing.
+The Beta Site did, in fact, perform load testing but could not always replicate massive keying by users or the resulting "thrashing" of disk drives as they attempt to handle the heavy read/write demands being sporadically placed on them.
+Perfect replication of all environments within the Census Bureau was not really a realistic goal and therefore was never included in the requirements planning for the Beta Site.
+The payback for the enormous amount of resources required to implement perfect replication would have been very hard to justify.
+Some of those interviewed suggested that instead of testing software in a simulated environment, testing should be performed by conducting "dry runs" in the field using the actual equipment configurations that would be supporting the production applications and databases.
+This approach may have more validity as a testing mechanism, but poses considerable logistical and coordination issues that would need to be addressed prior to testing.
+The practicality of this option is questionable, but deserves further exploration as it might be beneficial for particular applications.
+4.4 System deficiencies This section contains findings that relate to shortcomings that were identified with respect to the Beta Site's ability to satisfy certain requirements.
+Recognizing that 100 percent success is rarely achievable, especially in the case of a completely new operation and one that was under a heavy 10
+workload, it is still worthwhile to assess deficiencies in the spirit of constructively identifying "lessons learned."
+Such insights can contribute to improvements in future system testing and deployment activities.
+Accordingly, many of the system deficiencies cited below are reflected in Section 5., Recommendations.
+4.4.1 Testing focused on interactive use of applications Some interviewees stated that testing focused largely on interactive use of the software and tended to neglect the output function.
+This was perceived as a deficiency in that it placed too much emphasis on the user interface (i.e., the "front end") with the application, but ignored the side of the application that was responsible for producing reports.
+The Beta Site stated that they were unaware that this was an issue.
+Precise definition of the requirements for test plans could have helped to ensure that sufficient emphasis was placed on other testing areas such as system interfaces and data base access.
+4.4.2 Negative perception of the process The concept underlying the Beta Site (i.e., independent testing) was widely acknowledged as necessary to ensure that software is compatible with the Census Bureau's environment, was relatively bug-free, and met security requirements.
+Recognizing that perfection was not a realistic goal for the Beta Site, in the interest of constructively identifying some lessons learned, it is worthwhile noting that there were negative sentiments expressed about some aspects of the testing processes, and some interviewees questioned the independence of the testing: Â· It is noteworthy that many interviewees were complimentary about the Beta Site staff, often citing that they were talented and thorough.
+However, it was felt that some testers lacked skills as software testers and could benefit from training in this particular area as technical knowledge does not necessarily translate to testing skills.
+The testing process itself was sometimes described as inefficient and unclear.
+This issue was exacerbated in cases where testers changed while testing was in progress.
+Coincidentally, it appeared that when there was continuity of testers, users tended to be more satisfied with the process.
+Â·
+11
+Â·
+The software release process was also cited as being problematic in some instances.
+For example, some software releases for the Pre-Appointment Management System/Automated Decennial Administrative Management System (PAMS/ADAMS) did not receive proper distribution due to problems with the PeopleSoft software distribution tool (PeopleTools).
+Another example of release problems occurred with the Matching Review and Coding System (MaRCS) software; on at least one occasion the developer needed to correct a software problem after it had been released.
+Some interviewees felt that the development of the Beta Site test plans required extraordinary efforts by the developers in order to "educate" the testers.
+This was perceived as a time and resource drain.
+Testers need to have a good understanding of the software they are charged with testing.
+The requirements process should have explored the need for this knowledge and how to impart it, preferably through a collaborative approach between developers and testers.
+A lot of frustration can be traced back to this very issue, not always involving testers in early planning efforts.
+A major theme that was often noted during interviews was that it appeared to the program office personnel that testers were making extraordinary efforts to "break the application" (e.g., by attempting to use highly unusual sequences of keystrokes).
+Such efforts were often perceived as "over testing," but depending on the criticality of the application, these may be appropriate testing practices.
+The extent of testing should be considered during the requirements phase.
+In some cases, such sequences may be very unlikely to occur in the production environment, but could nonetheless produce strange behavior in applications (e.g., freezing of the screen).
+While this does not necessarily mean that the application is unfit for release or that it has serious "bugs," it has been used as the basis for rejecting the software.
+In any case, the stamp of rejection often carries with it the unfortunate side effect of "failure."
+This perhaps contributes toward a negative impression about the testing process, if it is felt that major programming accomplishments can be overshadowed by the discovery of relatively minor problems in the software.
+The Beta Site relied extensively on test plans prepared by the developers, thus the independence of the testing was questionable.
+This was partly due to the fact that the Beta Site personnel may not have been involved early enough in the software life-cycle to become thoroughly knowledgeable about its characteristics.
+Due to the massive, simultaneous development efforts ongoing by numerous teams preparing for Census 2000, it would have been difficult for the Beta Site to prepare test plans and procedures for each system, such as would typically be done in other development environments.
+It would be beneficial for the Census Bureau to strive to improve coordination between developers and testers beginning with the early planning stages.
+Â·
+Â·
+12
+4.4.3 Communication with customers broke down on occasion Although communication between customers and the Beta Site was generally satisfactory, it was not always clear and relations with customers were occasionally strained.
+Many customers expressed lack of knowledge of what functions the Beta Site was to perform.
+The Beta Site was perceived by some of its customers to be an integration test facility and by others an independent alpha testing site, which repeated tests that previously ran in-house.
+Communication, however, improved over time.
+Inconsistencies in the information flow contributed to some confusion about the process and unmet expectations from the customer's perspective.
+4.4.4 Testers did not always have sufficient knowledge in how the software was used Knowing how the software worksÂ­and how it is usedÂ­are important aspects of the testing process.
+Developers expressed concerns that, although testers were technically competent, a lack of knowledge about what the software was supposed to do gave rise to testing techniques that might not be suitable for a particular application given its purpose and capabilities.
+There was one particular instance cited where personnel initially lacked sufficient knowledge of PeopleSoft software.
+This knowledge was necessary in order to perform both the testing and, particularly, the software release functions.
+Perhaps in cases where the software release processes were unique, the Beta Site could have adopted a more flexible policy that allowed the program office to manage releases until the Beta Site gained sufficient proficiency with that particular application.
+The deficiency in PeopleSoft skills was acknowledged and later corrected by the Beta Site management.
+Conversely, the Beta Site testers were not always provided adequate documentation upon which to base their testing processes.
+Given the immense diversity of software development platforms and toolsets, it is not realistic to expect the Beta Site to have expert proficiency in every development environment.
+Accordingly, future requirements analyses for the Beta Site operations should define procedures and responsibilities for situations described in this example.
+This contingency planning is necessary to ensure timely delivery of applications to the field.
+4.5 Contract management practices This section contains findings that relate to the effectiveness of contract administration activities within the Beta Site.
+Contractors accounted for approximately half of the testing staff.
+13
+4.5.1 GSA contract used to acquire technical support In 1997, the Beta Site management opted to use the services of General Service Administration's Federal Systems Integration and Management Center (FEDSIM) as a means of acquiring a capable prime contractor for the Beta Site.
+FEDSIM is designated by the Office of Management and Budget (OMB) to serve as an executive agent for government-wide IT acquisitions.
+It manages multiple-award contracts with qualified systems integrators who can be competitively selected in a relatively short period of time.
+By utilizing FEDSIM, the Beta Site management took advantage of these contracts that were already in place to expeditiously acquire a systems integrator.
+FEDSIM provided contract administration services (for a fee) and the technical oversight was under the purview of the Beta Site management.
+This approach to outsourcing was probably more expedient than using the Census Bureau's contracts office.
+It is conceivable that FEDSIM's services could also have been used to acquire the expertise needed to assist with the development of a more robust set of requirements for the Beta Site, assuming that adequate funding had been available.
+4.5.2 Contractors provided very good support While the primary role of the Beta Site was to find and report on software problems, the Beta Site personnel also helped on occasion to identify the source of those problems.
+The extent of their contributions in this area is unknown.
+Overall, the level of contractor expertise was very good.
+The staffing was fairly stable and good relationships were maintained with the Census Bureau staff.
+The contractor compiled extensive documentation on the testing activities; this collection of information could provide beneficial perspectives on ways to improve testing activities in the future.
+5.
+RECOMMENDATIONS This section synthesizes the findings from above and highlights opportunities for improvement that may apply to the Census Bureau's requirements for future software testing and deployment.
+The recommendations reflect insights from Titan/SRD analysts as well as "lessons learned" and internal "best practices" that were conveyed by Census personnel during interviews.
+A separate draft assessment of the Beta Site support for the 2000 Decennial Census was prepared by the Decennial Management Division in March 2001.
+The recommendations below reflect some of the findings from that assessment, but focus more on issues that pertain to the operational requirements of the Beta Site.
+14
+5.1 Fully consider requirements for communication processes Although a set of physical, logistical, and procedural requirements was outlined in April 1997, it did not adequately address the need for a structure to ensure effective communication between the Beta Site testers and developers.
+Defining the communication protocols at this level may, in fact, have been an issue that could not have been addressed by the Beta Site alone.
+Without such a structure, relationships between testers and developers can easily become strained.
+Some customers expressed frustration with the Beta Site processes, not always knowing what to expect with each submission of a testing request.
+Conversely, the Beta Site personnel were not entirely aware of the level of this frustration, as they felt adequate efforts had been made to communicate the testing protocols to developers.
+The fact that these differences of opinions existed, illustrates that requirements for communication processes were not fully understood.
+DMD's post-assessment study of the Beta Site recognized the nature of competing interests between testers and developers and that, at times, it could become "more adversarial than cooperative."
+In retrospect, the original requirements should have addressed the importance and need for effective communication.
+This was a major factor that had significant productivity implications for the decennial.
+Another requirement for communication that should have been considered was the need for the Beta Site to interact effectively with non-IT personnel.
+The jargon used within the IT community can easily confuse non-IT personnel and lead to frustration.
+Many customers also expressed frustration over the inability to provide input or constructive feedback to improve the Beta Site testing and release processes.
+Recommendation: The communications "gap" could have been narrowed if the Beta Site had initiated a more effective outreach program aimed at improving the dialog with customers and to help manage their expectations.
+As part of requirements, the Beta Site should plan to implement such a program to inform customers about the purpose of the Beta Site, including its methodology and procedures.
+Although status reports were provided, there should have been better provisions implemented for keeping program offices and developers abreast of the status of system/software testing and the types of errors that were being discovered.
+In recognition of these issues, the Beta Site has already adopted a communication policy which allows testing errors to be jointly determined by testers and developers as being either of a "critical" or "minor" nature.
+This categorization contributes to a better understanding of testing status.
+The Beta Site planning should take into consideration that much of their communication may be conducted with non-IT personnel.
+The Beta Site personnel also need to recognize the importance of communicating at the layman's level.
+Clearly communicating the types of errors that have been found and their implications will streamline software remediation efforts and therefore lead to quicker validation and deployment of clean systems.
+Conversely, developers need to understand that the applications development environment does not replicate the production environment.
+Applications must first function on the Beta configuration system before testing can begin.
+Additionally, communication is a two-way street and it would be beneficial if a "customer satisfaction survey" was provided to the users of the Beta Site's services.
+This would enable the Beta Site to receive constructive assessments from customers 15
+that could identify weaknesses and lead to ongoing improvements in internal processes.
+It also could generate positive feedback from customers to highlight those testers and managers in the Beta Site who are providing superior levels of support.
+5.2 Improve testers' knowledge about the purpose, use, and capabilities of the software Being unfamiliar with the characteristics of software makes it difficult to apply the appropriate testing techniques.
+This can result in communications problems, unnecessary re-testing cycles, and delays in software releases.
+Given the extraordinary challenges of having to prepare for the testing of myriad decennial systems in a compressed timeframe, the requirements for the Beta Site should have addressed a need for a software familiarization process and/or direct involvement with the developer to address this potential problem.
+The lack of familiarity with the software became an even greater problem if the tester lacked fundamental testing skills.
+The Beta Site relied heavily on test plans prepared by the developers.
+This was partly due to the fact that the Beta Site personnel were not involved early enough in the software life-cycle to become knowledgeable about each system's characteristics.
+Although the preparation of detailed test plans would have required a massive effort, it would have afforded the Beta Site personnel an opportunity to become more familiar with the systems being tested.
+Also, there were cases where the Beta Site testers changed during the testing process.
+This lack of continuity impacted the efficiency and effectiveness of the testing process as new testers had to familiarize themselves with the system and with the test plan and procedures.
+In cases when there was continuity of testers, users were more satisfied with the testing process.
+Recommendation: The importance of a solid set of requirements for a system (or operation) cannot be over emphasized.
+As defined in Section 4 of the Decennial Software Testing and Methodology document, system requirements, detailed specifications, flow charts, and appropriate test data should be used to educate testers on the functional aspects of the application.
+This could improve the tester's ability to apply appropriate test procedures and minimize the time required for the testing cycle.
+The testers' abilities could be further improved by ensuring that they are well trained in testing concepts and techniques.
+The contract under which the Beta Site testers work should incorporate provisions that require testers to either have the specified training before they are brought on board, or to receive such training within a stipulated timeframe after having joined the Beta Site team.
+The Census Bureau should strive for closer coordination of the Beta Site personnel and developers during the preparation of the test plans.
+This would serve to educate the testers on the details of the system's operation and would likely facilitate a better working relationship between the testers and developers.
+In addition, the assignment of one team of testers to a system, without changing personnel, has already been demonstrated as a means to improve the testing process and should be an important consideration when selecting and assigning the Beta Site personnel to a system.
+16
+5.3 Major advancements in technology will require early scoping of the level of effort required from the Beta Site in 2010 Given the high probability of increased reliance on automated systems in 2010 and the rapid pace of technological change, the Beta Site will likely play an even larger role in the next decennial.
+The Beta Site will have to be prepared to test more applications that employ technologies that are far more sophisticated than those used in the Census 2000 environment.
+For example, wireless telecommunications technologies will be in widespread use during the next decennial and some Census 2000 applications will almost certainly be using them.
+The peak testing load could well strain the Beta Site's resources, including its personnel.
+The matter of IT security testing could also become more challenging.
+Recommendation: Initiate early planning efforts to enable the Beta Site operation to scope out its requirements for physical, technical, and personnel resources so that it can accommodate an increased testing workload.
+It will be critical for the Beta Site to make relatively accurate determinations as to: Â· Â· Â· Â· the magnitude of the testing activities the nature and criticality of the applications the target deployment dates for the software what IT technologies developers will be using
+It also will be necessary for the Beta Site to outline requirements with respect to hiring (and retaining) testing personnel with the right IT skills for the job at hand, including personnel who specialize in IT security.
+This particular aspect of planning is complicated not only by the need to have the right expertise available at the right time, but also by the difficulties of recruiting and retaining qualified IT personnel, who tend to be somewhat mobile with respect to employment opportunities.
+It is recommended that planning efforts for the 2010 Census be especially sensitive to project software deployment dates.
+5.4 Educate users in Beta Site functions While there are a number of issues relating to the appropriateness and efficiency of the the Beta Site's testing processes, the underlying concept behind the Beta Site and the need for this function is widely accepted.
+Some have suggested that beta testing is often redundant in that it simply repeats alpha testing in the Beta environment and therefore its "value added" is questionable.
+This viewpoint would seem to suggest that the Beta Site facility should limit its support to integration testing (i.e., ensuring that all components work together and are compatible) and software deployment.
+However, in general, most interviewees accepted the need for independent beta testing.
+Many interviewees expressed appreciation for the thoroughness of the testing and cited instances of the Beta Site testers identifying faults in the software.
+The Beta Site also provided valuable testing support for unique applications such as the Web-based Internet Data Collection (IDC) 17
+system and for the Place of Birth, Migration, and Place of Work client-server applications.
+The latter application required the Beta Site to perform load testing by simulating 300 simultaneous users working on a very robust Sun Microsystems server with 24 gigabytes of random access memory.
+The testing activities associated with these, and other applications, required extraordinary efforts.
+The net result of such efforts was to make the software "cleaner" when released that it would otherwise have been.
+General acceptance of the Beta Site concept notwithstanding, there is a continuing need to promote a wider understanding of the specific testing methodologies used.
+(The need for improved communications is discussed in Recommendation 5.1.)
+Many interviewees were not initially clear on what the testing process entailed or how long it would take.
+Information about the process was not conveyed to customers early on and this sometimes led to some misconceptions.
+Recommendation: With the general acceptance of the Beta Site concept, a foundation is in place to build a better understanding of the processes involved.
+Once customers are educated about the process and see a structure, logic, and consistency behind it, they are more likely to engage in a cooperative relationship.
+In this regard, it is especially important that customers understand, and accept, the goals of the testing process.
+If that consensus is not established "up front", it will likely effect the level of cooperation throughout the entire testing process.
+This consensus could be further strengthened by establishing reporting requirements that provide a description of the problems encountered during testing and a categorization of their impact on the functionality of the software.
+The Census Bureau should consider establishing several different categories of software deficiencies ranging from minor to severe.
+The testing process is designed to identify flaws, but such findings are normal events and do not necessarily equate to failure.
+Major deficiencies obviously should be identified as such so that they can receive appropriate and timely remediation.
+However, cosmetic or very minor errors need not be characterized as failures and do not necessarily mean that the software is so flawed that it cannot be deployed.
+In fact, in cases where the cost of not deploying software could be rather substantial or otherwise present problems with respect to conformance to legal requirements, the Beta Site should release the software with "release notes" that identify known minor software "glitches" to facilitate deployment of the software.
+The Beta Site has, in fact, done this type of release on occasion.
+In some instances, the program offices would request that the software being evaluated be placed in a "withdraw" status.
+This essentially meant that the software would be taken out from the testing process to avoid the stigma of having the software classified as "failed."
+5.5 Define and consolidate the network administration function and responsibilities Failure to adequately plan for Census 2000 network administration led to a division of responsibilities.
+In many government agencies, the network administration function is centralized--with both control and responsibility residing under a "single roof."
+The centralized approach is often viewed as essential in order to maintain LAN standards (i.e., consistent use of 18
+naming conventions, machine configurations, directory structures, etc.) within the enterprise.
+Also, it contributes to better communications with other network-related functions such as telecommunications support when only one organization speaks to all areas of network administration.
+From an administrative standpoint, centralization also simplifies budgeting, contracting, and acquisition functions.
+Given the magnitude of the decennial LAN, the split in network management responsibilities led to potentially counterproductive internal disputes over control issues.
+Recommendation: Regardless of how network support is provided, this vital function needs to be factored into the requirements process for any Beta Site-like operation in the future.
+Because network administration is a highly visible support function, it needs to be consolidated in the form of "one stop shopping" so that customers understand who they need to go to when faced with network-related problems.
+One possible solution to the problem would be to establish a dedicated unitÂ­consisting of TMO and Beta Site personnelÂ­that is solely responsible for providing decennial-related network support operations.
+The Beta Site management has unique knowledge of decennial applications and therefore is in a position to provide valuable technical consulting on an on-going basis.
+It is recommended that, in view of the administrative issues cited above, this unit should be under a single organization.
+5.6 Improve life-cycle model for the 2010 Census Given the lack of agency guidelines for requirements planning and a system development lifecycle model, the software testing function has not benefitted from a structured or disciplined approach to software development.
+Such an approach would have greatly facilitated testing.
+Nor did testing benefit from a detailed system architecture document which would have defined all systems, data bases, interfaces, etc. in the Census Bureau's IT environment.
+Current trends in industry are leading to the adoption of the Capability Maturity Model (CMM).
+CMM is a multilayered structure, developed by the Software Engineering Institute (research center sponsored by DoD and operated by Carnegie Mellon University), which outlines principles and practices that should be addressed in order to improve software quality and process management.
+While conducting interviews for this study, Titan was informed that the Census Bureau is already starting to move in this direction and is currently assessing software tools that are designed to promote compliance with CMM practices.
+Recommendation: The CMM framework is a model, or process architecture, which is "intended to help software organizations improve the maturity of their software processes in terms of an evolutionary path from ad hoc, chaotic processes to mature, disciplined software processes.
+The focus is on identifying key process areas and the exemplary practices that may comprise a disciplined software process" (quote from University of Massachusetts Dartmouth "Software Process Collection" web site).
+The CMM defines five levels of process maturity and Key Process Areas within each level.
+An exploration of the intricacies of this model goes far beyond the scope of this report.
+However, suffice it to say that the Key Process Areas include several beneficial areas that could lead to improvements in the Census Bureau's systems.
+Some of these are: requirements management; software project planning; software quality assurance; software 19
+configuration management; software product engineering; intergroup coordination.
+It is recommended that the Census Bureau evaluate the CMM and tools which can support its implementation well in advance of the next decennial.
+During an interview with the Beta Site management, the Titan team learned that CMM compliance tools leading to Level 3 certification are already being evaluated.
+This model holds great promise for streamlining future testing operations and should be adopted.
+It is also recommended that the Census Bureau prepare a comprehensive system architecture document for the agency's nationwide IT infrastructure.
+Many other agencies use such a document to provide an enterprise perspective for requirements studies, system development activities, and testing processes.
+20
+References Draft Decennial Software Testing Methodology.
+October 5, 1998.
+First Draft, Y2K Checklist of Configuration Items per Configuration Management Plan, DSCMO Systems Integration Office, June 1999.
+Expert Panel Report on Decennial Census Information Technology, March 11, 1999.
+Assessment of Test Methodology and Procedures, Decennial Systems 
+Prepared by: NSTL, a CMP Company.
+Draft Beta Site Operations Manual, September 14, 1999.
+Prepared by: DSCMO Staff.
+Beta Site Test Plan, December 1997.
+Prepared by: System Integration Office, DSCMO.
+Beta Site Decennial Software Year 2000 Test Plan, March 1999.
+Prepared by: System Integration Office, DSCMO.
+Beta Test and Release Cycle Workshop, December 21, 1998.
+Prepared by: DSCMO Staff.
+Decennial Software Testing Methodology Document, November 13, 1998.
+Prepared by: DSCMO Staff.
+Sample testing result forms for PAMS/ADAMS, November 1999.
+Beta Site sample test cases (Recruiting, Personnel, Payroll, Y2K) for PAMS/ADAMS, December 1999.
+Program Master Plan (PMP)Â­Beta Site Test Facility, February 23, 2000.
+Prepared by: Richard Edwards, Processing Systems Branch, DMD 2000 Decennial Census Beta Site High Level Assessment, Draft, March 28, 2001.
+Prepared by: Richard Edwards, Processing Systems Branch, DMD
+21
+Participants Gary Doyle Decennial Systems and Contracts Management Office 2-2028, +1.301.457.1920 J.Gary.Doyle@census.gov 1
+Dennis Stoudt
+Decennial Systems and Contracts Management Office 2-2303, +1.301.457.4114 Dennis.W.Stoudt@census.gov Decennial Systems and Contracts Management Office 2-2303, +1.301.457.1920 Donald.R.Dwyer@census.gov Decennial Systems and Contracts Management Office 2-2303, +1.301.457.4154 Julia.B.Dickens@census.gov Decennial Systems and Contracts Management Office 2-2318, +1.301.457.4143 David.L.Sliom@census.gov Decennial Systems and Contracts Management Office 2-2321, +1.301.457.4133 Warren.D.McKay@census.gov
+Don Dwyer
+Judy Dickens
+David Sliom
+Warren McKay
+Barbara LoPresti1
+Technologies Management Office 3-1425, +1.301.457.2839 Barbara.M.LoPresit@census.gov Technologies Management Office 3-1425, +1.301.457.2839 Howard.R.Prouse@census.gov Technologies Management Office 3-1769, +1.301.457.3002 Judith.A.Dawson@census.gov
+Howard Prouse
+Judy Dawson1
+1
+Individual not interviewed for this study.
+22
+Participants - Continued Rob Soper Technologies Management Office 2-1217, +1.301.457.3423 Robert.Michael.Soper@census.gov Technologies Management Office 3-1757, +1.301.457.1936 Leah.Marie.Arnold@census.gov Technologies Management Office 2-1210, +1.301.457.3423 Thomas.S.McNeal@census.gov Decennial Management Division 2-2012, +1.301.457.3960 Carol.M.Van.Horn@census.gov Decennial Management Division 2-1422, +1.301.457.4052 Linda.A.Flores.Baez@census.gov Decennial Management Division 3-1385, +1.301.457.2142 Shirley.H.Stover@census.gov Decennial Management Division 2-1422, +1.301.457.4014 Wanda.J.Thomas@census.gov Decennial Management Division 2-2108, +1.301.457.8443 Idabelle.B.Hovland@census.gov Decennial Management Division 2-1422, +1.301.457.8234 Charles.F.Fowler@census.gov Demographic Statistical Methods Division 3-1657, +1.301.457.8052 Guinevere.Z.Mills@census.gov
+Leah Arnold
+Tom McNeal
+Carol Van Horn1
+Linda Flores-Baez
+Shirley Stover
+Wanda Thomas
+Idabelle Hovland
+Charles Fowler
+Guinevere Mills1
+23
+Participants - Continued Mark Taylor Field Division 2-1111, +1.301.457.1827 Mark.M.Taylor@census.gov Financial and Administrative System Division 2-1408, +1.301.457.4899 Cathy.A.Ayoob@census.gov Geography Division WP1-330, +1.301.457.1067 Charles.W.Whittington@census.gov Decennial Statistical Studies Division 2-2024-B, +1.301.457.4035 David.C.Whitford@census.gov Decennial Statistical Studies Division 2-2120, +1.301.457.8323 Barbara.M.Walter@census.gov Decennial Statistical Studies Division DSSD, 2-2501A, +1.301.457.2987 Kevin.D.Haley@census.gov Systems Support Division 4-1015, +1.301.457.6624 Jerome.M.Garrett@census.gov Systems Support Division 3-1222, +1.301.457.1926 CBean@info.census.gov Data Access and Dissemination Staff 202301, +1.301.457.2352 E.Enrique.Gomez@census.gov Director's Office 3-1537, +1.301.457.2862 Timothy.P.Ruland@census.gov
+Cathy Ayoob
+Chuck Whittington
+David Whitford
+Barbara Walter
+Kevin Haley
+Jerome Garrett
+Edward Cary Bean Jr.
+E. Enrique Gomez
+Tim Ruland
+24
+Participants - Continued Mike Poteshman Sandra Harrell Venture Government Services (703) 273-8853 Novell (703) 613-3500
+A group interview was conducted with six Beta Site testers.
+25

@@ -1,0 +1,9 @@
+Computer Science, abstract cs.CE/0206039 From: Athanasios Kehagias 
+Motivated by Hubert's segmentation procedure we discuss the application of hidden Markov models (HMM) to the segmentation of hydrological and enviromental time series.
+We use a HMM algorithm which segments time series of several hundred terms in a few seconds and is computationally feasible for even longer time series.
+The segmentation algorithm computes the Maximum Likelihood segmentation by use of an expectation / maximization iteration.
+We rigorously prove algorithm convergence and use numerical experiments, involving temperature and river discharge time series, to show that the algorithm usually converges to the globally optimal segmentation.
+The relation of the proposed algorithm to Hubert's segmentation procedure is also discussed.
+Full-text: PostScript, PDF, or Other formats
+References and citations for this submission: CiteBase (autonomous citation navigation and analysis) _________________________________________________
+Links to: arXiv, cs, /find, /abs (-/+), /0206, ? form interface _________________________________________________

@@ -1,0 +1,707 @@
+FINAL REPORT December 15, 2000 Fecal Coliform TMDL For Pearl River Pearl River Basin, Hancock County, Mississippi Prepared By Mississippi Department of Environmental Quality Office of Pollution Control TMDL/WLA Section/Water Quality Assessment Branch MDEQ PO Box 10385 Jackson, MS 39289-0385 (601) 961-5171 _________________________________________________Fecal Coliform TMDL for Pearl River FOREWORD This report has been prepared in accordance with the schedule contained within the federal consent decree dated December 22, 1998.
+The report contains one or more Total Maximum Daily Loads (TMDLs) for waterbody segments found on Mississippi's 1996 Section 303(d) List of Impaired Waterbodies.
+Because of the accelerated schedule required by the consent decree, many of these TMDLs have been prepared out of sequence with the State's rotating basin approach.
+The segments addressed are comprised of monitored segments that have data indicating impairment.
+The implementation of the TMDLs contained herein will be prioritized within Mississippi's rotating basin approach.
+The amount and quality of the data on which this report is based are limited.
+As additional information becomes available, the TMDLs may be updated.
+Such additional information may include water quality and quantity data, changes in pollutant loadings, or changes in landuse within the watershed.
+In some cases, additional water quality data may indicate that no impairment exists.
+Prefixes for fractions and multiples of SI units
+Fraction 10-1 10-2 10-3 10-6 10-9 10-12 10-15 10-18
+Prefix deci centi milli micro nano pico femto atto
+Symbol d c m Âµ n p f a
+Multiple 10 102 103 106 109 1012 1015 1018
+Prefix deka hecto kilo mega giga tera peta exa
+Symbol da h k M G T P E
+Conversion Factors
+To convert from Acres Cubic feet Cubic feet Cubic feet cfs cfs Cubic meters
+To Sq. miles Cu. Meter Gallons Liters Gal/min MGD Gallons
+Multiply by 0.0015625 0.028316847 7.4805195 28.316847 448.83117 .6463168 264.17205
+To Convert from Days Feet Gallons Hectares Miles Mg/l Âµg/l * cfs
+To Seconds Meters Cu feet Acres Meters ppm Gm/day
+Multiply by 86400 0.3048 0.133680555 2.4710538 1609.344 1 2.45
+___________________________________________________________________________ii
+_________________________________________________Fecal Coliform TMDL for Pearl River
+CONTENTS Page FOREWORD.................................................................................................................................... ii MONITORED SEGMENT IDENTIFICATION............................................................................... v EXECUTIVE SUMMARY .............................................................................................................. vi 1.0 INTRODUCTION .................................................................................................................
+1.1 Background ................................................................................................................
+1.2 Applicable Waterbody Segment Use ...........................................................................
+1.3 Applicable Waterbody Segment Standard ...................................................................
+2.0 TMDL ENDPOINT AND WATER QUALITY ASSESSMENT ...........................................
+2.1 Selection of a TMDL Endpoint and Critical Condition..................................................
+2.2 Discussion of Instream Water Quality ..........................................................................
+2.2.1 Inventory of Available Water Quality Monitoring Data ..................................
+2.2.2 Analysis of Instream Water Quality Monitoring Data .....................................
+3.0 SOURCE ASSESSMENT .....................................................................................................
+3.1 Assessment of Point Sources ......................................................................................
+3.2 Assessment of Nonpoint Sources ................................................................................
+3.2.1 Failing Septic Systems ...................................................................................
+3.2.2 Wildlife .........................................................................................................
+3.2.3 Land Application of Hog and Cattle Manure ..................................................
+3.2.4 Grazing Beef and Dairy Cattle .......................................................................
+3.2.5 Land Application of Poultry Litter ..................................................................
+3.2.6 Other Direct Inputs .......................................................................................
+3.2.7 Urban Development ......................................................................................
+4.0 MODELING PROCEDURE: LINKING THE SOURCES TO THE ENDPOINT .................
+4.1 Modeling Framework Selection...................................................................................
+4.2 Model Setup ...............................................................................................................
+4.3 Source Representation ................................................................................................
+4.3.1 Failing Septic Systems ...................................................................................
+4.3.2 Wildlife .........................................................................................................
+4.3.3 Land Application of Hog and Cattle Manure ..................................................
+4.3.4 Grazing Beef and Dairy Cattle .......................................................................
+4.3.5 Land Application of Poultry Litter ..................................................................
+4.3.6 Other Direct Inputs .......................................................................................
+4.3.7 Urban Development ......................................................................................
+4.4 Stream Characteristics.................................................................................................
+4.5 Selection of Representative Modeling Period ...............................................................
+4.6 Model Calibration Process ..........................................................................................
+4.7 Existing Loading..........................................................................................................
+1-1 1-1 1-3 1-3 2-1 2-1 2-1 2-1 2-2 3-1 3-1 3-2 3-5 3-5 3-5 3-6 3-6 3-6 3-6 4-1 4-1 4-1 4-2 4-2 4- 2 4-3 4-3 4-3 4-3 4-4 4-4 4-4 4-5 4-5
+___________________________________________________________________________iii
+_________________________________________________Fecal Coliform TMDL for Pearl River
+5.0 ALLOCATION .....................................................................................................................
+5.1 Wasteload Allocations .................................................................................................
+5.2 Load Allocations .........................................................................................................
+5.3 Incorporation of a Margin of Safety .............................................................................
+5.4 Calculation of the TMDL.............................................................................................
+5.5 Seasonality..................................................................................................................
+5-1 5-1 5-1 5-3 5-3 5-3
+6.0 CONCLUSION.....................................................................................................................
+6-1 6.1 Future Monitoring ......................................................................................................
+6-1 6.2 Public Participation......................................................................................................
+6-1 DEFINITIONS ............................................................................................................................
+D-1 ABBREVIATIONS......................................................................................................................
+A-1 REFERENCES .............................................................................................................................R-1 APPENDIX A............................................................................................................................AA-1
+FIGURES Page 1.1a .....Pearl River 303d Listed Segment ........................................................................................
+1-2 1.1b.....Pearl River Subwatersheds .................................................................................................
+1-3 3.2.......Landuse Distribution...........................................................................................................
+3-4
+TABLES 1.1.......
+2.2a .....
+2.2b.....
+2.2c .....
+3.1.......
+3.2.......
+4.3.......
+5.1.......
+5.2a .....
+5.2b.....
+5.4.......
+Page Land Distribution in Acres for the Pearl River Watershed ....................................................
+1-1 Fecal Coliform Data, Station 02492668, November 1991 to September 1996....................
+2-2 Fecal Coliform Data, Station 02492668, December 1996 to October 1999 ........................
+2-3 Statistical Summaries of Water Quality Data .......................................................................
+2-3 Inventory of Point Source Dischargers ................................................................................
+3-2 Landuse Distribution in Number of Acres............................................................................
+3-3 Urban Landuse Distribution................................................................................................
+4-4 Wasteload Allocations ........................................................................................................
+5-1 Fecal Coliform Loading Rates for Nonpoint Source Direct Inputs........................................
+5-2 Fecal Coliform Loading Rates for Failing Septic Tanks (50% WLA and 50% LA) ..............
+5-2 TMDL for Monitored Segment (counts/30 days) ................................................................
+5-3
+CHARTS Page A-1 .....Flow Comparison between USGS Gage 02489500 and Reach 03180004010.................AA-2 A-2 .....Model Output Under Existing Conditions for Reach 03180004002 ..................................AA-3
+___________________________________________________________________________iv
+_________________________________________________Fecal Coliform TMDL for Pearl River
+MONITORED SEGMENT IDENTIFICATION Name: Waterbody ID: Location: County: USGS HUC Code: Length: Use Impairment: Cause Noted: Priority Rank: NPDES Permits: Pearl River MSLPRLRM1 At Pearlington: from I-10 to mouth of the Mississippi Sound Hancock County, Mississippi 03180004 16 miles Contact Recreation Fecal Coliform, an indicator for the presence of pathogenic organisms 47 There are 25 NPDES Permits issued for facilities that potentially discharge fecal coliform in the watershed (Table 3.1).
+None Fecal coliform colony counts shall not exceed a geometric mean of 200 per 100 ml, nor shall more than ten percent of the samples examines during any month exceed a colony count of 400 per 100 ml. 9.99E+12 counts per 30 day critical period (The TMDL requires all dischargers to meet water quality standards for disinfection.)
+106E+12 counts per 30 day critical period Implicit modeling assumptions - The model was run for a time span of 11 years.
+116E+12 counts per 30 day critical period The TMDL is a combination of the direct input of fecal coliform from NPDES Permitted dischargers and nonpoint sources due to failing septic tanks, other direct inputs, and land surface fecal coliform application rates.
+Standards Variance: Pollutant Standard:
+Waste Load Allocation:
+Load Allocation: Margin of Safety:
+Total Maximum Daily Load (TMDL):
+___________________________________________________________________________v
+_________________________________________________Fecal Coliform TMDL for Pearl River
+EXECUTIVE SUMMARY A segment of the Pearl River has been placed on the Mississippi 1998 Section 303(d) List of Waterbodies as impaired due to fecal coliform bacteria.
+The applicable state standard specifies that the maximum allowable level of fecal coliform shall not exceed a geometric mean of 200 colonies per 100 ml, nor shall more than ten percent of the samples examined during any month exceed a colony count of 400 per 100 ml.
+The Pearl River is a major waterbody in Mississippi, flowing in a southerly direction from its headwaters in Winston County to its mouth in the Mississippi Sound.
+This TMDL has been developed for one listed section of the Pearl River.
+The BASINS Nonpoint Source Model (NPSM) was selected as the modeling framework for performing the TMDL allocations for this study.
+The weather data used for this model were collected at Saucier, MS.
+The representative hydrologic period used for this TMDL was January 1985, through December 1995.
+Fecal coliform loadings from nonpoint sources in the watershed were calculated based upon wildlife populations; livestock populations; information on livestock and manure management practices for the Pearl River Basin; and urban development.
+The estimated fecal coliform production and accumulation rates due to nonpoint sources for the watershed were incorporated into the model.
+Also represented in the model were the nonpoint sources such as failing septic systems and other direct inputs to tributaries of the Pearl River.
+There are 25 NPDES Permitted discharges included as point sources in the model.
+Under existing conditions, output from the model indicates no violation of the geometric mean fecal coliform standards.
+All permitted facilities currently have requirements in their NPDES Permits that require disinfection to meet standards, therefore, no changes are required to existing NPDES permits.
+Monitoring of all permitted facilities in the Pearl River Watershed should continue to ensure that compliance with permit limits is consistently attained.
+The model assumed there is an 80% failure rate of septic tanks in the drainage area.
+The model accounted for seasonal variations in hydrology, climatic conditions, and watershed activities.
+The use of the continuous simulation model allowed for consideration of the seasonal aspects of rainfall and temperature patterns within the watershed.
+Calculation of the fecal coliform accumulation parameters and source contributions on a monthly basis accounted for seasonal variations in watershed activities such as livestock grazing and land application of manure.
+___________________________________________________________________________vi
+_________________________________________________Fecal Coliform TMDL for Pearl River
+1.0 INTRODUCTION 1.1 Background The identification of waterbodies not meeting their designated use and the development of total maximum daily loads (TMDLs) for those waterbodies are required by Section 303(d) of the Clean Water Act and the Environmental Protection Agency's (EPA) Water Quality Planning and Management Regulations (40 CFR part 130).
+The TMDL process is designed to restore and maintain the quality of those impaired waterbodies through the establishment of pollutant specific allowable loads.
+The pollutant of concern for this TMDL is fecal coliform.
+Fecal coliform bacteria are used as indicator organisms.
+They are readily identifiable and indicate the possible presence of other pathogenic organisms in the waterbody.
+The TMDL process can be used to establish water quality based controls to reduce pollution from both point and nonpoint sources, and restore and maintain the quality of water resources.
+The Mississippi Department of Environmental Quality (MDEQ) has identified a segment of the Pearl River as being impaired by fecal coliform bacteria for a length of 16 miles as reported in the Mississippi 1996 Section 303(d) List of Waterbodies.
+This segment is listed as impaired because sufficient monitoring data is available to show that there is an impairment in this segment.
+The listed segment is at Pearlington, from I-10 to the mouth at the Mississippi Sound.
+The 303d listed section is shown in Figure 1.1a.
+The listed segment of the Pearl River is in the Pearl River Basin Hydrologic Unit Code (HUC) 03180004 in south Mississippi.
+The drainage area of the listed segment is approximately 305,000 acres; and lies within portions of Hancock and Pearl River Counties.
+The watershed is rural but includes the urban area of Picayune.
+Forest and Pasture are the dominant landuses within the watershed.
+The land distribution is shown in Table 1.1.
+Table 1.1 Land Distribution in Acres for the Pearl River Watershed
+Area (Acres) % Area
+Urban 6,718 2%
+Forest 137,554 45%
+Cropland 7,590 2%
+Pasture 103,759 34%
+Barren 58 0%
+Wetland 49,951 16%
+Total 305,631
+__________________________________________________________________________1- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River Figure 1.1a Pearl River Watershed 303d Listed Segment
+Pearl River Watershed Li nco ln Co .
+Ma rio n Co.
+Wa lth all Co .
+Pi ke Co .
+Lama r Co .
+30 3d Listed Se gme nt Reac h File, V1 St at e B oundar ies County Boundar ie s Cata lo gi ng Unit B oundari es
+N P ea rl R iver Co .
+Louisiana
+Mississippi Han cock Co .
+W S
+E
+40
+0
+40
+80 Mile s
+The drainage area, or watershed, has been divided into 7 subwatersheds based on the major tributaries and topography.
+Figure 1.1b shows the subwatersheds with a three-digit Reach File 1 segment identification number.
+Each subwatershed is assigned a corresponding identification number, which is a combination of the eight-digit HUC and the three-digit Reach File 1 segment identification number.
+The listed portion of the waterbody is made up of (using HUC and Reach File 1 identification numbers) segment 03180004002.
+__________________________________________________________________________1- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River Figure 1.1b Pearl River Subwatersheds
+Pearl River Watershed Reac h File, V1 St at e B oundar ies Ea st Pea rl River Subwater sheds County Bound ar ie s Se pa r ately Modele d Water she ds 007 006
+004 0 05
+N W E S
+#
+Louisiana
+008
+#
+Missi ssippi 0 03 002
+30
+0
+30
+6 0 Mile s
+1.2 Applicable Waterbody Segment Use The water use classification for the listed segment of the Pearl River, as established by the State of Mississippi in the Water Quality Criteria for Intrastate, Interstate and Coastal Waters regulation, is Fish and Wildlife Support.
+The designated beneficial uses for the Pearl River are Contact Recreation and Aquatic Life Support.
+1.3 Applicable Waterbody Segment Standard The water quality standard applicable to the use of the waterbody and the pollutant of concern is defined in the State of Mississippi Water Quality Criteria for Intrastate, Interstate, and Coastal Waters .
+The standard states that the fecal coliform colony counts shall not exceed a geometric mean of 200 per 100 ml, nor shall more than ten percent of the samples examined during any month exceed a colony count of 400 per 100 ml.
+This water quality standard will be used as targeted endpoints to evaluate impairments and establish this TMDL.
+__________________________________________________________________________1- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River
+2.0 TMDL ENDPOINT AND WATER QUALITY ASSESSMENT 2.1 Selection of a TMDL Endpoint and Critical Condition One of the major components of a TMDL is the establishment of instream numeric endpoints, which are used to evaluate the attainment of acceptable water quality.
+Instream numeric endpoints, therefore, represent the water quality goals that are to be achieved by implementing the load and waste load reductions specified in the TMDL.
+The endpoints allow for a comparison between observed instream conditions and conditions that are expected to restore designated uses.
+The instream fecal coliform target for this TMDL is a 30-day geometric mean of 200 colony counts per 100 ml.
+Because fecal coliform may be attributed to both nonpoint and point sources, the critical condition used for the modeling and evaluation of stream response was derived within by a multi-year period.
+Critical conditions for waters impaired by nonpoint sources generally occur during periods of wet-weather and high surface runoff.
+But, critical conditions for point source dominated systems generally occur during low flow, low dilution conditions.
+The 1985-1995 period represents both low flow conditions as well as wet-weather conditions and encompasses a range of wet and dry seasons.
+Therefore, the 11-year period was used to find the critical conditions associated with all potential sources of fecal coliform bacteria within the watershed.
+2.2 Discussion of Instream Water Quality There is one ambient station on the listed segment operated by MDEQ that collected fecal coliform monitoring data during the 11-year modeling period.
+Data from this station was used to determine the impaired status of the segment.
+Monitoring for flow and fecal coliform was performed on a bimonthly (six per year) basis at station 02492668 at the Pearl River at Pearlington at Highway 90.
+2.2.1 Inventory of Available Water Quality Monitoring Data The State's 1998 Section 305(b) Water Quality Assessment Report was reviewed to assess water quality conditions and data available for the watershed.
+According to the report, the Pearl River is partially supporting the use of contact recreation.
+This conclusion was based on instantaneous data collected from November 1991 to September 1996 at station 02492668.
+Data collected at the station from November 1991 to September 1996 are listed in Table 2.2a.
+Data collected at the station from December 1996 to October 1999 are included in Table 2.2b.
+__________________________________________________________________________2- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River Table 2.2a Fecal Coliform Data reported in the Pearl River, Station 02492668, November 1991 to September 1996
+Date 11/4/1991 1/6/1992 3/4/1992 5/4/1992 7/13/1992 9/14/1992 11/2/1992 1/12/1993 3/8/1993 5/3/1993 7/12/1993 9/13/1993 11/2/1993 1/10/1994 3/7/1994 5/4/1994 6/21/1994 8/22/1994 11/8/1994 1/10/1995 3/7/1995 4/18/1995 7/11/1995 9/12/1995 11/6/1995 1/10/1996 3/6/1996 5/7/1996 7/10/1996 9/9/1996
+Fecal Coliform (counts/100ml) 20 20 110 20 20 80 800 1700 130 110 20 170 3000 20 210 20 300 40 1100 40 230 230 80 80 210 80 170 40 300 110
+2.2.2 Analysis of Instream Water Quality Monitoring Data Statistical summaries of the water quality data from November 1991 through September 1996 are presented in Table 2.2c.
+Samples are compared to the instantaneous maximum standard of 400 counts per 100 ml.
+The percent exceedance was calculated by dividing the number of exceedances by the total number of samples and does not represent the amount of time that the water quality is in violation.
+__________________________________________________________________________2- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River Table 2.2b Fecal Coliform Data reported in the Pearl River, Station 02492668, December 1996 to October 1999
+Date 12/18/1996 1/7/1997 2/4/1997 3/4/1997 4/2/1997 5/12/1997 6/5/1997 7/1/1997 8/4/1997 9/22/1997 10/1/1997 11/17/1997 1/6/1998 2/3/1998 3/3/1998 4/6/1998 6/15/1998 7/13/1998 8/3/1998 9/17/1998 10/20/1998 11/2/1998 12/1/1998 1/8/1999 2/22/1999 3/18/1999 4/7/1999 5/12/1999 6/4/1999 7/22/1999 8/27/1999 9/17/1999 10/7/199 Table 2.2c Statistical Summaries of Water Quality Data
+Fecal Coliform (counts/100ml) 170 49 185 140 80 17 49 No Data 130 33 8 170 540 33 540 17 300 46 350 79 23 29 33 540 350 1600 70 49 79 11 13 No Data 1600
+Station Number 02492668
+Number of Samples 30
+Minimum Value (counts/100ml) 20
+Maximum Value (counts/100ml) 3000
+Number of Exceedances 4
+Percent Instantaneous Exceedance 13%
+__________________________________________________________________________2- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River
+3.0 SOURCE ASSESSMENT The TMDL evaluation summarized in this report examined all known potential fecal coliform sources in the Pearl River Watershed.
+The source assessment was used as the basis of development for the model and ultimate analysis of the TMDL allocation options.
+The sources were analyzed according to the 7 separate subwatersheds.
+The subwatershed delineations were based primarily on an analysis of the Reach File 3 (RF3) stream network and the digital elevation model of the watershed.
+In evaluation of the sources, loads were characterized by the best available information, monitoring data, literature values, and local management activities.
+This section documents the available information and interpretation for the analysis.
+The representation of the following sources in the model is discussed in Section 4.0, Modeling Procedure: Linking the Sources to the Endpoint.
+3.1 Assessment of Point Sources Point sources of fecal coliform bacteria have their greatest potential impact on water quality during periods of low flow.
+Thus, a careful evaluation of point sources that discharge fecal coliform bacteria was necessary in order to quantify the degree of impairment present during the low flow, critical condition period.
+The 25 wastewater treatment plants in the Pearl River Watershed serve a variety of activities including residential subdivisions, schools, recreational areas, and other businesses.
+Once the permitted dischargers were located, the effluent from each source was characterized based on all available monitoring data including permit limits, discharge monitoring reports, and information on treatment types.
+Discharge monitoring reports (DMRs) were the best data source for characterizing effluent because they report measurements of flow and fecal coliform present in effluent samples.
+Of the facilities for which they were available, the DMRs for the past five years, 1993 through 1998, were analyzed.
+When data were available, the fecal coliform concentrations used in the model were calculated by taking an average of fecal coliform concentrations reported in the discharge monitoring reports.
+If evidence of insufficient treatment existed or when data were not available, professional judgement was used to estimate a fecal coliform loading rate in the model.
+Every facility included in the model is listed in Table 3.1.
+__________________________________________________________________________3- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River Table 3.1 Inventory of Point Source Dischargers
+Facility Name Calgon Carbon Corporation Charles B. Murphy Elementary General Electric Company Lovecchio Restaurant MDOT I-10 Welcome Center NASA National Space Tech.
+Lab Nicholson Water 
+Oak Harbor S/D Picayune POTW Polychemie Incorporated Port Bienville Industrial Park Rain R Shine Washateria Sunrise Haven Mobile Home Park Wellman of Mississippi Inc.
+McNeil Truckstop McNeill Junior High MDOT I-59 Welcome Center Poplarville POTW Tri-Magnolia RV Park 
+Subwatershed 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004002 03180004004 03180004004 03180004004 03180004004 03180004004 03180004004 03180004005 03180004005 03180004005 03180004005 03180004005
+NPDES Permit MS0046515 MS0028967 MS0036994 MS0054267 MS0028142 MS0021610 MS0033871 MS0021881 MS0042161 MS0054127 MS0030198 MS0035866 MS0043214 MS0052485 MS0044750 MS0037940 MS0027910 MS0020494 MS0054054 MS0043117 MS0037150 MS0041912 MS0054607 MS0031763 MS0021911
+Receiving Waterbody Mulatto Bayou Bayou Cowan Mulatto Bayou Pearl River Bogue Homa Creek Pearl River McCall River Bayou Poie Pearl River Pearl River Mulatto Bayou Pearl River Pate Bayou Woody Bayou 
+3.2 Assessment of Nonpoint Sources There are many potential nonpoint sources of fecal coliform bacteria for the Pearl River, including: Failing septic systems Wildlife Land application of hog and cattle manure Grazing animals Land application of poultry litter Other Direct Inputs Urban development
+The 305,000 acre drainage area of the Pearl River contains many different landuse types, including urban, forest, cropland, pasture, barren, and wetlands.
+The modeled landuse information for the watershed is based on the State of Mississippi's Automated Resource Information System (MARIS), 1997.
+This data set is based Landsat Thematic Mapper digital images taken between 1992 and 1993.
+The MARIS data are classified on a modified Anderson level one and two system with additional level two wetland classifications.
+For modeling purposes the landuse categories were grouped into the landuses of urban, forest, cropland, pasture, barren, and wetlands.
+Current landuse information was not available for __________________________________________________________________________3- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River
+Louisiana.
+For the portions of the watershed located in Louisiana, the landuse distribution percentages were considered to be consistent with those of Mississippi.
+The contributions of each of these land types to the fecal coliform loading of the Pearl River was considered on a subwatershed basis.
+Table 3.2 and Figure 3.2 show the landuse distribution for the watershed.
+The nonpoint fecal coliform contribution from each landuse was estimated using the latest information available.
+The MARIS landuse data for Mississippi was utilized by the BASINS model to extract landuse sizes, populations, and agriculture census data.
+MDEQ contacted several agencies to refine the assumptions made in determining the fecal coliform loading.
+The Mississippi Department of Wildlife, Fisheries, and Parks provided information of wildlife density in the Pearl River Watershed.
+The Mississippi State Department of Health was contacted regarding the failure rate of septic tank systems in this portion of the state.
+Mississippi State University researchers provided information on manure application practices and loading rates for hog farms and cattle operations.
+The Natural Resources Conservation Service also gave MDEQ information on manure treatment practices and land application of manure.
+Table 3.2 Landuse Distribution in Number of Acres
+Subwatershed 03180004002 03180004003 03180004004 03180004005 03180004006 03180004007 03180004008 Total
+Urban 4,094 115 2,039 360 0 38 70 6,718
+Forest 24,520 1,497 37,596 38,719 7,143 26,326 1,753 137,554
+Cropland 1,246 382 1,694 2,291 434 1,335 209 7,590
+Pasture 19,319 2,769 22,630 36,388 4,725 14,663 3,265 103,759
+Barren 24 0 0 0 0 34 0 58
+Wetland 23,969 2,681 8,487 8,133 967 4,051 1,664 49,951
+Total 73,172 7,444 72,446 85,891 13,269 46,447 6,961 305,631
+__________________________________________________________________________3- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River Figure 3.2 Landuse Distribution
+Pearl River Landuse
+N W S E
+Reach File, V1 Watershed Boundaries MARIS Urban Fo re st Cropla nd Pastu re Barren Water Wetlan d
+6
+0
+6
+12 Miles
+__________________________________________________________________________3- 4
+_________________________________________________Fecal Coliform TMDL for Pearl River
+3.2.1 Failing Septic Systems Septic systems have a potential to deliver fecal coliform bacteria loads to surface waters due to malfunctions, failures, and direct pipe discharges.
+Properly operating septic systems treat wastewater and dispose of the water through a series of underground field lines.
+The water is applied through these lines into a rock substrate, thence into underground absorption.
+The systems can fail when the field lines are broken, or when the underground substrate is clogged or flooded.
+A failing septic system's discharge can reach the surface, where it becomes available for wash-off into the stream.
+Another potential problem is a direct bypass from the system to a stream.
+In an effort to keep the water off the land, pipes are occasionally placed from the septic tank or the field lines directly to the creek.
+Another consideration is the use of individual onsite wastewater treatment plants.
+These treatment systems are in wide use in Mississippi.
+They can adequately treat wastewater when properly maintained.
+However, these systems may not receive the maintenance needed for proper, long-term operation.
+These systems require some sort of disinfection to properly operate.
+When this expense is ignored, the water does not receive adequate disinfection prior to release.
+3.2.2 Wildlife Wildlife present in the Pearl River Watershed contributes to fecal coliform bacteria on the land surface.
+In the Pearl River model, all wildlife was accounted for by considering contributions from deer.
+Estimates of deer population were designed to account for the deer combined with all of the other wildlife contributing to the area.
+An upper limit of 45 deer per square mile was used as the estimate.
+It was assumed that the wildlife population remained constant throughout the year, and that wildlife was present on all land classified as pastureland, cropland, and forest.
+It was also assumed that the wildlife and the manure produced by the wildlife were evenly distributed throughout these land types.
+3.2.3 Land Application of Hog and Cattle Manure In the Pearl River Basin processed manure from confined hog and dairy cattle operations is collected in lagoons and routinely applied to pastureland during April through October.
+This manure is a potential contributor of bacteria to receiving waterbodies due to runoff produced during a rain event.
+Hog farms in the Pearl River Basin operate by either keeping the animals confined or by allowing hogs to graze in a small pasture or pen.
+For this model, it was assumed that all of the hog manure produced by either farming method was applied evenly to the available pastureland.
+Application rates of hog manure to pastureland from confined operations varied monthly according to management practices currently used in this area.
+The dairy farms that are currently operating in the Pearl River Watershed only confine the animals for a limited time during the day.
+The model assumed a confinement time of four hours per day, during which time the cattle are milked and fed.
+The manure collected during confinement is applied to the available pastureland in the watershed.
+Like the hog farms, application rates of dairy cow manure to pastureland vary monthly according to management practices currently used in this area.
+__________________________________________________________________________3- 5
+_________________________________________________Fecal Coliform TMDL for Pearl River
+3.2.4 Grazing Beef and Dairy Cattle Grazing cattle deposit manure on pastureland where it is available for wash-off and delivery to receiving waterbodies.
+The dairy farms that are currently operating in the Pearl River Watershed only confine the animals for a limited time during the day.
+The model assumed a confinement time of four hours per day.
+During all other times, dairy cattle are assumed to graze on pasturelands.
+Beef cattle have access to pastureland for grazing all of the time.
+Manure produced by grazing beef and dairy cows is directly deposited onto pastureland.
+3.2.5 Land Application of Poultry Litter There are a considerable number of chickens produced in the Pearl River Watershed each year.
+In this area, poultry farming operations use houses in which chickens are confined all of the time.
+The litter produced by the chickens is collected and is routinely applied as a fertilizer to pastureland in the watershed.
+Application rates of the litter vary monthly.
+Predominantly, two kinds of chickens are raised on farms in the Pearl River Basin, broilers and layers.
+For the broiler chickens, the amount of growth time from when the chicken is born to when it is sold off the farm is approximately 48 days or 1.6 months.
+Layer chickens remain on farms for ten months or longer.
+The majority of the chickens raised in this area are broilers.
+For the model, a weighted average of growth time was determined to account for both types of chickens.
+An average growth time of 52 days, or 1/7 of a year, was used.
+To determine the number of chickens on farms on any given day, the yearly population of chickens sold was divided by seven.
+3.2.6 Other Direct Inputs Due to the general topography in the Pearl River Watershed, it was assumed that all land slopes in the watershed are such that unconfined animals are able to access the intermittent streams in all pastures.
+Manure deposited in streams by grazing animals are included in the water quality model as a point source having constant flow and concentration.
+To estimate the amount of bacteria introduced into streams by all animals, it is assumed that cattle deposit 5 percent of their bacteria load in the stream.
+This direct input of cattle maure represents all animal access to streams (domestic and wild), illicit discharges of fecal coliform bacteria, and leaking sewer collection lines.
+3.2.7 Urban Development Urban areas include land classified as urban and barren.
+Even though only a small percentage of the watershed is classified as urban, the contribution of the urban areas to fecal coliform loading in the Pearl River was considered.
+Municipalities within the Pearl River Watershed include Picayune and Poplarville.
+Fecal coliform contributions from urban areas may come from storm water runoff, runoff from construction sites, and runoff contribution from improper disposal of materials such as litter.
+__________________________________________________________________________3- 6
+_________________________________________________Fecal Coliform TMDL for Pearl River
+4.0 MODELING PROCEDURE: LINKING THE SOURCES TO THE ENDPOINT Establishing the relationship between the instream water quality target and the source loading is a critical component of TMDL development.
+It allows for the evaluation of management options that will achieve the desired source load reductions.
+Ideally, the linkage will be supported by monitoring data that allow the TMDL developer to associate certain waterbody responses to flow and loading conditions.
+In this section, the selection of the modeling tools, setup, and model application are discussed.
+4.1 Modeling Framework Selection The BASINS model platform and the NPSM model were used to predict the significance of fecal coliform sources to fecal coliform levels in the Pearl River Watershed.
+BASINS is a multipurpose environmental analysis system for use in performing watershed and water quality-based studies.
+A geographic information system (GIS) provides the integrating framework for BASINS and allows for the display and analysis of a wide variety of landscape information such as landuses, monitoring stations, point source discharges, and stream descriptions.
+The NPSM model simulates nonpoint source runoff from selected watersheds, as well as the transport and flow of the pollutants through stream reaches.
+A key reason for using BASINS as the modeling framework is its ability to integrate both point and nonpoint sources in the simulation, as well as its ability to assess instream water quality response.
+4.2 Model Setup The Pearl River TMDL model includes the listed section of the river.
+The West Pearl River splits from the Pearl River near Picayune, MS.
+The West Pearl River flows into Louisiana and the Pearl River continues to form the state line between Mississippi and Louisiana.
+There is a flow control structure located at the split to regulate the flow between the Pearl River and the West Pearl River.
+The Pearl River was modeled separately to the split with the West Pearl River.
+The Pearl River, from the split to the mouth at the Mississippi Sound was then modeled.
+The appropriate percentage of the flow and fecal coliform load from the Pear River model was input as the point source.
+This percentage was determined from information gathered from the Mississippi Department of Environmental Quality Office of Land and Water Resources and United States Army Corp of Engineers.
+This point source input allows the model to assess the contribution of the upstream portions of the Pearl River to the hydrology and fecal coliform loading in the reaches of this Pearl River TMDL model.
+Thus, all upstream contributors of bacteria are accounted for in the model.
+The remaining watershed was divided into 7 subwatersheds in an effort to isolate the major stream reaches in the Pearl River Watershed.
+This subdivision allowed the relative contribution of point and nonpoint sources to be addressed within each subwatershed.
+__________________________________________________________________________4- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River
+4.3 Source Representation Both point and nonpoint sources were represented in the model.
+A fecal coliform spreadsheet was developed for quantifying point and nonpoint sources of bacteria for the Pearl River model.
+This spreadsheet calculates the model inputs for fecal coliform loading due to point and nonpoint sources using assumptions about land management, septic systems, farming practices, and permitted point source contributions.
+Each of the potential bacteria sources is covered in the fecal coliform spreadsheet.
+The discharge from point sources was added as a direct input into the appropriate reach of the waterbody.
+There are 25 NPDES permitted facilities in the watershed which discharge fecal coliform bacteria.
+Fecal coliform loading rates for point sources are input to the model as flow in cubic feet per second and fecal coliform contribution in counts per hour.
+The nonpoint sources are represented in the model with two different methods.
+The first of these methods is a direct fecal coliform loading to the Pearl River.
+Other sources are represented as an application rate to the land in the Pearl River Watershed.
+For these sources, fecal coliform accumulation rates in counts per acre per day were calculated for each subwatershed on a monthly basis and input to the model for each landuse.
+Fecal coliform contributions from forests and wetlands were considered to be equal.
+Urban and barren areas were also considered to produce equal loads.
+The fecal coliform accumulation rate for pastureland is the sum of accumulation rates due to litter application, wildlife, processed manure, and grazing animals.
+For cropland, the accumulation rate is only due to wildlife.
+Accumulation rates for pastureland are calculated on a monthly basis to account for seasonal variations in manure and litter application.
+4.3.1 Failing Septic Systems The number of failing septic systems used in the model was derived from the watershed area normalized county populations.
+The percentage of the population on septic systems was determined from 1990 United States Census Data.
+The Mississippi State Department of Health has an ongoing prohibition against further approval of septic tanks in Hancock County below I-10.
+Tests have shown that the soil structure of Hancock County south of I-10 is not conducive to septic tank use.
+Therefore, a failure rate of 80% was assumed.
+This information was used to calculate the estimated number of failing septic tanks per watershed.
+The number of failing septic tanks also incorporates an estimate for the failing individual onsite wastewater treatment systems in the area.
+In reality, septic tank failures are both point and nonpoint sources.
+Therefore, the load from failing septic tanks has been considered to contribute equally to the wasteload allocation component and load allocation component of the TMDL calculation Discharges from failing septic systems were quantified based on several factors including the estimated population served by the septic systems, an average daily discharge of 100 gallons per person per day, and a septic system effluent fecal coliform concentration of 104 counts per 100 ml. 4.3.2 Wildlife Based on information provided by the Mississippi Department of Wildlife, Fisheries, and Parks, the deer population throughout the Pearl River Watershed was estimated to be 30 to 45 animals per square mile.
+For the model, the upper limit of 45 deer per square mile was used to account for the deer and all other __________________________________________________________________________4- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River
+wildlife contributing to fecal coliform accumulation in the area.
+The wildlife contribution in counts per acre per day is calculated by multiplying a loading rate by the number of animals.
+The loading rate used in the model was estimated to be 5.00E+08 counts per day per animal.
+The per acre loading rate applied to the landuses is 3.52E+07 counts/acre/day.
+4.3.3 Land Application of Hog and Cattle Manure The fecal coliform spreadsheet was used to estimate the amount of waste and the concentration of fecal coliform bacteria contained in hog and dairy cattle manure produced by confined animal feeding operations.
+The livestock count per county is based upon the 1997 Census of Agriculture data.
+The county livestock count is used to estimate the number of livestock on a subwatershed scale.
+This is calculated by multiplying the county livestock figures with the area of the county within the subwatershed boundaries.
+This estimate is made with the assumption that the livestock are uniformly distributed throughout the county.
+A fecal coliform production rate in counts per day per animals was multiplied by the number of confined animals to quantify the amount of bacteria produced.
+The manure produced by these operations is collected in lagoons and applied evenly to all pastureland.
+Manure application rates to pastureland vary on a monthly basis.
+This monthly variation is incorporated into the model by using monthly loading rates.
+4.3.4 Grazing Beef and Dairy Cattle The model assumes that the manure produced by grazing beef and dairy cattle is evenly spread on pastureland throughout the year.
+The fecal coliform content of manure produced by grazing cattle is estimated by multiplying the number of grazing cattle by a fecal coliform production of 5.40E+09 counts per day per animal (Metcalf and Eddy, 1991).
+The resulting fecal coliform loads are in the units of counts per acre per day.
+4.3.5 Land Application of Poultry Litter The concentration of bacteria, which accumulates in the dry litter where poultry waste is collected, is estimated with the fecal coliform spreadsheet.
+This is done by multiplying the daily number of chickens on farms by a fecal coliform production rate in counts per day per animal given in Metcalf 
+The model assumed a watershed area normalized chicken population.
+The chicken population was determined from the 1997 Census of Agriculture Data for the number of chickens sold from each county per year.
+Litter application to pastureland varies monthly, and is modeled, if applicable, with a monthly loading rate.
+4.3.6 Other Direct Inputs In the water quality model, a point source of constant flow and concentration was added in each subwatershed.
+This direct input represented animals having direct access to the stream, illicit discharges of fecal coliform bacteria, and leaking sewer collection lines.
+The point source loading produced by the other direct inputs is represented by 5 percent of the number of grazing cattle in each subwatershed standing in a stream at any given time.
+The fecal coliform concentration is calculated using the number of cows in the stream and a bacteria production rate of 5.40E+09 counts per animal per day ( Metcalf and Eddy, 1991).
+__________________________________________________________________________4- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River
+4.3.7 Urban Development The MARIS landuse data divide urban land into several categories.
+For the Pearl River Watershed, the urban land is divided into four different categories: high density, low density, nothing, and transportation.
+For the model, fecal coliform buildup rates for each category were determined by using literature values from Horner, 1992.
+The literature value accounts for all of the potential fecal coliform sources in each urban category.
+Table 4.3 shows the break up of urban land into high density, low density, nothing, and transportation on a subwatershed basis.
+The fecal coliform production rate for each of these subdivisions of urban land is 1.54E+07 for high density, 1.03E+07 for low density, 1.13E+07 for nothing, and .02E+07 for transportation.
+In the model, fecal coliform loading rates on urban land are input as counts per acre per day.
+Table 4.3 Urban Landuse Distribution
+Subwatershed High Density Urban 03180004002 03180004003 03180004004 03180004005 03180004006 03180004007 03180004008 All Watersheds 1,286 22 93 0 0 0 0 1,401
+Low Density Urban 1,125 82 550 7 0 0 0 1,764
+Nothing 554 11 103 176 0 72 64 980
+Transportation Total 1,153 0 1,293 177 0 0 6 2,629 4,118 115 2,039 360 0 72 70 6,774
+4.4 Stream Characteristics The stream characteristics given below describe the listed section of the Pearl River.
+This section begins at the 03180004 HUC boundary at Morgantown and ends at the confluence of Upper Little Creek.
+The channel geometry and lengths for the Pearl River are based on data available within the BASINS modeling system.
+The characteristics of the modeled section of the Pearl River are as follows.
+Length 16 miles Average Depth 3.27 ft Average Width 303.16 ft Mean Flow 8917.38 cubic ft per second Mean Velocity 2.86 ft per second 7Q10 Flow 1028.66 cubic ft per second Slope 0.00018 ft per ft
+4.5 Selection of Representative Modeling Period The model was run for 11 years, from January 1, 1985, through December 31, 1995.
+Results from the model were evaluated for the time period from January 1, 1985, until December 31, 1995.
+Because this 11-year time span is used, a margin of safety is implicitly applied.
+Seasonality and critical conditions are accounted for during the extended time frame of the simulation.
+The critical condition for fecal coliform impairment from nonpoint source contributors occurs after a heavy __________________________________________________________________________4- 4
+_________________________________________________Fecal Coliform TMDL for Pearl River
+rainfall that is preceded by several days of dry weather.
+The dry weather allows a build up of fecal coliform bacteria, which is then washed off the ground by a heavy rainfall.
+By using the 11-year time period, many such occurrences are captured in the model results.
+Critical conditions for point sources, which occur during low flow and low dilution conditions, are simulated as well.
+4.6 Model Calibration Process For the model time period, there was no USGS gage on this section of the Pearl River.
+Therefore, hydraulic calibration was not possible.
+However, the Pearl River model that is used as a point source in this Pearl River model was calibrated for hydrology.
+Modeled flow values were compared to flow data taken at USGS Station 02489500.
+In Appendix A, Graph A-1 shows the modeled flow and the USGS data.
+Several assumptions were made to determine the fecal coliform loading rates from the nonpoint source contributors.
+Many of these assumptions were incorporated into the fecal coliform spreadsheet.
+An effort was made to contact researchers and agricultural experts to give as much validity as possible to the assumptions made within the BASINS model.
+4.7 Existing Loading Appendix A includes graphs of the model results showing the instream fecal coliform concentrations for reach 03180004002 of the Pearl River.
+The graph shows a 30-day geometric mean of the data.
+There have been no standards violations in 11 years according to the model.
+The straight line at 200 counts per 100 ml indicates the water quality standard for the stream.
+__________________________________________________________________________4- 5
+_________________________________________________Fecal Coliform TMDL for Pearl River
+5.0 ALLOCATION The allocation for this TMDL involves a wasteload allocation for point sources, a load allocation for nonpoint sources, and a margin of safety.
+Point source contributions enter the stream directly in the appropriate reach.
+The nonpoint fecal coliform sources used in the model have two different transportation methods.
+Failing septic tanks and other direct inputs were modeled as direct inputs to the stream.
+The other nonpoint source contributions were applied to land area on a counts per day per acre basis.
+The fecal coliform bacteria applied to land are subject to a die-off rate and an absorption rate before entering the stream.
+5.1 Wasteload Allocations The contribution of point sources was considered on a subwatershed basis for the model.
+Within each subwatershed, the modeled contribution of each discharger was based on the facility's discharge monitoring data and other records of past performance.
+Table 5.1 lists the point source contributions, on a subwatershed basis, along with their existing load, allocated load, and percent reduction.
+The final wasteload allocation on the summary page also accounts for the load from 50% of the failing septic tanks.
+Table 5.1 Wasteload Allocations
+Subwatershed 03180004002 03180004004 03180004005
+Existing Flow (cfs) 6.32E+00 1.08E+00 2.06E-01
+Existing Load (counts/hr) 1.14E+09 2.18E+09 4.27E+07
+Allocated Flow (cfs) 6.32E+00 1.08E+00 2.06E-01
+Allocated Load (counts/hr) 1.14E+09 2.18E+09 4.27E+07
+Percent Reduction 0% 0% 0%
+5.2 Load Allocations The TMDL scenario for the load allocation for this TMDL involves two different types of nonpoint sources: septic tanks and other direct inputs.
+Contributions from both of these sources are input into the model in a manner similar to point source input, with a flow and fecal coliform concentration in counts per hour.
+Table 5.2a lists the nonpoint source contributions due to other direct inputs, on a subwatershed basis, along with their existing load, allocated load, and percent reduction.
+Table 5.2b gives the same parameters for contributions due to septic tank failure.
+Septic tank failures in reality are both point and nonpoint contributions and have been calculated as equal contributors to the wasteload allocation component and load allocation component of the TMDL calculation.
+Nonpoint fecal coliform loading due to cattle grazing; land application of manure produced by confined dairy cattle, hogs, and poultry; wildlife; and urban development are also included in the load allocation.
+Currently, no reduction is required for these contributors in order for the Pearl River to achieve water quality standards.
+__________________________________________________________________________5- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River
+Table 5.2a Fecal Coliform Loading Rates for Nonpoint Source Contribution of Other Direct Inputs
+Subwatershed 03180004002 03180004003 03180004004 03180004005 03180004006 03180004007 03180004008 Total
+Existing Flow (cfs) 5.12E-04 9.14E-05 7.13E-04 1.51E-03 1.58E-04 4.62E-04 9.72E-05 3.55E-03
+Existing Load (counts/hr) 1.96E+10 3.49E+09 2.73E+10 5.78E+10 6.04E+09 1.77E+10 3.71E+09 1.36E+11
+Allocated Flow (cfs) 5.12E-04 9.14E-05 7.13E-04 1.51E-03 1.58E-04 4.62E-04 9.72E-05 3.55E-03
+Allocated Load (counts/hr) 1.96E+10 3.49E+09 2.73E+10 5.78E+10 6.04E+09 1.77E+10 3.71E+09 1.36E+11
+Percent Reduction 0% 0% 0% 0% 0% 0% 0% 0%
+Table 5.2b Fecal Coliform Loading Rates for the Contribution of Failing Septic Tanks (50% WLA and 50% LA)
+Subwatershed 03180004002 03180004003 03180004004 03180004005 03180004006 03180004007 03180004008 Total
+Existing Flow (cfs) 4.86E-01 5.12E-02 4.91E-01 5.84E-01 8.98E-02 3.18E-01 4.66E-02 2.07E+00
+Existing Load (counts/hr) 4.94E+09 5.21E+08 4.99E+09 5.94E+09 9.13E+08 3.23E+09 4.74E+08 2.10E+10
+Allocated Flow (cfs) 4.86E-01 5.12E-02 4.91E-01 5.84E-01 8.98E-02 3.18E-01 4.66E-02 2.07E+00
+Allocated Load (counts/hr) 4.94E+09 5.21E+08 4.99E+09 5.94E+09 9.13E+08 3.23E+09 4.74E+08 2.10E+10
+Percent Reduction 0% 0% 0% 0% 0% 0% 0% 0%
+The model estimated the fecal coliform bacteria count per 30 days entering the Pearl River for each listed segment due to runoff during the 30-day critical period.
+These values are given in section 5.4 Calculation of the TMDL.
+The scenario used in this analysis for the load allocation in the Pearl River Watershed assumes no reduction in contributions from failing septic tanks or from other direct inputs is required to meet standards.
+5.3 Incorporation of a Margin of Safety (MOS) The two types of MOS development are to implicitly incorporate the MOS using conservative model assumptions or to explicitly specify a portion of the total TMDL as the MOS.
+The MOS selected for this model is implicit.
+Running the model for 11 years with no violations of the water quality standard provides the primary component of the MOS.
+Ensuring compliance with the standard throughout all of the critical condition periods represented during the 11 years is a conservative practice.
+Another component of the MOS is the conservative assumption that in the model all of the fecal coliform bacteria discharged from failing septic tanks reaches the stream, while it is likely that only a portion of the bacteria will reach the stream due to filtration and die off during transport.
+__________________________________________________________________________5- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River
+5.4 Calculation of the TMDL This TMDL is calculated based on the following equation: TMDL = WLA + LA + MOS The TMDL was calculated based on the 30-day critical period for the Pearl River Watershed according to the model.
+Each of the loading rates has been converted to the 30-day equivalent.
+The wasteload allocation incorporates the fecal coliform contribution from identified NPDES Permitted facilities and 50% of the contribution from failing septic tanks.
+The load allocation includes the fecal coliform contributions from surface runoff, other direct inputs, and 50% of the contribution from failing septic tanks.
+The margin of safety for this TMDL is derived from the conservative loading assumptions used in setting up the model and is implicit.
+Table 5.4 gives the TMDL for the listed segment.
+WLA = NPDES Permitted Facilites + Â½ of the Septic Tank Failures LA = Surface Runoff + Other Direct Inputs + Â½ of the Septic Tank Failures
+MOS = implicit Table 5.4 TMDL Summary for Monitored Segment (counts/30 days)
+NPDES Permits Â½ Failing Septic Tanks WLA Surface Runoff Other Direct Inputs Â½ Failing Septic Tanks LA TMDL = WLA + LA
+MSLPRLRM5 2.42E+12 7.57E+12 9.99E+12 9.25E+11 9.76E+13 7.57E+12 1.06E+14 1.16E+14
+5.5 Seasonality For many streams in the state, fecal coliform limits vary according to the seasons.
+This stream is designated for the use of contact recreation.
+For this use, the pollutant standard is not seasonal.
+Because the model was established for an 11-year time span, it took into account all of the seasons within the calendar years from 1985 to 1995.
+The extended time period allowed the simulation of many different atmospheric conditions such as rainy and dry periods and high and low temperatures.
+It also allowed seasonal critical conditions to be simulated.
+__________________________________________________________________________5- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River
+6.0 CONCLUSION Modeling indicates that no reduction is needed in order for this water body to meet water quality standards.
+Additionally, it is anticipated that the flow diversion structure installed at Walkiah Bluff will improve water quality in the river.
+An ambient station has been added to MDEQ's network to continue to monitor improvements in the watershed.
+The fecal coliform scenario used in this TMDL included requiring all NPDES Permitted dischargers to maintain current permit limits.
+6.1
+Future Monitoring
+MDEQ has adopted the Basin Approach to Water Quality Management, a plan that divides Mississippi's major drainage basins into five groups.
+During each yearlong cycle, MDEQ resources for water quality monitoring will be focused on one of the basin groups.
+During the next monitoring phase in the Pearl River Basin, the Pearl River may receive additional monitoring to identify any change in water quality.
+MDEQ produced guidance for future Section 319 project funding will encourage NPS restoration projects that attempt to address TMDL related issues within Section 303(d)/TMDL watersheds in Mississippi.
+Additionally, MDEQ will contract monitoring of this segment to obtain samples adequate in quantity to provide a true geometric mean to compare to the model.
+6.2
+Public Participation
+This TMDL will be published for a 30-day public notice.
+During this time, the public will be notified by publication in the statewide newspaper and a newspaper in the area of the watershed.
+The public will be given an opportunity to review the TMDL and submit comments.
+At the end of the 30-day period, MDEQ will determine the level of interest in the TMDL and make a decision on the necessity of holding a public hearing.
+If a public hearing is deemed appropriate, the public will be given a 30-day notice of the hearing to be held at a location near the watershed.
+That public hearing would be an official hearing of the Mississippi Commission on Environmental Quality, and would be transcribed.
+All comments received during the public notice period and at any public hearings become a part of the record of this TMDL.
+All comments will be considered in the ultimate approval of this TMDL by the Commission on Environmental Quality and for submission of this TMDL to EPA Region IV for final approval.
+__________________________________________________________________________6- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River
+DEFINITIONS Ambient stations: a network of fixed monitoring stations established for systematic water quality sampling at regular intervals, and for uniform parametric coverage over a long-term period.
+Assimilative capacity: the capacity of a body of water or soil-plant system to receive wastewater effluents or sludge without violating the provisions of the State of Mississippi Water Quality Criteria for Intrastate, Interstate, and Coastal Waters and Water Quality regulations.
+Background: the condition of waters in the absence of man-induced alterations based on the best scientific information available to MDEQ.
+The establishment of natural background for an altered waterbody may be based upon a similar, unaltered or least impaired, waterbody or on historical pre-alteration data.
+Calibrated model: a model in which reaction rates and inputs are significantly based on actual measurements using data from surveys on the receiving waterbody.
+Critical Condition: hydrologic and atmospheric conditions in which the pollutants causing impairment of a waterbody have their greatest potential for adverse effects.
+Daily discharge: the "discharge of a pollutant" measured during a calendar day or any 24-hour period that reasonably represents the calendar day for purposes of sampling.
+For pollutants with limitations expressed in units of mass, the "daily discharge" is calculated as the total mass of the pollutant discharged over the day.
+For pollutants with limitations expressed in other units of measurement, the "daily average" is calculated as the average.
+Designated Use: use specified in water quality standards for each waterbody or segment regardless of actual attainment.
+Discharge monitoring report: report of effluent characteristics submitted by a NPDES Permitted facility.
+Effluent standards and limitations : all State or Federal effluent standards and limitations on quantities, rates, and concentrations of chemical, physical, biological, and other constituents to which a waste or wastewater discharge may be subject under the Federal Act or the State law.
+This includes, but is not limited to, effluent limitations, standards of performance, toxic effluent standards and prohibitions, pretreatment standards, and schedules of compliance.
+Effluent: treated wastewater flowing out of the treatment facilities.
+Fecal coliform bacteria: a group of bacteria that normally live within the intestines of mammals, including humans.
+Fecal coliform bacteria are used as an indicator of the presence of pathogenic organisms in natural water.
+Geometric mean: the n th root of the product of n numbers.
+A 30-day geometric mean is the 30th root of the product of 30 numbers.
+Impaired Waterbody: any waterbody that does not attain water quality standards due to an individual pollutant, multiple pollutants, pollution, or an unknown cause of impairment.
+Land Surface Runoff: water that flows into the receiving stream after application by rainfall or irrigation.
+It is a transport method for nonpoint source pollution from the land surface to the receiving stream.
+Load allocation (LA): the portion of a receiving water's loading capacity attributed to or assigned to nonpoint sources (NPS) or background sources of a pollutant.
+The load allocation is the value assigned to the summation of all direct sources and land applied fecal coliform that enter a receiving waterbody.
+It also contains a portion of the contribution from septic tanks.
+Loading : the total amount of pollutants entering a stream from one or multiple sources.
+__________________________________________________________________________D- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River Nonpoint Source: pollution that is in runoff from the land.
+Rainfall, snowmelt, and other water that does not evaporate become surface runoff and either drains into surface waters or soaks into the soil and finds its way into groundwater.
+This surface water may contain pollutants that come from land use activities such as agriculture; construction; silviculture; surface mining; disposal of wastewater; hydrologic modifications; and urban development.
+NPDES permit: an individual or general permit issued by the Mississippi Environmental Quality Permit Board pursuant to regulations adopted by the Mississippi Commission on Environmental Quality under Mississippi Code Annotated (as amended) Â§Â§ 49-17-17 and 49-17-29 for discharges into State waters.
+Point Source: pollution loads discharged at a specific location from pipes, outfalls, and conveyance channels from either wastewater treatment plants or industrial waste treatment facilities.
+Point sources can also include pollutant loads contributed by tributaries to the main receiving stream.
+Pollution: contamination, or other alteration of the physical, chemical, or biological properties, of any waters of the State, including change in temperature, taste, color, turbidity, or odor of the waters, or such discharge of any liquid, gaseous, solid, radioactive, or other substance, or leak into any waters of the State, unless in compliance with a valid permit issued by the Permit Board.
+Publicly Owned Treatment Works (POTW): a waste treatment facility owned and/or operated by a public body or a privately owned treatment works which accepts discharges which would otherwise be subject to Federal Pretreatment Requirements.
+Regression Coefficient: an expression of the functional relationship between two correlated variables that is often empirically determined from data, and is used to predict values of one variable when given values of the other variable.
+Scientific Notation (Exponential Notation): mathematical method in which very large numbers or very small numbers are expressed in a more concise form.
+The notation is based on powers of ten.
+Numbers in scientific notation are expressed as the following: 4.16 x 10^(+b) and 4.16 x 10^(-b) [same as 4.16E4 or4.16E-4].
+In this case, b is always a positive, real number.
+The 10^(+b) tells us that the decimal point is b places to the right of where it is shown.
+The 10^(-b) tells us that the decimal point is b places to the left of where it is shown.
+For example: 2.7X104 = 2.7E+4 =27000 and 2.7X10-4 = 2.7E-4=0.00027.
+Sigma (S ): shorthand way to express taking the sum of a series of numbers.
+For example, the sum or total of three amounts 24, 123, 16, (dl, d2, d3) respectively could be shown as: 3 S d i = d 1+d 2+d 3 =24 +123+16 =163 i=1 Total Maximum Daily Load or TMDL: the calculated maximum permissible pollutant loading to a waterbody at which water quality standards can be maintained.
+Waste : sewage, industrial wastes, oil field wastes, and all other liquid, gaseous, solid, radioactive, or other substances which may pollute or tend to pollute any waters of the State.
+Wasteload allocation (WLA): the portion of a receiving water's loading capacity attributed to or assigned to point sources of a pollutant.
+It also contains a portion of the contribution from septic tanks.
+Water Quality Standards : the criteria and requirements set forth in State of Mississippi Water Quality Criteria for Intrastate, Interstate, and Coastal Waters.
+Water quality standards are standards composed of designated present and future most beneficial uses (classification of waters), the numerical and narrative criteria applied to the specific water uses or classification, and the Mississippi antidegradation policy.
+Water quality criteria: elements of State water quality standards, expressed as constituent concentrations, levels, or narrative statements, representing a quality of water that supports the present and future most beneficial uses.
+__________________________________________________________________________D- 2
+_________________________________________________Fecal Coliform TMDL for Pearl River Waters of the State : all waters within the jurisdiction of this State, including all streams, lakes, pon ds , wetlands, impounding reservoirs, marshes, watercourses, waterways, wells, springs, irrigation systems, drainage systems, and all other bodies or accumulations of water, surface and underground, natural or artificial, situated wholly or partly within or bordering upon the State, and such coastal waters as are within the jurisdiction of the State, except lakes, ponds, or other surface waters which are wholly landlocked and privately owned, and which are not regulated under the Federal Clean Water Act (33 U.S.C.1251 et seq.).
+Watershed: the area of land draining into a stream at a given location.
+__________________________________________________________________________D- 3
+_________________________________________________Fecal Coliform TMDL for Pearl River
+ABBREVIATIONS 7Q10................................
+Seven-Day Average Low Stream Flow with a Ten-Year Occurrence Period BASINS........................................
+Better Assessment Science Integrating Point and Nonpoint Sources BMP ..........................................................................................................
+Best Management Practice CWA .......................................................................................................................
+Clean Water Act DMR .......................................................................................................Discharge Monitoring Report EPA .................................................................................................
+Environmental Protection Agency GIS .....................................................................................................
+Geographic Information System HUC .................................................................................................................
+Hydrologic Unit Code LA..............................................................................................................................
+Load Allocation MARIS .................................................................
+State of Mississippi Automated Information System MDEQ ......................................................................
+Mississippi Department of Environmental Quality MOS .........................................................................................................................
+Margin of Safety NRCS ...................................................................................
+National Resource Conservation Service NPDES .......................................................................National Pollution Discharge Elimination System NPSM............................................................................................................Nonpoint Source Model RF3 ..................................................................................................................................Reach File 3 USGS .................................................................................................
+United States Geological Survey WLA ................................................................................................................Waste Load Allocation
+__________________________________________________________________________A- 1
+_________________________________________________Fecal Coliform TMDL for Pearl River
+REFERENCES Horner, 1992.
+Water Quality Criteria/Pollutant Loading Estimation/Treatment Effectiveness Estimation.
+In R.W. Beck and Associates.
+Covington Master Drainage Plan.
+King County Surface Water Management Division, Seattle, WA. Horsley 
+Identification and Evaluation of Nutrient Bacterial Loadings to Maquoit Bay, Brunswick, and Freeport, Maine.
+Casco Bay Estuary Project.
+Metccalf and Eddy.
+1991.
+Wastewater Engineering: Treatment, Disposal, Reuse.
+3rd Edition.
+McGraw-Hill, Inc., New York.
+MDEQ. 1994.
+Wastewater Regulations for National Pollutant Discharge Elimination System (NPDES) Permits, Underground Injection Control (UIC) Permits, State Permits, Water Quality Based Effluent Limitations and Water Quality Certification.
+Office of Pollution Control.
+MDEQ. 1995.
+State of Mississippi Water Quality Criteria for Intrastate, Interstate, and Coastal Waters.
+Office of Pollution Control.
+MDEQ. 1998.
+Mississippi List of Waterbodies, Pursuant to Section 303(d) of the Clean Water Act .
+Office of Pollution Control.
+MDEQ. 1998.
+Mississippi 1998 Water Quality Assessment, Pursuant to Section 305(b) of the Clean Water Act .
+Office of Pollution Control.
+USEPA.
+1998.
+Better Assessment Science Integrating Point and Nonpoint Sources, BASINS, Version 2.0 User's Manual.
+U.S. Environmental Protection Agency, Office of Water, Washington, D.C.
+__________________________________________________________________________R- 1
+___________________________________________Fecal Coliform TMDL for Pearl River
+APPENDIX A This appendix contains printouts of the various model run results.
+Graph A-1 shows the modeled flow, in cubic feet per second, through reach 03180004010 compared to the USGS Station 02489500 flow data.
+The following graphs show the 30-day geometric mean for fecal coliform concentrations in counts per 100 ml in the listed section of the Pearl River.
+The graphs contain a reference line at 200 counts per 100 ml.
+Graph A-2 shows the fecal coliform levels in the listed reach (03180004002) during the 11-year modeling period.
+The TMDL calculated in this report represents the fecal coliform load that is estimated in the waterbody segment during the critical 30-day period.
+The calculation of this TMDL is based on the critical hydrologic flow condition that occurred during the modeled time span.
+The graph showing the 30-day geometric mean of instream fecal coliform concentrations representing the loading scenario for the most downstream reach was used to identify the critical condition.
+The TMDL calculation includes the sum of the loads from all identified point and nonpoint sources applied or discharged within the modeled watershed.
+An individual TMDL calculation was prepared for each listed waterbody segment included in this report.
+The numerical values for the wasteload allocation (point sources) and load allocation (nonpoint sources) for each waterbody segment can be found on the waterbody segment identification pages at the beginning of this report.
+_________________________________________________________________________AA- 1
+_______________________________________________________________________________________Fecal Coliform TMDL for Pearl River
+Graph A-1 Daily Flow Comparison between USGS Gage Station 02489500 and Reach 03180004010 for 01/01/1988 - 12/31/1988 120000
+100000
+80000
+Flow (cfs)
+60000
+40000
+20000
+0 01/01/88
+02/01/88 03/01/88
+04/01/88 05/01/88 06/01/88 07/01/88
+08/01/88
+09/01/88 10/01/88 11/01/88 12/01/88 Modeled Flow
+Observed Flow
+___________________________________________________________________________________________________________________AA- 2
+_______________________________________________________________________________________Fecal Coliform TMDL for Pearl River
+Graph A-2 Modeled Fecal Coliform Concentrations Under Existing Conditions for Reach 03180004002 900
+800
+700 Fecal Coliform (counts/100 ml)
+600
+500
+400
+300
+200
+100
+0 01/01/1985 01/01/1986 01/01/1987 01/01/1988 01/01/1989 01/01/1990 01/01/1991 01/01/1992 01/01/1993 01/01/1994 01/01/1995 Fecal Coliform 30-Day Geometric Mean Water Quality Standard (200 counts/100 ml)
+___________________________________________________________________________________________________________________AA- 3

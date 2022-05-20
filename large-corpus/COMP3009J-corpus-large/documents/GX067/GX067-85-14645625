@@ -1,0 +1,292 @@
+HEP Random release 2.1.1 - Thu, Jan 28 1999 __________________________________________________________________ 1.
+Introduction.
+2.
+Classes description.
+3.
+Distribution Classes description 
+4.
+Design Issues.
+__________________________________________________________________
+1.
+Introduction
+The HEP Random module originally part of GEANT4, has been designed and developed starting from the Random class of MC++, the CLHEP's HepRandom module with no persistency and the Rogue Wave approach in Math.h++ package.
+The current release consists of 24 classes implementing 12 different random engines and 10 different random distributions.
+Each random distribution belongs to a different distribution-class which can collect different algorithms and different calling sequence for each method to define distribution parameters or range-intervals.
+Each distribution-class collects also methods to fill arrays of specified size of distributed random values.
+There are 3 different ways of shooting random values:
+Using the static generator defined in HepRandom: random values are shooted using static methods shoot() defined for each distribution class.
+The static generator will use as default engine an HepJamesRandom global object and the user can set its properties or change it with a new instantiated engine object by using the static methods defined in HepRandom.
+The static generator is a singleton; createInstance() is the method to invoke to create it.
+Skiping the static generator and specifying an engine object: random values are shooted using static methods shoot(*HepRandomEngine) defined for each distribution class.
+The user must instantiate an engine object and give it as argument to the shoot method.
+The generator mechanism will be then by-passed by using the basic flat() method of the specified engine.
+The user must take care of the engine objects he/she instantiates.
+Skiping the static generator and instantiating a distribution object: random values are shooted using methods fire() (NOT static) defined for each distribution class.
+The user must instantiate a distribution object giving as argument to the constructor an engine by pointer or by reference.
+Doing so, the engine will be associated to the distribution object and the generator mechanism will be by-passed by using the basic flat() method of that engine.
+If the engine is passed by pointer the corresponding engine object will be deleted by the distribution's destructor, if passed by reference it will not be deleted by the distribution's destructor.
+2.
+Classes description
+HepRandomEngine Is the abstract class defining the interface for each random engine.
+It implements the getSeed() and getSeeds() methods which return the initial seed value and the initial array of seeds respectively.
+It defines 7 pure virtual functions: flat(), flatArray(), setSeed(), setSeeds(), saveStatus(), restoreStatus() and showStatus(), which are implemented by the concrete random engines each one inheriting from this abstract class.
+Many concrete random engines can be defined and added to the structure, simply making them inheriting from HepRandomEngine and defining concrete methods for them in such a way that flat() and flatArray() return double random values ranging between ]0,1[.
+All the random engines have a default seed value already set.
+They can however be instantiated with a different seed value set up by the user.
+The user, whenever necessary, can initialise the engine with a new seed by either using a static method defined in HepRandom, or the methods to set seeds defined in the engine itself.
+Methods saveStatus() and restoreStatus() can be used to save to file the current status of an engine and restore it from a previous saved configuration.
+The showStatus() method dumps on screen the status of the engine currently in use.
+All these methods can be called statically from HepRandom or directly at engine level.
+HepJamesRandom This class implements the algorithm described in "F.James, Comp.
+Phys.
+Comm. 60 (1990) 329" for pseudo-random numbers generation.
+This is the default random engine for the static generator; it will be invoked by each distribution class unless the user sets a different one.
+The engine state can be streamed through ad-hoc defined stream operators 
+DRand48Engine Random engine using the drand48() and srand48() system functions from C standard library to implement the flat() basic distribution and for setting seeds respectively.
+DRand48Engine uses the seed48() function from C standard library to retrieve the current internal status of the generator, which is represented by 3 short values.
+Copies of an object of this kind are not allowed.
+The engine state can be streamed through ad-hoc defined stream operators 
+RandEngine Simple random engine using the rand() and srand() system functions from C standard library to implement the flat() basic distribution and for setting seeds respectively.
+To keep track of the current status of an engine of this kind, a counter is used and its value is stored as data-member.
+Copies of an object of this kind are not allowed.
+The engine state can be streamed through ad-hoc defined stream operators 
+RanluxEngine The algorithm for RanluxEngine has been taken from the original implementation in FORTRAN77 by Fred James, part of the MATHLIB HEP library.
+The initialisation is carried out using a Multiplicative Congruential generator using formula constants of L'Ecuyer as described in "F.James, Comp.
+Phys.
+Comm. 60 (1990) 329-344".
+It provides 5 different luxury levels:
+level 0 (p=24): equivalent to the original RCARRY of Marsaglia and Zaman, very long period, but fails many tests.
+level 1 (p=48): considerable improvement in quality over level 0, now passes the gap test, but still fails spectral test.
+level 2 (p=97): passes all known tests, but theoretically still defective.
+level 3 (p=223): DEFAULT value.
+Any theoretically possible correlations have very small chance of being observed.
+level 4 (p=389): highest possible luxury, all 24 bits chaotic.
+When instantiating a RanluxEngine, the user can specify the luxury level to the constructor (if not, the default value is taken): ex. ...
+RanluxEngine theRanluxEngine(seed,4); // instantiates an engine with "seed" and the best luxury-level ... or RanluxEngine theRanluxEngine; // instatiates an engine with default seed value and luxury-level 3 ...
+The class provides a method getLuxury() to get the engine luxury level.
+The SetSeed() and SetSeeds() methods can be invoked specifying the luxury level: ex. ...
+HepRandom::setTheSeed(seed,4); // sets the seed to "seed" and luxury // to 4 HepRandom::setTheSeed(seed); // sets the seed to "seed" keeping the // current luxury level
+The engine state can be streamed through ad-hoc defined stream operators 
+Ranlux64Engine The algorithm for this random engine has been taken from the notes of a double-precision ranlux implementation by Martin Luscher, dated November 1997.
+This engine has "luxury" levels, determining how many pseudo-random numbers are discarded for every twelve values used.
+Three levels are given, with the note that Luscher himself advocates only the highest two levels for this engine.
+level 0 (p=109): Throw away 109 values for every 12 used
+level 1 (p=202): DEFAULT.
+Throw away 202 values for every 12 used
+level 2 (p=397): Throw away 397 values for every 12 used
+The initialization is carried out using a Multiplicative Congruential generator using formula constants of L'Ecuyer as described in "F.James, Comp.
+Phys.
+Comm. 60 (1990) 329-344".
+The engine state can be streamed through ad-hoc defined stream operators 
+RanecuEngine The algorithm for RanecuEngine is taken from the one originally written in FORTRAN77 as part of the MATHLIB HEP library.
+The initialisation is carried out using a Multiplicative Congruential generator using formula constants of L'Ecuyer as described in "F.James, Comp.
+Phys.
+Comm. 60 (1990) 329-344".
+Seeds are taken from SeedTable given an index, the getSeed() method returns the current index of SeedTable.
+The setSeeds() method will set seeds in the local SeedTable at a given position index (if the index number specified exceeds the table's size, (index%size) is taken): ex. ... int index=n; long seeds[2]; const long* table; table = HepRandom::getTheSeeds(); // it returns a pointer "table" to the local SeedTable at the // current "index" position ...
+HepRandom::setTheSeeds(seeds,index); // sets the new "index" for seeds and modify the values inside // the local SeedTable at the "index" position.
+If the index is // not specified, the current index in the table is considered.
+...
+The setSeed() method resets the current status of the engine to the original seeds stored in the static table of seeds in HepRandom, at the specified index.
+The engine state can be streamed through ad-hoc defined stream operators 
+Hurd160Engine The starting point for the Hurd Random algorithm is the paper in "IEEE Transactions on Computers c23, 2 Feb 1974".
+The algorithm is essentially a series of 32 interconnected b-bit registers.
+The basic property is that at each step, bit 1 becomes bit 0, bit 2 the new bit 1, bit b the new bit b-1.
+This is modified so that the new bit b0 is the old bit b1 XOR'd with some bit b-d from the previous bit register.
+The values of d can be chosen so as to generate a primitive polynomial, a maximal length sequence through all bit patterns except the zero pattern.
+This engine uses values based upon Table I of the afore mentioned paper, such that we have 160 total bits, representing 32 5-bit registers (actually implemented as an array of 5 32-bit words).
+The engine state can also be streamed through ad-hoc defined stream operators 
+Hurd288Engine The algorithm adopted for this engine is essentially the same as for Hurd160Engine, except that it acts over a number of 288 total bits, representing 32 9-bit registers (actually implemented as an array of 9 32-bit words).
+The engine state can be streamed through ad-hoc defined stream operators 
+MTwistEngine The algorithm for this random engine is based on the article by M. Matsumoto and T. Nishimura, "Mersenne Twister: A 623-dimensionally equidistributed uniform pseudorandom number generator", to appear in ACM Trans.
+on Modeling and Computer Simulation.
+It is a twisted GFSR generator with a Mersenne-prime period of 2^19937-1, uniform on open interval (0,1).
+For further information, see www.math.keio.ac.jp/~matumoto/emt.html.
+The engine state can be streamed through ad-hoc defined stream operators 
+RanshiEngine The algorithm for this random engine was taken from "F.Gutbrod, Comp.
+Phys.
+Comm. 87 (1995) 291-306".
+As figurative explanation of the algorithm, imagine a physical system as follows: 512 "black balls" each with their own unique spin, and positions characterized by discrete angles, where the spin is a 32-bit unsigned integer.
+A "red ball" collides based upon the angle determined by the last 8 bits of its spin, and the spin of the colliding ball is taken as the output random number.
+The spin of the colliding ball is replaced then with the left circular shift of the black ball's spin XOR'd with the red ball's spin.
+The black ball's old spin becomes the red ball's.
+To avoid the traps presented, two measures are taken: first, the red ball will oscillate between hitting the lower half of the buffer on one turn and the upper half on another; second, the red ball's spin is incremented by a counter of the number of random numbers produced.
+The result is scaled to a double precision floating point number to which is added another random double further scaled 2^(53-32) places to the right in order to ensure that the remaining bits of the result are not left empty due to the mere 32 bits representation used internally.
+The engine state can be streamed through ad-hoc defined stream operators 
+DualRand Engine This is a 32-bit C++ implementation of the Canopy random number generator DualRand: exclusive-or of a feedback shift register and integer congruence random number generator.
+The feedback shift register uses offsets 127 and 97.
+The integer congruence generator uses a different multiplier for each stream.
+The multipliers are chosen to give full period and maximum potency for modulo 2^32.
+The period of the combined random number generator is 2^159 - 2^32, and the sequences are different for each stream (not just started in a different place).
+The engine state can be streamed through ad-hoc defined stream operators 
+TripleRand Engine TripleRand is canopy pseudo-random number generator.
+It uses the Tausworthe exclusive-or shift register, a simple Integer Coungruence generator, and the Hurd 288 total bit shift register, all XOR'd with each other.
+It behavies similarly to DualRand, with the addition of the Hurd288Engine.
+In addition to DualRand, this generator is amended to also add in the exclusive or of the 288-total bit Hurd engine which in this case is a series of 32 interconnected 9-bit shift registers, with the newest bit of each register formed by the XOR of the previous bit and some bit b-d from a previous register, where d is chosen to create a primitive polynomial to maximize the period.
+The engine state can be streamed through ad-hoc defined stream operators 
+HepRandom This is a singleton class, instantiated by default within the HEP Random module and using an HepJamesRandom engine as default algorithm for pseudo-random number generation.
+However, on some compilers the static instance of the HepRandom generator needs to be created explicitly in the client code.
+The static generator is assured to be correctly initialized by including the Randomize.h header in the client code, or by invoking explicitly the HepRandom::createInstance() static function before any usage of the Random classes.
+ex. HepRandom::createInstance(); // to force instantiation of static generato r // before any usage of HepRandom classes!
+HepRandom defines a static private data member theGenerator and a set of static inlined methods to manipulate it.
+By means of theGenerator the user can change the underlying engine algorithm, get and set the seeds and use any kind of defined random distribution.
+The static methods setTheSeed() and getTheSeed() will set and get respectively the initial seed to the main engine used by the static generator.
+The static method getTheTableSeeds() returns the seeds stored in the global seedTable at the given position.
+ex. ...
+HepRandom::setTheSeed(seed); // to change the current seed to 'seed' int startSeed = HepRandom::getTheSeed(); // to get the current ... // initial seed HepRandom::saveEngineStatus(); // to save the current engine status // on file.
+HepRandom::restoreEngineStatus(); // to restore the current engine to // a previous saved configuration.
+HepRandom::showEngineStatus(); // to display the current engine // status to the std output.
+... int index=n; long seeds[2]; HepRandom::getTheTableSeeds(seeds,index); // fills "seeds" with the values stored in the global seedTable // at position "index"
+Only one random engine can be active at a time, the user can decide at any time to change it, define a new one (if not done already) and set it: ex. ... DRand48Engine theNewEngine; HepRandom::setTheEngine(
+or simply setting it to an old instantiated engine (the old engine status is kept and the new random sequence will start exactly from the last one previously interrupted): ex. ...
+HepRandom::setTheEngine(
+3.
+Distribution Classes description 
+RandFlat Distribution-class defining methods for shooting flat random numbers, double or integers.
+It provides also methods to fill with double flat values arrays of specified size. ex. ... double m,n; ... double fnum = RandFlat::shoot(); // fnum ]
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution provided by the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RanecuEngine theRanecuEngine; double m,n; ... double fnum = RandFlat::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandFlat object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandFlat.
+These methods will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandFlat destructor, if passed by reference it will not be deleted by the RandFlat destructor.
+An operator () corresponding to the fire() method is provided.
+ex. ...
+RanecuEngine aRanecuEngine; RandFlat FlatDist(aRanecuEngine); double m,n; ... double fnum = FlatDist.fire(); // fnum ]0,1[ double fnum = FlatDist.fire(n); // fnum ]
+RandExponential Distribution-class defining methods for shooting exponential distributed random values, given a mean (default mean = 1). ex. ... double m; ... double num = RandExponential::shoot(); // (mean=1) double num = RandExponential::shoot(m); // (mean=m)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RanluxEngine theRanluxEngine(19780503,4); double m; ... double num = RandExponential::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandExponential object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandExponential; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandExponential destructor, if passed by reference it will not be deleted by the RandExponential destructor.
+An operator () using the default mean value is provided.
+ex. ...
+RanluxEngine aRanluxEngine(19780503,4); RandExponential ExpDist(aRanluxEngine); double m; ... double num = ExpDist.fire(); // (mean=1) double num = ExpDist.fire(m); // (mean=m)
+RandGauss Distribution-class defining methods for shooting gaussian distributed random values, given a mean (default = 0) or specifying also a deviation (default = 1) .
+Gaussian random numbers are generated two at the time, so every other time shoot() or fire() is called the number returned is the one generated the time before.
+ex. ... double m,s; ... double num = RandGauss::shoot(); // (mean=0) double num = RandGauss::shoot(m,s); // (mean=m, stDev=s)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RandEngine theRandEngine; double m,s; ... double num = RandGauss::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandGauss object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandGauss; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandGauss destructor, if passed by reference it will not be deleted by the RandGauss destructor.
+An operator () using default mean and deviation is provided.
+ex. ...
+RandEngine aRandEngine; RandGauss GaussDist(aRandEngine); double m,s; ... double num = GaussDist.fire(); double num = GaussDist.fire(m,s);
+RandBreitWigner Distribution-class defining methods for shooting numbers according to the Breit-Wigner distribution algorithms (plain or mean^2). ex. ... double m,g,c; ... double num = RandBreitWigner::shoot(m,g); // (mean=m, gamma=g) double num = RandBreitWigner::shoot(m,g,c); // (mean=m, gamma=g, cut=c)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ... double m,g,c; DRand48Engine theDRand48Engine; ... double num = RandBreitWigner::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandBreitWigner object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandBreitWigner; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandBreitWigner destructor, if passed by reference it will not be deleted by the RandBreitWigner destructor.
+An operator () using the plain algorithm and default values is provided.
+ex. ... double m,g,c; DRand48Engine aDRand48Engine; RandBreitWigner BWDist(aDRand48Engine); ... double num = BWDist.fire(m,g); double num = BWDist.fire(m,g,c);
+RandPoisson Distribution-class defining methods for shooting numbers according to the Poisson distribution, given a mean (default = 1) (Algorithm taken from "W.H.Press et al., Numerical Recipes in C, Second Edition"). ex. ... double m; ... long num = RandPoisson::shoot(m); // (mean=m)
+Other static methods are provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RanecuEngine theRanecuEngine; double m; ... long num = RandPoisson::shoot(
+Other fire()/fireArray() methods are provided to shoot random numbers via an instantiated RandPoisson object.
+These methods act directly on the flat distribution of the engine passed as argument to the constructor of RandPoisson; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandPoisson destructor, if passed by reference it will not be deleted by the RandPoisson destructor.
+Operators () are provided.
+ex. ...
+RanecuEngine aRanecuEngine; RandPoisson PoissonDist(aRanecuEngine); double m; ... long num = PoissonDist.fire(m); // (mean=m)
+RandBinomial Class defining methods for shooting binomial distributed random values, given a sample size n (default=1) and a probability p (default=0.5).
+Default values are used for operator ().
+Valid input values satisfy the relation n*min(p,1-p) 
+When invalid values are presented, the code silently returns -1.
+ex. ... double n,p; ... double num = RandBinomial::shoot(); // (sample=1, prob=1) double num = RandBinomial::shoot(n,p); // (sample=n, prob=p)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RanshiEngine theRanshiEngine; double n,p; ... double num = RandBinomial::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandBinomial object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandBinomial; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandBinomial destructor, if passed by reference it will not be deleted by the RandBinomial destructor.
+Operators () are provided.
+ex. ... Hurd160Engine aHurd160Engine; RandBinomial BinDist(aHurd160Engine); double n,p; ... double num = BinDist.fire(); // (sample=1, prob=1) double num = BinDist.fire(n,p); // (sample=n, prob=p)
+RandChiSquare Class defining methods for shooting Chi^2 distributed random values, given a number of degrees of freedom a (default=1.0).
+Default values are used for operator ().
+Valid values of a satisfy a 
+When invalid values are presented, the code silently returns -1.
+ex. ... double a; ... double num = RandChiSquare::shoot(); // (deg=1) double num = RandChiSquare::shoot(a); // (deg=a)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+DualRand theDualRandEngine; double a; ... double num = RandChiSquare::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandChiSquare object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandChiSquare; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandChiSquare destructor, if passed by reference it will not be deleted by the RandChiSquare destructor.
+Operators () are provided.
+ex. ... Hurd288Engine aHurd288Engine; RandChiSquare Chi2Dist(aHurd288Engine); double a; ... double num = Chi2Dist.fire(); // (deg=1) double num = Chi2Dist.fire(a); // (deg=a)
+RandGamma Class defining methods for shooting gamma distributed random values, given a k (default=1) and specifying also a lambda (default=1).
+Default values are used for operator ().
+Valid input values are k 
+When invalid values are presented, the code silently returns -1.
+ex. ... double a,lm; ... double num = RandGamma::shoot(); // (k=1, lambda=1) double num = RandGamma::shoot(a,lm); // (k=a, lambda=lm)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+MTwistEngine theMTwistEngine; double a,lm; ... double num = RandGamma::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandGamma object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandGamma; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandGamma destructor, if passed by reference it will not be deleted by the RandGamma destructor.
+Operators () are provided.
+ex. ... Ranlux64Engine aRanlux64Engine; RandGamma GammaDist(aRanlux64Engine); double a,lm; ... double num = GammaDist.fire(); // (k=1, lambda=1) double num = GammaDist.fire(a,lm); // (k=a, lambda=lm)
+RandStudentT Class defining methods for shooting Student's t- distributed random values, given a number of degrees of freedom a (default=1.0).
+The implementation is based on the one provided in the C-Rand package by Ernst Stadlober and Franz Niederl of the Technical University of Graz, Austria (May 1998).
+Default values are used for operator ().
+Valid input values are a 
+When invalid values are presented, the code silently returns HUGE_VAL from math.h. ex. ... double a; ... double num = RandStudentT::shoot(); // (deg=1) double num = RandStudentT::shoot(a); // (deg=a)
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+TripleRand theTripleRandEngine; double a; ... double num = RandStudentT::shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandStudentT object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandStudentT; they will by-pass the HepRandom generator mechanism.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandStudentT destructor, if passed by reference it will not be deleted by the RandStudentT destructor.
+Operators () are provided.
+ex. ...
+RandEngine aRandEngine; RandChiSquare StudDist(aRandEngine); double a; ... double num = StudDist.fire(); // (deg=1) double num = StudDist.fire(a); // (deg=a)
+RandGeneral This class defines methods for shooting generally distributed random values, given a user-defined probability distribution function.
+The probability distribution function Pdf must be provided by the user as an array of positive real numbers.
+The array size must also be provided.
+Pdf doesn't need to be normalized to 1.
+NOTE - No static methods are provided by this class, since objects of this kind must be explicitly instantiated ! ex. ... double* probList; int nBins; ...
+RandGeneral GenDist(probList,nBins); double num = GenDist.shoot(); // shoots values using the engine // in the static generator.
+shoot() // provides the same functionality // of fire() in this case.
+A speculate set of static methods is provided to shoot random numbers from given random engines.
+Using these methods, the user is responsible of the state of the random engine(s) he/she is activating, since these methods act directly on the flat distribution of the engine, by-passing the HepRandom generator mechanism.
+ex. ...
+RanecuEngine aRanecuEngine; double* probList; int nBins; ...
+RandGeneral GenDist(probList,nBins); double num = GenDist.shoot(
+A speculate set of fire()/fireArray() methods is provided to shoot random numbers via an instantiated RandGeneral object.
+These methods act directly on the flat distribution provided by the engine given as argument to the constructor of RandGeneral; in case an engine is not specified the engine of the static generator will be used.
+If the engine is passed by pointer to the constructor, the corresponding engine object will be deleted by the RandGeneral destructor, if passed by reference it will not be deleted by the RandGeneral destructor.
+An Operator () is provided.
+ex. ...
+RanluxEngine aRanluxEngine; double* probList; int nBins; ...
+RandGeneral GenDist(aRanluxEngine,probList,nBins); ... double num = GenDist.fire(); // shoots values using the specified // engine local to the distribution
+4.
+Design Issues
+The use of a static generator has been introduced in the original design of HEP Random as a project requirement in Geant4.
+In applications like Geant4, where it is necessary to shoot random numbers (normally of the same engine) in many different methods and parts of the program, it is highly desirable not to have to rely-on/know global objects instantiated.
+By using static methods via a unique generator, randomness of a sequence of numbers is best assured.
+Analysis and design of the HEP Random module have been achieved following the Booch Object-Oriented methodology.
+Here follows a list of diagrams describing the model according to the Booch notation:
+Class Diagram
+Object Diagram: shooting via the generator
+Object Diagram: shooting via distribution objects
+Object Diagram: shooting with arbitrary engines
+Interaction Diagram: shooting via the generator
+Interaction Diagram: shooting via distribution objects
+Interaction Diagram: shooting with arbitrary engines
+Class Specifications __________________________________________________________________

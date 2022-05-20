@@ -1,0 +1,1575 @@
+MoDOT Research, Development and Technology University of Missouri-Columbia University of Missouri-Rolla R DT 03-017 Highway/ Rail Crossing Project Selection R I 01-010 December, 2003 Final Report RDT 03-017 Highway Rail Crossing Project Selection December 2003 Prepared for: Missouri Department of Transportation Research, Development and Technology Division By: Dr. Mohammad Qureshi1, Dr. Mark R. Virkler2, Dr. Kristen L. Sanford Bernhardt3, Dr. Gary Spring1, Sindhu Avalokita1, Naveen Yathapu1, Venkata Chilukuri2, Tyson King2, Katrina Gibbons3 1
+Civil, Architectural and Environmental Engineering Â­ UMR 134 Butler-Carlton Hall, 1870 Miner Circle Rolla, MO 65409
+2
+Department of Civil and Environmental Engineering Â­ UMC Room E2509 EBE Columbia, MO 65211-2200
+3
+Department of Civil and Environmental Engineering - Lafayette College Easton, PA 18042
+The opinions, findings, and conclusions expressed in this publication are those of the principal investigators.
+They are not necessarily those of the Missouri Department of Transportation, the Federal highway Administration, or the U.S. Department of Transportation.
+This report does not constitute a standard or regulation.
+TECHNICAL REPORT DOCUMENTATION PAGE 1.
+Report No.
+RDT 03-017 4.
+Title and Subtitle Highway Rail Crossing Project Selection 2.
+Government Accession No. 3.
+Recipient's Catalog No. 5.
+Report Date December 2003 6.
+Performing Organization Code UMC UMR 8.
+Performing Organization Report No.
+RDT 03-017/ RI01-010
+7.
+Author(s): Dr. Mohammad Qureshi, Dr. Mark R. Virkler, Dr. Kristen L. Sanford Bernhardt, Dr. Gary Spring, Sindhu Avalokita, Naveen Yathapu, Venkata Chilukuri, Tyson King, Katrina Gibbons 9.
+Performing Organizations Name and Address 10.
+Work Unit No.
+Civil, Architectural and Environmental Engineering Â­ UMR 134 Butler-Carlton Hall, 1870 Miner Circle 11.
+Contract or Grant No.
+Rolla, MO 65409 RI01-010 Department of Civil and Environmental Engineering Â­ UMC Room E2509 EBE Columbia, MO 65211-2200 12.
+Sponsoring Agency Name and Address 13.
+Type of Report and Period Covered Missouri Department of Transportation Final Report Research, Development and Technology 14.
+Sponsoring Agency Code P. O. Box 270-Jefferson City, MO 65102 MoDOT 15.
+Supplementary Notes The investigation was conducted in cooperation with the U. S. Department of Transportation, Federal Highway Administration.
+16.
+Abstract The Missouri Department of Transportation (MoDOT) currently uses an Exposure Index formula to prioritize its more than 4000 highway/rail crossings for safety upgrades.
+The EI formula was developed in the 1970's and has not changed since then.
+This study evaluates the effectiveness of the EI formula and examines the possibility of adoption of an alternative formula for use in Missouri for prioritizing crossings for safety improvements.
+Seven models used by other states to prioritize rail-highway grade crossings were selected for study.
+A panel of officials associated with MoDOT, the U.S. Department of Transportation, and Railroad Companies was assembled to provide guidance to identify the most desirable models.
+Eight criteria, along with their relative importance, were identified to rank the models.
+After the models were analyzed and final indices developed, the panel of experts was assembled again to review and select a potential replacement model for the EI.
+The panel recommended the research team conduct sensitivity analyses on modifying the Kansas Design Hazard Rating model for possible use in Missouri.
+Subsequent analyses were inconclusive in determining potential modifications to the Kansas Model.
+However, it is our finding that consideration should be given to replacing the EI with a form of the Kansas model and that further research be conducted on defining the necessary modifications to the Kansas Model.
+17.
+Key Words Railroad safety, crossing protection 19.
+Security Classification (of this report) Unclassified 18.
+Distribution Statement No restrictions.
+This document is available to the public through National Technical Information Center, Springfield, Virginia 22161 20.
+Security Classification (of this page) 21.
+No. of Pages 22.
+Price Unclassified 77
+Form DOT F 1700.7 (06/98)
+2
+TABLE OF CONTENTS TABLE OF CONTENTS............................................................................................................. i EXECUTIVE SUMMARY ....................................................................................................... iii 1 INTRODUCTION .................................................................................................................1 2 OBJECTIVES .......................................................................................................................4 3 PRESENT CONDITIONS ....................................................................................................5 3.1 MISSOURI'S EXPOSURE INDEX FORMULA.
+.........................................................
+5 4 TECHNICAL APPROACH ..................................................................................................7 4.1 MODEL SELECTION....................................................................................................
+7 4.1.1 USDOT Accident Prediction Model.
+......................................................................
+7 4.1.2 California's Hazard Rating Formula.
+....................................................................
+10 4.1.3 Connecticut's Hazard Rating Formula..................................................................
+11 4.1.4 Modified New Hampshire formula.
+......................................................................
+12 4.1.5 Kansas's Design Hazard Rating Formula.
+............................................................
+13 4.1.6 Missouri's Exposure Index Formula.....................................................................
+14 4.1.7 Illinois's modified expected accident frequency formula .....................................
+15 4.2 FORMATION OF EXPERT PANEL...........................................................................
+15 4.3 WEIGHTING FACTORS.............................................................................................
+17 4.4 EVALUATION METHODOLOGY ............................................................................
+17 4.4.1 Accuracy ...............................................................................................................
+18 4.4.2 Explainability ........................................................................................................
+21 4.4.3 Number of difficult variables.
+...............................................................................
+22 4.4.4 Number of total variables......................................................................................
+22 4.4.5 Number of unavailable variables ..........................................................................
+23 4.4.6 Inclusion of crossing control type .........................................................................
+24 4.4.7 Inclusion of weighting factors ..............................................................................
+24 4.4.8 Number of Key Variables.
+....................................................................................
+25 4.4.9 Computation of Final Index ..................................................................................
+26 4.5 DATA REQUIREMENTS............................................................................................
+27 5 RESULTS AND DISCUSSION .........................................................................................28 5.1 Modified EI ...................................................................................................................
+28 5.2 Rankings of Models based on Final index ....................................................................
+28 5.3 Expert Panel Review of Findings .................................................................................
+29 5.3.1 Data collection of sight distance information .......................................................
+30 5.3.2 Kansas Formula Accuracy ....................................................................................
+32 5.3.3 Reformulation of the distance factor.....................................................................
+34 5.3.4 Reformulation of the multiplication and root factors ...........................................
+36 5.3.5 Summary of Sensitivity Analyses .........................................................................
+37
+i
+5.4 DATA REQUIREMENTS............................................................................................
+39 6 CONCLUSIONS .................................................................................................................43 7 RECOMMENDATIONS ....................................................................................................45 8 REFERENCES ....................................................................................................................46 9 Principal Investigators and Project Members ......................................................................47 10 Affected Business Units and Principal Contact ..................................................................48 Appendix I: WORKSHOP ATTENDEES ................................................................................49 Appendix II: Weights of Measures from Expert Panel .............................................................51 Appendix III: MISSOURI CROSSING INVENTORY ...........................................................53 Appendix IV: EVALUATION OF MODELS ..........................................................................55 1 Accident Prediction Model .................................................................................................
+56 2 California's Hazard Index ...................................................................................................
+57 3 Connecticut's Hazard Index.................................................................................................58 4 Modified New Hampshire Formula ....................................................................................
+59 5 Kansas's Design Hazard Rating Formula ...........................................................................
+60 6 Missouri's Exposure Index Formula...................................................................................
+61 7 Illinois's Modified Expected Accident Frequency Formula ...............................................
+62 Appendix V: SENSITIVITY ANALYSIS: ..............................................................................63 Appendix VI: REQUIRED APPROACH 
+ii
+EXECUTIVE SUMMARY Missouri has over 4000 Highway/Rail crossings.
+The Missouri Department of Transportation (MODOT) currently uses an Exposure Index formula to prioritize crossings for safety upgrades at rail-highway crossings.
+The EI formula was developed in the 1970's and has not changed since then.
+This study evaluates the effectiveness of the EI formula and examines the possibility of adoption of an alternative formula for use in Missouri for prioritizing crossings for safety improvements.
+A list of models used by different states to prioritize rail-highway grade crossings was assembled.
+The source of this list is a report produced by the University of Illinois in September 2000 (Elzohairy and Benekohal, 2000).
+Seven models, which are generally used by most of the states, were selected for study.
+Following the identification of models for study, a panel of officials associated with MoDOT, the U.S. Department of Transportation, and Railroad Companies was assembled to participate in a one day workshop.
+The panel was asked to address several questions: Â· Â· Â· Â· What are the objectives of a grade crossing model? What are the key characteristics of a `good' grade crossing model? What key variables should be present in a `good' grade crossing model? How do we identify the "best" model?
+At the end of the workshop, eight criteria, along with their relative importance, were identified that could be used to select a "best" model.
+These criteria and their associated weights were combined into an index value that was then used to rank the models.
+The most important criterion was the accuracy of each model in predicting the ranking of crossings in Missouri.
+In order to assess this performance, data were obtained for 12 representative crossings (6 with passive control and 6 with flashing lights) across the state from
+the Missouri Crossing Inventory.
+MoDOT staff then ranked these sites within each category to establish baseline rankings.
+The ability of each of the models under consideration to replicate these baseline rankings was quantified with a simple Spearman rank correlation coefficient.
+After the models were analyzed and final indices developed, the panel of experts was assembled again to review and select a potential replacement model for the EI.
+In preparation for this second workshop, a modification of the EI formula was also developed.
+At the end of this second workshop, the panel recommended the research team conduct sensitivity analyses on modifying the Kansas Design Hazard Rating model for possible use in Missouri.
+Subsequent analyses were inconclusive in determining potential modifications to the Kansas Model.
+However, it is our finding that consideration should be given to replacing the EI with a form of the Kansas model and that further research be conducted on defining the necessary modifications to the Kansas Model.
+iv
+1
+INTRODUCTION The Missouri Department of Transportation (MoDOT) seeks to ensure the maximum
+possible level of safety at the approximately 4000 highway/rail crossings in the state.
+Prioritizing the 4000 locations with widely varying traffic, geometric, and control characteristics is a highly complex task.
+The Missouri crossing improvement program currently uses a calculated Exposure Index (EI) to prioritize for possible improvements.
+High priority sites are studied in detail to develop specific improvement using the funds available from a range of funding categories.
+Missouri's EI has remained unchanged since it was developed in the 1970's.
+At the request of MoDOT, researchers at the University of Missouri-Rolla and University of MissouriColumbia have jointly undertaken a study to examine the efficacy of the Exposure Index formula and recommend potential enhancements.
+Highway-rail grade crossings are controlled through the use of two kinds of warning devices- passive and active.
+Passive traffic control systems, consisting of signs and pavement markings, identify and direct attention to the location of a highway-rail grade crossing and advise drivers, bicyclists, and pedestrians to take appropriate action (FHWA 2000).
+Active traffic control systems inform drivers, bicyclists, and pedestrians of the approach or presence of trains, locomotives, or other railroad equipment at highway-rail grade crossings (FHWA 2000).
+Active control is achieved through the use of electric devices that are triggered by the passing of the train over a track.
+Gates and flashing lights are examples of active control devices.
+Current statistics say that roughly one-half of the United States' approximately 3,500 highway-rail incidents (and approximately 400 related fatalities) occur at passive crossings.
+Thirty years ago, the United States suffered about 1,500 fatalities a year at crossings.
+Now the number is four times lower, but there has been no clear improvement in driver behavior or crash
+experience for those at-grade crossings that still have only passive warning devices (NCHRP Report 470, 2002).
+It is obvious that the ideal solution to mitigate accidents would be separation of the rail track and the road.
+But this is not economically feasible in most situations.
+The next best thing is to install gates at all rail-highway grade crossings for which separation would not be possible.
+However, fiscal constraints again limit the installation of gates everywhere.
+So "use of gates is usually reserved for the most dangerous crossings and less-effective devices (passive devices) are installed at other locations" (Muth 
+Fiscal constraints make it imperative that funds be spent in a manner that will realize the most benefits (e.g., reduction in accidents).
+For this reason, the federal-aid highway program requires that each state have a systematic procedure for determining grade crossing improvement priorities.
+This procedure should allocate funds in a manner likely to produce the greatest accident and casualty reduction benefit.
+To do this, states developed models that could predict how dangerous a crossing maybe and thus allocate funds for safety improvements.
+The Department of Transportation/Association of American Railroads (DOT/AAR) Nation RailroadHighway Crossing Inventory and accident data helped with the development of these models.
+This inventory had in it data that were used to formulate relationships among the various geometric, traffic characteristics at a crossing and the accident frequency at the crossing ( Muth 
+The collection of crossing-specific data began in the early 1900's as a result of the Accidents Report Act (1910).
+The Act required rail carriers to submit reports of accidents involving rail and highway users.
+The Federal Railroad Administration (FRA) introduced a revised Act in 1975 that differed from the Act of 1910 in the criteria for reporting highway-rail accidents (Railroad-Highway Crossing Handbook 1986).
+This Act resulted in improved
+2
+inventories of accident data across the country.
+This in turn led to the development of the Resource Allocation Model (RAM)- a model that would help states allocate funds for improving safety levels at a crossing.
+The development of accident prediction formulas was a necessary precursor for the development of the RAM.
+The DOT rail-highway crossing accident prediction formulas were developed by using nonlinear multiple regression techniques applied to the crossing characteristics available in the national inventory and the accident data supplied by the Federal Railroad Administration (FRA).
+The model calculates the expected annual accident rate at a crossing.
+(Muth 
+Eck, 1986).
+Most states favored the use of a hazard index formula to indicate crossings with the greatest need for improvement.
+Other states preferred the use of a formula that would predict the number of accidents at a crossing.
+In either case, the most dangerous crossings would be indicated and suitable improvements could be made at that particular crossing.
+The procedure in making safety improvement decisions was to, first, rank all the crossings by some hazard model, then from this list to select the most hazardous crossings.
+On the basis of information gathered from on-site visits, the applicability of available alternatives, and expected safety improvements, a final decision was made.
+The result was a list of the most hazardous crossings (Muth 
+The difference between accident prediction models and hazard index models is suggested by the name itself.
+Accident prediction models produce an absolute expected number of accidents.
+Hazard index models produce a relative index for each crossing, which have value only when compared to the individual hazard indices produced by another crossing.
+Crossings that are higher ranked than others will be considered for engineering review and suitable treatments decided thereon.
+Funds are allocated once crossings are both ranked and reviewed.
+3
+2
+OBJECTIVES The objectives of this study are: Â· Â· To determine the best method/process for selecting highway/rail crossing projects in Missouri.
+The best procedure will then be documented for application.
+To identify promising new crossing treatments that can be applied in Missouri.
+4
+3 3.1
+PRESENT CONDITIONS MISSOURI'S EXPOSURE INDEX FORMULA.
+The Missouri crossing improvement program currently uses a calculated Exposure Index
+(EI) to prioritize crossings for possible improvements.
+High priority sites are studied in detail to develop specific improvements using the funds available from a range of funding categories.
+The EI formula is a two-part equation.
+The first is a relationship between the train and highway factors.
+The second adjusts for the highway approach sight distances.
+The EI formula uses nine factors: number and speed of vehicles, number of passenger and freight trains, speed of passenger and freight trains, switching movements, and required and actual sight distance.
+All nine factors, or data items, are currently maintained in Missouri's crossing inventory.
+The EI is computed differently depending on the type of control at the crossing.
+The highest priority is assigned to the crossing with the highest calculated index.
+When a passive to active upgrade is being considered, the EI is
+EI = TI + SDO(TI ) When considering upgrades from flashing lights to gates, the EI is equal to TI EI = TI Where TI = Traffic Index
+SDO = Sight Distance Obstruction Factor = Required Sight Distance - Actual Sight Distance Required Sight Distance
+The traffic index (TI) is the major component of the exposure index.
+It is determined as follows:
+5
+(VM Ã— VS ) [ ( FM Ã— FS ) + ( PM Ã— PS ) + ( SM Ã—10) 10000 Where TI =
+]
+TI EI VS VM PM PS FM FS SM
+= Traffic Index = Exposure Index = Vehicle Speed = Vehicle Movements = Passenger train movements = Passenger train speed = Freight train movements = Freight train speed = Switching movement
+6
+4
+TECHNICAL APPROACH In order to assess the Exposure Index (EI) and the potential replacements for the EI, the
+research team developed a four step framework for evaluating potential models.
+First potential models for review were selected.
+Second, a panel of experts was gathered to develop criteria for selecting the "best model.
+Third, relative weights were determined for these criteria.
+Lastly, the criteria were applied to the models under review.
+4.1 MODEL SELECTION
+The research team selected seven models that were most commonly used by states in some form and had potential for use in the State of Missouri.
+A few models that were studied are modified versions of a basic model and were selected because of the input variables used for calculating either the expected number of accidents or a hazard index were compatible with data collected in Missouri.
+The following are descriptions of the seven models selected for the study.
+4.1.1 USDOT Accident Prediction Model.
+The DOT accident prediction formula combines three calculations to produce an accident prediction value.
+The expected number of accidents at a crossing is calculated using the following formulas: Â· Â· Â· A formula that contains geometric and traffic factors from the inventory file A formula that involves crash history A formula that incorporates the effect of the existing warning devices
+The basic formula provides an initial prediction of accidents on the basis of crossing characteristics.
+It can be expressed as a series of factors that, when multiplied together, yield an initial prediction of the number of accidents per year at a crossing.
+Each factor in the formula represents a characteristic of the crossing.
+The formula is: 7
+a = K Ã— EI Ã— DT Ã— MS Ã— HP Ã— HL Ã— HT
+Where a = un-normalized initial crash prediction, in crashes per year at the crossing K = formula constant EI = factor for exposure index based on product of highway and train traffic DT = factor for number of through trains per day during daylight MS = factor for maximum timetable speed MT = factor for number of main tracks HP = factor for highway paved (yes or no) HL = factor for number of highway lanes The above factors are calculated from Table 4-1.
+Different sets of equations are used for each of the three categories of traffic control devices.
+Table 4-1: USDOT Accident Prediction Model Factors
+Day Through Trains Factor
+Highway Paved Factor
+Maximum Timetable Speed Factor
+K Passive 0.000693 8
+EI
+DT 0.37
+MS 0.178
+MT 1.0
+HP e0.5966 (hp-1)
+HL 1.0
+(c Ã— t + 0.2) 0.2 (c Ã— t + 0.2) 0.2 (c Ã— t + 0.2) 0.2
+(d + 0.2) 0.2 (d + 0.2) 0.2 (d + 0.2) 0.2
+e
+0.0077ms
+Flashing
+0.000335 1
+0.4106
+0.1131
+1.0
+e.1917
+mt
+1.0
+e
+(hl-1)
+Gates
+0.000574 5
+0.2942
+0.1781
+1.0
+e0.1512
+mt
+1.0
+e
+(hl-1)
+8
+Highway Lanes Factor 0.1826 0.1420
+Exposure Index Factor
+Main Tracks Factor
+Formula Constant
+Type of control
+The abbreviations in Table 4.1 are defined as follows: c = number of highway vehicles per day t = number of trains per day
+mt = number of main tracks d = number of through trains per day during daylight hp = highway paved? Yes=1.0 and No=2.0 ms = maximum timetable speed, mph hl = number of highway lanes The second formula, which is the general DOT accident prediction model, is expressed as follows: B= N T (a) T + (T + T ) (T + T ) T
+Where N T T0 = observed crashes in T years at the crossing = number of years of recorded crash data = formula weighting factor 1.0/ (0.05+a)
+The formula provides is most accurate if all the accident history data available is used; however, the extent of improvement is minimal if data for more than five years are used.
+Accident history information older than five years may be misleading because of changes that occur in the course of time.
+If a significant change has occurred to a crossing, like the installation of signals, only accident data since the change should be recorded.
+The final crash prediction was developed using the 1992 normalizing constants.
+The formula are:
+9
+A= 0.8239 Ã— B for passive A= 0.6935 Ã— B for Flashing lights A= 0.6714 Ã— B for Gates Where A= final accident prediction, crashes per year at the crossing To summarize the accident prediction model, the basic formula provides an initial prediction of accidents on the basis of a crossing characteristic.
+The second calculation utilizes the actual accident history and the output from the basic formula (a) at a crossing to produce an accident prediction value.
+The third and final formula calculates the final prediction value, using the output from the second formula (B) and a factor for each crossing control type.
+The assumption in this model is that the accidents/year in the future will be the same as the average accidents/year over the period of time used for calculation.
+4.1.2
+California's Hazard Rating Formula.
+California uses the hazard rating formula, which uses four factors- number of vehicles, number of trains, crossing protection type and the crash history as input to the model.
+This formula uses a ten-year crash history as input.
+This formula does not compute the number of crashes but rather produces a hazard index as a surrogate for the number of crashes.
+The highest priority is assigned to the crossing with the highest calculated index..
+The hazard index is calculated as:
+HI = V Ã— T Ã— PF + AH 1000 Where V= Number of vehicles T= Number of trains
+10
+PF= Protection Factor from Table 4-2 H= crash history= Total number of crashes within the last ten years*3 Table 4-2 Protection Factor Values
+Devices Stop sign or Cross buck Flashing lights Gates 4.1.3
+PF 1.0 0.33 0.13
+Connecticut's Hazard Rating Formula.
+Connecticut uses a hazard rating formula that is very similar to that of California.
+The only difference between the two is the crash history period.
+Connecticut uses a ten-year crash history while California uses a five-year history.
+This formula uses four factors - number of vehicles, number of trains, crossing protection type and the crash history as input to the model.
+This formula does not compute the number of crashes but rather produces a hazard index as a surrogate for the number of crashes.
+The highest priority is assigned to the crossing with the highest calculated index The Hazard Index is calculated from the following formula: (T + 1)( A + 1) Ã— AADT Ã— PF 100 Where T = Trains movements per day HI = A = Number of vehicle/train crashes in last 5 years AADT = Annual Average Daily Traffic PF = Protection Factor from Table 4-3 Table 4-3 Connecticut's Protection Factor Values
+Devices Passive Warning Devices Railroad Flashing lights Gates with railroad Flashing lights
+PF 1.25 0.25 0.01
+11
+4.1.4
+Modified New Hampshire formula.
+The original New Hampshire formula uses three factors- number of vehicles per day, number of trains per day and a protection factor based on the type of crossing.
+However, this model does not account for sight distance, which is an important variable for this study.
+Therefore, for this study, a modified version of this formula, developed by New Mexico, has been used.
+This formula does not compute the number of crashes but rather produces a hazard index as a surrogate for the number of crashes.
+The highest priority is assigned to the crossing with the highest calculated index.
+The Modified New Hampshire Formula is as follows: TrainADT Ã— HighwayADT Ã— PF Ã— SDf Ã— Ts Ã— AHf 100 Where HI =
+PF SDf
+= Protection Factor from Table 4-4 = Sight Distance Factor = 1.0 No Restrictions = 1.2 Restrictions at 1 quadrant = 1.5 Restriction at more than one quadrant
+Ts AHf A B= C
+= Train Speed (mph) = A 5-yr Crash History Factor = (A+B+C) = 0.10 for each Property Damage crash 0.20 for each injury crash = 0.30 for each fatal crash
+Table 4-4 Modified New Hampshire's Protection Factor Values
+Warning Device Gates Lights Wig-Wags Signs X-Bucks None
+Protection Factor 0.11 0.20 0.34 0.58 1.00 2.00
+12
+4.1.5
+Kansas's Design Hazard Rating Formula.
+Kansas uses the Design Hazard Rating Formula, which uses five factors- number of vehicles, number of fast trains, number of slow trains, angle of intersection between the road and the track (0-90 degree range), and the sight distances of all the four quadrants.
+This formula does not compute the number of crashes but rather produces a hazard index as a surrogate for the number of crashes.
+If the computed Hazard Rating is less than 0, it is set to 0.The highest priority is assigned to the crossing with the highest calculated index.
+The Design Hazard Rating Formula is: HR = A Ã— ( B + C + D) 4
+Where HT Ã— (2 Ã— NFT + NSST ) A= 400 Where HT= Highway Traffic NFT= Number of Fast trains NST= Number of slow trains.
+Switch trains are not included in NST B = 2Ã— 3 C= 8000 sum of max sight distance 4ways
+90 Angle of Intersection
+And D= value from Table 4-5 Table 4-5 Kansas's protection Factor Values
+Number of main tracks 1 2 3 4
+D 1.00 1.50 1.80 2.00
+13
+4.1.6
+Missouri's Exposure Index Formula.
+Missouri uses the Exposure Index Formula, which uses nine factors- number and speed of vehicles, number of passenger and freight trains, speed of passenger and freight trains, switching movements, required and actual sight distance.
+It produces an index, using a different formula based on the type of crossing protection at the crossing.
+The highest priority is assigned to the crossing with the highest calculated index.
+The EI is computed differently depending on the type of control at the crossing.
+A) When a passive to active upgrade is being considered the EI is EI = TI + SDO(TI ) B) When a Active upgrade is considered EI = TI Where TI= Traffic Index SDO = Sight Distance Obstruction Factor = Required Sight Distance - Actual Sight Distance Required Sight Distance
+The traffic index (TI) is the major component of the exposure index.
+It is determined as follows: (VM Ã— VS ) [ ( FM Ã— FS ) + ( PM Ã— PS ) + ( SM Ã—10) 10000 Where TI= Traffic Index TI = EI=Exposure Index VS=Vehicle Speed VM= Vehicle Movements PM= Passenger train movements PS= Passenger train speed FM= Freight train movements FS= Freight train speed SM= Switching movement
+]
+14
+4.1.7
+Illinois's modified expected accident frequency formula
+In 2000, the Illinois Department of Transportation (IDOT) conducted a study that evaluated the Expected Accident Frequency Formula used by the state to rank grade crossings (Elzohairy and Benekohal, 2000).
+The study recommended a model that is being used by this study for evaluation.
+It is not clear if Illinois is currently using the model recommended by the study.
+The model was developed using non-linear regression analysis procedure on grade crossing accidents in Illinois.
+The model is as follows: IHI = 10 -6 Ã—A 2.59088 Ã—B 0.09673 Ã—C 0.40227 Ã—D 0.59262 Ã— ( 15.59 Ã— N 5.60977 + PF)
+Where A NTT B C D N PF ln(ADT Ã— NTT) =Number of total trains per day =MTS, Maximum Timetable Speed, mph =(NMT+NOOT), Number of main tracks and other tracks =NOL, Number of highway lanes =Average number of crashes per year =Protection Factor; 35.57 for Gates, 68.97 for Flashing Lights, 86.39 for Crossbucks 4.2 FORMATION OF EXPERT PANEL
+ADT Average Daily Traffic
+The second stage of this study involved the forming of an expert panel, consisting of the state's highway and rail officials.
+The panel consisted of MoDOT and MCRS staff, the research team, and representatives from FRA, FHWA, Union Pacific, and BNSF.
+A workshop was conducted by the research team to obtain input from the expert panel regarding the following: Â· Â· Â· The objectives of a grade crossing model Key characteristics of a `good' grade crossing model The key variables that should be present in a `good' grade crossing model
+15
+Â·
+Measures to be used to evaluate models The objectives of a grade crossing model, as defined by the expert panel are:
+Â· Â· Â·
+Safety- A `good' grade crossing model should improve the safety at a crossing Rank crossings in order of relative priority Establishing weights for factors involved- The input factors should be weighted in a `good' grade crossing model to account for its importance in calculating the number of accidents at a crossing or the hazard index of a crossing
+Â·
+Bringing crash rate to zero- A `good' grade crossing model should indicate the crossings that need safety improvements, which in turn will help bring the crash rate to zero.
+The characteristics of an "ideal" grade crossing model, as defined by the expert panel are:
+Â· Â· Â· Â· Â·
+It should be able to predict accident frequency It should be explainable and defendable The data elements should be available in the state's database (Missouri in this case) It should suggest crossing treatment It should cover FHWA requirements.
+The expert panel also identified `key' variables that should ideally be present in a grade
+crossing model (for application in Missouri).
+They are: Â· Â· Â· Â· Â· Â· Â· Â· Annual Daily Traffic Approach Sight Distance vs. Recommended Sight Distance Stopping Sight Distance vs. Recommended Sight Distance Speed of Train Number of passenger trains Speed of highway traffic Total number of trains Clearance time- The time taken by the motorist to clear the crossing
+16
+A set of eight criteria were defined by the expert panel for evaluating these models.
+They are: Â· Â· Â· Â· Â· Â· Â· Â· 4.3
+Accuracy of the model Number of difficult variables in the model Explain ability Number of key variables Inclusion of crossing type Number of unavailable data variables Number of total variables Inclusion of weighting factors WEIGHTING FACTORS
+Each criterion was weighted by the expert panel.
+In order to obtain weights of each of the evaluation criteria, one thousand dollars of play money was given by the research team to each expert and he/she was asked to allot money to each criterion based on its importance.
+The proportions of money allotted by all the members of the expert panel was summed up and the average proportion allotted to each variable was normalized on a 0-1 scale.
+Table 4-6 displays the weights of each of the measures against the corresponding measure and Appendix II shows the money value attached by each participant to each measure.
+Table 4-6 Weights of Evaluation Criteria
+Accuracy (0.427) Explainability (0.124) Number of key variables (0.092) Number of difficult variables (0.082) 4.4 EVALUATION METHODOLOGY
+Inclusion of crossing type (0.078) Number of data variables unavailable (0.068) Has weighting factors (0.067) Number of total variables (0.061)
+At this stage, an evaluation methodology was defined by the research team based on the input from the expert panel.
+For each criterion, a performance measure was developed by the
+17
+research team.
+Finally, using a weighted score model, a final index was calculated using all the weighted performance measures.
+This final index determined the desirability of any given model.
+A high index indicates a more desirable model.
+Each criterion will be explained in more detail in the following sections.
+The method used to measure the performance of each model for each criterion is also explained.
+Some of the performance measures were normalized, while the others were simply converted to the desired scale.
+The criteria that have been normalized are the number of key variables, the number of difficult variables and the total number of variables.
+4.4.1 Accuracy
+Every model's function is to rank crossings in order of priority for safety improvement.
+Funds are allotted by the state primarily based on this ranking.
+Hence it is important that the rankings determined by a model is `correct' or `accurate'.
+Hence in this context, `accuracy' of the model is defined as the model's ability to `correctly' predict rankings of crossings.
+How do we determine if the model is `accurately' ranking crossings? It has to be compared to a `true' ranking set and thereby it can be determined if the model is good at ranking crossing.
+But what is the `true' or `correct' ranking set that can be used for comparison? The existing rankings of crossings cannot be a baseline for comparison because it is the output of an existing grade crossing model, which is under examination.
+There is a problem of comparing predicted accident rates with `actual' accident rates because of possible flaws in the `actual' accident data collected.
+To solve this problem, it was decided that an expert panel consisting of MoDOT staff would determine the `truth' or the baseline ranking set.
+The expert panel selected six representative crossings for each crossing control category (passive and active) and ranked them.
+18
+The research team defined this set as the baseline.
+Accuracy of a model is determined by comparing the ranking predictions of the model with that of the baseline.
+Table 4-7 shows the baseline rankings of the twelve representative crossings- six in each crossing control category (passive and active) Table 4-7 Rankings of Crossing by Crossing Control Type
+PASSIVE WARNING DEVICE 1.
+Md Stage Rd (UP), Cole Co. 2.
+Co.Rd. 223 (BNSF), Chariton Co. 3.
+E. 5th Street (BNSF), Linn Co. 4.
+Shimmel St. (UP), Cass Co. 5.
+Mill Rd. (KCS), McDonald Co. 6.
+MO 94 (NS), St.Charles Co.
+ACTIVE WARNING DEVICE 1.
+Eisenhoven St. (BNSF), Barry Co. 2.
+MO96 (KCS), Jasper Co. 3.
+MO
+US 160 (BNSF), Barton Co. 5.
+Lone Pine (KCS), Cass Co. 6.
+Italian Way (IMRC), Clay Co.
+Each model was then applied using available data.
+The output of each model was either a predicted expected number of accidents or a hazard index.
+In all cases, the higher this output, the higher the ranking allotted to that particular crossing.
+Thus for each category of crossing control, the six models each produced a predicted ranking set.
+Comparing the predictions with the baseline ranking set determines the accuracy of the model.
+For the purpose of the current study, a correlation measure between the predicted and `true' rankings was used to determine the accuracy of the model.
+The Spearman rank correlation coefficient factor served as this measure of correlation because it is a statistical method for comparing the rankings of two data sets.
+For this study only, it is calculated as: rS = ( Pi -3.5 ) ( Bi -3.5 ) 2 2 ( Pi -3.5 ) ( Bi -3.5 )
+Where Pi Bi r S
+= the predicted rankings = the baseline ranking = correlation value
+19
+The range of this correlation factor (rS) is -1 to +1.
+The upper limit of this range indicates maximum correlation between the two sets of data.
+In this case, +1 indicates perfect correlation between a model's predicted ranking set and the baseline ranking set.
+The lower limit of this range, -1, indicates perfect negative correlation between the two data sets.
+The performance measure for accuracy was assumed to be a linear function of the correlation value.
+To accentuate the degree of correlation between a predicted set of rankings and the expert rankings, the correlation value obtained by a model was multiplied by 5.
+For example, if a model's correlation value is 0.25, the converted value will be: Converted value= 0.25x5= 1.25 MoDOT provided all the available information about the above mentioned crossings.
+Some of the selected models required more information than was available.
+In such cases adjustments were made.
+These adjustments are listed in Table 4-8.
+20
+Table 4-8 Adjustments Made for Unavailable Data Variables
+Model
+Accident Prediction Model
+Unavailable variables Daytime trains
+Adjustment
+Result of Adjustment
+Modified New Hampshire Formula
+Kansas's Design Hazard Formula
+Calculations were made assuming that 100%, 75%, 50% of the given trains in a day are trains during daytime Number of quadrants Calculations were sight is restricted made assuming all from three cases-sight obstruction from no quadrant, from one, and from more than one quadrant Sight distance all Model run four ways assuming one quadrant has the `actual' SD and others have the required sight distance.
+This assumption did not lead to any difference in the predicted number of accidents.
+No difference in the hazard indices produced.
+Cannot say unless sight distance information is available.
+4.4.2
+Explainability
+A model which does an excellent job with `correctly' ranking crossings for improvement also needs to be explainable.
+The state DOT should be able to approach the interested public with the model and defend/explain it.
+Among the models discussed in Section 2, some models appear complicated and difficult to understand.
+The variables used are not easy to understand for a layperson with no knowledge in the field.
+Each model was evaluated for its `explainability' by the research team and rated using a scale of 0-5.
+Here, `0' is allotted to the least explainable model and `5' allotted to the model that is most explainable.
+21
+Explainability is a good thing to have in a model.
+So while calculating the final index of a model, this factor is an additive value.
+The higher a model scored on the 0-5 scale, the more contribution this factor has to the final index.
+4.4.3
+Number of difficult variables.
+Various models have different variables as input.
+Variables that are traditionally associated with grade crossings, like sight distance, train and highway traffic etc. are collected with no extra effort, costs, use of personnel.
+However, some data are very difficult to collect such as average speeds of vehicles and trains.
+Consequently, models which require data that are expensive or otherwise difficult to obtain are less desirable.
+The research determined the number of such difficult variables in each model.
+This number was normalized to a scale of 0-5.
+An example of the normalization process is shown below: Example: If the number of difficult variables in model A is 3 and the largest number of difficult variables in any model in the set of models for evaluation is 4, then the normalized value for model A is: Normalized value of difficult variables for model A= 3 Ã— 5 =3.75 4
+It is obvious that it would be undesirable to have too many `difficult' variables in a model.
+Hence the presence of too many difficult variables has a negative effect on the final index.
+Higher the number of difficult variables, greater its contribution in the decrease of the final index.
+4.4.4
+Number of total variables
+A model's simplicity is correlated with the number of variables it relies upon.
+More complex models are harder to explain and also more expensive because of resources needed to 22
+collect the necessary data.
+So the more number of variables in a model, the more time, money and cost it would take to implement the model.
+Hence this factor was included as a subtractive factor in the final index.
+That means that the greater the number of total variables, the lower the final index.
+The number of total variables of each model was determined.
+This number was normalized to a scale of 0-5.
+The upper limit of this range indicated the maximum number of total variables and the lower limit indicated the minimum number of total variables.
+The process of normalization is explained using an example.
+Example: Assume model A has a total number of 5 variables.
+Also assume model B has the largest number of total variables, which is 7.
+Since this score has to be normalized to a scale of 0-5, the normalized value of the total number of variables of model A is: Normalized value= 4.4.5
+5 Ã— 5 = 3.
+7
+Number of unavailable variables
+Some of the models studied required data that was not collected in Missouri.
+Earlier, we discussed the adjustments made by the research to compensate for this dilemma.
+However, an additional impact is that if such a models is adopted in Missouri, then there will additional expense associated with collecting this new data.
+To include the effect of this cost on the choice of a model, a negative weight is associated with this criterion.
+Each model was checked with the Missouri's database for `unavailable' data variables.
+The number of `unavailable' data variables in each model was recorded.
+This number was normalized to a scale of 0-5.
+The process was conducted as follows:
+23
+Example: Assume model A has 3 `unavailable' variables.
+Also assume model B has the highest number of difficult variables, which is 4.
+Since this score has to be normalized to a scale of 0-5, the normalized value of the number of `unavailable' variables of model A is: 3 Ã— 5 = 3.75 4 This normalized value is associated with a negative sign in the calculation of the final index.
+Normalized value= 4.4.6 Inclusion of crossing control type
+One of the key attributes identified by the workshop participants was the ability to have models that account for the existing type of control whether that be passive control or flashing lights.
+Each model was checked for inclusion of crossing control type.
+The only two possibilities are 1) the model has a variable that accounts for crossing control type or 2) the model does not have a variable that accounts for crossing control type.
+This measure was allotted a `0'and `5' value for non-inclusion and inclusion of crossing control type respectively.
+This measure is an additive value.
+The higher a model scores on this measure, the greater the final index.
+4.4.7 Inclusion of weighting factors
+Every variable in a model does not necessarily have the same effect on the hazardousness of a crossing.
+For this reason, some models weigh the variables that are used as input.
+Variables that are thought to have a higher effect on the hazardousness of a crossing are weighed more heavily than others that do not have the same effect.
+This is not the case with all models.
+There exist models that do not have any weighting factors for the variables used as input.
+Each model was checked for the inclusion of weighting factors of its variables.
+Based on this information, a value of `0' or `5' is allotted for this measure.
+`0' indicates that the model does not include weighting factors and `5' indicates that the model includes weighting factors.
+This measure is an additive value in calculating the final index.
+24
+4.4.8
+Number of Key Variables.
+The expert panel defined a set of `key' variables that should ideally exist in the `best' model.
+Here, `key' means important and significant in determining the hazardousness of a crossing.
+The list of `key' variables recommended by the expert panel is as follows: Â· Â· Â· Â· Â· Â· Â· Â· Â· Annual Daily Traffic (ADT) Number of Passenger trains Stopping Sight Distance vs. Recommended Sight Distance Approach Sight Distance vs. Recommended Sight Distance Speed of train Total number of trains Speed of highway traffic Number of quadrants sight is restricted from Clearance time Based on the list shown above, each model was checked for the number of `key' variables it included.
+This number was normalized to a scale of 0-5.
+The process of normalization was carried out as follows: Example: Assume model A has 2 `key' variables.
+Also assume model B, which has the maximum number of key variables of 4, of all the evaluated models.
+Since this value is normalized on a 0-5 scale, the normalized value of the key variables of model A is as follows: 2 Ã— 5 = 2.5 4 Since it is a good thing to have a higher number of the suggested `key' variables in a Normalized value= model, this measure was considered as an additive value.
+The higher the number of `key' variables included in a model, the higher its effect on the final index.
+25
+4.4.9 Computation of Final Index
+A method that is popularly known as "goals and objectives matrix" method was selected to calculate the `performance' of one model in comparison to the others.
+In the current study, the `performance' or `suitability' of a model (alternative) is determined by a `final index'.
+The final index is calculated using all the eight evaluation criteria defined by the expert panel.
+A weighted score model was used for this purpose.
+The final index was calculated for each model using the sum of the product of the score of the model for each measure and the weight of the measure: FinalIndex =
+i =1
+8
+Wi Ã— Si
+Where Wi= Weight of measure i from Each criterion was weighted by the expert panel.
+In order to obtain weights of each of the evaluation criteria, one thousand dollars of play money was given by the research team to each expert and he/she was asked to allot money to each criterion based on its importance.
+The proportions of money allotted by all the members of the expert panel was summed up and the average proportion allotted to each variable was normalized on a 0-1 scale.
+Table 4-6 displays the weights of each of the measures against the corresponding measure and Appendix II shows the money value attached by each participant to each measure.
+Table 4-6 Si= Score for model of measure i The reader might recall that some of the measures were subtractive, while others were treated as subtractive values based on its nature.
+The final index, calculated as mentioned above, indicates the performance of the model in satisfying the evaluation criteria.
+The higher the final index, the better the performance of the model
+26
+4.5
+DATA REQUIREMENTS
+As described in Section 4.2, the expert panel identified several data-related characteristics of a model as being desirable or undesirable.
+Specifically, the panel identified the number of "difficult" variables in the model, the number of "key" variables in the model, the number of unavailable variables, and the number of total variables as four of the eight criteria for model evaluation.
+These criteria were weighted, as described in Section 4.3, and evaluated for each model, as described in Section 4.4.
+Data requirements for a model are significant because of the staff time and expertise required to collect and maintain the data.
+Greater levels of effort require greater financial commitments.
+In some cases, greater data requirements for a model may reflect its superior decision support capability.
+However, in many cases, the additional funding required for data collection and maintenance is not reflected in the quality of the final decision.
+In assessing the data requirements for MoDOT's existing exposure index and the recommended method, primary consideration was given to the characteristics identified by the expert panel.
+27
+5
+RESULTS AND DISCUSSION The next step was to apply the evaluation framework to the seven models under study.
+From the preliminary results an eighth model that is a combination of the EI and Kansas Design Hazard Rating formulas was identified for further study.
+5.1 MODIFIED EI
+The modified EI model mainly uses the Kansas Design Hazard Rating formula with one change.
+We substituted the value TI from the EI for the value of A in the Kansas formula.
+Consequently, the revised formula is given by: HR = A Ã— ( B + C + D) 4
+Where A = VM Ã— VS ) [ ( FM Ã— FS ) + ( PM Ã— PS ) + ( SM Ã— 10)
+]
+B = 2Ã— 3
+8000 sum of max sight distance 4ways
+C=
+90 Angle of Intersection
+D= value from Table 4-5 5.2 RANKINGS OF MODELS BASED ON FINAL INDEX
+Table 5-1 and Table 5-2 show the final index values for the eight models considering both Passive and Active upgrades.
+Table 5-1 Final Indices for Passsive Upgrades
+Models
+Final Index
+Rankings
+Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI Table 5-2 Final Indices for Active Upgrades
+1.02 1.95 0.18 1.24 0.521 -0.36 1.73 -0.35
+4 1 6 3 5 8 2 7
+Models Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI 5.3
+Final Index 0.16 -0.25 1.64 -0.005 1.741 1.33 2.09 0.87
+Rankings 6 8 3 7 2 4 1 5
+EXPERT PANEL REVIEW OF FINDINGS
+After developing the final indices for the eight models, a second workshop with the expert panel was conducted.
+During this second workshop, the eight models reviewed and the evaluation framework were presented to the participants.
+In addition, the final rankings of the eight models were presented (Table 5-3).
+At the end of the workshop, the panel was asked to select a course of action.
+29
+Table 5-3 Summary of Results
+Crossing Control Type Passive
+Model with ranking 1.
+California's Hazard Index 2.
+Illinois's Expected Accident Frequency Formula (EAF) 3.
+Modified New Hampshire Formula 4.
+Accident Prediction Formula 5.
+Kansas's Design Hazard Rating 6.
+Connecticut's Hazard Index 7.
+Modified EI 8.
+Exposure Index
+Active
+1.
+Illinois's Expected Accident Frequency Formula (EAF) 2.
+Kansas's Design Hazard Rating 3.
+Connecticut's Hazard Index 4.
+Exposure Index Formula 5.
+Modified EI 6.
+Accident Prediction Formula 7.
+Modified New Hampshire Formula 8.
+California's Hazard Index
+The expert panel determined that, based on the relative rankings and because of its incorporation of sight distance along all 4 quadrants, the Kansas Design Hazard Rating warranted further consideration.
+Specifically, the research team was asked to: Â·
+Examine the potential change in rank if sight distance data for all four quadrants were collected.
+Â·
+Identify possible alterations of the sight distance factor formula to improve the performance of the Kansas model in matching the baseline rankings.
+5.3.1
+Data collection of sight distance information
+Recall that one of the weaknesses of the Kansas model was that the Missouri databases did not have sight distance for all 4 quadrants.
+To address this weakness, each of the 12 sites
+30
+(Appendix I) in our study was visited and sight distance information for both the approach (ASD) and stop-line (SLSD) sight distances was collected.
+Figure 5-1 and Figure 5-2 show what we mean by approach and stop-line sight distance respectively Figure 5-1: Approach Sight Distance
+Figure 5-2: Stopping Sight Distance
+31
+In addition to the field measurements, the required sight distances for both approach and stop-line sight distance were determined based the data in the table provided on the MoDOT Grade Crossing Survey Form (MO 419-0253 of May 1988)(see Appendix V).
+An analysis of the approach sight distance for the study sites shows that 18 out of 24 quadrants in the passive upgrade crossings have less than the required sight distance Â· 15 out of 24 quadrants in the active upgrade crossings have less than the required sight distance A similar analysis of the stop-line sight distance for the study sites shows that Â· Â· Â·
+8 out sight 9 out sight
+of 24 quadrants in the passive upgrade crossings have less than the required distance of 24 quadrants in the active upgrade crossings have less than the required distance
+5.3.2 Kansas Formula Accuracy
+The first step in our analysis was to recalculate the Kansas Hazard ratings for our 12 sites and re-rank them.
+Based on these new rankings, we recalculated the correlation values.
+Table 5-4 and Table 5-5 show the baseline rankings, the rankings with data for 1 quadrant and the rankings with data for all 4 quadrants.
+The net result was a decrease in correlation.
+Table 5-4: Rankings for Passive Upgrade Crossings County Cole Chariton Linn Cass McDonald St.Charles Baseline Rankings 1 2 3 4 5 6 Rankings with worst quadrant 2 5 3 4 1 6 0.257 Rankings with 4 quadrants of data 3 5 2 4 1 6 0.14285
+Correlation Value
+32
+Table 5-5: Rankings for Active (Flashing Lights) Upgrades County Barry Jasper Jackson Barton Cass Clay Baseline Rankings 1 2 3 4 5 6 Rankings with Rankings with 4 worst quadrant quadrants of data 2 1 4 4 2 3 5 6 0.8285 1 3 5 6 0.714286
+Correlation Values
+With calculation of the correlation values, we were able to re-calculate the final indices for the Kansas model and re-evaluate the model's performance with respect to the other models in our study.
+Table 5-6 and Table 5-7 show the final index values for the worst quadrant and all 4 quadrants cases for passive and active upgrades respectively.
+While the indices for the Kansas model dropped with complete information, the relative ranking did not.
+Table 5-6 Model Indices for Passive Upgrades Models Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI Final Index Worst quadrant 1.02 1.95 0.18 1.24 0.52 -0.36 1.73 -0.35 Rankings 4 1 6 3 5 8 2 7 Final Index-4 quadrants 1.02 1.95 0.18 1.24 0.27738 -0.36 1.73 -0.35 Rankings 4 1 6 3 5 7 2 8
+33
+Table 5-7 Model Indices for Active Upgrades Models Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI Final Index Worst quadrant 0.16 -0.25 1.64 -0.005 1.74 1.33 2.09 0.87 Rankings 6 8 3 7 2 4 1 5 Final Index-4 quadrants 0.16 -0.25 1.64 -0.005 1.49749 1.33 2.09 0.87 Rankings 6 8 2 7 3 4 1 5
+5.3.3
+Reformulation of the distance factor
+Having established that the Kansas Model did not perform significantly with a better data set, we proceeded to examine possible reformulations of the sight distance factor.
+In particular, we focused on two types of changes.
+First we looked at alternative forms of the ratio under the radical.
+Second we looked at altering the multiplication factor and the root power.
+5.3.3.1 Sight Distance Ratio
+Six formulas that utilize the measured and required approach and stop line sight distances were developed and evaluated.
+They are: B = 2Ã— 3
+8000 sum of Approach Sight distance ASD 8000 sum of stop line Sight distance SLSD
+(Equation I)
+B = 2Ã— 3
+(Equation II)
+B = 2Ã— 3
+Required Approach Sight distance (Req.ASD) Actual Approach Sight distance (ASD)
+(Equation III)
+34
+B = 2Ã— 3
+Required Stop Line Sight distance (Req. SLSD) Actual Stop Line Sight distance SLSD
+(Equation IV)
+B = 2Ã— 3 (
+8000 8000 + ) sum of ASD sum of SSD
+(Equation V) Required SSD ) Actual SSD
+B = 2Ã— 3 (
+Required ASD + Actual ASD
+(Equation VI)
+Since the impact of the reformulation only affects the hazard ratings, the criteria for selecting the best formula is the Spearman rank correlation coefficient.
+The formula that provides the closest match to the baseline rankings should be considered the best choice.
+Table 5-8 and Table 5-9 show the results of this analysis for both the passive and active upgrades.
+All 6 formulas perform well for the active upgrades with a relatively high correlation.
+For the passive upgrades, the approach sight distances perform the best.
+However, the actual correlations for these models are low.
+Based on these results there does not appear to be a reasonable basis for altering the ratio formula.
+Table 5-8 Impacts of different ratios on passive upgrades-Correlation Values
+Hazard Ratings County HR 1 HR 2 HR 3 HR 4 HR 5 HR 6
+Rankings by equations I 3 5 2 4 1 6 0.1428 II 4 5 2 3 1 6 -0.028 III 3 5 2 4 1 6 0.1428 IV 4 5 2 3 1 6 -0.028 V 3 5 2 4 1 6 0.1428 VI 3 5 2 4 1 6 0.1428
+Base Rankings
+Cole 15.5 Chariton 2.7 Linn 18.7 Cass 13.8 McDonald 84.6 St.Charles 0 CORRELATION
+9.146 8.954 1.926 1.856 17.82 14.53 10.67 8.649 57.82 48.33 0 0 VALUES
+6.858 1.631 15.06 8.182 42.8 0
+15.8 2.77 20.4 14.5 87.2 0
+12.029 2.433 19.602 11.702 63.813 0
+1 2 3 4 5 6
+35
+Table 5-9 Impacts of differnt ratios on Active upgrades -Correlation Values
+Hazard Ratings County HR 1 HR 2 HR 3 HR 4 HR 5 HR 6
+Rankings by equations I 2 4 1 3 5 6 0.7142 II 1 4 2 3 5 6 0.8285 III 2 4 1 3 5 6 0.71428 IV 2 4 1 3 5 6 0.71428 V 1 4 2 3 5 6 0.8285 VI 2 4 1 3 5 6 0.7142
+Base Rankings
+251 Barry 163 Jasper Jackson 252 183 Barton 104 Cass 67.8 Clay CORRELATION 5.3.4
+214 153.2 110.8 106.4 194.9 171.4 152.2 124.4 63.27 59.95 50.31 41.69 VALUES
+155.6 90.12 157.3 120.1 49.08 38.43
+271 166 261 194 105 70.6
+214.79 133.76 218.94 166.33 77.616 55.52
+1 2 3 4 5 6
+Reformulation of the multiplication and root factors
+The multiplication factor was varied from 1 to 3 and the root power was varied from 1 to 3.
+In addition, we examined the impacts on all four formulas of the ratio just in case there was a combination effect.
+Consequently, several tables were generated of correlations.
+All of these have been included in the appendix.
+Based on our analysis, it appears that changing the multiplication factor while holding the root power constant does not affect the rankings of the sites.
+Therefore the issue becomes what root power to use.
+For passive upgrades Equation 2 with a root power of 2 (i.e. square root) and Equation 3 with a root power of 1 (i.e. straight ratio of required approach sight distance to actual approach sight distance) provide the highest correlation of .2571 as compared to .1429 for the current formulation.
+For the active upgrades, the highest correlation is achieved by using the ratio of 8000 divided by the sum of the approach sight distances.
+This results in a correlation of .94.
+With the exception of this single case, the variation of root power and multiplication factor have no impact on the rankings of the active upgrade crossings.
+36
+5.3.5 Summary of Sensitivity Analyses
+Based on our analyses, we find that: Â· Â· Â·
+Approach sight Distance tends to rank better than stopline sight distance for the passive crossings.
+Stop line Sight distance tends to rank slightly better for Active Crossings than approach sight distance.
+However the difference is small Rankings for both passive and active upgrades are not affected by changing the multiplication factor.
+Based on the correlations, we recommend that the ratio of 8000 divided by the sum of the approach sight distances be retained.
+We further recommend that the multiplication factor of 2 be retained.
+However, we would usggest changing the root power to a square root as opposed to a cubic root.
+Therefore, the sight distance factor might be calculated as:
+B = 2Ã—
+8000 approach sight distances
+Table 5-10 and Table 5-11 show the impact of this change on the rankings; Table 5-12 and Table 5-13 show the impact on final indices.
+Given the small sample size associated with the baseline rankings, the results of our analysis are not conclusive.
+Therefore, our findings should be tempered with judgment and more research conducted using larger sample for the baseline rankings.
+Table 5-10 Rankings for Passive Upgrade Crossings
+Baseline Rankings Cole 1 Chariton 2 Linn 3 Cass 4 McDonald 5 St.Charles 6 Correlation Value County
+Rankings with Rankings with Cube root Square root 3 2 5 5 2 3 4 4 1 1 6 6 0.1428 0.257
+37
+Table 5-11 Rankings for Active upgrades
+Baseline Rankings Barry 1 Jasper 2 Jackson 3 Barton 4 Cass 5 Clay 6 Correlation Values County
+Rankings with Rankings with cube root Square root 2 1 4 4 1 2 3 3 5 5 6 6 0.71428 0.8285
+Table 5-12 Model Indices of Passive Upgrades
+Models
+Final Index Â­ cube root
+Ranking
+Final IndexÂ­ square root Ranking
+Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI
+1.02 1.95 0.18 1.24 0.5274 -0.36 1.73 -0.35
+4 1 6 3 5 8 2 7
+1.02 1.95 0.18 1.24 0.771 -0.36 1.73 -0.35
+4 1 6 3 5 8 2 7
+Table 5-13 Final Indices for Active upgrades
+Models Accident Prediction Model California's HI Connecticut's HI Modified New Hampshire Kansas's Design Hazard Exposure Index Illinois's Modified EAF Modified EI
+Final IndexÂ­ cube root 0.16 -0.25 1.64 -0.005 1.7475 1.33 2.09 0.87
+Ranking 6 8 3 7 2 4 1 5 38
+Final Index Â­ square root Ranking 0.16 -0.25 1.64 -0.005 1.9915 1.33 2.09 0.87 6 8 3 7 2 4 1 5
+5.4
+DATA REQUIREMENTS
+The "key" variables identified by the expert panel vary in their level of availability and collection difficulty: Â· Â·
+Annual Daily Traffic.
+Vehicle movements are currently included in Missouri's crossing inventory.
+Approach Sight Distance vs. Recommended Sight Distance.
+The approach sight distance and recommended sight distance for the most restricted quadrant are already included in Missouri's crossing inventory.
+Gathering this information for each quadrant would require a field visit to each of the 4000 crossings in the state.
+Â·
+Stopping Sight Distance vs. Recommended Sight Distance.
+The stopping sight distance and recommended stopping sight distance are not currently included in Missouri's crossing inventory.
+Gathering this information would require a field visit to each of the 4000 crossings in the state.
+Â· Â· Â· Â· Â·
+Speed of Train.
+The speed of trains is provided by the railroads and is currently included in Missouri's crossing inventory.
+Number of passenger trains.
+The number of passenger trains is provided by the railroads and is currently included in Missouri's crossing inventory.
+Speed of highway traffic.
+The speed of highway traffic is currently included in Missouri's crossing inventory.
+Total number of trains.
+The total number of trains can be obtained from Missouri's current crossing inventory by summing the numbers of freight and passenger trains.
+Clearance time.
+The time taken by the motorist to clear the crossing can be obtained from the vehicle speeds, which were not identified as a key variable but are included in Missouri's crossing inventory, and the width of the crossing.
+The width of the crossing could either be measured in the field, which would require trips to all 4000 crossings in the state, or approximated by the number of tracks, which is currently included in Missouri's crossing inventory.
+The number of key variable in each model was accounted for as described in Section 4.4.8.
+In addition, the list above demonstrates that obtaining those key variables that are not currently
+39
+included in Missouri's crossing inventory would require field visits to all crossings in the state of Missouri.
+The following sections discuss the data requirements for the EI as it currently is used and the Kansas Design Hazard rating formula, both as it exists and as it could be modified, respectively.
+As MoDOT and MCRS decide whether to change models, they should consider carefully the data-related issues as outlined in the following sections.
+5.4.1 Missouri's Exposure Index
+Missouri's EI requires the following data: Â· Â· Â· Â· Â· Â· Â· Â· Â·
+Vehicle movements (AADT) Vehicle speeds Number of passenger trains Average speed of passenger trains Number of freight trains Average speed of freight trains Switching movements Required sight distance for the worst quadrant Actual sight distance for the worst quadrant
+All of these data are currently available in Missouri's crossing inventory.
+Those items related to trains themselves are provided by the railroads; other items are collected and maintained by MoDOT and MCRS.
+While the total number of variables is large in comparison to some of the other models investigated, the EI obviously does not include any "difficult" or unavailable variables.
+Data-related costs for the EI include staff time for updating the database.
+All variables are dynamic (that is, they change over time), but the changes are predictable and
+40
+identifiable, so updating is relatively straightforward.
+5.4.2 Kansas Design Hazard Rating Formula
+The research team, as directed by the expert panel, has investigated Kansas' Design Hazard Rating Formula in detail.
+As the model is currently used by Kansas, it requires some data that currently are maintained in Missouri's crossing inventory and some that are not.
+Â·
+Number of vehicles.
+The vehicle movements currently are included in Missouri's crossing inventory.
+Â·
+Number of fast trains.
+The number of fast trains currently is not included explicitly in Missouri's crossing inventory.
+Â·
+Number of slow trains.
+The number of slow trains currently is not included explicitly in Missouri's crossing inventory.
+Â·
+Angle of intersection between road and tracks.
+The angle of intersection between the road and the tracks currently s recorded in Missouri's crossing inventory as a range.
+Â·
+Sight distance in all four quadrants.
+The approach sight distance for the most restricted quadrant currently is recorded in Missouri's crossing inventory.
+Â·
+Number of main tracks.
+The number of main tracks currently is included in Missouri's crossing inventory.
+Of the variables listed, only number of vehicles and number of main tracks are directly accessible.
+However, the range of difficulty associated with the other data varies.
+Â·
+Number of fast trains and number of slow trains.
+In the evaluation performed for this study, the numbers of passenger trains and freight trains were substituted as proxies for the numbers of fast and slow trains.
+MoDOT representatives believe that this is a reasonable approximation.
+Actual data could be obtained from the railroads.
+41
+Â·
+Angle of intersection between road and tracks.
+Because the angle of intersection is given as a range, the conservative approach (and the approach that was used in this evaluation) is to use the lower limit.
+The angle can be measured in the field relatively easily, but this is probably warranted only if other data are also needed.
+Â·
+Sight distance in all four quadrants.
+Section 5.3 describes the various approaches used to account for sight distance, including using only the data currently available and using complete data as collected in the field.
+For our limited set of sites, the correlations between the expert rankings and model rankings actually dropped when complete data were used.
+This suggests that it may be appropriate to focus on the quadrant with the most restricted sight distance as opposed to all of the sight distances.
+Measuring sight distance in the field for all 4000 crossings would require significant resource commitments.
+For example, for the sights surveyed as part of this study, the average time spent on site was 2 hours, and the measurements required two people.
+If travel time is neglected, these figures suggest that 16,000 person hours would be required to collect the data.
+42
+6
+CONCLUSIONS This study evaluated the effectiveness of the EI formula and examined the possibility of
+adoption of an alternative formula for use in Missouri for prioritizing crossings for safety improvements.
+A list of models used by different states to prioritize rail-highway grade crossings was assembled.
+The source of this list is a report produced by the University of Illinois in September 2000 (Elzohairy and Benekohal, 2000).
+Seven models, which are generally used by most of the states, were selected for study.
+Following the identification of models for study, a panel of officials associated with MoDOT, the U.S. Department of Transportation, and Railroad Companies was assembled to participate in a one day workshop.
+The panel was asked to address several questions: At the end of the workshop, eight criteria, along with their relative importance, were identified that could be used to select a "best" model.
+These criteria and their associated weights were combined into an index value that was then used to rank the models.
+The most important criterion was the accuracy of each model in predicting the ranking of crossings in Missouri.
+In order to assess this performance, data were obtained for 12 representative crossings (6 with passive control and 6 with flashing lights) across the state from the Missouri Crossing Inventory MoDOT staff than ranked these sites within each category to establish baseline rankings.
+The ability of each of the models under consideration to replicate these baseline rankings was quantified with a simple Spearman rank correlation coefficient.
+After the models were analyzed and final indices developed, the panel of experts was assembled again to review and select a potential replacement model for the EI.
+In preparation for this second workshop, a modification of the EI formula was also developed.
+At the end of this second workshop, the panel recommended the research team conduct sensitivity analyses on
+43
+modifying the Kansas Design Hazard Rating model for possible use in Missouri.
+Subsequent analyses were inconclusive in determining potential modifications to the Kansas Model.
+44
+7
+RECOMMENDATIONS Â·
+We find sufficient cause to consider replacing the EI as the tool used in Missouri to prioritize highway rail crossing for engineering review.
+Â·
+The Kansas Design Hazard rating formula shows potential as the possible replacement for the EI.
+Â·
+Additional research is needed to determine the how the Kansas Model should be adapted to Missouri.
+In particular, a larger sample of baseline rankings needs to be developed.
+Â·
+In analyzing the larger set of baseline rankings, particular attention should be given to the consequences using the existing data rather than gathering a complete data set.
+Serious consideration should be given to the resources available for additional data collection and maintenance.
+8
+REFERENCES
+Elzohairy, Yoassry M. and Rahim F.Benekohal.
+2000.
+Evaluation of Expected Accident Frequency Formulas for Rail-Highway Crossings: Report No.
+ITRC FR 98-2.
+Department of Civil and Environmental Engineering, University of Illinois at Urbana-Champaign, Urbana, Illinois, September 2000.
+Federal Railroad Administration (FRA).
+2001.
+U.S. Department of Transportation News.
+FRA 07-01, Dec. 2001.
+http://www.dot.gov/affairs/fra701.htm.
+Accessed November 15, 2002.
+Federal Railroad Administration (FHWA).
+2002.
+Office of Safety Analysis.
+http://safetydata.fra.dot.gov/officeofsafety.
+Accessed September 20, 2002.
+Federal Highway Administration (FHWA).
+1986.
+Railroad-highway grade Crossing Handbook.
+Report FHWA-TS-86-215.
+1986.
+Lerner, Neil D, Robert E. Llaneras, Hugh W. McGee and Donald E. Stephens.
+2002.
+National Cooperative Highway Research Program Report 470: Traffic-Control Devices for Passive Railroad-Highway Grade Crossings.
+TRB, National Research Council, Washington, D.C., 2002 Muth, John M. and Ronald W. Eck. 1986.
+Adapting the U.S Department of Transportation railhighway crossing resource allocation model to the microcomputer.
+In Transportation Research Record 1069, TRB, National Research Council, Washington, D.C., 1986, pp 101-109.
+9
+PRINCIPAL INVESTIGATORS AND PROJECT MEMBERS
+UMR: Dr. Mohammad Qureshi, Assistant Professor (PI) Dr. Gary Spring, Associate Professor (Co-PI) Sindhu Avalokita, Graduate Research Assistant Naveen Yathapu, Graduate Research Assistant Department of Civil, Architectural 
+47
+10 AFFECTED BUSINESS UNITS AND PRINCIPAL CONTACT Multimodal Operations Transportation Planning Research, Development, and Technology Districts
+48
+APPENDIX I: WORKSHOP ATTENDEES
+49
+LIST OF ATTENDEES FOR THE WORKSHOP
+NAME Gary Spring Mohammad Qureshi David Mc Kernan John Freise Ernie Perry Garry W. Viebrock Jennifer Thompson Bruce Chinn Gene Stephens Allen Kuhn Mark Virkler Kristen Sanford Bernhardt Venkat Chilukuri Mark Zacher Bennie Howe Sindhu Avalokita
+ORGANISATION University of Missouri Â­ Rolla University of Missouri Â­ Rolla Union Pacific RR Union Pacific RR MODOT MCRS MODOT MCRS MCRS BNSF Ry Co University of Missouri-Columbia Lafayette College University of Missouri-Columbia MODOT FRA University of Missouri Â­ Rolla
+50
+APPENDIX II: WEIGHTS OF MEASURES FROM EXPERT PANEL
+51
+Weights of Measures Criteria defined by the expert panel for evaluating the models were I. Accuracy of the model II.
+Number of difficult variables in the model III.
+Explain ability IV.
+Number of key variables V. Inclusion of crossing type VI. Number of unavailable data variables VII.
+Number of total variables VIII.
+Inclusion of weighting factors Dollars III 45 50 75 33 0 20 100 50 100 50 200 0 75 798 Assigned to Measures IV V VI 45 91 182 25 50 100 50 300 75 33 200 100 0 100 100 20 200 20 50 50 100 50 200 200 100 150 100 200 100 200 100 50 25 136 45 0 75 75 0 884 1611 1202
+Individual 1 2 3 4 5 6 7 8 9 10 11 12 13 SUM
+I 455 600 100 600 500 600 500 250 300 100 400 545 600 5550
+II 45 25 200 33 0 100 0 50 100 100 200 136 75 1064
+VII 136 100 50 0 0 20 200 100 0 200 12.5 0 50 868.5
+VIII 0 50 150 0 300 20 0 100 150 50 12.5 136 50 1018.5
+SUM 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 13000
+52
+APPENDIX III: MISSOURI CROSSING INVENTORY 12 SITES SELECTED FOR ANALYSIS
+53
+MISSOURI CROSSING INVENTORY Table 0-1 Passive Crosssings
+Road Name/ USDOT # 005263 F 005129 U 442003 R 330157 R 483487 U County City Near Location TYPE 442252 W COLE
+Base Ranking Railroad
+CENTERTOWN MARCELINE BUCKLIN STRASBURG ANDERSON ST CHARLES
+Md Stage Road CO RD 223 East 5 th
+Passive Passive Passive Passive Passive Passive
+1 2 3 4 5 6
+UP BNSF BNSF UP KCS NS
+CHARITON LINN CASS MC DONALD ST CHARLES
+Shimel Mill Road Mo 94, N Second
+Table 0-2 Active Crossings
+Road Name/ USDOT # 668316 H 330031 J 442281 G 669023 P 329836 H 375440 C County City Near Location TYPE
+Base Ranking Railroad
+BARRY JASPER JACKSON BARTON CASS CLAY
+MONETT WACO BLUE VALLEY GOLDEN CITY CLEVELAND EXCELSIOR SPRING
+Eisenhower Mo 90,Near Asbury Near Lake city Golden city Lone pine Italian way
+Active Active Active Active Active Active
+1 2 3 4 5 6
+BNSF KCS UP BNSF KCS IMRL
+54
+APPENDIX IV: EVALUATION OF MODELS CALCULATION OF FINAL INDEX
+55
+1 ACCIDENT PREDICTION MODEL
+Table 0-1 Predicted Rankings vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6 Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 3 1 5 2 6 Predicted Ranking 5 3 4 2 1 6
+Table 0-2 Predicted Rankings vs. Expert Rankings for Crossings with Active Control
+Table 0-3 Un-normalized Values of the Model on Evaluation Criteria
+Passive Flashing
+0.31 -0.08
+0 0
+3 3
+1 1
+5 5
+1 1
+5 5
+Table 0-4 Accident Prediction Model's Final Index
+Key Variables
+Explainability
+Unavailable data elements
+Crossing type
+Control type
+Total variables 0.061 4.00 4.00
+Weights Passive Flashing
+0.427 1.57 -0.43
+0.124 0 0
+0.092 2.5 2.5
+0.082 1.67 1.67
+0.078 5.00 5.00
+0.068 1.67 1.67
+Weighting factors
+Difficult Variables
+0.067 5 5
+56
+Final Index 1.02 0.16
+Accuracy
+Total variables 4.00 4.00
+Unavailable data elements
+Key Variables
+Explainability
+Crossing type
+Control type
+Accuracy
+Weighting factors
+Difficult Variables
+2 CALIFORNIA'S HAZARD INDEX
+Table 0-5 Predicted Rankings vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6 Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 1 3 5 2 6 Predicted Ranking 6 5 1 3 4 2
+Table 0-6 Predicted Rankings vs. Expert Rankings for Crossings with Active Control
+Table 0-7 Un-normalized Values of the Model on Evaluation Criteria
+Weighting factors
+Passive Flashing
+0 .4 3 -0 .
+6
+5 5
+2 2
+0 0
+5 5
+0 0
+0 0
+Total variables 3 3 Total variables 0.061 1.50 1.50 Final Index 1.99 -0.2
+Table 0-8 California's Hazard Index Model's Final Index
+Weights Passive Flashing
+0.427 2.14 -3.00
+0.124 5 5
+0.092 1.67 1.67
+0.082 0.00 0.00
+0.078 5.00 5.00
+0.068 0.00 0.00
+57
+Weighting factors 0.067 0 0
+Key Variables
+Explainability
+Unavailable data elements
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+Unavailable data elements
+Key Variables
+Explainability
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+3 CONNECTICUT'S HAZARD INDEX Table 0-1 Predicted Rankings vs. Expert Rankings for Crossings with Passive Crossings
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 6 2 5 1 3
+Table 0-2 Predicted Rankings vs. Expert Rankings for Crossings with Active Crossings
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 5 1 4 3 2 6
+Table 0-3 Un-normalized Values of the Model on Evaluation Criteria
+Unavailable data elements
+Weighting factors
+Passive Flashing
+-0 .
+4 9 0 .2
+5 5
+2 2
+0 0
+5 5
+0 0
+0 0
+Total variables 3 3 Final Index 0.18 1.64
+Key Variables
+Explainability
+Table 0-4 Connecticut's Hazard Index Model's Final Index
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+Unavailable data elements
+Weighting factors 0.067 0 0
+Weights Passive Flashing
+0.427 -2.43 1.00
+0.124 5 5
+0.092 1.67 1.67
+0.082 0.00 0.00
+0.078 5.00 5.00
+0.068 0.00 0.00
+58
+Total variables 0.061 1.50 1.50
+Key Variables
+Explainability
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+4 MODIFIED NEW HAMPSHIRE FORMULA
+Table 0-5 Predicted Rankings vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 3 4 1 5 2 5
+Table 0-6 Predicted Rankings vs. Expert Rankings for Crossings with Active Contorl
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way(IMRC)Clay Co Crossing Control type
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 3 3 3 1 2 3 Unavailable data elements Weighting factors
+Table 0-7 Un-normalized Values of the Model on Evaluation Criteria
+Passive Flashing
+0 .2 6 -0 .
+3 2
+2 2
+4 4
+1 1
+5 5
+1 1
+0 0
+Total variables 5 5 Total variables 0.061 2.50 2.50 Final Index 1.24 -0.005
+Key Variables
+Explainability
+Table 0-8 Modified New Hampshire's Final Index
+Crossing type
+Accuracy
+Difficult Variables
+Unavailable data elements 0.068 1.67 1.67
+Weights Passive Flashing
+0.427 1.31 -1.60
+0.124 2 2
+0.092 3.33 3.33
+0.082 1.67 1.67
+0.078 5.00 5.00
+59
+Weighting factors 0.067 0 0
+Key Variables
+Explainability
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+5 KANSAS'S DESIGN HAZARD RATING FORMULA Table 10-1 Predicted Rankings Vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 5 2 3 1 6
+Table 1-2 Predicted Rankings Vs. Expert Rankings for Crossings with Active Control
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 2 4 1 3 5 6
+Table 1-3 Un-normalized Values of the Model on Evaluation Criteria
+Crossing Control type
+Unavailable data elements
+Weighting factors
+Passive Flashing
+0.2571 0.8286
+2 .5 2 .5
+4 4
+3 3
+0 0
+3 3
+5 5
+Total variables 5 5 Total variables 0.061 2.50 2.50 0.52 1.74 Final Index
+Key Variables
+Explainability
+Table 1-4 Kansas's Design Hazard Model's Final Index
+Crossing type
+Accuracy
+Difficult Variables
+Unavailable data elements 0.068 5 5
+Key Variables
+Explainability
+Control type
+Weights Passive Flashing
+0.427 1.2855 4.143
+0.124 2.5 2.5
+0.092 1.67 1.67
+Difficult Variables
+0.082 5 5
+0.078 0.00 0.00
+0.067 5 5
+60
+Weighting factors
+Crossing type
+Accuracy
+6 MISSOURI'S EXPOSURE INDEX FORMULA
+Table 1-5 Predicted Rankings vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 6 5 2 1 3
+Table 1-6 Predicted Rankings vs. Expert Rankings for Crossings with Active Control
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 4 3 1 2 6 5
+Table 1-7 Un-normalized Values of the Model on Evaluation Criteria
+Weighting factors
+Passive Flashing
+-0 .
+6 6 0 .1 4
+4 4
+6 6
+0 0
+5 5
+0 0
+0 0
+Total variables 9 9 0.061 4.50 4.50 Final Index -0.33 1.36
+Table 1-8 Exposure Index's Final Index
+Weighting factors 0.067 0 0
+Unavailable data elements
+Key Variables
+Explainability
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+Weights Passive Flashing
+0.427 -3.29 0.69
+0.124 4 4
+0.092 5.00 5.00
+0.082 0.00 0.00
+0.078 5.00 5.00
+0.068 0.00 0.00
+61
+Total variables
+Key Variables
+Explainability
+Unavailable data elements
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+7 ILLINOIS'S MODIFIED EXPECTED ACCIDENT FREQUENCY FORMULA
+Table 1-9 Predicted Rankings vs. Expert Rankings for Crossings with Passive Control
+Sites Md Stage Rd (UP) Cole Co.
+Co.Rd. 223 (BNSF) Chariton Co.
+E. 5th Street (BNSF) Linn Co.
+Shimmel St. (UP) Cass Co.
+Mill Rd. (KCS) McDonald Co.
+MO 94 (NS) St.Charles Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 5 1 3 2 4 6
+Table 1-10 Predicted Rankings vs. Expert Rankings for Crossings with Active Control
+Sites Eisenhoven St. (BNSF) Barry Co. MO96 (KCS) Jasper Co.
+MO
+US 160 (BNSF) Barton Co.
+Lone Pine (KCS) Cass Co.
+Italian Way (IMRC) Clay Co.
+Expert Ranking 1 2 3 4 5 6
+Predicted Ranking 3 4 1 2 5 6
+Table 1-11 Un-normalized Values of the Model on Evaluation Criteria
+Weighting factors
+Passive Flashing
+0 .3 7 0 .5 4
+1 1
+3 3
+0 0
+5 5
+0 0
+5 5
+Total variables 7 7 Total variables 0.061 3.50 3.50 Final Index 1.73 2.02
+Key Variables
+Explainability
+Table 1-12 Illinois's EAF's Final Index
+Weights Passive Flashing
+0.427 1.86 2.71
+0.124 1 1
+0.092 2.50 2.50
+0.082 0.00 0.00
+0.078 5.00 5.00
+0.068 0.00 0.00
+62
+Weighting factors 0.067 5 5
+Key Variables
+Explainability
+Unavailable data elements
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+Unavailable data elements
+Crossing type
+Control type
+Accuracy
+Difficult Variables
+APPENDIX V: SENSITIVITY ANALYSIS: RANKING PRODUCED BY KANSAS MODEL
+63
+Equation I
+B= XÃ—y
+8000 sum of Approach Sight distance ASD
+PASSIVE CROSSINGS - Rankings 1 2 1 3 1 1 2 2 2 3 2 1 3 2 3 3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Cole Chariton Linn Cass McDonald St.Charles
+1
+2 5 6 3 1 6
+2 5 6 3 1 6 0.12507
+2 5 6 3 1 6 0.12507
+2 5 3 4 1 6 0.143
+2 5 3 4 1 6 0.2571
+2 5 3 4 1 6 0.2571
+3 5 2 4 1 6 0.14286
+3 5 2 4 1 6 0.14286
+3 5 2 4 1 6 0.14286
+CORRELATION VALUES 0.12507 ACTIVE CROSSINGS 1
+2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+1 3 2 4 5 6
+1 6 2 5 3 6 0.71429
+1 6 2 5 3 6 0.71429
+2 4 1 3 5 6 0.71429
+1 4 2 3 5 6 0.71429
+1 4 2 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.776
+CORRELATION VALUES 0.94286
+64
+Equation II
+B= XÃ—y
+8000 sum of stop line Sight distance SLSD Multiplication Factor(X) Root Factor(Y)
+PASSIVE CROSSINGS 1 2 1 3 1 1 2 2 2 3 2 1 3 2 3 3 3
+Base Rankings 1 2 3 4 5 6
+County Cole Chariton Linn Cass McDonald St.Charles
+1
+3 5 2 4 1 6
+3 5 2 4 1 6 0.14286
+3 5 2 4 1 6 0.14286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+CORRELATION VALUES 0.14286 ACTIVE CROSSINGS 1
+2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+1 4 2 3 5 6
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+CORRELATION VALUES 0.82857
+65
+Equation III B = X Ã— y
+Required Approach Sight distance (Req.ASD) Actual Approach Sight distance (ASD)
+PASSIVE CROSSINGS 1 2 1 3 1 1 2 2 2 3 2 1 3 2 3 3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Cole Chariton Linn Cass McDonald St.Charles
+1
+2 5 3 4 1 6
+2 5 3 4 1 6 0.25714
+2 5 3 4 1 6 0.25714
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.1429
+CORRELATION VALUES 0.25714 ACTIVE CROSSINGS 1
+2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+2 4 1 3 5 6
+2 4 1 3 5 6
+2 4 1 3 5 6
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.71429
+CORRELATION VALUES 0.71429
+0.71429 0.71429
+66
+Equation IV B = X Ã— y
+Required Stop Line Sight distance (Req. SLSD) Actual Stop Line Sight distance SLSD Multiplication Factor(X) Root Factor(Y)
+PASSIVE CROSSINGS- Rankings 1 2 1 3 1 1 2 2 2 3 2 1 3 2 3 3 3
+Base Rankings 1 2 3 4 5 6
+County Cole Chariton Linn Cass McDonald St.Charles
+1
+4 5 2 3 1 6
+4 5 2 3 1 6
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+4 5 2 3 1 6 -0.0286
+CORRELATION VALUES -0.0286 -0.0286 ACTIVE CROSSINGS -Rankings 1 2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+1 4 2 3 5 6
+1 4 2 3 5 6
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+2 4 1 3 5 6 0.82857
+2 4 1 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+CORRELATION VALUES 0.82857 0.82857
+67
+Equation V
+B= XÃ—y(
+8000 8000 ) + sum of ASD sum of SSD 1 2 1 3 1 1 2 2 2 3 2 1 3 2 3 3 3
+PASSIVE CROSSINGS - Rankings Multiplication Factor(X) Root Factor(Y) Base Rankings 1 2 3 4 5 6 County Cole Chariton Linn Cass McDonald St.Charles
+1
+2 5 4 3 1 6 0.2
+2 5 4 3 1 6 0.2
+2 5 4 3 1 6 0.2
+2 5 3 4 1 6 0.25714
+2 5 3 4 1 6 0.25714
+2 5 3 4 1 6 0.2571
+3 5 2 4 1 6 0.1429
+3 5 2 4 1 6 0.143
+3 5 2 4 1 6 0.143
+CORRELATION VALUES ACTIVE CROSSINGS
+1
+2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+1 4 2 3 5 6 0.8286
+1 5 2 3 4 6 0.657
+1 5 2 4 3 6 0.6
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.8286
+1 4 2 3 5 6 0.8286
+1 4 2 3 5 6 0.829
+1 4 2 3 5 6 0.829
+CORRELATION VALUES
+68
+Equation VI PASSIVE CROSSINGS
+B= XÃ—y(
+2 1
+Required ASD + Actual ASD
+1 2
+Required SSD ) Actual SSD
+1
+3 1
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Cole Chariton Linn Cass McDonald St.Charles
+1
+2 5 3 4 1 6
+2 5 3 4 1 6 0.25714
+2 5 3 4 1 6 0.25714
+3 5 2 4 1 6 0.14286
+3 5 2 4 1 6 0.14286
+3 5 2 4 1 6 0.14286
+4 5 2 3 1 6 -0.0572
+3 5 2 4 1 6 0.114
+3 5 2 4 1 6 0.114
+CORRELATION VALUES 0.25714 ACTIVE CROSSINGS 1
+2 1
+3 1
+1 2
+2 2
+3 2
+1 3
+2 3
+3 3
+Multiplication Factor(X) Root Factor(Y)
+Base Rankings 1 2 3 4 5 6
+County Barry Jasper Jackson Barton Cass Clay
+1
+1 4 2 3 5 6
+1 4 2 3 5 6
+1 4 2 3 5 6 0.82857
+2 4 1 3 5 6 0.71429
+1 4 2 3 5 6 0.82857
+1 4 2 3 5 6 0.82857
+2 4 1 3 5 6 0.71429
+2 4 1 3 5 6 0.714
+1 4 2 3 5 6 0.829
+CORRELATION VALUES 0.82857 0.82857
+69
+APPENDIX VI: REQUIRED APPROACH 
+70
+Appendix VI REQUIRED APPROACH 
+71
+APPROACH SIGHT DISTANCE Type of Crossing Passive 1 Passive 2 Passive 3 Passive 4 Passive 5 Passive 6 Active 1 Active 2 Active 3 Active 4 Active 5 Active 6 County COLE CHARITON LINN CASS MC DONALD ST CHARLES TOTAL BARRY JASPER JACKSON BARTON CASS CLAY TOTAL Unsafe Quadrants 4 4 1 1 4 4 18 3 1 2 2 4 3 15 safe Quadrants 0 0 3 3 0 0 6 1 3 2 2 0 1 9 % of Quadrants less than Required 100 100 25 25 0 0 75 75 25 50 50 100 75 62.5
+Graph Drawn between the actual approach sight distances versus the Required Sight Distances.
+APPROACH SIGHT DISTANCE 3000 P1 2500 P2 P3 P4 2000 ASD P5 P6 1500 A1 A2 1000 A3 A4 500 A5 A6 SLOPE = 1 0 0 200 400 600 Re q ASD 800 1000 1200
+Safe Quadrant: Required Sight Distance 
+STOP LINE SIGHT DISTANCE Type of Crossing Passive 1 Passive 2 Passive 3 Passive 4 Passive 5 Passive 6 Active 1 Active 2 Active 3 Active 4 Active 5 Active 6 County COLE CHARITON LINN CASS MC DONALD ST CHARLES BARRY JASPER JACKSON BARTON CASS CLAY TOTAL unsafe Quadrants 2 2 2 0 1 1 8 2 2 1 0 1 3 9 safe Quadrants 2 2 2 4 3 3 16 2 2 3 4 3 1 15 % of Quadrants less than Required 50 50 50 0 25 25 33.33 50 50 25 0 25 75 60
+TOTAL
+Graph Drawn between the actual approach sight distances versus the Required Sight Distances.
+STOP LINE SIGHT DISTANCE 3500 P1
+3000 2500 2000 1500 1000 500 0 0 500 1000 Re q SLSD 1500 2000 2500
+P2 P3 P4 P5 P6 A1 A2 A3 A4 A5 A6 SLOPE = 1
+Safe Quadrant: Required Sight Distance 
+SLSD
+73

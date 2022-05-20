@@ -1,0 +1,1580 @@
+139 A HYBRID STATISTICAL-ANALYTICAL METHOD FOR ASSESSING VIOLENT FAILURE IN U.S. COAL MINES By Hamid Maleki, Ph.D.,1 Eric G. Zahl,2 and John P. Dunford 3
+ABSTRACT Coal bumps are influenced by geologic conditions, the geometric design of coal mine excavations, and the sequence and rate of extraction.
+Researchers from private industry and government agencies around the world have studied mechanisms of violent failure and have identified individual factors that contribute to coal bumps.
+To develop predictive tools for assessing coal bump potential, the authors initiated a comprehensive study using information from 25 case studies undertaken in U.S. mines.
+Multiple linear regression and numerical modeling analyses of geological and mining conditions were used to identify the most significant factors contributing to stress bumps in coal mines.
+Twenty-five factors were considered initially, including mechanical properties of strata, stress fields, face and pillar factors of safety, joint spacings, mining methods, and stress gradients.
+In situ strength was estimated in 12 coal seams where uniaxial compressive strength exceeded 2,000 psi.
+Allowances were made for favorable local yielding characteristics of mine roof and floor in reducing damage severity.
+Pillar and face factors of safety were calculated using displacement-discontinuity methods for specific geometries.
+This work identified the most important variables contributing to coal bumps.
+These are (1) mechanical properties of strata, including local yield characteristics of a mine roof and floor, (2) gate pillar factors of safety, (3) roof beam thickness, joint spacing, and stiffness characteristics, which influence released energy, (4) stress gradients associated with the approach of mining to areas of higher stress concentrations, and (5) the mining method.
+By combining the strength of both analytical and statistical methods, new capabilities were developed for predicting coal bump potential and for building confidence intervals on expected damage.
+1 2
+Principal, Maleki Technologies, Inc., Spokane, WA. Civil engineer, Spokane Research Laboratory, National Institute for Occupational Safety and Health, Spokane, WA. 3 Mining engineer, Spokane Research Laboratory, National Institute for Occupational Safety and Health, Spokane, WA.
+140
+INTRODUCTION Coal bumps are sudden failures near mine entries that are of such a magnitude that they expel large amounts of coal and rock into the face area.
+These destructive events have resulted in fatalities and injuries to underground mine workers in the United States.
+Coal bumps are not only a safety concern in U.S. coal mines, but also have affected safety and resource recovery in other countries, including Germany, the United Kingdom, Poland, France, Mexico, the People's Republic of China, India, and the Republic of South Africa.
+Gradual or progressive failure, which is commonly experienced in coal mines, has less effect on mining continuity and safety and is generally controlled by timely scaling, cleaning, and bolting.
+Researchers from private industry, government, and academia have studied the mechanisms of coal bumps [Crouch and Fairhurst 1973; Salamon 1984; Babcock and Bickel 1984; Iannacchione and Zelanko 1994; Maleki et al. 1995] and mine seismicity [Arabasz et al. 1997; McGarr 1984]
+Seismic events are generated as mining activities change the stress field; they often result in either crushing of coal measure rocks (strain bump) or shearing of asperities along geological discontinuities (faultslip).
+Sudden collapse of overburden rocks [Maleki 1981, 1995; Pechmann et al. 1995] has also been associated with large seismic events, triggering coal bumps in marginally stable pillars.
+To differentiate between stable and violent failure of rocks, Crouch and Fairhurst [1973] and Salamon [1984]
+Linkov [1992] proposed an energy criterion emphasizing that violent failure results when kinetic energy is liberated above that consumed during fr
+In practice, it is difficult to estimate postpeak stiffness of coal for any geometry [Maleki 1995] or to calculate fracture energies.
+This led some practitioners to use either stored elastic strain energy or changes in energy release [Cook et al. 1966] to evaluate the likelihood of violent failure.
+In view of limitations for unambiguous calculations of postpeak stiffness, many researchers have attempted to identify individual factors influencing coal bumps using the data from single-field measurement programs.
+Using such data analyses and in the absence of rigorous statistical treatment of all case studies, it is very difficult to identify geotechnical factors that influence coal bumps, to assign confidence intervals, and to develop predictive capabilities.
+To identify the most significant factors contributing to coal bumps, the authors analyzed geometric and geologic data using both computational and statistical analysis techniques.
+The data included information on both violent and nonviolent failures from 25 mine sites in Colorado, Utah, Virginia, and Kentucky, where detailed geotechnical and in-mine monitoring results were available.
+DATA ANALYSIS The first step in developing a statistical model was to create suitable numerical values that express geologic, geometric, and geomechanical conditions.
+The second step was to reduce the number of independent variables by combining some existing variables into new categories and identify highly correlated independent variables.
+Reducing the number of variables is needed when there are too many variables to relate to the number of data points.
+The presence of highly correlatable variables influences which procedures are selected for multiple regression analyses.
+The third step was to develop a multivariate regression model and identify significant factors that contribute to coal bumps.
+Some geologic variables were readily available in numerical format; other geomechanical factors had to be calculated using numerical and analytical techniques.
+These activities involved-- (1) Obtaining mechanical property values for roof, floor, and coal seams through laboratory tests of samples of nearseam strata.
+In situ strength of coal seams was estimated using the procedures suggested by Maleki [1992].
+(2) Calculating both maximum and minimum secondary horizontal stresses using overcoring stress measurements from one to three boreholes [Bickel 1993].
+(3) Calculating pillar and face factors of safety for individual case studies using both two- and three-dimensional boundary-element techniques [Maleki 1990; Crouch 1976; Zipf 1993].
+Results were compared with field data when such data were available.
+(4) Calculating energy release from a potential seismic event using boundary-element modeling and analytical formulations suggested by Wu and Karfakis [1994] for estimating energy accumulation in both roof and coal and energy release [McGarr 1984]
+where E ' total accumulated energy in roof and seam, erg, and a ' coefficient depending on joint density.
+(5) Assessing the severity of coal bumps using a damage rating developed by and based on the authors' observations of physical damage to face equipment and/or injury to mine personnel, as well as observations by other researchers as cited in the literature.
+Damage levels were assigned a ranking between 0 and 3.
+Level 1 signifies interruptions in mining operations;
+141
+level 3 signifies damages to both face equipment and injuries to mine personnel.
+The first step of the analyses involved the identification of 25 geologic, geometric, and geomechanical variables that had the potential to contribute to coal bump occurrence.
+Both
+violent (bump-prone) and nonviolent conditions in 6 room-andpillar mines and 19 longwall mines were studied.
+Tables 1-3 summarize these data and include averages, ranges, and standard deviations.
+Typical frequency histograms are presented in figures 1-3 and indicate that these case studies provided good coverage of the variables.
+Table 1.CStatistical summary of geologic variables Variable Joint sets . . . . . . . . . . . . . . . . . . .
+Cleat sets . . . . . . . . . . . . . . . . . .
+In-seam partings . . . . . . . . . . . . .
+Joint spacing, ft . . . . . . . . . . . . . .
+Rock Quality Designation (RQD) .
+Depth, ft . . . . . . . . . . . . . . . . . . .
+Roof beam thickness, ft . . . . . . . .
+Young's modulus, million psi . . . .
+Young's modulus of roof and floor, Uniaxial strength, psi . . . . . . . . . .
+Uniaxial strength of roof and floor, Maximum horizontal stress, psi . .
+Interacting seams . . . . . . . . . . . .
+Local yield characteristics . . . . . .
+......
+......
+......
+......
+......
+......
+......
+......
+million ...... psi . . .
+......
+......
+...... ... ... ... ... ... ... ... ... psi ... ... ... ... ... . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Mean 1.4 1.8 1 22 77 1,640 14 0.4-8 3 3,240 14,700 1,920 1.2 0.8 Standard deviation 0.6 0.4 0.9 18 18 440 11 0.12 1 750 3,460 1,100 0.4 Range 1-3 1-2 0-3 5-50 50-100 900-2,700 5-40 0.35-0.67 1-4.8 2,000-4,600 8,000-22,000 100-3,800 1-3 0-2 No. of cases 25 25 21 24 15 25 25 25 25 25 25 25 25 25
+Table 2.CStatistical summary of geometric variables Variable Pillar width, ft . . .
+Pillar height, ft . . .
+Entry span, ft . . . .
+Barrier pillar width, Face width, ft . . .
+Mining method . .
+Stress gradient . .
+..
+..
+.. ft ..
+..
+.. . . . . . .
+Mean 63 8.3 19 165 550 1.2 0.9 Standard deviation 34 1 1 90 130 0.4 0.6 Range 30-140 5.5-10 18-20 50-240 200-800 1-2 0-2 No. of cases 23 25 25 6 25 25 25
+Table 3.CStatistical summary of geomechanical variables Variable Pillar factor of Face factor of Energy (M1) .
+Damage . . . safety safety ......
+...... . . . . . . . .
+Mean 0.8 0.9 3 1.4 Standard deviation 0.3 0.2 0.5 1 Range 0.5-1.4 0.6-1.5 2-4 0-3 No. of cases 23 22 22 25
+Figure 2.--Histogram frequency diagram for the maxiumum principal stress.
+Figure 1.CHistogram frequency diagram for pillar width.
+Figure 3.--Histogram frequency diagram for the uniaxial compressive strength of roof.
+142
+Roof beam thickness ranged from 5 to 40 ft.
+The beam chosen for the evaluation was the strongest beam of the near-seam strata located between one and four times the seam thickness in the mine roof.
+Although there is some evidence that massive upper strata have contributed to coal bumps in some mines [Maleki 1995], their influence was not directly evaluated in this study because of the lack of geological and mechan
+Local yield characteristics of the immediate roof and floor strata influence coal pillar failure and the severity of coal
+bumps.
+This factor varied from 0 to 2, where 0 indicates insignificant yielding in the roof and floor and 2 indicates favorable, gradual yielding in both roof and floor.
+Stress gradients varied from 0 to 2, depending on whether mining proceeded toward an area of high stress (resulting from previous mining) and/or abnormal geologic conditions, such as those occasionally found near faults or grabens.
+BIVARIATE CORRELATIONS AND DATA REDUCTION The second step in the analyses involved correlations and variable reductions.
+Based on preliminary bivariate correlations among all geologic, geometric, and geomechanical variables, the number of variables was reduced by combining some variables into new ones.
+In addition, the cause-and-effect structure in the data was identified, helping to tailor the procedures for multiple regression analysis using forward stepwise inclusion of dependent variables, as described later in this paper.
+The new variables were as follows: Pqratio Strenrc Jointrf Gradyield Panelwd Youngrc Ratio of maximum principal horizontal stress (P) to minimum stress (Q) The ratio of uniaxial compressive strength of the roof to the coal Joint spacing Ã— roof beam thickness Ã· mining height Ratio of roof and floor yield characteristics to stress gradient Ratio of panel width to depth Ratio of Young's modulus of the roof to the seam geometric variables.
+Energy (M1), face factor of safety, stress gradient, pillar factor of safety, joint spacing, and uniaxial compressive strength of roof to coal were the most significant.
+Other variables were poorly correlated with damage, including the ratio of P to Q, pillar width, and Young's modulus of roof to coal.
+Table 4.CBivariate correlation coefficients between damage and selected variables Variable Significant variables:1 Damage . . . . . . . . . . . .
+Energy . . . . . . . . . . . . .
+Gradyield . . . . . . . . . . .
+Jointrf . . . . . . . . . . . . . .
+Pillar factor of safety . .
+Uniaxial strength of roof Face factor of safety . .
+No. of interacting seams Panel width to depth . . .
+Mining method . . . . . . .
+Insignificant variables: Pillar width . . . . . . . . . .
+Ratio of P to Q . . . . . . .
+Young's modulus roof to 1 Two-tailed tests.
+Coefficient ..
+..
+..
+..
+.. to .. .
+..
+.. ... ... ... ... ... coal ... ... ... ... . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 0.65 
+Table 4 presents the bivariate correlation coefficients between the variable "damage" and selected geologic and
+........
+........ coal . . . .
+MULTIPLE LINEAR REGRESSION ANALYSIS The last step in developing predictive capabilities was to complete multiple regression analyses using the numerical values obtained through measurements and numerical modeling.
+This is a hybrid approach where the strengths of both statistical and computational methods are combined.
+Computational methods have been used to assess the influence of a combination of geometric variables into single variables, such as pillar factor of safety and released energy.
+This was very useful for increasing goodness of fit and enhancing multiple regression coefficients.
+Statistical methods were used to identify significant variables, build confidence intervals, etc.
+The multilinear regression procedure consisted of entering the independent variables one at a time into the equation using a forward selection methodology.
+In this method, the variable having the largest correlation with the dependant variable is entered into the equation.
+If a variable fails to meet entry requirements, it is not included in the equation.
+If it meets the criteria, the second variable with the highest partial correlation is selected and tested for entering into the equation.
+This procedure is very desirable when there is a cause-and-effect structure among the variables.
+An example of the cause-andeffect relationship is shown when a greater depth reduces pillar
+143
+factor of safety, contributes to an accumulation of energy, and ultimately results in greater damage.
+Using the above procedures, any hidden relationship between depth and pillar factor of safety, energy, and damage is evaluated and taken into account during each step of the analysis.
+Several geomechanical variables (table 3) were initially used as dependent variables.
+The damage variable, however, resulted in the highest multiple regression coefficient.
+The multiple correlation coefficient (R), which is a measure of goodness of fit, for the last step was 0.87.
+The assumptions of linear regression analysis were tested and found to be valid by an analysis of variance, F-statistics, and a plot of standardized residuals (figure 4).
+Residual plot did not indicate the need to include nonlinear terms because there was no special pattern in the residuals.
+Figure 4.CStandardized scatterplot for the dependent variable "damage."
+IMPORTANT VARIABLES CONTRIBUTING TO BUMP-PRONE CONDITIONS Based on an examination of standardized regression coefficients (table 5), the following variables best explain the variations in damage and thus statistically have the most significant influence on coal bump potential: Â· Energy release.--This variable includes the effects of the mechanical properties of the roof and coal, depth, stress field, and joint density and thus directly relates to damage.
+Â· Method.--Mining method has a bearing on coal bump potential.
+The room-and-pillar method is associated with a higher degree of damage than longwall mining.
+Â· Pillar factor of safety.--Gate pillar geometry contributes directly to the severity of damage.
+Â· Stress gradient and yield characteristics.--Mining toward areas of high stress creates a potential for coal bumps; localized yielding roof and floor conditions encourage gradual failure, reducing the severity of damage.
+Table 5.CStandardized regression coefficients and statistical significance Variable Energy . . . . . . . . . . .
+Pillar factor of safety .
+Method . . . . . . . . . . .
+Gradyield . . . . . . . . .
+Constant . . . . . . . . . .
+NAp Not applicable.
+. . . . . . . . . .
+Standardized coefficient 0.28 
+CONCLUSIONS A hybrid statistical-analytical approach was developed to identify the most significant factors contributing to coal bumps.
+By combining the strength of both analytical and statistical methods, the authors achieved new capabilities for predicting coal bump potential and for building confidence intervals on expected damage.
+Because the method relies on an extensive amount of geotechnical data from 25 case studies in U.S. coal mines, it should be helpful to mine planners in identifying bump-prone conditions.
+This in turn will result in safer designs for coal mines.
+REFERENCES Arabasz WJ, Nava SJ, Phelps WT [1997].
+Mining seismicity in the Wasatch Plateau and Book Cliffs coal mining districts, Utah, U.S.A.
+In: Gibowicz SJ, Lasocki S, eds.
+Proceedings of the Fourth International Symposium on Rockbursts and Seismicity in Mines.
+Balkema, pp. 111-116.
+Babcock CO, Bickel DL [1984].
+Constraint--the missing variable in the coal burst problem.
+In: Dowding CH, Singh MM, eds.
+Rock Mechanics in Productivity and Protection - Proceedings of the 25th Symposium on Rock Mechanics.
+Littleton, CO: Society for Mining, Metallurgy, and Exploration, Inc., pp. 639-647.
+Bickel DL [1993].
+Rock stress determinations from overcoring: an overview.
+Denver, CO: U.S. Department of the Interior, Bureau of Mines, Bulletin 694.
+Cook NGW, Hook E, Petorius JPG, Ortlepp WD, Salamon MDG [1966].
+Rock mechanics applied to the study of rock bursts.
+Int J S Afr Inst Min Metall, pp. 435-528.
+Crouch SL [1976].
+Analysis of stresses and displacements around underground excavations: an application of displacement discontinuity method.
+University of Minnesota Geomechanics Report.
+144
+Crouch SL, Fairhurst C [1973].
+The mechanics of coal mine bumps and the interaction between coal pillars, mine roof, and floor.
+U.S. Department of the Interior, Bureau of Mines, OFR 53-73.
+Iannacchione AT, Zelanko JC [1994].
+Pillar mechanics of coal mine bursts: a control strategy.
+In: Proceedings of the 16th World Mining Congress, The Mining Industry on the Threshold of XXI Century (Sofia, Bulgaria).
+Vol. 5, pp. 15-23.
+Linkov AM [1992].
+Dynamic phenomena in mines and the problem of stability.
+University of Minnesota/MTS Systems Corp., lecture notes.
+Maleki H [1981].
+Coal mine ground control [Dissertation].
+Golden, CO: Colorado School of Mines, Department of Mining Engineering.
+Maleki H [1990].
+Development of modeling procedures for coal mine stability evaluation.
+In: Hustrulid WA, Johnson GA, eds.
+Rock Mechanics Contributions and Challenges: Proceedings of the 31st U.S. Symposium.
+Balkema, pp. 85-92.
+Maleki H [1992].
+In situ pillar strength and failure mechanisms for U.S. coal seams.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 73-77.
+Maleki H [1995].
+An analysis of violent failure in U.S. coal mines: case studies.
+In: Proceedings - Mechanics and Mitigation of Violent Failure in Coal and Hard-Rock Mines.
+Spokane, WA: U.S. Department of the Interior, Bureau of Mines, SP 01-95, pp. 5-25.
+Maleki H, Wopat PF, Repsher RC, Tuchman RJ, eds. [1995].
+Proceedings - Mechanics and Mitigation of Violent Failure in Coal and Hard-Rock Mines.
+Spokane, WA: U.S. Department of the Interior, Bureau of Mines, SP 01-95.
+McGarr A [1984].
+Some applications of seismic source mechanism studies to assessing underground hazard.
+In: Gay NC, Wainwright EH, eds. Rockbursts and Seismicity in Mines - Proceedings of the Symposium on Seismicity in Mines, Johannesburg, Republic of South Africa, 1982.
+South African Institute of Mining and Metallurgy, Symposium Series 6, pp. 199-208.
+Pechmann JC, Walter WR, Arabasz W, Nava S [1995].
+The February 3, 1995, M 5.1 seismic event in the trona mining district of southwestern Wyoming.
+Seismol Res Letter, Vol. 66, pp. 25-34.
+Salamon MDG [1984].
+Energy considerations in rock mechanics: fundamental results.
+Int J S Afr Inst Min Metall, pp. 237-246.
+Wu X, Karfakis MG [1994].
+An analysis of strain energy accumulation around longwall panels under strong roofs.
+In: Chugh YP, Beasley GA, eds.
+Proceedings of the Fifth Conference on Ground Control for Midwestern U.S. Coal Mines.
+Southern Illinois University, Department of Mining Engineering, pp. 230-253.
+Zipf RK Jr. [1993].
+Stress analysis in coal mines with MULSIM/NL.
+In: Proceedings of the 89th Meeting of the Rocky Mountain Coal Mining Institute.
+Lakewood, CO: Rocky Mountain Coal Mining Institute, pp. 38-43.
+145
+EMPIRICAL METHODS FOR COAL PILLAR DESIGN By Christopher Mark, Ph.D. 1
+ABSTRACT Empirical methods involve the scientific interpretation of real-world experience.
+Many problems in ground control lend themselves to an empirical approach because the mines provide us with plenty of experience with full-scale rock structures.
+During the past 10 years, powerful design techniques have emerged from statistical analyses of large databases of real-world pillar successes and failures.
+These include the Analysis of Retreat Mining Pillar Stability (ARMPS), the Analysis of Longwall Pillar Stability (ALPS), the Mark-Bieniawski rectangular pillar strength formula, and guidelines for preventing massive pillar collapses.
+In the process, our practical understanding of pillar behavior has been greatly enriched.
+1
+Supervisory physical scientist, Pittsburgh Research Laboratory, National Institute for Occupational Safety and Health, Pittsburgh, PA.
+146
+INTRODUCTION "Empirical" is defined by Webster's Dictionary [1988] as "relying upon or gained from experiment or observation."
+Until relatively recently, all pillar design methods used in the United States were empirical.
+The earliest, proposed by Bunting [1911], was based on case histories supplemented by laboratory testing.
+Later formulas followed the same basic pattern and were derived from laboratory tests (the Holland-Gaddy and Obert-Duvall formulas), large-scale in situ tests (the Bieniawski formula), or case histories (the Salamon-Munro formula).
+Each of these "classic" pillar design formulas consisted of three steps: (1) Estimating the pillar load using tributary area theory; (2) Estimating the pillar strength using a pillar strength formula; and (3) Calculating the pillar safety factor.
+In each case, the pillar strength was estimated as a function of two variables--the pillar's width-to-height (w/h) ratio and the coal seam strength.
+For many years, these classic formulas performed reasonably well for room-and-pillar mining under relatively shallow cover.
+Their key advantages were that they were closely linked to reality and were easy to use.
+The greatest disadvantages of empirical formulas are that they cannot be easily extended beyond their original database, and they provide little direct insight into coal pillar mechanics.
+The growth of longwall mining exposed these shortcomings.
+Full extraction results in large abutment loads, which cannot be estimated by tributary area.
+More important is that longwall mining uses pillars that are much more "squat" (large w/h ratio) than those for which the classic formulas were developed.
+Testing such pillars in situ is prohibitively expensive, and laboratory tests of squat pillars are clearly inappropriate.
+Moreover, longwall mining raised some new issues even about the definition of what constitutes pillar "failure."
+The classic approach assumes that "pillars will fail when the applied load reaches the compressive strength of the pillars" and that "the load-bearing capacity of the pillar reduces to zero the moment the ultimate strength is exceeded" [Bieniawski 1992].
+When large w/h longwall pillars "fail," however, their load-bearing capacity does not disappear.
+Rather, the gate roads become unserviceable.
+During the 1970s, analytical methods began to emerge as an alternative to the classic formulas.
+Wilson [1972, 1983] of the British National Coal Board was the first to take a radically different approach to pillar design.
+He treated pillar design as a problem in mechanics, rather than one of curve-fitting to experimental or case history data.
+A pillar was analyzed as a complex structure with a nonuniform stress gradient, a buildup of confinement around a high-stress core, and progressive pillar failure.
+Although his mathematics were seriously limited [Mark 1987; Salamon 1992], Wilson's basic concepts are now broadly accepted.
+The advent of powerful computer models gave a further boost to the analytical approach.
+The primary advantage of numerical models is that they can test assumptions about pillar behavior as affected by a variety of geometric and geologic variables.
+For example, independent studies reported by Gale [1992] and Su and Hasenfus [1997]
+Unfortunately, effective numerical modeling requires numerous assumptions about material properties, failure criteria, and postfailure mechanics.
+In their insightful article, Starfield and Cundall [1988] introduced a classification of modeling problems (figure 1).
+One axis on the graph refers to the quality and/or quantity of the available data; the other measures the understanding of the fundamental mechanics of the problem to be solved.
+In many branches of mechanics, most problems fall into region 3, where there is both good understanding and reliable data.
+This is the region where numerical models can be built, validated, and used with conviction.
+Starfield and Cundall argued that problems in rock mechanics usually fall into the data-limited categories 2 or 4 and require a more experimental use of models.
+In the field of coal mine ground control, however, many problems may actually fall into Starfield and Cundall's region 1.
+Our understanding of the complex mechanical behavior and properties of rock masses may be limited, but the potential for data collection is huge.
+Hundreds of longwall and room-andpillar panels are mined each year, and each one can be considered a full-scale test of a pillar design.
+As Parker [1974] noted: "Scattered around the world are millions and millions of
+Figure 1.CClassification of modeling problems (after Starfield and Cundall [1988]).
+147
+pillars--the real thing--under all imaginable conditions; and tabulating their dimensions, the approximate loads, and whether they are stable or not would provide most useful guidelines for pillar design."
+Actually, simply tabulating data does not necessarily lead to useful conclusions.
+Fortunately, today's data analysis techniques are far more powerful than those that were available to the pillar design pioneers.
+In the past 30 years, sciences like economics, sociology, psychology, anthropology, and epidemiology have all been transformed by quantitative data analysis using statistics [Encyclopedia Britannica 1989].
+Sophisticated statistical packages enable researchers to efficiently comb large databases for significant relationships between the variables.
+The empirical approach requires that the researcher begin with a clear hypothesis, often in the form of a simplified model
+of the real world that abstracts and isolates the factors that are deemed to be important.
+It therefore requires, as Salamon [1989] indicated, "a reasonably clear understanding of the physical phenomenon in question."
+Without prudent simplification, the complexity of the problem will overwhelm the method's ability to discern relationships between the variables.
+However, a key advantage is that critical variables may be included, even if they are difficult to measure directly, through the use of "rating scales."
+During the past 5 years, modern empirical techniques have been applied to a variety of problems in coal mine ground control.
+They have resulted in some very successful design techniques, as well as some new insights into pillar and rock mass behavior.
+This paper discusses some of them in more detail.
+DESIGN OF LONGWALL GATE ENTRY SYSTEMS In the 15 years after 1972, the number of U.S. longwall faces increased from 32 to 118 [Barczak 1992].
+The new technology created a host of operational and safety problems, including the maintenance of stable travelways on the tailgate side.
+Researchers initially viewed gate entry ground control primarily as a pillar design issue.
+The clear correlation between larger pillars and improved conditions that had been established by trial and error at many mines supported this approach.
+The most obvious difference between longwall pillars and traditional coal pillars is the abutment loading.
+The major contribution of the original Analysis of Longwall Pillar Stability (ALPS) was a formula for estimating the longwall pillar load based on numerous underground measurements [Mark 1990].
+An evaluation of 100 case histories showed that 88% of the failed cases had stability factors 
+It was evident that ALPS had captured an essential element of the gate entry design problem.
+On the other hand, there was a wide range of stability factors (approximately 0.5 to 1.2) in which both successful and unsuccessful designs occurred.
+Clearly, other variables in addition to the ALPS stability factor were influencing tailgate performance.
+A hypothesis was proposed stating that tailgate performance is determined by five factors: Â· Â· Â· Â· Â· Pillar design and loading; Roof quality; Entry width; Primary support; and Supplemental support.
+empirical method could make full use of the wealth of full-scale case history data that had been collected.
+Moreover, it could focus directly on the variable of interest--tailgate performance.
+It quickly became clear that roof quality was the key.
+Studies conducted as early as the 1960s had concluded that "whether or not the stress [from an extracted longwall panel]
+Yet the variety and complexity of geologic environments had defied effective measurement.
+The Coal Mine Roof Rating (CMRR) overcame this obstacle by providing a quantitative measure of the structural competence of coal mine roof [Molinda and Mark 1994; Mark and Molinda 1996].
+The CMRR applies many of the principles of Bieniawski's Rock Mass Rating (RMR), with the following significant differences: Â· The CMRR focuses on the characteristics of bedding planes, slickensides, and other discontinuities that determine the structural competence of sedimentary coal measure rocks.
+Â· It is applicable to all U.S. coalfields and allows a meaningful comparison of structural competence, even where lithologies are quite different.
+Â· It treats the bolted interval as a single structure while considering the contributions of the different lithologic units that may be present within it.
+The CMRR weighs the importance of the geotechnical factors that determine roof competence and combines these values into a single rating on a scale from 0 to 100.
+Data on tailgate performance were collected from approximately 55% of all U.S. longwall mines; these mines were selected to represent a geographic and geologic cross section of the U.S. longwall experience.
+A total of 64 case histories were
+Attacking this extremely complex problem with traditional, deterministic rock mechanics using analytical or numerical models would have been extremely difficult.
+On the other hand, the problem was ideal for an empirical approach.
+The
+148
+classified as "satisfactory" or "unsatisfactory" based on the conditions in the tailgate [Mark et al. 1994].
+Each case history was described by the ALPS stability factor (SF), entry width, and primary support rating, as well as the CMRR.
+Multivariate statistical analysis showed that when the roof is strong, smaller pillars can safely be used.
+For example, when the CMRR is 75, an ALPS SF of 0.7 is adequate.
+When the CMRR drops to 35, the ALPS SF must be increased to 1.3.
+Significant correlations were also found between the CMRR and both entry width and the level of primary support [Mark et al. 1994].
+A simple design equation related the required ALPS SF to the CMRR: ALPS SF ' 1.76 
+THE ALPS database was recently revisited, with several new variables added.
+These include: Rectangular pillar strength formula: All of the SFs were recalculated with the Mark-Bieniawski formula (see the section below on "Interactions With Numerical Models") substituted for the original Bieniawski formula.
+The new result is designated as the ALPS (R) SF.
+Uniaxial compressive strength: Nearly 4,000 laboratory tests were compiled from the literature into the Database of Uniaxial Coal Strength (DUCS) [Mark and Barton 1996].
+From these data, typical seam strength values were obtained for 60 U.S. coalbeds.
+Width-to-height (w/h) ratio: The w/h of the largest pillar in the gate entry system was included as an independent variable to check if the pillar strength formula could be improved.
+Depth of cover (H): H was included as an independent variable primarily to check the loading formulation.
+The entry width and the primary support were included as before.
+The statistical analysis showed that the ALPS (R) SF and the CMRR still correctly predicted 85% of the outcome, including
+94% of the failures.
+None of the other new variables would be included even at the 50% confidence level (a 90% confidence level would be required for a covariate to be considered statistically significant).
+Figure 2 shows the distribution of the case histories and the revised design equation ALPS (R) SF ' 2.0 
+Since 1987, ALPS has become the most widely used pillar design method in the United States.
+The ALPS-CMRR method directly addresses gate entry performance and makes U.S. longwall experience available to mine planners in a practical form.
+ALPS reduces a multitude of variables (e.g., depth of cover, pillar widths, seam height, entry width, roof quality) into a single, meaningful design parameter--the stability factor.
+ALPS has been accepted because it easy to use, its essential concepts are easy to grasp, and it has been thoroughly verified with case histories.
+Most importantly, ALPS gives reasonable answers that make sense in terms of experience.
+Tailgate blockages are far less common today than 10 years ago; ALPS can surely claim some of the credit.
+PILLAR DESIGN FOR ROOM-AND-PILLAR MINING Room-and-pillar mining still accounts for nearly 50% of the underground coal mined in the United States (even after excluding longwall development).
+Most room-and-pillar mines operate under relatively shallow depth, often working small, irregular deposits.
+Approximately 20% of room-and-pillar coal is won during pillar recovery operations [Mark et al. 1997b].
+Room-and-pillar mines still suffer from large-scale pillar failures, including sudden collapses and the more common "squeezes."
+The classical empirical pillar strength formulas were developed precisely to prevent these types of failures, but they have never been entirely satisfactory.
+First, they did not consider the abutment loads that occur during pillar recovery operations.
+Second, laboratory testing to determine coal strength has remained controversial despite the fact that textbooks have considered it an integral part of pillar design for 30 years.
+Third, because the empirical formulas were developed from tests on relatively slender specimens, their applicability to squat pillars has been open to question.
+Finally, attempts to verify the formulas' accuracy with U.S. case histories have been incomplete and conspicuously lacking in examples of pillar failure [Holland 1962; Bieniawski 1984].
+An intensive research effort to develop an improved design method culminated in the Analysis of Retreat Mining Pillar
+149
+Stability (ARMPS).
+ARMPS employs many of the same basic constructs as ALPS, adapted to more complex and varied retreat mining geometries [Mark and Chase 1997].
+The abutment load formulas were adapted to three dimensions to account for the presence of barrier pillars and previously extracted panels.
+Because the pillars used in retreat mining are often rectangular, the Mark-Bieniawski pillar strength formula was developed to estimate pillar strength.
+Features such as varied entry spacings, angled crosscuts, and slab cuts in the barrier can all be modeled.
+To verify ARMPS, more than 200 retreat mining case histories were obtained from field visits throughout the United States.
+The case histories come from 10 States and cover an extensive range of geologic conditions, roof rock caveability, extraction methods, depths of cover, and pillar geometries.
+Ground conditions were characterized in each case as satisfactory or unsatisfactory.
+Where possible, data were also collected to assess the CMRR.
+Site-specific data on coal strength were not generally available for individual case histories, but DUCS again provided estimates of UCS for most coalbeds.
+Finally, the depth of cover and the w/h were also included as independent variables in the analysis.
+Details on the individual case histories have been presented elsewhere [Mark and Chase 1997].
+When the entire data set was evaluated, it was found that 77% of the outcomes could be correctly predicted simply by setting the ARMPS SF to 1.46.
+Including either the depth or the w/h increased the correlation coefficient, r2, slightly without improving the accuracy (figure 3).
+The depth and the w/h ratio were strongly correlated with each other within the data set.
+The accuracy improved when the data set was divided into two parts.
+One group included only cases where cover was shallow (H 
+For this group, when the ARMPS SF ' 1.5, 83% of the outcomes were correctly predicted.
+However, for the deep cover/squat pillar group, only 58% of the cases were correctly predicted at ARMPS SF ' 0.93.
+No other variables could be included in either group at the 90% confidence level.
+It seems clear that ARMPS works quite well at shallow depth and moderate w/h ratios, but that other factors must be considered when squat pillars are used at greater depths.
+The analysis also found that using laboratory UCS tests did not improve the accuracy of ARMPS at all.
+This finding confirms the results of a previously published study [Mark and
+Figure 3.CU.S. room-and-pillar case histories.
+Barton 1996], which showed that ARMPS was more reliable when the in situ coal strength was always assumed to be 6.2 MPa (900 psi).
+It also showed that the "size effect" varies dramatically from seam to seam depending on the coal cleat structure.
+Studies in the Republic of South Africa and Australia have also found that a uniform coal strength worked reasonably well in pillar design formulas [Salamon 1991; Galvin and Hebblewhite 1995].
+It has already been noted that ARMPS is significantly less reliable for squat pillars.
+It seems likely that while the strength of the intact coal (which is what is measured in a laboratory test) is not related to pillar strength, large-scale geologic features like bedding planes, clay bands, rock partings, and roof and floor rock may determine the strength of squat pillars.
+Such features influence the amount of confinement that can be generated within the pillar and therefore the load-bearing capacity of the pillar core.
+Similar conclusions have been reached by researchers using numerical models [Su and Hasenfus 1997; Gale 1992].
+Although the CMRR was not found to be significant in the overall data set, one local study indicated that caveability may affect pillar design.
+More than 50 case histories were collected at a mining complex in southern West Virginia.
+Analysis showed that satisfactory conditions were more likely to be encountered under shale roof (figure 4) than under massive sandstone roof (figure 5).
+The implication is that better caving occurs with shale, resulting in lower pillar loads.
+150
+Figure 4.CPillar performance under different roof geologies at a mining complex in West VirginiaCshale roof.
+Figure 5.CPillar performance under different roof geologies at a mining complex in West VirginiaCsandstone roof.
+151
+MASSIVE PILLAR COLLAPSES Most of the pillar failures included in the ARMPS database are "squeezes" in which the section converged over hours, days, or even weeks.
+There are also 15 massive pillar collapses that form an important subset [Mark et al. 1997a].
+Massive pillar collapses occur when undersized pillars fail and rapidly shed their load to adjacent pillars, which in turn fail.
+The consequences of such chain-reaction failures typically include a powerful, destructive, and hazardous airblast.
+Data collected at 12 massive collapse sites revealed that the ARMPS SF was 
+What really distinguished the sudden collapses from the slow squeezes, however, was the pillar's w/h ratio.
+Every massive pillar collapse involved slender pillars whose w/h was 
+The overburden also included strong, bridging strata in every case.
+In this instance, the empirical analysis led to a hypothesis about the mechanism of the failure.
+Laboratory tests have shown that slender coal specimens typically have little residual strength, which means that they shed almost their entire load when they fail.
+As the specimens become more squat, their residual strength increases, reducing the potential for a rapid domino-type failure.
+The mechanism of massive collapses was replicated in a numerical model [Zipf and Mark 1997], providing further support for the hypothesis.
+Three alternative strategies were proposed to prevent massive pillar collapses: Â· Prevention: With the prevention approach, the panel pillars are designed so that collapse is highly unlikely.
+This can be accomplished by increasing either the SF of the pillars or their w/h ratio.
+Â· Containment: In this approach, high extraction is practiced within individual compartments that are separated by
+Figure 6.CA portion of the room-and-pillar case history database showing examples of pillar collapse.
+barriers.
+The small pillars may collapse within a compartment, but because the compartment size is limited, the consequences are not great.
+The barriers may be true barrier pillars, or they may be rows of development pillars that are not split on retreat.
+The containment approach has been likened to the use of compartments on a submarine.
+Â· High extraction: By removing enough coal during retreat mining, failure of the overburden may be induced, which would remove the airblast hazard.
+The empirical analysis, using case histories, has allowed the first two of these approaches to be quantified in terms of the w/h ratio and the ARMPS SF.
+The guidelines are now being implemented in southern West Virginia, where the majority of these events have occurred.
+INTERACTIONS WITH NUMERICAL MODELS A number of important links have developed between empirical methods and numerical models.
+Because they were obtained from real-world data, empirical models are a good starting point for material property input to models.
+For example, Mark [1990] analyzed numerous field measurements of abutment stress and determined that the stress decay over the ribside could be approximated as an inverse square function.
+Karabin and Evanto [1999] adjusted the gob parameters in the BESOL boundaryelement model to obtain a reasonable fit to the inverse square function.
+Similarly, Heasley and Salamon [1996a,b] used the same s
+Empirical formulas have also helped provide coal properties for some models.
+Although empirical formulas do not explicitly consider the effect of internal pillar mechanics, it is apparent that they imply a nonuniform stress distribution because of the w/h effect.
+A derivation of the implied stress gradients was published by Mark and Iannacchione [1992].
+For example, the Bieniawski formula Sp ' S1 (0.64 % 0.36 w/h) (3)
+152
+implies a stress gradient within the pillar at ultimate load of Sv ' S1 (0.64 % 2.16 x/h), where Sp ' pillar strength, (4)
+the load-bearing area of a rectangular pillar, the MarkBieniawski pillar strength formula is obtained: S where p
+' S1 (0.64 % 0.54 w/h 
+(5)
+L ' pillar length.
+S1 ' in situ coal strength, Sv ' vertical pillar stress, and x ' distance from pillar rib.
+The approach is illustrated in figure 7 and described in more detail by Mark and Chase [1997].
+Other sections of this paper have indicated areas where numerical models and empirical methods have reached similar conclusions about important aspects of pillar mechanics.
+In light of these insights, old concepts of pillar "failure" have given way to a new paradigm that identifies three broad categories of pillar behavior: Â· Slender pillars (w/h 
+The stress gradient defines the vertical stress within the pillar at maximum load as a function of the distance from the nearest rib.
+These empirical stress gradients have been widely used to estimate coal properties for use in boundary-element models that use strain-softening pillar elements.
+In the models, the peak stress increases the further the element is from the rib.
+The empirical stress gradients help ensure that the initial strength estimates are reasonable.
+The same empirical stress gradient was used to extend a classic pillar strength formula to rectangular pillars.
+The original Bieniawski formula was derived for square pillars and underestimates the strength of rectangular pillars that contain proportionately more core area.
+By integrating equation 4 over
+Figure 7.CConceptual depiction of the Mark-Bieniawski pillar strength formula.
+153
+CONCLUSIONS Empirical methods rely on the scientific interpretation of actual mining experience.
+Because they are so firmly linked to reality, they are particularly well suited to practical problems like pillar design.
+Empirical methods like ALPS and ARMPS have met the mining community's need for reliable design techniques that can be used and understood by the nonspecialist.
+Successful empirical research has three central elements: Â· A hypothesis or model that simplifies the real world, yet incorporates its most significant features; Â· A large database of case histories, developed using consistent and thorough in-mine data collection techniques; and Â· Quantitative analysis using appropriate statistical techniques.
+Empirical techniques are not, of course, the only tool in the ground control specialist's kit.
+Indeed, one of the most satisfying developments in recent years is the synergy that has developed between empirical techniques and numerical modeling.
+The two approaches seem to have converged on a number of important conclusions, including: Â· Laboratory testing of small coal samples, particularly UCS tests, are not useful for predicting pillar strength; Â· The strength becomes more difficult to predict as the pillar becomes more squat; Â· The w/h ratio is important for predicting not only the pillar strength, but also the mode of failure; and Â· Many ground control problems must be considered from the standpoint of entry stability, where pillar behavior is just one component.
+Certainly, more work remains before the age-old questions of pillar design are finally solved.
+In particular, much remains to be learned about the mechanics of squat pillars and roof-pillar-floor interactions.
+Currently, there is no accepted way to determine the frictional characteristics of the contacts, bedding planes, and partings that are so crucial to pillar strength.
+It is similarly difficult to characterize the bearing capacity of the floor.
+Simple, meaningful field techniques for estimating these properties will be necessary for further progress with either numerical or empirical techniques.
+Indeed, the cross-pollination between the numerical and empirical methods that has characterized the recent past can be expected to bear further fruit in the future.
+REFERENCES Barczak TM [1992].
+The history and future of longwall mining in the United States.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9316.
+Bieniawski ZT [1984].
+Rock mechanics design in mining and tunneling.
+Balkema.
+Bieniawski ZT [1992].
+A method revisited: coal pillar strength formula based on field investigations.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 158-165.
+Bunting D [1911].
+Chamber pillars in deep anthracite mines.
+Trans AIME, Vol. 42, pp. 236-245.
+Carr F, Wilson AH [1982].
+A new approach to the design of multi-entry developments for retreat longwall mining.
+In: Proceedings of the Second Conference on Ground Control in Mining.
+Morgantown, WV: West Virginia University, pp. 1-21.
+Encyclopedia Britannica [1989].
+15th ed.
+The social sciences.
+E. 27, p. 365.
+Gale WJ [1992].
+A pillar design approach.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 188-195.
+Galvin JM, Hebblewhite BK [1995].
+UNSW pillar design methodology.
+Sydney, Australia: University of New South Wales, Department of Mining Engineering, Research Release No. 1.
+Heasley KA, Salamon MDG [1996a].
+New laminated displacementdiscontinuity program.
+In: Aubertin M, Hassani F, Mitri H, eds.
+Proceedings of the Second North American Rock Mechanics Symposium: NARMS '96 (Montreal, Quebec, Canada), pp. 1879-1886.
+Heasley KA, Salamon MDG [1996b].
+New laminated displacementdiscontinuity program: fundamental behavior.
+In: Ozdemir L, Hanna K, Haramy KY, Peng S, eds.
+Proceedings of the 15th International Conference on Ground Control in Mining.
+Golden, CO: Colorado School of Mines, pp. 111-125.
+Holland CT [1962].
+Design of pillars for overburden support: part II.
+Min Cong J Apr:66-71.
+Karabin GJ, Evanto MA [1999].
+Experience with the boundary-element method of numerical modeling to resolve complex ground control problems.
+In: Proceedings of the Second International Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 99-114, IC 9448.
+Mark C [1987].
+Analysis of longwall pillar stability [Dissertation].
+University Park, PA: The Pennsylvania State University, Department of Mining Engineering.
+Mark C [1990].
+Pillar design methods for longwall mining.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9247.
+Mark C [1992].
+Analysis of longwall pillar stability (ALPS): an update.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 238-249.
+Mark C, Barton TM [1996].
+The uniaxial compressive strength of coal: should it be used to design pillars? In: Ozdemir L, Hanna K, Haramy KY, Peng S, eds.
+Proceedings of the 15th International Conference on Ground Control in Mining.
+Golden, CO: Colorado School of Mines, pp. 61-78.
+Mark C, Chase FE [1997].
+Analysis of retreat mining pillar stability (ARMPS).
+In: Proceedings - New Technology for Ground Control in Retreat Mining.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 97-122, IC 9446, pp. 17-34.
+154
+Mark C, Iannacchione AT [1992].
+Coal pillar mechanics: theoretical models and field measurements compared.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 78-93.
+Mark C, Molinda GM [1996].
+Rating coal mine roof strength from exploratory drill core.
+In: Ozdemir L, Hanna K, Haramy KY, Peng S, eds.
+Proceedings of the 15th International Conference on Ground Control in Mining.
+Golden, CO: Colorado School of Mines, pp. 415-428.
+Mark C, Chase FE, Molinda GM [1994].
+Design of longwall gate entry systems using roof classification.
+In: New Technology for Longwall Ground Control - Proceedings: U.S. Bureau of Mines Technology Transfer Seminar.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, SP 01-94, pp. 5-17.
+Mark C, Chase FE, Zipf RK Jr. [1997a].
+Preventing massive pillar collapses in coal mines.
+In: Proceedings - New Technology for Ground Control in Retreat Mining.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 97-122, IC 9446, pp. 35-48.
+Mark C, McCall FE, Pappas DM [1997b].
+A statistical overview of retreat mining of coal pillars in the United States.
+In: Proceedings - New Technology for Ground Control in Retreat Mining.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 97-122, IC 9446, pp. 2-16.
+Molinda GM, Mark C [1994].
+Coal mine roof rating (CMRR): a practical rock mass classification for coal mines.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9387.
+Parker J [1974].
+Practical rock mechanics for the miner: part 7 - the logical way to design pillars.
+Eng Min J Feb:67.
+Salamon MDG [1989].
+Significance of strata control to the safety and efficiency of mining.
+In: Proceedings of the Eighth International Strata Control Conference (DÃ¼sseldorf, Germany).
+Salamon MDG [1991].
+Behavior and design of coal pillars.
+Australian Coal J, No. 32, pp. 11-22.
+Salamon MDG [1992].
+Strength and stability of coal pillars.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 94-121.
+Starfield AM, Cundall PA [1988].
+Towards a methodology for rock mechanics modelling.
+Int J Rock Mech Min Sci 25(3):99-106.
+Su DWH, Hasenfus GJ [1997].
+Effects of in-seam and near-seam conditions on coal pillar strength.
+Handout at the 16th International Conference on Ground Control in Mining (Morgantown, WV).
+Webster's II New Riverside University Dictionary [1988].
+Itasca, IL: The Riverside Publishing Co.
+Wilson AH [1972].
+An hypothesis concerning pillar stability.
+Min Eng (London) 131(141):409-417.
+Wilson AH [1983].
+The stability of underground workings in the soft rocks of the coal measures.
+Int J Min Eng 1:91-187.
+Zipf RK Jr., Mark C [1997].
+Design methods to control violent pillar failures in room-and-pillar mines.
+Transactions of the Institution of Mining and Metallurgy 106(Sept-Dec):A124-A132.
+155
+COAL PILLAR STRENGTH AND PRACTICAL COAL PILLAR DESIGN CONSIDERATIONS By Daniel W. H. Su, Ph.D.,1 and Gregory J. Hasenfus 2
+ABSTRACT This paper demonstrates that finite-element modeling can be used to predict in situ coal pillar strength, especially under nonideal conditions where interface friction and roof and floor deformation are the primary controlling factors.
+Despite their differences in approach, empirical, analytical, and numerical pillar design methods have apparently converged on fundamentally similar concepts of coal pillar mechanics.
+The finiteelement model results, however, are not intended to suggest a new pillar design criterion.
+Rather, they illustrate the site-specific and complex nature of coal pillar design and the value of using modeling procedures to account for such complex site-specific conditions.
+Because of the site-specific nature of coal pillar design, no single pillar design formula or model can apply in all instances.
+Understanding and accounting for the sitespecific parameters are very important for successful coal pillar design.
+More work remains before the century-old problems related to pillar design are finally solved.
+Future research should focus on the crosslinkage of empirical, analytical, and numerical pillar design methods.
+Senior research scientist.
+Group leader.
+CONSOL, Inc., Research 
+1
+156
+INTRODUCTION The strength of coal and coal pillars has been the subject of considerable research during the past 40 years.
+Coal strengths determined in the laboratory typically increase with increasing specimen width-to-height (w/h) ratio and decrease with increasing height and size.
+Based on the shape and size effect derived from testing of cubical specimens, a number of empirical pillar strength formulas [Gaddy 1956; Holland 1964; Obert and Duvall 1967; Salamon and Munro 1967; Bieniawski 1968] and closed-form analytical solutions for pillar strength [Wilson 1972; Barron 1984]
+However, empirical formulas may not be extrapolated with confidence beyond the data range from which they were derived, typically from pillars with w/h ratios of #5 [Mark and Iannacchione 1992], and these formulas inherently ignore roof and floor end constraint and subsequent interactions.
+The importance of friction and end constraint on laboratory coal strength has been demonstrated by many researchers, including Khair [1968], Brady and Blake [1968]
+Practitioners and researchers alike, including Mark and Bieniawski [1986], Hasenfus and Su [1992]
+The importance of incorporating fundamental principles of rock material response and failure mechanics into a pillar strength model using a finite-element modeling (FEM) technique has been demonstrated by Su and Hasenfus [1996, 1997].
+To accurately assess pillar strength, a model should account not only for the characteristics of the coal, but also for those of the surrounding strata.
+The frictional end-constraint interaction between the pillar and the surrounding roof and floor has been demonstrated to be one of the most significant factors in the strength of very wide pillars.
+This paper summarizes the results of a series of FEM cases designed to evaluate the effect on pillar strength of end constraint or confinement over a wide range of pillar w/h ratios, as well as the effects of seam strength, rock partings, and weak floor.
+The interdependence among pillar design, entry stability, and ventilation efficiency in longwall mining is briefly discussed.
+Finally, the sitespecific nature of coal pillar design is emphasized, and a direction of future research is suggested.
+USE OF FINITE-ELEMENT MODELING IN PILLAR DESIGN In recent years, FEM has been used to predict in situ coal pillar strength, especially under nonideal conditions in which interface friction and roof and floor deformation are the primary controlling factors.
+Practical coal pillar design considerations that incorporated the results of FEM and field measurements were presented by Su and Hasenfus [1996].
+Nonlinear pillar strength curves were first presented to relate pillar strength to w/h ratio under simulated strong mine roof and floor conditions (figure 1).
+Confinement generated by the frictional effect at coal-rock interfaces was demonstrated to accelerate pillar strength increase beginning at a w/h ratio of about 3.
+Thereafter, frictional constraint limitations and coal plasticity decelerate pillar strength increases beginning at a w/h of about 6.
+The simulated pillar strength curve under strong roof and floor compared favorably with measured peak strengths of four failed pillars in two coal mines in southwestern Virginia (figure 2) and is in general agreement with many existing coal pillar design formulas at w/h 
+FEM has also been used to evaluate the effect of in-seam and near-seam conditions, such as seam strength, rock partings, and weak floor rock, on pillar strength [Su and Hasenfus 1997].
+On a percentage basis, seam strength was found to have a negligible effect on the peak strength for pillars at high w/h ratios (figure 3).
+For practical coal pillar design, exact determination of intact coal strength thus becomes unnecessary; for wide pillars, an average seam strength of 6.2 to 6.6 MPa may suffice for most U.S. bituminous coal seams.
+Rock partings within the coal seam, however, were found to have a variable effect on pillar strength, depending on the parting strength.
+A competent shale parting within the coal seam reduces the effective pillar height, thus increasing the ultimate pillar strength (figure 4).
+Conversely, a weak claystone parting slightly decreases pillar strength.
+In addition, weak floor rocks may decrease the ultimate pillar strength by as much as 50% compared to strong floor rock (figure 5).
+Field observations confirm pillar strength reduction in the presence of weak floor rocks.
+Similar to CONSOL's studies, an earlier numerical study by the former U.S. Bureau of Mines employing a finite difference modeling technique concluded that pillar strength was highly dependent on the frictional characteristics of the coal-roof and coal-floor interfaces [Iannacchione 1990].
+157
+Figure 1.CPillar strength comparison of FEM model results versus existing empirical formula.
+Figure 2.CComparison of FEM modeled versus field pillar strength data (strong roof and strong floor conditions).
+158
+Figure 3.CEffect of seam strength on FEM model results.
+Figure 4.CEffect of claystone and shale parting on FEM model results.
+159
+Figure 5.CEffect of weak claystone (soft) floor on pillar strength.
+FUTURE PILLAR DESIGN CONSIDERATIONS RELATED TO SITE-SPECIFIC CONDITIONS Because many coal pillar design formulas are empirical relationships that were developed under limited conditions, application of these formulas may be inappropriate when other factors not specifically addressed in these relationships are encountered.
+As demonstrated, pillar strength and therefore entry stability are extremely sensitive to the in situ characteristics of not only the coal, but also the adjacent and inclusive rock that comprise the coal pillar system.
+Unfortunately, a single site-specific empirical formula cannot accurately account for the variations of features that may significantly affect pillar and entry stability within a single coalfield or even a single mine.
+In addition, it is neither practical nor efficient to develop site-specific empirical formulas for all variations of roof, floor, and pillar characteristics that may occur within a mine.
+Over the past decade, the Analysis of Longwall Pillar Stability (ALPS) approach to longwall pillar design has gained wide acceptance for longwall pillar design analysis in U.S. coalfields [Mark and Chase 1993].
+Although it has proven to be applicable for use in many mines and mining regions, ALPS, which relies solely on the Bieniawski formula for pillar strength calculation, does not always accurately represent pillar strength at high w/h ratios.
+For example, for the prevailing strong roof and floor conditions in the Virginia Pocahontas No. 3 Coalfield, ALPS significantly underestimates pillar strength (figure 6).
+Conversely, under very weak, "soft" conditions, ALPS may significantly overestimate pillar strength (figure 7).
+Although recent versions of ALPS provide a Coal Mine Roof Rating (CMRR) routine that modifies the safety factor requirement and better accommodates hard roof conditions, this routine does not correct the inherent error in pillar strength calculation, which may be important not only for entry stability and safety, but also for subsidence planning and design.
+160
+Figure 6.CFEM model and Bieniawski formula comparison with strong roof and floor data.
+Figure 7.CEmpirical pillar strength formula comparison with soft floor field data.
+161
+FUTURE PILLAR DESIGN CONSIDERATIONS RELATED TO ENTRY STABILITY AND VENTILATION EFFICIENCY The ultimate goal of a successful pillar design is to achieve entry stability with optimum support.
+The classical pillar design approach focuses on determining safety factors from estimates of pillar strength and pillar load.
+This works well in room-and-pillar operations without second mining and in main entries not subject to abutment pressures.
+A successful longwall gate road design, on the other hand, requires stable headgate and tailgate entries under the influence of longwall abutment pressures.
+Headgate or tailgate entry failures, such as a roof fall, severe floor heave, or severe pillar spalling, may pose serious safety hazards and may stop longwall mining for days or weeks.
+Traditionally, headgate and tailgate stabilities have been correlated with pillar sizes, and many ground control researchers have focused on the design of longwall chain pillars for improving gate road stability.
+However, gate entry performance is influenced by a number of geotechnical and design factors, including pillar size, pillar loading, roof quality, floor quality, horizontal stresses, entry width, and primary and secondary supports [Mark and Chase 1993].
+It suffices to say that pillar size is not the only factor affecting longwall headgate and tailgate stability.
+Therefore, strength of roof and floor rocks, state of in situ horizontal stresses, entry width, and support methodology are other important factors that should be included in any practical longwall chain pillar design methodology.
+In the early 1990s, Mark and Chase [1993] used a backcalculation approach to suggest an ALPS stability factor for longwall pillars and gate entries based on a CMRR.
+The importance of floor stability and secondary support could not be determined from the data and were not included in the backcalculation.
+Nevertheless, their effort pioneered pillar design research that included roof rock strength and integrated pillar and entry roof stability.
+Although the floor strength, roof support, horizontal stresses, and entry width can theoretically be included in a numerical pillar design model, other issues, such as gob formation, load transfer, material properties, and geological variations, may make model formulation difficult.
+It seems that a hybrid method of the back-calculation and numerical approaches may provide a more effective and versatile pillar design method in the future.
+A more rigorous, yet practical pillar design methodology could be developed by incorporating a site-specific pillar strength formula obtained from numerical models or alternative field observations into the ALPS stability factor approach.
+As an example, for strong roof and floor, the FEM-based pillar strength curve, which incorporates site-specific roof and floor strength, predicts a strength for an 80-ft-wide pillar that closely emulates field results, but is nearly 40% higher than that predicted by the Bieniawski formula (figure 6).
+In addition, under very weak floor conditions, the Holland-Gaddy formula may better represent pillar strength than the Bieniawski formula (figure 7).
+If such a combined approach is adopted, it could be done either on an independent basis or perhaps even as a modification to the overall ALPS design approach.
+Nevertheless, it is apparent that pillar design methodology could still benefit from a combination of empirical, analytical, and numerical methods to formulate practical pillar design based on site-specific roof, floor, and seam conditions.
+An aspect of longwall gate road design that is often overlooked is its impact on ventilation.
+Specifically, for eastern U.S. coal mines that employ only three or four gate road entries, the ability to provide an effective internal bleeder system in the tailgate behind the face can be quite important.
+Obviously, effective ventilation area in the tailgate between two gobs is influenced by roof and floor geology, entry width and height, pillar load and pillar strength, and primary and secondary support.
+Where longwall chain pillar designs must provide an effective internal bleeder system, ground control engineers must account for the aforementioned factors in addition to pillar load and pillar strength.
+CONCLUSIONS With the capability of modeling interface friction and various boundary conditions, a finite-element code can be an effective tool for site-specific evaluation of in situ coal pillar strength that considers the complex failure mechanisms of in situ coal pillars.
+The modeling technique can be most useful for conditions where interface friction and roof and floor deformation are the primary controlling factors.
+Nonlinear pillar strength curves relate the increase of pillar strength to the w/h ratio.
+Confinement generated by frictional effects at the coal-rock interface is shown to increase the pillar strength more rapidly at w/h ratios of about 3.
+The finite-element modeled in situ pillar strength curve for strong roof and floor conditions compares favorably with the measured peak strengths of five failed pillars in two southwestern Virginia coal mines and is in general agreement with many existing coal pillar design formulas at w/h ratios of 
+However, for wide pillars, modeling predicts a higher in situ coal pillar strength than most accepted formulas.
+Consequently, use of more conservative empirical formulas may lead to the employment of unnecessarily wide pillars or a lower estimated safety factor.
+162
+However, to accurately assess pillar strength, a model or formula should account not only for the characteristics of the coal, but also for those of the surrounding strata.
+Although seam strength is observed to have some effect on pillar strength, its significance is often overrated.
+In fact, for coal pillars with large w/h ratios, ultimate pillar strength is more dependent on end constraints than on seam strength.
+This reduces the significance of laboratory coal compressive strength determination for such conditions.
+For practical purposes, a uniform seam strength averaging about 6.2 to 6.6 MPa is adequate for most U.S. bituminous coal seams when employing finiteelement models to simulate pillars with high w/h ratios.
+The finite-element model results presented are not intended to suggest new pillar design relationships with w/h ratios.
+The primary objective of this paper is to emphasize the site-specific nature of coal pillar design and the value of using modeling procedures to account for such site-specific conditions.
+Understanding the site-specific parameters is an important ingredient for successful coal pillar design.
+Due to the variability of in situ properties, no currently available empirical,
+analytical, or numerical pillar design formula is applicable in all cases.
+Utilization or imposition of pillar design formulas that do not, or cannot, account for site-specific variations in roof, floor, and parting conditions may lead to incorrect assessments of pillar strength, whether high or low, and incorrect estimates of pillar design safety factors.
+Empirical, analytical, or numerical design procedures should be validated by sitespecific measurements or observational field studies whenever possible.
+For longwall mining, pillar design is not the only factor affecting headgate and tailgate stability and ventilation efficiency.
+Strength of roof and floor rocks, state of in situ stresses, entry width, and support methodology are other important factors affecting longwall gate road stability and should be considered in practical longwall chain pillar design.
+Certainly, more work remains before the century-old problems related to pillar design are finally solved.
+Future pillar design methodology could benefit from a cross-linkage of empirical, analytical, and numerical pillar design methods.
+REFERENCES Babcock CO [1990].
+True uniaxial compressive strengths of rock or coal specimens are independent of diameter-to-length ratios.
+Denver, CO: U.S. Department of the Interior, Bureau of Mines, RI 9316.
+Babcock CO [1994].
+Critique of pillar design equations from 1833 to 1990.
+Denver, CO: U.S. Department of the Interior, Bureau of Mines, IC 9398.
+Barron K [1984].
+An analytical approach to the design of coal pillars.
+CIM Bulletin 77(868):37-44.
+Bieniawski ZT [1968].
+The effects of specimen size on the compressive strength of coal.
+Int J Rock Mech Min Sci 5:325-335.
+Bieniawski ZT [1981].
+Improved design of coal pillars for U.S. mining conditions.
+In: First Annual Conference on Ground Control in Coal.
+Morgantown, WV: West Virginia University, pp. 13-22.
+Brady BT, Blake W [1968].
+An elastic solution of the laterally constrained circular cylinder under uniaxial loading.
+In: 10th U.S. Symposium on Rock Mechanics, pp. 199-214.
+Gaddy FL [1956].
+A study of the ultimate strength of coal as related to the absolute size of the cubical specimens tested.
+Blacksburg, VA: Virginia Polytechnic Institute and State University, Bulletin VPI 49(10), tables 6-10.
+Hasenfus GJ, Su DWH [1992].
+A comprehensive integrated approach for longwall development design.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 225-237.
+Holland CT [1964].
+The strength of coal in mine pillars.
+In: Proceedings of the Sixth Symposium on Rock Mechanics.
+Rolla, MO: University of Missouri, pp. 450-456.
+Iannacchione AT [1990].
+The effect of roof and floor interface slip on coal pillar behavior.
+In: Proceedings of the 31st U.S. Symposium on Rock Mechanics, pp. 156-160.
+Khair AW [1968].
+The effects of coefficient of friction on strength of model coal pillar [Thesis].
+Morgantown, WV: West Virginia University, Department of Mining Engineering.
+Maleki H [1992].
+In situ pillar strength and failure mechanisms for U.S. coal seams.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 73-77.
+Mark C, Bieniawski ZT [1986].
+Field measurements of chain pillar response to longwall abutment loads.
+In: Proceedings of the Fifth Conference on Ground Control in Mining, pp. 114-122.
+Mark C, Chase FE [1993].
+Gate entry design for longwall using the coal mine roof rating.
+In: Proceedings of the 12th International Conference on Ground Control in Mining.
+Morgantown, WV: West Virginia University, pp. 76-83.
+Mark C, Iannacchione AT [1992].
+Coal pillar mechanics: theoretical models and field measurements compared.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 78-93.
+Obert L, Duvall WI [1967].
+Rock mechanics and the design of structures in rock.
+New York, NY: John Wiley and Sons, pp. 542-545.
+Panek L [1994].
+Sealing mine pillar size and slope with the R function.
+SME preprint 94-52.
+Littleton, CO: Society for Mining, Metallurgy, and Exploration, Inc.
+Parker J [1993].
+Mine pillar design in 1993: computers have become the opiate of mining engineering, parts I and II.
+Min Eng July:714-717 and Aug:1047-1050.
+Salamon MDG, Munro AH [1967].
+A study of the strength of coal pillars.
+J S Afr Inst Min Metall 68:55-67.
+Salamon MDG, Wagner H [1985].
+Practical experiences in the design of coal pillars.
+In: Green AR, ed. Proceedings of the 21st International Conference of Safety in Mines Research Institutes (Sydney, Australia).
+Balkema, pp. 3-9.
+Su DWH, Hasenfus GJ [1996].
+Practical coal pillar design considerations based on numerical modeling.
+Handout at the 15th International Conference on Ground Control in Mining (Golden, CO).
+Su DWH, Hasenfus GJ [1997].
+Effects of in-seam and near-seam conditions on coal pillar strength.
+Handout at the 16th International Conference on Ground Control in Mining (Morgantown, WV).
+Wilson AH [1972].
+An hypothesis concerning pillar stability.
+Min Eng (London) 131(141):409-417.
+163
+NEW STRENGTH FORMULA FOR COAL PILLARS IN SOUTH AFRICA By J. Nielen van der Merwe, Ph.D. 1
+ABSTRACT For the last 3 decades, coal pillars in the Republic of South Africa have been designed using the well-known strength formula of Salamon and Munro that was empirically derived after the Coalbrook disaster.
+The database was recently updated with the addition of failures that occurred after the initial analysis and the omission of failures that occurred in a known anomalous area.
+An alternative method of analysis was used to refine the constants in the formula.
+The outcome was a new formula that shows that the larger width-toheight ratio coal pillars are significantly stronger than previously believed, even though the material itself is represented by a reduced constant in the new formula.
+The formula predicts lower strength for the smaller pillars, explaining the failure of small pillars that were previously believed to have had high safety factors.
+Application of the new formula will result in improved coal reserve utilization for deeper workings and enhanced stability of shallow workings.
+1
+Managing director, Itasca Africa (Pty.) Ltd., Johannesburg, Republic of South Africa.
+164
+INTRODUCTION The Coalbrook disaster in January 1960, in which more than 400 men lost their lives when the mine's pillars collapsed, led to a concerted research effort that eventually resulted in the creation of two formulas for the prediction of coal pillar strength: the power formula of Salamon and Munro [1967] and the linear equation of Bieniawski [1968]
+The Bieniawski formula was based on in situ tests of large coal specimens; the Salamon-Munro formula, on a statistical analysis of failed and stable pillar cases.
+The South African mining industry adopted the Salamon-Munro formula, even though the differences between the two formulas were not significant for the range of pillar sizes that were mined at the time.
+It is characteristic of the Salamon-Munro formula that the strength increases at a lower rate as the width-to-height (w/h) ratios of the pillars increase.
+Later, this was rectified by the socalled squat pillar formula refined by Madden [1991].
+This formula is valid for w/h ratios 
+An intriguing aspect of the Salamon-Munro formula is the relatively high value of the constant in the formula that represents the strength of the coal material--7.2 MPa.
+This compares with the 4.3 MPa used in the Bieniawski formula.
+The question has always been why the statistical back-analysis yielded a higher value than the direct underground tests.
+An attempt by van der Merwe [1993] to explain the significantly higher rate of pillar collapse in the Vaal Basin yielded a constant for that area of 4.5 MPa, more similar to Bieniawski than to Salamon and Munro, but not directly comparable because it was valid for a defined geological district only.
+In the process of analyzing coal pillar failures for other purposes, an alternative method of analysis was used that resulted in a formula that is 12.5% more effective in distinguishing between failed and stable pillars in the database.
+This paper describes the method of analysis and the results obtained.
+REQUIREMENTS OF A SAFETY FACTOR FORMULA A safety factor formula should satisfy two main requirements: (1) it should successfully distinguish between failed and stable pillars and (2) it should provide the means whereby relative stability can be judged.
+The third requirement, simplicity, has become less important with the widespread use of computers, but is still desirable.
+These fundamental requirements are conceptually illustrated in figure 1.
+Figure 1A shows the frequency distributions of safety factors of the populations of failed and stable pillars, respectively.
+The area of overlap between the populations can be seen as a measure of the success of the formula; the perfect formula will result in complete separation of the two populations.
+Figure 1B is a normalized cumulative frequency distribution of the safety factors of the failed cases plotted against safety factors.
+At a safety factor of 1.0, one-half of the pillars should have failed, or the midpoint of the distribution of failed pillars should coincide with a safety factor of 1.0.
+Figure 1.CConcept of the measure of success of a safety factor formula.
+A, The overlap area between the failed and stable cases should be a minimum.
+B, At a safety factor of 1.0, one-half of the pillars should have failed.
+165
+EXISTING FORMULAS IN SOUTH AFRICA The safety factor is a ratio between pillar strength and pillar load.
+In its simplest form, the load is assumed to be the weight of the rock column overlying the pillar and the road around the pillar, i.e., the tributary area theory is normally used.
+This is widely held to be a conservative, and thus safe, assumption.
+However, it has at least one complication when this load is used to derive a safety factor empirically: if the load used to determine pillar strength is greater than the actual load, then the strength derived will also be greater than the actual pillar strength.
+If an alternative method is then used later to calculate pillar load, such as numerical modeling, and the strength is not modified, then the calculated safety factor will be greater than the real safety factor.
+For purposes of this paper, the tributary area loading theory is used, and the restriction must then be added that the derived strength is only valid for situations where the tributary area load is used.
+This is not a unique restriction; even if not explicitly stated, it is also valid for any other empirical safety factor formula for which the tributary area loading assumption was used, such as the Salamon-Munro formula.
+It then remains to determine a satisfactory formula for the calculation of pillar strength.
+The strength of a pillar is a function of the pillar dimensions, namely, width and height for a square pillar, and a constant that is related to the strength of the pillar material.
+According to Salamon and Munro [1967], the strength is With the addition of new data on failures after 1966 to the Salamon and Munro database, Madden and Hardman [1992]
+" ' 0.63, and
+$ ' 
+These new values, however, did not result in sufficiently significant changes to safety factors to warrant changing the old formula, and they were not used by the industry.
+Note, however, the increases in values of " and $ and reduction of k. According to Madden [1991], the squat pillar formula, valid only for pillars with a w/h 
+F' k
+R
+b 0 a
+V
+b g
+R R0
+g
+&
+(3)
+where R ' pillar w/h ratio, R0 ' pillar w/h ratio at which formula begins to be valid ' 5.0, and V ' pillar volume.
+F ' kw"h$, where h ' pillar height, w ' pillar width, and k ' constant related to material strength.
+(1)
+Substituting k ' 7.2 MPa, a ' 0.0667, b ' 0.5933, R0 ' 5.0, and g ' 2.5 results in a somewhat simplified form of the formula that is sometimes used:
+The parameters k, ", and $ are interdependent.
+Salamon and Munro [1967] used the established greatest likelihood method to determine their values simultaneously and found: k ' 7.2 MPa,
+F'
+0.0786 V 0.0667
+R
+2.5
+% 181.6
+(4)
+For quick calculations, equation 4 can be approximated with negligible error by
+" ' 0.46, and
+$ ' 
+F ' 0.0786
+w h
+2.366
+2.5667
+%9.
+(5)
+The linear formula of Bieniawski [1968] is
+F ' 4.3(0.64 % 0.36 w/h).
+(2)
+166
+ALTERNATIVE METHOD OF ANALYSIS Although ", $, and k are interdependent, they can be separated for purposes of analysis.
+It was found that changing " and $ affected the overlap area of the populations of failed and stable pillars.
+Modifying k does not affect this relationship; it causes an equal shift toward higher or lower safety factors in both populations.
+Therefore, " and $ can be modified independently to minimize the overlap area between the two populations; once that is done, k can be adjusted to shift the midpoint of the population of failed pillars to a safety factor of 1.0.
+DETERMINATION OF " AND $ The data bank for failed pillars for the analysis described here was that quoted by Madden and Hardman [1992], which was the original Salamon and Munro data.
+The post-1966 failures were added to the data, and the three Vaal Basin failures were removed because the Vaal Basin should be treated as a separate group (see van der Merwe [1993]).
+(Note that a subsequent back-analysis indicated that the changes to the data bank did not meaningfully affect the outcome.)
+For the first round of analysis, " and $ were both varied between 0.3 and 1.2 with increments of 0.1.
+Safety factors were calculated for each case of failed and stable pillars.
+For each of the 100 sets of results, the area of overlap between the populations of failed and stable pillar populations was calculated.
+A standard procedure was used for this, taken from Harr [1987].
+This involved the simplifying assumption that the distributions were both normal, but because it was only used for comparative purposes, the assumption is valid.
+Using the same procedure, the overlap area for the Salamon-Munro formula was also calculated.
+This was used as the basis from which an improvement factor was calculated for each of the new data sets.
+The safety factor, S, was Then, the strength was varied, as follows:
+Strength ' 7.2
+w h
+" $
+,
+(8)
+where w ' pillar width, h ' pillar height,
+" ' 0.3 to 1.2 with 0.1 increments, and
+$ ' 0.3 to 1.2 with 0.1 increments.
+Equations 6 through 9 were applied to each of the cases of failed and stable populations, thus creating 100 sets of populations of safety factors of failed and stable cases.
+For each set, a comparative improvement factor was calculated.
+The first step was to calculate "f" for each of the 100 sets:
+f'
+Ms 
+f 2 f
+,
+S %S
+(9)
+where Ms ' mean safety factor of the population of stable pillars, Mf ' mean safety factor of the population of failed pillars, S s
+' standard deviation of the safety factors of the stable pillars, ' standard deviation of the safety factors of the failed pillars.
+and
+S
+f
+Strength S' .
+Load
+Then,
+(6) R ' 0.5 
+1 (2B) f
+&
+exp
+&
+2
+(10)
+The tributary area theory was used to calculate the load: and the overlap area between the two populations is
+Load '
+DgH(w % B) w 2
+2
+,
+(7)
+A ' 0.5 
+(11)
+where
+H ' mining depth, w ' pillar width,
+I'
+As 
+n
+,
+(12)
+and
+B ' bord width.
+167
+where A
+s
+' overlap area with the original Salamon-Munro formula, ' overlap area with the new formula.
+DETERMINATION OF "k" The last step was to determine k for the new exponents of " and $.
+This was done by adjusting k so that the midpoint of the population of failed pillars coincided with a safety factor of 1.0.
+It was found that a value of k ' 4.0 MPa satisfied this condition; this is shown in figure 4.
+FINAL NEW FORMULA The full new formula for pillar strength in the Republic of South Africa is then as follows:
+and
+A
+n
+It was then possible to construct contours of the improvement factors for variations of " and $ (figure 2).
+Figure 2 shows that the greatest improvement was for " between 0.7 and 0.8 and for $ between 0.75 and 0.85.
+Fine tuning was then done by repeating the procedure with increments of 0.01 for " from 0.7 to 0.8 and for $ between 0.75 and 0.85.
+The resulting contours are shown in figure 3.
+On the basis of the contours of improvement factors in figure 3, it was concluded that for " ' 0.81 and $ ' 0.76, the improvement in efficiency of the formula to distinguish between failed and stable pillar cases is 12.5%.
+Strength ' 4
+w h
+0.81 0.76
+(8)
+Figure 2.CContour plot of percentage improvement in efficiency of formula to separate failed and stable pillar cases for variations of " between 0.3 and 1.2 and for $ between 0.3 and 1.2.
+The Salamon and Munro [1967] combination is shown by the dotted lines.
+168
+Figure 3.CContour plot of percentage improvement in efficiency of formula to separate failed and stable pillar cases for variations of " between 0.77 and 0.86 and for $ between 0.72 and 0.81.
+Figure 4.CPlot of cumulative normalized frequency against safety factors calculated with the Salamon-Munro formula (solid line) and the new formula (broken line).
+For the new formula, k = 4 MPa, " = 0.81, and $ = 0.76.
+169
+COMPARISON OF THE DIFFERENT FORMULAS Again using the accepted Salamon-Munro formula as a basis, the formulas of Bieniawski [1968] and Madden and Hardman [1992]
+The method used was the one described in the previous section.
+The relevant strength formulas were used in turn for the calculation of safety factors, and the overlap areas were calculated and compared with the original Salamon-Munro formula.
+The results are summarized below.
+The table shows that the Bieniawski [1968] formula was only slightly less efficient than the Salamon-Munro formula; Madden and Hardman [1992]
+The formula derived in this paper, referred to in the table above as the "new formula," is, however, 12.5% more efficient, which is considered significant.
+Strength formula Bieniawski [1968] . . . . . . . . . . .
+Madden and Hardman [1992] . .
+New formula . . . . . . . . . . . . . . .
+Improvement factor, % 
+DISCUSSION AND IMPLICATIONS FOR THE INDUSTRY The new formula yields higher values of safety factors for most pillars than either of the formulas proposed previously for South African coals.
+The exceptions are the small pillars, such as those typically found at shallow depth.
+The new formula is more successful in explaining the "anomalous" pillar collapses of small pillars at shallow depth.
+Figure 5 compares pillar strengths obtained with the various formulas for different w/h ratios of the pillars.
+Note that due to the different exponents of width and height, the relationships are ambiguous (except for the linear formula of Bieniawski [1968] and the Mark-Bieniawski formula described by Mark and Chase [1997]
+For purposes of this comparison, the pillar heights were fixed at 3 m and the widths adjusted to obtain the different ratios.
+An important feature of the comparison is the close correlation between the Mark-Bieniawski formula and the new formula.
+They were derived independently using different databases in different countries.
+Both predict stronger pillars for the same dimensions as the other formulas.
+The new formula only deviates meaningfully from Mark-Bieniawski in the lower range of the w/h ratio, where it predicts weaker pillars.
+This is in accordance with observations where the failure of small pillars was previously regarded as anomalous.
+The major implication for the coal mining industry is that higher coal extraction can be obtained without sacrificing stability.
+In effect, this is nothing more than a correction of the overdesign that has been implemented over the past decades.
+Figure 6 shows examples of the benefits with regard to the percentage extraction.
+The greater the depth and the higher the required safety factor, the greater the benefit.
+As the new formula deals with underground pillar stability, it is inherently linked to the safety of underground mine personnel.
+In particular, it will enhance the stability of shallow workings, which has hitherto been a shortcoming of the Salamon-Munro formula.
+For deeper workings and for cases where surface structures are undermined, the new formula will enable mines to extract more coal without sacrificing stability.
+170
+Figure 5.CComparison of the strength increase with increasing width to height of pillars.
+The new formula results in higher strength values for most of the pillar sizes.
+This comparison is included for demonstration purposes only, because the relationship between width to height and pillar strength is ambiguous for all cases where the exponents of width and height are not equal.
+Note the similarity between the new formula and the MarkBieniawski formula.
+Figure 6.
+CIllustration of the benefit obtained by using the new formula.
+As the safety factors and depth of mining increase, more extraction can be obtained without sacrificing stability.
+For purposes of this comparison, the mining height was 3 m and the road width was 6.6 m.
+171
+ACKNOWLEDGMENTS This work is part of a larger research project sponsored by Sasol Mining (Pty.) Ltd., whose support is gratefully acknowledged.
+REFERENCES Bieniawski ZT [1968].
+In situ strength and deformation characteristics of coal.
+Eng Geol, Vol. 2, pp. 325-340.
+Harr ME [1987].
+Reliability-based design in civil engineering.
+McGrawHill Book Co., pp. 130-134.
+Madden BJ [1991].
+A re-assessment of coal pillar design.
+J S Afr Inst Min Metall 91(1):27-37.
+Madden BJ, Hardman DR [1992].
+Long-term stability of bord-and-pillar workings.
+In: Proceedings of the Symposium on Construction Over Mined Areas (Pretoria, Republic of South Africa, May 1992).
+Yeoville, Republic of South Africa: South African Institution of Civil Engineers.
+Mark C, Chase FE [1997].
+Analysis of retreat mining pillar stability (ARMPS).
+In: Proceedings - New Technology for Ground Control in Retreat Mining.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 97-122, IC 9446, pp. 17-34.
+Salamon MDG, Munro AH [1967].
+A study of the strength of coal pillars.
+J S Afr Inst Min Metall Sep:55-67.
+Van der Merwe JN [1993].
+Revised strength factor for coal in the Vaal Basin.
+J S Afr Inst Min Metall 93(3):71-77.
+172
+173
+THE ROLE OF OVERBURDEN INTEGRITY IN PILLAR FAILURE By J. Nielen van der Merwe, Ph.D. 1
+ABSTRACT The move toward partial pillar extraction versus full pillar extraction has necessitated a new approach to underground section stability.
+When pillars are mined too small to support the weight of the overburden, they will, in some cases, remain stable for a considerable period; in other cases, they will collapse unexpectedly and violently.
+There is no discernable difference between the pillar safety factors of the failed and stable cases.
+The explanation lies in the characteristics of the overburden layers.
+A method is proposed that recognizes the overburden characteristics in the evaluation of stability.
+Two stability factors are calculated: one for the pillars, the other for the overburden.
+Using this method, it is possible to make use of the bridging capabilities of overburden layers to prevent pillar collapse.
+It is possible to scientifically design partial pillar extraction layouts that will be safe.
+Using energy considerations, it is also possible to prevent violent failure of pillars.
+1
+Managing director, Itasca Africa (Pty.) Ltd., Johannesburg, Republic of South Africa.
+174
+INTRODUCTION In order for underground coal pillars to fail completely, two requirements must be met: (1) the pillars themselves must be loaded to beyond their load-bearing capacity, and (2) the overburden must deflect sufficiently to totally deform the pillars.
+In the consideration of pillar failure, the first requirement historically has received almost all of the attention; only scant mention is sometimes made of the role of the overburden.
+Until recently, this has not been necessary.
+South African mining methods, longwalling apart, were either bord-and-pillar or pillar extraction methods with a number of variations.
+For bord-and-pillar, the pillars are sufficiently large to support the full weight of the overburden and the stiffness of the overburden is a bonus, merely decreasing the load on the pillars.
+In pillar extraction, the overburden usually fails completely, although there are situations where it is prone to be self-supporting for large enough distances to result in overloaded pillars and the well-known and understood negative consequences thereof.
+Lately, however, there has been a move toward partial pillar extraction with a number of different names attached to the methods, like pillar robbing, pillar splitting, checkerboard extraction, etc.
+These methods all have in common the partial extraction of pillars, leaving self-supporting snooks (stubs) in the back area.
+They are usually larger than the ones left in normal stooping operations.
+These snooks are often stable for long periods of time, even though their strengths are less than that required to support the full overburden.
+This in turn creates the impression that the pillars are much stronger than the prediction made with the strength formula.
+There have also been occasions where the snooks failed after a period of time.
+The author has been involved in investigations into two of these.
+In both instances, the lack of serious accidents can only be ascribed to luck, both having occurred in the off-shift.
+In one case, ventilation stoppings were destroyed for a distance of several kilometers; in the other, the collapse overran unmined pillars and resulted in severe roof falls up to six lines of pillars beyond the end of the split pillars.
+The difference between the cases that failed and those that remained stable is not to be found in the strengths of the pillars.
+The range of safety factors was from 0.5 to 0.7, and the stable ones were not the ones with the higher safety factors.
+The pillar safety factor alone does not explain stability in these marginal cases.
+There were, however, significant differences in the overburden composition and stability.
+The investigation indicated that in the stable cases, the overburden was strong enough to bridge the panels; in the failed cases, the overburdens failed.
+This resulted in the development of a concept that takes into account the overburden stability as well as pillar stability.
+This concept will be explained in this paper.
+EFFECTS OF MINING ON THE OVERBURDEN Mining results in increased loads on the unmined pillars.
+This causes the pillars to compress; the amount of compression is a function of the additional load on the pillars and the pillar's modulus of elasticity.
+The pillar compression is translated into deflection for the overburden.
+The higher the pillar loads, the greater the compression and the more the overburden will deflect.
+In the most simplistic view, coal mine overburdens can be regarded as a series of plates that can be conveniently simplified further to a series of beams in the general case where the panel lengths are several times greater than the panel widths.
+The beam deflection results in induced tensile stress in the upper beam edges and the bottom center of the beam.
+The most simplistic view, adopted here as the starting point for the development of a more accurate model, is that the beam will fail when the induced tension exceeds the sum of the virgin horizontal stress and the tensile strength of the beam material.
+However, it is well known that the overburden, consisting predominantly of sedimentary rock types often supplemented by a dolerite sill, is vertically jointed and therefore the tensile strength of the material can be ignored.
+Failure will thus occur when the induced tensile stress exceeds the virgin horizontal compressive stress.
+The amount of deflection of any individual beam in the overburden is enhanced by the weight of the material on top of it and restricted by the resistance of the pillars underneath.
+There are no major differences in the moduli of the overburden rocks, dolerite sills apart, and the differential amounts of bending become a function of the thicknesses of the beams.
+In considering overburden stability, the identification of thick lithological units therefore is more important than the ratio of mining depth to panel width.
+175
+MATHEMATICAL RELATIONSHIP BETWEEN PILLAR LOAD AND OVERBURDEN DEFLECTION The link between overburden deflection and pillar load is the pillar compression.
+The pillar cannot compress by a greater amount than the overburden deflection and vice versa.
+The maximum pillar deflection, )h, is function of the pillar shape.
+According to data supplied by van Heerden [1975], the postfailure modulus, Ecf, appears to be2
+Ecf '
+0.562w 
+(2)
+)h '
+)F h, Ec
+(1)
+Assuming tributary area loading conditions, the load increase on the pillars due to mining is
+where
+h
+' ' '
+pillar height, load increase caused by mining, modulus of elasticity of coal.
+where H e and
+)F and Ec
+)Fp ' (H
+1 
+(3)
+' ' '
+mining depth, areal extraction ratio,
+The above is valid for the situation where the overburden is sufficiently soft not to restrict the compression of the pillars.
+There is general consensus that the modulus of elasticity of coal is around 4 GPa.
+However, the postfailure modulus is a
+(
+Dg.
+RELATIONSHIP BETWEEN PILLAR DEFLECTION AND INDUCED TENSION IN OVERBURDEN BEAM The generic equation for beam deflection is
+0'
+(rL
+4 3
+32Ert
+,
+Ft ' (4)
+16t)hE L 2
+r
+(6)
+where
+L Er t
+' ' ' '
+panel width, modulus of elasticity of the rock layer, thickness of the rock layer, unit load on the rock layer.
+and
+(r
+The generic expression for the maximum generated tensile stress is
+Ft '
+(rL 2t
+2
+2
+.
+(5)
+This is the tensile stress that will be generated in the overburden beam if the restriction to deflection is the resistance offered by the pillars underneath.
+It is also the upper limit of the generated tension because the resistance offered by the pillars will not allow further deflection.
+However, the overburden has inherent stiffness that will also restrict deflection.
+The maximum deflection that an unsupported beam will undergo is indicated by equation 4.
+If 0 from equation 4 is greater than )h from equation 1, it means that the overburden is dependent on the pillars to restrict deflection and that the tensile stress generated in the beam is that found with equation 6.
+If )h is greater than 0, it means that the beam is sufficiently stiff to control its own deflection and that the tension generated in the beam is that found with equation 5.
+2
+By substituting 0 by )h, the tension induced by bending can also be expressed in terms of the deflection, as follows:
+Author's own linear fit to van Heerden's data.
+176
+OVERBURDEN FAILURE The overburden beams will fail if the induced tension exceeds the virgin horizontal compression; this is conveniently expressed in terms of the vertical stress as where HN is the depth at which the rock layer under consideration is located, not the depth of mining.
+Next, define the overburden stability ratio (OSR) as
+Fh ' kFv, or
+(7)
+OSR ' (8)
+Fh Ft
+.
+(9)
+Fh ' k(HN,
+PILLAR STABILITY Pillar stability is evaluated by comparing pillar strength to pillar load; thus:
+Load '
+DgH , 1
+(11)
+PSF '
+Strength Load
+(10)
+and the strength for South African pillars is [van der Merwe 1999]:
+The pillar load is conservatively estimated from the tributary area loading assumption as follows:
+Strength ' 4
+w h
+0.81 0.76
+.
+(12)
+OVERALL STABILITY EVALUATION To evaluate the overall stability of a coal mine panel, it is necessary to consider both the overburden and the pillar stability.
+This can be done by viewing the two stability parameters--the pillar safety factor (PSF) and the overburden stability ratio (OSR)--separately, or better, by plotting the two onto a plane.
+The concept is illustrated in figure 1.
+The quadrants in figure 1 have different meanings for the stability evaluation.
+In quadrant I, both the overburden and the pillars are stable.
+This is the ideal situation for main development.
+In quadrant II, the overburden is stable, although the pillars are unable to support the full weight of the overburden.
+This is potentially the most dangerous situation because there could be a false impression of stability when the OSR is not much greater than 1.0.
+The pillars will be stable for as long as the overburden remains intact; however, the moment that the overburden fails, the pillars will also fail.
+This may occur because of time-related strength decay of the stressed overburden or when mining progresses into an area with an unfavorably oriented unseen joint set in the overburden.
+The closer the OSR is to 1.0, the more dangerous the situation.
+Quadrant III indicates a situation where both the pillars and the overburden will fail.
+This is again the ideal situation for the snooks in pillar extraction.
+One wants both to fail in this situation.
+Quadrant IV indicates that the pillars are able to support the overburden, even though the overburden may fail.
+This is also a safe situation, although gradual failure may occur over a long period as the pillars lose strength.
+Figure 1.CPlot of OSR and PSF.
+Values of 
+177
+PRACTICAL EXAMPLE The following practical example is provided to indicate how the OSR/PSF procedure is applied in practice.
+The mining depth is 143 m.
+The overburden consists of alternating layers of sandstones and shales.
+From the surface down, their thicknesses are as follows: 10, 5, 10, 20, 10, 50, 10, 10, 5, and 10 m.
+The mining height is 3 m; pillars are initially 18 m wide, and the roads are 6 m wide.
+The k-ratio is 2.0.
+The PSF is then 2.7, shown as point A in figure 2.
+Pillars are then split by a 6-m-wide cut through the center, leaving remnants of 18 by 6 m, with an equivalent width (see Wagner [1980]) of 8 m. One line of pillars is left intact on either side of the panel, resulting in a width over which the pillars are split of 102 m.
+The PSF now decreases to 0.8.
+The OSR is calculated for each of the strata layers individually (see results in table 1).
+It is seen from table 1 that because the pillars are beyond their failure limit, the overburden behavior is governed by the beam characteristics.
+Except for unit 6, all of the units will fail.
+Unit 6, however, is close to not failing and will probably be self-supporting for a short while.
+This combination of OSR and PSF is indicated by point B in figure 2.
+During the time when they have not yet failed, it is probable that the pillars will have a stable visual appearance.
+Load cannot be seen.
+One's perception of pillar load is determined by the observed effects that accompany pillar compression, like slabbing.
+In this case, the pillar compression will be the greater of the deflection of unit 6 or the compression caused by the weight of the rock layers underneath unit 6.
+The deflection of unit 6 is 4 mm, and the compression of the pillars due to the weight of the strata underneath unit 6 is less than 2 mm.
+With the 4-mm compression of the pillars, the strain is 0.0013, which corresponds to a pillar load of 5.3 MPa.
+The strength of the snook is 8.4 MPa; the apparent safety factor is 1.6, and it will have the visual appearance of a stable pillar.
+However, the situation will change dramatically as soon as the overburden fails.
+At that moment, the pillars will be loaded by the full overburden weight.
+The safety factor will immediately decrease to 0.8.
+Table 1.COSR for the different strata layers with split pillars, panel width of 102 m Unit ....
+....
+....
+....
+....
+....
+....
+....
+.... ...
+No. ... ... ... ... ... ... ... ... ... ...
+Thickness, m 10 5 10 20 10 50 10 10 5 10 0 0.028 0.564 0.113 0.025 0.282 0.004 0.62 0.677 5.75 0.761 )h 31.5 31.5 31.5 31.5 31.5 31.5 31.5 31.5 31.5 31.5 OSR 0.038 0.01 0.038 0.154 0.038 0.961 0.038 0.038 0.01 0.038
+Figure 2.COSR/PSF plot of the different options discussed in the example.
+MODE OF FAILURE Energy considerations indicate that failure will be violent if the stiffness of the pillars is less than that of the loading mechanism, which is the overburden.
+When the overburden fails, it loses continuity and, consequently, all stiffness as well.
+The stiffness of the loading mechanism is then 0.
+Therefore, the only way in which failure can be nonviolent in the situation where the overburden fails is where the pillars have a positive postfailure modulus.
+According to equation 2, this happens when the width-to-height (w/h) ratio of the pillars exceeds 4.08.
+The w/h ratio of the pillars in this case is only 2.3; consequently, the failure will be violent, similar to what has been experienced on more than one occasion.
+This is similar to a conclusion reached by Chase et al. [1994], who analyzed pillar failures in the United States and found that massive collapses occurred where the w/h ratios of the pillars were less than 3.
+They also concluded that those collapses occurred where the overburden was able to bridge the excavation for a considerable distance before failure occurred.
+The postfailure stiffness of coal with increasing w/h ratio of the pillars increases approximately linearly.
+There is thus no sudden distinction between what could be termed "violent" and "nonviolent" failure; rather, the relative degree of violence decreases with increasing w/h.
+It is suggested that the degree of violence be indicated by an index based on the magnitude of the postfailure stiffness of the coal, Ecf.
+It could be defined as follows:
+1 2 3 4 5 6 7 8 9 10
+. . . . . . . . . .
+. . . . . . . . . .
+Iv ' 1 
+E
+cf
+4
+(13)
+178
+With the limited information at hand, mainly that of Chase et al. [1994], it appears that if Iv 
+This obviously also depends on the area involved.
+By substituting equation 2 into equation 13, the relative degree of violence may be expressed in terms of the w/h ratio as follows: Iv ' 1.57 
+One is to limit the width over which the pillars are split.
+For instance, if the width in the example is limited to 78 m (i.e., by splitting only three lines of pillars), the OSR of unit 6 increases to 1.6 and (14)
+there is a much higher probability that the unit will remain to be self-supporting, if only for a longer time.
+Note that when this is done, the PSF is not affected; it remains at a value of 0.8.
+This situation is indicated by point C in figure 2.
+This corresponds to other situations that have been observed, i.e., where split pillars with low apparent safety factors remain stable for considerable periods of time.
+A second alternative is to do full extraction of every second pillar on a checkerboard pattern, leaving the alternating pillars intact.
+When this is done, the PSF decreases to 0.7.
+The OSR of the strongest unit, No. 6, is 0.3, indicating failure of the overburden.
+This is shown as point D in figure 2.
+However, the w/h ratio of the pillars is 6.0, which means that the pillars will not fail violently.
+The attraction of this option is that 50% of all of the coal contained in pillars is extracted, as opposed to 17% using the method in the previous paragraph.
+INFLUENCE OF GEOLOGY A cautionary note must be expressed at this point.
+The process of pillar failure for low safety factor pillars is driven by the overburden characteristics.
+It is thus very important to have detailed knowledge of the overburden composition.
+For instance, if the thickness of unit 6 in the example is 40 m instead of 50 m, then the control measure to restrict the number of pillars to be split to 78 m will not be effective; the OSR in that case will be 1.0, which places it back into the category with the highest uncertainty.
+The example in the previous section is nothing more than an example to illustrate the application of the method: it is not to be viewed as a guideline for panel widths, etc.
+The full application of the method will require the establishment of guidelines for limit values of OSR and PSF.
+It seems reasonable to assume that there will be an area in the center of the plot shown in figure 1 that is to be avoided--the area of highest uncertainty, where the values of OSR and PSF are close to 1.0.
+Those limits need to be established; the best way of doing that will probably be through back-analysis in areas where there are examples of failed and stable cases for different periods of time.
+CONCLUSIONS Â· For underground workings to collapse, both the pillars and the overburden must fail.
+The model described here, simplified as it is, offers a method to evaluate the stability of pillar workings with low pillar safety factors by adding an evaluation of overburden stability to the evaluation of pillar stability.
+Â· Even if the pillars are not strong enough to support the overburden, it is possible to prevent collapse by limiting the panel width, thereby allowing the overburden to be selfsupporting.
+Â· Refinement of the model will enable the scientific design of alternatives to full pillar extraction, avoiding the situation where apparent stability caused by temporary bridging of the overburden leads to a false sense of security, only to be followed by catastrophic collapse.
+Â· Quantification of the energy considerations can be done, leading to a design that will result in nonviolent failure of pillars.
+Â· These conclusions are broadly similar to those reached by Chase et al. [1994].
+The main difference is that this work offers a simple method of classifying the likelihood of failure occurring and the mode of failure should it occur.
+ACKNOWLEDGMENTS This work is part of a larger research project sponsored by Sasol Mining (Pty.) Ltd., whose support is gratefully acknowledged.
+179
+REFERENCES Chase FE, Zipf RK Jr., Mark C [1994].
+The massive collapse of coal pillars: case histories from the United States.
+In: Peng SS, ed. Proceedings of the 13th International Conference on Ground Control in Mining.
+Morgantown, WV: West Virginia University, pp. 69-80.
+Van der Merwe JN [1999].
+New strength formula for coal pillars in South Africa.
+In: Proceedings of the Second International Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 99-114, IC 9448.
+Van Heerden WL [1975].
+In situ determination of complete stress-strain characteristics of large coal specimens.
+J S Afr Inst Min Metall 75(8):207-217.
+Wagner H [1980].
+Pillar design in coal mines.
+J S Afr Inst Min Metall 80:37-45.
+181
+USING A POSTFAILURE STABILITY CRITERION IN PILLAR DESIGN By R. Karl Zipf, Jr., Ph.D. 1
+ABSTRACT Use of Salamon's stability criterion in underground mine design can prevent the occurrence of catastrophic domino-type pillar failure.
+Evaluating the criterion requires computation of the local mine stiffness and knowledge of the postfailure behavior of pillars.
+This paper summarizes the status of the practical use of this important criterion and suggests important research to improve our capabilities.
+Analytical and numerical methods are used to compute the local mine stiffness.
+Work to date in computing local mine stiffness relies mainly on elastic continuum models.
+Further work might investigate local mine stiffness in a discontinuous rock mass using alternative numerical methods.
+Existing postfailure data for coal pillars are summarized, and a simple relationship for determining the postfailure modulus and stiffness of coal pillars is proposed.
+Little actual postfailure data for noncoal pillars are available; however, numerical models can provide an estimate of postfailure stiffness.
+Important factors controlling postfailure stiffness of rock pillars include the postfailure modulus of the material, end conditions, and width-to-height ratio.
+Studies show that the nature of the failure process after strength is exceeded can be predicted with numerical models using Salamon's stability criterion; therefore, a method exists to decrease the risk of this type of catastrophic failure.
+However, the general lack of good data on the postfailure behavior of actual mine pillars is a major obstacle.
+Additional back-analyses of failed and stable case histories in conjunction with laboratory testing and numerical modeling are essential to improve our ability to apply the stability criterion.
+1
+Assistant professor, Department of Mining Engineering, University of Missouri-Rolla.
+182
+INTRODUCTION As first noted by Cook and Hojem [1966], whether a test specimen in the laboratory explodes violently or crushes benignly depends on the stiffness of the testing system relative to the postfailure stiffness of the specimen.
+Full-scale pillars in mines behave similarly.
+Salamon [1970] developed the local mine stiffness stability criterion, which formalizes matheatically laboratory and field observations of pillar behavior in the postfailure condition.
+Although we understand the principles well, little is known by direct observation or backcalculation about the postfailure behavior of actual mine pillars.
+The local mine stiffness stability criterion governs the mechanics of cascading pillar failure (CPF) [Swanson and Boler 1995], also known as progressive pillar failure, massive roof collapse, domino-type pillar failure, or pillar run.
+In this type of failure, when one pillar collapses, the load it carries transfers rapidly to its neighbors, causing them to fail and so forth.
+This failure mechanism can lead to the rapid collapse of very large mine areas.
+In mild cases, only a few tens of pillars fail; in extreme cases, hundreds, even thousands of pillars can fail.
+Recent work by Chase et al. [1994] and by Zipf and Mark [1997]
+Further work by Zipf [in press] has analyzed additional examples of this failure mechanism in the catastrophic collapse of web pillars in highwall mining operations.
+Reports by Swanson and Boler [1995], Ferriter et al. [1996]
+Numerous instances of CPF have occurred in other parts of the world.
+The most infamous case is the Coalbrook disaster in the Republic of South Africa in which 437 miners perished when 2 km2 of the mine collapsed within a few minutes on January 21, 1960 [Bryan et al. 1966].
+Other instances occurred recently at a coal mine in Russia and a large potash mine in Germany.
+These collapses draw public interest for two reasons.
+First and foremost, a collapse presents an extreme safety hazard to miners.
+Obviously, the collapse area itself is the greatest hazard, but the collapse usually induces a devastating airblast due to displacement of air from the collapse area.
+An airblast can totally disrupt a mine's ventilation system by destroying ventilation stoppings, seals, and fan housings.
+Flying debris can seriously injure or kill mining personnel.
+The failure usually fractures a large volume of rock in the pillars and immediate roof and floor.
+In coal and certain other mines, this sudden rock fragmentation can release a substantial quantity of methane into the mine atmosphere that could result in an explosion.
+Secondly, large mine collapses emit substantial seismic energy indicative of an implosional failure mechanism.
+For example, the seismic event associated with the collapse in southwestern Wyoming had a local magnitude of 5.3 [Swanson and Boler 1995].
+Strong seismic signals of this type receive scrutiny from the international community because of U.S. obligations under the Comprehensive Test Ban Treaty (CTBT).
+Large collapses may initiate questions from the Federal Government and could result in further questions from other nations participating in the CTBT [Casey 1998; Heuze 1996].
+The pillar failure mechanism considered in this paper (CPF or domino-type pillar failure) should not be confused with coal mine bumps and rock bursts, although both failure types are frequently associated with large seismic energy releases.
+Although the damage can seem similar, the underlying mechanics are completely different.
+The mechanism of pillar collapse largely depends on vertical stress and the postfailure properties of pillars.
+The mechanism for coal mine bumps and rock bursts is more complex.
+In these events, larger failures (seismic events) in the surrounding rock mass induce severe damage in susceptible mine workings.
+LOCAL MINE STIFFNESS STABILITY CRITERION When the applied stress on a pillar equals its strength, then the "safety factor" defined as the ratio strength over stress equals 1.
+Beyond peak strength when the strength criterion is exceeded, the pillar enters the postfailure regime, and the failure process is either stable or unstable.
+In this paper, stability refers to the nature of the failure process after pillar strength is exceeded.
+Based on the analogy between laboratory test specimens and mine pillars, Salamon [1970] developed a criterion to predict stable or unstable failure of mine pillars.
+Figure 1 illustrates this well-known criterion.
+183
+Stable, nonviolent failure occurs when |K LMS
+| 
+and unstable, violent failure occurs when |K LMS
+| 
+where |KLMS| is the absolute value of the local mine stiffness and |KP| is the absolute value of the postfailure stiffness at any point along the load convergence curve for a pillar.
+As long as this criterion is satisfied, CPF (domino-type pillar failure) cannot occur; however, when the criterion is violated, then unstable failure is possible.
+Salamon's local mine stiffness stability criterion does not include the time variable and thus does not predict the rapidity of an unstable failure should it occur.
+CPF resides at the far end of the unstable pillar failure spectrum.
+At the other end are slow "squeezes" that develop over days or weeks.
+Workers and machinery have ample time to get out of the way of the failure.
+In a CPF, the failure is so rapid that workers and machinery cannot evacuate in time.
+Both CPF and squeezes violate a strength criterion and, somewhat later, the stability criterion; thus, unstable pillar failure can proceed.
+The rapidity of a failure may depend on the degree to which the local mine stiffness stability criterion is violated, i.e., the magnitude of the difference between KLMS and KP, as shown in figure 2.
+Figure 1.CUnstable, violent failure versus stable, nonviolent failure.
+Loading machine stiffness or local mine stiffness is represented by the downward sloping line intersecting the pillar load convergence (stress-strain) curve.
+A, Loading machine stiffness less than postfailure stiffness in a "soft" loading system.
+B, Loading machine stiffness greater than postfailure stiffness in a "stiff" loading system.
+Figure 2.CBoth cases violate the local mine stiffness stability criterion, i.e., *KLMS * 
+A, Slow squeeze results when *KLMS * 
+B, Rapid CPF results when *KLMS * Â« *Kp*.
+184
+COMPUTING LOCAL MINE STIFFNESS The local mine stiffness KLMS relates deformation in the rock mass to changes in force on the rock mass.
+Force changes occur as stresses in the mined-out rock go from in situ values to zero as a result of mining.
+Deformations then occur in the rock mass.
+If a given amount of mining (and force change) results in small deformations, the system is "stiff"; if the resulting deformations are large, the system is "soft."
+The magnitude of the local mine stiffness depends in part on the modulus of the rock mass and in part on the geometry of the mining excavations.
+In general, the more rock that is mined out, the softer the system.
+Obtaining direct measurements of the local mine stiffness is generally not possible, since it is more of a mathematical entity than a measurable quantity for a rock mass.
+Numerical or analytical methods are employed to evaluate it for use in the stability criterion.
+Figure 3 illustrates the behavior of the local mine stiffness for different mine layouts.
+This hypothetical example consists of an array of long narrow openings separated by similar pillars.
+An opening width to pillar width of 3 is assumed, implying 75% extraction.
+As the number of pillars increases from 3 to 15, stress concentration on the central pillar approaches its theoretical maximum of 4, and the local mine stiffness decreases as the panel widens.
+Local mine stiffness decreases as the extraction ratio increases.
+At sufficient panel width and high enough extraction, local mine stiffness decreases to zero, which is the worst possible condition for failure stability since it corresponds to pure dead-weight loading.
+If failure occurs, its nature is unstable and possibly violent.
+An expression for local mine stiffness is S S u
+' unperturbed stress, ' perturbed stress, ' unperturbed displacements, ' perturbed displacements, ' element area.
+p
+D D and A
+u
+p
+K
+LMS
+'
+(S u 
+This expression is easily implemented into boundaryelement programs such as MULSIM/NL [Zipf 1992a,b; 1996], LAMODEL [Heasley 1997, 1998]
+Changes in stress and displacement are noted between adjacent mining steps, i.e., the "unperturbed" and "perturbed" state.
+By way of example, to compute the local mine stiffness associated with a pillar, first stresses and displacements are calculated at each element in the model in the usual way, giving the so-called unperturbed stresses and displacements.
+The pillar is then removed and all of the stresses and displacements are recomputed, giving the so-called perturbed stresses and displacements.
+In this case, Sp is identically zero.
+Local mine stiffness KLMS is then calculated with the expression above.
+Other numerical models can also be used to calculate KLMS.
+Recent studies of web pillar collapses in highwall mining systems [Zipf, in press] used FLAC2 to calculate local mine stiffness.
+Two-dimensional models of the web pillar geometry were used for the initial stress and displacement calculations.
+All elements comprising one pillar were removed, and stresses and displacements were recomputed.
+Sp is identically zero at the mined-out pillar.
+Local mine stiffness for the pillar is then evaluated for the pillar.
+When using FLAC, a simple FISH function can be constructed to facilitate the numerical computations.
+2
+where
+)P ' change in force, Fast Langrangian Analysis of Continuum, Itasca Corp., Minneapolis, MN.
+)D ' change in displacement,
+185
+Figure 3.CStress concentration factor versus number of panel pillars showing behavior of local mine stiffness as panel width increases.
+POSTFAILURE STIFFNESS OF COAL PILLARS In addition to the local mine stiffness parameter, Salamon's stability criterion also depends on the postfailure pillar stiffness, KP, which is the tangent to the downward sloping portion of the complete load-deformation curves shown in figure 1.
+Jaeger and Cook [1979] discuss the many variables that affect the shape of the load convergence curve for a laboratory specimen, such as confining pressure, temperature, and loading rate.
+For many mining engineering problems of practical interest, the width-to-height (w/h) ratio of the test specimen is of primary interest.
+Figure 4 from Das [1986] shows how the magnitude of peak strength, slope of the postfailure portion of the stressstrain curve, and magnitude of the residual strength changes as w/h increases for tests on Indian coal specimens.
+Seedsman and Hornby [1991] obtained similar results for Australian coal specimens.
+Peak strength increases with w/h, and various wellknown empirical coal strength formulas reflect this behavior [Mark and Iannacchione 1992].
+At low w/h, the postfailure portion of the stress-strain curve slopes downward, and the specimen exhibits strain-softening behavior.
+Postfailure modulus increases with w/h; at a ratio of about 8, it is zero, which means that the specimen exhibits elastic-plastic behavior.
+Beyond a w/h of about 8, the postfailure modulus is positive and the specimen exhibits strain-hardening behavior.
+Full-scale coal pillars behave similarly to laboratory test specimens; however, few studies have actually measured the complete stress-strain curve for pillars over a wide range of w/h.
+Wagner [1974], Bieniawski and Vogler [1970]
+Skelly et al. [1977] and more recently Maleki [1992]
+Figure 5 summarizes the measurements of postfailure modulus for the full-scale coal pillars discussed above.
+The laboratory data shown in figure 4
+186
+and the field data exhibit an upward trend as w/h increases, although the laboratory data show better definition.
+The laboratory postfailure modulus becomes positive at a w/h ratio of about 8, whereas the pillar data become positive at about 4.
+Based on these field data, an approximate relationship for postfailure modulus of full-scale coal pillars is proposed as EP (MPa) ' 
+Assuming a unit width for the pillar, the postfailure stiffness is related to the postfailure modulus as KP ' EP (w/h) or KP ' (MN/m) ' 
+As shown in figure 5, the simple relation for EP decreases monotonically and becomes positive at a w/h of 4.
+The proposed relationship is not based on rigorous regression analysis.
+It is a simple, easy-to-remember equation that fits the general trend of the data.
+Figure 4.CComplete stress-strain curves for Indian coal specimens showing increasing residual strength and postfailure modulus with increasing w/h (after Das [1986]).
+Figure 5.CSummary of postfailure modulus data for full-scale coal pillars and laboratory specimens.
+Also shown is proposed approximate equation for Ep.
+187
+POSTFAILURE STIFFNESS OF METAL/NONMETAL PILLARS In comparison to coal, very little data exist for the postfailure behavior of pillars in various metal/nonmetal mines.
+Direct measurements of the complete stress-strain behavior of actual pillars are difficult, very expensive to conduct, and often simply not practical.
+Laboratory tests on specimens with various w/h can provide many useful insights similar to the coal data shown previously.
+Numerical methods seem to be the only recourse to estimate the complete load-deformation behavior of full-scale pillars where real data are still lacking.
+Work by Iannacchione [1990] in coal pillars and Ferriter et al. [1996]
+The objective for this modeling effort was to estimate postfailure stiffness of the pillar-floor system for a variety of pillar w/h ratios.
+Figure 6 shows the basic models considered.
+Each contained the same sequence of strong shale, trona, oil shale, and weak mudstone.
+A strain-softening material model was employed for these layers.
+Figure 7 shows the computed rock movement after considerable deformation has occurred.
+The computed failure involving the pillar resembles a classic circular arc.
+The computed deformations agree qualitatively with observations; however, the model deformations are much smaller than those observed in the field.
+The difference may arise because FLAC uses a continuum formulation to model a failure process that gradually becomes more and more discontinuous.
+Recognizing this limitation, the model results only apply up to the onset of failure and with caution a little beyond.
+Failure stability assessment is therefore possible in the initial computed postfailure regime.
+The computations provide an estimate of the complete stress-strain behavior of the overall pillar-floor system.
+Using the "history" function within FLAC, the model recorded average stress across the middle layer of the pillar and the relative displacement between the top and bottom of the pillar from which strain was computed.
+Figure 8 shows the effective stress-strain curves determined for the pillar-floor system from these four models.
+The initial postfailure portion of these curves is an estimate of KP for use in ascertaining the failure process nature, either stable or unstable, on the basis of the local mine stiffness stability criterion.
+Figure 6.CFLAC models of pillar-floor system for increasing pillar width and w/h.
+188
+Figure 7.CCalculated deformation of pillar-floor system.
+Figure 8.CStress-strain behavior of pillar-floor for increasing pillar width and w/h.
+189
+USEFULNESS OF THE LOCAL MINE STIFFNESS STABILITY CRITERION In practical mining engineering, we frequently want failure to occur.
+Failure usually means that we are extracting as much of a resource as practical.
+However, we want failure to occur in a controlled manner so that no danger is presented to mining personnel or equipment.
+The local mine stiffness stability criterion governs the nature of the failure process--stable and controlled or unstable and possibly violent.
+Field data in conjunction with numerical modeling enable calculation of local mine stiffness (KLMS), estimation of postfailure stiffness (KP), and thus evaluation of the local mine stiffness stability criterion.
+The stability criterion was implemented into the boundaryelement program MULSIM/NL and used to evaluate the nature of the failure process [Zipf 1996; Chase et al. 1994].
+The following example shows results from two contrasting numerical models.
+Depending on whether the criterion is satisfied or violated, the stress and displacement calculations with MULSIM/NL behave in vastly different manners.
+Figure 9 shows an unstable case, which violates the local mine stiffness stability criterion.
+In the initial model, calculations for an array of pillars show that stresses are close to peak strength and roof-to-floor convergence is still low.
+In
+Figure 9.CUnstable case: (A), stress before pillar weakening, (B), convergence before pillar weakening, (C), stress after pillar weakening, (D), convergence after pillar weakening.
+Light to dark gray indicates increasing magnitude of calculated vertical stress and convergence.
+190
+the next modeling step, several pillars are removed to simulate mining or else initial pillar failure.
+This small change triggers dramatic events in the model.
+Convergence throughout the model increases dramatically, indicating that widespread failure has occurred.
+A small disturbance or increment of mining results in a much, much larger increment of failure in the model.
+Figure 10 shows a stable case, which satisfies the stability criterion.
+As before, pillar stresses in the initial model are
+everywhere near failure and convergence is low.
+In the next step, additional pillars are removed, as before.
+However, in the stable model, this significant change does not trigger widespread failure.
+An increment of mining results in a more or less equal increment of additional failure in the model.
+The local mine stiffness stability criterion inspires three different design approaches to control CPF in mines: (1) containment, (2) prevention, and (3) full-extraction mining [Zipf and Mark 1997].
+In the containment approach, panel
+Figure 10.CStable case: (A), stress before pillar weakening, (B), convergence before pillar weakening, (C), stress after pillar weakening, (D), convergence after pillar weakening.
+Light to dark gray indicates increasing magnitude of calculated vertical stress and convergence.
+191
+pillars must satisfy a strength-type design criterion, but they violate the stability criterion.
+Substantial barrier pillars "contain" the spread of potential CPF that could start.
+In the prevention approach, pillars must satisfy two design criteria-- one based on strength, the other based on stability.
+This more
+demanding approach ensures that should pillar failure commence, its nature is inherently stable.
+Finally, the fullextraction approach avoids the possibility of CPF altogether by ensuring total closure of the opening (and surface subsidence) upon completion of retreat mining.
+SUMMARY AND RECOMMENDATIONS Practical work to date with the local mine stiffness stability criterion reveals both the promises and shortcomings of the criterion in the effort to prevent catastrophic failures in mines.
+Back-analysis of case histories in various mines demonstrates the possibilities of using the criterion in predictive design to decrease the risk of catastrophic collapse [Swanson and Boler 1995; Zipf 1996; Chase et al. 1994; Zipf, in press].
+The tool could have wide application in metal, nonmetal, and coal roomand-pillar mines, as well as other mining systems.
+However, a larger database of properly back-analyzed case histories of collapse-type failure is required.
+In addition to collapse-type failures, the criterion could evaluate the nature of shear-type failure and have applications in rock burst and coal mine bump mitigation.
+Practical calculations of the local mine stiffness (KLMS) term in the stability criterion have been done using analytical methods [Salamon 1970; 1989a,b] and, more recently, numerical methods [Zipf, in press]
+Major factors affecting KLMS are rock mass modulus; mine geometry, including panel and barrier pillar width; and the percentage extraction, i.e., the overall amount of mining.
+Analytical and numerical KLMS calculations done to date assume an elastic continuum and neglect the presence of major discontinuities.
+The effect of these discontinuities is certain to decrease KLMS; however, the magnitude of these effects requires further numerical study.
+Other numerical approaches, such as discrete-element or discontinuous deformation analysis, may provide useful insight into the KLMS for practical mine design.
+Better understanding of the postfailure behavior of mine pillars requires additional effort.
+Experiments on full-scale pillars are generally not practical; however, careful laboratory and numerical studies could provide justifiable estimates of KP for mine pillars.
+Tests in the laboratory should examine the complete stress-strain behavior of various roof-pillar-floor composites at a variety of w/h ratios.
+Other variables to consider include the effect of horizontal discontinuities and water in the rock mass.
+Laboratory experiments can provide the necessary benchmark data for numerical studies that extrapolate to the field.
+This paper summarizes the status of practical evaluation of the local mine stiffness stability criterion for prevention of certain types of catastrophic ground failures in mines.
+Backanalyses of collapse case histories show that the stability criterion can predict the possibility of these catastrophic failures.
+Evaluating the criterion depends on numerical computation of KLMS and limited knowledge of the postfailure behavior of pillars.
+Further laboratory and numerical studies of the input parameters KLMS and KP should increase our confidence in predicting failure nature with the local mine stiffness stability criterion.
+REFERENCES Bieniawski ZT, Vogler UV [1970].
+Load-deformation behavior of coal after failure.
+In: Proceedings of the Second ISRM Congress on Rock Mechanics, ISRM (Belgrade, Yugoslavia).
+Vol. 1, paper No. 2-12.
+Bryan A, Bryan JG, Fouche J [1966].
+Some problems of strata control and support in pillar workings.
+The Mining Engineer 123:238-254.
+Casey LA [1998].
+Comprehensive test ban treaty research and development plans and accomplishments...from signature to entry into force.
+Washington, DC: U.S. Department of Energy, Office of Nonproliferation and National Security, Office of Research and Development, Report No. DOE/NN98001802.
+Chase FE, Zipf RK Jr., Mark C [1994].
+The massive collapse of coal pillars: case histories from the United States.
+In: Peng SS, ed. Proceedings of the 13th International Conference on Ground Control in Mining.
+Morgantown, WV: West Virginia University, pp. 69-80.
+Cook NGW, Hojem JPM [1966].
+A rigid 50-ton compression and tension testing machine.
+J S Afr Inst Mech Eng 1:89-92.
+Das MN [1986].
+Influence of width/height ratio on postfailure behavior of coal.
+Int J of Mining and Geol Eng 4:79-87.
+Ferriter RL, Zipf RK Jr., Ropchan DM, Davidson J [1996].
+Report of Technical Investigation, Underground Nonmetal Mine, Mine Collapse Accident, Solvay Mine, Solvay Minerals, Inc., Green River, Sweetwater County, Wyoming, February 3, 1995.
+Denver, CO: U.S. Department of Labor, Mine Safety and Health Administration.
+Heasley KA [1997].
+A new laminated overburden model for coal mine design.
+In: Proceedings - New Technology for Ground Control in Retreat Mining.
+Pittsburgh, PA: U.S. Department of Health and Human Services, Public Health Service, Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health, DHHS (NIOSH) Publication No. 97-122, IC 9446, pp. 60-73.
+Heasley KA [1998].
+Numerical modeling of coal mines with a laminated displacement-discontinuity code [Dissertation].
+Golden, CO: Colorado School of Mines, Department of Mining and Earth Systems Engineering.
+Heuze F [1996].
+LLNL's partnership with selected U.S. mines for CTBT verification: a pictorial and some reflections.
+UCRL-ID-122577.
+Iannacchione AT [1990].
+Behavior of a coal pillar prone to burst in the southern Appalachian Basin of the United States.
+In: Fairhurst C, ed. Proceedings of Rockbursts and Seismicity in Mines.
+Balkema, pp. 295-300.
+Jaeger JC, Cook NGW [1979].
+Fundamentals of rock mechanics.
+3rd ed. Chapman and Hall.
+192
+Maleki H [1992].
+In situ pillar strength and failure mechanisms for U.S. coal seams.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 73-77.
+Mark C, Iannacchione AT [1992].
+Coal pillar mechanics: theoretical models and field measurements compared.
+In: Proceedings of the Workshop on Coal Pillar Mechanics and Design.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9315, pp. 78-93.
+Salamon MDG [1970].
+Stability, instability, and design of pillar workings.
+Int J of Rock Mech Min Sci 7:613-631.
+Salamon MDG [1989a].
+Some applications of the frictionless laminated model.
+In: Proceedings of the 30th U.S. Rock Mechanics Symposium (Morgantown, WV).
+Balkema: pp. 891-898.
+Salamon MDG [1989b].
+Subsidence prediction using a laminated model.
+In: Proceedings of the 30th U.S. Rock Mechanics Symposium (Morgantown, WV).
+Balkema: pp. 503-510.
+Seedsman RW, Hornby P [1991].
+Controlled and uncontrolled pillar collapse.
+NERDDC project report No. 1440.
+Australia: ACIRL Ltd.
+Skelly WA, Wolgamott J, Wang FD [1977].
+Coal pillar strength and deformation prediction through laboratory sample testing.
+In: Proceedings of the 18th U.S. Rock Mechanics Symposium.
+Golden, CO:: Colorado School of Mines, pp. 2B5-1 to 2B5-5.
+Swanson PL, Boler FM [1995].
+The magnitude 5.3 seismic event and collapse of the Solvay trona mine: analysis of pillar/floor failure stability.
+U.S. Department of the Interior, Bureau of Mines, OFR 86-95.
+Van Heerden WL [1975].
+In situ determination of complete stress-strain characteristics of large coal specimens.
+J S Afr Inst Min Metall 75(8):207-217.
+Wagner H [1974].
+Determination of the complete load-deformation characteristics of coal pillars.
+In: Proceedings of the Third International Congress on Rock Mechanics.
+National Academy of Sciences, Vol. 2B, pp. 1076-1081.
+Zipf RK Jr. [1992a].
+MULSIM/NL application and practitioner's manual.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9322.
+Zipf RK Jr. [1992b].
+MULSIM/NL theoretical and programmer's manual.
+Pittsburgh, PA: U.S. Department of the Interior, Bureau of Mines, IC 9321.
+Zipf RK Jr. [1996].
+Simulation of cascading pillar failure in room-andpillar mines using boundary-element method.
+In: Proceedings of the Second North American Rock Mechanics Symposium.
+Balkema, pp. 1887-1892.
+Zipf RK Jr. [in press].
+Catastrophic collapse of highwall web pillars and preventative design methods.
+In: Proceedings of the 18th International Conference on Ground Control in Mining.
+Morgantown, WV: West Virginia University.
+Zipf RK Jr., Mark C [1997].
+Design methods to control violent pillar failures in room-and-pillar mines.
+Transactions of the Institution of Mining and Metallurgy 106(Sept-Dec):A124-A132.
+Zipf RK Jr., Swanson PL [in press].
+Description of a large catastrophic failure in a southwestern Wyoming trona mine.
+In: Proceedings of the 37th U.S. Rock Mechanics Symposium (Vail, CO).
+To receive other information about occupational safety and health problems, call 1-800-35-NIOSH (1-800-356-4674), or visit the NIOSH Home Page on the World Wide Web at http://www.cdc.gov/niosh
+DHHS (NIOSH) Publication No. 99-114 June 1998

@@ -1,0 +1,519 @@
+Census 2000 Testing, Experimentation, July 15, 2003 and Evaluation Program __________________________________________________________ Topic Report Series, No. 2
+AUTOMATION OF CENSUS 2000 PROCESSES Quality assurance procedures were applied throughout the creation of this report.
+This topic report integrates findings and provides context and background for interpretation of results from Census 2000 evaluations, tests, and other research undertaken by the U.S. Census Bureau.
+It is part of a broad program, the Census 2000 Testing, Experimentation, and Evaluation program, designed to assess Census 2000 and to inform 2010 Census planning.
+Prepared by Judith A. Dawson and Dennis W. Stoudt Independent Contractor and Decennial Systems and Contracts Management Office
+Intentionally Blank
+Contents
+1.
+2.
+Introduction......................................................................................................1 Background.....................................................................................................
+1
+2.1 2.2 2.3 Development Staff...................................................................................................1 Use of Commercial-Off-the-Shelf Software............................................................2 Future Implications..................................................................................................2
+3.
+Scope and Limitations......................................................................................2
+3.1 3.2 Limitations...............................................................................................................3 Interviews.................................................................................................................4
+4.
+Requirements Definition..................................................................................4
+4.1 4.2 4.3 4.4 Identification of Systems for Study..........................................................................5 Impact of Systems Studied.......................................................................................5 Other Census 2000 Systems.....................................................................................5 Staff Resources.......................................................................................................
+5
+5.
+6.
+Research Questions..........................................................................................6 Results of Analysis..........................................................................................7
+6.1 6.2 6.3 6.4 6.5 6.6 6.7 6.8 The Right Requirements and Functionality............................................................
+7 Data Quality and Management Information...........................................................
+8 Requirements and System Documentation.............................................................
+8 System Objectives, Plans, and Functional Performance.........................................
+9 Schedule and Testing..............................................................................................
+9 Risk Mitigation and Unplanned Change................................................................10 System Interfaces...................................................................................................10 Role of Users..........................................................................................................11
+7.
+Recommendations..........................................................................................11
+7.1 7.2 7.3 7.4 Process Improvement.............................................................................................11 Environment...........................................................................................................12 Support...................................................................................................................13 Specific Requirements...........................................................................................13
+8.
+9.
+Topic Report Authors' Recommendation.....................................................14 Actions to Date..............................................................................................16
+i
+10.
+Summary........................................................................................................17
+References................................................................................................................19 Acknowledgments....................................................................................................21 Appendix..................................................................................................................22
+ii
+Automation of Census 2000 Processes 1.
+Introduction
+The Census 2000 Testing, Experimentation, and Evaluations Program provides measures of effectiveness for the Census 2000 design, operations, systems, and processes and provides information on the value of new or different methodologies.
+The results and recommendations from these analyses provide valuable information crucial to planning the 2010 Census.
+By providing measures of how well the Census 2000 was conducted, this program fully supports the Census Bureau's strategy to integrate the 2010 planning process with ongoing Master Address File/TIGER enhancements and the American Community Survey.
+The purpose of the report that follows is to synthesize results from related Census 2000 evaluations, experiments, and other assessments to make recommendations for planning the 2010 Census.
+Census 2000 Testing, Experimentation, and Evaluation reports are available on the Census Bureau's Internet site at: http://www.census.gov/pred/www/ .
+2.
+Background
+The Census 2000 was characterized by the automation of functions previously performed clerically or using relatively simple tools of automation.
+Similarly, many of the functions that had been performed in an automated fashion by `in-house' staff were turned over to contract staff.
+Twelve systems were the subject of study and covered the following areas: telephone questionnaire assistance and telephone followup for coverage edit failures, Internet questionnaire assistance and data collection for short form questionnaires, operations control for all field operations, the field personnel and payroll system, systems for the Accuracy and Coverage Evaluation program, including the control system for field operations, the use of laptops to collect evaluation data and the matching system used to compare that evaluation data to corresponding census data, the management information system, the data capture system for respondent questionnaires, and finally, data dissemination.
+2.1 Development Staff
+Development staffs were a mixture of contract and in-house staff.
+Within the contract staff, there were at least three distinct arrangements that may have influenced the extent to which more rigorous and disciplined requirements identification and management processes than is customary at the Census Bureau were employed.
+Those arrangements included contract staff that were embedded with in-house staff and were used more or less as in-house staff, such as the developers of the Operations Control System 2000; contract staff that worked on-site but worked more independently of the in-house staff, such as developers of the matching system used for the Accuracy and Coverage Evaluation system; and external contract staff that developed systems off-site independent of in-house staff, such as the Telephone Questionnaire Assistance system.
+The Internet questionnaire assistance and data collection systems were developed by in-house staff.
+All other 1
+systems were developed by teams of in-house and contract development staffs.
+2.2 Use of Commercial-Off-the-Shelf Software
+A concerted effort was also made to utilize commercial-off-the-shelf (COTS) products as much as possible in many of the systems development efforts.
+In some cases, COTS products for the data capture of respondent questionnaires were not viewed as sufficiently robust to meet Census Bureau needs, (Brinson and Fowler, December, 2001).
+In other cases, the data requirements could not be met with the typical COTS application used in the telephone call industry, (Furno, November, 2001).
+The field payroll and personnel system used a COTS product with customization.
+The initial estimate was the product would meet approximately 90 percent of the requirements; the final assessment was approximately 50 percent of the requirements were met with the product before customization, (Eaton, September, 2002).
+The trend to use COTS products and contractors is expected to continue at an accelerated rate for the next census to make the overall census process more efficient and economical, while maintaining the desired levels of data quality and completeness.
+2.3 Future Implications
+It is important to understand the reasons for success or the limitations of the systems if the intent is to continue automation of basic census processes.
+If future improvements are to be made, a key to judging the successes or limitations of systems is to analyze how the functions of the systems were defined, and how well the systems performed those functions.
+A second important point is to determine if the systems were asked to perform the correct functions.
+This report will provide the Census Bureau with an overall assessment of the automated systems and processes listed in Section 3.
+In addition, the report will offer suggestions on improvements for the development process for future Census programs.
+3.
+Scope and Limitations
+The purpose of this report is to summarize the findings and recommendations from the formal studies of automated Census 2000 processes and the operational assessments performed for those processes when available.
+A list of those documents may be found in the section, References.
+This stated purpose was made easier when Titan Systems Corporation/System Resources Division (Titan) produced a "Program Summary Report of Census 2000 Automated Systems Evaluation", bringing together their thoughts and findings from each of their twelve studies.
+Those results are provided in the Recommendations section.
+The following is a list of the evaluation studies they conducted and summarized: *1.
+R.1.a - Telephone Questionnaire Assistance (TQA) System Requirements Study *2.
+R.1.b - Coverage Edit Followup (CEFU) System Requirements Study *3.
+R.1.c.
+- Internet Questionnaire Assistance (IQA) System Requirements Study 2
+*4.
+R.1.d.
+- Internet Data Collection (IDC) System Requirements Study *5.
+R.2.a.
+- Operations Control System 2000 (OCS 2000) System Requirements Study 6.
+R.2.b.
+- Laptop Computers for the Accuracy and Coverage Evaluation (LC/A.C.E.
+) System Requirements Study 7.
+R.2.c.
+- Accuracy and Coverage Evaluation 2000 (ACE 2000) System Requirements Study 8.
+R.2.d.
+- Matching and Review Coding System (MaRCS) for the Accuracy and Coverage Evaluation System Requirements Study *9.
+R.3.a.
+- Pre-Appointment Management System/Automated Decennial Administrative System (PAMS/ADAMS) System Requirements Study 10.
+R.3.b.
+- American FactFinder (AFF) System Requirements Study 11.
+R.3.c.
+- Management Information System 2000 (MIS2000) System Requirements Study *12.
+R.3.d.
+- Census 2000 Data Capture System (DCS2000) Requirements Study The asterisk (*) indicates those systems for which an operational assessment was also available for this report.
+3.1 Limitations
+A few comments on the process used to analyze the systems studied by Titan seem pertinent.
+Interviews of key personnel by system were conducted utilizing a set of questions developed for in-house staff and a separate set for contractors.
+The questions were provided to interviewees in advance.
+Under the `LIMITS' section of each study are the following statements: Â· Â· Â· The perception of those persons participating in the interview process can significantly influence the quality of information gathered.
+In some cases, interviews were conducted several months, even years, after the participant had been involved in system development activities.
+Each interview was completed within a one to two hour period . . .
+it is not possible to review each aspect of a multi-year development cycle given the limited time available with each participant.
+Every effort was made to identify key personnel and operational customers who actively participated in development efforts.
+Â·
+To understand the recommendations proposed by Titan the specific questions developed for the interviews are included in the Appendix for reference here.
+In addition to a standard set of questions, a system-specific set of questions was also prepared; the specific set for the Telephone Questionnaire Assistance System is included as an example in the 3
+Appendix also.
+Despite the preparation of a standard set of questions, it is not clear if all questions were asked of all interviewees.
+If not, how was the inclusion or omission determined on an individual interview basis? 3.2 Interviews
+Although a list of potential interviewees is included in each study, however, it is not clear how the key personnel were identified, why some key personnel identified were not interviewed or when truly key persons were not available how this limitation was handled.
+It also appears that for many of the systems, `true' end users were not interviewed, such as respondents or the temporary field and processing staffs.
+Finally, in reviewing the list of interviewees study by study it appears that the participants by system were confined to staff with direct involvement in the specific system.
+This is particularly unfortunate for systems that interface with other systems as a condition of their existence since additional `key' persons would have been involved in the requirements and possibly the development process.
+Comments taken at face value without understanding their context may lead to conclusions that are inaccurate or at least misleading.
+The subjectively qualitative, rather than objectively quantitative, nature of the study results makes this a significant limitation.
+4.
+Requirements Definition
+"The main focus of the evaluations was determining the effectiveness of requirements methodologies that were employed during the planning stages and their impact on overall system functionality", (Titan, September, 2002).
+The methodology used for the operational assessments was more broadly focused given their purpose to document planning, implementation, schedule, cost, and operational results.
+The intent of this report will be to use these studies and findings to provide what might be considered a more focused perspective on the actual topic of `Requirements1 for Systems'.
+4.1
+Identification of Systems for Study
+It must be pointed out that the 12 systems studied do not represent all automated systems developed for processes to support Census 2000, but rather focus on selected software
+Requirements as used in this report include and convey not only the actual and formal written documents and compilation process specifying the functionality required by a system, but also the attendant and directly related support functions that are part of any reasonable requirements process.
+This includes user identification, dissemination, reports, walkthroughs, scheduling, risk minimization/change control, and the like.
+Please consider this definition/concept when the term `requirements' is used in this report.
+4
+1
+systems.
+In addition, the preceding list of automated systems reviewed does not include major critical corporate systems, such as the Master Address File (MAF), the Topologically Integrated and Geographic Encoding Reference (TIGER) system nor decennial census specific systems such as, the Decennial Master Address File (DMAF) or the Headquarters Processing systems.
+The inclusion of the corporate system, The American FactFinder, suggests that the intent of the program was not to exclude systems with a broader purpose than the decennial census.
+The 12 systems studied are certainly important, if not necessarily critical in all cases.
+However, it is the large number of systems needed that contributes to the complexity of the development effort and impacts the development process, especially the requirements definition process.
+4.2 Impact on Systems Studied
+While there are formal evaluations in progress for some of these other corporate systems, their focus does not appear to be their development as automated systems.
+These systems formed the foundation for and/or contributed significantly to many of the systems evaluated by Titan.
+By definition, the requirements of these systems influence requirements for the systems they contribute to or support.
+To the extent that their requirements are clearly documented and disseminated, they will have a positive impact on the requirements definition process and ultimately the development process for other systems.
+Poor documentation and/or dissemination will pose risk to other systems.
+Based on the analysis to date, it is not possible to determine the impact of this omission on the analysis and recommendations proposed.
+4.3 Other Census 2000 Systems
+In addition to these major systems, there were various Web-based systems, hardware and telecommunications systems developed for Census 2000 that contribute to the comprehensive automation of census processes and, possibly, to the success or failure of the systems studied.
+A useful exercise would be to identify all the systems (`large and small') developed for Census 2000 and the relationships and interactions among them to serve as a guide to the total systems development and coherent integration effort required to support a decennial census.
+Operational areas may be reviewing these systems for future planning but a comprehensive review seems very germane to the Evaluations Program.
+4.4 Staff Resources
+Systems are rarely developed in sequence, rather they tend to be developed in parallel due to the nature of the decennial census, `the ultimate one-time survey'.
+It is rare that inhouse staffs have the luxury of focusing on one system at a time, this may be less true for contract staff given the nature of the contract world.
+The need to provide requirements for multiple decennial systems while meeting needs of other census programs is a balancing act particularly for any area that does not have a separate staff focused on decennial 5
+programs.
+In some cases this is a cyclical problem, fewer resources (staff and budget) early in the decade, more resources focused on decennial activities closer to the dress rehearsal for the census.
+The lack of involvement of all appropriate staff throughout the development effort for some of the systems studied is noted, (Furno, November, 2001; Brinson and Fowler, December, 2001).
+The reasons for this lack of involvement are not stated but in some cases may be the result of competing priorities.
+5.
+Research Questions
+There were several predefined `research questions' to be answered for the automated systems.
+In retrospect, these may not be the right questions to meet the evaluation goals.
+Those questions marked with an asterisk (*) are the original questions proposed for the Evaluation Program.
+Additional questions considered relevant to the topic were proposed and are included in the list below.
+Responses to all questions are summarized in Section 6.
+It must be noted that in providing answers to the research questions, there are a number of factors that need to be considered.
+The 12 systems are not equivalent in scope, length of use `in the field', use of contract staff, functionality, users, or length of the development cycle to name just a few areas of difference.
+The short answer to all questions is: "It varies by system."
+This is not really helpful to the planning process, so an attempt to provide a more detailed response is made.
+Questions *1.
+*2.
+*3.
+*4.
+5.
+6.
+7.
+8.
+9.
+10.
+Did we have the right requirements for each of the automated systems? Did we specify the proper functionality? Did the system do what it was supposed to do in terms of either its impact on data quality or providing useful management information? Did we define our requirements in a timely enough manner? Did system developers participate in definition of system objectives and plans? Did system developers/designers receive requirements? Were they timely? Were they complete? Did the systems perform to requirements? Was the system developed on schedule? Was the system tested/quality controlled prior to production? Did the system/requirements provide needed operational and progress information? 6
+11.
+12.
+13.
+14.
+15.
+16.
+Were system implementation risks recognized and accounted for prior to system design and implementation? Were the requirements and resulting system software documented? .
+Were system interface requirements known, communicated, and tested? Did the system undergo BETA testing and release? Were system users briefed/contacted for feedback as part of system development/implementation? Were there unplanned system modifications during development and/or production which affected implementation?
+6.
+Results of Analysis 6.1 The Right Requirements and Functionality
+Based on the analysis by Titan and the operational assessments, as appropriate, the right requirements were specified for the 12 systems, (Coon, August 28, 2002; Brinson and Fowler, 2001; Eaton, May, 2002; Titan all).
+Requirements tended to be too general or broad for selected systems developed by contract staff, (Furno, November, 2001; Furno, April, 2002) and/or the requirements were modified throughout the development process, (Titan, R.3.a).
+But all systems were judged to meet their major objectives despite some recognized deficiencies in the requirements definition process.
+All 12 systems were judged as providing the functionality needed to support/meet field, processing or respondent needs.
+However, this was accomplished over time for some systems, (Eaton, September, 2002) not necessarily in advance of or even as part of a comprehensive development effort, in some cases this was due to the modular nature of the system, in other cases it was a result of developer experience with Census 2000 operations.
+For those systems in use for several years such as PAMS/ADAMS or OCS2000, the functionality required changed over time due to operational changes, legal changes or requests from users as they became more familiar (sophisticated) users of the system among other reasons.
+The IDC system was in use for only a few weeks and had a very focused purpose which it satisfied.
+Each of the operational assessments offers improvements (added functionality) for future development of similar systems.
+6.2 Data Quality and Management Information
+The data quality and general management information needs specified were satisfied by the systems.
+However, in some cases evaluations data and management reports, (Furno, 2002) were not available as requested and Census Bureau specific quality assurance 7
+requirements were not met, (Brinson and Fowler, 2001).
+Generally these deficiencies were a result of the lateness of the requirements or lack of clarity and resulting misinterpretation.
+It is clear from some of the operational assessments that users would have liked additional reporting capabilities, (Coon, August 28, 2002; Eaton, September, 2002).
+However, these requirements were not documented as system requirements.
+It should be noted that management information needs can vary by person based on their role in the organization.
+The needs of one person do not necessarily meet the needs of another; it is a chronic and uneven balancing act to find the common ground.
+6.3 Requirements and System Documentation
+For most systems a requirements document or set of documents was compiled over time and the development process was characterized by continuous change.
+While functionality changes over multiple iterations of systems (such as during the full decennial cycle) are expected and necessary, functionality changes within a single implementation are undesirable, enormously risky, and should be avoided.
+The change from a sample census design to a traditional design was responsible for significant changes in requirements to the selected systems, (Titan, R.2.a, R.3.a, R.3.d), though a dual strategy was already being followed to mitigate the negative impact on systems development.
+The dual strategy did dilute the focus of scarce human capital resources for the requirements identification and documentation process.
+The late decision to include an Internet response option to the public by necessity resulted in requirements being identified and documented late, (Titan, R.1.d).
+The Joint Applications Development (JAD) sessions in the requirements definition process were very useful in providing a forum for the identification and discussion of the requirements.
+This is an opportunity to include representatives from various constituencies with an impartial facilitator to ensure all sides are given a chance to express their views.
+A written document of proceedings is the standard product and provides a useful body of initial written documentation for development staff.
+The OCS2000 was one system that used this process frequently and effectively.
+Written requirements were not usually available prior to the start of system development, and in some instances were presented as a series . of requirements rather than a comprehensive set, (Furno, April, 2002) The completeness of the documentation of requirements and the system software varies by system.
+For systems used in the field offices, documentation exists in the form of operational manuals, job aids and/or training materials.
+In addition the requirements documentation is also available.
+Examples include the OCS2000, ACE2000, LC/A.C.E., PAMS/ADAMS systems.
+This issue is not addressed by the materials available for this report, as such, for all 12 systems.
+6.4 System Objectives, Plans, Functional Performance
+The definition of objectives and plans for systems in broad terms may be provided by 8
+management or planning groups to meet global agency objectives.
+The specific details for design and implementation are delegated to operational, subject matter, development and other staffs, as appropriate.
+Members of the development teams were involved heavily in the definition of objectives and plans for systems, such as the PAMS/ADAMS, ACE2000, OCS2000 and MIS2000 systems.
+This was also true for the IQA, IDC and MaRCS, (Titan, R.1.c., R.1.d, R.2.d.).
+The inclusion of such staff in the requirements definition process, (Coon, August 28, 2002; Eaton, September, 2002; Titan, R.3.a, R.2.a and R.2.c), was responsible for several of the systems studied performing according to requirements.
+Their involvement was useful in understanding what the system needed to do even in the absence of complete, written requirements prior to the start of the system development effort.
+All systems were judged to be successful, the results of other evaluations may provide insight into the degree to which they met requirements.
+6.5 Schedule and Testing
+All systems were developed in time to meet the operational start date with the exception of the CEFU system,(Titan, R.1.b and Furno, April, 2002).
+The operation was delayed for one month but was judged not to have been detrimental to this data collection effort.
+Key activity dates for all systems were included in the Master Activity Schedule (MAS) but the level of activity detail varied considerably.
+This suggests that a standard set of activity lines should be followed for consistency and understanding; a set of activities following the system development life cycle might be appropriate.
+All systems were tested prior to production.
+At a minimum, the development staffs performed this function.
+In other cases more formal approaches were used.
+The PAMS/ADAMS, ACE2000, and OCS2000 were specifically required to use services of the Beta Site (BETA), (Titan, L.5, R.2.a, R.2.c., and R.3.a).
+The contractor for DCS2000 has met standards developed by the Software Engineering Institute for its software development process.
+Formal testing of their systems to satisfy those standards is/was routine, (Brinson and Fowler, 2001).
+Additional testing by BETA was considered redundant for this system.
+The AFF specifically requested support from BETA for its own purposes, (Titan, R.3.b).
+Complete details of the testing or quality control processes for all systems are not provided.
+However, it does not appear that a standard testing and release process was followed for all systems.
+The role of the Beta Site was the subject of a separate evaluation and documents the need to clarify their role in the testing process and the responsibilities of the applications development staffs in using their services, (Titan, L.5).
+6.6 Risk Mitigation and Unplanned Changes
+Risk mitigation/management was considered in the design of the PAMS/ADAMS, OCS2000, and ACE2000 by enabling the work of one Local Census Office to be 9
+performed at another Local Census Office without contaminating the data of the `host or guest' office as a contingency, (Coon, August 28, 2001).
+System redundancy was also available through the Bowie Computer Center for selected systems.
+This was specifically mentioned as a concern in the development of the IDC, IQA, LC/A.C.E. systems due to the reliance on limited key personnel, (Titan, R.1.d, R.1.c, and R.2.b).
+This is an area needing further study.
+The size and complexity of the decennial systems makes this a potentially costly, if necessary undertaking.
+Recommendations to control changes to requirements and fully test decennial systems during a `true' Dress Rehearsal are possible approaches to satisfy this need for the future.
+This is another avenue for research.
+The 12 systems identified for this analysis all used Change Control Boards (CCBs) to minimize the disruption caused by unplanned change.
+For some systems developed by contractors (DCS2000), the control exercised was very tight, (Brinson and Fowler, 2001) .
+In other cases, the CCBs monitored changes but appeared to try and accommodate requests as much as possible.
+For example, legal and COTS product changes were responsible for modifications to the PAMS/ADAMS system, (Eaton, September, 2002; Titan, R.3.a).
+These certainly affected implementation but not necessarily in a negative way.
+The use of CCBs is considered a best practice that should be promoted for future systems.
+6.7 System Interfaces
+All of the systems studied interfaced with other systems.
+These were extensive in some cases (PAMS/ADAMS), moderate in others (OCS 2000), or more limited; internal or external, input and/or output and so forth.
+The extent of the communication and testing varied by system.
+It should be acknowledged that even when testing occurred and results were satisfactory, problems could arise due to data anomalies that could/were not anticipated in the test process.
+It has been clear that interfaces between the MIS2000 and feeder systems would occur.
+These were part of the design and development process, (Titan, R.3.c).
+It is also clear that the output requirements for IDC to interface with the data processing system were not considered sufficiently, (Coon, March, 2002).
+The reliance of decennial systems on one another makes the complete inventory of systems, the identification of the interfaces/relationships of those systems, and their requirements an extremely critical undertaking for future systems development.
+6.8 Role of Users
+The users for the systems studied consisted of respondents, call center operators, Headquarters users from the subject matter, operational, quality assurance and evaluations areas, field and processing office staffs and so forth.
+In some cases, staff were temporary hires with little automation background, in other cases they were long-time users of automation, if not the specific system(s).
+It is fair to say that for systems used by/for respondents such as the IDC, IQA, TQA or CEFU, respondents were not involved in the development process until such time as usability testing, focus groups or other such 10
+methods were applied.
+Headquarters users (developers of requirements) were involved in development and implementation for field systems, such as PAMS/ADAMS, OCS2000 and so forth.
+In some cases, staff from the regional offices actually participated in requirements definition and testing.
+The dry runs conducted in the processing centers for DCS2000 involved users, (Brinson and Fowler, 2001).
+But in many cases, only simulations of actual users were involved in the development effort.
+7.
+Recommendations
+The following list of recommendations represents a summary of those provided in the Systems Requirements Studies conducted by Titan, and the operational assessments prepared by Decennial Management Division staff.
+The actual wording of a recommendation may have been modified for this report to improve readability.
+The specific study(ies) and/or assessment is provided in parentheses.
+The categorizations are the topic report authors.
+7.1 Process Improvement
+Implement formalized processes to guide the system development cycle, (Titan R.1.a, R.1.b, R.1.c, R.1.d, R.2.c, R.2.d, R.3.b).
+Institute development efforts early enough so that fully tested, robust systems are available for the Dress Rehearsal, (Titan R.1.a, R.1.b, R.2.b, R.2.b, Furno, 2001; Furno, 2002).
+Increase the use of Joint Applications Development and Rapid Applications Development concepts for development efforts, (Titan R.1.a, R.2.b).
+Encourage the participation of in-house personnel from all relevant disciplines in the planning, identification of user requirements, specifications, development, and testing processes for new systems, (Titan R.3.d).
+Focus high level management attention on each phase of a system's life-cycle to ensure there are sufficient resources applied to the task, (Titan, R.3.c).
+Each phase is critical to the success of the mission that the system supports.
+Define project management tools for all system development efforts so that resources from contract management and development staffs can focus on the actual management and development activities, (Titan, R.3.c).
+Consider contingency planning when selecting personnel for high profile system development and operational activities, (Titan R.1.c, R.1.d).
+Develop overall quality standards and guidelines as a minimum requirement for decennial systems, (Titan, R.3.d).
+11
+Schedule development activities so that ample time is allowed for the Dress Rehearsal, (Titan, R.1.d; Coon, March, 2002).
+Ensure that all team members, such as subject matter experts, stay actively involved in the continued translation of requirements and the resolution of technical issues throughout the development effort, (Titan, R.1.a, R.1.b, R.3.d; Eaton, September, 2002).
+Require the use of formalized change control processes as part of all development efforts, (Titan, R.1.a, R.1.b, R.2.a, R.2.d, R.3.a, R.3.b; Furno, 2002).
+7.2 Environment
+Strengthen the division responsible for the overall management of information technology so that it can better manage and coordinate system development activities, prior to the next decennial census, (Titan, 2002).
+Avoid compressed development schedules, to the extent possible.
+They introduce additional technical, cost, and schedule risks for the Census Bureau.
+Determine funding priorities and initiate system planning and requirements definition efforts early on to allow sufficient program documentation, and user training, (Titan, R.1.c, R.1.d).
+Define, document and share the purpose of the system and the appropriate user community (i.e. those who should have access) prior to deployment with other system development efforts to control expectations, avoid overlaps in functionality, and enhance data sharing, (Titan, R.2.a).
+Explore future system interfacing needs, as soon as possible, so that provisions can be made early on to simulate data feeds that may otherwise be unavailable, (Titan, R.2.a).
+Select proven, state-of-the-art technologies early enough to ensure sufficient time for testing and integration with other technologies for the 2010 Census, (Titan, R.1.a).
+Consider educating contractors about the nature and history of the census through an orientation program, (Titan, R.2.a; Furno, 2001).
+Reduce contractor turnover from "better offers" or extenuating personal circumstances, to the extent possible, by taking certain steps during contract negotiations with the vendor, (Titan, R.2.b, R.2.c).
+Define the role and responsibility of the contractor in the statement of work; however, Census Bureau personnel should retain the final decision-making authority for planning, development, deployment, and maintenance issues, (Titan, R.2.d).
+Consider incorporating contractual provisions that require contractors to demonstrate their 12
+abilities to produce critical deliverables, (Titan, R.1.d).
+7.3 Support
+Consider the essential role of the Help Desk in the overall operation and ongoing maintenance of a system.
+It should be a factor that is considered when system administrators will not be able to address every technical problem by relying solely on manuals and other forms of written documentation, (Titan, R.2.c).
+Institute a formalized training program, (Titan, R.3.a).
+Initiate early planning efforts to enable the Beta Site operation to scope out its requirements for physical, technical, and personnel resources, so that it can accommodate an increased testing workload, (Titan, L.5; R.2.d).
+Use an experienced staff during the requirements phase dedicated to handling technical matters with internal support organizations to minimize the amount and complexity of technical issues that must be addressed.
+Training issues can also be minimized with this approach.
+Address the need for on-going technical support during the requirements development process by ensuring that adequate resources are available, (Titan, R.3.c).
+7.4 Specific Requirements
+Conduct customer segmentation analyses as early as possible in the system development process, (Titan, R.3.b).
+Identify reporting needs during the requirements process.
+Production of reports is a functional requirement for systems, (Titan, R.3.a).
+Develop the payroll/personnel system needs early in the decennial cycle, (Eaton, September, 2002).
+Publicize the next generation (Internet) system, or any system intended for public use, widely to ensure maximum utilization, (Titan, R.1.c, R.1.d).
+Plan for the Internet to have a major impact on data collection for the 2010 Census, (Titan, R.1.c, R.1.d).
+Communicate any requirements for foreign language support to developers so they can anticipate the complexities of incorporating such functionality, (Titan, R.2.c).
+Create a separate data warehouse, updated in real time from production for users to access data for reporting and analysis, (Eaton, September, 2002).
+13
+Standardize global element definitions between feeder systems to produce reliable results in an efficient manner or a mass conversion effort will be required as executive information systems collect and aggregate data from multiple sources, (Titan, R.3.c).
+Assign a dedicated contracting officer whenever a large and/or critical system development project is undertaken, (Titan, R.2.a).
+Design systems in a modular fashion, given the number of high impact external factors that can affect system requirements in conjunction with time limitations imposed by law.
+Ensure the systems are adequately sized and flexible enough to accommodate these types of changes, (Titan, R.3.a).
+Align the instrument design requirement with the business process of remote data collection and emulate in future applications involving laptop instruments, (Titan, R.2.b).
+Consider using the [Concept of Operations] CONOPS approach for those decennial systems where requirements are unusually complex, (Titan, 2002).
+8.
+Topic Report Authors' Recommendation
+From the above list provided by Titan and the operational assessments, the following subset represents the topic report authors' suggestions for most immediate consideration, research and implementation, as appropriate.
+It should be noted that many of the recommendations made by Titan and others do not distinguish between those applications that are destined to be developed by contractors and those that are more likely to be developed in-house.
+Similarly, it is clear that one of the big challenges for the future is the timely identification of all censuses processes that are candidates for automation solutions and from that list, those that should be considered for contractual support versus in-house development.
+However, the decisions on developmental ownership should not be made without a thorough understanding of the status and breadth of a system's requirements and its supporting process.
+Those systems for which definitive requirements did not exist or existed only late in the census cycle stood a much better chance of implementation success through the use of internal "heroes" rather than contractors.
+That is, in these situations, the internal staff's experience and understanding of both the census and how to operate within the Census Bureau culture make it extremely difficult for them to satisfy Bureau customers in projects involving the late definition of requirements.
+Consequently, the topic report authors chose to emphasize the concepts that were common to a large number of systems, rather than those mentioned in a single study or assessment.
+The qualitative nature of the data suggests that additional research is warranted before embracing the recommendations fully for wide application.
+Recommendation The common theme in all the studies and assessments is the critical need for a comprehensive, documented set of overall requirements for each system.
+14
+Recommendation: The requirements process must be given the initial focus and foundation for improved software/system development.
+This is not as simple as it may appear on the surface.
+Consider the following components of this process of defining overall requirements: 1.
+Identification of all census processes and the relationships among those processes that would determine necessary integration and compatibility of data among them and their supporting systems that are candidates for an automation solution, i.e. system.
+It is possible that the relative benefits for automating a census process are out-weighed by the resources required; priorities must be established if resources (time, money and human) are limited.
+2.
+Identification of all staff that have requirements for a given system: users, including respondents, operational, subject matter, quality assurance, and evaluations users; developers, testers (including BETA), trainers, writers, Help Desk, and systems staff (i.e. database designers, network, and the like), as appropriate.
+The same component groups may not be appropriate for all systems.
+This is one aspect of the complexity of the requirements definition process.
+3.
+Development of tools/guidelines for use by those responsible for requirements identification to ensure that the needed level of detail, testability, and content is provided in the resulting document(s).
+Requirements documents must include, as appropriate, the testable functionality expected, interfaces with other systems, data input and output, validation (edits and/or quality assurance needs), report, legal, and evaluation needs of users.
+4.
+Training the staff on the use of the requirements process tools/guidelines.
+Part of the training process is ensuring staff have an understanding of the software/system development life cycle.
+5.
+Hardware, operating system, and telecommunications environment in which the system will be used.
+Requirements may be independent of these, however, an assessment of the effect of these components on system requirements is essential to the development effort.
+6.
+Identification of a clear set of roles and responsibilities, relationships and interdependencies with respect to all aspects of the system development process.
+There are activities that clearly are the responsibility of a specific group, for example developers are responsible for development, quality assurance (QA) staff are responsible for the preparation of QA requirements, but the responsibility for other activities may be more ambiguous, such as testing or preparation of training, especially if the desired training format is computer-based.
+15
+7.
+Development of a comprehensive and integrated acceptance test program should be established as part of the requirements process.
+Although developed in concert with requirements gathering, its purpose will be to independently validate and verify that software and systems are accurately interpreted and meet user needs.
+Users may play a vital role in the construction of test cases, and in carrying out the testing process.
+The success of an acceptance test program ensures the requirements are functionally sound, and that they integrate with other decennial components without adverse impact on existing operations.
+9.
+Actions to Date
+Some positive first steps have been taken following Census 2000 towards planning for the implementation of the recommendation.
+The Census Bureau has developed a project management program in conjunction with George Washington University with an emphasis on automation projects that is preparing staff to understand and manage software/system development projects more effectively.
+The program acknowledges the importance of the requirements process, the human factors, as well as, the technical aspects of the process, and demonstrates a commitment to changing business practices.
+The decennial management staff sponsored a well-attended series of software engineering classes (provided by The Learning Tree Corporation) that emphasizes understanding the requirements process, the quality assurance process for software development, software testing, and other critical development areas, again demonstrating a recognition of the importance and commitment to improving software/system development efforts.
+In addition to training staff, a formal requirements definition, management, and acceptance process has been initiated for the 2004 Census Test systems.
+To support these efforts, the Census Bureau has established the Census Software Engineering Process Group (SEPG).
+The SEPG is an inter-directorate group that facilitates the development, use, and maintenance of the Census Software Process and acts as the coordinating body for improving software development and maintenance business processes throughout the Census Bureau.
+The Census Bureau is also undertaking a Census 2010 enterprise architecture project to comprehensively map out all the business processes and relationships (inputs/outputs/data flows) of the decennial census so that documentation of a sound logical and physical architecture can be prepared.
+This should lead to the development of a coherent and compatible set of systems for the Census 2010.
+10.
+Summary
+In the summary report prepared by Titan, there is an excellent statement of the system development environment at the Census Bureau.
+It is thought provoking and worth inclusion in this report for that reason.
+Unlike most other federal agencies that develop systems in response to long term needs, 16
+the Census Bureau's decennial systems are designed for a specific event.
+This contributes to a rather unique development environment and a mind set that often views decennial systems as being one-time `throw away' applications, because they are operational over a very brief period.
+The typical federal system has an extended life-cycle and time to evolve . . . but decennial systems only have one chance to `get it right.' . . . many decennial systems involve nationwide data processing activities and have unusual demands in terms of the massive amounts of data that are captured and processed within a very short time frame.
+Thus, the need for an effective planning process is essential.
+Because these unique considerations have impacted development efforts in the past, the collection of recommendations . . . need to be viewed in the context of the Census Bureau's environment and its reliance on human capital.
+The latter has proven to be a highly valuable asset that has tended to compensate for lack of a methodical approach to system development.
+The Census Bureau needs to retain as much of this base of intellectual knowledge and census experience as possible, but it cannot be relied upon as a substitute for adequate systems planning . .
+..
+Given the high probability of increased reliance on automated systems in 2010 and the rapid pace of technological change . . .
+an effective requirements definition process will be a key element underlying system development activities for the 2010 Census.
+Accordingly, a major effort will be required to promote this process and educate Census Bureau staff about its importance and benefits.
+The lack of a consistent, meaningful requirements definition and/or management process is the common thread running through nearly all of the automated systems requirements studies and operational assessments.
+This lack takes many forms depending on the application, developer, and/or method of development/implementation.
+It is clear, however, that there are serious negative consequences that emanate from this process flaw; these may affect individuals, directly or indirectly, the automated systems themselves, along with their operational/administrative functions.
+An even basic requirements management process would not only allow for more measured internally fulfilled automated system implementations, but would also provide a vehicle for making better decisions on the wisdom and risk associated with outsourcing various applications.
+The introduction of consistency in the systems development process has the added advantages of ensuring common understanding of participants in diverse ways: as they define the activity schedules following the system life cycle to monitor progress, as they develop comprehensive requirements for each system, and as they develop test plans to measure performance of systems, to name a few.
+Just as `system requirements' justified the 12 studies, they are also the foundation the Census Bureau can, and must, build upon.
+The studies and assessments provided a valuable set of recommendations from which focus and direction can be taken As progress is made to achieving improvements in this process, attention can be directed towards other proposed changes.
+At the same time, the development staff also needs to be involved in changing its culture to know what to do when and if they meet the upstream cultural change which produces consistently complete, 17
+timely and managed requirements as the necessary and only foundation for real systems change and systems excellence.
+References Brinson, A. and Fowler, C. "Assessment Report for Data Capture of Paper Questionnaires," Draft, December 10, 2001.
+Coon, D. "Operations Control System 2000 (OCS2000) Comprehensive Operational Assessment", Final Draft, August 28, 2002.
+Coon, D. "Census 2000 Field Automation and Telecommunications Infrastructure Comprehensive Operational Assessment", Final Draft, August 23, 2002.
+Coon, D. "Internet Data Collection (IDC) and Internet Questionnaire Assistance (IQA) Comprehensive Operational Assessment", March 20, 2002.
+Eaton, B. "Field Office Management and Administration Comprehensive Assessment Report," Final Draft, August 28, 2002.
+Eaton, B. "Pre-Appointment Management System/Automated Decennial Administrative 18
+Management System Assessment Report," Final Draft, September 9, 2002.
+Eaton, B. "Assessment Report Recruitment, Decennial Applicant Name Check and Selection," May 22, 2002.
+Furno, G. "Coverage Edit Follow-up Comprehensive Operational Assessment," Final Draft, April 15, 2002.
+Furno, G. "Telephone Questionnaire Assistance (TQA) Comprehensive Operational Assessment," Final Draft, November 26, 2001 Titan Systems Corporation/System Resource Division, R.1.a.
+"Telephone Questionnaire Assistance System Requirements Study", Final Report, December 4, 2001.
+Titan Systems Corporation/System Resource Division, R.1.b.
+"Coverage Edit Followup System Requirements Study", Final Report, December 4, 2001.
+Titan Systems Corporation/System Resource Division, R.1.c.
+"Internet Questionnaire Assistance System Requirements Study", Final Report, November 27, 2001.
+Titan Systems Corporation/System Resource Division, R.1.d.
+"Internet Data Collection System Requirements Study", Final Report, November 27, 2001.
+Titan Systems Corporation/System Resource Division, R.2.a.
+"Operations Control System 2000 System Requirements Study", Final Report, February 28, 2002.
+Titan Systems Corporation/System Resource Division, R.2.b.
+"Laptop Computers for Accuracy and Coverage Evaluation System Requirements Study", Final Report, June 6, 2002.
+Titan Systems Corporation/System Resource Division, R.2.c.
+"Accuracy and Coverage Evaluation 2000 System Requirements Study", Final Report, May 10, 2002.
+Titan Systems Corporation/System Resource Division, R.2.d.
+"Matching Review and Coding System for Accuracy and Coverage Evaluation (Housing Unit, Person and Final Housing Unit) System Requirements Study", Final Report, April 17, 2002.
+Titan Systems Corporation/System Resource Division, R.3.a.
+"Pre-Appointment Management System/Automated Decennial Administrative Management System System Requirements Study", Final Report, June 6, 2002.
+Titan Systems Corporation/System Resource Division, R.3.b.
+"American FactFinder System Requirements Study", Final Report, June 6, 2002.
+Titan Systems Corporation/System Resource Division, R.3.c.
+"Management Information System 19
+2000 System Requirements Study", Final Report, July 22, 2002 Titan Systems Corporation/System Resource Division, R.3.d "Census 2000 Data Capture System Requirements Study", Final Report, August 23, 2002.
+Titan Systems Corporation/System Resource Division, "Census 2000 Automated Systems Evaluations Program Summary Report," Final Report, September 30, 2002.
+Titan Systems Corporation/System Resource Division, L.5 "Operational Requirements Study: The Beta Site Systems Testing 
+Unknown, "Census 2000 Logistics, Kit Preparation and Box Shipment," Draft, October 1, 2002.
+20
+Acknowledgments We wish to thank the following individuals for their assistance and support in the review of this report during its various stages of preparation: Paula Schneider, David Galdi, Richard Blass, and Howard Prouse.
+21
+Appendix The following is the draft list of questions developed for interviewing key personnel involved in the Telephone Questionnaire Assistance (TQA) System.
+The objective of the study is to "determine if proper system functionality was defined.
+The initial set of questions was used for all system evaluations; those identified as system specific apply to the TQA system only.
+A similar set of specific questions was prepared for each system.
+TQA Question Set for Census System Evaluations Requirements Definition Process: 1.
+How was the need to develop the system identified? Â· Enhancement to existing system? Â· Past census experience and lessons learned from earlier efforts? Â· Federal mandate? Â· Feedback from the public? 2.
+What percentage of the overall system development effort was devoted to requirements definition? 3.
+Who was involved in the requirements definition process for this system? Â· Census management? Â· Other system managers within Census? Â· Other federal agencies? Â· System developers? Â· Other? Please explain.
+4.
+How was the requirements process planned? 5.
+How were the actual requirements generated? 6.
+How were the resulting requirements documented? 7.
+Were standards and guidelines available to assist in the planning, specification, and documentation processes? Were these used during requirements definition? Â· If yes, what was the source for this guidance documentation? Were these guidelines effective in providing direction for the requirements definition process? If not, how could the guidelines be improved? 8.
+How were the following issues addresses during requirements definition? Â· System capacity (i.e. system demand and data volume requirements)? Â· System availability (i.e. uptime requirements and failure contingencies)? Â· Data quality? 22
+Â· Â· Â· Â· Â·
+System security (i.e. physical and data security requirements)? Training? Documentation? System scaleability (i.e. growth requirements)? On-going maintenance?
+9.
+How would you define the effectiveness of the requirements definition process? Â· Needs were fully defined within the documented requirements? Â· Needs were partially defined within the documented requirements? If yes, why were only some of the known requirements included for development? 10.
+Of those requirements documented and forwarded for system development, what percentage were actually included in the deployed system? Â· If less than 100%, why were some requirements not implemented (due to changes in management direction, time and budget constraints, or technology limitations)? Are these requirements being considered is future enhancements? 11.
+What was the most successful aspect of the requirements definition process? 12.
+What was the least successful aspect of the requirements definition process? Align System with Business Processes: 13.
+Did the requirements definition process take into consideration what business processes would be impacted, and how, before system development activities were initiated? 14.
+To what extent were the operational issues associated with these business processes considered during requirements definition? 15.
+Once deployed, how successful was the system in supporting these business processes? 16.
+Did the implementation and use of the system require changes to the associated business processes? Â· If yes, were these changes improvements to workflow and processing efficiencies (i.e. a benefit of system implementation) or were these changes process workarounds necessary to use the system in a production environment? 17.
+Was any aspect of the business process neglected in terms of system support? Â· If yes, how much of an impact did this lack of support have on conducting the census? 18.
+Was any aspect of the business process over-emphasized in terms of system support? Â· If yes, how much of an impact did this over-emphasis of support have on conducting the census (i.e. unnecessary steps or tasks, increased training, etc.)? 23
+19.
+Using 100 as a perfect score, what rating would this system receive in terms of beingthe "right system for the job"? Â· If less than 80, what measures could have been taken to improve the ability of the system to support the actual business processes? System Inadequacies/Deficiencies: 20.
+Did the system achieve improvements in the BOC's responsiveness to user's needs? 21.
+Was the information generated by the system for management purposes satisfactory (i.e. did it enhance improved decision making and awareness of progress)? Was the information provided complete and useful, and was it made available in an effective format? 22.
+Did the system user interface function as designed? If not, what was the impact on operational efficiencies? 23.
+Was the timeline (contract milestones) appropriately defined by BOC and found to be consistent with the technical support requirements and data collection priorities? 24.
+Did the system meet stated requirements for adequate confidentiality and security related to system access or file storage? 25.
+Was system reliability deficient in any respect? Did the technology accomplish what it was supposed to do in terms of frequency and accuracy? 26.
+Was the technology successful in integrating with other products, platforms, systems, or operations? 27.
+Were system costs appropriate in comparision with the benefits received? 28.
+Were adequate training requirements developed? Was the necessary training provided by the vendor? 29.
+What was the most significant inadequacy/deficiency noted in the system and how did this impact census operations? Contract Management Process: 30.
+Were the requirements defined in a manner that was timely enough to enable full development of the statement of work? If no, what was the impact on contract management effectiveness given the lack of specific requirements until very late in the cycle? 31.
+Did the contract (s) succeed in terms of acquiring expertise, knowledge, and abilities needed 24
+by the Census Bureau (BOC)? 32.
+Were contract programmers technically qualified and effective in terms of performing system development activities? 33.
+What best describes the contractor's (i.e. provider of development, programmatic, or operational support) on-the-job performance? Apply scale of: excellent, very good, good, average, and below average.
+34.
+Is there any risk posed by relying on outsourcing, especially the potential for losing "corporate knowledge", by giving system development responsibility to contractors? 35.
+How well was work exchanged or coordinated between contractors and with the BOC? 36.
+Did the contractor produce the products/services outlined in the statement of work (SOW) and in accordance with the contract delivery schedule? If not, what corrective actions were taken? 37.
+Were adequate quality assurance mechanisms stipulated in the contract by BOC and were those mechanisms applied by the contractor? How did the BOC measure the contractor's effectiveness? 38.
+Was the work performed within the projected cost parameters? 39.
+Did BOC's contracting staff have an effective process for dealing with contractors and the BOC subject matter staff responsible for overseeing the development and operation of the system (i.e. the program office)? 40.
+Conversely, did the program office have an effective process for dealing with the contractors and BOC's contracting staff? 41.
+How well did the program office manage the contract(s)? How effective was contract management with respect to dealing with changing requirements? 42.
+Are additional skills needed to improve the effectiveness of contract management activities? If so, what specific skills are needed? 43.
+What `lessons learned' can help to improve future contract management activities and/or contribute to the development of `best practices'? TQA System-Specific Issues-Did the requirements definition and system planning processes give sufficient consideration to:
+25
+44.
+Establishing accurate requirements for the Operator Support System (OSS)? 45.
+Establishing accurate requirements for the Interactive Voice Response (IVR) System? 46.
+Identification of criteria used to assess scope of system (number of call centers, number of operators, telecom network)? 47.
+Identification of design issues associated with integration of technology and human operator response? 48.
+Assessing potential impacts on coverage and response rates (considerations used to increase response and acceptance)? 49.
+Implementing seamless call routine in accordance with actual TQA needs? 50.
+Providing for the information capture process (types of calls by call center and in the aggregate) and transmission to BOC? 51.
+Defining metrics for the TQA Performance Measures matrix? 52.
+Transcription and fulfillment center functions?
+26

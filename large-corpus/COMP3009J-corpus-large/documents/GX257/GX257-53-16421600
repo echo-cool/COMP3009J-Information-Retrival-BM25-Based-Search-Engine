@@ -1,0 +1,242 @@
+NASA/TP--2001211115 An Estimation of the Likelihood of Significant Eruptions During 20002009 Using Poisson Statistics on Two-Point Moving Averages of the Volcanic Time Series Robert M. Wilson Marshall Space Flight Center, Marshall Space Flight Center, Alabama June 2001 The NASA STI Program Office...in Profile Since its founding, NASA has been dedicated to the advancement of aeronautics and space science.
+The NASA Scientific and Technical Information (STI) Program Office plays a key part in helping NASA maintain this important role.
+The NASA STI Program Office is operated by Langley Research Center, the lead center for NASA's scientific and technical information.
+The NASA STI Program Office provides access to the NASA STI Database, the largest collection of aeronautical and space science STI in the world.
+The Program Office is also NASA's institutional mechanism for disseminating the results of its research and development activities.
+These results are published by NASA in the NASA STI Report Series, which includes the following report types: Ã¯Â¿Â½ TECHNICAL PUBLICATION.
+Reports of completed research or a major significant phase of research that present the results of NASA programs and include extensive data or theoretical analysis.
+Includes compilations of significant scientific and technical data and information deemed to be of continuing reference value.
+NASA's counterpart of peer-reviewed formal professional papers but has less stringent limitations on manuscript length and extent of graphic presentations.
+Ã¯Â¿Â½ TECHNICAL MEMORANDUM.
+Scientific and technical findings that are preliminary or of specialized interest, e.g., quick release reports, working papers, and bibliographies that contain minimal annotation.
+Does not contain extensive analysis.
+Ã¯Â¿Â½ CONTRACTOR REPORT.
+Scientific and technical findings by NASA-sponsored contractors and grantees.
+Ã¯Â¿Â½ CONFERENCE PUBLICATION.
+Collected papers from scientific and technical conferences, symposia, seminars, or other meetings sponsored or cosponsored by NASA.
+Ã¯Â¿Â½ SPECIAL PUBLICATION.
+Scientific, technical, or historical information from NASA programs, projects, and mission, often concerned with subjects having substantial public interest.
+Ã¯Â¿Â½ TECHNICAL TRANSLATION.
+English-language translations of foreign scientific and technical material pertinent to NASA's mission.
+Specialized services that complement the STI Program Office's diverse offerings include creating custom thesauri, building customized databases, organizing and publishing research results...even providing videos.
+For more information about the NASA STI Program Office, see the following: Ã¯Â¿Â½ Access the NASA STI Program Home Page at http://www.sti.nasa.gov Ã¯Â¿Â½ E-mail your question via the Internet to help@sti.nasa.gov Ã¯Â¿Â½ Fax your question to the NASA Access Help Desk at (301) 621 0134 Ã¯Â¿Â½ Telephone the NASA Access Help Desk at (301) 621 0390 Ã¯Â¿Â½ Write to: NASA Access NASA Center 7121 Standard Hanover, MD Help Desk for AeroSpace Information Drive 21076 1320 NASA/TP--2001211115 An Estimation of the Likelihood of Significant Eruptions During 20002009 Using Poisson Statistics on Two-Point Moving Averages of the Volcanic Time Series Robert M. Wilson Marshall Space Flight Center, Marshall Space Flight Center, Alabama National Aeronautics and Space Administration Marshall Space Flight Center Ã¯Â¿Â½ MSFC, Alabama 35812 June 2001 i Acknowledgments The author is grateful to Alan Robock for providing the information that no additional cataclysmic volcanic eruptions occurred after 1993.
+Available from: NASA Center for AeroSpace Information 7121 Standard Drive Hanover, MD 21076 1320 (301) 621 0390 National Technical Information Service 5285 Port Royal Road Springfield, VA 22161 (703) 487 4650 ii TABLE OF CONTENTS 1.
+INTRODUCTION ......................................................................
+.......................................................
+2.
+RESULTS ......................................................................
+....................................................................
+3.
+DISCUSSION AND SUMMARY ......................................................................
+..............................
+REFERENCES ......................................................................
+................................................................
+1 3 7 9 iii LIST OF FIGURES 1.
+The number of occurrences per decade of cataclysmic volcanic eruptions (1750's2000's).
+The decade marked 1800's includes one event that has no VEI value associated with it, but instead was identified on the basis of an ice core reading and tree ring density pattern--the 1809's "unknown" eruption.
+(Confirmed by Robock, private communication.)
+See text for details.
+.....................................
+The first difference of the two-point moving average, based on the combined data set.
+See text for details.
+......................................................................
+...............................
+4 5 2.
+iv LIST OF TABLES 1.
+2.
+Volcanic eruptions having VEI 5 (17501993) ...................................................................... .
+The distribution of the decadal rate (r) of cataclysmic volcanic eruptions (17501993) and the associated Poisson probability distribution for selected groupings of eruptions ..........
+The distribution of the decadal rate (r) of VEI 5 eruptions and the associated Poisson probability distribution ......................................................................
+........................................
+5 6 3.
+6 v LIST OF ACRONYMS AND SYMBOLS ETNH ETSH fd T VEI extra-tropical Northern Hemisphere extra-tropical Southern Hemisphere first difference tropics volcanic explosivity index vi NOMENCLATURE m N P r sd mean number probability rate (decadal) standard deviation vii TECHNICAL PUBLICATION AN ESTIMATION OF THE LIKELIHOOD OF SIGNIFICANT ERUPTIONS DURING 20002009 USING POISSON STATISTICS ON TWO-POINT MOVING AVERAGES OF THE VOLCANIC TIME SERIES 1.
+INTRODUCTION Volcanoes are found on every continent of the Earth and undersea.
+According to Simkin and Siebert,1 more than 1,500 volcanoes have been active in the past 10,000 yr, accounting for 8,000 known eruptions.
+About 400 volcanoes erupted during the 20th century.
+Some two-thirds of the volcanoes are located in the Northern Hemisphere and, similarly, some two-thirds are found to lie around the Pacific Ocean margin, reflecting a predilection of the occurrence of volcanic eruptions to tectonic plate movements.
+Episodes of temporary cooling have long been suspected of being related to the occurrences of large volcanic eruptions.
+For example, Franklin2 suggested that perhaps the eruption of an Icelandic volcano was responsible for the unusual weather of 17831784 in Europe, and Lamb3 described many of the unusual meteorological effects that followed particular large volcanic eruptions.
+These effects, lasting for months to years, include strange sunsets and reduction of the direct measurement of normal-incidence solar radiation by 10 percent or more, in addition to temporary cooling
+.
+They affect the Earth's radiation balance and disturb the chemical equilibrium of the stratosphere, leading to cooling at the Earth's surface (0.10.2 Ã¯Â¿Â½C) and heating in the stratosphere, with these effects often lasting 23 yr or more.
+Following the eruption, the cloud of sulfate gases and aerosol particles spread outward from the eruption site, encircling the globe and expanding toward both poles in a matter of weeks.
+The actual degree of spreading depends upon the particular distribution of winds at the time of the eruption and the latitude of the volcano.
+The sulfur species (mainly sulfur dioxide) react with the hydroxy group (OH) and water to form sulfuric acid.
+It is the resulting sulfuric acid aerosols that produce the dominant radiative effects.
+Recently, Hyde and Crowley22 noted that a number of climate model predictions indicate that the average global temperature should rise about 0.10.3 Ã¯Â¿Â½C over the next 1015 yr.
+Furthermore, they suggested that the occurrences of large volcanic eruptions might mask the global warming effects of carbon dioxide.
+Specifically, on the basis of a 600-yr chronology of Northern Hemispheric eruptions inferred from ice cores, they determined probability density functions that allowed for the estimate of the probable occurrence within the next 10 yr of one or two climatically significant volcanic eruptions.
+They found that the probability of a radiative perturbation of 1 W m2 or larger occurring in the next 10 yr is about 3540 percent, the 1 probability of two such eruptions is 15 percent, and the probability of three such eruptions is 5 percent.
+(They found the probability of no such eruptions to be 44 percent.)
+Also, they deduced that the probability of a Pinatubo-scale eruption (volcanic explosivity index (VEI) = 6) in the next decade is 20 percent, and the probability for an El ChichÃ¯Â¿Â½n-scale eruption (VEI = 5) in the next decade is 25 percent.
+Hyde and Crowley conclude "that there is a reasonable chance of a volcanic eruption influencing the evolution of the anthropogenic signal over the next 10 years."
+In this study, the number of known cataclysmic volcanic eruptions per decade over the past 250 yr (between 17501993), based on the compilation of Simkin and Siebert,1 is determined.
+A cataclysmic volcanic eruption is one having a VEI 4, and it is these that are believed most likely to influence climate.
+(Strictly speaking, it is the sulfur richness of the eruption that determines whether or not it will have a significant effect on global climate.)
+A simple two-point moving average is applied upon the resultant time series to ascertain the expected number of cataclysmic volcanic eruptions during the present decade (2000 2009).
+Then by means of Poisson statistics, various probabilities of occurrence are estimated.
+Thus this study provides an alternate way of determining the likelihood that a climatically significant volcanic eruption will occur within the next 10 yr, as compared to that of Hyde and Crowley.22 2 2.
+RESULTS Figure 1 plots the number of cataclysmic volcanic eruptions per decade, known to have occurred between 1750 and 1993, taken directly from Simkin and Siebert.1 The eruptions are divided by hemispheric subgroupings: Panel (a) is the extra-tropical Southern Hemisphere (N(ETSH)), panel (b) is the tropics (N(T)), panel (c) is the extra-tropical Northern Hemisphere (N(ETNH)), and panel (d) is the combined data set (N(Combined)) which ignores the hemispheric location of the eruption.
+The number of events, mean, and standard deviation are given for each subgrouping.
+Additionally, for the combined grouping, a twopoint moving average is displayed (the heavy line), showing that prior to about 1860, the number of cataclysmic eruptions per decade appears fewer than thereafter--an indication, perhaps, that the record might be less reliable before the mid-1800's.
+Across the top are filled triangles, denoting the occurrences of volcanic events with a VEI 5.
+These particular events are identified for convenience in table 1.
+Such events are routinely identified as being among the largest of stratospheric-aerosol-producing volcanic eruptions.7,11,13,15 Using the combined data set, one finds that since 1750, there have been at least 123 cataclysmic volcanic eruptions.
+Slightly more than half occurred in the tropics and only 4 percent occurred in the extra-tropical Southern Hemisphere.
+The largest value yet observed for the two-point moving averages is found to have occurred in the 1910's, having a value of 8.00 (being associated with the peak number of actual events for the entire sample which measures 11.00).
+Since then, the two-point moving averages have remained relatively flat, varying between 5.00 and 6.00, at least, until the 1980's when it suddenly jumped to 6.50.
+(The trend of the two-point moving averages since the 1930's appears to be directed upward.)
+Figure 2 displays the variation of the first differences (fd's) of the two-point moving averages.
+The first difference is computed as the next two-point moving average minus the present two-point moving average.
+For 16 of 23 decades (70 percent), the observed fd has been within one unit of the last available value of the two-point moving average.
+Hence, one approximates the next two-point moving average as being equal to the last available two-point moving average plus/minus one unit.
+Thus the decade of the 1990's should have a two-point moving average of 6.50 Ã¯Â¿Â½ 1.00, providing it is not a statistical outlier, implying that the actual rate of cataclysmic volcanic eruptions for the present decade (20002009) should be 7 Ã¯Â¿Â½ 4.
+Table 2 gives the observed decadal rate (r) of cataclysmic volcanic eruptions and the associated Poisson probability distribution for each of the groupings shown in figure 1.
+The Poisson distribution is quite useful for measuring the probability of occurrence in positively (rightward) skewed discrete distributions, where knowledge of the mean number of random events that occur within a given time interval is plainly known.23 One finds that at least two events per decade have been seen since 1750, using the combined data set.
+The probability of having no cataclysmic volcanic eruptions during the decade of 20002009 is computed to be only 0.7 percent, implying that the probability of having at least one event is 
+3 (a) Numbers 5 4 3 2 1 N(ETSH) 5, m = 0.20, sd = 0.41 (b) 10 9 8 7 6 5 4 3 2 1 Numbers N(T) 63, m = 2.52, sd = 2.00 (c) Numbers 5 4 3 2 1 N(ETNH) 55, m = 2.20, sd = 1.32 (d) 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 Numbers N(Combined) 123, m = 4.92, sd = 2.36 1750's 1800's 1850's 1900's Decades 1950's 2000's Figure 1.
+The number of occurrences per decade of cataclysmic volcanic eruptions (1750'sÃ¯Â¿Â½ 2000's).
+The decade marked 1800's includes one event that has no VEI value associated with it, but instead was identified on the basis of an ice core reading and tree ring density pattern--the 1809 "unknown" eruption.
+(Confirmed by Robock, private communication.)
+See text for details.
+4 Table 1.
+Volcanic eruptions having VEI 5 (17501993).* Year 1800 1815 1822 1835 1853 1854 1883 1886 1902 1907 1912 1932 1956 1980 1982 1991 1991 Volcano St. Helens Tambora Galunggung Cosiguina Chikurachki Sheveluch Krakatau Okataina (Tarawera) Santa Maria Ksudach Novarupta Azul, Cerro (Quzapu) Bezymianny St. Helens El ChichÃ¯Â¿Â½n Pinatubo Hudson, Cerro Latitude 46.2Ã¯Â¿Â½N 8.3Ã¯Â¿Â½S 7.3Ã¯Â¿Â½S 13.0Ã¯Â¿Â½N 50.3Ã¯Â¿Â½N 56.7Ã¯Â¿Â½N 6.1Ã¯Â¿Â½S 38.1Ã¯Â¿Â½S 14.8Ã¯Â¿Â½N 51.8Ã¯Â¿Â½N 58.3Ã¯Â¿Â½N 35.7Ã¯Â¿Â½S 56.0Ã¯Â¿Â½N 46.2Ã¯Â¿Â½N 17.4Ã¯Â¿Â½N 15.1Ã¯Â¿Â½N 45.9Ã¯Â¿Â½N VEI 5 7 5 5 5? 5 6 5 6? 5 6 5+ 5 5 5 6 5 *Taken from Simkin and Siebert1 fd (two-point ma) 3.00 0 3.00 1750's 1800's 1850's Decades 1900's 1950's 2000's Figure 2.
+The first difference of the two-point moving average, based on the combined data set.
+See text for details.
+From table 2, one finds that the actual observed range of cataclysmic eruptions per decade is 211.
+Presuming that the decadal rate (r) will be 7 Ã¯Â¿Â½ 4 for the decade of 20002009, from the Poisson probability distribution one computes the probability for such a rate to be 87 percent.
+Hence, one infers a very strong likelihood that several cataclysmic eruptions will be seen during this decade.
+Table 3 gives the observed decadal rate (r) of VEI events 5 and the associated Poisson probability distribution for the combined data set.
+The probability of occurrence of one of these largest of events within the next decade, with the associated large stratospheric-aerosol injections, is 49 percent.
+The probability of at least two such events is 15 percent, while the probability is 4 percent that at least three such events will occur.
+Although not shown, the probability of at least one VEI event 6 occurring within the next 10 yr is 18 percent and the probability of at least two such events occurring is 2 percent.
+It is only 0.1 percent for three or more such events occurring.
+5 Table 2.
+The distribution of the decadal rate (r) of cataclysmic volcanic eruptions (17501993) and the associated Poisson probability distribution for selected groupings of eruptions.
+N(ETSH) r 0 1 2 3 4 5 6 7 8 9 10 11 m Obs 20 5 0 0 0 0 0 0 0 0 0 0 P (r ) 0.8187 0.1637 0.0164 0.0011 0.0001 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.20 Obs 4 4 6 5 2 2 1 0 1 0 0 0 N(T) P (r ) 0.0805 0.2028 0.2555 0.2146 0.1352 0.0681 0.0286 0.0103 0.0032 0.0009 0.0002 0.0001 2.52 N(ETNH) Obs 3 5 6 6 5 0 0 0 0 0 0 0 P (r ) 0.1108 0.2438 0.2681 0.1966 0.1082 0.0476 0.0174 0.0055 0.0015 0.0004 0.0001 0.0000 2.20 N(Combined) Obs 0 0 5 3 3 4 5 2 1 1 0 1 P (r ) 0.0073 0.0359 0.0883 0.1449 0.1782 0.1754 0.1438 0.1011 0.0622 0.0340 0.0167 0.0075 4.92 Table 3.
+The distribution of the decadal rate (r) of VEI 5 eruptions and the associated Poisson probability distribution.
+N(Combined) r 0 1 2 3 4 5 6 m Obs 13 7 5 0 0 0 0 0.68 P (r ) 0.5066 0.3445 0.1171 0.0265 0.0045 0.0006 0.0001 6 3.
+DISCUSSION AND SUMMARY Since the 1880's, a prominent feature of long-term temperature studies has been the appearance of warming.2430 This warming is directly attributable to both natural climate variability and the increasing effects of human activity on climate.3134 Differentiating the relative proportion of each has been and continues to be both scientifically and politically important.35 Recently, Karl et al.36 have reported that during the interval of May 1997 to September 1998, each month broke the previous monthly all-time-record high temperature.
+In fact, researchers have found that the inferred average temperature in the 20th century is probably the warmest of the past five centuries.37 As previously noted, Hyde and Crowley22 have recently examined the statistical properties of a proxy record of climatically significant volcanic eruptions to determine the likelihood of future eruptions within the next 1015 yr.
+Furthermore, they noted that the occurrence of one or more major volcanic eruptions likely would confuse the debate regarding temperature trends and the effects of human activity on climate.
+Their results indicated that there is indeed a reasonably good chance that a major volcanic eruption will occur within the next 10 yr, one that might influence the evolution of the anthropogenic signal.
+Specifically, they determined that there is a 20-percent probability for a Pinatubo-scale eruption (VEI = 6) and a 25-percent chance for an El ChichÃ¯Â¿Â½n-scale eruption (VEI = 5), both archetypes known to have temporarily cooled the Earth's surface air temperatures
+.7,11,38 This complementary study, using actual counts of cataclysmic volcanic eruptions (i.e., those of VEI 4) over the past 250 yr, taken from Simkin and Siebert,1 and Poisson statistics, determined the probability distribution for such events.
+Over the past 25 decades, each has seen at least two cataclysmic volcanic eruptions, usually located in the tropics or extra-tropical Northern Hemisphere.
+On average, nearly five such eruptions per decade were seen, with the largest number having occurred in the 1910's (11 events).
+Many of these cataclysmic events are known to have produced short-term global cooling, as evinced from surface air temperature records and proxies (i.e., ice cores and tree rings).
+The actual proportion of cataclysmic events that have known associations with short-term global cooling arguably is 0.1 to nearly 1, depending upon the size, location, and time of year of the eruption.
+For the largest of events (VEI 5), there appears to be an 49 percent chance that at least one will occur within the next 10 yr and an 15 percent chance that at least two will occur.
+The usual behavior of the first difference of the two-point moving averages of the number of cataclysmic volcanic eruptions suggests that one should expect 7 Ã¯Â¿Â½ 4 during the present decade, having a probability of occurrence of 87 percent.
+The probability of at least one El ChichÃ¯Â¿Â½n-scale event (VEI = 5) is computed to be 47 percent (slightly higher than that found by Hyde and Crowley22), while it is 14 percent that at least two will occur and 3 percent that at least three will occur.
+The probability of at least one Pinatubo-scale event (VEI = 6) is computed to be 15 percent (slightly less than that found by Hyde and Crowley22), while there is an 1 percent chance that at least two will occur, and 
+The probability of at least one event where VEI is 6 is 18 percent.
+Therefore, as previously recognized by Hyde and Crowley22 on the basis of proxy volcanic data (sulfate measurements in the ice core record), it seems quite reasonable to expect at least one climatically significant volcanic eruption within the next 10 yr. 7 REFERENCES 1.
+Simkin, T.; and Siebert, L.: Volcanoes of the World, 2nd ed., Geoscience Press, Inc., Tucson, AZ, 1994.
+2.
+Franklin, B.: "Meteorological Imaginations and Conjectures," Memorial Library Philosophical Society, Manchester, Vol. 2, p. 357, 1784.
+(Reprinted in Weatherwise, Vol. 35, p. 262, 1982.)
+3.
+Lamb, H.H.: "Volcanic Dust in the Atmosphere, with a Chronology and Assessment of Its Meteorological Significance," Philosophical Transactions of the Royal Society of London Series A, Vol. 266, pp. 425533, 1970.
+4.
+Mitchell, J .
+M.: "El ChichÃ¯Â¿Â½n, We ather -Mak er of the Century?" We atherwise , Vol. 35, pp. 252259, 1982.
+5.
+Bradley, R.S.: "The Explosive Volcanic Eruption Signal in Northern Hemisphere Continental Temperature Records," Climatic Change, Vol. 12, pp. 221243, 1988.
+6.
+Mass, C.F.; and Portman, D.A.: "Major Volcanic Eruptions and Climate: A Critical Evaluation," Journal of Climate, Vol. 2, pp. 566593, 1989.
+7.
+Robock, A.; and Mao, J.: "The Volcanic Signal in Surface Temperature Observations," Journal of Climate, Vol. 8, pp. 10861103, 1995.
+8.
+Mao, J.; and Robock, A.: "Surface Air Temperature Simulations by AMIP General Circulation Models: Volcanic and ENSO Signals and Systematic Errors," Journal of Climate, Vol. 11, pp. 15381552, 1998.
+9.
+Wilson, R.M.: "Volcanism, Cold Temperature, and Paucity of Sunspot Observing Days (1818 1858): A Connection?" NASA/TP--1998208592, Marshall Space Flight Center, AL, 1998.
+10.
+Wilson, R.M.: "Variation of Surface Air Temperatures in Relation to El NiÃ¯Â¿Â½o and Cataclysmic Volcanic Eruptions, 17961882," Journal of Atmospheric and Solar Terrestrial Physics, Vol. 61, pp. 13071319, 1999.
+11.
+Robock, A.: "Volcanic Eruptions and Climate," Reviews of Geophysics, Vol. 38, pp. 191219, 2000.
+12.
+Hammer, C.U.; Clausen, H.B.; and Dansgaard, W.: "Greenland Ice Sheet Evidence of Post-Glacial Volcanism and Its Climatic Impact," Nature, Vol. 288, pp. 230235, 1980.
+9 13.
+Zielinski, G.A.; Mayewski, P.A.; Meeker, L.D.; et al.: "Record of Volcanism Since 7000 B.C.
+From GISP2 Gr eenland Ice Core and Implications for the Volcano-Climate System," Science, Vol. 264, pp. 948952, 1994.
+14.
+Robock, A.; and Free, M.P.: "Ice Cores as an Index of Global Volcanism From 1850 to the Present," Journal of Geophysical Research, Vol. 100, pp. 11,549Ã¯Â¿Â½ 11,567, 1995.
+15.
+Briffa, K.R.; Jones, P.D.; and Schweingruber, F.H.: "Summer Temperatures Across Northern North America: Regional Reconstructions From 1760 Using Tree-Ring Densities," Journal of Geophysical Research, Vol. 99, pp. 25,83525,844, 1994.
+16.
+Briffa, K.R.; Jones, P.D.; Schweingruber, F.H.; et al.: "Influence of Volcanic Eruptions on Northern Hemisphere Summer Temper ature Ov er the P ast 600 Years," Na ture , Vol. 393, pp. 450455, 1998.
+17.
+Jones, P.D.; Briffa, K.R.; and Schweingruber, F.H.: "Tree Ring Evidence of the Widespread Effects of Explosive Volcanic Eruptions," Geophysical Research Letters, Vol. 22, pp. 13331336, 1995.
+18.
+Toon, O.B.; and Pollack, J.B.: "Atmospheric Aerosols and Climate," American Scientist, Vol. 68, pp. 268278, 1980.
+19.
+Rampino, M.R.; and Self, S.: "Sulfur-Rich Volcanic Eruptions and Stratospheric Aerosols," Nature, Vol. 210, pp. 677679, 1984.
+20.
+Coffey, M.T.: "Observations of the Impact of Volcanic Activity on Stratospheric Chemistry," Journal of Geophysical Research, Vol. 101, pp. 67676780, 1996.
+21.
+Sato, M.; Hansen, J.E.; McCormick, M.P.; et al.: "Stratospheric Aerosol Optical Depths, 1850 1990," Journal of Geophysical Research, Vol. 98, pp. 22,98722,994, 1993.
+22.
+Hyde, W.T.; and Crowley, T.J.: "Probability of Future Climatically Significant Volcanic Eruptions," Journal of Climate, Vol. 13, pp. 14451450, 2000.
+23.
+McElroy, E.E.: Applied Business Statistics, 2nd ed., Holden-Day, Inc., San Francisco, CA, pp. 174176, 1979.
+24.
+Hansen, J.; and Lebedeff, S.: "Global Trends of Measured Surface Temperature," Journal of Geophysical Research, Vol. 92, pp. 13,34513,372, 1987.
+25.
+Hansen, J.; and Lebedeff, S.: "Global Surface Temperatures: Update Through 1987," Geophysical Research Letters, Vol. 15, pp. 323326, 1988.
+26.
+Jones, P.D.: "Hemispheric Surface Air Temperature Variations: Recent Trends and an Update to 1987," Journal of Climate, Vol. 1, pp. 654660, 1988.
+10 27.
+Jones, P.D.: "Hemispheric Surface Air Temperature Variations: A Reanalysis and an Update to 1993," Journal of Climate, Vol. 7, pp. 17941802, 1994.
+28.
+Parker, D.E.; Jones, P.D.; Folland, C.K.; et al.: "Interdecadal Changes of Surface Temperature Since the Late Nineteenth Century," Journal of Geophysical Research, Vol. 99, pp. 14,37314,399, 1994.
+29.
+Butler, C.J.; and Johnston, D.J.: "A Provisional Long Mean Air Temperature Series for Armagh Observatory," Journal of Atmospheric and Solar-Terrestrial Physics, Vol. 58, pp. 16571672, 1996.
+30.
+Wilson, R.M.: "Evidence for Solar-Cycle Forcing and Secular Variation in the Armagh Observatory Temperature Record (18441992)," J ournal of Geoph ysical Resear c h , Vol. 103, pp. 11,15911,171, 1998.
+31.
+Mann, M.E.; Bradley, R.S.; and Hughes, M.: "Global-Scale Temperature Patterns and Climate Forcing Over the Past Six Centuries," Nature, Vol. 392, pp. 779787, 1998.
+32.
+Rowntree, P.R.: "Global Average Climate Forcing and Temperature Response Since 1750," International Journal of Climatology, Vol. 18, pp. 355377, 1998.
+33.
+Crowley, T.J.; and Kim, K.-Y.: "Modeling the Temperature Response to Forced Climate Change Over the Last Six Centuries," Geophysical Research Letters, Vol. 26, pp. 19011904, 1999.
+34.
+Parker, D.E.; Horton, E.B.; and Alexander, L.V.: "Global and Regional Climate in 1999," Weather, Vol. 55, pp. 188199, 2000.
+35.
+Showstack, R.: "Update on U.S. Carbon Cycle Science Initiative," Eos, Transactions, American Geophysical Union, Vol. 81, p. 289, 2000.
+36.
+Karl, T.R.; Knight, R.W.; and Baker, B.: "The Record Breaking Global Temperatures of 1997 and 1998: Evidence for an Increase in the Rate of Global Warming?" Geophysical Research Letters, Vol. 27, pp. 719722, 2000.
+37.
+Pollack, H.N.; Huang, S.; and Shen, P.-Y.: "Climate Change Record in Subsurface Temperatures: A Global Perspective," Science, Vol. 282, pp. 279281, 1998.
+38.
+Hansen, J.; Ruedy, R.; Sato, M.; et al.: "Global Surface Air Temperature in 1995: Return to PrePinatubo Level," Geophysical Research Letters, Vol. 23, pp. 16651668, 1996.
+11 REPORT DOCUMENTATION PAGE Form Approved OMB No. 0704-0188 Public reporting burden for this collection of information is estimated to average 1 hour per response, including the time for reviewing instructions, searching existing data sources, gathering and maintaining the data needed, and completing and reviewing the collection of information.
+Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to Washington Headquarters Services, Directorate for Information Operation and Reports, 1215 Jefferson Davis Highway, Suite 1204, Arlington, VA 22202-4302, and to the Office of Management and Budget, Paperwork Reduction Project (0704-0188), Washington, DC 20503 1.
+AGENCY USE ONLY (Leave Blank) 2.
+REPORT DATE 3.
+REPORT TYPE AND DATES COVERED June 2001 4.
+TITLE AND SUBTITLE Technical Publication 5.
+FUNDING NUMBERS An Estimate of the Likelihood of Significant Eruptions During 20002009 Using Poisson Statistics on Two-Point Moving Averages of the Volcanic Time Series 6.
+AUTHORS Robert M. Wilson 7.
+PERFORMING ORGANIZATION NAMES(S) AND ADDRESS(ES) George C. Marshall Space Flight Center Marshall Space Flight Center, AL 35812 8.
+PERFORMING ORGANIZATION REPORT NUMBER M1021 10.
+SPONSORING/MONITORING AGENCY REPORT NUMBER 9.
+SPONSORING/MONITORING AGENCY NAME(S) AND ADDRESS(ES) National Aeronautics and Space Administration Washington, DC 205460001 11.
+SUPPLEMENTARY NOTES NASA/TP--2001211115 Prepared by Space Science Department, Science Directorate 12a.
+DISTRIBUTION/AVAILABILITY STATEMENT 12b.
+DISTRIBUTION CODE Unclassified-Unlimited Subject Category 47 Standard Distribution 13.
+ABSTRACT (Maximum 200 words) Since 1750, the number of cataclysmic volcanic eruptions (volcanic explosivity index (VEI) 4) per decade spans 211, with 96 percent located in the tropics and extra-tropical Northern Hemisphere.
+A two-point moving average of the volcanic time series has higher values since the 1860's than before, being 8.00 in the 1910's (the highest value) and 6.50 in the 1980's, the highest since the 1910's peak.
+Because of the usual behavior of the first difference of the twopoint moving averages, one infers that its value for the 1990's will measure 6.50 Ã¯Â¿Â½ 1, implying that 7 Ã¯Â¿Â½ 4 cataclysmic volcanic eruptions should be expected during the present decade (20002009).
+Because cataclysmic volcanic eruptions (especially those having VEI 5) nearly always have been associated with short-term episodes of global cooling, the occurrence of even one might confuse our ability to assess the effects of global warming.
+Poisson probability distributions reveal that the probability of one or more events with a VEI 4 within the next 10 yr is 
+It is 49 percent for an event with a VEI 5, and 18 percent for an event with a VEI 6.
+Hence, the likelihood that a climatically significant volcanic eruption will occur within the next 10 yr appears reasonably high.
+14.
+SUBJECT TERMS 15.
+NUMBER OF PAGES climate, climatic change, global warming, volcanic eruptions 17.
+SECURITY CLASSIFICATION OF REPORT 18.
+SECURITY CLASSIFICATION OF THIS PAGE 19.
+SECURITY CLASSIFICATION OF ABSTRACT 20 16.
+PRICE CODE 20.
+LIMITATION OF ABSTRACT Unclassified NSN 7540-01-280-5500 Unclassified Unclassified Unlimited Standard Form 298 (Rev. 2-89) Prescribed by ANSI Std. 239-18 298-102 12

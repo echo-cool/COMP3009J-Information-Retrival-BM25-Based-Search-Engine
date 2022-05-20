@@ -1,0 +1,10 @@
+Quantitative Biology, abstract q-bio.QM/0311009 From: Lior Pachter 
+The graphical models that have been applied towards these problems include homogeneous hidden Markov models (HMMs) for annotation, tree models for phylogenetics, and pair (or multi) hidden Markov models for alignment.
+A single algorithm, the sum-product algorithm, solves many of the inference problems associated with different models.
+This paper presents a unified mathematical framework for the underlying statistical models, building on the observation that graphical models are algebraic varieties.
+From this geometric viewpoint, specific sequences generated from a model are coordinates of a point in the variety, and the sum-product algorithm is an efficient tool for evaluating specific coordinates.
+The question addressed here is how the solution to various inference problems depends on the model parameters.
+The proposed answer is expressed in terms of tropical algebraic geometry.
+Full-text: PostScript, PDF, or Other formats
+References and citations for this submission: CiteBase (autonomous citation navigation and analysis) _________________________________________________
+Links to: arXiv, q-bio, /find, /abs (-/+), /0311, ? form interface _________________________________________________

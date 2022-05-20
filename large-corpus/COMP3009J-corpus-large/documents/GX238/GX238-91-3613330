@@ -1,0 +1,510 @@
+************************************************************************** NASA-16286 (March 2003) NATIONAL AERONAUTICS NASA AND SPACE ADMINISTRATION Superseding NASA-16286 (March 2001) ************************************************************************** SECTION TABLE OF CONTENTS DIVISION 16 - ELECTRICAL SECTION 16286 OVERCURRENT PROTECTIVE DEVICES 03/03 PART 1 1.1 1.2 1.3 PART 2 GENERAL REFERENCES SUBMITTALS GENERAL REQUIREMENTS PRODUCTS 2.1 MOTOR CONTROL 2.1.1 Manual Motor Controllers 2.1.2 Magnetic Motor Controllers 2.1.2.1 Full-Voltage Controllers 2.1.2.2 Reduced-Voltage Starters 2.1.3 Combination Motor Controllers 2.1.3.1 Nonreversing Combination Motor Controllers 2.1.3.2 Reversing Combination Motor Controllers 2.1.3.3 Two-Speed Combination Motor Controllers 2.1.4 High-Voltage Motor Controllers 2.2 INSTRUMENT TRANSFORMERS 2.2.1 Current Transformers 2.2.2 Potential Transformers 2.3 ENCLOSURES 2.3.1 Equipment Enclosures 2.3.2 Remote-Control Station Enclosures 2.4 CIRCUIT BREAKERS 2.4.1 Molded-Case Circuit Breakers 2.4.2 Enclosed Molded-Case Circuit Breakers 2.4.3 Power Circuit Breakers 2.4.4 Air Circuit Breakers 2.4.4.1 Stored-Energy-Operated Type 2.4.4.2 Solenoid-Operated Type 2.4.5 Oil Circuit Breakers 2.5 FUSES 2.6 CONTROL DEVICES 2.6.1 Magnetic Contactors SECTION 16286 Page 1 2.6.2 Control-Circuit Transformers 2.6.3 Magnetic Control Relays 2.6.4 Pushbuttons and Switches 2.6.4.1 Pushbuttons 2.6.4.2 Selector Switches 2.6.4.3 Ammeter Selector Switches 2.6.4.4 Voltmeter Selector Switches 2.6.4.5 Miscellaneous Switches 2.7 TIME SWITCHES 2.8 PROTECTIVE RELAYS 2.8.1 Overcurrent Relays 2.8.2 Directional Overcurrent Relays 2.8.3 Reclosing Relays 2.8.4 Undervoltage Relays 2.9 INDICATING INSTRUMENTS 2.9.1 Ammeters 2.9.2 Voltmeters 2.9.3 watt-Hour Meters/wattmeters 2.9.4 Graphic Demand Meters 2.9.5 Specialty-Type Meters 2.10 FACTORY TESTING 2.11 INDICATING LIGHTS 2.11.1 General-Purpose Type 2.11.2 Switchboard Indicating Lights 2.12 FINISH PART 3 3.1 3.2 EXECUTION INSTALLATION FIELD TESTING -- End of Section Table of Contents -- SECTION 16286 Page 2 ************************************************************************** NASA-16286 (March 2003) NATIONAL AERONAUTICS NASA AND SPACE ADMINISTRATION Superseding NASA-16286 (March 2001) ************************************************************************** SECTION 16286 OVERCURRENT PROTECTIVE DEVICES 03/03 ************************************************************************** NOTE: Delete, revise, or add to the text in this section to cover project requirements.
+Notes are for designer information and will not appear in the final project specification.
+This section covers circuit breakers, fuses, motor controls, and control devices.
+This section supports Sections 16145, "Standard Wiring Systems," 16446, "Panelboards," 16345, "Motor Control," and 16445, "Switchgear Assemblies;" accordingly, it should be included to the extent applicable to project requirements.
+Drawings should show frame and trip ratings, interrupting ratings, and NEMA types and sizes, as well as single-line and schematic diagrams, elevations, and details.
+************************************************************************** PART 1 1.1 GENERAL REFERENCES
+************************************************************************** NOTE: The following references should not be manually edited except to add new references.
+References not used in the text will automatically be deleted from this section of the project specification.
+************************************************************************** The publications listed below form a part of this section to the extent referenced: AMERICAN NATIONAL STANDARDS INSTITUTE (ANSI) ANSI C37.09 (1979) IEEE Standard Test Procedure for AC High-Voltage Circuit Breakers Rated on Symmetrical Current Basis.
+(1989) Standard for Switchgear-Unit Substation-Requirements SECTION 16286 Page 3
+ANSI C37.121
+ANSI C37.16
+(1988) Switchgear - Low-Voltage Power Circuit Breakers and AC Power Circuit Protectors - Preferred Ratings, Related Requirements, and Application Recommendations (1979; R 1988) Trip Devices for AC and General-Purpose DC Low-Voltage Power Circuit Breakers (1981; R 1992) Electrical Analog Indicating Instruments (1987) Standard for Instrumentation Electromagnetic Noise and Field Strength, 10 kHz to 40 GHz - Specifications (1992) Methods Noise Emissions Electrical and Range of 9 kHz of Measurement of Radio from Low-Voltage Electronic Equipment in the to 40 GHz
+ANSI C37.17
+ANSI C39.1 ANSI C63.2
+ANSI C63.4
+ANSI C78.23
+(1989) Electric Lamps - Incandescent Lamps-Miscellaneous Types
+ASTM INTERNATIONAL (ASTM) ASTM A 167 (1999) Standard Specification for Stainless and Heat-Resisting Chromium-Nickel Steel Plate, Sheet, and Strip (1994; Rev A) Standard Specification for Gray Iron Castings (2000) Standard Specification for Mineral Insulating Oil Used in Electrical Apparatus (2000) Standard Test Method for Dielectric Breakdown Voltage of Insulating Liquids Using Disk Electrodes
+ASTM A 48 ASTM D 3487 ASTM D 877
+ELECTRONIC INDUSTRIES ALLIANCE (EIA) EIA 443 (1985) Solid State Relays, EIA/NARM, Standard for INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS (IEEE) IEEE C12.1 IEEE C37.13 (1988; 8th Ed) Code for Electricity Metering (1990) Low-Voltage AC Power Circuit SECTION 16286 Page 4
+Breakers Used in Enclosures IEEE C37.90 (1994) Standard for Relays and Relay Systems Associated With Electric Power Apparatus (1993) Standard Requirements for Instrument Transformers
+IEEE C57.13
+IPI - ASSOCIATION CONNECTING ELECTRONICS INDUSTRIES (IPC) IPC D330 (1973) Switches JOINT INDUSTRIAL COUNCIL (JIC) JIC-01 (1967) Electrical Standards for Mass Production Equipment NATIONAL ELECTRICAL MANUFACTURERS ASSOCIATION (NEMA) NEMA 107 (1987; R 1993) Methods of Measurement of Radio Influence Voltage (RIV) of High-Voltage Apparatus (1991) Enclosures for Electric Equipment (1000 Volts Maximum) (1994) Molded Case Circuit Breakers and Molded Case Switches (1993) Molded Case Circuit Breakers and Their Application (1986) Low Voltage Cartridge Fuses (1993) General Standards for Industrial Control and Systems (1993) Industrial Control Devices and Assemblies (1993) Industrial Control and Systems Factory Built Assemblies (1993) Enclosures for Industrial Control and Systems (1993) High-Voltage Fuses (1995) Power Switchgear Assemblies
+NEMA 250 NEMA AB 1 NEMA AB 3 NEMA FU 1 NEMA ICS 1 NEMA ICS 2 NEMA ICS 3 NEMA ICS 6 NEMA SG 2 NEMA SG 5
+NATIONAL FIRE PROTECTION ASSOCIATION (NFPA) NFPA 70 (2002) National Electrical Code SECTION 16286 Page 5
+UNDERWRITERS LABORATORIES (UL) UL 20 UL 489 (1995) UL Standard for Safety General-Use Snap Switches (1991; 8th Ed; May 1, 1992; Bulletin Feb 11, 1992; Bulletin Mar 16, 1992) UL Standard for Safety Molded-Case Circuit Breakers and Circuit-Breaker Enclosures (1995; 11th Ed) UL Standard for Safety Enclosures for Electrical Equipment (1993; 16th Ed) UL Standard for Safety Industrial Control Equipment
+UL 50 UL 508 1.2 SUBMITTALS
+************************************************************************** NOTE: Review submittal description (SD) definitions in Section 01330, "Submittals," and edit the following list to reflect only the submittals required for the project.
+Submittals should be kept to the minimum required for adequate quality control.
+Include a columnar list of appropriate products and tests beneath each submittal description.
+************************************************************************** The following shall be submitted in accordance with Section 01330, "Submittals," in sufficient detail to show full compliance with the specification: SD-01 Preconstruction Submittals No change in continuous-current rating, interrupting rating, and clearing or melting time of fuses shall be made unless written permission has first been secured from the Contracting Officer.
+SD-02 Shop Drawings Connection Diagrams and Fabrication Drawings shall be submitted for the following items in accordance with paragraph entitled, "General Requirements," of this section.
+Installation drawings shall also be submitted for the following items in accordance with the paragraph entitled, "Installation," of this section.
+Control Devices Protective Devices
+SECTION 16286
+Page 6
+SD-03 Product Data Equipment and performance data shall be submitted for the following items including use life, system functional flows, safety features, and mechanical automated details.
+Manufacturer's catalog data shall also be submitted for the following items: Motor Control Instrument Transformers Enclosures Circuit Breakers Fuses Control Devices Time Switches Protective Relays Indicating Instruments Indicating Lights SD-06 Test Reports Factory Test Reports shall be submitted for Power, High Voltage, and Oil Circuit Breakers in accordance with ANSI C37.09.
+Dielectric Tests Timing Test Insulation Power Factor Test SD-07 Certificates Certificates shall be submitted for Circuit Tests on similar motor-control or motor-circuit protector (MCP) units under actual conditions may be submitted in lieu of factory tests on the actual units provided.
+SD-08 Manufacturer's Instructions Manufacturer's Instructions shall be submitted for the following items, including special provisions required to install equipment components and system packages.
+Special notices shall detail, resistance impedances, hazards and safety precautions.
+Control Devices Protective Devices SD-10 Operation and Maintenance Data Operation and Maintenance Manuals shall be submitted for the following equipment: Manual Motor Controllers SECTION 16286 Page 7
+Magnetic Motor Controllers Combination Motor Controllers High Voltage Motor Controllers Circuit Breakers Time Switches Protective Relays Indicating Instruments 1.3 GENERAL REQUIREMENTS
+************************************************************************** NOTE: If Section 16003, "General Electrical Provisions," is not included in the project specification, applicable requirements therefrom should be inserted and the following paragraph deleted.
+************************************************************************** Section 16003, "General Electrical Provisions," applies to work specified in this section.
+Connection Diagrams shall be submitted showing the relations and connections of control devices and protective devices by showing the general physical layout of all controls, the interconnection of one system (or portion of system) with another, and internal tubing, wiring, and other devices.
+Fabrication Drawings shall be submitted for control devices and protective devices consisting of fabrication and assembly details to be performed in the factory.
+PART 2 2.1 PRODUCTS MOTOR CONTROL
+Motor controllers shall conform to NEMA ICS 1, NEMA ICS 2, and UL 508.
+Controllers shall have thermal overload protection in each phase.
+2.1.1 Manual Motor Controllers
+Manual motor controllers for the control and protection of single-phase 60-hertz ac fractional-horsepower small wattage rating squirrel-cage induction motors shall be full-voltage, manually operated devices.
+Controllers shall be single-throw, single- or double-pole, three-position devices rated not more than 1 horsepower 750 watt rated at 115- and 230-volts single phase.
+Controller shall include a supporting base or body of electrical insulating material with enclosed switching mechanism, yoke, thermal overload relay, and terminal connectors.
+Controllers shall clearly indicate operating condition: on, off, or tripped.
+Manual motor controllers shall be the toggle- or key-operated type as indicated and shall be arranged so that they may be locked with a padlock in the "OFF" position.
+SECTION 16286 Page 8
+Recessed manual motor controllers for single-speed, fractional-horsepower small wattage rating squirrel-cage induction motors shall include a single controller and indicating light in a 4-inch 100 millimeter square wall outlet box for flush-wiring devices with matching corrosion-resistant steel flush cover plate.
+Surface-mounted manual motor controllers for single-speed, fractional-horsepower small wattage rating squirrel cage induction motors shall include a single controller and indicating light in a NEMA 250, Type [1] [_____]
+Recessed and surface-mounted manual motor controllers for two-speed, fractional-horsepower small wattage rating squirrel-cage induction motors shall include two controllers, two indicating lights, and a selector switch in a multiple-gang wall outlet box for flush-wiring devices with matching corrosion-resistant steel flush-cover plate.
+Surface-mounted manual motor controllers for two-speed fractional-horsepower small wattage rating squirrel-cage induction motors shall include two controllers, two indicating lights, and a selector switch in a NEMA 250, Type [1] [_____]
+2.1.2 2.1.2.1 Magnetic Motor Controllers Full-Voltage Controllers
+Magnetic motor controllers for the control and protection of single- and three-phase, 60-hertz, squirrel-cage induction motors shall be full-voltage, full magnetic devices in accordance with NEMA ICS 1, NEMA ICS 2, and UL 508.
+Operating coil assembly shall operate satisfactorily between 85 and 110 percent of rated coil voltage.
+Motor control circuits shall be 120 volts, 60 hertz.
+Controller shall be provided with two normally open and two normally closed auxiliary contacts rated per NEMA ICS 1 and NEMA ICS 2 in addition to the sealing-in contact for control circuits.
+Solderless pressure wire terminal connectors shall be provided for line-and load-connections to controllers.
+Overcurrent protection shall include three manual reset thermal overload devices, one in each pole of the controller.
+Thermal overload relays shall be [melting-alloy] [bimetallic nonadjustable]
+An externally operable manual-reset button shall be provided to re-establish control power to the holding coil of the electromagnet.
+After the controller has tripped from overload, resetting the motor-overload device shall not restart the motor.
+Enclosure shall be in accordance with NEMA 250, Type [_____].
+SECTION 16286
+Page 9
+2.1.2.2
+Reduced-Voltage Starters
+Reduced-voltage starters shall conform to the requirements for full-voltage controllers, except for voltage, and to the following additional requirements.
+Overload devices, one in each motor leg, shall fully protect the motor during all phases of motor starting.
+Starter contacts shall be rated to withstand the switching surges during selector to full voltage.
+Starter shall contain the necessary sensing and timing devices to monitor motor operation and select the correct time for selector to full voltage.
+Resistors and autotransformers used for starting shall be adequately ventilated.
+Solid-state starters shall be ventilated for starting cycles as well as any follow-on restart-run cycles.
+External control circuits or solid-state starters shall operate at 120 volts ac, maximum.
+For solid-state starters, starting torque shall be adjustable from 0 to 50 percent of applied voltage, minimum.
+Autotransformer starters shall have a minimum of three taps above 50 percent reduced voltage.
+2.1.3 Combination Motor Controllers
+Following requirements are in addition to the requirements specified for magnetic motor controller: Combination motor controllers for the control and protection of single-and three-phase 60-hertz alternating-current squirrel-cage induction motors with branch-circuit disconnecting and protective devices shall be in accordance with NEMA ICS 1, NEMA ICS 2, and JIC-01.
+Combination motor controllers shall include magnetic motor controllers and molded-case circuit breakers or MCP in metal enclosures in accordance with NEMA 250 or motor-control center draw-out assemblies with control-power transformers, selector switches, pushbuttons, and indicating lights as follows: Magnetic motor controllers and enclosures shall be full-voltage, full-magnetic devices as specified in this section under paragraph entitled, "Remote-Control Station Enclosures."
+Molded-case circuit breakers shall be thermal-magnetic breakers as specified in paragraph entitled, "Manual Motor Controllers."
+Manufacturer's standard MCP may be used in lieu of molded-case circuit breakers.
+Control-power transformers 120-volt ac maximum selector switches, pushbuttons, and pilot lights shall be as required.
+Combination motor controllers shall be identified with identification plates affixed to front cover of the controller.
+SECTION 16286
+Page 10
+2.1.3.1
+Nonreversing Combination Motor Controllers
+************************************************************************** NOTE: Nonreversing, reversing, and two-speed combination motor controllers should be selected from the following paragraphs to suit the project requirements.
+************************************************************************** Following requirements are in addition to the requirements for magnetic motor controllers: Nonreversing combination motor controllers for the control and protection of single-speed squirrel-cage induction motors shall include a magnetic controller with molded-case circuit breaker or MCP with selector switch or start/stop pushbutton and indicating light in the cover of the enclosure.
+Rating of [single] [and]
+Wiring and connections for full-voltage single-speed magnetic controllers shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+2.1.3.2 Reversing Combination Motor Controllers
+Following requirements are in addition to the requirements for magnetic motor controllers: Reversing combination motor controllers for the control and protection of single-speed squirrel-cage induction motors shall include two interlocked magnetic controllers with molded-case circuit breaker or MCP, with selector switch or forward/reverse/stop pushbutton and two indicating lights in the cover of the enclosure.
+Indicating lights shall indicate the forward and reverse running connection of the motor controller.
+Rating of [single] [and]
+Wiring and connections for full-voltage single-speed magnetic controllers shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+2.1.3.3 Two-Speed Combination Motor Controllers
+Following requirements are in addition to the requirements for magnetic motor controllers: Two-speed combination motor controllers for the control and protection of single- and two-winding, two-speed, three-phase, squirrel-cage induction motors shall include two magnetic controllers with molded-case circuit breaker or MCP, with selector switch or fast/slow/stop pushbutton and two indicating lights in the cover of the SECTION 16286 Page 11
+enclosure.
+Indicating lights shall indicate the high- and low-speed running connection of the motor controller.
+Rating of three-phase, two-speed, full-voltage, magnetic controllers for nonplugging and nonjogging duty for constant- and variable-torque motors shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+Rating of three-phase, two-speed, full-voltage, magnetic controllers for nonplugging and nonjogging duty for constant-horsepower motors motors shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+Rating of three-phase, two-speed, full-voltage, magnetic controllers for plug-stop, plug-reverse, or jogging duty for constant-torque, variable-torque, and constant horsepower wattage motors shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+2.1.4 High-Voltage Motor Controllers
+High-voltage motor controllers for the control and protection of squirrel-cage induction motors, wound-rotor induction motors, and synchronous machines rated 2.4 through 7.2 kilovolts, three-phase, shall be NEMA ICS 2, Class E2, type as required.
+Unless enclosed within a switchgear or unit-substation cubicle, high-voltage motor controllers shall be housed in floor-mounted structures of the NEMA type indicated, approximately 90 inches 2300 millimeter high, 30 inches 750 millimeter wide, and 30 inches 750 millimeter deep, with suitable draw-out compartments.
+Structure shall include provisions for padlocking the doors.
+Structure shall be subdivided into low-voltage control compartment with separate door, high-voltage control compartment with separate door, ac bus compartment, and cable-entrance compartment.
+Controller shall be isolated by externally operated draw-out stabs with shutter mechanism.
+Isolating device shall also open the secondary of the control-power transformer.
+Interlocks shall be provided to prevent inadvertent operation of the isolating mechanism under load, opening the medium-voltage compartment door without isolating the starter, and closing the line contactor with door open.
+An isolating switch assembly shall be included.
+For overload protection, ambient-compensated thermal overload relays, hand reset, shall be included in all three phases.
+Solid-state multifunction overload protection may be utilized when approved.
+Controllers shall be the fused type employing current-limiting power fuses of the interrupting rating indicated.
+Single-phase antitrip protection shall be provided.
+Starters shall employ magnetic air-break line contactors rated not less than 5 kilovolts.
+Control circuit shall have provisions for external testing of 120-volt control circuit and a minimum of one set of normally open and normally closed auxiliary contacts.
+SECTION 16286
+Page 12
+2.2
+INSTRUMENT TRANSFORMERS
+Instrument transformers shall comply with the interference requirements listed below, measured in accordance with ANSI C63.2, ANSI C63.4, and NEMA 107.
+Preferred Radio Influence Basic Nominal Test Voltage Test Voltage Voltage Level, Insulation Insulation System for Potential for Current Microvolts Class, Level, Voltage, Transformers, Transformers, Dry Oil kV kV kV kV kV Type Filled __________________________________________________________________________ 0.6 10 ........
+............
+0.76 250 250 1.2 30 0.208 0.416 0.832 1.04 2.40 4.16 4.80 7.20 8.32 12.00 12.47 14.40 23.00 34.50 46.00 69.00 92.00 115.00 138.00 0.132 0.264 0.528 0.66 1.52 2.64 3.04 4.57 5.28 7.62 7.92 9.14 14.60 21.90 29.20 43.80 58.40 73.40 88.00 0.76 250 250
+2.5 5.0 8.7 15L or 15H
+45 60 75 95-110
+1.67 3.34 5.77 9.41
+250 250 250 1000
+250 250 250 250
+25 34.5 46 69 92 115 138 2.2.1
+150 200 250 350 450 550 650
+15.70 23.0 29.30 44.00 58.40 73.40 88.00
+2500 ....
+....
+....
+....
+....
+....
+650 650 1250 1250 2500 2500 2500
+Current Transformers
+Current transformers shall conform to IEEE C57.13 for installation in metal-clad switchgear.
+Standard 3-A secondary transformer shall be used.
+Transformers shall be [wound] [bushing]
+Transformers shall have [single] [double]
+SECTION 16286
+Page 13
+Transformers shall be complete with secondary short-circuiting device.
+Window-type current transformers shall be indoor dry type construction with secondary current ratings as indicated.
+Burden, frequency, and accuracy shall be as specified.
+2.2.2 Potential Transformers
+Potential transformers shall conform to IEEE C57.13 for installation in metal-clad switchgear.
+Standard 120-volt secondary transformers shall be used.
+Transformers shall have [single] [tapped]
+Burden, frequency, and accuracy shall be as required.
+Disconnecting potential transformers with integral fuse mountings and current-limiting fuses shall be indoor dry type two-winding construction with primary and secondary voltage ratings as required.
+2.3 2.3.1 ENCLOSURES Equipment Enclosures
+Enclosures for equipment shall be in accordance with NEMA 250.
+[Equipment installed inside, clean, dry locations shall be contained in NEMA Type 1, general-purpose sheet-steel enclosures.]
+[Equipment installed in wet locations shall be contained in NEMA Type 4 watertight, corrosion-resistant sheet-steel enclosures, constructed to prevent entrance of water when tested in accordance with NEMA ICS 6 for Type 4 enclosures.]
+[Equipment installed in industrial locations shall be contained in NEMA Type 12 industrial use, sheet-steel enclosures constructed to prevent the entrance of dust, lint, fibers, flyings, oil, and coolant seepage.]
+[Equipment installed in Class I, Division I, Group A, B, C, and D, hazardous locations shall be contained in NEMA Type 7 enclosures approved for the specific flammable gas or vapor which is or may be present under normal operating conditions.]
+[Equipment installed in Class II, Division I, Group E, F and G, hazardous locations shall be contained in NEMA Type 9 enclosures approved for use where combustible dust is or may be present under normal operating conditions.]
+[Sheet-steel enclosures shall be fabricated from uncoated carbon-steel sheets of commercial quality, with box dimensions and thickness of sheet steel in accordance with UL 50.]
+[Steel enclosures shall be fabricated from corrosion-resistant, chromium-nickel steel sheet conforming to ASTM A 167 Type 300 series with SECTION 16286 Page 14
+ASM No. 4 general-purpose polished finish.
+Box dimensions and thickness of sheet steel shall be in accordance with UL 50.]
+[Cast-iron enclosures shall be gray-iron castings conforming to ASTM A 48 with tensile-strength classification recognized as suitable for the application.
+Cast-metal enclosures shall be not less than 1/8-inch 3 millimeter thick at every point, of greater thickness at reinforcing ribs and door edges, and not less than 1/4-inch 6 millimeter thick at tapped holes for conduits.]
+2.3.2
+Remote-Control Station Enclosures
+Remote-control station enclosures for pushbuttons, selector switches, and indicating lights shall be in accordance with the appropriate articles of NEMA ICS 6 and NEMA 250.
+[Remote-control stations installed in indoor, clean, dry locations shall be contained in NEMA Type 1 general-purpose, sheet-steel enclosures.
+Recessed remote-control stations shall be contained in standard wall outlet boxes with matching corrosion-resistant steel flush cover plate.]
+[Remote-control stations installed in wet locations shall be contained in NEMA Type 4 watertight, corrosion-resistant sheet-steel enclosures constructed to prevent entrance of water when tested in accordance with NEMA ICS 6 and NEMA 250 for Type 4 enclosures.]
+[Remote-control stations installed in wet locations shall be contained in NEMA Type 4 watertight, cast-iron enclosures constructed to prevent entrance of water when tested in accordance with NEMA ICS 6 and NEMA 250 for Type 4 enclosures.]
+[Remote-control stations installed in dry noncombustible dust-laden atmospheres shall be contained in NEMA Type 12 dusttight, cast-iron enclosures with gaskets or their equivalent to prevent the entrance of dust.]
+[Remote-control stations installed in industrial locations shall be contained in NEMA Type 12 industrial-use, sheet-steel enclosures constructed to prevent the entrance of dust, lint, fibers, flyings, oil, and coolant seepage.]
+[Remote-control stations installed in industrial locations shall be contained in NEMA Type 12 industrial-use, cast-iron enclosures constructed to prevent the entrance of dust, lint, fibers, flyings, oil, and coolant seepage.]
+[Remote-control stations installed in Class I, Division I, Group A, B, C, and D, hazardous locations shall be contained in NEMA Type 7 enclosures approved for the specific flammable gas or vapor which is or may be present under normal operating conditions.]
+[Remote-control stations installed in Class II, Division I, Group E, F and SECTION 16286 Page 15
+G, hazardous locations shall be contained in NEMA Type 9 enclosures approved for use where combustible dust is or may be present under normal operating conditions.]
+[Sheet-steel enclosures shall be fabricated from uncoated carbon-steel sheets of commercial quality with box dimensions and thickness of sheet steel in accordance with UL 50.]
+[Steel enclosures shall be fabricated from corrosion-resistant, chromium-nickel steel sheet conforming to ASTM A 167, Type 300 series with ASM No. 4 general-purpose polished finish.
+Box dimensions and thickness of sheet steel shall be in accordance with UL 50.]
+[Cast-iron enclosures shall be gray-iron castings conforming to ASTM A 48 ASTM A 48, with tensile-strength classification recognized as suitable for this application.
+Cast-metal enclosures shall be not less than 1/8-inch 3 millimeter thick at every point, of greater thickness at reinforcing ribs and door edges not less than 1/4 inch 6 millimeter thick at tapped holes for conduit.]
+Remote-control stations shall be installed with the centerline 66 inches 1700 millimeter above the finished floor.
+2.4 CIRCUIT BREAKERS
+Circuit breakers shall conform to UL 489, NEMA AB 1, and NEMA AB 3.
+2.4.1 Molded-Case Circuit Breakers
+Circuit breakers shall be molded case, manually operated, trip-free, with inverse-time thermal-overload protection and instantaneous magnetic short-circuit protection as required.
+Circuit breakers shall be completely enclosed in a molded case, with the calibrated sensing element factory-sealed to prevent tampering.
+Thermal-magnetic tripping elements shall be located in each pole of the circuit breaker and shall provide inverse-time-delay thermal overload protection and instantaneous magnetic short-circuit protection.
+Instantaneous magnetic tripping element shall be adjustable and accessible from the front of the breaker on frame sizes larger than 100 amperes.
+Breaker size shall be as required for the continuous current rating of the circuit.
+Breaker class shall be as required.
+Interrupting capacity of the panel and lighting branch circuit breakers shall be sufficient to successfully interrupt the maximum short-circuit current imposed on the circuit at the breaker terminals.
+Circuit breaker interrupting capacities shall be a minimum of 10,000 amperes and shall conform to NEMA AB 3.
+Multipole circuit breakers shall be of the common-trip type having a single operating handle and shall a have two-position on/off indication.
+Circuit breakers shall have temperature compensation for operation in an ambient temperature of 104 degrees F 40 degrees C. Circuit breakers shall have SECTION 16286 Page 16
+root mean square (rms) symmetrical interrupting ratings sufficient to protect the circuit being supplied.
+Interrupting ratings may have selective type tripping (time delay, magnetic, thermal, or ground fault).
+Breaker body shall be of phenolic composition.
+Breakers shall be capable of having such accessories as handle-extension, handle-locking, and padlocking devices attached where required.
+Circuit breakers used for motor-circuit disconnects shall meet the applicable requirements of NFPA 70 and shall be of the motor-circuit protector type.
+Circuit breakers used for service disconnection shall be the enclosed circuit-breaker type with external handle for manual operation.
+Enclosures shall be sheet metal with a hinged cover suitable for surface mounting.
+2.4.2 Enclosed Molded-Case Circuit Breakers
+Enclosed circuit breakers shall be thermal-magnetic molded-case circuit breakers in surface-mounted, nonventilated enclosures conforming to the appropriate articles of NEMA 250 and NEMA AB 1.
+Enclosed circuit breakers in nonhazardous locations shall be as follows: [Circuit breakers installed inside, clean, dry locations shall be contained in NEMA Type 1, general purpose sheet steel enclosures.]
+[Circuit breakers installed in unprotected outdoor locations shall be contained in NEMA Type 3R, weather-resistant sheet steel enclosures that are splashproof, weatherproof, sleetproof, and moisture resistant.]
+[Circuit breakers installed in wet locations shall be contained in NEMA Type 4, watertight corrosion-resistant sheet steel enclosures constructed to prevent entrance of water.]
+[Circuit breakers installed in wet locations shall be contained in NEMA Type 4, watertight cast-iron enclosures constructed to prevent entrance of water when tested in accordance with NEMA ICS 1 for Type 4 enclosures.]
+[Circuit breakers installed in dry, noncombustible dust-laden atmospheres shall be contained in NEMA Type 5, dusttight corrosion-resistant sheet steel enclosures with gaskets or their equivalent to prevent the entrance of dust.]
+[Circuit breakers installed in dry, noncombustible, dust-laden atmospheres shall be contained in NEMA Type 5, dusttight cast-iron enclosures with gaskets or their equivalent to prevent the entrance of dust.]
+[Circuit in NEMA prevent coolant breakers installed in industrial locations shall be contained Type 12, industrial-use sheet steel enclosures constructed to the entrance of dust, lint, fibers and flyings, and oil and seepage.]
+SECTION 16286 Page 17
+[Steel enclosures shall be fabricated from corrosion-resistant steel sheet conforming to ASTM A 167, 300 series corrosion-resistant steel.
+Box dimensions and thickness of sheet steel shall be in accordance with UL 50.]
+[Cast-iron enclosures shall be gray-iron castings conforming to ASTM A 48 ASTM A 48 with tensile strength classification suitable for this application.
+Cast-metal enclosures shall be not less than 1/8-inch thick at every point, of greater thickness at reinforcing ribs and door edges, and not less than 1/4-inch 6 millimeter thick at tapped holes for conduits.]
+2.4.3 Power Circuit Breakers
+************************************************************************** NOTE: Specify when or where breakers equipped with current-limiting fuses shall be installed and requirements for coordination with other system protective devices.
+Edit breaker description to suit project requirements.
+************************************************************************** Power circuit breakers rated below 600 volts shall be the air-break type enclosed in ventilated housings.
+Current, voltage, and interrupting ratings shall be as required.
+Power circuit breakers shall comply with ANSI C37.16 and IEEE C37.13.
+Power circuit breakers shall be equipped with [electromechanical] [static trip (solid-state)]
+Breakers shall be electrically and mechanically trip-free in any position of the closing stroke.
+Ground fault protection shall be included in either type trip device.
+Main contacts shall be silver-plated.
+Arcing contacts shall be sintered tungsten alloy.
+Tripping shall be accomplished by a [shunt-trip] [series-trip]
+Closing shall be by [manual] [electrical]
+Breakers installed in metal housings such as unit substations shall be the drawout type.
+Breakers installed in isolated locations or not as units of a central distribution center shall be [switchboard] [wall]
+Alarms, auxiliary switches, interlocks, and similar devices shall be supplied.
+Breakers shall have a removable operating handle, provision for padlocking, and position indicator.
+Power Circuit Breakers shall be factory tested in accordance with ANSI C37.09.
+SECTION 16286
+Page 18
+2.4.4
+Air Circuit Breakers
+Circuit breakers shall include a ground-fault system or ground-sensing relays.
+2.4.4.1 Stored-Energy-Operated Type
+Air circuit breakers with stored-energy-operated mechanisms shall conform to ANSI C37.121 and NEMA SG 5 for metal-clad switchgear rated above [600 volts] [5 kilovolts]
+Metal-clad air circuit breakers shall be mounted on a mobile frame with primary and secondary disconnecting devices, automatic shutters, and mechanical interlocks to allow complete removal of the unit for inspection and maintenance.
+Circuit breakers shall be three-pole, single-throw, electrically operated, with a motor-charged spring, stored-energy mechanism, and electric release coils for tripping and closing operations.
+A motor-operated position-changing mechanism shall be provided that will move the breaker between the test and operating position by means of a levering device.
+Interlocks shall be provided to prevent the complete withdrawal of the circuit breaker from its compartment when the stored-energy mechanism is in the fully charged position.
+Circuit breakers shall be designed to prevent the release of stored energy unless the mechanism is fully charged.
+Circuit breakers shall have mechanically trip-free mechanisms with direct-current potential trip coils of the voltage indicated, auxiliary switches, latch-checking switches, control relays, and operation counters.
+2.4.4.2 Solenoid-Operated Type
+Air circuit breakers with solenoid-operated mechanisms shall conform to ANSI C37.121 and the appropriate articles of NEMA SG 5 for metal-clad switchgear rated above [600 volts] [5 kilovolts]
+Metal-clad air circuit breakers shall be mounted on a primary and secondary disconnecting devices, automatic mechanical interlocks to allow complete removal of the and maintenance.
+Circuit breakers shall be three-pole solenoid-operated tripping/closing mechanism designed direct-current station battery power supply or direct power system of [_____] voltage.
+mobile frame with shutters, and unit for inspection single-throw, with for operation on a from an emergency ac
+Mechanism closing coils shall be rated 125 volts and shall be operable at voltages as low as 90 volts.
+Mechanism trip coils shall be rated 125 volts and shall be operable at voltages as low as 70 volts.
+Operating mechanism for ac control circuits shall be as provided by the manufacturer for [_____] voltage.
+Circuit breakers shall be mechanically trip-free mechanisms with auxiliary switches, latch-checking switches, control relays, and operation counters.
+Solid-state tripping devices may be used.
+SECTION 16286
+Page 19
+2.4.5
+Oil Circuit Breakers
+Oil circuit breakers shall have the ratings shown and shall comply with NEMA SG 5.
+Oil circuit breakers shall use control voltage as indicated.
+Tripping mechanism shall consist of a magnet acting as a trigger to release a latch, permitting the breaker to open.
+A pneumatic operating system shall be provided with compressors and reservoirs as needed.
+Tripping/closing control shall be integrally provided with the breakers.
+Distribution-voltage breakers shall be three phase with all three interrupters mounted in the same tank.
+Transmission-voltage oil circuit breakers shall have the phase interrupters mounted in separate tanks.
+Circuit-breaker bushings shall be equipped with bushing current transformers and shall have standard secondary taps.
+Taps shall be terminated outside the tank housing on terminal blocks and shall be identified for short circuiting.
+Operating mechanism shall be enclosed in a waterproof housing mounted on the breaker framework.
+Heaters shall be provided to prevent condensation of moisture.
+Breaker mechanism shall be mechanically trip-free.
+Each breaker shall be equipped with complete relaying and controls.
+Relaying shall consist of instantaneous and overcurrent time-delay relays plus others as indicated.
+Controls shall consist of a reclosing relay, control switch, indicating lights, ammeters, and as approved.
+Relays and controls shall be installed in a control cabinet mounted on the breaker housing (and may be solid-state type) or shall be installed remotely.
+An externally operable manual trip device shall be provided.
+Each oil circuit breaker shall be supplied with tank-lowering and tank-lifting devices.
+Where applicable, a tank drain valve and an oil level indicator shall be provided on each tank.
+Oil for oil circuit breakers shall conform to ASTM D 3487.
+Oil circuit breakers shall be factory tested in accordance with ANSI C37.09 2.5 FUSES
+A complete set of fuses for all switches and switchgear shall be provided.
+Fuses shall have a voltage rating not less than the circuit voltage.
+Fuses rated 30 amperes, 125 cartridge type.
+Fuses rated the renewable cartridge type otherwise indicated.
+Fuses volts above with shall or less shall be 30 amperes 600 time-delay dual conform to NEMA the nonrenewable volts or less shall be elements, except where FU 1.
+Special fuses such as extra-high interrupting-capacity fuses, fuses for welding machines, and capacitor fuses shall be installed where required.
+Plug fuses are not permitted.
+SECTION 16286
+Page 20
+Power fuses on ac systems above 600 volts shall be in accordance with NEMA SG 2.
+Fuses shall be labeled showing UL class, interrupting rating, and time-delay characteristics, when applicable.
+Additionally, fuse information shall be clearly listed on equipment drawings.
+Fuse holders field-mounted in a cabinet or box shall be porcelain.
+Field installation of fuse holders made of such materials as ebony asbestos, Bakelite, or pressed fiber shall not be used.
+2.6 2.6.1 CONTROL DEVICES Magnetic Contactors
+Magnetic contactors for the control of low-voltage, 60-hertz, tungsten-lamp loads, fluorescent-lamp loads, resistance-heating loads, and the primary windings of low-voltage transformers shall be in accordance with NEMA ICS 1 and NEMA ICS 2 as required.
+Core-and-coil assembly shall operate satisfactorily with coil voltage between 85 and 110 percent of its voltage rating.
+Contactor shall be designed with a normally open holding circuit auxiliary contact for control circuits.
+Rating of the auxiliary contact shall be in accordance with NEMA ICS 1 and NEMA ICS 2.
+Solderless pressure wire terminal connectors shall be furnished or made available for line-and-load connections to contactors in accordance with NEMA ICS 1 and NEMA ICS 2.
+Rating of magnetic contactors shall be in accordance with NEMA ICS 1and NEMA ICS 2.
+2.6.2 Control-Circuit Transformers
+Control-circuit transformers shall be provided within the enclosure of magnetic contactors and motor controllers when the line voltage is in excess of 120 volts.
+Transformer shall be encapsulated dry type, single-phase, 60-hertz, with a 120-volt (or 24-volt) isolated secondary winding.
+Rated primary voltage of the transformer shall be not less than the rated voltage of the controller.
+Rated secondary current of the transformer shall be not less than continuous-duty current of the control circuit.
+Voltage regulation of the transformer shall be such that, with rated primary voltage and frequency, the secondary voltage shall not be less than 95 percent nor more than 105 percent of rated secondary voltage.
+Source of supply for control-circuit transformers shall be the load side of the main disconnecting device.
+Secondary winding of the transformer and control-circuit wiring shall be protected against overloads and short circuits with fuses selected in accordance with JIC-01.
+Secondary winding SECTION 16286 Page 21
+of the control-circuit transformer shall be grounded in accordance with JIC-01.
+2.6.3 Magnetic Control Relays energizing and de-energizing the coils of magnetically operated devices in response to of electric control devices shall be in and NEMA ICS 2.
+Magnetic control relays for magnetic contactors or other variations in the conditions accordance with NEMA ICS 1,
+Core-and-coil assembly shall operate satisfactorily with coil voltages between 85 and 110 percent of their voltage rating.
+Relays shall be designed to accommodate normally open and normally closed contacts.
+Magnetic control relays shall be [120] [_____]
+2.6.4 Pushbuttons and Switches
+************************************************************************** NOTE: Specify electrically held, magnetic latch, plug-in, or hermetically sealed.
+************************************************************************** 2.6.4.1 Pushbuttons
+Pushbuttons for low-voltage ac full-voltage magnetic controllers shall be heavy-duty oiltight NEMA 250, Type [12] [_____]
+Color code for pushbuttons shall be in accordance with JIC-01.
+Pushbuttons shall be designed with normally open, circuit-closing contacts; normally closed circuit-opening contacts; and two-circuit normally open and normally closed circuit-closing and -opening contacts.
+Pushbutton-contact ratings shall be in accordance with NEMA ICS 1 and NEMA ICS 2 with contact designation A600.
+Pushbuttons in remote control stations shall be identified with identification plates affixed to front cover in a prominent location.
+Identification plate shall carry the identification of the system being controlled.
+2.6.4.2 Selector Switches
+Selector switches for low-voltage control circuits shall be heavy-duty oiltight maintained-contact devices with the number of positions and the marking of identification plates in accordance with NEMA ICS 1 and NEMA ICS 2.
+SECTION 16286
+Page 22
+Selector switches in remote control stations shall be identified with engraved identification plates affixed to front cover in a prominent location.
+Identification plate shall carry the identification of the system being controlled.
+2.6.4.3 Ammeter Selector Switches
+Ammeter selector switches for switchgear shall be rotary multistage snap-action type in accordance with UL 20 with silver-plated contacts rated for 600 volts ac or dc. Selector switch shall be a manually operated, four-position device rated for 600 volts, 20 amperes, minimum, and designed to permit current readings on each bus of the main bus from a single indicating instrument.
+Ammeter switch shall be mounted on the hinged front panel of the switchgear compartment and shall be completely isolated from high-voltage circuits, with engraved escutcheon plate.
+Selector switch handle shall be [pistol-grip] [oval]
+2.6.4.4 Voltmeter Selector Switches
+Voltmeter selector switches for switchgear shall be rotary snap-action type in accordance with UL 20 with silver-plated contacts rated for 600 volts ac or dc. Switch shall be a manually operated, four-position device designed to permit voltage readings on each phase of the main bus from a single indicating instrument.
+Voltmeter switch shall be mounted on the hinged front panel of the switchgear compartment and shall be completely isolated from high-voltage circuits, and with engraved escutcheon plate.
+Selector switch handle shall be [pistol-grip] [oval]
+2.6.4.5 Miscellaneous Switches
+Float, limit, door, pressure, proximity, and other types of switches shall be in accordance with IPC D330 and of the types and classes indicated.
+2.7 TIME SWITCHES
+Time switches for the control of tungsten-lamp loads, fluorescent-lamp loads, resistive-heating loads, motors, and magnetically operated devices shall consist of a motor-driven time dial and switch assembly in NEMA 250, Type 1 general-purpose enclosure.
+Motor drives shall consist of 120-volt, single-phase, 60-hertz, heavy-duty, self-starting synchronous motors directly connected to the time dial through a geartrain operating mechanism.
+A spring-wound stored-energy source of reserve power shall be provided that will automatically operate the mechanism for a period of not less than 12 hours in case of electric power failure.
+Spring shall automatically rewind electrically in not more than 3 hours of time after electric power is restored.
+Switch mechanism shall include a heavy-duty general-purpose precision snap-action switch in accordance with UL 20.
+Provision shall be made for manual "OFF" and "ON" operation of the switch.
+SECTION 16286
+Page 23
+Time switches for the control of 120/240-volt, 2- and 3-wire, single-phase, 60-hertz circuits and 120/208-volt, three-phase, 4-wire, 60-hertz circuits shall have a continuous-current tungsten-lamp load rating of 35 amperes.
+[Time dials shall be 24-hour type with adjustable on and off trippers for repetitive switching operations at the same time each day.
+Dial shall be calibrated in 15-minute intervals over a 24-hour period around its circumference and shall make one revolution in the 24-hour period of time.
+Provision shall be made to defeat the switching operation over weekends or up to 6 preselected days each week.
+Time dials shall have a minimum "ON" time setting of not more than 20 minutes and shall be fully adjustable upward in 15-minute intervals of time throughout each day.]
+[Time dials shall be 7-day type with adjustable on and off trippers for programmed switching operations for each day in the week.
+Dial shall be calibrated in 2-hour intervals for each day and for each day in the week around its circumference and shall make one revolution in the 7-day period of time.
+Time dials shall have a minimum "ON" time setting of not more than 2-1/2 hours and shall be fully adjustable upward in 2-hour intervals of time throughout each day.]
+[Time dials shall be astronomic type which automatically change settings each day in accordance with the seasonal time changes in sunrise and sunset.
+Astronomic type dials shall have adjustable on and off trippers for repetitive switching operations at solar time each day and each day in the year and shall make one revolution in a 24-hour period of time.
+Dial shall be calibrated in 15-minute intervals over a 24-hour period of time around its circumference.
+Dial shall indicate the day and month of the year.
+Provision shall be made to defeat the switching operation over weekends or up to 6 preselected days each week.
+Time dials shall be designed to operate in the "ON" position at sunset and shall be fully adjustable upward in 15-minute intervals of time throughout each day.]
+2.8 2.8.1 PROTECTIVE RELAYS Overcurrent Relays
+Overcurrent relays shall conform to IEEE C37.90.
+Overcurrent relays for protection against phase and ground faults shall be single-phase nondirectional removable induction type with built-in testing facilities.
+Relays shall be designed for operation on the dc or ac control circuit indicated.
+Ground-fault overcurrent relays shall have short-time inverse time characteristics with adjustable current tap range as required.
+Phase-fault overcurrent relays shall have varied inverse-time characteristics with adjustable current tap range as required and indicating instantaneous-trip attachments with adjustable current range as required.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have matching cover.
+SECTION 16286 Page 24
+Solid-state static-type trips for low-voltage power circuit breakers shall be in accordance with EIA 443 and ANSI C37.17.
+Trip unit shall employ a combination of discreet components and integrated circuits to provide the time-current protection functions required in a modern selectively coordinated distribution system.
+Complete system selective coordination shall be provided by utilizing a combination of the following time-current curve-shaping adjustments: ampere setting; long-time delay; short-time pickup; short-time delay; instantaneous pickup; and ground fault.
+Instantaneous and ground fault trips shall be switchable or easily defeatable.
+All adjustments shall be made using non-removable, discrete step, highly reliable switching plugs for precise settings.
+A sealable, transparent cover shall be provided over the adjustments to prevent tampering.
+Trip devices shall be furnished with three visual indicators to denote the automatic tripping mode of the breaker including: overload; short circuit; and ground fault.
+Trip unit shall be wired to appropriate terminals whereby an optional remote automatic trip accessory can be utilized to provide the same indication.
+A series of optional automatic trip relays shall be available for use with the trip unit to provide remote alarm and lockout circuits.
+All trip units shall be provided with test jacks for in-service functional testing of the long-time instantaneous and ground fault circuits using a small hand-held test kit.
+2.8.2 Directional Overcurrent Relays
+Directional overcurrent relays shall be in accordance with IEEE C37.90.
+Directional overcurrent relays for protection against reverse-power faults shall be single-phase induction type with adjustable time-delay and instantaneous trip attachments.
+Relays shall be removable type with inverse-time directional and overcurrent units with built-in testing facilities.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have matching cover.
+2.8.3 Reclosing Relays
+Reclosing relays shall conform to IEEE C37.90.
+Reclosing relays shall be designed to reclose circuit breakers that have tripped from overcurrent.
+This device shall automatically reclose the SECTION 16286 Page 25
+breaker at adjustable time intervals between reclosures and then lock out the breaker in the open position if the fault persists.
+If the fault disappears after any reclosure, the circuit breaker shall remain closed and the reclosing relay shall reset automatically and be ready to start a new sequence of operation.
+Reclosing relays shall be removable with built-in testing facilities and shall consist of a timing unit rated at 120/240 volts, single-phase, ac and solenoid and contactor units with dc rating as indicated.
+Contacts shall be arranged for one instantaneous reclosure and two subsequent reclosures at 15 and 45 seconds, respectively.
+Time dial shall be set for 60-second drum speed.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have a matching cover.
+2.8.4 Undervoltage Relays
+Undervoltage relays shall conform to IEEE C37.90.
+Undervoltage relays shall be three-phase induction type inverse timing with adjustable high- and low-voltage contacts and calibrated scale for protection against loss of voltage, undervoltage, and overvoltage.
+Relays shall be equipped with indicating contactor and voltage switches to provide electrically separate contact circuits.
+Relays shall be removable type with built-in testing facilities and shall be suitable for operation on 120-volt ac circuits.
+Contacts shall be suitable for operation on dc or ac control circuits.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have a matching cover.
+2.9 2.9.1 INDICATING INSTRUMENTS Ammeters
+Ammeters shall conform to ANSI C39.1.
+Switchboard indicating ammeters shall be approximately 4-1/2 inches 115 millimeter square with 250-degree scale and recessed cases suitable for flush mounting.
+Dials shall be white with black figures and black pointers.
+Instruments shall be mounted on the hinged front panel of the switchgear compartment and shall be completely isolated from high-voltage circuits.
+Meters shall be standard 5-ampere type for a zero to full-scale normal movement, 60 hertz.
+2.9.2 Voltmeters
+Voltmeters shall conform to ANSI C39.1.
+Switchboard indicating millimeter square with flush mounting.
+Dials pointers.
+Instruments voltmeters shall be 250-degree scale and shall be white with shall be mounted on SECTION 16286 approximately 4-1/2-inches 115 recessed cases suitable for black figures and black the hinged front panel of the
+Page 26
+switchgear compartment and shall be completely isolated from high-voltage circuits.
+Voltmeters shall be standard 120-volt type for a zero to full-scale normal movement, 60 hertz.
+2.9.3 watt-Hour Meters/wattmeters
+Watt-hour meters, wattmeters, and pulse initiation meters shall conform to IEEE C12.1.
+Switchboard wattmeters for use with instrument transformers shall be three-phase induction type with two stators, each equipped with a current and potential coil.
+Meter shall be rated 5 amperes at 120 volts and shall be suitable for connection to three-phase, 3- and 4-wire circuits.
+Instrument shall be complete with potential indicating lamps, light-load and full-load adjustments, phase balance, power-factor adjustments, four-dial clock register, ratchets to prevent reverse rotation, and built-in testing facilities.
+Pulse initiating meters for use with demand meters or pulse recorders shall be suitable for use with mechanical or electrical pulse initiators.
+Mechanical load imposed on the meter by the pulse initiator shall be within the limits of the pulse meter.
+Load shall be as constant as practical throughout the entire cycle of operation to ensure accurate meter readings.
+Pulse initiating meter shall be capable of measuring the maximum number of pulses at which the pulse device is nominally rated.
+Pulse initiating meter may be considered to be operating properly when a kilowatthour check indicates that the demand meter kilowatthours are within limits of the watthour meter kilowatthours.
+Pulse initiating meters shall be located such that components sensitive to moisture and temperature conditions are minimized.
+Precautions shall be taken to protect sensitive electronic metering circuitry from electromagnetic and electrostatic induction.
+Meters shall be removable and shall be furnished with draw out test plug.
+Contact devices shall be furnished to operate remote impulse-totalizing graphic demand meters.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have a matching cover.
+2.9.4 Graphic Demand Meters
+Impulse-totalizing graphic demand meters shall conform to IEEE C12.1.
+Impulse-totalizing graphic demand meters shall be suitable for use with switchboard watt-hour meters and shall include a two-circuit totalizing relay, cyclometer for cumulative record of impulses, four-dial totalizing kilowatt-hour register, synchronous motor for timing mechanism, torque motor, and chart drive.
+A positive chart-drive mechanism consisting of chart spindles and drive sprockets shall maintain the correct chart speed for roll strip charts.
+Instrument shall record as well as indicate on clearly legible graph paper the 15-minute integrated kilowatt demand of the totalized system.
+SECTION 16286 Page 27
+Torque motor shall furnish the motive power for advancing the register and pen-movement mechanism.
+Pen shall be the capillary type and shall contain a 1-month ink supply.
+Roll charts shall provide a 31-day continuous record of operation.
+Case shall be semiflush-mounted to the hinged instrument panel and shall have a matching cover.
+2.9.5 Specialty-Type Meters
+Specialty meters shall conform to ANSI C39.1.
+Specialty-type meters are panel meters applicable to specific situations, such as pyrometers and dc parameter meters.
+These meters shall conform to the panel layout specified.
+Meter scales shall be not less than 180 degrees.
+Edgewise meters shall not be used for circuit current and voltage measurements.
+2.10 FACTORY TESTING
+Factory tests on control and low voltage protective devices shall be performed in accordance with the manufacturer's recommendations.
+Short-circuit tests shall be in accordance with Section 2 of NEMA ICS 1.
+Factory tests on power, high-voltage, and oil circuit breakers shall be in accordance with ANSI C37.09.
+2.11 2.11.1 INDICATING LIGHTS General-Purpose Type lights shall be oiltight instrument devices with threaded base for flush-mounting, translucent convex lens, candelabra lampholder, and 120-volt, 6-watt, Type S-6 incandescent lamp in with ANSI C78.23.
+Color code for indicating lights shall be in with JIC-01.
+Indicating and collar screw-base accordance accordance
+Indicating lights shall be provided in remote-control stations when pushbuttons and selector switches are out of sight of the controller.
+2.11.2 Switchboard Indicating Lights
+Switchboard indicating lights shall be the manufacturer's standard transformer type units [120-volt input] [_____]
+Indicating lights shall be capable of being relamped from the switchboard front.
+Indicating lights utilizing resistors in series with the lamps are not permitted except in direct-current control circuits.
+Lights shall have a press-to-test feature.
+2.12 FINISH
+************************************************************************** NOTE: For all outdoor applications and all indoor applications in a harsh environment refer to Section SECTION 16286 Page 28
+09960, "High Performance Coatings."
+High performance coatings are specified for all outdoor applications because ultraviolet radiation will break down most standard coatings, causing a phenomena known as chalking, which is the first stage of the corrosion process.
+For additional information contact The Coatings Industry Alliance, specific suppliers such as Keeler and Long and PPG, and NACE International (NACE).
+************************************************************************** Metallic materials shall be protected against corrosion.
+Equipment shall have the standard finish by the manufacturer when used for most indoor installations.
+For harsh indoor environments (any area subjected to chemical and/or abrasive action), and all outdoor installations, refer to Section 09960, "High Performance Coatings."
+PART 3 3.1 EXECUTION INSTALLATION
+Control devices and protective devices not factory installed in equipment shall be installed in accordance with the manufacturer's recommendations and shall be field adjusted and operation tested.
+Installations shall conform to NFPA 70, NEMA ICS 1, NEMA ICS 2, and NEMA ICS 3 requirements for installation of control and protective devices.
+3.2 FIELD TESTING
+Control and protective devices not factory installed in equipment shall be demonstrated to operate as indicated.
+Instrumentation, potential, and current transformers shall be ratio'd and tap settings verified.
+Circuit breakers rated 15KV and above shall be given a timing test to verify proper contact speed, travel, bounce, and wipe.
+Oil and high-voltage circuit breakers and their bushings shall be given an insulation power factor test to establish condition monitoring baselines.
+Insulating oil in oil circuit breakers shall have performed before the breakers are energized.
+Oil accordance with ASTM D 877, and breakdown voltage 25,000 volts Manufacturer shall certify that the shall affix a label to that effect on each breaker drum containing the insulating oil.. dielectric tests shall be tested in shall be not less than oil contains no PCB's and tank and on each oil
+Reduced-voltage starting devices shall be field adjusted to obtain optimum operating conditions.
+Test meters and instrument transformers shall conform to IEEE C12.1 and IEEE C57.13.
+Control and protective devices shall not be energized until recorded test
+SECTION 16286
+Page 29
+data have been approved by the Contracting Officer.
+Final test reports shall be provided to the Contracting Officer.
+Reports shall have a cover letter/sheet clearly marked with the System name, Date, and the words "Final Test Reports - Forward to the Systems Engineer/Condition Monitoring Office/Predictive Testing Group for inclusion in the Maintenance Database."
+-- End of Section --
+SECTION 16286
+Page 30

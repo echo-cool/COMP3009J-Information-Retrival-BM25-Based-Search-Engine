@@ -1,0 +1,94 @@
+Johnstown Flood National Memorial Spot Elevations Available as - [Outline] - [SGML]
+Logical_Consistency_Report: point topology exists Completeness_Report: Spot elevations on USGS quads listed in Place_Keyword section.
+Positional_Accuracy:
+Horizontal_Positional_Accuracy:
+Horizontal_Positional_Accuracy_Report: Approximate horizontal accuracy is 12 meters, assuming source data meets National Map Accuracy Standards
+Lineage:
+Source_Information:
+Source_Citation:
+Citation_Information:
+Originator: US Geological Survey Publication_Date: Unknown Title: 1:24,000 scale Digital Line Graphs Geospatial_Data_Presentation_Form: map Publication_Information:
+Publication_Place: Reston, VA Publisher: US Geological Survey
+Source_Scale_Denominator: 24000 Type_of_Source_Media: online Source_Time_Period_of_Content:
+Time_Period_Information:
+Single_Date/Time:
+Calendar_Date: 1995
+Source_Currentness_Reference: date downloaded from USGS
+Source_Citation_Abbreviation: tiles Source_Contribution: spot elevations
+Process_Step:
+Process_Description: DLG tiles were converted to Arcnfo coverages.
+Point topology created.
+All tiles appended.
+Point topology created.
+Keyword attributes added.
+Datum changed to NAD83 and topology established.
+Process_Date: 20000901 Process_Contact:
+Contact_Information:
+Contact_Person_Primary:
+Contact_Organization: NCSU Contact_Person: Bill Slocumb
+Contact_Position: Research Associate Contact_Address:
+Address_Type: mailing and physical address
+Address: Campus Box 7106 City: Raleigh State_or_Province: NC Postal_Code: 27695 Country: USA
+Contact_Voice_Telephone: 919-515-3432 Contact_Facsimile_Telephone: 919-515-3439 Contact_Electronic_Mail_Address: bill_slocumb@ncsu.edu
+Hours_of_Service: 0800-1700 __________________________________________________________________
+Spatial_Data_Organization_Information:
+Direct_Spatial_Reference_Method: Vector __________________________________________________________________
+Spatial_Reference_Information:
+Horizontal_Coordinate_System_Definition:
+Planar:
+Grid_Coordinate_System:
+Grid_Coordinate_System_Name: Universal Transverse Mercator
+Universal_Transverse_Mercator:
+UTM_Zone_Number: 17
+Planar_Coordinate_Information:
+Planar_Coordinate_Encoding_Method: Coordinate pair
+Coordinate_Representation:
+Abscissa_Resolution: .1 Ordinate_Resolution: .1
+Planar_Distance_Units: METERS
+Geodetic_Model:
+Horizontal_Datum_Name: North American Datum of 1983 Ellipsoid_Name: GRS1980 Semi-major_Axis: 6378137 Denominator_of_Flattening_Ratio: 294.98 __________________________________________________________________
+Entity_and_Attribute_Information:
+Overview_Description:
+Entity_and_Attribute_Overview: All attributes from dlg data were preserved and translated from code to descriptions.
+The codes and descriptions are defined in "National Mapping Program Technical Instructions, Part 3 Attribute Coding, Standards for Digital Line Graphs, US Department of the Interior, USGS, National Mapping Division."
+__________________________________________________________________
+Distribution_Information:
+Distributor:
+Contact_Information:
+Contact_Organization_Primary:
+Contact_Organization: NC State University Contact_Person: Bill Slocumb
+Contact_Position: Research Associate Contact_Address:
+Address_Type: physical address Address: Campus Box 7106 City: Raleigh State_or_Province: NC Postal_Code: 27695 Country: USA
+Contact_Voice_Telephone: 919-515-3432 Contact_Facsimile_Telephone: 919-515-3439 Contact_Electronic_Mail_Address: bill_slocumb@ncsu.edu
+Hours_of_Service: 0800-1700
+Resource_Description: Johnstown Flood NM Spot Elevations Distribution_Liability: The National Park Service shall not be held liable for improper or incorrect use of the data described and/or contained herein.
+These data and related graphics ("GIF" format files) are not legal documents and are not intended to be used as such.
+The information contained in these data is dynamic and may change over time.
+The data are not better than the original sources from which they were derived.
+It is the responsibility of the data user to use the data appropriately and consistent within the limitations of geospatial data in general and these data in particular.
+The related graphics are intended to aid the data user in acquiring relevant data; it is not appropriate to use the related graphics as data.
+The National Park Service gives no warranty, expressed or implied, as to the accuracy, reliability, or completeness of these data.
+It is strongly recommended that these data are directly acquired from an NPS server and not indirectly through other sources which may have changed the data in some way.
+Although these data have been processed successfully on a computer system at the National Park Service, no warranty expressed or implied is made regarding the utility of the data on another system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.
+This disclaimer applies both to individual use of the data and aggregate use with other data.
+Standard_Order_Process:
+Digital_Form:
+Digital_Transfer_Information:
+Format_Name: ARCE
+Digital_Transfer_Option:
+Online_Option:
+Computer_Contact_Information:
+Network_Address:
+Network_Resource_Name: 
+Fees: none if ftp __________________________________________________________________
+Metadata_Reference_Information:
+Metadata_Date: 20000901 Metadata_Contact:
+Contact_Information:
+Contact_Organization_Primary:
+Contact_Organization: NC State University Contact_Person: Bill Slocumb
+Contact_Position: Research Associate Contact_Address:
+Address_Type: mailing and physical address Address: Campus Box 7106 City: Raleigh State_or_Province: NC Postal_Code: 27695 Country: USA
+Contact_Voice_Telephone: 919-515-3432 Contact_Facsimile_Telephone: 919-515-3439 Contact_Electronic_Mail_Address: bill_slocumb@ncsu.edu
+Hours_of_Service: 0800-1700
+Metadata_Standard_Name: FGDC CSDGM Metadata_Standard_Version: FGDC-STD-001-1998 __________________________________________________________________
+Generated by mp version 2.4.19 on Thu Aug 31 17:49:25 2000

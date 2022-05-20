@@ -1,0 +1,994 @@
+NOTICE The United States Government does not endorse products or manufacturers.
+Trade or manufacturers' names appear herein sole ly because they are considered essential to the object of this report.
+Table of Contents
+Executive Summary ............................................................................................
+1.
+Introduction to the Federal Radionavigation Plan .........................................
+1.1 1.2 1.3 1.4 1.5 1.6 Background .......................................................................................
+Purpose ..............................................................................................
+Scope .................................................................................................
+Objectives ..........................................................................................
+Authority to Provide Radionavigation Services ................................
+Radionavigation Systems Selection Considerations .........................
+1.6.1 Operational Considerations .............................................
+1.6.1.1 Military Selection Factors ..................................
+1.6.1.2 Civil Military Compatibility...............................
+1.6.1.3 Review and Validation .......................................
+1 6.2 Technical Considerations ................................................
+1.6.2.1 Vulnerability Reliance of GPS in the National Transportation Infrastructure .............................
+1.6.3 Economic Considerations ................................................
+1.6.4 Institutional Considerations.............................................
+1.6.4.1 Cost Recovery for Radionavigation Services ..... iii
+vii 1-1 1-1 1-2 1-2 1-2 1-3 1-3 1-4 1-4 1-5 1-5 1-5 1-6 1-7 1-8 1-8
+1.6.5 1.6.6 1.6.7
+1.6.4.2 Signal Availability..............................................
+1.6.4.3 Role of the Private Sector...................................
+International Considerations............................................
+Interoperability Considerations .......................................
+Radio Frequency Spectrum Considerations ....................
+1-8 1-9 1-9 1-10 1-10 2-1 2-1 2-2 2-2 2-3 2-4 2-4 2-4 2-4 2-5 3-1 3-1 3-1 3-3 3-3 3-4 3-4 3-5 3-5 3-5 3-6 3-6 3-7 3-7 3-8 3-8 3-8 3-8 3-10
+2.
+U.S. Policies for Radionavigation Systems ...................................................
+2.1 General ..............................................................................................
+2.2 Individual Systems ............................................................................
+2.2.1 GPS .................................................................................
+2.2.2 Augmentations to GPS ....................................................
+2.2.3 Loran-C ...........................................................................
+2.2.4 VOR/DME ......................................................................
+2.2.5 Tacan ...............................................................................
+2.2.6 Precision Approach Systems ...........................................
+2.2.7 Aeronautical Nondirectional Beacons (NDB) .................
+3.
+Operating Plans for Radionavigation Systems ..............................................
+3.1 Plans .................................................................................
+Global Positioning System (GPS) ...................................
+GPS Modernization ........................................................
+Augmentations to GPS ....................................................
+3.1.3.1 Maritime Differential GPS .................................
+3.1.3.2 Nationwide Differential GPS .............................
+3.1.3.3 Wide Area Augmentation System (WAAS) ......
+3.1.3.4 Local Area Augmentation System (LAAS)........
+3.1.3.5 The National Continuously Operating Reference Station (CORS) System .....................................
+3.1.4 Loran-C ...........................................................................
+3.1.5 VOR and DME ................................................................
+3.1.6 TACAN ...........................................................................
+3.1.7 ILS ...................................................................................
+3.1.8 MLS .................................................................................
+3.1.9 Aeronautical Nondirectional Beacons (NDBs) ...............
+Phase-Down of Ground-Based Aeronautical Navaids ......................
+3.2.1 Civil Air Transition to Satellite-Based Navigation (Satnav) 3.2.2 Mitigating Disruptions to Satnav Service .......................
+Operating 3.1.1 3.1.2 3.1.3
+3.2
+iv
+4.
+Research and Development Summary...........................................................
+4.1 4.2 Overview ...........................................................................................
+DOT R
+4.2.1 Civil Aviation ..................................................................
+4.2.2 Civil Marine ....................................................................
+4.2.3 Civil Land ........................................................................
+NASA R
+NOAA R
+DoD R
+4-1 4-1 4-1 4-2 4-3 4-4 4-4 4-5 4-6 A-1 B-1 R-1 I-1
+4.3 4.4 4.5
+Appendix A. Definitions ..............................................................................
+Appendix B. Glossary ..................................................................................
+References .....................................................................................................
+Index ..............................................................................................................
+v
+List of Figures
+Figure 3-1.
+Figure 3-2.
+Radionavigation Systems Operating Plan .............................
+Proposed Civil Aeronautical Navaid Phase-Down Steps ......
+3-2 3-9
+vi
+Executive Summary
+The Federal Radionavigation Plan (FRP) is the official source of radionavigation policy and planning for the Federal Government.
+The FRP covers common-use, Federally operated radionavigation systems.
+These systems are sometimes used in combination with each other or with other systems.
+Systems used exclusively by the military are covered in the Chairman, Joint Chiefs of Staff (CJCS) Master Positioning, Navigation, and Timing Plan (MPNTP).
+The plan does not include systems that mainly perform surveillance and communication functions.
+The policies and operating plans contained in this document cover the following radionavigation systems: Â· Â· Â· Â· Global Positioning System (GPS) Augmentations to GPS Loran-C VOR and VOR/DME Â· Â· Â· Â· Tactical Air Navigation (TACAN) Instrument Landing System (ILS) Microwave Landing System (MLS) Aeronautical Nondirectional Radiobeacons (NDB)
+The Federal Government operates radionavigation systems as one of the necessary elements to enable safe transportation and encourage commerce within the United States.
+It is a goal of the Government to provide this service in a cost-effective manner.
+The Department of Transportation (DOT) is responsible under title 49 United States Code (U.S.C.)
+Section 301 for ensuring safe and efficient transportation.
+The Department of Defense (DoD) is responsible for maintaining aids to navigation required exclusively for national defense.
+The DoD is also required by statute 10 U.S.C. 2281(b) (Ref. 1) to provide for the sustainment and operation of GPS for peaceful civil, commercial, and scientific uses on a continuous worldwide basis free of direct user fees. vii
+A major goal of DoD and the DOT is to ensure that a mix of common-use (civil and military) systems is available to meet user requirements for accuracy, reliability, availability, continuity integrity, coverage, operational utility, and cost; to provide adequate capability for future growth; and to eliminate unnecessary duplication of services.
+Selecting a future radionavigation systems mix is a complex task, since user requirements vary widely and change with time.
+While all users require services that are safe, readily available and easy to use, the military has more stringent requirements including performance under intentional interference, operations in high-performance vehicles, worldwide coverage, and operational capability in severe environmental conditions.
+Cost is always a major consideration that must be balanced with a needed operational capability.
+As the full civil potential of GPS and its augmentations are realized, the service provided by other Federally provided radionavigation systems will be phased down to match the reduction in demand for those services.
+The Federal Government conducts research and development (R
+DOT R
+DoD R
+A detailed discussion of agencies' roles and responsibilities, user requirements, and systems descriptions can be found in the companion document to the FRP entitled, Federal Radionavigation Systems (FRS).
+The FRP is composed of the following sections: Section 1 Â­ Introduction to the Federal Radionavigation Plan: Delineates the purpose, scope and objectives of the plan and presents the DoD, DOT, and other Federal agencies roles and responsibilities for providing radionavigation services.
+In addition, Section 1 discusses radionavigation systems selection considerations.
+Section 2 Â­ U.S. Policies for Radionavigation Systems: Describes the U.S. policy for providing each Federal radionavigation system identified in this document.
+Section 3 Â­ Operating Plans for Radionavigation Systems: Summarizes the plans of the Federal Government to provide general-purpose and special-purpose radio aids to navigation for the use by the civil and military sectors.
+Section 4 Â­ Research and Development Summary: Presents the research and development efforts planned and conducted by DoD, DOT, and other Federal organizations.
+Appendix A Â­ Definitions Appendix B Â­ Glossary References Index viii
+1 Introduction to the Federal Radionavigation Plan
+This section describes the background, purpose, and scope of the Federal Radionavigation Plan (FRP).
+It summarizes the events leading to the preparation of this document, the national objectives for coordinating the planning of radionavigation services, and radionavigation authority and responsibility.
+1.1
+Background The first edition of the FRP was released in 1980 as part of a Presidential Report to Congress, prepared in response to the International Maritime Satellite (INMARSAT) Act of 1978.
+It marked the first time that a joint Department of Transportation (DOT) and Department of Defense (DoD) plan for common-use (both civil and military) systems had been developed.
+Now, this biennially updated plan serves as the planning and policy document for all present and future Federally provided common-use radionavigation systems.
+A Federal Radionavigation Plan is required by 10 United States Code (U.S.C.) 2281(b) (Ref. 1).
+A Memorandum of Agreement (MOA) (Ref. 2) between DoD and DOT provides for radionavigation planning as well as for the development and publication of the FRP.
+This agreement recognizes the need to coordinate all Federal radionavigation system planning and to attempt, wherever consistent with operational requirements, to utilize common systems.
+In addition, a Memorandum of Agreement (Ref. 3) between the DoD and DOT on the civil use of the Global Positioning System (GPS) establishes policies and procedures to ensure an effective working relationship between the two Departments regarding the civil use of GPS.
+1-1
+1.2
+Purpose The purpose of the FRP is to: Â· Â· Â· Present the current Federal policy and plan for common-use civil and military radionavigation systems.
+Outline the Government's approach for implementing new and consolidating existing radionavigation systems.
+Provide government radionavigation system planning information and schedules.
+1.3
+Scope This plan covers Federally provided, common-use radionavigation systems.
+The plan does not include systems that mainly perform surveillance and communication functions nor does the plan cover systems that are used exclusively by the military.
+The systems addressed in this FRP are: Â· Â· Â· Â· Global Positioning System (GPS) Augmentations to GPS Loran-C VOR and VOR/DME Â· Â· Â· Â· Tactical Air Navigation (TACAN) Instrument Landing System (ILS) Microwave Landing System (MLS) Aeronautical Nondirectional Radiobeacons (NDB)
+1.4
+Objectives The objectives of U.S. Government radionavigation system policy are to: Â· Â· Â· Â· Â· Strengthen and maintain national security.
+Provide safety of travel.
+Promote efficient transportation.
+Help protect the environment.
+Contribute to the economic growth, trade, and productivity of the United States.
+1.5
+Authority to Provide Radionavigation Services The DOT is responsible under Title 49 United States Code Section 301 for ensuring safe and efficient transportation.
+Radionavigation systems play an important role in carrying out this responsibility.
+The three elements within DOT that operate radionavigation systems are the United States Coast Guard (USCG), the Federal Aviation Administration (FAA), and the St. Lawrence Seaway Development Corporation (SLSDC).
+The Assistant
+1-2
+Secretary for Transportation Policy (OST/P) is responsible for coordinating radionavigation planning within DOT and with other civil Federal elements.
+The USCG provides U.S. aids to navigation for safe and efficient marine navigation.
+The FAA has the responsibility for the development and implementation of radionavigation systems to meet the needs for safe and efficient air navigation, as well as for control of all civil and military aviation, in the National Airspace System (NAS).
+The FAA also has the responsibility to operate aids to air navigation required by international treaties.
+The SLSDC provides navigation aids in U.S, waters in the St. Lawrence River and operates a Vessel Traffic Control System with the St. Lawrence Seaway Authority of Canada.
+Other elements within DOT participate in radionavigation planning.
+These elements include the Maritime Administration (MARAD), the Federal Highway Administration (FHWA), the Intelligent Transportation Systems Joint Program Office (ITS-JPO), the Federal Railroad Administration (FRA), the National Highway Traffic Safety Administration (NHTSA), the Federal Transit Administration (FTA), the Federal Motor Carrier Safety Administration (FMCSA), the Research and Special Programs Administration (RSPA), and the Bureau of Transportation Statistics (BTS).
+Other Federal agencies that participate in radionavigation planning include the National Aeronautics and Space Administration (NASA), and the National Geodetic Survey /National Oceanic and Atmospheric Administration /Department of Commerce (NGS/NOAA/DOC).
+The DoD is responsible for developing, testing, evaluating, implementing, operating, and maintaining aids to navigation and user equipment required solely for national defense.
+DoD is also responsible for ensuring that military vehicles operating in consonance with civil vehicles have the necessary navigation capabilities.
+The DoD is also required by statute 10 U.S.C. 2281(b) (Ref. 1) to provide for the sustainment and operation of the GPS Standard Positioning Service (SPS) for peaceful civil, commercial, and scientific uses on a continuous worldwide basis free of direct user fees.
+A detailed discussion of U.S. Government agency roles and responsibilities is contained in the companion Federal Radionavigation Systems (FRS) document (Ref. 4).
+1.6
+Radionavigation Systems Selection Considerations Many factors are considered in determining the optimum mix of Federally provided radionavigation systems.
+These factors include: operational, technical, economic, institutional, international parameters and the needs of national defense.
+System accuracy, integrity, and coverage are the foremost technical parameters, followed by system availability and reliability.
+Radio frequency spectrum issues also must be considered.
+Certain unique parameters, such as anti-jamming performance, apply principally to military needs but also affect civil availability.
+The current investment in ground and user equipment must also be considered.
+In some cases, there may be international commitments that must be honored or modified in a fashion mutually agreeable to all parties.
+In most cases, current systems were developed to meet different requirements.
+This resulted in the proliferation of multiple radionavigation systems and was the impetus for 1-3
+early radionavigation planning.
+The first edition of the FRP was published to plan the mix of radionavigation systems and promote an orderly life cycle for them.
+It described an approach for selecting radionavigation systems to be used in the future.
+Early editions of the FRP, including the 1984 edition, reflected that approach with minor modifications to the timing of events.
+By 1986, it became apparent that a final recommendation on the future mix of radionavigation systems was not appropriate and major changes to the timing of system life-cycle events were required.
+Consequently, it was decided that starting with the 1986 FRP, an updated recommendation on the future mix of radionavigation systems would be issued with each edition of the FRP.
+The 2001 FRP reflects policy direction from the Presidential Decision Directive (PDD) (Ref. 5), dynamic radionavigation technology, changing user profiles, budget considerations, international activities and input received at radionavigation user conferences sponsored by DOT and DoD.
+In the final analysis, provision of Government services for meeting user requirements is subject to the budgetary process, including authorizations and appropriations by Congress, and priorities for allocations among programs by agencies.
+When, after appropriate analysis and study, the need or economic justification for a particular system appears to be diminishing, the Department operating the system will notify the appropriate Federal agencies and the public, by publishing the proposed discontinuance of service in the Federal Register.
+1.6.1 1.6.1.1 Operational Considerations Military Selection Factors Operational need is the principal influence in the DoD selection process.
+Precise navigation is required for vehicles, anywhere on the surface of the Earth, under the sea, and in and above the atmosphere.
+Other factors that affect the selection process are: Â· Â· Â· Â· Â· Â· Â· Â· Flexibility to accommodate new weapon systems and technology.
+Resistance of systems to enemy interference or exploitation.
+Interoperability with the systems used by allies and the civil sector.
+Reliability and survivability in combat.
+Interruption, loss or degradation of system operation by enemy attack, political action, or natural causes.
+Availability of alternate means of navigation and landing.
+Geodetic accuracy relative to a common reference system, to support strategic and tactical operations.
+Worldwide mobility requirements.
+1-4
+1.6.1.2
+Civil/Military Compatibility DoD aircraft, vehicles and ships operate in, and must be compatible with, civil environments.
+Thus, there are potential cost advantages in the development of common civil/military systems.
+The activities experienced in activation of the maritime Ready Reserve Force during Desert Shield/Desert Storm have identified a potential need for improved navigation accuracy for ships involved in military sealift support.
+New GPS receiver concepts for systems with optional security modules are under consideration to be used when commercial ships and/or aircraft are called into use in national emergencies.
+1.6.1.3
+Review and Validation The DoD radionavigation system requirements review and validation process: Â· Â· Â· Â· Identifies the unique components of mission requirements.
+Identifies technological deficiencies.
+Determines, through interaction with DOT, the impact of new military requirements on the civil sector.
+Investigates system costs, user populations, and the relationship of candidate systems to other systems and functions.
+1.6.2
+Technical Considerations In evaluating future radionavigation systems, there are a number of technical factors that must be considered: Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Â· Received signal strength Spectrum availability Multipath effects Signal accuracy Signal acquisition and tracking continuity Signal integrity System availability Signal Continuity Vehicle dynamic effects Signal coverage Noise effects
+1-5
+Â· Â· Â· Â· Â· Â· 1.6.2.1
+Propagation Susceptibility to radio frequency (RF) interference (natural or man-made) Installation requirements Environmental effects Human factors engineering Reliability
+Vulnerability Reliance of GPS in the National Transportation Infrastructure The Final Report of the President's Commission on Critical Infrastructure Protection concluded that GPS services and applications are susceptible to various types of interference, and that the effects of these vulnerabilities on civilian transportation applications should be studied in detail.
+As a result of the report, Presidential Decision Directive 63 issued the following directive to the Federal Aviation Administration: The Federal Aviation Administration shall develop and implement a comprehensive National Airspace System Security Program to protect the modernized NAS from information-based and other disruptions and attacks.
+Although not mentioned specifically, the security of GPS-reliant systems in the NAS is included.
+The FAA worked with the Air Transport Association of America (ATA) and the Aircraft Owners and Pilots Association (AOPA) to perform an independent GPS risk assessment.
+This study, conducted by the Johns Hopkins University Applied Physics Laboratory, assessed the risks associated with the use of GPS and GPS enhanced by the Wide Area Augmentation System (WAAS) and the Local Area Augmentation System (LAAS) as the only navigation system required in aircraft operating within the NAS.
+The final report was delivered in January 1999.
+The study concluded that Â· GPS with appropriate WAAS/LAAS configurations can satisfy navigation performance requirements as the only navigation system installed in the aircraft and the only navigation service provided by the U.S. Federal Government for aviation, and that Â· Risks to GPS signal reception can be managed, but steps must be taken to minimize the effects of intentional interference.
+The FAA is committed to delivering satellite-based navigation service capable of supporting operations throughout the NAS without reliance on other navigation systems.
+However, GPS with WAAS/LAAS will not be the only navigation service provided by the Government for aviation.
+The FAA's phase-down plan for ground-based Navaids (See Section 3.2) retains at least a minimum operational network of ground-based Navaids for the foreseeable future.
+The FAA is also examining various techniques for mitigating interference to GPS, as discussed in Section 3.2.2.
+1-6
+In addition, Presidential Decision Directive 63 directed that: The Department of Transportation, in consultation with the Department of Defense, shall undertake a thorough evaluation of the vulnerability of the national transportation infrastructure that relies on the Global Positioning System.
+This evaluation shall include sponsoring an independent, integrated assessment of risks to civilian users of GPS-based systems, with a view to basing decisions on the ultimate architecture of the modernized NAS on these evaluations.
+The Volpe National Transportation Systems Center (Volpe Center) conducted this evaluation and has identified GPS vulnerabilities and their potential impacts to aviation, maritime transportation, railroads, and intelligent transportation systems (ITS).
+The final report, Vulnerability Assessment of the Transportation Infrastructure Relying on the Global Positing System, (Ref. 6) was published on September 10, 2001 and is available on the Coast Guard website at www.navcen.uscg.gov.
+Among the report's recommendations: Â· Â· Â· Â· Â· Â· Identify appropriate backup systems, integrity warning, or operational procedures for each safety-critical application.
+Create awareness among aviation, maritime and surface user communities of the vulnerability of GPS and the need to reduce degradation or loss of the GPS signal.
+Encourage the development of low-cost systems as backups to GPS.
+Implement systems to monitor, report and locate unintentional interference to GPS.
+Assess the applicability of military GPS anti-jamming technology and work with DoD and industry to make appropriate technologies available for civilian uses.
+Continue the ongoing GPS modernization program involving higher GPS broadcast power and the eventual availability of three civil frequencies.
+The Secretary of Transportation has tasked the administrators of each DOT operating administration to thoroughly review this report and consider the adequacy of backup systems for each area of operation in which GPS is being used for critical transportation applications.
+The findings of the operating administrations' review will be available and presented in a public outreach meeting in early 2002.
+The findings will be used by DOT's operating administrations to strengthen safety-critical areas that have an impact on aviation, maritime, railroads, and intelligent transportation systems.
+DOT will work with DoD to take appropriate steps to address GPS vulnerability in order to assure safe, secure transportation.
+1.6.3 Economic Considerations At the present time, there are several systems being operated by FAA, USCG, DoD and others.
+The Government must continually review the costs and benefits of the navigation
+1-7
+systems it provides.
+This continuing analysis can be used both for setting priorities for investment in new systems, and determining the appropriate mix of older systems to be retained.
+Only those systems that provide the economic benefits in excess of costs should continue in operation.
+In some cases, duplicate systems will have to be maintained for safety reasons and to allow adequate time for the transition to newer more accurate systems; however, older systems must be evaluated to determine whether or not their level of use is cost-effective.
+In many instances, aids to air navigation that do not economically qualify for ownership and operation by the Federal Government are needed by private, corporate, or state organizations.
+While these non-Federally owned/operated (non-Fed) systems do not provide sufficient economic benefit on a national scale, they may provide significant economic benefit to local economies.
+In most cases they are also available for public use.
+The FAA regulates and inspects the facilities in accordance with Federal Aviation Regulations, Part 171, and FAA directives.
+1.6.4 Institutional Considerations
+1.6.4.1 Cost Recovery for Radionavigation Services It has been the general policy of the U.S. Government to recover the costs of Federally provided services that provide benefits to specific user groups.
+The amount of use of present Federal radionavigation services by individual users or groups of users cannot be easily measured; therefore, it would be difficult to apportion direct user charges.
+Cost recovery for radionavigation services is either through general tax revenues or through transportation trust funds, which are generally financed with indirect user fees.
+In the case of GPS, the PDD has stipulated that there will be no direct user fees for GPS SPS. 1.6.4.2 Signal Availability The availability of accurate navigation signals at all times is essential for safe navigation.
+Conversely, guaranteed availability of optimum performance may diminish national security objectives, so that contingency planning is necessary.
+The U.S. national policy is that all radionavigation systems operated by the U.S. Government will remain available for peaceful use subject to direction by the NCA in the event of a war or threat to national security.
+In order to minimize service disruptions and prevent situations threatening safety or efficient use of GPS, any government agency or activity with a need to perform interference testing (i.e., transmit) in the GPS spectrum must coordinate with the FAA Spectrum Policy and Management Office.
+The FAA Spectrum Policy and Management Office acts as coordinator for any and all GPS interference testing.
+The DoD has the need to perform interference testing.
+However, DoD and all other agencies and all other agencies must coordinate through the FAA prior to test activity to ensure minimal impact to non-participating DoD and DOT mission critical activities.
+1-8
+1.6.4.3 Role of the Private Sector Radionavigation systems have historically been provided by the Government to support safety, security, and commerce.
+These services have supported air, land and marine navigation and time or frequency-based services.
+For certain applications such as landing, positioning, and surveying, in areas where Federal systems are not economically justified, a number of privately operated systems are available to the user as an alternative or adjunct service.
+Air navigation facilities, owned and operated by non-Federal service providers, are regulated by the FAA under Title 14 Part 171 of the Code of Federal Regulations (CFR) "Non-Federal Navigation Facilities."
+A non-Federal sponsor may coordinate with the FAA to acquire, install and turn an air navigation facility over to the FAA for maintenance because waiting for a Federally provided facility would cost too much in lost business opportunity.
+Non-Federal facilities are operated and maintained to the same standards as Federally operated facilities under an Operations and Maintenance Manual agreement with the FAA.
+This program includes recurrent ground and flight inspections of the facility to ensure that it continues to be operated in accordance with this agreement.
+When the facility is available for public use, ground and flight inspections are provided without compensation, but reimbursement of these expenses must be sought if the facility only supports private operations.
+A number of factors need to be considered when examining private sector involvement in the provision of air navigation services: Â· Â· Â· Â· Â· Â· Â· 1.6.5 Consideration of phase-over to private operation as a viable alternative to phaseout of a Federally operated radionavigation service.
+Private sector development of air navigation facilities for both non-Federal and Federal use.
+Impact of privately operated services on usage and demand for Federally operated services.
+Need for a Federally provided safety of navigation service even if commercially provided services are available.
+Liability considerations for the developer, service provider, and user.
+Radio frequency spectrum issues.
+Certification of the equipment, service, service provider, operator, and controller.
+International Considerations Radionavigation services and systems consider the standards and guidelines of international groups, including the North Atlantic Treaty Organization (NATO) and other allies, the International Civil Aviation Organization (ICAO), the International Telecommunications Union (ITU), and the International Maritime Organization (IMO).
+1-9
+The goals of performance, standardization, and cost minimization of user equipment influence the search for an international consensus on a selection of radionavigation systems.
+The ICAO establishes standards for internationally used civil aviation radionavigation systems.
+The IMO plays a similar role for the international maritime community.
+The International Association of Lighthouse Authorities (IALA) also develops international radionavigation guidelines.
+IMO is reviewing existing and proposed radionavigation systems to identify a system or systems that could meet the requirements of, and be acceptable to, members of the international maritime community.
+In planning U.S. radionavigation systems, consideration is also given to the possible future use of internationally shared systems.
+In addition to operational, technical, and economic factors, international interests must also be considered in the determination of a system or systems to best meet civil user needs.
+Further international consultations under the auspices of the Department of State will be required to resolve the issues.
+1.6.6 Interoperability Considerations Radionavigation systems are sometimes used in combination with each other or with other systems.
+These combined systems are often implemented so that a major attribute of one system will offset a weakness of another.
+For example, a system having high accuracy and a low fix rate might be combined with a system with a lower accuracy and higher fix rate.
+The combined system would demonstrate characteristics of a system with both high accuracy and a high fix rate.
+For example, a few manufacturers of navigation and positioning equipment have developed combined GPS/GLONASS receivers to take advantage of these benefits.
+Some receivers are on the market with others in the planning stage.
+1.6.7 Radio Frequency Spectrum Considerations Radionavigation services are major users of the radio frequency spectrum in the United States and worldwide.
+The FAA, DoD, and the USCG are Federal users of spectrum as providers and operators of radionavigation services.
+Robust and satisfactory radionavigation services require adequate spectrum bandwidth, with the highest level of integrity and availability.
+Spectrum engineering and spectrum policy for radionavigation systems operated by the Federal Government are key elements that support the Federal radionavigation systems planning process.
+Spectrum policy for DOT is coordinated through OST.
+The certification and use of radionavigation services is the shared responsibility of the DoD and DOT with delegation of spectrum responsibilities to the FAA, USCG, and DoD frequency management authorities.
+A key element in the certification of a navigation system is electromagnetic compatibility analysis, which helps determine its operational criteria and protection limits (e.g., power, channel spacing, spurious emissions, and total bandwidth).
+Spectrum used for radionavigation must be protected to ensure the highest level of integrity, availability and accuracy for safety of navigation.
+1-10
+2 U.S. Policies for Radionavigation Systems
+This section sets forth the policy for Federally provided radionavigation systems.
+2.1
+General The Federal Government operates radionavigation systems as one of the necessary elements to enable safe transportation and encourage commerce within the United States.
+It is a goal of the Government to provide this service in a cost-effective manner.
+As the full civil potential of GPS and its augmentations is realized, the service provided by other Federally provided radionavigation systems is expected to decrease to match the reduction in demand for those services.
+However, operational or safety considerations may dictate the need for complementary navigation systems to support navigation or conduct certain operations.
+While some operations may be conducted safely using a single radionavigation system, it is Federal policy to provide redundant radionavigation service where required.
+A major goal for the U.S. Government is to select a mix of common-use civil/military radionavigation systems that meets diverse user requirements.
+When the benefits, including the safety benefits, derived by the users of a service drop below the cost of providing that service, the Federal Government will no longer continue to provide that service.
+A suitable transition period will be
+2-1
+established based on safety, user equipment availability, radio spectrum transition issues, cost and acceptance, budgetary considerations, and the public interest.
+International commitments dictate certain levels and types of navigation services to ensure interoperability with international users.
+Although radionavigation systems are established primarily for safety of transportation and national defense, they also provide significant benefits to other civil, commercial, and scientific users.
+In recognition of this, the Federal government will consider the needs of the users before making any changes to the operation of radionavigation systems.
+Radionavigation systems operated by the U.S. Government are available as directed by the National Command Authority (NCA) in the event of war or threat to national security.
+Operating agencies may cease operations or change characteristics and signal formats of radionavigation systems during a dire national emergency.
+All communication links, including those used to transmit differential GPS corrections and other GPS augmentations, are also subject to the direction of the NCA.
+2.2
+Individual Systems 2.2.1 GPS GPS is a space-based radionavigation system developed and operated by the DoD and managed by the Interagency GPS Executive Board*.
+The GPS provides two levels of service Â­ a Standard Positioning Service (SPS), which uses the coarse acquisition (C/A) code on the L1 frequency, and a Precise Positioning Service (PPS) which uses the P(Y) code on both the L1 and L2 frequencies.
+Access to the PPS is restricted to U.S. Armed Forces, U.S. Federal agencies, and selected allied armed forces and governments.
+These restrictions are based on national security considerations.
+The SPS is available to all users on a continuous, worldwide basis, free of any direct user charge.
+The specific capabilities provided by SPS are established by DoD and DOT and are published in the Global Positioning System Standard Positioning Service Performance Standard (formerly known as the SPS Signal Specification), (Ref. 7) available through the USCG Navigation Information Service.
+The U.S. Government has determined that two additional coded signals are essential for certain uses of GPS.
+A second civil signal will be added at the GPS L2 Frequency (1227.60 MHz).
+A third civil signal that can meet the needs of critical safety-of-life applications such as civil aviation will be added at 1176.45 MHz.
+The third civil signal frequency is designated as L5.
+*
+See Section 1 in the FRS (Ref. 4).
+2-2
+The aviation community is a major user of GPS. Unaugmented GPS is approved as a primary system for use in oceanic and remote airspace.
+Also, GPS is approved as a supplemental system for domestic en route and terminal navigation, and for nonprecision approach (NPA) and landing operations.
+The FAA's overlay initiative, which permits use of GPS to fly most existing NPA procedures, was of particular significance in achieving early operational benefits from GPS.
+The convenience of GPS for executing the thousands of existing VORand NDB-based NPAs was made immediately available to suitably equipped aircraft.
+In addition to the overlay NPAs, the FAA has produced and published GPS-based NPAs for runways without existing approaches, as well as improved approaches (lower minimums) for runways with existing NPAs.
+GPS will be the primary Federally provided radionavigation system for the foreseeable future.
+GPS will be augmented to satisfy civil requirements for accuracy, coverage, availability, continuity, and integrity.
+2.2.2 Augmentations to GPS Maritime Differential GPS Service (MDGPS): The USCG Maritime DGPS service provides increased accuracy and integrity of the GPS using land-based reference stations that transmit correction messages.
+It provides service for coastal coverage of the continental U.S., the Great Lakes, Puerto Rico, portions of Alaska and Hawaii, and portions of the Mississippi River Basin.
+Nationwide Differential GPS (NDGPS): The U.S. is expanding the Maritime DGPS Service to cover all surface areas of the United States to meet the requirements of surface users.
+Wide Area Augmentation System (WAAS): The WAAS, a satellite-based GPS augmentation system being developed by the FAA, is expected to provide lateral and vertical navigation for all phases of flight in the NAS except Category II and III precision approaches.
+Local Area Augmentation System (LAAS): The LAAS, a ground-based GPS augmentation system being developed by the FAA, is expected to provide the required accuracy, integrity, and availability for Category II and III precision approaches, as well as to increase the availability of Category I services.
+LAAS may be used to support parallel runway operations, runway incursion warnings, high-speed turnoffs, missed approaches, departures, vertical takeoffs and surface operations.
+LAAS will also support area navigation (RNAV) operations.
+National Continuously Operating Reference Stations (CORS): The national CORS is a GPS augmentation system operated by NGS/NOAA that archives GPS data for precision applications, and which computes high accuracy reference coordinates used by certain Federal Radionavigation Systems.
+2-3
+2.2.3
+Loran-C Loran-C provides coverage for maritime navigation in U.S. coastal areas.
+It provides navigation, location, and timing services for both civil and military air, land and marine users.
+Loran-C is approved as an en route supplemental air navigation system for both Instrument Flight Rule (IFR) and Visual Flight Rule (VFR) operations.
+The Loran-C system serves the 48 conterminous states, their coastal areas, and parts of Alaska.
+The Government will continue to operate the Loran-C system in the short term while the Administration evaluates the long-term need for the system.
+The U.S. Government will give users reasonable notice if it concludes that Loran-C is not needed or is not cost effective, so that users will have the opportunity to transition to alternative navigation aids.
+2.2.4
+VOR/DME VOR/DME provides users with a means of air navigation in the NAS. VOR/DME will continue to provide navigation services for en route through nonprecision approach phases of flight throughout the transition to satellite-based navigation.
+The FAA plans to reduce VOR/DME services provided in the NAS based on the anticipated decrease in use of VOR/DME for en route navigation and instrument approaches.
+2.2.5
+TACAN TACAN is the military counterpart of VOR/DME.
+The azimuth service of TACAN primarily serves military users whereas the DME serves both military and civil users.
+The DoD requirement and use of land-based TACAN will continue until aircraft are properly integrated with GPS and GPS is approved for all operations in national and international controlled airspace.
+2.2.6
+Precision Approach Systems The Instrument Landing System (ILS) is the predominant system supporting precision approaches in the U.S.
+With the advent of GPS-based precision approach systems, the role of ILS will be reduced.
+ILS may continue to be used to provide precision approach service at major terminals.
+The FAA has terminated the development of the Microwave Landing System (MLS) based on favorable GPS test results.
+The U.S. does not anticipate installing additional MLS equipment in the NAS.
+2-4
+2.2.7
+Aeronautical Nondirectional Beacons (NDB) NDBs serve as nonprecision approach aids at some airports; as compass locators, generally collocated with the outer marker of an ILS to assist pilots in getting on the ILS course in a non-radar environment; and as en route navigation aids.
+Most NDBs will be phased out.
+2-5
+3 Operating Plans for Radionavigation Systems
+This section summarizes the plans of the Federal Government to provide general-purpose and special-purpose radio aids to navigation for use by the civil and military sectors.
+It focuses on three aspects of planning: (1) the efforts needed to maintain existing systems in a satisfactory operational configuration; (2) the development needed to improve existing system performance or to meet unsatisfied user requirements in the near term; and (3) the evaluation of existing and proposed radionavigation systems to meet future user requirements.
+Thus, the plan provides the framework for operation, development, and evolution of systems.
+3.1
+Operating Plans Figure 3-1 shows the operating plans for Federally provided common-use radionavigation systems.
+3.1.1 Global Positioning System (GPS) The DoD will maintain a 24-satellite constellation.
+Replacement satellites will be launched on an anticipated need.
+The DoD will provide a 48-hour advance notice of any planned disruption of the SPS in peacetime, other than planned GPS interference testing as described in Section 2.5B in the FRS.
+The DoD notice will be given to the USCG Navigation Information Service (NIS) and the FAA Notice to Airmen (NOTAM) system.
+A disruption is defined as
+3-1
+Maritime NDB (non-GPS) Loran-C*
+Began Phase-down
+Terminated
+Begin Phase-down
+VOR/DME Begin Phase-down**
+TACAN Begin Phase-down
+ILS Cat I Begin Phase-down
+MLS Aero NDB (stand alone) ILS Cat II / III GPS IOC FOC Signal Available*** IOC **** IOC FOC
+Begin Phase-down
+C/A on L2 C/A on L2 IOC IOC
+L5 IOC
+L5 FOC
+Maritime DGPS WAAS LAAS (CAT I) LAAS (CAT II 
+3-2
+***** FOC FOC
+First public-use system installed First public-use system installed FOC
+1995
+2000
+2005
+2010
+Calendar Year 2015
+Loran-C will continue to operate in the short-term while the Administration evaluates the long-term need for continuation of the system.
+** Unless determined to be necessary for long-term navigation services.
+*** For non-safety applications.
+The WAAS is currently under development and test prior to FAA certification for safety-of-flight applications.
+The FAA has authorized the aviation use of W AAS to enhance situational awareness until the system is certified for unrestricted use.
+It is the user's responsibility to exercise common prudence and navigational judgement while using the WAAS signal.
+**** Approved for safety applications (as a supplemental means of navigation).
+*****Approved as a primary means of navigation (Tentative date.
+See discussion in Section 3.1.3.3).
+Note: Phase-down dates are targets and may be changed in subsequent editions of the FRP.
+Figure 3-1.
+Radionavigation Systems Operating Plan
+periods in which the GPS is not capable of providing SPS as specified in the GPS Standard Positioning Service Performance Standard (formerly known as the SPS Signal Specification) (Ref. 7).
+The NIS and NOTAM systems will announce unplanned system outages resulting from system malfunctions or unscheduled maintenance (see Section 4 of the FRS) as they become known.
+3.1.2 GPS Modernization The GPS Modernization effort focuses on improving position and timing accuracy, availability, integrity monitoring support capability and enhancement to the control system.
+As these system enhancements are introduced, users will be able to continue to use existing ICD- GPS- 200 complaint (Ref. 8) receivers, as signal backward compatibility is an absolute requirement for both the military and civil user communities.
+Although current GPS users will be able to operate at the same, or better, levels of performance that they enjoy today, users will need to modify existing user equipment or procure new user equipment in order to take full advantage of any new signal structure enhancements.
+GPS modernization is a multi- phase effort to be executed over the next 15+ years.
+Additional signals are planned to enhance the ability of GPS to support civil users and provide a new military code.
+The first new signal will be the C/A code on the L2 frequency (1227.60 MHz).
+This feature will enable dual channel civil receivers to correct for ionospheric error.
+A third civil signal will be added on the L5 frequency (1176.45 MHz) for use in safety- of- life applications.
+L5 can serves as a redundant signal to the GPS L1 frequency (1575.42 MHz) with a goal of assurance of continuity of service potentially to provide precisions approach capability for aviation users.
+In addition, a secure and spectrally separated Military Code (M- Code) will be broadcast on the L1 and L2 frequencies enabling the next generation of military receivers to operate more fully in an electronic jamming environment.
+At least one satellite is planned to be operational on orbit with the new C/A on L2 and M- Code capability no later than 2003.
+Initial operating capability (IOC) (18 satellites on orbit) is planned for 2008 and full operational capability (FOC) (24 satellites on orbit) is planned for 2010.
+At least one satellite is planned to be operational on orbit with the new L5 capability no later than 2005, with IOC planned for 2012 and FOC planned for 2014.
+3.1.3
+Augmentations to GPS GPS SPS will not meet all the different user performance requirements for navigation, positioning, and timing applications.
+Various differential techniques are used to augment GPS to meet specific user performance requirements; however, it is important to note that differential systems and users of differential systems are dependent upon being able to receive the GPS SPS signal in order to compute a position using differential techniques.
+3- 3
+3.1.3.1
+Maritime Differential GPS The USCG Maritime DGPS Service provides terrain- penetrating medium frequency (MF) signals, optimized for surface applications, for coastal coverage of the continental U.S., the Great Lakes, Puerto Rico, portions of Alaska and Hawaii, and portions of the Mississippi River Basin.
+Maritime DGPS uses fixed GPS reference stations that broadcast pseudo- range corrections and provide GPS integrity information using radionavigation radiobeacons.
+The Maritime DGPS Service provides radionavigation accuracy better than 10 meters (2 drms) for U.S. harbor entrance and approach areas.
+The system is operated to International Telecommunications Union (ITU) and Radio Technical Commission for Maritime Services (RTCM) standards and has been implemented by more than 40 other maritime nations.
+The USCG declared FOC of the Maritime DGPS Service on March 15, 1999.
+Steps are being taken to include DGPS as a system that meets the carriage requirements of the Navigation Safety Regulations (33 CFR 164), for vessels operating on the navigable waters of the U.S.
+3.1.3.2
+Nationwide Differential GPS A Nationwide DGPS (NDGPS) Service is being established under the authority of Section 346 of the Department of Transportation and Related Agencies Appropriation Act, 1998 P.L. 10566 U.S.C. 301 note (Ref. 9).
+This service is an expansion of the MDGPS to cover areas of the country where service from MDGPS is not available.
+When complete, this service will provide uniform differential GPS coverage of the continental U.S. and selected portions of Hawaii and Alaska regardless of terrain, man made, and other surface obstructions.
+This is achieved by using a terrain- penetrating medium frequency signal optimized for surface application.
+This service, along with MDGPS, provides a highly reliable GPS integrity function to terrestrial and maritime users.
+NDGPS accuracy is specified to be 10 meters or better.
+Typical system performance is better than 1 meter in the vicinity of the broadcast site.
+Achievable accuracy degrades at an approximate rate of 1 meter for each 150 km distance from the broadcast site.
+When each site is brought online, it meets all FOC requirements as set forth by the USCG for their MDGPS service.
+This includes integrity, availability, and accuracy.
+Sites are being activated as funds are becoming available.
+The NDGPS Service will achieve FOC when it is provides dual coverage of the continental U.S. and selected portions of Hawaii and Alaska with single coverage elsewhere.
+Given the current funding environment, FOC is expected by the end of calendar year 2007.
+The service is operated to the RTCM SC- 104 broadcast standard.
+This standard has also been adopted by the international community as ITU- R 823 and has been implemented in over 40 countries, maritime and non- maritime, worldwide.
+3- 4
+3.1.3.3
+Wide Area Augmentation System (WAAS) The FAA is developing the WAAS to augment GPS. WAAS is designed primarily for aviation users.
+The WAAS provides a signal-in-space to enable WAAS users to navigate the en route through precision approach phases of flight.
+The signal-in-space provides three services: (1) integrity data on GPS and Geostationary Earth Orbit (GEO) satellites, (2) differential corrections of GPS and GEO satellites to improve accuracy, and (3) a ranging capability to improve availability and continuity.
+The FAA announced in August 2000 that WAAS is continuously broadcasting differential corrections and is available for non-safety applications.
+WAAS initial operational capability for safety applications (as a supplemental means of navigation), expected in 2003, will support en route through approach with vertical guidance (LNAV/VNAV) operations.
+The long-term plans for navigation architecture are based on a WAAS primary means of navigation determination in 2009.
+These plans are being updated based on the current IOC schedule and the reports of the WAAS Independent Review Board and WAAS Integrity and Performance Panel (WIPP).
+The WIPP has recommended that after achieving IOC, the WAAS be incrementally improved to expand the area of coverage, increase the availability of nonprecision approaches and RNAV, increase signal redundancy, reduce operational restrictions, and support precision approach operations.
+The recently published Vulnerability Assessment of the Transportation Infrastructure Relying on the Global Positioning System (Ref. 6) also recommended that the FAA continue to upgrade the system's resistance to intentional and unintentional interference.
+To that end, as well as to improve performance, a key recommendation is to utilize the new GPS civil signal at L5 (1176.45 MHz) when it is available to provide a more robust, interference resistant, and available service to users equipped with L5 receivers.
+The result of these incremental improvements will enable aircraft equipped with WAAS avionics to execute all phases of flight in the NAS except Category II and III precision approaches.
+3.1.3.4 Local Area Augmentation System (LAAS) LAAS augments GPS by providing differential corrections to users via a VHF data broadcast.
+Suitably equipped aircraft will be able to conduct precision approaches and RNAV operations at airfields where LAAS Category I ground facilities are installed.
+Category I LAAS is currently in development with installation of the first (of 46) federal systems expected in 2003.
+Research and specification development are currently underway to support Category II and III LAAS.
+The first public use Category II and III LAAS system (of 114) is planned in 2006.
+3.1.3.5 The National Continuously Operating Reference Station (CORS) System The National Geodetic Survey is establishing a national CORS system to support nonnavigation, post-processing applications of GPS.
+The national CORS system provides code range and carrier phase data from a nationwide network of GPS stations for access by the Internet.
+As of October 2001, data were being provided from about 232 stations.
+3-5
+The NGS is making use of stations established by other groups rather than by building an independent network of reference stations.
+In particular, use is being made of data from stations operated by components of DOT to support real-time navigation requirements.
+Approximately 40 percent of the stations now providing data for the national CORS system are the stations of the USCG Maritime DGPS Service and the NDGPS.
+It is planned that the WAAS system will be incorporated into the national CORS in 2001.
+Other stations currently contributing data to the national CORS system include stations operated by the National Oceanic and Atmospheric Administration (NOAA) and NASA in support of crustal motion activities, stations operated by state and local governments in support of surveying applications, and stations operated by NOAA's Forecast Systems Laboratory in support of meteorological applications.
+3.1.4 Loran-C Loran-C was developed to provide military users with a radionavigation capability with much greater coverage and accuracy than its predecessor (Loran-A).
+It was subsequently selected as the Federally provided radionavigation system for civil marine use in the U.S. coastal areas.
+It is currently designated by the FAA as a supplemental system in the NAS for the en route and terminal phases of flight.
+The Government will continue to operate the Loran-C system in the short term while evaluating the long-term need for the system.
+The U.S. Government will give users reasonable notice if it concludes that Loran-C is not needed or is not cost effective so that users will have the opportunity to transition to alternative navigation aids.
+Improvement of GPS time synchronization of the Loran-C chains and the use of digital receivers may support improved accuracy and coverage of the service.
+3.1.5 VOR and DME VOR was developed as a replacement for the Low-Frequency Radio Range to provide a bearing from an aircraft to the VOR transmitter.
+A collocated DME provides the distance from the aircraft to the DME transmitter.
+At most sites, the DME function is provided by the TACAN system that also provides azimuth guidance to military users.
+Such combined facilities are called VORTAC stations.
+Some VOR stations also broadcast weather information.
+The FAA operates 1012 VOR, VOR/DME, and VORTAC stations including 150 VORonly stations.
+The DoD operates stations in the U.S. and overseas which are available to all users.
+The current VOR/DME network will be maintained until 2010 to enable aviation users to equip their aircraft with WAAS avionics and to become familiar with the system.
+Plans for the expansion of the network are limited to site modernization or facility relocation, and the conversion of VORs having degraded signal propagation to a Doppler VOR configuration.
+The phase-down of the VOR/DME and TACAN network is expected to begin in 2010.
+The proposed phase-down will transition from today's full coverage network through an interim network and then to a minimum operational network.
+The minimum operational network will support IFR operations for the busiest airports in the NAS.
+A further 3-6
+reduction may be possible to the level of a basic backup network.
+Section 3.2 discusses the transition in more detail.
+3.1.6 TACAN TACAN is limited to line-of-sight, approximately 180 miles at higher altitudes, because of propagation characteristics and radiated power.
+Similar to VOR/DME, special consideration must be given to the location of ground-based TACAN facilities, especially in mountainous terrain due to line-of-sight coverage.
+TACAN is a tactical air navigation system for the military services ashore and afloat and TACAN is the military counterpart of civil VOR/DME.
+TACAN is a UHF radionavigation system that provides bearing and distance information through collocated azimuth and DME antennas.
+TACAN is primarily collocated with the civil VOR stations (VORTAC facilities) to enable military aircraft to operate in the NAS and to provide DME information to civil users.
+The FAA and DoD currently operate approximately 746 TACAN systems in support of military flight operations within the NAS.
+Specifically, FAA operates and maintains 573 of these systems in support of the DoD.
+The DoD operates and maintains 173 systems.
+FAA and DoD continue to review and update requirements in support of planned transition from land-based to space-based primary navigation.
+The DoD requirement for land-based TACAN will continue until: military aircraft are properly integrated with GPS; GPS is approved for all operations in both national and international controlled airspace; and the GPS support infrastructure including published procedures, charting, etc., are in place.
+The target date to begin the phase-down of land-based TACAN is 2010.
+3.1.7 ILS ILS provides aircraft with precision vertical and lateral navigation (guidance) information during approach and landing.
+Associated marker beacons or DME equipment identify the final approach fix, the point where the final descent to the runway is initiated.
+ILS is the standard civil precision approach system in the U.S. and abroad, and is protected by ICAO agreement to January 1, 2010.
+The FAA operates 1077 ILS systems in the NAS, 99 of which are Category II or Category III systems.
+In addition, the DoD operates 165 ILS facilities in the U.S.
+As the GPS-based approach systems (WAAS/LAAS) are integrated into the NAS, and user equipage and acceptance grows, the number of ILS systems will be reduced.
+The phase-down will transition from today's full coverage network through an interim network to a minimum operational network and possibly to a basic backup network.
+The minimum operational network will support IFR operations for the busiest airports in the NAS.
+Section 3.2 discusses the transition in more detail.
+For ILS Installations conforming to the Standards and Recommended Practices of ICAO Annex 10, Volume 1 (Aeronautical Telecommunications Â­ Radio Navigation Aids), no change in, or addition to, those Standards will require the replacement of such equipment before January 1, 2010.
+3-7
+The phase-down of Category I ILS is expected to begin in 2010.
+The FAA does not anticipate phasing out any Category II and III ILS systems.
+Until LAAS systems are available, new and upgrade Category II and III precision approach requirements will continue to be with ILS. 3.1.8 MLS The U.S. does not anticipate additional civil MLS development.
+The phase-down of MLS is expected to begin in 2010.
+3.1.9 Aeronautical Nondirectional Beacons (NDBs) NDBs serve as nonprecision approach aids at some airports; as compass locators, generally collocated with the outer marker of an ILS to assist pilots in getting on the ILS course in a non-radar environment; and as en route navigation aids.
+The FAA operates over 700 NDBs.
+This number is expected to decline steadily over the next decade as more users equip with GPS.
+In addition, there are about 200 military NDBs and 800 non-Federally operated NDBs.
+FAA expenditures for beacons are planned to be limited to the replacement of deteriorated components, modernization of selected facilities, and an occasional establishment or relocation of an NDB used for ILS transition.
+The FAA expects to decommission stand-alone NDBs starting in 2010.
+NDBs used as compass locators for ILS approaches, where no equivalent ground-based means for transition to the ILS course exists, will be maintained until the underlying ILS is phased out.
+A separate transition timeline may be developed for NDBs that define low frequency airways in Alaska.
+3.2 Phase-Down of Ground-Based Aeronautical Navaids 3.2.1 Civil Air Transition to Satellite-Based Navigation (Satnav) The FAA is planning to transition into providing Satnav services based primarily on GPS augmented by the WAAS and the LAAS.
+As a result of this transition, the need for ground-based navigation services will diminish and the number of Federally provided ground-based facilities will be reduced accordingly.
+The proposed phase-down strategy is depicted in Figure 3-2.
+The FAA is evaluating alternatives for the future NAS navigation architecture and will update the transition plans as Satnav program milestones are achieved; as the actual performance of Satnav systems is documented; and as users equip with Satnav avionics.
+The Navaid phase-down can be initiated after the following conditions have been met: Â· Â· WAAS has been approved as a primary means of navigation for a given flight operation.
+WAAS procedures have been published.
+3-8
+100%
+Percent Infrastructure of Current Network
+Current Network 75% Â· 1012 VOR/DMEs Â· 1077 ILSs Â· 750 NDBs
+Interim Network Â·Reduces number of VOR/DMEs 
+50%
+Minimum Operational Network (MON) Retains high-activity ground-based Navaids to support en route navigation and instrument operations at busier airports in the NAS. ~ 1400 airports with VOR or ILS approach, 600
+25%
+Basic Backup Network (BBN) (Not planned but possible) A further reduction to a BBN may be possible.
+Several hundred VOR/DMEs support radionavigation updates of DME/DME 
+Some CAT I ILSs 
+?
+2000
+2005
+2010
+2015
+Calendar Year Figure 3-2.
+Proposed Civil Aeronautical Navaid Phase-Down Steps Â· A majority of the civil users of the NAS have equipped with appropriate WAAS avionics.
+The proposed phase-down strategy has several distinct steps.
+This approach allows the FAA to conduct the phase-down gradually, providing users sufficient time to equip with Satnav avionics.
+A more abrupt transition would be too disruptive to NAS operations and would place too great a burden on the users.
+The phase-down is planned to begin in 2010 based on projected Satnav program milestones and anticipated user equipage rates.
+The specific Navaids no longer qualifying for Federal support at each step of the phasedown would be determined based on specific criteria, currently under development.
+3-9
+Navaids supporting en route navigation would be decommissioned.
+Navaids supporting terminal navigation could be decommissioned or transitioned to a non-Federal sponsor.
+The discontinuance criteria will be published as early as possible and well ahead of the phase-down.
+A site-specific list of Navaids fitting the discontinuance criteria will be published later--perhaps at the time of WAAS FOC.
+The advanced site-specific notice will afford users the opportunity to plan their transition to Satnav based upon the operational schedule for the specific Navaids they use most often.
+Â· Interim Network Â­ discontinued at the that approximately support at this first the current Navaid Many currently little-used VORs and ILSs would be first step of the phase-down.
+Preliminary analysis indicates 350 VORs and 300 ILSs would no longer qualify for Federal step, representing a reduction to approximately 70 percent of population.
+Â·
+Minimum Operational Network (MON) Â­ A second step in the phase-down would further reduce the population of ground-based Navaids to the level of a proposed Minimum Operational Network that supports a substantial number of currently certified airways, jet routes, and instrument approach procedures.
+The MON would support continued operation in the NAS by those aircraft not yet equipped with Satnav avionics, albeit at a reduced level of efficiency (i.e., more circuitous routes between some airports).
+The MON would also provide the FAA and the airspace users with a safe recovery and sustained operations capability in the event of a disruption in Satnav service.
+The MON represents a reduction to approximately 50 percent of today's Navaid population.
+Basic Backup Network (BBN) Â­ The FAA does not presently plan to reduce service from ground-based Navaids below the level of the MON.
+However, eventually it may be possible to reduce to an even smaller subset of Navaids.
+A candidate Basic Backup Network composed of several hundred VOR/DME Navaids might allow aircraft equipped with DME/DME avionics to continue en route navigation using dual-DME position updates.
+Aircraft equipped with VOR avionics could fly en route directly to or from a single Navaid.
+The envisioned, limited VOR capability would not support operation on the airways or jet routes, but could allow aircraft to navigate safely out of potential Satnav outage areas.
+The BBN would also provide a nonprecision instrument approach capability at selected airports.
+A limited number of Category I ILSs, and virtually all Category II and III ILSs, would be retained to support precision instrument approaches at major airports.
+Preliminary analysis has identified the possibility of a BBN consisting of approximately 25 percent of today's Navaids.
+Â·
+3.2.2
+Mitigating Disruptions to Satnav Service The FAA will continue to operate and maintain a network of ground-based Navaids for the foreseeable future.
+However, the FAA is committed to delivering satellite-based navigation service capable of supporting operations throughout the NAS without reliance on other navigation systems.
+Even if this goal is attained, many operators are expected to choose to retain other radionavigation receivers, and it is possible that inertial navigation systems could be required for some operators.
+Procedural means will be used to maintain 3-10
+safe operations in the event of a loss of GPS.
+A number of studies and evaluations are underway to help determine the feasibility of this goal.
+The FAA will update the navigation strategy if necessary to ensure safe and reliable air transportation.
+Critical issues to be addressed are discussed below.
+There is concern about potential disruptions to Satnav service, primarily due to the relatively weak signals received from the GPS satellites.
+The predominant concerns relate to a potential loss of service caused by intentional jamming or unintentional radio frequency interference.
+The effects of jamming and unintentional interference are primarily to increase the workload of both the users and the air traffic controllers.
+Pilots and controllers will work together to assure safety, but a loss of navigation and landing capabilities increases the demand for services.
+Operational restrictions would likely be necessary in the event of an outage to balance demand and assure safety.
+Ionospheric scintillation during severe solar storms is also a concern, but is expected to have only minimal impact on CONUS airspace.
+The greatest impact is expected in the polar regions and near the equator.
+Most aircraft operating on polar routes are equipped with inertial systems and can operate for many hours between radionavigation updates before violating separation requirements.
+Some care will be needed in high-latitude and equatorial zone Satnav-based instrument approaches at night.
+A loss of GPS service in the absence of any other means of radionavigation would have varying negative effects on air traffic operations.
+These effects could range from nuisance events requiring standard restoration of capabilities, to an inability to provide normal air traffic control service within one or more sectors of airspace for a significant period of time.
+Several solutions have been identified to help mitigate the effects of a Satnav service disruption, but each has its limitations.
+Â· The L5 civil frequency planned for GPS will help alleviate the impacts of both solar activity and unintentional interference, but it may be 2013 or later before a full constellation of dual-frequency satellites is available.
+Modern transport-category turbojet aircraft with inertial systems, when engaged in relatively stable en route flight, may be able to continue navigating safely an hour or more after losing radionavigation position updating.
+In some cases, this capability may prove adequate to depart an area with localized jamming or proceed under visual flight rules during good visibility and high ceilings.
+However, inertial performance without radionavigation updates degrades with time and will eventually fail to meet airspace requirements.
+Integrated GPS/inertial avionics having significant anti-jam capability could greatly reduce the area affected by a GPS jammer or by unintentional interference.
+Â·
+Â·
+The NAS is divided into hundreds of air traffic control "sectors."
+A single air traffic controller has the responsibility to keep aircraft safely separated from one another within each sector.
+Sector dimensions vary, and are established based on predominant traffic flows, altitude, and controller workload.
+3-11
+Industry research is proceeding to develop this technology, with an expectation that it might be marketed to the general aviation community.
+However, significant technical challenges remain to be resolved to ensure that this technology works correctly, and some users may still find this technology to be unaffordable.
+Â· A basic backup network composed of several hundred conventional VOR/DME Navaids might allow aircraft equipped with DME/DME avionics to continue en route navigation using dual-DME position updates.
+It would also provide a nonprecision instrument approach capability at selected airports.
+However, lowaltitude users may need to be vectored by air traffic controllers into an area with VOR coverage or to an area in visual meteorological conditions.
+Additional Navaids (where required) may also be needed for missed approaches and departures where terrain or obstruction clearances must be maintained-- particularly in non-radar environments.
+Users may have an option to equip with IFR-certified Loran-C avionics, pending the improvements needed to achieve a nonprecision instrument approach capability with Loran.
+A combined Loran/Satnav receiver could provide navigation and nonprecision instrument approach service throughout any disruption to Satnav service.
+If a majority of operations are conducted by aircraft equipped with an additional navigation capability (e.g., inertial or Loran), then the balance should be able to be managed with air traffic control vectors based on an independent (radar) surveillance system.
+Additional research may be necessary to validate this concept in terms of the impact to air traffic controller workload and the sensitivity to the proportion of backup-equipped aircraft.
+An ILS (or MLS) may need to be retained at major airports to provide a backup precision approach capability, and where necessary to support international compatibility.
+ILSs may also be needed at a few remote airports where the distance to the closest major (ILS-equipped) airports is excessive.
+Â·
+Â·
+Â·
+3.2.3
+Long-Term Transition Plans The pace and extent of the transition to Satnav will depend upon a number of factors related to system performance and user acceptance.
+The FAA plans to reduce groundbased Navaids subject to these factors.
+The decision to retain a specific subset of groundbased Navaids to support satellite navigation does not need to be made until well after experience is gained with Satnav technology.
+Some site-specific Navaids will reach the end of their serviceable life before 2010.
+The need to replace selected Navaids will require investment analysis and investment decisions on what specific Navaids to retain.
+The FAA's plans for the transition to Satnav and for the phase-down of ground-based Navaids will be periodically reevaluated.
+These plans need to remain flexible, and may need to be adjusted as Satnav program milestones are achieved, as the actual performance of Satnav systems is demonstrated, and as users equip with Satnav avionics.
+The transition plans will continue to be coordinated with airspace users and with the FAA's air traffic control community.
+3-12
+4 Research and Development Summary
+4.1
+Overview This section describes Federal Government radionavigation system research and development (R
+It is organized into two segments: (1) civil R
+DOT R
+DoD R
+Where appropriate, DOT and DoD exchange operational and technical information on radionavigation systems R
+4.2
+DOT R
+Initially, efforts were directed primarily toward determining the capability of GPS to meet civil user needs in the air, marine, and land transportation communities.
+Subsequently, as civil user needs expanded, it became apparent that the GPS SPS would not meet every possible requirement from every potential civil user.
+Consequently, R
+requirements.
+Many new efforts are focusing on the development of new and innovative applications of GPS.
+In addition, RSPA is conducting a series of research activities in transportation infrastructure assurance (TIA), including reviews of system independencies and the vulnerability of systems related to E-commerce.
+Navigation and radionavigation systems are being included in the scope of these projects.
+4.2.1 Civil Aviation The FAA's basic R
+Additional R
+Further, the FAA and Coast Guard are conducting joint evaluations, which are expected to be complete at the end of 2001, are examining whether Loran-C improvements can enhance Loran-C's accuracy, availability, integrity, and continuity.
+WAAS R
+Address the likelihood and potential severity of interference on GPS and Spacebased Augmentation System (SBAS) implementations.
+Ensure clock performance for SBAS internal and external interfaces.
+Investigate and define international connectivity requirements.
+LAAS R
+Explore and investigate various availability enhancements as a result of additional ranging sources provided by pseudolites, GLONASS, WAAS, and other satellites being considered for the WAAS payload.
+Investigate LAAS VHF Data Broadcast (VDB) optimization techniques and identify the most optimal signal generation techniques and broadcast format(s).
+Evaluate effects of RF interference on GPS ground reference receivers, and evaluate methods of mitigation.
+Evaluate methods of LAAS ground system integrity monitoring.
+Â· Â· Â·
+4-2
+GPS L5 Activities: Â· Continue leadership role in the development and implementation of GPS L5 including verification of the ability of L5 to co-exist with existing systems in the 1164-1215 MHz band.
+Loran-C Activities: Â· Evaluate the ability of Loran-C to provide LNAV capability in the NAS from take-off through the en route, terminal and nonprecision approach phases of flight through the mitigation of accuracy, availability, continuity, and integrity issues associated with the current legacy system, including: Evaluation of magnetic field (H-field) antennas to overcome the detrimental affects of precipitation static.
+Exploring use of all-in-view Loran receivers rather than only those associated with a single chain to increase availability and continuity.
+Replacement of aging tube transmitters with solid-state transmitters to preclude outages due to tube overloads.
+Replacement of aging timing and frequency equipment, including cesium clocks, to increase accuracy.
+Improvement of lightning protection and provision of uninterruptible power supplies to increase availability.
+Â· Â· Develop a high-speed Loran-C data channel and evaluate its ability to convey WAAS-like GPS corrections or other data to an aircraft.
+Evaluate new digital signal processing receiver technology to determine how it, coupled with transmission system improvements, can provide increased navigation and communication benefits.
+Evaluate integrated Loran-C/GPS receiver architectures.
+Â· 4.2.2
+Civil Marine The Coast Guard is developing a set of analysis tools to allow performance evaluations of navigation systems in specific ports and waterways.
+These tools will help assess the relative level of safety expected from radio aids, navigation equipment, and short range aids to navigation intended to be used for harbor entrance and approach.
+In addition, the USCG is exploring accuracy enhancement and the integration of DGPS with other navigation sensors.
+Particular emphasis is being placed upon the integration of DGPS with Inertial Navigation Systems (INS).
+Efforts are being conducted to determine
+4-3
+the ability to INS to enhance DGPS/GPS navigation service, and to provide heading information for Electronic Chart Display Information System (ECDIS) use.
+Work with RTCM Special Committee 104 (SC104) in developing new high accuracy messages, including ones optimized for use with selective ability (SA) off, is being conducted.
+This work includes the development of corrections for ranging signals broadcast from geostationary satellites.
+Also, several promising improvements to the DGPS data link hold the potential to further mitigate the effects of impulse noise and interference and are being studied.
+4.2.3 Civil Land FHWA, FRA, USCG, NOAA and other Federal agencies, as well as State and local government agencies, are collaborating on a research program to assess the feasibility of improving the accuracy of the NDGPS using the existing infrastructure.
+The program goal is to enable users to compute positions at a 2-5 cm accuracy level near (within 40 km) the reference station and 10-20 cm accuracy level nationwide.
+The High Accuracy NDGPS program is currently developing the capability to simultaneously broadcast carrier phase observable data with the current pseudorange correction data.
+The High Accuracy NDGPS signal will be diplexed on existing NDGPS broadcast antennas ensuring that the current NDGPS signal is not affected in any way.
+A higher data link will be employed and the data link will be fully synchronized to GPS time.
+Field trials with the High Accuracy NDGPS signal are planned by the end of 2001.
+4.3
+NASA R
+These efforts include: Space Applications: The emphasis in the space applications R
+These receivers will be capable of providing onboard navigation products, providing GPS time signals for distribution to spacecraft systems and instruments, providing necessary data for post-pass processing in support of science data collection, and determining spacecraft attitude.
+Some receivers will send GPS observables to the ground for processing of position information; however, the more advanced receivers will provide onboard autonomous position and navigation.
+The latest generation of NASA GPS spaceborne receivers will be software programmable units that will include the capability to receive the second civil signal.
+The prototype, single frequency, version will be tested onboard the Space Shuttle as an experiment in 2001.
+NASA has already started to work on adding the second civil frequency capability to this receiver and plans to begin flight tests on the capability as GPS satellites with the second civil signal become available in the 2003 time frame.
+In addition to the direct use of GPS satellite information, NASA will be conducting research into the use of WAAS.
+Initial work in this area indicates that significant
+4-4
+improvements will be achieved in real-time determination of satellite position through improved GPS satellite signal visibility as well as improved integrity protection for satellite users.
+During the next few years, NASA, in conjunction with DoD and the international community, will be exploring the use of GPS at satellite altitudes extending to geosynchronous orbit.
+In addition, there is promising research being conducted in the use of spaceborne GPS receivers to detect GPS signals reflected off the ocean surface.
+Initial experiments from aircraft indicate potential feasibility of using this application from satellites to determine sea state.
+Aeronautics Applications: NASA will continue to use GPS receivers aboard NASA aircraft for both aeronautics research and in support of airborne scientific observations.
+There are numerous projects throughout NASA where GPS technology is being developed for these purposes.
+Airborne GPS receivers have been used to support NASA scientific research in areas such as Airborne Synthetic Aperture Radar (AIRSAR) and in Greenland ice sheet thickness measurements.
+NASA is also experimenting with using GPS in a "windowless cockpit" application where GPS positioning is used together with a detailed 3-dimensional map of the Earth to provide synthetic vision for the crew in control of future high-speed vehicles.
+This same technique may also be used in commercial aviation as an important safety aid to avoid controlled flight into terrain accidents.
+Terrestrial Applications: NASA is supporting the continued development of the International GPS Service for Geodynamics (IGS).
+The data received from this network of GPS monitoring stations are providing data products on a daily basis that are distributed via the Internet for users worldwide.
+One of the direct products of the IGS is measurement of Earth crustal movement at the centimeter per year level.
+In addition, a possible byproduct of this research could be the eventual development of reliable techniques to be used for earthquake early warning and prediction.
+4.4
+NOAA R
+Some of the specific studies being undertaken are: improved modeling of tidal deformations of the Earth; development of models of antenna phase center variation as a function of elevation angle of a satellite; development of models of station specific multipath errors; development of improved models of geoid height required to convert GPS derived ellipsoid heights to orthometric heights; and development of improved computational models for determination of the vertical coordinate.
+NOAA is also developing operational methods of using GPS derived total precipitable water vapor determinations to improve the accuracy of weather forecasts.
+Studies are underway to improve the methods used to position and orient aircraft performing
+4-5
+photogrammetry in support of nautical and aeronautical charting, as well as the positioning of the keel of vessels relative to sea bottom hydrography.
+4.5
+DoD R
+This R
+4-6
+Appendix A Definitions
+Accuracy - The degree of conformance between the estimated or measured position and/or velocity of a platform at a given time and its true position or velocity.
+Radionavigation system accuracy is usually presented as a statistical measure of system error and is specified as: Â· Predictable - The accuracy of a radionavigation system's position solution with respect to the charted solution.
+Both the position solution and the chart must be based upon the same geodetic datum.
+(Note: Chapter 4 in the FRS discusses chart reference systems and the risks inherent in using charts in conjunction with radionavigation systems.)
+Repeatable - The accuracy with which a user can return to a position whose coordinates have been measured at a previous time with the same navigation system.
+Relative - The accuracy with which a user can measure position relative to that of another user of the same navigation system at the same time.
+Â·
+Â·
+Air Traffic Control (ATC) - A service operated by appropriate authority to promote the safe and efficient flow of air traffic.
+Approach Reference Datum - A point at a specified height above the runway centerline and the threshold.
+The height of the MLS approach reference datum is 15 meters (50 ft).
+A tolerance of plus 3 meters (10 ft) is permitted.
+A-1
+Area Navigation (RNAV) - Application of the navigation process providing the capability to establish and maintain a flight path on any arbitrarily chosen course that remains within the coverage area of navigation sources being used.
+Automatic Dependent Surveillance (ADS) - A function in which aircraft transmit position and altitude data derived from onboard systems via a datalink for use by air traffic control, other aircraft, and certain airport surface vehicles.
+Availability - The availability of a navigation system is the percentage of time that the services of the system are usable.
+Availability is an indication of the ability of the system to provide usable service within the specified coverage area.
+Signal availability is the percentage of time that navigation signals transmitted from external sources are available for use.
+Availability is a function of both the physical characteristics of the environment and the technical capabilities of the transmitter facilities.
+Block II/IIA - The satellites that form the initial GPS constellation at FOC.
+Cellular Triangulation - A method of location determination using the cellular phone system where the control channel signals from a mobile phone are captured by two or more fixed base stations and processed according to an algorithm to determine the location of the mobile receiver.
+Circular Error Probable (CEP) - In a circular normal distribution (the magnitudes of the two one-dimensional input errors are equal and the angle of cut is 90o), circular error probable is the radius of the circle containing 50 percent of the individual measurements being made, or the radius of the circle inside of which there is a 50 percent probability of being located.
+Coastal Confluence Zone (CCZ) - Harbor entrance to 50 nautical miles offshore or the edge of the continental shelf (100 fathom curve), whichever is greater.
+Common-use Systems - Systems used by both civil and military sectors.
+Conterminous U.S. - Forty-eight adjoining states and the District of Columbia.
+Continuity - The continuity of a system is the ability of the total system (comprising all elements necessary to maintain aircraft position within the defined airspace) to perform its function without interruption during the intended operation.
+More specifically, continuity is the probability that the specified system performance will be maintained for the duration of a phase of operation, presuming that the system was available at the beginning of that phase of operation.
+Coordinate Conversion - The conversion of position coordinates from one type to another within the same datum or geodetic reference system, e.g., from geodetic coordinates (latitudes and longitudes) to Universal Transverse Mercator (UTM) system (x,y).
+Coordinated Universal Time (UTC) - UTC, an atomic time scale, is the basis for civil time.
+It is occasionally adjusted by one-second increments to ensure that the difference
+A-2
+between the uniform time scale, defined by atomic clocks, does not differ from the earth's rotation by more than 0.9 seconds.
+Coverage - The coverage provided by a radionavigation system is that surface area or space volume in which the signals are adequate to permit the user to determine position to a specified level of accuracy.
+Coverage is influenced by system geometry, signal power levels, receiver sensitivity, atmospheric noise conditions, and other factors that affect signal availability.
+Datum Transformation - The change of position coordinates from one geodetic datum or reference system to another datum or reference system, e.g., from European Datum 1950 to WGS 84.
+Deception (electromagnetic) - Deliberate radiation, reradiation, alternation, suppression, absorption, denial, enhancement, or reflection of electromagnetic spectrum in any manner intended to convey misleading information.
+Differential - A technique used to improve radionavigation system accuracy by determining positioning error at a known location and subsequently transmitting the determined error, or corrective factors, to users of the same radionavigation system, operating in the same area.
+Distance Root Mean Square (drms) - The root-mean-square value of the distances from the true location point of the position fixes in a collection of measurements.
+As used in this document, 2 drms is the radius of a circle that contains at least 95 percent of all possible fixes that can be obtained with a system at any one place.
+Actually, the percentage of fixes contained within 2 drms varies between approximately 95.5 percent and 98.2 percent, depending on the degree of ellipticity of the error distribution.
+En Route - A phase of navigation covering operations between a point of departure and termination of a mission.
+For airborne missions the en route phase of navigation has two subcategories, en route domestic and en route oceanic.
+En Route Domestic - The phase of flight between departure and arrival terminal phases, with departure and arrival points within the conterminous United States.
+En Route Oceanic - The phase of flight between the departure and arrival terminal phases, with an extended flight path over an ocean.
+Fault Detection and Exclusion (FDE) - Fault detection and exclusion is a receiver processing scheme that autonomously provides integrity monitoring for the position solution, using redundant range measurements.
+The FDE consists of two distinct parts: fault detection and fault exclusion.
+The fault detection part detects the presence of an unacceptably large position error for a given mode of flight.
+Upon the detection, fault exclusion follows and excludes the source of the unacceptably large position error, thereby allowing navigation to return to normal performance without an interruption in service.
+Flight Level (FL) - A level of constant atmospheric pressure related to a reference datum of 29.92 inches of mercury.
+Each is stated in three digits that represent hundreds of feet.
+A-3
+For example, flight level (FL) 250 represents a barometric altimeter indication of 25,000 feet; FL 225 represents an indication of 25,500 feet.
+Flight Technical Error (FTE) - The contribution of the pilot in using the presented information to control aircraft position.
+Free Flight - A safe and efficient flight operating capability under instrument flight rules in which the operators have the freedom to select their path and speed in real time.
+Air traffic restrictions are only imposed to ensure separation, to preclude exceeding airport capacity, to prevent unauthorized flight through special use airspace, and to ensure safety of flight.
+Restrictions are limited in extent and duration to correct the identified problem.
+Full Operational Capability (FOC) - A system dependent state that occurs when the particular system is able to provide all of the services for which it was designed.
+Geocentric - Relative to the Earth as a center, measured from the center of mass of the Earth.
+Geodesy - The science related to the determination of the size and shape of the Earth by such direct measurements as triangulation, GPS positioning, leveling, and gravimetric observations.
+Geometric Dilution of Precision (GDOP) - All geometric factors that degrade the accuracy of position fixes derived from externally referenced navigation systems.
+Global Navigation Satellite System (GNSS) - The GNSS is a world-wide position and time determination system, that includes one or more satellite constellations, aircraft receivers, and system integrity monitoring, augmented as necessary to support the required navigation performance for the actual phase of operation.
+Inclination - One of the orbital elements (parameters) that specifies the orientation of an orbit.
+Inclination is the angle between the orbital plane and a reference plane, the plane of the celestial equator for geocentric orbits and the ecliptic for heliocentric orbits.
+Initial Operational Capability (IOC) - A system dependent state that occurs when the particular system is able to provide a predetermined subset of the services for which it was designed.
+Integrity - Integrity is the ability of a system to provide timely warnings to users when the system should not be used for navigation.
+Interference (electromagnetic) - Any electromagnetic disturbance that interrupts, obstructs, or otherwise degrades or limits the performance of user equipment.
+Intrusion (electromagnetic) - Intentional insertion of electromagnetic energy into transmission paths with the objective to deceive or confuse the user.
+Jamming (electromagnetic) - The deliberate radiation, reradiation, or reflection of electromagnetic energy for the purpose of preventing or reducing the effective use of a signal.
+A-4
+Multipath - The propagation phenomenon that results in signals reaching the receiving antenna by two or more paths.
+When two or more signals arrive simultaneously, wave interference results.
+The received signal fades if the wave interference is time varying or if one of the terminals is in motion.
+Nanosecond (ns) - One billionth of a second.
+National Airspace System (NAS) - The NAS includes U.S. airspace; air navigation facilities, equipment and services; airports or landing areas; aeronautical charts, information and service; rules, regulations and procedures; technical information; and labor and material used to control and/or manage flight activities in airspace under the jurisdiction of the U.S. System components shared jointly with the military are included.
+National Command Authority (NCA) - The NCA is the President or the Secretary of Defense, with the approval of the President.
+The term NCA is used to signify constitutional authority to direct the Armed Forces in their execution of military action.
+Both movement of troops and execution of military action must be directed by the NCA.
+Nautical Mile (nm) - A unit of distance used principally in navigation.
+The International Nautical Mile is 1,852 meters long.
+Navigation - The process of planning, recording, and controlling the movement of a craft or vehicle from one place to another.
+Navigation System Error (NSE) - The NSE is the error attributable to the navigation system in use.
+It includes the navigation sensor error, receiver error, and path definition error.
+NSE combines with Flight Technical Error (FTE) to produce the Total System Error.
+Nonprecision Approach - A standard instrument approach procedure in which no electronic glide slope is provided (e.g., VOR, TACAN, or NDB).
+Position Dilution of Precision - A scalar measure representing the contribution of the GPS satellite configuration geometry to the accuracy in three-dimensional position.
+Precise Time - A time requirement accurate to within 10 milliseconds.
+Precision Approach - A standard instrument approach procedure using a ground-based system in which an electronic glide slope is provided (e.g., ILS).
+Primary Means Air Navigation System - A navigation system approved for a given operation or phase of flight that must meet accuracy and integrity requirements, but need not meet full availability and continuity of service requirements.
+Safety is achieved by limiting flights to specific time periods and through appropriate procedural restrictions.
+There is no requirement to have a sole-means navigation system on board to support a primary means system.
+Radiodetermination - The determination of position, or the obtaining of information relating to positions, by means of the propagation properties of radio waves.
+A-5
+Radiolocation - Radiodetermination used for purposes other than those of radionavigation.
+Radionavigation - The determination of position, or the obtaining of information relating to position, for the purposes of navigation by means of the propagation properties of radio waves.
+Receiver Autonomous Integrity Monitoring (RAIM) - A technique whereby a GPS receiver/processor determines the integrity of the GPS navigation signals without reference to external systems other than to the GPS satellite signals themselves or to an independent input of altitude information.
+This determination is achieved by a consistency check among redundant pseudorange measurements.
+Reliability - The probability of performing a specified function without failure under given conditions for a specified period of time.
+Required Navigation Performance - A statement of the navigation performance accuracy necessary for operation within a defined airspace, including the operating parameters of the navigation systems used within that airspace.
+Rho (Ranging Mode) - A mode of operation of a radionavigation system in which the times for the radio signals to travel from each transmitting station to the receiver are measured rather than their differences (as in the hyperbolic mode).
+Roadside Beacons - A system using infrared or radio waves to communicate between transceivers placed at roadsides and the in-vehicle transceivers for navigation and route guidance functions.
+Sigma - See Standard Deviation.
+Sole Means Air Navigation System - A sole-means navigation system approved for a given operation or phase of flight must allow the aircraft to meet, for that operation or phase of flight, all four navigation system performance requirements: accuracy, integrity, availability, and continuity of service.
+Note--This definition does not exclude the carriage of other navigation systems.
+Any sole-means navigation system could include one (standalone installation) or several sensors, possibly of different types (multi-sensor installation).
+Spherical Error Probable (SEP) - The radius of a sphere within which there is a 50 percent probability of locating a point or being located.
+SEP is the three-dimensional analogue of CEP.
+Standard Deviation (sigma) - A measure of the dispersion of random errors about the mean value.
+If a large number of measurements or observations of the same quantity are made, the standard deviation is the square root of the sum of the squares of deviations from the mean value divided by the number of observations less one.
+Statute Mile - A unit of distance on land in English-speaking countries equal to 5,280 feet or 1,760 yards.
+A-6
+Supplemental Air Navigation System - A navigation system that may only be used in conjunction with a primary- or sole-means navigation system.
+Approval for supplemental means for a given phase of flight requires that a primary-means navigation system for that phase of flight must also be on board.
+Amongst the navigation system performance requirements for a given operation or phase of flight, a supplemental-means navigation system must meet the accuracy and integrity requirements for that operation or phase of flight; there is no requirement to meet availability and continuity requirements.
+Note-Operationally, while accuracy and integrity requirements are being met, a supplementalmeans system can be used without any crosscheck with the primary-means system.
+Any navigation system approved for supplemental means could involve one (stand-alone installation) or several sensors, possibly of different types (multi-sensor installation).
+Surveillance - The observation of an area or space for the purpose of determining the position and movements of craft or vehicles in that area or space.
+Surveying - The act of making observations to determine the size and shape, the absolute and/or relative position of points on, above, or below the Earth's surface, the length and direction of a line, the Earth's gravity field, length of the day, etc.
+Terminal - A phase of navigation covering operations required to initiate or terminate a planned mission or function at appropriate facilities.
+For airborne missions, the terminal phase is used to describe airspace in which approach control service or airport traffic control service is provided.
+Terminal Area - A general term used to describe airspace in which approach control service or airport traffic control service is provided.
+Theta - Bearing or direction to a fixed point to define a line of position.
+Time Interval - The duration of a segment of time without reference to where the time interval begins or ends.
+TOPEX/POSEIDON - TOPographic EXperiment/POSEIDON mission, a joint U.S./French oceanic mapping mission launched in August 1992.
+Total System Error (TSE) - The TSE comprises both the aircraft and its navigation system tracking errors.
+It is the difference between true position and desired position.
+This error is equal to the vector sum of the path steering error, path definition error, and position estimation error.
+Universal Transverse Mercator (UTM) Grid - A rectangular grid of east-west and north-south lines, with linear scale of 0.9996 along the central meridian, and based on the Transverse Mercator projection; mostly used on military maps and charts from 84oN and 80oS latitudes.
+User Range Error (URE) - A satellite URE is defined to be the instantaneous difference between a ranging signal measurement (neglecting user clock bias), and the true range between the satellite and a GPS user at any point within the service volume.
+A-7
+Vehicle Location Monitoring - A service provided to maintain the orderly and safe movement of platforms or vehicles.
+It encompasses the systematic observation of airspace, surface and subsurface areas by electronic, visual or other means to locate, identify, and control the movement of platforms or vehicles.
+World Geodetic System (WGS) - A consistent set of constants and parameters describing the Earth's geometric and physical size and shape, gravity potential and field, and theoretical normal gravity.
+A-8
+Appendix B Glossary
+The following is a listing of abbreviations for organization names and technical terms used in this plan: ADF ADS ADS-B AFSS AGL AIRSAR AIS AOPA APL ARNS ATA ATC AWP Automatic Direction Finder Automatic Dependent Surveillance Automatic Dependent Surveillance Broadcast Automated Flight Service Stations Above Ground Level Airborne Synthetic Aperture Radar Automatic Identification Systems Aircraft Owners and Pilots Association Airport Pseudolite Aeronautical Radionavigation Service Air Transport Association of America Air Traffic Control Automated Weather Processor
+B-1
+BBN BTS C/A CCW CEP CFR CGS CGSIC CJCS cm CNS CONUS CORS CPDLC CRV DGPS DIA DME DOC DOD DOJ DOI DOS DOT drms ECDIS FAA FAF
+Basic Backup Network Bureau of Transportation Statistics Coarse/Acquisition Coded Continuous Wave Circular Error Probable Code of Federal Regulations Civil GPS Service Civil GPS Service Interface Committee Chairman, Joint Chiefs of Staff centimeter Communication, Navigation and Surveillance Continental United States Continuously Operating Reference Stations Controller Pilot Data Link Crew Return Vehicle Differential Global Positioning System Defense Intelligence Agency Distance Measuring Equipment Department of Commerce Department of Defense Department of Justice Department of the Interior Department of State Department of Transportation distance root mean squared Electronic Chart Display Information System Federal Aviation Administration Final Approach Fix
+B-2
+FAR FDE FGDC FHWA FIR FL FM FMCSA FMS FOC FRA FRP FRS FSDPS FTA FTE GBAS GCA GDOP GEO GES GHz GIAC GIS GLONASS GNSS GPS HF
+Federal Aviation Regulation Fault Detection and Exclusion Federal Geographic Data Committee Federal Highway Administration Flight Information Region Flight Level Frequency Modulation Federal Motor Carrier Safety Administration Flight Management Systems Full Operational Capability Federal Railroad Administration Federal Radionavigation Plan Federal Radionavigation Systems Flight Service Data Processing Systems Federal Transit Administration Flight Technical Error Ground Based Augmentation Systems Ground Controlled Approach Geometric Dilution of Precision Geostationary Earth Orbit Ground Earth Station Gigahertz GPS Interagency Advisory Council Geographic Information Systems Global Navigation Satellite System (Russian Federation System) Global Navigation Satellite System (ICAO) Global Positioning System High Frequency
+B-3
+HMU Hz IAG IALA ICAO ICD IERS IFR IGEB IGS ILS IMO INMARSAT INS IOC ISS ITRF ITS ITS-JPO ITU J PO JTIDS kHz km LAAS LEO LNAV LOP
+Height Monitoring Unit Hertz (cycles per second) International Association of Geodesy International Association of Marine Aids to Navigation and Lighthouse Authorities International Civil Aviation Organization Interface Control Document International Earth Rotation Service Instrument Flight Rules Interagency GPS Executive Board International GPS Service Instrument Landing System International Maritime Organization International Maritime Satellite Organization Inertial Navigation System Initial Operational Capability International Space Station IERS Terrestrial Reference Frame Intelligent Transportation Systems Intelligent Transportation Systems Joint Program Office International Telecommunication Union Joint Program Office Joint Tactical Information Distribution System kilohertz kilometer Local Area Augmentation System Low Earth Orbiting Lateral Navigation Line of Position
+B-4
+m MARAD MCS MCW MDGPS MF MHz MIDS M-Code MLS mm MNPS ms MOA MON MPNTP NAD NANU NAS NASA NATO Navaids NAVCEN NAVD NAVWAR NCA NDB NDGPS
+meter Maritime Administration Master Control Station Modulated Continuous Wave Maritime Differential GPS Service Medium Frequency Megahertz Multi-function Information Distribution System Military Code Microwave Landing System millimeters Minimum Navigation Performance Standard millisecond Memorandum of Agreement Minimum Operational Network Master Positioning, Navigation, and Timing Plan North American Datum Notice Advisories to Navstar Users National Airspace System National Aeronautics and Space Administration North Atlantic Treaty Organization Ground-Based Navigation Aids U.S. Coast Guard Navigation Center North American Vertical Datum Navigation Warfare National Command Authority Nondirectional Beacon Nationwide Differential Global Positioning Service
+B-5
+NGS NGVD NHTSA NIMA NIS nm NOAA NOTAM NPA NPOESS ns NSA NSF NSRS OAB OSD OST OST/B OST/C OST/M OST/P P-code PDD PHMI POS/NAV PPS PRN PTC
+National Geodetic Survey National Geodetic Vertical Datum National Highway Traffic Safety Administration National Imagery and Mapping Agency Navigation Information Service nautical mile National Oceanic and Atmospheric Administration Notice to Airmen Nonprecision Approach National Polar-Orbiting Observational Environmental Satellite System nanosecond National Security Agency National Science Foundation National Spatial Reference System Operational Advisory Broadcast Office of the Secretary of Defense Office of the Secretary of Transportation Assistant Secretary for Budget Programs General Counsel's Office Assistant Secretary for Administration Assistant Secretary for Transportation Policy Pseudorandom Tracking Code Presidential Decision Directive Probability of Hazardously Misleading Information Positioning and Navigation Precise Positioning Service Pseudo-Random Noise Positive Train Control
+B-6
+RACON RAIM RBN R
+Radar Transponder Beacon Receiver Autonomous Integrity Monitoring Radiobeacon Research 
+B-7
+TIS TRSB TSO UHF USACE USAF U.S.C. USCG USDA USD/A
+Traffic Information Services Time Referenced Scanning Beam Technical Standard Order Ultra High Frequency U.S. Army Corps of Engineers United States Air Force United States Code United States Coast Guard U.S. Department of Agriculture Under Secretary of Defense for Acquisition and Technology United States Naval Observatory Coordinated Universal Time Very High Vehicle Data Broadcast Visual Flight Rules Very High Frequency Very Long Baseline Interferometry Very Low Frequency Vertical Navigation Very High Frequency Omnidirectional Range Collocated VOR and TACAN Vessel Traffic Services Wide Area Augmentation System World Geodetic System WAAS Integrity and Performance Panel Wide Area Master Stations Call Sign for the National Bureau of Standards Broadcast Notice to Airmen
+B-8
+References
+1.
+Section 2281 of Title10 The United States Code.
+2.
+Memorandum of Agreement between the Department of Defense and the Department of Transportation on Coordination of Federal Radionavigation and Positioning Systems Planning, January 19, 1999.
+3.
+Memorandum of Agreement Between the Department of Defense and the Department of Transportation on the Civil Use of the Global Positioning System, January 8, 1993.
+4.
+U.S. Department of Transportation and U.S. Department of Defense, Federal Radionavigation Systems, Final Report, DOT/VNTSC/RSPA/01-3.1/DoD-4650.5, November 2001.
+5.
+Presidential Decision Directive, (NSTC-6) U.S. Global Positioning System Policy, March 29, 1996.
+6.
+U.S. Department of Transportation, Volpe Center, Vulnerability Assessment of the Transportation Infrastructure Relying on the Global Positioning System, September 2001.
+7.
+U.S. Department of Defense, Global Positioning System Standard Positioning Service Performance Standard, October 2001.
+8.
+Navstar GPS Space Segment/Navigation User Interfaces ICD-GPS-200, Revision C, Initial Release 10 October 1993 IRN-200C-01 thru IRN-200C-004 (last rev date 12 April 2000).
+9.
+Department of Transportation and Related Agencies Appropriation Act of 1998, P. L. 105.66, Â§346, 49 U.S. C. 301 note, October 27, 1997.
+R-1
+2001 FRP Subject Index A Aeronautical radiobeacons (NDBs), 2-5, 3-8 Aeronautical radionavigation Future plans for, 4-2 Â­ 4-4 ILS, 2-4, 3-7 Local Area Augmentation System (LAAS), 2-3, 3-5, 4-2 Loran-C, 2-4, 3-6, 4-3 MLS, 2-4, 3-8 R
+C Continuously Operating Reference Stations (CORS), 2-3, 3-5, 4-5
+I-1
+D Differential GPS (DGPS) LAAS, 2-3, 3-5, 4-2 Maritime, 2-3, 3-4, 4-3 Nationwide DGPS, 2-3, 3-4, 4-3 WAAS, 2-3, 3-5, 4-2 DoD R
+E ECDIS, 4-3
+G GLONASS, 4-2 GPS Applications, 3-1 Â­ 3-5 Operating plan, 3-1 Â­ 3-5 Policy, 2-2 Vulnerability, 1-6 Â­ 1-7 GPS overlay, 3-3
+I ILS Applications, 3-7 Operating plan, 3-7 Policy, 2-4 Interoperability, of radionavigation systems, 1-10 International considerations, 1-9
+L Local Area Augmentation System (LAAS), 2-3, 3-5
+I-2
+Loran-C Applications, 3-6 Operating plan, 3-6 Policy, 2-3
+M Maritime DGPS, 2-3, 3-3, 4-3 Maritime radionavigation DGPS, 2-3, 3-3, 4-3 Future plans for, 4-3 Loran-C, 2-3, 3-6, 4-2 Military, 1-4 Â­ 1-5 MLS Applications, 3-8 Operating plan, 3-8 Policy, 2-4
+N NASA R
+P Policy, 2-2 Â­ 2-4 Precise Positioning Service (PPS), 2-2
+R Radiobeacons, Aeronautical, 3-8 Applications, 3-8 Operating plan, 3-8 Policy, 2-5 Radio frequency Radionavigation Radionavigation Radionavigation spectrum considerations, 1-10 policy statement, joint DoD/DOT, 2-1 Â­ 2-5 system interoperability, 1-10 Systems Operating Plan, overall, 3-2
+I-3
+Reliability, definition of, A-6 Required Navigation Performance (RNP), A-6
+S Space applications, 4-4 Spectrum considerations, 1-10 Standard Positioning Service (SPS), 2-2
+T TACAN Applications, 3-7 Operating plan, 3-7 Policy, 2-4
+V VOR and DME Applications, 3-6 Operating plan, 3-6 Policy, 2-4 VORTAC, 3-6
+W Wide Area Augmentation System (WAAS), 2-3, 3-5, 4-2
+I-4
+REPORT DOCUMENTATION PAGE
+Form Approved OMB No. 0704-0188
+Public reporting burden for this collection of information is estimated to average 1 hour per response, including the time for reviewing instructions, searching existing data sources, gathering andmaintainingthedataneeded, and completing and reviewing the collection of information.
+Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to Washington Headquarters Services, Directorate for Information Operations and Reports, 1215 Jefferson Davis Highway, Suite 1204, Arlington, VA 22202- 4302, and to the Office of Management and Budget, Paperwork Reduction Project (0704- 0188), Washington, DC 20503.
+1 .
+AGENCY USE ONLY (Leave blank)
+2 .
+REPORT DATE
+3 .
+REPORT TYPE 
+December 2001 4.
+TITLE AND SUBTITLE
+Final Report January 2000 Â­ December 2001 5 .
+FUNDING NUMBERS
+2001 Federal Radionavigation Plan 6.
+AUTHOR(S)
+OP10J/T1037
+7.
+PERFORMING ORGANIZATION NAME(S) U.S. Department of Transportation (OST/P) Washington, DC 20590
+AND ADDRESS(ES)
+U.S. Department of Defense (USD/A
+8.
+PERFORMING ORGANIZATION REPORT NUMBER
+DoD-4650.5/DOT-VNTSC-RSPA -01-3 10.
+SPONSORING OR MONITORING AGENCY REPORT NUMBER
+9 .
+SPONSORING/MONITORING AGENCY NAME(S) AND ADDRESS(ES)
+U.S. Department of Transportation (OST/P) Washington, DC 20590 11.
+SUPPLEMENTARY NOTES
+U.S. Department of Defense (USD/A
+DOT-VNTSC-RSPA -01-3 DoD-4650.5
+12a.
+DISTRIBUTION/AVAILABILITY
+12b.
+DISTRIBUTION CODE
+This document is available to the U.S. public through the National Technical Information Service, Springfield VA 22161 13.
+ABSTRACT (Maximum 200 word s)
+The Federal Radionavigation Plan (FRP) is published in accordance with Section 2281(c) of Title 10, United States Code and delineates policies and plans for radionavigation services provided by the U.S. Government to ensure efficient use of resources and full protection of national interests.
+Developed jointly by the U.S. Departments of Defense and Transportation, the FRP sets forth the Federal interagency approach to the implementation and operation of radionavigation systems.
+The FRP is updated biennially.
+This eleventh edition describes respective areas of authority and responsibility, and provides a management structure by which the individual operating agencies will define and meet requirements in a cost-effective manner.
+Moreover, this edition contains the current policy on the radionavigation systems mix.
+The constantly changing radionavigation user profile and rapid advancements in systems technology require that the FRP remain as dynamic as the issues it addresses.
+This edition of the FRP build s on the foundation laid by previous editions and further develops national plans towards providing an optimum mix of radionavigation systems for the foreseeable future.
+14.
+SUBJECT TERMS
+15.
+NUMBER OF PAGES 66 16.
+PRICE CODE
+Navigation Planning, Radionavigation System, Navigation Requirements, Position Location, Global Positioning System
+17.
+SECURITY CLASSIFICATION OF REPORT
+17.
+SECURITY CLASSIFICATION OF THIS PAGE
+18.
+SECURITY CLASSIFICATION OF ABSTRACT
+19.
+LIMITATION OF ABSTRACT
+Unclassified NSN 7540-01 -280 -5500
+Unclassified
+Unclassified Standard Form 298 (Rev. 2-89) Prescribed by ANSI Std. 239-18 298 -102

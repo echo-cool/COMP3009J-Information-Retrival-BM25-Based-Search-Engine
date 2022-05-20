@@ -1,0 +1,28 @@
+#next previous contents Next Previous Contents __________________________________________________________________ 9.
+First Example: Xscrabble
+Matt Chapman's Xscrabble seemed like a program that would be interesting to have, since I happen to be an avid ScrabbleTM player.
+I downloaded it, uncompressed it, and built it following the procedure in the README file:
+xmkmf make Makefiles make includes make
+Of course it did not work...
+gcc -o xscrab -O2 -O -L/usr/X11R6/lib init.o xinit.o misc.o moves.o cmove.o main.o xutils.o mess.o popup.o widgets.o display.o user.o CircPerc.o -lXaw -lXmu -lXExExt -lXext -lX11 -lXt -lSM -lICE -lXExExt -lXext -lX11 -lXpm -L../Xc -lXc
+BarGraf.o(.text+0xe7): undefined reference to `XtAddConverter' BarGraf.o(.text+0x29a): undefined reference to `XSetClipMask' BarGraf.o(.text+0x2ff): undefined reference to `XSetClipRectangles' BarGraf.o(.text+0x375): undefined reference to `XDrawString' BarGraf.o(.text+0x3e7): undefined reference to `XDrawLine' etc. etc. etc...
+I enquired about this in the comp.os.linux.x newsgroup, and someone kindly pointed out that apparently the Xt, Xaw, Xmu, and X11 libs were not being found at the link stage.
+Hmmm...
+There were two main Makefiles, and the one in the src directory caught my interest.
+One line in the Makefile defined LOCAL_LIBS as: LOCAL_LIBS = $(XAWLIB) $(XMULIB) $(XTOOLLIB) $(XLIB) Here were references to the libs not being found by the linker.
+Looking for the next reference to LOCAL_LIBS, I saw on line 495 of that Makefile:
+$(CCLINK) -o $@ $(LDOPTIONS) $(OBJS) $(LOCAL_LIBS) $(LDLIBS) $(EXTRA_LOAD_FLAGS)
+Now what were these LDLIBS?
+LDLIBS = $(LDPOSTLIB) $(THREADS_LIBS) $(SYS_LIBRARIES) $(EXTRA_LIBRARIES)
+The SYS_LIBRARIES were:
+SYS_LIBRARIES = -lXpm -L../Xc -lXc
+Yes! Here were the missing libraries.
+Possibly the linker needed to see the LDLIBS before the LOCAL_LIBS...
+So, the first thing to try was to modify the Makefile by transposing the $(LOCAL_LIBS) and $(LDLIBS) on line 495, so it would now read:
+$(CCLINK) -o $@ $(LDOPTIONS) $(OBJS) $(LDLIBS) $(LOCAL_LIBS) $(EXTRA_LOAD_FLAGS) ^^^^^^^^^^^^^^^^^^^^^^^
+I tried running make again with the above change, and lo and behold, it worked this time.
+Of course, Xscrabble still needed some fine tuning and twiddling, such as renaming the dictionary and commenting out some assert statements in one of the source files, but since then it has provided me with many hours of pleasure.
+[Note that a newer version of Xscrabble is now available in rpm format, and this installs without problems.]
+You may e-mail Matt Chapman, and download Xscrabble from his home page.
+Scrabble is a registered trademark of the Milton Bradley Co., Inc. __________________________________________________________________
+Next Previous Contents

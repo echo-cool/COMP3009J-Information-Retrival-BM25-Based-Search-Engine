@@ -1,0 +1,584 @@
+Appendix I. Methods, Tools and Databases
+The GRAIL Gene Recognition system
+The MAGPIE System
+The Kleisli System
+The Collaborative Management Environment (CME)
+The NCGR, the GSDB Database, and Annotator
+The Object-Protocol Model and Tools
+Generalized Hidden Markov Models for Gene Model Construction
+The High Performance Storage System (HPSS)
+SubmitData - Data Submission to Public Genome Databases
+BioPOET - A parallel processing framework for workstation farms __________________________________________________________________
+The GRAIL Gene Recognition System
+GRAIL is a modular system which supports the recognition of gene features and gene modeling for the analysis and characterization of DNA sequences.
+GRAIL uses multiple hybrid statistical and neural network-based pattern recognizers and a dynamic programming approach to constructing gene models.
+GRAIL recognizes protein coding regions (exons), poly-A addition sites, potential promoters, CpG islands and repetitive DNA elements.
+XGRAIL also has a direct link to the genQuest server allowing characterization of newly obtained sequences by homology based methods through accessing a number of databases using a number of comparison methods including: FASTA, BLAST and a parallel implementation of the Smith-Waterman algorithm which utilizes the DEC cluster at ORNL CSMD.
+Following an analysis session the user can use an annotation tool to generate a ``feature table'' describing the current sequence and it properties.
+All of this information is presented to the user in graphic form in the X-window based client-server system XGRAIL.
+Since its development in 1991 (Uberbacher and Mural, 1991), the GRAIL system at ORNL has become the world standard for predicting protein coding regions (exons) and modeling genes in DNA sequences.
+From its inception GRAIL has been accessible over the network in a variety of ways including e-mail, a X-based client-server system and through various web browsers over the world wide web.
+The experience with GRAIL at ORNL gives us an understanding of the needs of the genomic / biomedical research community.
+The GRAIL system currently analyzes about 17 million bases of DNA sequence per month (using methods which are simpler and less comprehensive than what is proposed in this GC project).
+In addition the ORNL Informatics Group maintains a public server, genQuest, which allows investigators to query a number of public sequence databases to establish whether a newly determined sequence has any known homologs.
+The genQuest server generally processes about 2500 database search requests per month.
+Combined, GRAIL and genQuest tax the computational power of a 16 DEC-Alpha workstation cluster maintained to support these servers.
+GRAIL is the most widely used of the currently available systems for recognizing the portions of a sequence which have the potential to encode a protein.
+Since GRAIL became available as an e-mail server in 1991, it has processed over 200 million bases of DNA sequence (X. Guan and M. Shah, personal communication) and currently processes 2000 transactions per month.
+GRAIL can be accessed in four different ways: (a) through an e-mail server (grail@ornl.gov), (b) through an X-windows based client-server (the client is available by anonymous ftp from arthur.epm.ornl.gov), (c) Through the World Wide Web (URL http://avalon.epm.ornl.gov/), and (d) as a stand-alone commercial package.
+The MAGPIE System
+MAGPIE, an automated system for carrying out genomic sequence analysis, has recently been introduced.
+MAGPIE (Multipurpose Automated Genome Project Investigation Environment) is designed and implemented to meet the challenges that arise with the generation of complete microbial genome sequences, during and beyond the lifetime of a genome sequencing project.
+In many ways Magpie is a model for methods of analysis and data mining which could become part of the much larger scale processing proposed in this Grand Challenge project.
+When whole microbial genomes are analyzed, large numbers of remote and local analysis tool requests, each depending on changing remote and local conditions, must be initiated.
+Decision modules must monitor and obey user preferences and combine evidence from multiple sources to formulate credible hypotheses about sequence function.
+The data volume that needs to be analyzed in a genome project prohibits the use of ``manual'' techniques and even discourages semi-automatic analysis approaches, because these are not efficient enough to keep up with the pace of sequence production.
+One megabase of microbial genome sequence contains on the order of 1000 genes, in G+C rich organisms, the number of open-reading frames is much higher than the number of genes due to the lack of artificial stop codons.
+Each open reading frame must be examined by an array of tools and searched against multiple databases.
+Thus, on the order of 100000 database searches must be performed and analyzed for each megabase of genome sequence data.
+The results of an automated genome analysis must be served in logical units that allow researchers to access the data in the most efficient way.
+Researchers must be able to interact with the automated system in order to verify, recombine or refute the automatically generated information.
+MAGPIE operates as a local system within a particular genome project.
+Using techniques based on active database and intelligent agents, MAGPIE monitors sequence generation, automates the collection and update of analysis data, and makes initial decisions about genome features based on the combined analysis data.
+It facilitates human validation and editing of automatically assigned features.
+It also allows updates to those features as a genome project carries out wet-lab verification or refutation.
+The current system is designed to handle large contiguous sequences that range in state from early assembled trace data to finished cosmids to finished microbial genomes.
+It runs on Unix workstations with Perl, Prolog, and C.
+The system is scalable: changing one configuration file enables it to run on a single workstation, on a local network of workstations, or on a multiprocessor parallel system (e.g. the IBM SP).
+It is configurable to invoke analysis tools or query locally or remotely.
+A new tool is added to the system by editing configuration files and adding an output parser to the MAGPIE bin.
+The current default configuration includes the BLAST and FASTA families of tools, MP-Search, BLOCKS, PROSEARCH, GENEMARK, tRNAscan-SE, and predict-protein.
+The output is in the form of queryable tables and browsable html files.
+Each genome feature is connected to its supporting evidence and to relevant public database resources including SwissProt, the EMBL Nucleic Acids Database, EMP (Enzyme and Metabolic Pathways database), the Blocks database, the Enzyme databank, Prosite, and MedLine through public database integration resources including SRS, ExPASY, Entrez, and PUMA.
+Three microorganism genomes have been analyzed using the MAGPIE system: Sulfolobus solfataricus, Mycoplasma genitalium, and Rhodobacter capsulatus.
+The most significant limiting factor for a MAGPIE project is the amount of disk space for storing domain data.
+A one megabase pair genome in the finished phase, with about 25 to 30 different analysis tools employed, fills 1 gigabyte of disk.
+Another bottleneck is the performance of community-shared remote tool servers.
+Response times can be up to several hours for a particular tool request.
+This makes it impossible to quickly request the hundreds or thousands of responses needed for a megabase of DNA.
+Both of these problems should be alleviated in the present project through use of high performance computing and terabyte storage capabilities.
+The Kleisli System
+The CPL/Kleisli system addresses the problem of integrating multiple, distributed heterogeneous data sources and application programs.
+One of the strengths of Kleisli is its ability to deal with non-traditional sources, such as data exchange formats, rather than mainstream databases, with the data exchange formats commonly employ complex, nested data structures composed of collection types such as sets, multi-sets, variants, records, lists, and arrays.
+Furthermore, relational query languages are notably deficient in their ability to query lists and sequences, precisely the data structures used to represent biosequence information.
+Kleisli uses general-purpose query system, CPL/Kleisli, that provides access to a variety of flat files (GenBank), custom systems (ACeDB, ASN.1), application programs (BLAST), and relational databases (GDB, GSDB).
+It features a uniform query interface across heterogeneous data sources, a modular and extensible architecture, and most significantly for dealing with the Internet environment, a programmable optimizer.
+Kleisli is capable of complex data manipulation such as structural mediation --a complex data ``join'' between structures that come from different sources--and structural wrapping--type transformations involving nesting/unnesting plus generalized selections and projections.
+Kleisli has been shown to be efficient in composing and executing queries that were considered difficult, if not unanswerable, without first either building a monolithic database or writing highly application-specific integration code.
+The system is organized into three layers: (1) a CPL query interpreter; (2) an optimizer and application programming interface; (3) Data drivers, modular interfaces that mediate between Kleisli and external data sources.
+Kleisli is an extensible query system whose integration capabilities lie somewhere in the middle of the typical ARPA Intelligent Information Integration (I3) architecture.
+Below it we have components that do the actual source access, perhaps over a network, that may pipeline the data, and that may do some dumb, lexical data format translation.
+Kleisli's terminology calls such components data drivers.
+Above it are the ``intelligent'' components, that do ``semantic integration'', that are capable of ``reasoning'', for example in order to deal with redundant information, semantic reconciliation, and even choosing an optimal query plan when a query can be answered in several ways each involving a different set of sources.
+The basic query interface to Kleisli is the CPL query language (for Collection Programming Language) developed at Penn.
+CPL uses the native operations associated with records, variants, sets, lists and multi-sets as the basis of a complete query language for complex types.
+CPL currently uses a comprehension syntax, and can be thought of as SQL extended to a richer type system.
+Within the context of the Kleisli system, it should be thought of as relatively low-level glue language on top of which user views of an integrated data system can be developed.
+Crucial to the success of the Kleisli system is its ability to optimize CPL queries across multiple data sources.
+Many of the optimizations fall out naturally from the theoretical underpinnings of CPL, and generalize to this richer, complex-value type system many of the well known optimizations for relational databases.
+In addition, basic operations such as joins have multiple evaluation strategies; rules in the optimizer specify conditions under which to use each strategy.
+The optimizer also uses lazy evaluation and parallelism whenever possible to reduce response time and total execution time.
+Although the optimizer is quite powerful, it does not have statistical information and access to indices at the underlying sites.
+For relational databases, it therefore recognizes the largest local sub-query that can be performed by the relational server and migrates it to that server for evaluation.
+This takes advantage of the powerful local optimizers available at most relational data sources and has proven to dramatically reduce response time.
+Kleisli is currently written entirely in ML. Routines within Kleisli manage optimization, query evaluation, and I/O from remote and local data sources.
+Once registered in Kleisli, ``data drivers'' perform the task of logging into a specific data source, sending queries in the native form for that source, returning results to Kleisli in internal Kleisli value syntax, and logging out from the data source when the user session terminates.
+The types of data sources currently registered include Sybase, ACeDB, ASN.1 as well as BLAST; the drivers are generic rather than source specific, meaning that once a Sybase driver has been written any Sybase database can be supported.
+Because communication with the drivers is facilitated through UNIX pipes, drivers can be written in any language; we have used C, perl, as well as Prolog.
+In addition, a flexible printing routine allows data to be converted to a variety of formats for use in displaying (e.g., HTML) or reading into another programming language (e.g., perl).
+The Morphase system complements CPL/Kleisli by providing a declarative constraint language, based on Horn-clause logic, that is used to specify full database transformations.
+Morphase is useful for specifying transformations from one or more input databases to an output database, as is done when designing user views, sharing data between heterogeneous data sources, or as is most often the case in our work, in creating a data warehouse by extracted subsets of information from several community, transforming and installing it in our local databases.
+The benefit of a declarative interface is that it is extremely easy to modify as schemas of the underlying data sources and targets evolve.
+BioTk is a domain-specific widget set designed to make it easy to rapidly prototype graphical user interfaces.
+The overarching philosophy behind bioTk is the creation of adaptable, reusable software, deployed in modules that are easily incorporated in a variety of applications, and in such a way as to promote interaction between those applications.
+Many genome centers create such custom software when existing frameworks do not address their requirements.
+Largely because of the need for rapid development, the degree of customization of the tools, the availability of local support, the pressures to move on to the next application, and the lack of incentive to ``productize'', such software is legendary for its failure to transport well to other environments.
+Thus, large genome centers have done surprisingly little in the way of software sharing and reuse.
+One of our main concern is the support of rapid prototyping of applications by bioinformatics professionals in larger research centers.
+The widgets in bioTk encapsulate recurring themes in graphical objects and their behaviors, relieving the programmer of many tedious details.
+In addition, it achieves a common ``look-and-feel'' by way of features like a standard menubar and a common, context-sensitive help system.
+In addition to the general support and help widgets, the bioTk package includes:, a canvas item that draws chromosomes and supports various useful operations upon them; a system supporting the creation of various forms of genome maps and map objects on canvases; a widget that creates a scrolling window of sequence data and again supports various domain-specific operations, especially annotation.
+The menubar along the top is a bioTk standard, and is created with a single command that contains nested cascading menus in a compact data structure.
+A standard file box is shown, one of several types of dialogs available.
+At the bottom is the context-sensitive help window, and one of a library of standard icons. bioTk has already proved very successful in support of EpoDB and the Genome Center for Chromosome 22, and it is now being adopted by a wider community of bioinformatics researchers and developers as part of a consortium which is planning to extend it along a number of paths.
+The master version is implemented in tcl/Tk, a free software package, but parts of it have already been ported to Perl/Tk and Java for distribution over the WWW.
+The Collaborative Management Environment (CME)
+The Collaborative Management Environment is a joint research project between Ames Laboratory and Oak Ridge National Laboratory and is funded by the U. S. Department of Energy (DOE).
+The objective is to establish the framework for a robust, scalable, and secure virtual management system that could ultimately become the de facto standard management system for the DOE.
+This system will provide sophisticated search and cross-cut capabilities within a single site or across multiple sites for finance and project information.
+The research is divided into two functional components that will support a web-based information system: intelligent agents at each site and data analysis and programming tools.
+The research tasks include evaluation of the proposal submission and project management process to identify critical features; defining functionality for data analysis and programming tools that support the web-based interface; defining the meta descriptor and functions of the intelligent agents.
+In addition, much effort is focused on security: authorization and authentication; archival, and interface design.
+The initial prototype is based on expertise gained in the Financial Automated On-line User System at Oak Ridge National Laboratory and the Environmental Restoration Integrated Information System at Ames Laboratory.
+The NCGR, the GSDB Database and Annotator
+GSDB.
+The Genome Sequence DataBase (GSDB) is a complete, public database of DNA sequences and associated annotation.
+GSDB is an outgrowth of the original U. S. DNA sequence database project, initiated at Los Alamos National Laboratory in 1979.
+GSDB development is currently supported by the U.S. Department of Energy under Cooperative Agreement DE-FC03-95ER62062 through 1999.
+The GSDB system comprises a relational database, an overlying in-memory object-oriented data representation, and a set of client user interfaces and tools.
+GSDB is a client-server system, in which multiple clients with their own local object-oriented representations of data currently being acted upon communicate with a common remote relational server.
+The development platforms are currently the Sybase relational database management system (Sybase, Inc.), the C++ object-oriented programming language, and the Galaxy multi-platform interface development tool (Visix, Inc.).
+GSDB is designed to meet the needs of the human, model-organism, and microbial genome research communities for acquisition, analysis, and management of DNA sequence data and associated structural and functional annotation.
+GSDB supports multiple sequencing strategies, including whole-genome shotgunning, rapid low-pass genome sampling, expressed sequence tag (EST) analysis, PCR amplicon sequencing, and traditional gene or cDNA sequencing.
+GSDB supports assembly of representative sequences from multiple components obtained by different researchers, as well as distributed analysis and annotation carried out by a community of researchers over an extended period.
+The current GSDB data model treats DNA sequences and annotations assigned to those sequences as independent objects with their own unique, permanent accession numbers and owners.
+This model is a radical departure from the entry-based data model used by GenBank and the other archival databases, and by earlier versions of GSDB.
+Aligned sets of DNA sequences, and discontiguous sets of sequences related by order, orientation, and distance constraints are also basic objects in the data model.
+The GSDB schema is fully specified in a document available on http://www.ncgr.org/gsdb.
+This schema relates sequences and features to genes, gene products, clonal sources, organismal sources, links to external databases or World-Wide Web sites, and standard metadata.
+GSDB Annotator.
+A multi-platform, graphic user interface for browsing, manipulating, and editing sequences and features in GSDB, the GSDB Annotator, is currently under development for fall, 1996 release to the public.
+The Annotator will display sequences simultaneously at up to four scales ranging from the 100 Mb range down to single base resolution, and allow selection and editing of features of any scale.
+The interface can manipulate whole microbial genomes or eukaryotic chromosomes, and can display discontiguous structures such as Sequence-Tagged Site (STS) maps as single entities.
+It supports the simultaneous display of genomic sequences, sequence variants, transcribed messages, protein products, and DNA- and RNA-level features.
+The Annotator is being implemented using the Galaxy multi-platform tool on Macintosh PowerPC and Sun SparcStation simultaneously.
+The system will be ported to Windows NT and a variety of Unix platforms.
+Fully-automated bulk data input and output from GSDB are supported by a tag-value file format, GSDB Input/Output or GIO format.
+This format is fully specified in a document available from http://www.ncgr.org/gsdb.
+The GIO format supports all data types supported by the GSDB schema, and allows for data additions as well as new submissions to the database.
+A relational tracking database maintains metadata records of all inputs to GSDB as well as all distributions of data to the public ftp site.
+This database also tracks all automated quality-control processing, including error logging, and all manual intervention in the input-processing stream.
+NCGR Capabilities.
+NCGR brings expertise and experience in biotechnology, bioinformatics, and information system development to the Collaboration.
+NCGR maintains the Genome Sequence DataBase (GSDB), a complete database of DNA sequences and annotation, in a Cooperative Agreement with the US Department of Energy.
+The GSDB system includes an underlying relational database (implemented in Sybase), an in-memory object-oriented data representation (implemented in C++), and a set of user-interface clients, including a browser-editor (implemented in Galaxy) capable of manipulating multi-base sequences with associated functional annotation.
+GSDB can be accessed via http://www.ncgr.org.
+NCGRs software development team has expertise in large-scale relational and object-oriented database development and maintenance, data input and output interfaces, graphic user interfaces, intelligent system design, software engineering, testing, and project management.
+Software development is managed by a well-defined software engineering process.
+Development is supported by full-time software engineering, systems analysis, configuration management, and testing personnel in addition to hardware and software systems administrators.
+NCGRs bioinformatics team has expertise in sequence analysis tools and methods, large-scale sequence assembly, gene structure prediction, PCR primer design, systematics, and data curation.
+Senior NCGR personnel have expertise in development and maintenance of DNA sequence and sequencing laboratory databases, in sequence analysis tool development, pathogen characterization by sequencing and other techniques, and high-throughput sequencing laboratory development and support.
+The Object-Protocol Model and Tools
+The Object-Protocol Model (OPM) data management tools provide facilities for constructing and maintaining efficiently molecular biology databases (MBDs) on top of commercial database management systems (DBMSs), and for exploring single as well as multiple heterogeneous MBDs.
+OPM is an object data model whose object non-versioned part is closely related to the ODMG-93 standard for object-oriented data models.
+In addition, OPM supports object versioning and a protocol construct for modeling scientific (e.g., sequencing) experiments.
+The OPM query language (OPM-QL) follows the ODMG-93 standard for object-oriented query languages.
+The OPM tools have been used for developing new MBDs, such as the Genome Data Base (GDB) at Johns Hopkins School of Medicine (http://gdbgeneral.gdb.org/gdb/) and the new version of the Protein Data Bank (PDB) at Brookhaven National Laboratory (http://terminator.pdb.bnl.gov:4148), and for constructing OPM views and interfaces for existing genomic databases such as the Genome Sequence Data Base (GSDB) at the National Center for Genome Resources.
+Detailed OPM documentation and examples are available at http://gizmo.lbl.gov/opm.html
+The Object-Protocol Model and Query Language
+Objects in OPM are uniquely identified by object identifiers (oids), are qualified by attributes, and are classified into classes.
+A subset of the attributes associated with a class is specified as the external object identifier.
+A class can be defined as a subclass of other (super) classes, where a subclass inherits the attributes of its superclasses.
+OPM supports multiple inheritance in class hierarchies.
+Attributes can be simple or consist of a tuple (aggregation) of simple attributes.
+A simple attribute can have a single value, a set of values, or a list of values, and can be primitive, if it is associated with a system-provided data type, or abstract, if it takes values from object classes.
+The attributes of an object class can be partitioned into non-versioned and versioned attributes: non-versioned attributes represent stable object properties while versioned attributes represent evolving object properties of an object.
+Protocol classes in OPM are used to model scientific experiments.
+OPM supports the recursive specification (expansion) of protocols, where a protocol can be specified in terms of alternative subprotocols, sequences of subprotocols, and optional protocols.
+A protocol class can be associated with regular as well as input and output attributes that are used for representing input-output protocol connections.
+OPM supports the specification of derived attributes using derivation rules involving arithmetic expressions, aggregate functions, and attribute composition.
+OPM also supports two types of derived object classes: derived subclasses and derived superclasses.
+A derived subclass is defined as a subclass of another derived or non-derived object class with an optional derivation condition.
+A derived superclass is defined as a union of two or more derived or non-derived object classes.
+OPM-QL follows the ODMG-93 standard for object-oriented query languages.
+An OPM query involves local, inherited, derived and system attributes and path expressions starting with these attributes.
+An OPM query can involve conditions consisting of and-or compositions of atomic comparisons, and can contain an order-by clause, which specifies an attribute whose values are used for sorting (in ascending or descending order) the class instances returned by the query.
+The Core OPM Tools
+The core OPM data management toolkit includes tools for building, managing and querying OPM databases, and for building OPM views on top of existing databases.
+OPM schema editing and browsing tools are provided for specifying and examining an OPM schema for a particular application.
+The OPM schema translator can be then used for generating automatically the complete definition of the underlying relational (Sybase or Oracle) database, including the rules and constraints required for maintaining data integrity.
+A mapping dictionary records the correspondences between the classes and attributes of an OPM schema and the underlying relational tables, and is used in translating OPM queries and updates into their relational (SQL) correspondents.
+The OPM query translator processes ad hoc OPM-QL queries.
+Two alternative approaches to OPM-QL translation are supported: (i) using stored procedures, which provides maximum efficiency for fixed-form queries against a native OPM database, and (ii) generating SQL queries on the fly, which is suitable for free-form queries and for querying pre-existing (non-OPM) databases.
+Application programs can interact with OPM-QLT in two ways: (1) Access OPM-QLT via a C++ wrapper: metadata representing the OPM database is loaded at runtime through dynamic linkage; the OPM-QL query input, specified as a string, is translated into a series of SQL statements that re sent and executed through the DBMS API; the DBMS API returns a relations as query results, which in turn are converted into OPM data objects represented using C++ data-structures.
+(2) OPM-QLT is employed as a stand-alone application, and temporary ascii files are used for data-exchange; this approach can be used for example with PERL scripts implementing web-based query interfaces for OPM.
+Other alternatives that are currently considered include embedding OPM QLT inside a scripting language such as PERL, rather than just running it as an external utility as mentioned in (2), and interacting with OPM-QLT via a generic CORBA compliant OPM interface.
+Pre-existing, non-OPM databases can be retrofitted with an OPM view (schema) using the OPM retrofitting tools.
+Retrofitting involves generating first a canonical OPM schema from the native database schema, and then refining, and thus semantically enhancing, this OPM view via a series of schema restructuring manipulations, such as renaming and/or removing classes and attributes, merging and splitting classes, adding or removing subclass relationships, defining derived classes and attributes, and so on.
+The retrofitting tools can be used for constructing multiple OPM views for a single (OPM or non-OPM) database.
+The retrofitting tools generate a mapping dictionary, that can be used in conjunction with the other OPM tools in order to browse or query the underlying database.
+Retrofitting tools are currently available for relational and ASN.1 databases, with versions of the tools for other databases planned.
+In addition the core OPM toolkit includes tools for publishing OPM schemas in a variety of formats, including HTML, PostScript and LaTeX, and for constructing Web form-based interfaces for querying OPM databases.
+The OPM Multidatabase Tools
+The multidatabase OPM (OPM*) toolkit, provides tools for constructing multidatabase systems consisting of heterogeneous databases, and for exploring (browsing, querying) such multidatabase systems.
+This toolkit is built on top of the core OPM toolkit and includes tools for: (1) assembling component databases into an OPM-based multidatabase system, while documenting their schemas and inter-database links; (2) processing ad hoc multidatabase queries via uniform OPM interfaces; and (3) assisting scientists in specifying and interpreting multidatabase queries.
+Incorporating an MBD into an OPM multidatabase system involves constructing one or more OPM views of the MBD, and entering information about the MBD and its views into a multidatabase directory.
+The multidatabase directory stores information necessary for accessing and formulating queries over the component MBDs, including: (1) general information describing each MBD accessible in the system, and the information required for accessing the MBD; (2) structural information on the schemas of each MBD, including semantic descriptions of the physical or real world concepts represented by the schemas, synonyms and keywords for identifying differences in terminology and for establishing potential correspondences between components of different MBD schemas, and sample data illustrating how the schema constructs are for representing application data; (3) information on known links between different MBDs, including semantic descriptions of links, the nature of the correspondence represented by links, and data-manipulations, such as reformatting of accession numbers, that need to be performed in order to traverse the link.
+Queries in an OPM-based multidatabase system are expressed in the OPM multidatabase query language (OPM*QL).
+OPM*QL extends the single-database OPM query language, OPM-QL, with constructs needed for querying multiple databases.
+These extensions include the ability to query multiple classes, possibly from distinct databases; constructs that allow navigation between the classes of multiple databases following inter-database links; and the ability to rename fields of a query in order to resolve potential naming conflicts between multiple databases.
+Processing OPM multidatabase queries involves generating OPM-QL queries over individual databases in the multidatabase system, and combining the results of these queries using a local query processor.
+The stages of generating OPM-QL queries and manipulating data locally may be interleaved depending on the particular query evaluation strategy being pursued.
+Generalized Hidden Markov Models for Gene Model Construction
+Hidden Markov Models (HMMs) for DNA can be viewed as generative stochastic models of sequences that go though a sequence of hidden states, and in each hidden state they generate a single letter in the alphabet {A,C,G,T} according to certain probabilities associated with that state (Krogh et al. 1994a, Krogh et al. 1994b).
+The sequence of hidden states forms a Markov chain, in the sense that which state generates the nth letter depends only on which state generated the n-1st letter.
+This contrasts with (non-hidden) Markov models of sequences, in which the sequence of letters itself forms a Markov chain, i.e. the nth letter depends only on the n-1st letter, or on the letters at positions n-k,... n-1 in the case of a kth order Markov model.
+In a generalized HMM, each state can generate a string of one or more letters according to a probability distribution specified by some arbitrary mechanism, particular to that state.
+The only thing we demand of this mechanism is that we can efficiently compute the probability (i.e. likelihood) of any string under the distribution defined by the mechanism.
+Models of this type were described in (Stormo and Haussler 1994) for the case that there are only two possible states, Exon and Intron, and the Markov chain for the states is trivial, in the sense that it alternates back and forth between these two states with probability 1.
+Each time such a model is in the exon state, it generates a string according to the probability distribution associated with exon strings, and each time it is in the intron state it generates a string using the intron distribution.
+The output is the concatenation of these generated strings.
+To use such a generative model for recognition of introns and exons in a DNA sequence, a dynamic programming method can be used to ``invert the generative process'' and find the most likely sequence of individual strings and their states that were concatenated to make the sequence.
+We call this ``parsing'' the sequence.
+In collaboration with LBL, we have extended this model to include more than 2 states, with general Markov transition probabilities between states.
+We call these generalized HMMs.
+One advantage of having more than two states is that now we can explicitly model conservation of the codon frame between consecutive exons.
+We do this by having nine different states for different kinds of internal exons, one for each combination of the codon frame at the beginning of the exon and the codon frame at the end of the exon.
+For the first exon in the gene, we need only three different states, each representing a possible codon frame at the end of the first exon, and analogously, three states are needed for the last exon in a gene.
+Three types of intron states are also used, depending on the codon frame at the point were the intron breaks the coding sequence.
+Only transitions between exon and intron states that preserve the correct codon frame are allowed.
+Many gene-finding systems impose similar constraints in their model, but here they can be imposed in a simple declarative manner, by specifying states and transitions, rather than being deeply embedded in the dynamic programming code, where they are difficult to modify.
+Indeed, the dynamic programming methods we use to parse with generalized HMMs are quite general, and work for any Markov chain for the states without modification.
+Another advantage to the flexibility of generalized HMMs is that it is easy to add other capabilities to the gene-finding system, such as the ability to incorporate database hits discovered by BLAST searches of a protein database, and to find promoters, RNA genes, known repetitive DNA sequences etc., as soon as states for these have been defined with appropriate probability distributions.
+You just \Q\Qwire them in'' to the existing HMM architecture by modifying the Markov chain transition probabilities to include the new states.
+In the last year we have built a gene-finder, called Genie, based on generalized hidden Markov modelling methods.
+Experiments on our own internal database of human genes, as well as on the benchmark database of vertebrate genes used by Guigo in his comparison of Genefinder, show that this method has some advantages over currently available gene finders for human DNA.
+In particular, it is more accurate than other programs on the Guigo dataset without using homologies found by BLAST, and is able to further improve its performance by incorporating such homologies (Kulp et al. 1996).
+Nomi Harris at LBL has built an integrated system to accept human DNA fragments and display the results of various gene-finding methods on them, including GRAIL, GenMark, Genie and others.
+As no one genefinder is ever perfect in its predictions, her system can also combine the predictions of several gene finders using a kind of ``majority vote'' mechanism, and thereby improve over the performance of any single genefinder.
+This seems a particularly promising direction for further research in DNA annotation.
+The High Performance Storage System (HPSS)
+The High Performance Storage System is software for high rate access and management of digital data within very large storage environments.
+HPSS is intended to address the needs of very large high performance computing and data management environments.
+HPSS will be of interest in situations having present or future scalability requirements that are very demanding in terms of total storage capacity, data rates, number of objects stored, and number of users.
+HPSS is a cooperative development project, originated by IBM government systems and four Department of Energy laboratories, LLNL, LANL, SNL, and ORNL.
+Cornell University under NASA Lewis Research Center sponsorship, and NASA Langley Research Center have also contributed to the development of HPSS.
+A central technical goal of HPSS is to move large data files between storage devices and parallel or clustered computers at speeds many times faster than today's commercial storage systems software products, and to do this in a way that is more reliable and manageable than is possible with current systems.
+In order to accomplish this goal, HPSS employs the following concepts:
+A network-centered architecture.
+The focus of HPSS is the network, not a single server processor as in conventional storage systems.
+HPSS provides ``servers'' and ``movers'' that can be distributed across a high performance network to provide scalability and parallelism.
+The basis for this architecture is the IEEE Mass Storage Systems Reference Model, Version 5.
+A design based on standard components.
+HPSS runs on Unix with no kernel modifications and is written in ANSI C.
+It uses the OSF Distributed Computing Environment and Encina as the basis for its portable, distributed, transaction-based architecture.
+These components are offered on many vendors' platforms and will enable the eventual porting of HPSS to many of those environments.
+Transaction management and Kerberos security enable a reliable design that protects data both from unauthorized use and from corruption due to lost pointers.
+Having accepted DCE as the system infrastructure, HPSS can leverage other DCE or DCE-based services in the future
+Parallel operations
+built in HPSS supports both parallel clients and parallel storage devices as well as sequential clients and storage where the number of data sources and destinations are different.
+Parallel data transfer is vital in situations that demand quick access to very large files.
+Multiple hierarchies and classes of service.
+HPSS can concurrently handle many classes of service that correspond to hierarchies that may be as simple as a single tape or that have the complexity of multiple levels of caching and migration through disk, disk array, local tape, and remote tape.
+Classes of service are limited only by the need of the user and the system management goals of the service provider.
+Centrally managed storage.
+Although physically distributed in its architecture, HPSS offers a logically centralized framework for management of storage.
+A graphical user interface is supported.
+HPSS uses the managed objects framework os the ISO OSI system management model.
+Growth potential.
+Collaborators plan to support DFS (Distributed File System) and most popular disks, tapes, robotic servers, and computational platforms, and plan other ongoing enhancements.
+SubmitData - Data Submission to Public Genome Databases
+Direct author submission accounts for a majority of the submissions of genomic information, e.g., sequences, maps, etc., to genome databases for distribution to the scientific community and the general public.
+Involving authors in the data submission process produces better entries.
+Their expertise is called upon to help create more meaningful and correct annotations.
+They are entitled, however, to get assistance to make the task as easy as possible.
+SubmitData\DB is an object-oriented framework developed by Manfred Zorn at LBNL to provide the user with a tool for direct author submissions.
+It enables the user to:
+* prepare a single direct submission to a number of public databases using a graphical interface that assists the user by offering menu choices for controlled vocabularies and compliance with the database requirements.
+* submit bulk quantities of data using a previously defined template that is merged with the actual data.
+* prepare data to be submitted to multiple databases without entering repeated information using a common user interface.
+* submit data transparently from within other applications.
+* adapt the submission tool to changing data submission protocols
+Versions of SubmitData\DB have been developed for GSDB using the Transaction Protocol and GDB 5 forms.
+Current work is being done on a version to work with the new GDB 6 format and GSDB's new GIO protocol.
+The work on SubmitData has been presented on numerous conferences and workshops.
+The data submission tools are implemented using the Smalltalk language and the ParcPlace VisualWorks\Smalltalk development environment.
+Submission protocols are stored as Smalltalk objects using the inherent Smalltalk parsing capabilities.
+The user interface is created by assembling user interface objects defined in the VisualWorks toolkit.
+The model used here is a template that defines constant information and is merged with a data stream to generate output in the appropriate data submission format.
+Variables in the template are exchanged for corresponding values in each record of the data stream.
+The SubmitData framework defines a set of classes that support the development of such submission tools.
+It consists of three major parts: a kernel that handles protocol specific operations, i.e., the data exchange format of a particular database, a template editor to create and modify templates, and a database interface to handle the actual data submission to the database(s).
+Kernel classes.
+The kernel classes represents the data submission protocol of a particular database.
+The protocol defines, what kind of information is required or optional by the database; specifies data types for values, lists controlled vocabularies, and defines the relationship between data items.
+In order to make the submission tool independent of a particular database's data exchange format, a specific Parser interprets the protocol definitions and generates more generic EntityDefinitions and FieldDefinitions.
+EntityDefinitions represent the objects, e.g., locus, clone, entry, and have a set of attributes, so called fields.
+A FieldDefinition describes a single attribute in terms of its name, possible alternate names, data type, default values, ranges (numerical ranges or sets of values), description, etc.
+Values entered by the user are validated against these definitions.
+Unspecified conventions that reflect common uses in the user community or traditions within the database can be specified as conventions and applied to the data values.
+Triggers and conditions handle dependencies among fields or modify a field's behavior in relation to other fields.
+User and application interface layer.
+For the template editor a standard user interface is an automatically generated form based on the EntityDefinitions.
+Each form displays a single entity.
+References to subentities are represented through buttons or lists that open the respective forms.
+Controlled vocabularies define menus from which the user may select valid values.
+Error messages provide feedback to the user on processing errors.
+Customized user interfaces can easily be built on top the standard user interface exploiting and reusing functions already defined in the standard user interface.
+This layer also handles the interaction with other applications, e.g., sequence analysis tools.
+Database interaction and data submission.
+In the simplest case, this layer formats the data according to the respective protocol and sends them to the database via electronic mail or other network capabilities.
+Separation of the database access layer from the kernel functions, however, allows to exchange the communication module.
+For single transactions with a single database sending electronic mail or transferring the datafiles using the ftp network protocol is sufficiently fast and easy.
+Submissions to multiple databases with mutual cross references require more sophisticated interactions.
+The framework gets more refined with every new database it is applied to shortening development times for each new target database considerably.
+We will be able to use this experience for developing data mining and extraction agents and the interaction with genome databases.
+BioPOET - A parallel processing framework for workstation farms
+POET (Parallel Object-Oriented Environment and Toolkit)
+The goal of the POET (Parallel Object-Oriented Environment and Toolkit) approach is to design well defined mappings between the representations of physical phenomena in terms of mathematical structures and the computational algorithms for modeling the phenomena.
+The approach to POET is similar in design methodology to the Xt toolkit.
+A high level object-oriented framework isolates a physical model description from the code that implements the parallel algorithm and data flow.
+Through this object-oriented interface, direct integration of existing application codes are implemented without affecting the parallel computation algorithms.
+As such, a scientist need only be concerned with application specific code not the details of parallel computation.
+POET development by J. Macfarlane, LBNL and R. Armstrong, Sandia National Laboratory, initially concentrated on two specific areas: implicit and explicit finite difference problems and independent task analysis problems.
+The first category of problems covers many areas of physics and engineering.
+Examples of explicit PDE problems are compressible computational fluid dynamics, heat and mass transfer, and unbounded wave mechanics.
+Examples of implicit problems include incompressible fluid dynamics, transport problems involving fast (stiff) chemical reactions and bounded wave mechanics.
+Examples of the second category of problems are human genome sequence comparisons and Monte Carlo simulations.
+Sequence similarity searches can be seen as a database filtering problem, i.e., the comparison of a query sequence against the very large set of existing biological sequences a database.
+Each comparison is a completely independent task.
+These comparisons are correlated into a hitlist on the host processor after the comparison has been completed.
+We have completed the development of an object in POET that will manage the distribution of independent tasks across multiple processors.
+Initial test results show a linear inverse relationship between the number of processors used and the processing time.
+The human genome application and the combustion modeling examples demonstrate the flexibility of the software design methodology captured in the POET software.
+The intelligence associated with distributing the problem over multiple processors is embedded in the objects defined in POET.
+As such, a user interface that is customized to the specific scientific application can provide easy access to supercomputing power to scientists who would otherwise be overwhelmed by the complexity of using supercomputing resources.
+With this added capability, problems that are currently unapproachable in these disciplines will be within reach.
+The purpose of the project was to develop a unique approach to scientific computing on massively parallel computing platforms.
+The goal of the POET (Parallel Object-Oriented Environment and Toolkit) approach is to design well defined mappings between the representations of physical phenomena in terms of mathematical structures and the computational algorithms for modeling the phenomena on high-performance parallel computing platforms.
+Using this approach, we identify representations that solve classes of scientific problems.
+Thus, once the representation is defined for a particular problem area the mapping into the computing algorithm is handled automatically by the POET architecture.
+We demonstrated the benefits of this approach by application to three scientific computing problems.
+BioPOET
+The best known rigorous method for biological sequence comparison, the algorithm by Smith and Waterman, computes in quadratic time the highest scoring local alignment of two sequences.
+Within the POET framework M. Zorn, J. Macfarlane, and M. Cooper added functionality to handle a large number of repeated small tasks, Bag-Of-Tasks.
+A master process controls the bag of tasks and distributes each one of them to a worker process.
+The communication with among the processes is handled through the PVM message passing system.
+Fault tolerance and error recovery have been implemented at the relatively coarse level of a task.
+Since each task can be accomplished in short time, i.e., in the order of CPU minutes and hours, aborted tasks are best restarted on another worker process.
+Because of the huge number of individual tasks, performance differences among various platforms even out and yield a nicely load-balanced environment.
+A task can be specified as a callback routine that the framework invokes to process the task.
+In the sequence analysis application, a task constitutes the comparison of one database sequence with the query sequence.
+Results of the task are returned to the master process for book keeping and producing the final output of the application.
+A prototype system, BioPOET, performs sequence analysis on a workstation farm integrated into a friendly user interface.
+We also developed a graphical user interface, developed in Parcplace Smalltalk, that allows parameter specification for several analysis options and launches the analysis program.
+A graphical display presents the final results to the user.
+Future work will focus on integration of existing software modules into both the BioPOET parallel processing environment combined with ongoing efforts to generate user interfaces in a more automatic and transparent way to create a plug-and-play environment.
+Within this Grand Challenge application we plan to update the BioPOET framework for use with the Parallel Distributed Systems Facility at NERSC to perform less compute-intensive computational biology algorithms and as a testbed for evaluating different implementations.
+Appendix II.
+Preliminary CORBA Interface Definitions
+Genome Exchange Model - OMG IDL implementation
+The Genome Exchange Model (GEM) is the result of a Genome Informatics Workshop held at the San Diego Supercomputing Center, San Diego, in August 1995, with the goal to define a minimal data exchange model for maps and sequences.
+Manfred Zorn implemented the GEM map model in HP Distributed Smalltalk and translated the class definitions into OMG IDL interface definition language.
+A module defines interfaces that belong together.
+Each interface defines an object that could be accessable from other Object Request Brokers (ORBs).
+For convenience the top GEM object, GEMObject, is subclassed from DomainModel, but that should not be of any concern.
+The various #pragma statements can safely be ignored.
+They tell about the Smalltalk methods that are represented by the access methods and provide an abstract class Id for the repository.
+The method body is still very scarce and needs more work.
+Short glossary of IDL tags
+module
+Defines a logical group of interfaces in the Interface Repository
+interface
+Describes the possible set of operations and abstract behavior that a client may request of an object.
+typedef
+Declares new data type names
+attribute
+Shorthand mechanism for defining a pair of accessor functions to get and set the value of an attribute.
+Attribute values are recomputed every time.
+The pair of operation defined by attribute cannot raise exceptions.
+operation
+Defines a service that a client can request from an instance of a given object.
+Inheritance
+Interfaces can inherit from other interfaces.
+The interface is separated from its parent(s) by a single colon.
+Multiple inheritance is indicated by a comma separated list after the colon.
+sequence subtype specification
+enum
+Construbcted data type.
+Values take on one of a set of specified values.
+Genome Exchange Model: IDL specification
+// GenomeExchangeModel
+// This module defines various objects in the Genome Exchange Model
+//
+module GenomeExchangeModel {
+// This interface defines the behavior of GEMObject objects
+//
+#pragma IDENTITY = 70846387-4e65-0000-0280-03c45a000000
+interface GEMObject : DomainModel {
+//is this a measure?
+boolean isMeasure();
+};
+//GEMMapElement
+// ------------------------------------------------------
+//MapElement:
+//A MapElement may be an interval or a point, and may be simple or compos ite.
+//In the simple case, the element has no internal
+//structure that we care to describe.
+In the composite case, the element is a
+//map in its own right.
+// ------------------------------------------------------
+//Instance Variables:
+// start 
+// stop 
+//
+// This interface defines the behavior of GEMMapElement objects
+//
+#pragma IDENTITY = 70846387-4e68-0000-0280-03c45a000000
+interface MapElement : GEMObject {
+attribute string name;
+attribute string owner;
+attribute Date date;
+attribute string description;
+attribute GEMObject model;
+attribute float start;
+attribute float stop;
+//size of GEM map element
+float size();
+};
+//GEMMap
+// ------------------------------------------------------
+//Map:
+//A Map is a collection of MapElements and MapFacts about those elements .
+// ------------------------------------------------------
+//Instance Variables:
+// elements 
+// facts 
+// map e lements
+//
+// This interface defines the behavior of GEMMap objects
+//
+#pragma IDENTITY = 70846387-4e6b-0000-0280-03c45a000000
+interface Map : MapElement {
+attribute sequence 
+attribute sequence 
+};
+//GEMMapFact
+// ------------------------------------------------------
+//MapFact:
+//Each MapFact is a statement of a geometric or spatial nature about one or more MapElements.
+// ------------------------------------------------------
+//Instance Variables:
+// fact 
+// assertion 
+// about 
+//
+//Class Variables:
+// MapFacts 
+// plus extra map relations
+// #before, [#after,]
+// #contains, [#contained,]
+// #starts,
+// #finishes,
+// #overlaps,
+// #meets (= #abuts), [#met _by]
+// #equals,
+// #order,
+// #distance,
+// #position,
+// #orientation
+//
+// This interface defines the behavior of GEMMapFact objects
+//
+#pragma IDENTITY = 70846387-4e6c-0000-0280-03c45a000000
+interface MapFact : GEMObject {
+enum MapFacts {before, after, contains, starts, finishes, overla ps,
+meets, equals, order, distance, position, orien tation};
+attribute MapFacts fact;
+attribute Measure assertion;
+attribute sequence 
+};
+//GEMMeasure
+// ------------------------------------------------------
+//Magnitude:
+//A Magnitude is an object used to represent distances and sizes.
+//It encapsulates units of measure and certain aspects of uncertainty.
+// ------------------------------------------------------
+//Instance Variables:
+// unit 
+//
+// This interface defines the behavior of GEMMeasure objects
+//
+#pragma IDENTITY = 70846387-4e6d-0000-0280-03c45a000000
+interface Measure : GEMObject {
+attribute string unit;
+//Answer whether the receiver is less than or equal to the argum ent.
+boolean less_equal (in Measure aMeasure);
+//Answer whether the receiver is greater than the argument.
+boolean greater (in Measure aMeasure);
+//Answer whether the receiver is greater than or equal to the ar gument.
+boolean greater_equal (in Measure aMeasure);
+//is this a measure?
+boolean isMeasure();
+};
+//GEMBinaryMeasure
+// ------------------------------------------------------
+// Measure to hold binary measures: true-false, yes-no, 0-1, etc.
+// Instance Variables:
+// value 
+//
+// This interface defines the behavior of GEMBinaryMeasure objects
+//
+#pragma IDENTITY = 70846387-4e71-0000-0280-03c45a000000
+interface BinaryMeasure : Measure {
+attribute boolean value;
+};
+//GEMErrorBarMeasure
+// ------------------------------------------------------
+//ErrorBarMagnitude:
+//An ErrorBarMagnitude is the same as a RangeMagnitude, but is defined b y
+//a center-point and an error-bar, e.g., x +/- y.
+// ------------------------------------------------------
+//Instance Variables:
+// mean 
+// deviation 
+//
+// This interface defines the behavior of GEMErrorBarMeasure objects
+//
+#pragma IDENTITY = 70846387-4e72-0000-0280-03c45a000000
+interface ErrorBarMeasure : Measure {
+attribute float deviation;
+attribute float mean;
+//Answer whether the receiver is less than the argument.
+boolean less (in Measure aMeasure);
+//Answer whether the receiver is equal the argument.
+boolean equal (in Measure aMeasure);
+//convert Measure to SimpleMeasure
+SimpleMeasure asSimpleMeasure();
+//lower boundary
+float lower();
+//upper boundary
+float upper();
+};
+//GEMRangeMeasure
+// ------------------------------------------------------
+//RangeMagnitude:
+// A RangeMagnitude represents a size or distance that lies within a def ined
+// range (with some assumed probability function -- I
+//imagine this is generally normal, centered on the middle of the range) .
+//It consists of two numbers and a unit of measure.
+// ------------------------------------------------------
+//Instance Variables:
+// start 
+// stop 
+//
+// This interface defines the behavior of GEMRangeMeasure objects
+//
+#pragma IDENTITY = 70846387-4e70-0000-0280-03c45a000000
+interface RangeMeasure : Measure {
+attribute float start;
+attribute float stop;
+//Answer whether the receiver is less than the argument.
+boolean less (in Measure aMeasure);
+//Answer whether the receiver is equal the argument.
+boolean equal (in Measure aMeasure);
+//convert Measure to SimpleMeasure
+SimpleMeasure asSimpleMeasure();
+};
+//GEMSimpleMeasure
+// ------------------------------------------------------
+//SimpleMagnitude:
+//A SimpleMagnitude represents a size or distance with no uncertainty.
+//It consists of a number and a unit of measure, e.g., cM, cR,
+//base-pairs, etc.
+// ------------------------------------------------------
+//Instance Variables:
+// value 
+// This interface defines the behavior of GEMSimpleMeasure objects
+//
+#pragma IDENTITY = 70846387-4e73-0000-0280-03c45a000000
+interface SimpleMeasure : Measure {
+attribute float value;
+//Answer whether the receiver is less than the argument.
+boolean less (in Measure aMeasure);
+//Answer whether the receiver is equal the argument.
+boolean equal (in Measure aMeasure);
+//convert Measure to SimpleMeasure
+SimpleMeasure asSimpleMeasure();
+};
+};
+Appendix III.
+Reprints __________________________________________________________________
+The reprints are not available on the web server.
+__________________________________________________________________
+Last Modified: 03:27pm PDT, July 23, 1996

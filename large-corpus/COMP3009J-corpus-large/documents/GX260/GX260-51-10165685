@@ -1,0 +1,156 @@
+B. Corridor Risk Assessment Model (CRAM) background In 1995 the FRA requested that the U.S. Department of Transportation ?s Volpe National Transportation Systems Center (Volpe Center) to determine the feasibility of developing a risk assessment tool for railroad operations based on a geographical information system (GIS) platform.
+The FRA was interested in using this analysis tool to determine if positive train control (PTC) could have measurable beneficial safety impacts on specific operational freight and passenger railroad corridors of the U.S. intercity railroad network.
+The Volpe Center determined that development of such a tool with GIS layers gathered from existing data bases of FRA track configurations, census population densities, etc., with added layers developed from inputs such as the Interstate Commerce Commission ?s waybill sample was possible.
+In 1996 the Volpe Center began work to build the GIS data base and to conduct the related analysis effort.
+With the GIS data base, a definition of PTC preventable accidents provided by the FRA subject matter experts, an analytical model that described risk of PTC preventable accidents based upon geographical characteristics was developed.
+The preliminary results and conclusions were presented to the FRA and RSAC in June 1997.
+DRAFT
+When the RSAC PTC Working Group was formed in September of 1997 this effort was offered to the group by FRA as a possible tool to assist in their risk analysis.
+The Implementation Task Force of this Working Group was briefed on the background and status of this analysis effort, referred to as the Corridor Risk Assessment Model (CRAM).
+During late 1997 and into 1998 this Task Force and individual railroads provided input and direction to the ongoing modeling effort.
+Three areas of the modeling effort were addressed; 1) the definition and selection of PTC preventable accidents, 2) the data to be used as the basis for exposure measure - total train miles and million gross tons of traffic for each railroad; and 3) the definition of operational corridors that were to be analyzed.
+The Working Group formed an Accident Review Team (ART) that identified accidents causes and specific accidents that could be used as input into the regression analysis for predictive purposes model.
+The Association of American Railroads (AAR) and participating railroads, freight, intercity passenger and commuter, provided additional information on network flows of their respective operations.
+Potential Future Uses of the Corridor Risk Assessment Model
+DRAFT
+The FRA plans to apply this new analysis tool to determine if a corridor approach to PTC implementation is appropriate, and as an evaluative tool for specific corridors.
+Several corridors in the U.S. such as Chicago to St. Louis, Chicago to Detroit and Seattle to Eugene are undergoing train control, operational and/or equipment changes as part of advanced train control and passenger equipment deployment efforts under the FRA ?s Next Generation High-Speed Rail Program.
+FRA wants to ensure that the risk potential in some of these operations is well understood and whether improved train control systems can reduce the risk at an affordable cost.
+In addition the FRA intends to exploit the GIS platform of layered data bases to conduct other studies of accident trends and safety enhancement measures for topics ranging from grade crossing safety to hazardous material movements.
+Use of Regression Modeling to Predict Infrequent Events
+Railroad accidents are rare events, on average only 1 FRA reportable train accident for every 264,000 train miles operated [FRA Railroad Safety Statistics - Annual Report 1997 - September 1998, Chapter 1, Page 1, Table 11].
+Reporting thresholds in 1997 were $6,500 (this number is adjusted annually for inflation) for rail track or equipment and any accident resulting in an injury or fatality.
+The subset of accidents that may be reduced by PTC is even less.
+However, PTC preventable accidents occasionally are of very high consequence with injuries and lives lost, or major equipment damage.
+The CRAM was developed to support the analytical activities of the FRA ?s Office of Safety in this low probability but potentially high consequence arena of accidents.
+The Model was developed to determine what operational and track layout characteristics are statistically (no ital) significant in PPA?s and whether required implementation of PTC systems could reduce the accident risk potential on specific rail corridors.
+The model forecasts PPA?s rates for defined corridors of the Class I intercity railroad network and the average consequences of those accidents.
+(Where are the model results?)
+DRAFT
+Initially the accidents for study were determined by using a group of FRA accident subject matter experts to determine applicable cause codes and the degree of effectiveness of a PTC system to prevent accidents in these cause code areas from the FRA?s (RAIRS) system.1 The data years 1988 to 1995 were used and the waybill sample was used to generate network flow data.
+These data layers resulted in the first model results known as CRAM I.
+The review of the 1988 to 1995 RAIRS data identified 570 accidents for historical plotting on defined corridors and 897 accidents for the regression analysis.
+2 Subsequently, the ART reviewed in detail each potential PPA in the 1988 to 1995 RAIRS data base.
+This review resulted in 814 accidents for historical plotting and 617 accidents for the regression analysis.
+The new PPA?s and network characterization data from the railroads was then added to the GIS platform and a second iteration of regression was done.
+The new model is referred to as CRAM II.
+The theory behind both CRAM I and CRAM II is to estimate the safety benefits of PTC by relating the historic occurrence and consequences of accidents that may have been prevented by a PTC system to specific track features and traffic.
+The model as constructed will forecast the rate at which these accidents and their consequences were likely to occur.
+The model forecast does not account for any changes in operating rules or other structural changes (e.g. locomotive crashworthiness) that impact the occurrence and consequences of these accidents.
+DRAFT
+The determination of PTC system functions, and their effectiveness in accident reduction was made in conjunction with FRA Office Safety and independent subject matter experts under CRAM I and by a Task Force of the Implementation Working Group under CRAM II.
+The assumptions of what constitutes PTC systems is covered in Section III of this report.
+These assumptions were used by the Accident Review Team in their analysis of the RAIRS data.
+Both CRAM I and II are accident forecasting models to predict future patterns of PPAs based upon historical data.
+Analysis using both the predictive model, based on historical data in combination with significant operational and track attributes, and simple plotting of historical data has been developed.
+The main intent of this analysis was to determine corridors that are most likely to benefit from some form of PTC implementation.
+Risk Analysis Framework
+This risk analysis has included the estimation of both PPA probabilities and consequences.
+Certain system characteristics such as signaling and train control method, operational speed, track class, horizontal and vertical curvature, control points and number of tracks were studied to determine which ones had statistical significance relative to contributing to and thus aiding in predicting the probability and consequence of a PPA.
+To assess the risk impact of a PTC system three aspects of the accident occurrences are considered important; 1) accident location; 2)accident cause; and 3) accident outcome.
+DRAFT
+First, track and environmental aspects surrounding track as noted above describe the location of the accident are used as factors in the probability calculation.
+The accident rate is calculated based upon the characteristics of the rail network, and therefore the characteristics of track which promote the occurrence of an accident must be ascertained for the whole network.
+Second, the cause of the accident determines whether or not it is included in the set of PPAs.
+Starting with FRA RAIRS accident cause codes the Accident Review Team developed the group of accidents for further study and is described in detail in Section IV B.
+Third, the RAIRS database shows that PPAs were slightly more severe than the average accident, and as a result, only PPA accident outcomes were employed to develop the consequences portion of the model.
+Geographic Data used for the Analysis
+DRAFT
+The geographical information system (GIS) used in this study facilitated the analysis of the rail specific characteristics in the prediction of risk and distinction of risk between corridors.
+This network thereby provided the basis for the accident rate calculation; the probability portion of the risk analysis.
+For this study GIS data were gathered from the FRA 1:2,000,000 scale rail data base, the FRA 1:100,000 rail data base (developed by Oak Ridge National Laboratory for the FRA), and Volpe Center 1:2,000,000 and 1:100,000 rail data bases.
+Detailed rail survey data available from a previous study was also used to add important attributes to the GIS platform.
+The resulting GIS platform is at a 1:100,000 to provide the required detail necessary for corridor analysis and consists of a fixed segment rail database that incorporates all the location-specific data from the various sources described above.
+Location specific data includes; switches, number of tracks, horizontal curvature, vertical grade, maximum speed, signaling system type, method of operation, route identifier, and population within certain
+distances from the track.
+This data base consists of approximately 10,000 segments that are used for the construction of link-based calculations of risk and consequences.
+Links are defined in terms of control points as denoted by the presence of an interlocking switch.
+Link endpoints are also created at locations where Amtrak and commuter rail station stops are located, the number of tracks change, method of operation changes, or railroad owner changes.
+Definition of Corridors
+The first cut to define the corridors, generated 188 corridors with an average length of 325 miles.
+During the course of the RSAC, input from the owning railroads provided updates and refinements to these corridors.
+As a result the 188 corridors studied lengthened to an average length of 482 miles.
+These corridors represent the dominant freight and passenger routes in the United States.
+DRAFT
+Historical Data Analysis
+Two methods for quantifying the potential risk reduction from PTC systems were used in this analysis.
+The first was to calculate the historical consequences of PTC preventable accidents and to assign those consequences to corridors.
+Using this method provides a straightforward description of the historical costs of accidents that could have been prevented by PTC.
+However, this historical methodology is limited in that the analysis fails to describe the factors that contribute to risk, or to provide a basis for describing future effects.
+The Accident Review Team provided the Volpe Center with a more up to date list of Positive Train Control preventable accidents for the years 1988-19953 .
+The ART identified 819 accidents that were PTC preventable (yes category) or partially4 preventable (maybe, r or s categories) using the highest (level 4) PTC system.
+Collisions accounted for 247 of these accidents, in which 51 people were killed and 449 were injured.
+The level 3 system, which assumed a lower level of functionality of PTC systems, was thought to have been able to prevent or partially prevent a total of 543 accidents, 231 of them collisions.
+Interestingly, these collisions included the same number of fatalities, and accounted for 443 injuries.
+At the PTC preventable levels 2 and 1, the total number of accidents classified were 478 and 384, and the number of collisions were reduced to 219 and 200.
+However, even at the lowest level of PTC functionality the total number of fatally injured in collisions remained 51.
+The level 2 system was thought to have potentially prevented 423 collision related injuries, and the level 4 system 400.
+This outcome does reinforce the perception that most fatalities and injuries are the result of collisions, which PTC at any level is designed to address.
+DRAFT
+Derailments are the second general category of accidents thought to be addressed by PTC.
+Derailments accounted for 423 of the 819 (52%) accidents at the highest PTC level, and dropped to 199 (37%) of the 543 accidents in level 2.
+At levels 3 and 4 they represent 32% and 28% respectively.
+Other accidents (not collisions and derailments) are included in the group of PTC addressable accidents, including those involving maintenance of way workers and equipment.
+At PTC level 4, 149 accidents were thought to be preventable or partially preventable, accounting for 4 fatalities and 7 injuries, this number dropped to 113 for level 3, representing 2 fatalities and 5 injuries, 105 for level 2 and 75 at level 1 which includes 3 fatalities and 5 injuries.
+The trends in the derailment category indicate relatively infrequent low-consequences events, whose greatest potential hazard is in the possibility of the release of hazardous chemicals requiring an evacuation.
+(Six?) Eleven derailments account for 5300 to 5835 of the total number of evacuations and (two?) six collisions account for 1314 to 1334.
+One derailment, included in the group of accidents thought to possibly preventable by the highest level of PTC system, accounted for 50 fatalities.
+(this was a maybe ) This accident is not consistent with the general trend of the consequences of PTC-preventable derailments being less than collisions, but it identifies a source of risk.
+The historical data can only answer part of that question.
+To understand the total risk potential for the U.S. that might be addressed by PTC, a more formal assessment of the hazards other than CRAM would be required.
+DRAFT
+CRAM II Results
+A regression analysis is generally used to understand how different factors describing a system relate to one another.
+Since this analysis focused on the identification of locations where PTC preventable accident risk was significant enough to warrant implementation, the methodology was designed to identify characteristics of various locations that seemed to contribute to risk.
+The quantification of the contribution to risk of factors such as control methods, signaling, speed limits, the number of tracks and characteristics of the volume of passenger and freight traffic on the network were used to develop a tool that would make distinctions between corridors based upon PTC preventable accident risk.
+DRAFT
+Models were estimated using a regression methodology that allows the dependent variable to be the number of PTC preventable accidents that happened at a location.
+The independent variables used to understand the frequency of these accidents were the total million gross tons at the location, the curvature, switches, number of tracks, type of control method, and speed at the location.
+Models were estimated for all four levels of PTC preventable accidents, and subsets of collisions and derailments.
+The results of the model can be used to create a prediction for any location where there is complete data on these independent variables, provided the conditions represented by the model remain the same, and the accident trend on each corridor for the years analyzed is constant.
+One of the most important components of the analysis is the input data.
+In this analysis, the critical variables, namely, the selection of PTC preventable accidents, and the freight flow data and the passenger flow data, were provided by the railroads.
+Network variables that describe track characteristics, control methods and speed, were collected from published railroad descriptions, track charts, schedules, etc.
+Some PTC preventable accidents oc-
+curred where freight or passenger flow had not been provided by the railroad.
+However, the railroads did provide that data on accident reports to the FRA at the time that those accidents occurred.
+In these cases, track density reported by the railroads on the RAIRS report were used in the analysis.
+Using the highest level of PTC, the model indicates that the total freight flow, the number of tracks, and the number of switches and curves per mile contribute to increases in the expected number of accidents and that the presence of a train control method higher than ?dark? but lower that automatic train control will reduce that risk.
+(you didn?t model atc, so what does this mean?) (atc was modeled as as been noted in several briefings) In addition, two other factors contribute to lowered risk, the average length of curves at a location and the average maximum allowable speed.
+Since the model is estimated by combining all of these factors to create an estimate of risk for a given location, it is most useful to apply the regression ?formula? to each corridor and compare the predicted number of accidents for each one.
+DRAFT
+Accident rates were calculated for the 8 year period 1988-1995.
+The annual rate predicted per corridor is from .125 to 2.5 per corridor per year.
+(normalize please).
+Accident consequences vary by location and severity, depending upon whether both freight and passenger trains are involved, whether there is a hazmat release and the level of damage to equipment and track.
+Consequences for maintenance of way workers and equipment can be very severe from accidents that do not result in significant train or track damage.
+Therefore, forecasts of consequences must be made for individual accident types and severity.
+If it can be assumed that accidents will behave in the future as they have in the past, then the historical consequences of accidents can be used to describe the likely consequences of future accidents.
+For this analysis, it is most useful to create a single ?unit? with which to express risk.
+This is accomplished by quantifying the costs of accidents in dollars.
+Dollars are used to express the government?s willingness to pay to avoid fatalities, injuries, track and equipment damages and evacuations.
+Using this methodology, costs were assigned to each PTC preventable accident, using the scale $2.7 million per fatality, $100k per injury, and $1,000 per evacuation.
+Dollar damages to track and equipment were inflated by .5625 to reflect additional unreported costs for repairs, delays and equipment damages.
+Using these numbers the average PPA cost $1.13 million, ranging from the lowest accident cost of $8,595 to the highest of $154,964,618 ($150M).
+Detailed results have been calculated for each corridor including the forecast number of accidents and expected dollar damages per accident.
+In the aggregate if a corridor is expected to experience from 0.125 to 2.5 PPAs per year, its expected PTC preventable safety benefits range from $141k to $2.8 million annually.
+(This needs to be corrected by the economics analysis team)
+DRAFT
+Each corridor has been ranked according to its historical accident costs, and its costs per mile and per ton mile.
+Similarly, predicted corridor risks are ranked per mile and ton mile.
+The results of these rankings are shown (in an appendix to this report).
+They indicate that the some corridors have significantly higher risk than others, but the majority of corridors are not significantly different from one another on the basis of risk.
+CONCLUSIONS
+Since the Model relies on an empirical relationship between the accident rate and track and traffic data, it cannot predict the capability of anyspecific PTC system to reduce risk, nor can the Model determine the potential benefits of any risk reduction strategy such as modification of operating rules.
+It can only predict the frequency with which PTC preventable will occur.
+Initially this effort was left to subject matter experts, but aA more complete detailedrisk analysis approach is suggested using an Axiomatic Safety-Critical Assessment Process, outlined later in this report.
+1
+DRAFT
+2
+The defined corridors are a subset of the GIS database, resulting in a smaller number of PPAs
+Table 1 shows accident data for the years 1988 ? 1997 inclusive.
+CRAM used data from 1988-1995 inclusive and ?predicted? the 1996 and 1997 outcomes.
+?Partially? preventable means that PTC might help prevent the accident but there was considerable uncertainty that PTC could prevent that accident from occuring.
+4
+3
+DRAFT

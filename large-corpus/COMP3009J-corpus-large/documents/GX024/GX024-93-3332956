@@ -1,0 +1,40 @@
+Overview Package Class Tree Deprecated Index Help PREV CLASS NEXT CLASS FRAMES NO FRAMES All Classes SUMMARY: NESTED | FIELD | CONSTR | METHOD DETAIL: FIELD | CONSTR | METHOD __________________________________________________________________ genopt.algorithm.util.linesearch Class GoldenRatio java.lang.Object | +--genopt.algorithm.util.linesearch.FiniteIntervalSearcher | +--genopt.algorithm.util.linesearch.IntervalDivider | +--genopt.algorithm.util.linesearch.GoldenRatio __________________________________________________________________ public class GoldenRatio extends IntervalDivider Class for doing a line search along a given direction using the Golden Section division.
+This project was carried out at: * Lawrence Berkeley National Laboratory (LBNL), Simulation Research Group,
+and supported by * the U.S. Department of Energy (DOE), * the Swiss Academy of Engineering Sciences (SATW), * the Swiss National Energy Fund (NEFF), and * the Swiss National Science Foundation (SNSF)
+Copyright (c) 2000 The Regents of the University of California.
+All rights reserved.
+Version: GenOpt(R) 1.1.2 (April 22, 2002)
+Author: Michael Wetter __________________________________________________________________
+Field Summary protected static double gr The Golden ratio (=0.618...)
+Fields inherited from class genopt.algorithm.util.linesearch.IntervalDivider nIntRed, nIntRedMax, NINTREDMAXDEF, x1, x2, x3, xLow, xUpp
+Fields inherited from class genopt.algorithm.util.linesearch.FiniteIntervalSearcher dimF, dimX, dx, LS, o, x0, xMin
+Constructor Summary GoldenRatio(genopt.algorithm.Optimizer opt) Constructor
+Method Summary protected double getReductionFactor() Gets the reduction factor q = I(n+1)/I(n) void setUncertainityInterval(double dx) Sets the fraction of the desired uncertainity interval (0..1)
+Methods inherited from class genopt.algorithm.util.linesearch.IntervalDivider getXLower, getXUpper, iterate, run, setAbsDFMin, setMaxIntRed
+Methods inherited from class genopt.algorithm.util.linesearch.FiniteIntervalSearcher getXMin
+Methods inherited from class java.lang.Object clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait
+Field Detail
+gr
+protected static final double gr
+The Golden ratio (=0.618...)
+Constructor Detail
+GoldenRatio
+public GoldenRatio(genopt.algorithm.Optimizer opt)
+Constructor
+Parameters: opt - a reference to the Optimizer object
+Method Detail
+getReductionFactor
+protected double getReductionFactor()
+Gets the reduction factor q = I(n+1)/I(n)
+Specified by: getReductionFactor in class IntervalDivider
+Returns: the reduction factor q = I(n+1)/I(n) __________________________________________________________________
+setUncertainityInterval
+public void setUncertainityInterval(double dx)
+Sets the fraction of the desired uncertainity interval (0..1)
+Specified by: setUncertainityInterval in class IntervalDivider
+Parameters: dx - the normalized fraction of the uncertainity interval __________________________________________________________________
+Overview Package Class Tree Deprecated Index Help PREV CLASS NEXT CLASS FRAMES NO FRAMES All Classes SUMMARY: NESTED | FIELD | CONSTR | METHOD DETAIL: FIELD | CONSTR | METHOD __________________________________________________________________
+GenOpt | LBL SRG | LBL _______________________________________________________________________
+Copyright Â© 2000 The Regents of the University of California.
+All rights reserved.
+For problems or questions regarding this page contact MWetter@lbl.gov

@@ -1,0 +1,46 @@
+Privacy and Security Notice Jefferson Lab [corner2.gif] [corner.gif]
+Win use WMF.
+Always convert text to paths.
+Note that gradients may blowout in WMF.)
+If you select your gradient and go to Object
+You can set the desired tolerance.
+This way you can have a gradient in your WMF- or any other software that does not recognize AI's gradients.
+For inserting bitmap files into WORD: 1.
+Open your file in Illustrator.
+File
+This bitmaps/rasterizes your drawing file and adds the3-letter TIFF extension '.tif' to the filename.
+2.
+A 'TIFF Options' window should appear.
+For color images, select CMYK in the Color Model box and Resolution: Medium (150dpi) or higher to print to most on-site JLAB printers.
+A good rule of thumb when printing to desktop printers is to keep your file resolution about one half the printer's resolution.
+For example, a 300 dpi printer can only manage 150 dpi files.
+Any extra data is discarded.
+Many of the newer model 600 dpi printers on-site print from a 200 dpi file nicely.
+Choose 'Color model
+Check LZW compression if you need a small, fast-printing file.
+For black and white files, choose Color Model
+This will greatly reduce the file size.
+TIP: The longer the compression time, the better the compression job so relax and take a break while those large color photos are compressing.
+Printing resolution choices should be 150dpi or higher.
+Screen resolution will keep your file around 72 dpi. (good for web) 3.
+Select IBM or Macintosh Byte order and click OK.
+Open MS WORD or POWERPOINT.
+1.
+Insert
+Browse to locate your .tif file and click Insert.
+Word does not allow image editing but you should be able to scale your image to fit the space.
+For proportional scaling, hold down the Shift key while you grab an image box handle and drag.
+*A "streaking" pattern may be due to the upsampling PowerPoint attempts to scale the 72dpi screen bitmaps to printer resolution.
+No workaround except to use vector graphics.
+*The copy/paste process puts both .WMF and bitmap formats on the clipboard .
+If you "paste" into PowerPoint you get a bitmap, if you "Paste as ..." and select "Picture (Enhanced Metafile)" you get a scalable vector .WMF drawing.
+TIPS: Illustrator 7 and 8 have a *BROKEN* WMF export filter.
+A recent issue of Adobe magazine recommended exporting bitmap files for use in PowerPoint.
+This makes your presentation resolution dependent, however, which can only be partially compensated for by using a higher resolution (which in turn blows up file sizes and slows down PowerPoint animations).
+Illustrator 9 features an "improved WMF export" filter, according to Adobe.
+In my experience the output (.WMF format) from I9 indeed works much better in PowerPoint (I7 and I8 really produced just garbage).
+Transparency cannot be preserved in WMF files.
+If you intend to re-use Illustrator artwork in Word files (as opposed to PowerPoint), just export to EPS.
+The downside is that you need either a Postscript printer or Adobe Acrobat to print Word files containing .EPS images.
+On the other hand, this method guarantees superior output compared to any other format.
+maintained by martz@jlab.org

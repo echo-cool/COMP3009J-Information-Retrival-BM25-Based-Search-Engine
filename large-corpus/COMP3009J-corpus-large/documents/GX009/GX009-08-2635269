@@ -1,0 +1,96 @@
+CCS-3 Home | Teams | Research Areas | People | Internal News and Events __________________________________________________________________ CIC-3 Research Areas Topics * Overview * Information Extraction / Data-driven Modeling * Non-numerical Methods for Modeling 
+The expertise we offer includes analysis of very large structured and unstructured data and modeling and simulation of complex physical and adaptive systems.
+In particular, we have world-reknowned expertise in various machine learning techniques, including neural networks and genetic algorithms, statistical analysis for pattern recognition and anomaly detection, and algorithm design for detecting and predicting system and individual behaviors.
+Advances in computing and communication technologies of the past decades have profoundly improved the standard of living across some parts of the world.
+The recent transition from localized processing to global interconnectivity of computers and information is presenting humanity with enormous resource sharing and collaborating opportunities.
+This sudden societal interconnection results in a dramatic increase in the complexity of our environments and interaction.
+Economies, for instance, are fast becoming global, highly interactive and responsive.
+Increased global competition is forcing corporations to reassess their organizational structures and control and decision-making paradigms.
+Similarly, anticipation of increased complexity in warfare is prompting the military to explore and exploit new security strategies.
+Additionally, naturally occurring systems, such as the climate and the human genome, exhibit highly complex and dynamic properties.
+Across all applications, data is being generated at enormous volumes, often far out-pacing the ability to process it with current means.
+Analysis and understanding of these complex dynamical systems, with associated voluminous data, is fundamental to sustain and perhaps accelerate the global momentum of continuous improvement of the quality of life.
+The following is research conducted in the Computer Research and Applications group in support of some of the societal challenges outlined above.
+For more information, please contact: Marianna Kantor Deputy Group Leader, Computer Research 
+Information Extraction / Data-driven Modeling
+The analysis of information is an area of growing importance.
+With increasing computational capacity, extremely large, heterogeneous data sets are becoming commonplace.
+However, techniques for analyzing such data lag far behind the ability to produce it.
+Information analysis is a broad term that includes the integration and management of information, as well as the techniques for extracting from massive quantities of data various types of important, anomalous, interesting, or unexpected phenomena.
+Raw data sets come from diverse sources and in various forms.
+Some information is stored in databases, other information is collected and available in real-time.
+Some of the raw data may be noisy, erroneous, or incomplete.
+The process of acquiring and creating large quantities of data has become highly automated, however the process of assimilating and analyzing the data has not.
+We are concerned with developing advanced information analysis techniques to exploit existing data to enhance the understanding and interpretation of complex, large-scale, heterogeneous systems.
+Related Projects:
+* HCFA Medicare FWA Detection * NY State Medicaid FWA Detection
+For more information in this area, please contact Clint Scovel at jcs@lanl.gov.
+Non-numerical Methods for Modeling and Simulation
+The scientific, manufacturing, economic, military, and medical communities increasingly rely on modeling and simulation technologies to harness the growing complexity of the systems and environment in which they operate.
+Climate and ocean modeling, forecasting of the spread of infectious diseases, and modeling of traffic patterns are some of the applications undertaken at the Laboratory.
+Biological modeling of the genome and of auto-catalytic systems, pharmacological drug design, battlefield scenario analysis, economic warfare prediction, "virtual testing" of products in the manufacturing industry, and prediction of financial market dynamics are all examples of complex dynamical systems that require modeling and simulation technologies for their analysis and understanding.
+The advent of the next generation of ultra high performance computing systems will present new and important opportunities to probe into such complex dynamical systems.
+The emerging ultra high computing technologies will promote new scientific paradigms that will allow modeling and simulation of systems too complex to be understood by current methods of analysis.
+The applications of such capabilities extend well beyond the hard sciences and significant progress will be made in modeling and subsequent analysis of complex socio-economic problems.
+For more information in this area, please contact Marianna Kantor at mkantor@lanl.gov or Madhav Marathe at madhav@lanl.gov.
+Knowledge Systems
+The Research Focus Area on Knowledge Systems is concerned with Distributed Knowledge Systems (DKS): communities of (human and/or computational) agents interacting with networked information resources.
+Our goal is to help develop the scientific understanding of DKS, and apply it to areas of vital interest to the Laboratory and the nation, including the organization and management of scientific knowledge systems, protection of the information infrastructure, and national security and intelligence.
+This Focus Area is hosted by the Distributed Knowledge Systems and Modeling Team.
+For more information in this area, please contact Cliff Joslyn at joslyn@lanl.gov or visit the Knowledge Systems page.
+Complex Systems Modeling
+The Complex Systems Modeling Research Focus Area is concerned with basic and applied research on simulations of complex systems and development of aplications to understand and control such systems.
+By complex system we refer to any system featuring a large number of interacting components (agents, processes, etc.) whose aggregate activity is nonlinear (not derivable from the summations of the activity of individual components) and typically exhibits hierarchical self-organization.
+The focus is on agent-based computer simulations of complex systems such as social networks, networks involved in genetic expression, transportation and manufacturing networks, etc.
+General areas of interest are agent-based modeling, adaptive computation, biocomputing, Evolutionary computation, evolving software, agent-based optimization, and socio-technical systems.
+For more information in this area, please contact Luis Rocha at rocha@lanl.gov or visit the Complex Systems Modeling page.
+Algorithms and Architectures in High Performance Computing
+Development of future computing architectures will have a great deal of complexity associated with their memory hierarchy.
+There is often a small amount of fast memory (e.g. registers) augmented with increasingly larger amounts of slower memory.
+There may be a level of cache, (e.g. SGI Origin 200 has two levels of cache), main memory, extended storage disk drives and mass storage systems.
+Such advanced computer architectures with many levels of memory hierarchies will impose a paradigm shift in algorithm development and analysis.
+In particular, the performance and scalability of high performance applications on these large scale parallel machines are more dependent on the hierarchical memory subsystems of these machines than the peak instruction rate of the processors employed.
+This dependence is likely to increase further in the future.
+Using current trends, it is estimated that while RISC processor performance will double every 18 months, memory performance will only increase by 15% during the same time frame.
+This situation has led researchers to predict a memory wall in which real application performance will be scalable only by taking a "memory centric" view of both algorithm and architecture design.
+Future architectures are likely to rely on even more levels in the memory hierarchy as main memory gets further and further away from the processors.
+As a part of a joint research project with ACL, CIC-19 and others titled "Novel Fundamentals in Strategic Computing" we are proposing to develop of new models of computations and associated algorithms for algorithmic problems that arise in the efficient implementation of simulation systems on the next generation computing platforms.
+Performance evaluation to verify the underlying models and algorithms forms an important step in validation of the algorithms and models that are developed.
+We believe that algorithms and architectures need to be addressed jointly since increasing architecture complexity will require a strong emphasis on research and development of novel algorithms.
+Research in performance of computing architectures being done concurrently as a part of this project will provide much needed insights for the algorithmic development as realistic cost models.
+For more information in this area, please contact Madhav Marathe at madhav@lanl.gov.
+Computational Complexity Theory
+The goal of this project is to study the intrinsic computational complexity of problems.
+The current research focuses on the following inter-related reseach areas -- (i) developement of non-trivial algebraic (and syntactic) characterizations of classes of NP-, PSPACE- and NEXPTIME-hard optimization problems that are efficiently approximable, (ii) complexity and approximability of problems specified succinctly, (iii) complexity and approximability of several multi-criteria network design and location theoretic problems arising in transportation science, communication network design, etc. and (iv) extensive experimental analysis to provide insights into the observed and theoretical performance of algorithms.
+For more information in this area, please contact Madhav Marathe at madhav@lanl.gov.
+Quantum Computing
+Present day classical computers advance at a rapid pace toward the quantum barrier defined by the laws of quantum physics, which are in turn reflected in the present day hardware.
+Quantum computation is an attempt to short-circuit that asymptotic process, and to exploit quantum laws to advantage instead of regarding them as constraints.
+The power of quantum computers over traditional computers lies in the fact that they can access and manipulate arbitrary superpositions of states, a feature known as quantum parallelism.
+Surprisingly, there are quantum computations, such as quantum physics simulations, with even a modest number (40) of quantum bits that are impossible for the biggest present day classical computers.
+The ability to perform efficient quantum physics simulations for many degrees of freedom will bring new understanding and permit accurate prediction of the dynamics of complex quantum mechanical systems.
+The fact that even small numbers of quantum bits suffice for non-trivial computations leads to new insights into why quantum computers are so much more powerful.
+We are developing efficient algorithms for quantum physics simulations which can be implemented in present and proposed hardware for quantum computers, and we are studying the origin of the power of quantum computers.
+For more information in this area, please contact Manny Knill at knill@lanl.gov.
+Signal Processing
+Speech Recognition
+Researchers in CIC-3 (John Hogden, David Nix, George Papcun, Patrick Valdez) have been studying speech processing tasks (e.g. speech recognition, speaker recognition, low bit rate speech transmission, and visual displays of speech information for the hearing-impaired) for several years.
+What unites the CIC-3 work on these different speech processing tasks is the attempt to utilize the relationship between speech acoustics and speech production.
+The focus on speech production is well-founded.
+Consider that the position of a point on the tongue can be transmitted at roughly 40 samples/second (20 samples for the x-position and 20 for the y-position), but that good quality speech is often sampled at 10,000 samples/second or more.
+Tongue, jaw, and lip positions also have a more straightforward relationship to the phonemes (sounds like /b/ and /t/) than researchers have been able to find between digitized speech waves and phonemes -- /b/ is virtually always created by briefly closing the lips while vibrating the glottal folds, but resulting speech waves vary tremendously when /b/ is produced in different contexts.
+Neural networks have been applied to the problem of recovering the positions of the speech articulators from speech acoustics along with a new algorithm called Maximum Likelihood Continuity Mapping (MALCOM).
+CIC-3's current work in this area relies heavily on MALCOM, which is a stochastic model, like the highly successful Hidden Markov Models, but which embodies more realistic speech production assumptions than HMMs.
+Like HMM parameters, MALCOM parameters are learned using the well-known Expectation Maximization algorithm with acoustic input.
+Unlike any other algorithm, the parameters learned using the MALCOM model constitute a mapping between speech acoustics and speech production, even though speech production data is not used during training.
+For more information in this area, please contact John Hogden at hogden@lanl.gov.
+Document Analysis
+Several research activities at the Laboratory have been concerned with the general area of document image analysis -- dealing with a document that has been scanned into a computer and is represented using an image format.
+These projects have dealt with issues ranging from the automated determination of a document's script (or alphabet) to the automated assessment of the quality for a given document image.
+Related Projects:
+* Document Quality * LIFI
+For more information in this area, please contact Pat Kelly at kelly@lanl.gov.
+__________________________________________________________________
+CCS Division | LANL | DOE Phone Book | Search | Help
+L O S A L A M O S N A T I O N A L L A B O R A T O R Y Operated by the University of California for the US Department of Energy
+c3webmeister - Copyright Â© UC 2000 - Disclaimer - 26 Jul 2000

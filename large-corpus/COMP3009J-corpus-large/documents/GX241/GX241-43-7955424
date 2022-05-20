@@ -1,0 +1,132 @@
+NREL/JA-810-31967 July 2002 Imagine a future in which you drive home from work, plug your car into your house, and have it provide electricity for evening lights and meals and even supply electricity to the grid for the community's benefit.
+Then, in the lull of the night, your house or the grid will return the favor to produce for your car the energy it will need for the next day.
+This is a technically possible future because your car could well be a fuel-cell car that uses hydrogen to produce electricity (see "Hydrogen Economy" on pages 10-13).
+Your car could become a distributed generator and your house a producer of energy and a refueling station.
+Concurrently, the emissions resulting from the use of energy for your house and car can approach zero, if the hydrogen and the electricity are produced using renewable energy resources and technologies.
+For America's transportation sector, striving toward such a future is vitally important.
+Our transportation is almost entirely dependent on oil, nearly 60% of which arrives in tankers from foreign shores.
+And our use of petroleum in transportation translates directly into huge emissions of pollutants and greenhouse gases.
+All major manufacturers are developing hybrid electric vehicles and fuel-cell vehicles that will produce far fewer emissions and get greater mileage.
+Above is a Honda Insight hybrid electric car and a GM S10 pickup truck that uses an onboard reformer to produce hydrogen for use in a fuel cell.
+Going Farther for Less Areas of the country that have air-quality problems will soon require the introduction of ultra-low-emission vehicles into the transportation mix.
+One strategy to meet the emissions requirements is with hybrid electric vehicles.
+By 2010, there may be as many as 250,000 HEVs sold in America.
+HEVs often use nickel metal-hydride (NiMH) batteries because they have greater energy density and last longer than the more familiar, less expensive lead-acid batteries.
+It is against this backdrop that Secretary of Energy Spencer Abraham announced the FreedomCAR program, for research into "advanced, fuel-cell technology, which uses hydrogen to power automobiles without creating pollution.
+The long-term results of this...effort will be cars But things may be about to change, and trucks that are thanks to an R
+Batteries.
+Lead-acid batteries have traditionally been charged at a constant curEnergy Mgmt 
+This constant-charge Control System strategy does not sufficiently recharge the Internal negative plate in the battery, and leads to Combustion Engine a premature end of battery life.
+NREL and its partners devised a clever, inexpensive technique--a current-interrupt charging algorithm--for charging the batteries properly.
+The technique involves overcharging the battery for 5 seconds then allowing it to rest for 5 seconds.
+The rest period permits the battery to cool and prevents it from going into a gassing cycle.
+This algorithm, which increases battery life by three- to four-fold, enables leadacid batteries to be competitive with NiMH batteries in terms of life cycle.
+6
+Thermal infrared image of lead-acid batter y during 5-amp overchar ge shows temperature variation of 26Â°C to 33Â°C.
+Motor/Generator
+Multifaceted R
+They are ones that NREL has been supporting for years under DOE guidance.
+Achieving these goals requires a multitiered approach and will involve many players--auto and component manufacturers, the energy industry, government agencies, and national laboratories.
+For its part, NREL is helping the nation realize these goals through two general pathways: the development of advanced vehicles, systems, and components; and the testing and development of alternative fuels.
+cy over the internal combustion engine, and greatly reduced emissions.
+You also get a pathway to the future fuel-cell vehicle--where fuels cells will eventually replace the engine in a hybrid electric vehicle.
+Toward this future, NREL emphasizes a systems approach, in which we analyze subsystems and components to determine how they may best be integrated to optimize vehicle performance.
+To do this, we develop interactive modeling tools and make them available to others so that they may more quickly optimize their designs of components and HEV systems (see sidebar "Accelerating Clean Vehicle Development").
+One of the subsystems we analyze is the battery pack and its thermal management.
+Different batteries tend to operate best at particular temperature ranges, which can change with the cycling of the
+The Advanced Vehicle Pathway A drawback of our current transportation system is that it relies heavily on internal combustion engines, which are quite inefficient--the typical gasoline internal combustion engine for cars converts less than 18% of the heat energy in gasoline into kinetic energy for the car.
+An alternative is the electric vehicle, whose efficiency can be greater than 60% and whose operation does not generate emissions.
+However, the most popular choice for powering electric vehicles--batteries--provides only a short driving range.
+But by combining internal combustion with electric propulsion, you get the best of both worlds: a hybrid electric vehicle (HEV) with a very good driving range, significantly increased efficienBattery Pack Fuel Tank
+Accelerating Clean Vehicle Development Car manufacturers are developing advanced vehicles that will use less fossil fuel and run cleaner.
+NREL created ADVISOR (ADvanced Vehicle SimulatOR) to help accelerate that development.
+ADVISOR is an analysis software package that provides fast and accurate simulations of vehicle configurations with an emphasis on advanced powertrains and on optimizing designs for fuel efficiency and reduced emissions.
+It allows engineers to simulate nearly endless design options, reducing the time and the expense for building and testing prototypes.
+Easy to use, flexible, and robust, ADVISOR uses three primary graphical interface screens to guide the user through the simulation process.
+With the Vehicle Input screen, the user chooses a predefined vehicle to test, or creates a new vehicle from an extensive data base of vehicle components and configurations.
+The Simulation Setup screen allows the user to test that vehicle under an incredible range of simulated test procedures, driving cycles, and loads.
+Finally, with the Results screen, the user can view second-to-second results from 127 output variables.
+This
+NREL's ADVISOR software analysis package uses interactive simulation to allow the user to interactively control the vehicle and to view vehicle and component response during the simulation.
+is an iterative process that enables the designer to vary the parameters and optimize vehicle characteristics.
+ADVISOR is primarily used to quantify the fuel economy, performance, and emissions of vehicles that use advanced technologies such as fuel cells, batteries, and electric motors for hybrid electric vehicles, as well as conventional technologies such as internal combustion engines.
+ADVISOR has attracted a rapidly growing worldwide community of users who incorporate it into their own software programs.
+Users include automotive manufacturers and suppliers, universities for research and training of engineers, research laboratories, and government organizations.
+The typical hybrid electric vehicle uses batteries, an internal combustion engine, and a motor/generator for propulsion.
+Such a hybrid configuration not only greatly extends gas mileage and cuts emissions, but may also serve as a precursor to a fuel-cell vehicle.
+7
+battery.
+Temperature variations from module to module can affect performance and life.
+Our analysis can point to ways in which to manage the temperature of the battery subsystems, for best performance (see sidebar "Going Farther for Less").
+Other important subsystems are those that help determine the comfort of the passenger--heating, ventilation, cooling, and keeping the air clean.
+These auxiliary systems can consume a large amount of energy.
+NREL uses an optimization approach to analyze auxiliary loads, simultaneously modeling passenger comfort, heating and air-conditioning, and vehicle performance to determine how best to keep passengers comfortable while minimizing fuel use and emissions.
+This systems approach, which can minimize auxiliary loads while increasing vehicle performance and passenger comfort, could save the nation billions of gallons of gasoline per year--to painlessly reduce our dependence on foreign oil and enhance air quality.
+The Fuel Pathway A hydrogen infrastructure in which the hydrogen fuel-cell car plays a starring role may be the ideal to which to aspire, but there are many options available that would enable the nation to cut its use of petroleum and in the process reduce its emissions.
+Among these options are alternative fuels--including compressed natural gas, liquefied natural gas, ethanol, and methanol--that we can use in our cars, trucks, and buses.
+The first step in understanding how best to cut emissions and curtail oil consumption with alternative fuels is to establish a base that enables us to make comparisons, to measure progress, and to understand the properties of fuels and the consequences of its use.
+NREL is establishing such a base with a testing program it manages for the Department of Energy--the Alternative Fuels Data Center.
+We test and analyze a wide variety of cars, trucks, vans, buses, and fleets that use alternative fuels.
+This program has enabled us to build an extensive database on alternative fuels, their properties, and their performance characteristics.
+The information from this database is available to anyone who wants Exhaust the data, and it is used by fleet managers, municipalities, manufacturers of vehicles and components, the fuel industry, and researchers.
+The next step is to develop alternative fuels, especially ones that are derived from renewable reSecondary fuel sources, such as injector biomass.
+NREL Exhaust cooler
+Clearing the Air One way of reaching our goals on energy, emissions, and infrastructure is, to coin a phase, to just do it--find ways in which to put more alternative-fuel vehicles (AFVs) on the road, and ways for those vehicles to use more alternative fuels.
+The DOE-sponsored Clean Cities program is finding ways.
+This program helps build coalitions among government agencies and private companies to promote the purchase of AFVs, the use of alternative fuels, and the expansion of refueling stations for those fuels.
+The coalition members can leverage their resources, collaborate on public policy issues, promote AFVs in their community, and help create AFV markets.
+Opportunities are greatest in markets where fleets of vehicles can share their use of the infrastructure.
+This includes airports, campuses, military bases, government agencies, transit agencies, and freight and package delivery companies.
+By tapping these markets, the program and its cooperating members have built coalitions in more than 80 cities and 41 states.
+There are about 400,000 AFVs on 8
+the road today.
+And today, drivers are discovering a growing infrastructure of stations where they can fill up their tanks with compressed natural gas (CNG), E85 (a blend containing 85% ethanol and 15% gasoline), and other alternative fuels.
+Two of the aims of this coalitionbuilding effort are to get 1 million AFVs on the road by 2010 and to have these vehicles consume 1 billion equivalent gallons of alternative fuels.
+But the long-term goal is to build a sustainable alternativefuel market, and thereby enhance energy security and air quality.
+Fischer-Tropsch fuel improves efficiency of after treatment devices
+Two-stage lean-NOx catalyst
+SuperShuttle, a van service that provides shared, door-to-door rides to seven major airports across the country, operates approximately 300 CNG vehicles.
+This one is filling up with CNG at the Denver International Airport.
+Catalyzed particle filter
+develops these fuels through its biofuels and biomass programs (see "Biorefineries" on pages 2-5).
+These fuels are most often blended with gasoline--a strategy that not only gets more alternative fuels into the energy infrastructure, but also helps curtail emissions.
+A third step is to produce hydrogen from renewable resources for use as both a fuel and an energy carrier.
+This will dovetail nicely with the parallel development of fuel-cell vehicles.
+NREL pursues this alternative through its research in basic energy sciences and through the DOE's hydrogen program (see "Hydrogen Economy" on pages 10-13).
+The Heavy-duty Option.
+Another option for reducing emissions is to develop clean diesel fuels for heavy-duty vehicles.
+Diesel fuel accounts for almost 20% of the fuel used on our highways, and its use in on-road heavy-duty vehicles generates thousands of tons of nitrogen oxides, particulate matter, and other pollutants each year.
+Working with industry, NREL has helped develop technologies and approaches in which diesel emissions can be drastically cut.
+Turbine compressor Inlet air
+diesel fuels for use with catalyzed filters (see sidebar "Breathing Easier").
+A second approach is to develop clean synthetic fuels from natural gas (or synthesis gas--primarily hydrogen and carbon monoxide) in conjunction with modifying a diesel engine to optimally burn the synthetic diesel.
+With this approach, carbon monoxide emissions can be nearly eliminated, while particulate matter and nitrogen oxides can be reduced by up to 97%.
+Designer Fuels.
+A further strategy is to design diesel fuels on the molecular level.
+In this way, you can design for particular properties of a fuel--such as the cetane number (a measure of how readily the fuel will ignite), auto-ignition temperature, and the rate of combustion.
+Each of these properties is controlled by the molecular structure of the fuel.
+Eventually, through an iterative process, designer fuels can be optimized for high performance and low pollutants.
+NREL researchers are just beginning this process.
+Their aim is to do it first for diesel with more conventional fossil-fuel stock, then to turn to renewable stock, and finally, to pass beyond diesel to other fuels.
+Designing fuels at the molecular level is just one part of a multifaceted effort that NREL is engaged in to help the nation move away from foreign sources of oil, toward an infrastructure that includes a large percentage of renewable fuels and advanced vehicles and that may eventually culminate in zero emissions.
+One way to lower diesel emissions is to use the Fischer-Tropsch process to produce clean synthetic diesel, such as this fuel, which contains no sulfur and ver y few aromatics.
+Another way NREL is exploring is to design the fuel from the molecular level, to achieve not only low emissions but high performance.
+One approach by NREL and its partners is to develop clean "conventional"
+Intercooler
+Cooler
+EGR valve
+Exhaust Gas Recirculation (EGR) lowers combustion temperature and reduces NOx formation
+NREL and its partners explore many options for reducing emissions from diesel fuels.
+One option is this specially designed heavy-truck engine.
+The design reduces the temperature at which ignition occurs (to lower NOx emissions); modifies the piston shape to increase the volume of gas in the combustion chamber (to lower ignition temperature); and re-circulates exhaust gases produced by each piston stroke (lowering the oxygen in the mixture, and hence lowering NOx).
+When used with a Fischer-Tropsch Fuel, this approach reduces emissions of NOx and particulate matter by more than 90% compared to conventional diesel engines.
+Fischer-Tropsch synthetic diesel fuel
+Conventional diesel fuel
+Breathing Easier NREL and its partners in industry and academia developed a new filter and fuel system that slashes particulate emissions from heavyduty diesel trucks by 97%, cuts carbon monoxide emissions by more than 80%, and reduces total hydrocarbon emissions to below detection limits.
+The system consists of a low-sulfur diesel fuel used in combination with either of two self-regenerating particulate filters.
+The fuel, which was developed by ARCO, contains less than 15 ppm of sulfur, is made using a conventional refinery process, does not require special handling, and is available on the California market.
+The filters were developed by Engelhard and by Johnson Matthey.
+Each filter--installed in place of a muffler--is a catalyzed filter that oxidizes particulate matter, carbon monoxide, and unburned carbons from the diesel exhaust.
+Because they oxidize particulate matter at low exhaust temperatures, the filters regenerate themselves and do not need to be routinely serviced.
+Both filters have been certified by the California Air Resources Board as being able to meet the new, strict emissions standards to be phased in from 2007 to 2010.
+9

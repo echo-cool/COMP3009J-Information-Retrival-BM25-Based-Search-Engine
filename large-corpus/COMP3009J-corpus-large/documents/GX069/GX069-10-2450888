@@ -1,0 +1,236 @@
+Go forward to Answers to Exercises.
+Go backward to Algebra Tutorial.
+Go up to Tutorial.
+Programming Tutorial ====================
+The Calculator is written entirely in Emacs Lisp, a highly extensible language.
+If you know Lisp, you can program the Calculator to do anything you like.
+Rewrite rules also work as a powerful programming system.
+But Lisp and rewrite rules take a while to master, and often all you want to do is define a new function or repeat a command a few times.
+Calc has features that allow you to do these things easily.
+(Note that the programming commands relating to user-defined keys are not yet supported under Lucid Emacs 19.)
+One very limited form of programming is defining your own functions.
+Calc's `Z F' command allows you to define a function name and key sequence to correspond to any formula.
+Programming commands use the shift-`Z' prefix; the user commands they create use the lower case `z' prefix.
+1: 1 + x + x^2 / 2 + x^3 / 6 1: 1 + x + x^2 / 2 + x^3 / 6 . .
+' 1 + x + x^2/2! + x^3/3! RET Z F e myexp RET RET RET y
+This polynomial is a Taylor series approximation to `exp(x)'.
+The `Z F' command asks a number of questions.
+The above answers say that the key sequence for our function should be `z e'; the `M-x' equivalent should be `calc-myexp'; the name of the function in algebraic formulas should also be `myexp'; the default argument list `(x)' is acceptable; and finally `y' answers the question "leave it in symbolic form for non-constant arguments?"
+1: 1.3495 2: 1.3495 3: 1.3495 .
+1: 1.34986 2: 1.34986 .
+1: myexp(a + 1) .
+.3 z e .3 E ' a+1 RET z e
+First we call our new `exp' approximation with 0.3 as an argument, and compare it with the true `exp' function.
+Then we note that, as requested, if we try to give `z e' an argument that isn't a plain number, it leaves the `myexp' function call in symbolic form.
+If we had answered `n' to the final question, `myexp(a + 1)' would have evaluated by plugging in `a + 1' for `x' in the defining formula.
+(*) *Exercise 1.* The "sine integral" function `Si(x)' is defined as the integral of `sin(t)/t' for `t = 0' to `x' in radians.
+(It was invented because this integral has no solution in terms of basic functions; if you give it to Calc's `a i' command, it will ponder it for a long time and then give up.)
+We can use the numerical integration command, however, which in algebraic notation is written like `ninteg(f(t), t, 0, x)' with any integrand `f(t)'.
+Define a `z s' command and `Si' function that implement this.
+You will need to edit the default argument list a bit.
+As a test, `Si(1)' should return 0.946083.
+(Hint: `ninteg' will run a lot faster if you reduce the precision to, say, six digits beforehand.)
+See 1: Programming Answer 1.
+(*)
+The simplest way to do real "programming" of Emacs is to define a "keyboard macro".
+A keyboard macro is simply a sequence of keystrokes which Emacs has stored away and can play back on demand.
+For example, if you find yourself typing `H a S x RET' often, you may wish to program a keyboard macro to type this for you.
+1: y = sqrt(x) 1: x = y^2 . .
+' y=sqrt(x) RET C-x ( H a S x RET C-x )
+1: y = cos(x) 1: x = s1 arccos(y) + 2 pi n1 . .
+' y=cos(x) RET X
+When you type `C-x (', Emacs begins recording.
+But it is also still ready to execute your keystrokes, so you're really "training" Emacs by walking it through the procedure once.
+When you type `C-x )', the macro is recorded.
+You can now type `X' to re-execute the same keystrokes.
+You can give a name to your macro by typing `Z K'.
+1: .
+1: y = x^4 1: x = s2 sqrt(s1 sqrt(y)) . .
+Z K x RET ' y=x^4 RET z x
+Notice that we use shift-`Z' to define the command, and lower-case `z' to call it up.
+Keyboard macros can call other macros.
+1: abs(x) 1: x = s1 y 1: 2 / x 1: x = 2 / y . . . .
+' abs(x) RET C-x ( ' y RET a = z x C-x ) ' 2/x RET X
+(*) *Exercise 2.* Define a keyboard macro to negate the item in level 3 of the stack, without disturbing the rest of the stack.
+See 2: Programming Answer 2.
+(*)
+(*) *Exercise 3.* Define keyboard macros to compute the following functions:
+1.
+Compute `sin(x) / x', where `x' is the number on the top of the stack.
+2.
+Compute the base-`b' logarithm, just like the `B' key except the arguments are taken in the opposite order.
+3.
+Produce a vector of integers from 1 to the integer on the top of the stack.
+See 3: Programming Answer 3.
+(*)
+(*) *Exercise 4.* Define a keyboard macro to compute the average (mean) value of a list of numbers.
+See 4: Programming Answer 4.
+(*)
+In many programs, some of the steps must execute several times.
+Calc has "looping" commands that allow this.
+Loops are useful inside keyboard macros, but actually work at any time.
+1: x^6 2: x^6 1: 360 x^2 .
+1: 4 . .
+' x^6 RET 4 Z 
+Here we have computed the fourth derivative of `x^6' by enclosing a derivative command in a "repeat loop" structure.
+This structure pops a repeat count from the stack, then executes the body of the loop that many times.
+If you make a mistake while entering the body of the loop, type `Z C-g' to cancel the loop command.
+Here's another example:
+3: 1 2: 10946 2: 1 1: 17711 1: 20 . .
+1 RET RET 20 Z 
+The numbers in levels 2 and 1 should be the 21st and 22nd Fibonacci numbers, respectively.
+(To see what's going on, try a few repetitions of the loop body by hand; `C-j', also on the Line-Feed or LFD key if you have one, makes a copy of the number in level 2.)
+A fascinating property of the Fibonacci numbers is that the `n'th Fibonacci number can be found directly by computing `phi^n / sqrt(5)' and then rounding to the nearest integer, where `phi', the "golden ratio," is `(1 + sqrt(5)) / 2'.
+(For convenience, this constant is available from the `phi' variable, or the `I H P' command.)
+1: 1.61803 1: 24476.0000409 1: 10945.9999817 1: 10946 . . . .
+I H P 21 ^ 5 Q / R
+(*) *Exercise 5.* The "continued fraction" representation of `phi' is `1 + 1/(1 + 1/(1 + 1/( ... )))'.
+We can compute an approximate value by carrying this however far and then replacing the innermost `1/( ...
+)' by 1.
+Approximate `phi' using a twenty-term continued fraction.
+See 5: Programming Answer 5.
+(*)
+(*) *Exercise 6.* Linear recurrences like the one for Fibonacci numbers can be expressed in terms of matrices.
+Given a vector `[a, b]' determine a matrix which, when multiplied by this vector, produces the vector `[b, c]
+Now write a program that, given an integer `n', computes the `n'th Fibonacci number using matrix arithmetic.
+See 6: Programming Answer 6.
+(*)
+A more sophisticated kind of loop is the "for" loop.
+Suppose we wish to compute the 20th "harmonic" number, which is equal to the sum of the reciprocals of the integers from 1 to 20.
+3: 0 1: 3.597739 2: 1 .
+1: 20 .
+0 RET 1 RET 20 Z ( 
+The "for" loop pops two numbers, the lower and upper limits, then repeats the body of the loop as an internal counter increases from the lower limit to the upper one.
+Just before executing the loop body, it pushes the current loop counter.
+When the loop body finishes, it pops the "step," i.e., the amount by which to increment the loop counter.
+As you can see, our loop always uses a step of one.
+This harmonic number function uses the stack to hold the running total as well as for the various loop housekeeping functions.
+If you find this disorienting, you can sum in a variable instead:
+1: 0 2: 1 .
+1: 3.597739 .
+1: 20 . .
+0 t 7 1 RET 20 Z ( 
+The `s +' command adds the top-of-stack into the value in a variable (and removes that value from the stack).
+It's worth noting that many jobs that call for a "for" loop can also be done more easily by Calc's high-level operations.
+Two other ways to compute harmonic numbers are to use vector mapping and reduction (`v x 20', then `V M 
+Both of these are probably easier than using loops.
+However, there are some situations where loops really are the way to go:
+(*) *Exercise 7.* Use a "for" loop to find the first harmonic number which is greater than 4.0.
+See 7: Programming Answer 7.
+(*)
+Of course, if we're going to be using variables in our programs, we have to worry about the programs clobbering values that the caller was keeping in those same variables.
+This is easy to fix, though:
+.
+1: 0.6667 1: 0.6667 3: 0.6667 . .
+2: 3.597739 1: 0.6667 .
+Z ` p 4 RET 2 RET 3 / s 7 s s a RET Z ' r 7 s r a RET
+When we type `Z `' (that's a back-quote character), Calc saves its mode settings and the contents of the ten "quick variables" for later reference.
+When we type `Z '' (that's an apostrophe now), Calc restores those saved values.
+Thus the `p 4' and `s 7' commands have no effect outside this sequence.
+Wrapping this around the body of a keyboard macro ensures that it doesn't interfere with what the user of the macro was doing.
+Notice that the contents of the stack, and the values of named variables, survive past the `Z '' command.
+The "Bernoulli numbers" are a sequence with the interesting property that all of the odd Bernoulli numbers are zero, and the even ones, while difficult to compute, can be roughly approximated by the formula `2 n! / (2 pi)^n'.
+Let's write a keyboard macro to compute (approximate) Bernoulli numbers.
+(Calc has a command, `k b', to compute exact Bernoulli numbers, but this command is very slow for large `n' since the higher Bernoulli numbers are very large fractions.)
+1: 10 1: 0.0756823 . .
+10 C-x ( RET 2 % Z [ DEL 0 Z : ' 2 $! / (2 pi)^$ RET = Z ] C-x )
+You can read `Z [' as "then," `Z :' as "else," and `Z ]' as "end-if."
+There is no need for an explicit "if" command.
+For the purposes of `Z [', the condition is "true" if the value it pops from the stack is a nonzero number, or "false" if it pops zero or something that is not a number (like a formula).
+Here we take our integer argument modulo 2; this will be nonzero if we're asking for an odd Bernoulli number.
+The actual tenth Bernoulli number is `5/66'.
+3: 0.0756823 1: 0 1: 0.25305 1: 0 1: 1.16659 2: 5:66 . . . .
+1: 0.0757575 .
+10 k b RET c f M-0 DEL 11 X DEL 12 X DEL 13 X DEL 14 X
+Just to exercise loops a bit more, let's compute a table of even Bernoulli numbers.
+3: [] 1: [0.10132, 0.03079, 0.02340, 0.033197, ...]
+1: 30 .
+[ ] 2 RET 30 Z ( X | 2 Z )
+The vertical-bar `|' is the vector-concatenation command.
+When we execute it, the list we are building will be in stack level 2 (initially this is an empty list), and the next Bernoulli number will be in level 1.
+The effect is to append the Bernoulli number onto the end of the list.
+(To create a table of exact fractional Bernoulli numbers, just replace `X' with `k b' in the above sequence of keystrokes.)
+With loops and conditionals, you can program essentially anything in Calc.
+One other command that makes looping easier is `Z /', which takes a condition from the stack and breaks out of the enclosing loop if the condition is true (non-zero).
+You can use this to make "while" and "until" style loops.
+If you make a mistake when entering a keyboard macro, you can edit it using `Z E'.
+First, you must attach it to a key with `Z K'.
+One technique is to enter a throwaway dummy definition for the macro, then enter the real one in the edit command.
+1: 3 1: 3 Keyboard Macro Editor.
+. .
+Original keys: 1 RET 2 +
+type "1\r" type "2" calc-plus
+C-x ( 1 RET 2 + C-x ) Z K h RET Z E h
+This shows the screen display assuming you have the `macedit' keyboard macro editing package installed, which is usually the case since a copy of `macedit' comes bundled with Calc.
+A keyboard macro is stored as a pure keystroke sequence.
+The `macedit' package (invoked by `Z E') scans along the macro and tries to decode it back into human-readable steps.
+If a key or keys are simply shorthand for some command with a `M-x' name, that name is shown.
+Anything that doesn't correspond to a `M-x' command is written as a `type' command.
+Let's edit in a new definition, for computing harmonic numbers.
+First, erase the three lines of the old definition.
+Then, type in the new definition (or use Emacs `M-w' and `C-y' commands to copy it from this page of the Info file; you can skip typing the comments that begin with `#').
+calc-kbd-push # Save local values (Z `) type "0" # Push a zero calc-store-into # Store it in variable 1 type "1" type "1" # Initial value for loop calc-roll-down # This is the TAB key; swap initial 
+Press `M-# M-#' to finish editing and return to the Calculator.
+1: 20 1: 3.597739 . .
+20 z h
+If you don't know how to write a particular command in `macedit' format, you can always write it as keystrokes in a `type' command.
+There is also a `keys' command which interprets the rest of the line as standard Emacs keystroke names.
+In fact, `macedit' defines a handy `read-kbd-macro' command which reads the current region of the current buffer as a sequence of keystroke names, and defines that sequence on the `X' (and `C-x e') key.
+Because this is so useful, Calc puts this command on the `M-# m' key.
+Try reading in this macro in the following form: Press `C-@' (or `C-SPC') at one end of the text below, then type `M-# m' at the other.
+Z ` 0 t 1 1 TAB Z ( 
+(*) *Exercise 8.* A general algorithm for solving equations numerically is "Newton's Method".
+Given the equation `f(x) = 0' for any function `f', and an initial guess `x_0' which is reasonably close to the desired solution, apply this formula over and over:
+new_x = x - f(x)/f'(x)
+where `f'(x)' is the derivative of `f'.
+The `x' values will quickly converge to a solution, i.e., eventually `new_x' and `x' will be equal to within the limits of the current precision.
+Write a program which takes a formula involving the variable `x', and an initial guess `x_0', on the stack, and produces a value of `x' for which the formula is zero.
+Use it to find a solution of `sin(cos(x)) = 0.5' near `x = 4.5'.
+(Use angles measured in radians.)
+Note that the built-in `a R' (`calc-find-root') command uses Newton's method when it is able.
+See 8: Programming Answer 8.
+(*)
+(*) *Exercise 9.* The "digamma" function `psi(z)' is defined as the derivative of `ln(gamma(z))'.
+For large values of `z', it can be approximated by the infinite sum
+psi(z) ~= ln(z) - 1/2z - sum(bern(2 n) / 2 n z^(2 n), n, 1, inf)
+where `sum' represents the sum over `n' from 1 to infinity (or to some limit high enough to give the desired accuracy), and the `bern' function produces (exact) Bernoulli numbers.
+While this sum is not guaranteed to converge, in practice it is safe.
+An interesting mathematical constant is Euler's gamma, which is equal to about 0.5772.
+One way to compute it is by the formula, `gamma = -psi(1)'.
+Unfortunately, 1 isn't a large enough argument for the above formula to work (5 is a much safer value for `z').
+Fortunately, we can compute `psi(1)' from `psi(5)' using the recurrence `psi(z+1) = psi(z) + 1/z'.
+Your task: Develop a program to compute `psi(z)'; it should "pump up" `z' if necessary to be greater than 5, then use the above summation formula.
+Use looping commands to compute the sum.
+Use your function to compute `gamma' to twelve decimal places.
+(Calc has a built-in command for Euler's constant, `I P', which you can use to check your answer.)
+See 9: Programming Answer 9.
+(*)
+(*) *Exercise 10.* Given a polynomial in `x' and a number `m' on the stack, where the polynomial is of degree `m' or less (i.e., does not have any terms higher than `x^m'), write a program to convert the polynomial into a list-of-coefficients notation.
+For example, `5 x^4 + (x + 1)^2' with `m = 6' should produce the list `[1, 2, 1, 0, 5, 0, 0]'.
+Also develop a way to convert from this form back to the standard algebraic form.
+See 10: Programming Answer 10.
+(*)
+(*) *Exercise 11.* The "Stirling numbers of the first kind" are defined by the recurrences,
+s(n,n) = 1 for n 
+This can be implemented using a "recursive" program in Calc; the program must invoke itself in order to calculate the two righthand terms in the general formula.
+Since it always invokes itself with "simpler" arguments, it's easy to see that it must eventually finish the computation.
+Recursion is a little difficult with Emacs keyboard macros since the macro is executed before its definition is complete.
+So here's the recommended strategy: Create a "dummy macro" and assign it to a key with, e.g., `Z K s'.
+Now enter the true definition, using the `z s' command to call itself recursively, then assign it to the same key with `Z K s'.
+Now the `z s' command will run the complete recursive program.
+(Another way is to use `Z E' or `M-# m' (`read-kbd-macro') to read the whole macro at once, thus avoiding the "training" phase.)
+The task: Write a program that computes Stirling numbers of the first kind, given `n' and `m' on the stack.
+Test it with *small* inputs like `s(4,2)'.
+(There is a built-in command for Stirling numbers, `k s', which you can use to check your answers.)
+See 11: Programming Answer 11.
+(*)
+The programming commands we've seen in this part of the tutorial are low-level, general-purpose operations.
+Often you will find that a higher-level function, such as vector mapping or rewrite rules, will do the job much more easily than a detailed, step-by-step program can:
+(*) *Exercise 12.* Write another program for computing Stirling numbers of the first kind, this time using rewrite rules.
+Once again, `n' and `m' should be taken from the stack.
+See 12: Programming Answer 12.
+(*)
+This ends the tutorial section of the Calc manual.
+Now you know enough about Calc to use it effectively for many kinds of calculations.
+But Calc has many features that were not even touched upon in this tutorial.
+The rest of this manual tells the whole story.

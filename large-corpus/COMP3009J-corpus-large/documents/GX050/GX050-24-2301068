@@ -1,0 +1,361 @@
+HMMERBUILD [ Program Manual | User's Guide | Data Files | Databases ] Table of Contents FUNCTION DESCRIPTION EXAMPLE OUTPUT INPUT FILES RELATED PROGRAMS RESTRICTIONS SPECIFYING SEQUENCES FOR HMMERBUILD ALGORITHM CONSIDERATIONS COMMAND-LINE SUMMARY ACKNOWLEDGEMENT PARAMETER REFERENCE __________________________________________________________________ FUNCTION [ Top | Next ]
+The profile HMM can be used for database searching (HmmerSearch), sequence alignment (HmmerAlign) or generating random sequences that match the model (HmmerEmit).
+DESCRIPTION
+[ Previous | Top | Next ]
+HmmerBuild provides a Wisconsin Package interface to the hmmbuild program of Dr. Sean Eddy's HMMER package.
+It allows you to access most of hmmbuild's parameters from the Wisconsin Package command line.
+HmmerBuild creates a profile hidden Markov model from a group of aligned sequences.
+A profile HMM is a mathematical model that represents the primary structure consensus of a sequence family.
+The output from HmmerBuild is a file that contains an ASCII text representation of the profile HMM.
+This profile HMM file can be used as input to several other programs in the HMMER package.
+HmmerSearch uses the profile HMM as a query to find sequences in a database that are similar to the aligned sequences from which the model was built.
+HmmerAlign uses a profile HMM as a seed to optimally align a group of sequences related to the model.
+HmmerEmit generates random sequences that match the profile HMM.
+Instead of creating a single profile HMM as ouput, you also can add the resulting profile HMM directly to an existing HMM database by using parameter -APP
+end.
+The aligned sequences may be specified to HmmerBuild with an ambiguous file expression or in a list file similar to the input for Pretty or LineUp.
+(See Chapter 2, Using Sequence Files and Databases in the User's Guide for more information.)
+EXAMPLE
+[ Previous | Top | Next ]
+Here is a session using HmmerBuild to make a profile HMM from aligned 75 kd heat shock and heat shock cognate peptide sequences (these sequences were aligned in the example session for PileUp):
+% hmmerbuild
+HMMERBUILD of what aligned sequences ? hsp70.msf{*}
+Type of alignments/searches model should lead to:
+G Global L Local B Single global C Single local
+Choose a model (* G *) :
+Setting model type to global.
+What should the output file be called (* hsp70.hmm_g *)?
+Creating temporary file for input to hmmbuild.
+Calling hmmbuild to perform analysis ...
+hmmbuild - build a hidden Markov model from an alignment HMMER 2.1.1 (Dec 1998) Copyright (C) 1992-1998 Washington University School of Medicine HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Training alignment: hsp70.msf{*} Number of sequences: 25 Search algorithm configuration: Multiple domain (hmmls) Model construction strategy: MAP (gapmax hint: 0.50) Null model used: (default) Prior used: (default) Prior strategy: Dirichlet Sequence weighting method: G/S/C tree weights - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Determining effective sequence number ... done.
+[3] Weighting sequences heuristically ... done.
+Constructing model architecture ... done.
+Converting counts to probabilities ... done.
+Setting model name, etc. ... done.
+[hsp70]
+Constructed a profile HMM (length 677) Average score: 1633.25 bits Minimum score: 1328.99 bits Maximum score: 1777.86 bits Std. deviation: 131.34 bits
+Finalizing model configuration ... done.
+Saving model to file ... done.
+[/usr/users/share/smith/hsp70.hmm_g]
+%
+OUTPUT
+[ Previous | Top | Next ]
+Here is some of the output file:
+HMMER2.0 NAME hsp70 LENG 677 ALPH Amino RF no CS no MAP yes COM gcg_hmmbuild /usr/users/share/smith//hsp70.hmm__g hsp70.msf NSEQ 25 DATE Fri Jul 9 14:09:29 1999 CKSUM 3252 XT -8455 -4 -1000 -1000 -8455 -4 -8455 -4 NULT -4 -8455 NULE 595 -1558 85 338 -294 453 -1158 ... -1998 -644 HMM A C D E F G H ...
+W Y m-
+////////////////////////////////////////////////////////////////////////////////
+675 -664 -1701 33 2728 -1813 -1361 -295 ... -1992 -1378 717 - -149 -500 233 43 -381 399 106 ... -294 -249 - -24 -6511 -7553 -894 -1115 -701 -1378 * * 676 -576 -717 -2213 -1989 -1191 -1755 -1601 ... -1918 -1514 718 - -149 -500 233 43 -381 399 106 ... -294 -249 - -24 -6511 -7553 -894 -1115 -701 -1378 * * 677 -1248 -2485 3484 210 -3124 -286 -821 ... -3039 -2364 719 - * * * * * * * ... * * - * * * * * * * * 0 //
+INPUT FILES
+[ Previous | Top | Next ]
+HmmerBuild accepts multiple sequences (one or more) all of the same type.
+You can specify multiple sequences in a number of ways: by using a list file, for example @project.list; by using an MSF or RSF file, for example project.msf{*}; or by using a sequence specification with an asterisk (*) wildcard, for example GenEMBL:*.
+The function of HmmerBuild depends on whether your input sequence(s) are protein or nucleotide.
+Programs determine the type of a sequence by the presence of either Type: N or Type: P on the last line of the text heading just above the sequence.
+If your sequence(s) are not the correct type, turn to Appendix VI for information on how to change or set the type of a sequence.
+RELATED PROGRAMS
+[ Previous | Top | Next ]
+PileUp creates a multiple sequence alignment from a group of related sequences.
+LineUp is a multiple sequence editor used to create multiple sequence alignments.
+Pretty displays multiple sequence alignments.
+ProfileMake makes a profile from a multiple sequence alignment.
+ProfileSearch uses the profile to search a database for sequences with similarity to the group of aligned sequences.
+ProfileSegments displays optimal alignments between each sequence in the ProfileSearch output list and the group of aligned sequences (represented by the profile consensus).
+ProfileGap makes optimal alignments between one or more sequences and a group of aligned sequences represented as a profile.
+ProfileScan finds structural and sequence motifs in protein sequences, using predetermined parameters to determine significance.
+HmmerBuild makes a profile hidden Markov model from a multiple sequence alignment.
+HmmerAlign aligns one or more sequences to a profile HMM. HmmerPfam searches a database of profile HMMs with a sequence query in order to identify known domains within the sequence.
+HmmerSearch uses a profile HMM as a query to search a sequence database for sequences similar to the original aligned sequences.
+HmmerCalibrate calibrates a hidden Markov model so that database searches using it as a query will be more sensitive.
+HmmerIndex creates a binary GSI ("generic sequence index") for a database of profile HMMs.
+HmmerFetch retrieves a profile hidden Markov model by name from an indexed database of profile HMMs.
+HmmerEmit randomly generates sequences that match a profile HMM. HmmerConvert converts between different profile HMM file formats and from profile HMM to GCG profile file format.
+MEME finds conserved motifs in a group of unaligned sequences and saves these motifs as a set of profiles.
+You can search a database of sequences with these profiles using the MotifSearch program.
+RESTRICTIONS
+[ Previous | Top | Next ]
+Hmmerbuild does not perform alignments.
+It is your responsibility to ensure that the sequences input to HmmerBuild are in alignment.
+HmmerBuild will append the ASCII text format HMM output to a binary format file, when using parameter -APP
+end, but the resulting file will be unusable by other programs in the HMMER package.
+It also lets you create mixed nucleic and protein profile HMM databases, which will be unusable by other programs in the HMMER package as well.
+SPECIFYING SEQUENCES FOR HMMERBUILD
+[ Previous | Top | Next ]
+The sequences used to make the profile HMM can be specified in two ways.
+(See Chapter 2, Using Sequence Files and Databases in the User's Guide for more information.)
+A group of sequences may be named with an ambiguous expression like kf*.pep
+or pileup.msf{*}.
+The sequences may also be specified in a list file, and a beginning and ending position can be assigned to each sequence in the list with the begin: and end: sequence attributes, respectively.
+(See "Using List Files" in Chapter 2, Using Sequence Files and Databases in the User's Guide).
+Make sure that the sequence ranges you specify will result in the sequences being in alignment.
+If you do not specify beginning and ending positions, the entire sequence is used.
+HmmerBuild has several built-in ways of weighting the input sequences (see the ALGORITHM topic for more details).
+If you want to use your own sequence weighting scheme, add the appropriate parameters to the list file, MSF file, or RSF file that is used as the input file.
+You must also use the -WEI
+ghting=N parameter when invoking HmmerBuild to turn off HmmerBuild's built-in weighting schemes so that yours will take precedence.
+If you are using a list file to input your files, you can add a weight attribute to any line in the list with a text editor in order to specify a weight for that sequence (if no weight attribute is present, the weight defaults to 1.0).
+For example:
+fa12.ugly begin: 201 end: 250 weight: 0.5 fo1k.ugly begin: 201 end: 250 weight: 1.0
+You can assign weights to sequences in an MSF file by editing the MSF file and modifying the weight on the name line for each sequence.
+(See "Using Multiple Sequence (MSF) Files" in Chapter 2, Using Sequence Files and Databases in the User's Guide for a complete description of MSF files.)
+Name: Hs70Plafa Len: 720 Check: 297 Weight: 0.50 Name: Hs70Thean Len: 720 Check: 1483 Weight: 1.00
+You can also edit RSF files to add a weight attibute to each sequence.
+(See "Using Rich Sequence Format (RSF) Files" in Chapter 2, Using Sequence Files and Databases in the User's Guide for a complete description of RSF files.)
+{ name hs70plafa descrip PileUp of: @Hsp70.List type PROTEIN longname hsp70.msf{Hs70Plafa} checksum 297 weight 0.5 creation-date 08/08/2000 15:40:21 strand 1 sequence [...] } { name hs70thean descrip PileUp of: @Hsp70.List type PROTEIN longname hsp70.msf{Hs70Thean} checksum 1483 weight 1.0 creation-date 08/08/2000 15:40:21 strand 1 sequence [...]
+You can use the SeqLab editor to assign weights to sequences in MSF and RSF files.
+(See "Viewing and Editing Sequence Attribute and Reference Information" in Chapter 2, Editing Sequences and Alignments in the SeqLab Guide for more information about modifying the sequence weight attributes.)
+Weights assigned in a list file take precedence over weights assigned within MSF or RSF files that are components of the list.
+ALGORITHM
+[ Previous | Top | Next ]
+See the Profile HMM Analysis Essay for an introduction to profile hidden Markov models and the terminology associated with them.
+State Assignments
+In constructing an HMM, HmmerBuild must first determine which columns in the alignment should be assigned to a match state and which to an insert state.
+The profile HMM is then built from this "marked" alignment.
+By default, HmmerBuild uses maximum a posteriori (MAP) construction: a dynamic programming algorithm is used to determine the maximum a posteriori choice of state for each column in the alignment.
+This algorithm can be tuned to favor longer or shorter models by means of the -ARCH
+prior parameter, which can be set to values between 0.0 and 1.0.
+By default this is set to 0.85.
+To favor longer models, set it higher; to favor shorter models, set it lower.
+Like most dynamic programming algorithms, MAP construction is fairly slow.
+You can use a faster heuristic method to "mark" the columns by specifying the -FAS
+t parameter.
+The heuristic method assigns a column in the alignment to the insert state if the column contains more than a certain fraction of gap characters.
+By default, this fraction is 0.5.
+You can change it using the -GAPS parameter.
+For more detailed information on how MAP construction works, see section 5.7, "Optimal Model Construction," in Chapter 5 of Biological Sequence Analysis by Richard Durbin, et al.
+(Cambridge University Press, 1998).
+Probability Parameters and Pseudocounts
+After determining the state assignments, HmmerBuild must next assign the probability parameters for the model: the transition probabilities and emission probabilities.
+If there are a large number of sequences in the alignment, this can be done simply by counting up the number of times each transition or emission is used and doing a trivial calculation to get the probability.
+For example, if column 57 in an alignment of 100 protein sequences contains 60 L's, 10 I's, 9 V's, two each of M, A, T and S, and one each of the remaining amino acids, the emission probabilities would be 0.6 for L, 0.1 for I, 0.09 for V, 0.02 for M, A, T, and S, and 0.01 for each of the remaining 13 amino acids.
+Unfortunately, for alignments containing a small number of sequences the observed counts may not be representative of the family as a whole.
+For example, an alignment containing only 20 of the sequences from the example above may contain all L's in column 57, resulting in an emissions probability of 1.0 for L and 0.0 for all other amino acids.
+So there must be a way of adjusting the probabilities to account for unobserved data.
+One approach is to add pseudocounts to the observed counts so that no zero probabilities can occur.
+A simple way is to just add one to all counts.
+More accurate adjustments can be obtained by using prior knowledge about the behavior of sequence families to adjust the counts.
+Two ways of applying prior knowledge are substitition matrices and Dirichlet distributions.
+The more intuitive method for most biologists is the use of substitution matrices.
+With this heuristic method, entries in a substitution matrix are converted into conditional probabilities that are used to derive the pseudocounts.
+However, the default method used by HmmerBuild is to use a mixture of Dirichlet distributions as the prior, because this has a well-founded theoretical basis.
+This method has been shown to create good profile HMMs from alignments containing as few as 10 or 20 sequences.
+(Use the -MATR
+ix parameter if you want to override the default and have HmmerBuild use the substitution matrix method rather than Dirichlet priors.)
+You can override the default Dirichlet priors used by HmmerBuild by providing your own prior information in a file.
+Use the -DIRI
+chlet parameter to specify this file.
+Files containing the default prior information are available to use as models.
+These are GenMoreData:amino.pri and GenMoreData:nucleic.pri.
+For a more detailed description of the file format, go to http://hmmer.wustl.edu/hmmer-html/node34.html.
+For more information on how priors work, see section 5.6, "More on estimation of probabilities," in Chapter 5 of Biological Sequence Analysis by Richard Durbin, et al.
+(Cambridge University Press, 1998).
+Null model for profile HMMs
+Alignments between profile HMMs and sequences are scored by computing a log-odds score relative to a null model of random sequence composition.
+The default null model contains the expected background occurrence frequencies of each residue type plus a parameter called p1 that controls the expected length of the randomly generated sequences.
+When a profile HMM is built, HmmerBuild stores information about the null model that was used to create it along with the HMM itself.
+For proteins, the frequencies for each of the 20 amino acids are set to their observed frequencies in release 34 of the SWISS-PROT database and p1 is set to 350/351, which implies that the expected mean length of a protein is about 350 residues.
+For nucleic acid sequences, each of the four nucleotides is assigned a frequency of 0.25, and p1 is set to 1000/1001.
+You can override this default null model by providing your own null model information in a file.
+Use the -NUL
+lmodel parameter to inform HmmerBuild of the name of the file.
+Files containing the default null model information are available to use as models.
+These are GenMoreData:amino.null and GenMoreData:nucleic.null.
+For a more detailed description go to http://hmmer.wustl.edu/hmmer-html/node33.html.
+Weighting the Sequences in the Alignment
+Usually one's sequence alignments do not contain a good random sample of all possible sequences belonging to the family, but instead may contain a group of very closely related sequences plus a number of more distantly related sequences.
+To account for this distorted representation of a sequence family, closely related sequences in the alignment should have less individual effect on the final probability distribution than sequences highly diverged from all other sequences in the alignment.
+For example, if the same sequence occurs twice in your alignment, each instance of this sequence should get only half the weight of a single sequence.
+HmmerBuild provides several built-in weighting schemes.
+By default an algorithm proposed by Gerstein, Sonnhammer, and Clothia is used.
+An evolutionary tree of the sequences in the alignment serves as a guide to weight each sequence.
+Starting at the leaves of the tree (level N), the GSC algorithm assigns each sequence a weight equal to its distance to its parent node at the next higher level (level N-1) in the tree.
+At level N-1, the distance to the parent node at level N-2 is shared among all sequences in the subtree below.
+A fraction of that distance, proportional to their current weight, is added to the weights for each sequence.
+Another available weighting scheme is the BLOSUM filtering algorithm (-WEI
+ghting=B).
+This is based on the same concept that was used to create the BLOSUM substitution matrices.
+The sequences are clustered depending on their percent identity; by default using 62 percent identity (-CLUSTERLevel=0.62) as the cutoff for each cluster (as for the BLOSUM62 matrix).
+Each cluster is assigned a weight of 1.0, which in turn is distributed evenly among all sequences in the cluster.
+The third algorithm is Krogh-Mitchison maximum entropy weighting (-WEI
+ghting=W), which is a more robust version of the older Eddy-Mitchison-Durbin algorithm.
+The original algorithm determines a weight at each position of a sequence by weighting the least common residue at that position in the alignment most heavily, and the most common residue least heavily.
+These positional weights are then averaged to give an overall weight for the sequence.
+The Krogh-Mitchison version doesn't compute a simple average over the positional weights, but instead uses an entropy maximization method.
+It gives a slight increase in sensitivity over the default GSC weighting method, at the expense of increased computing time.
+A fourth weighting scheme uses the Sibbald-Argos Voronoi weighting algorithm (-WEI
+ghting=V).
+The idea is to picture how all sequences from a family lie in "sequence space."
+Some sequences will lie close together (be clustered) while other ones will lie far apart from any other sequence.
+Weights are assigned proportional to the empty space around each sequence.
+Lastly you can choose to disable all built-in weighting schemes (-WEI
+ghting=N).
+Normally you would do this only if you are providing your own weights for the sequences.
+For more information on the built-in weighting schemes, see Section 5.8, "Weighting training sequences," in Chapter 5 of Biological Sequence Analysis by Richard Durbin, et al.
+(Cambridge University Press, 1998).
+Alignment type incorporated in HMM
+The HMMER programs differ from commonly used sequence comparison and alignment programs in that the type of alignment you want to eventually perform with the profile HMM (global or local) must be specified at the time the model is built, rather than at the time it is used.
+(Note that this is with respect to the model only; if the test sequence is longer than the model, the entire model may align within the sequence and thus be local with respect to the sequence and global with respect to the model.)
+For a global alignment to a model, the entire profile HMM is aligned with the test sequence.
+This is equivalent to aligning the entire original sequence alignment from which the model is built to a segment within the test sequence.
+For a local alignment, only part of the profile HMM need be aligned with the sequence.
+This is equivalent to finding the best section of the original alignment that matches the test sequence.
+Another alignment characteristic that is built into the model is whether to find single or multiple domains in the test sequence.
+If the profile HMM is created for single hits, only one domain per sequence will be reported, even if others are present.
+Creating a model for multiple hits means that all matching domains in a sequence will be sought for and reported.
+By default, HmmerBuild creates a model which will allow multiple global alignments of the profile HMM and a sequence (-MEN
+u=g).
+You can build a single global HMM by specifying the -MENu=b parameter.
+Global models provide maximum sensitivity at the expense of only locating complete domains in the test sequence.
+If you are looking for domain fragments (only part of the model might be found in the test sequence), build a model that allows local alignments with respect to the HMM.
+Here again you can choose to find only a single match with each test sequence (-MEN
+u=c) or to find multiple matches (-MENu=l).
+There is a slight loss of sensitivity with the local models.
+For creating local models you can use the -SWEN
+try and -SWEXit parameters to favor which end of the model should match the test sequence.
+By default these are both set to 0.5 to indicate no preference.
+Setting -SWENtry to zero constrains the alignment to start at the beginning of the model while setting it to 1.0 prevents it from starting at the beginning of the model.
+Similarly, setting -SWEXit to zero means that the end of the alignment must coincide with the end of the model, while a value of 1.0 forces it not to continue to the end of the model.
+So setting both of these parameters to zero is equivalent to changing the model to a global profile HMM.
+For more information, see Eddy, et al.
+(Curr.
+Opin.
+Struct.
+Biol., 6; 361-365 (1996)) and the Eddy lab website at http://hmmer.wustl.edu/.
+CONSIDERATIONS
+[ Previous | Top | Next ]
+If you use the default Dirichlet mixture priors, you can obtain a good profile HMM with as few as ten or twenty aligned sequences.
+You should calibrate a profile HMM with HmmerCalibrate before using it with HmmerSearch or HmmerPfam.
+This will ensure a more sensitive search, with better chances of finding distantly related homologs to your original sequences.
+HmmerBuild, unlike the original hmmbuild program, will overwrite existing profile HMMs without asking your permission.
+When you specify option -MATR
+ix to use a heuristic substitution matrix-based prior, the default Dirichlet prior is unaffected.
+Therefore in principle you could use options -DIRIchlet and -MATRix together, but this is not recommended, since it has not been tested.
+(Option -MATRix itself has not been tested extensively.)
+COMMAND-LINE SUMMARY
+[ Previous | Top | Next ]
+All parameters for this program may be added to the command line.
+Use -CHE
+ck to view the summary below and to specify parameters before the program executes.
+In the summary below, the capitalized letters in the parameter names are the letters that you must type in order to use the parameter.
+Square brackets ([ and ]) enclose parameter values that are optional.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Minimal Syntax: % hmmerbuild [-INfile1=]hsp70.msf{*} -Default
+Prompted Parameters:
+[-OUTfile=]hsp70.hmm_g names the output file
+-MENu=g sets model type to multiple global l sets model type to multiple local b sets model type to single global c sets model type to single local
+Local Data Files: None Optional Parameters:
+-BEGin1=1 -END1=100 sets the range of interest for each sequence
+-SWENtry=0.5 assigns the probability that a local alignment will begin at the leftmost end of the model (applies only if the model type is l or c) -SWEXit=0.5 assigns the probability that a local alignment will end at the rightmost end of the model (applies only if the model type is l or c) -PROtein insists that the sequence alignment is amino acid -DNA insists that the sequence alignment is nucleic acid -ARCHprior=0.85 sets the architecture prior used by MAP construction algorithm -FASt determines model architecture quickly and heuristically by assigning columns with more than a certain fraction of gap characters to insert states -GAPS=0.5 sets the minimum fraction of gaps for the -FASt option -NULlmodel=amino.null uses the null model given in amino.null instead of the default null model -DIRIchlet=amino.pri uses Dirichlet prior information from amino.pri in place of the default Dirichlet priors -MATRix=PAM30 uses a heuristic prior based on the PAM30 substitution matrix instead of the default Dirichlet priors -MATWeight=20.0 sets the number of pseudocounts contributed by the substitution matrix-based prior -NOEffseqnum uses the true number of sequences instead of the effective sequence number -WEIghting=B uses the BLOSUM filtering algorithm to weight the sequences M uses the Krogh/Mitchison maximum entropy algorithm to weight the sequences V uses the Sibbald/Argos Voronoi sequence weighting algorithm to weight the sequences N turns off built-in sequence weighting -CLUSTERLevel=0.62 controls determination of effective sequence number and sets the clustering threshold when using the -WEIghting=B option -NAME=myhmm sets the internal (not file) name of the profile HMM -APPend appends this profile HMM to an existing hmm file -BINary writes the profile HMM to hmm file in HMMER binary format instead of readable ASCII text -VERbose prints extra information, such as the individual scores for each sequence in the alignment -NOMONitor doesn't display information about analysis parameters used
+ACKNOWLEDGEMENT
+[ Previous | Top | Next ]
+The programs comprising the HMMER package are designed and implemented by Dr. Sean Eddy of the Washington University School of Medicine, St. Louis, Missouri.
+The Wisconsin Package front-end programs were written by Christiane van Schlun in collaboration with Dr. Eddy.
+Pfam - A database of protein domain family alignments and HMMs Copyright (C) 1996-2000 The Pfam Consortium.
+PARAMETER REFERENCE
+[ Previous | Top | Next ]
+You can set the parameters listed below from the command line.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Following some of the parameters described below is a short expression in parentheses.
+These are the names of the corresponding parameters used in the native HMMER package.
+Some of the GCG parameters are identical to the original HMMER parameters, others have been changed to fit GCG's conventions.
+-BEGin=1
+sets the beginning position for all sequences in the alignment.
+When beginning positions are specified for individual sequences in a list file, HmmerBuild ignores the beginning position set on the command line.
+-END=100
+sets the ending position for all sequences in the alignment.
+When ending positions are specified for individual sequences in a list file, HmmerBuild ignores the ending position set on the command line.
+-MENu=G (-g, -f, -s)
+sets the model to be configured to a specific type of alignment to a target sequence: multiple global alignments (G), single global alignment (B = -g), multiple local alignments (matching partial domains) (L = -f), single local alignments (C = -s).
+-SWENtry=0.5 (--swentry 0.5)
+When -MEN
+u=L or -MENu=C, this parameter gives you control over the local vs global alignment behavior at the left (N- or 5'-terminal) side of the model.
+The default value is 0.5 and the value may range from 0.0 to 1.0, inclusive.
+Values greater than 0.5 increase the penalty for matches that start at the very beginning of the model and thus favor local matches on that side of the model.
+Values less than 0.5, on the other hand, favor global matches (those that start at the very beginning of the model) on that side.
+Thus setting -SWEN
+try to 0.0 constrains the alignment to start at the beginning of the model and setting it to 1.0 constrains it not to start at the beginning of the model.
+-SWEXit=0.5 (--swexit 0.5)
+When -MEN
+u=L or -MENu=C, this parameter gives you control over the local vs global alignment behavior at the right (C- or 3'-terminal) side of the model.
+The default value is 0.5 and the value may range from 0.0 to 1.0, inclusive.
+Values greater than 0.5 increase the penalty for matches continuing to the very end of the model and thus favor local matches on that side of the model.
+Values less than 0.5, on the other hand, favor global matches (those that continue to the very end of the model) on that side.
+Thus setting -SWEX
+it to 0.0 means that the end of the alignment must coincide with the end of the model and setting it to 1.0 constrains it not to end at the end of the model.
+-PROtein (--amino)
+insists that the sequence alignment is amino acid.
+Normally HmmerBuild autodetects whether the sequences are protein or DNA, but if the sequences are too short, the autodetect algorithm may fail.
+-DNA (--nucleic)
+insists that the sequence alignment is nucleic acid.
+Normally HmmerBuild autodetects whether the sequences are protein or DNA, but if the sequences are too short, the autodetect algorithm may fail.
+-ARCHprior=0.85 (--archpri 0.85)
+sets the architecture prior used by MAP architecture construction.
+The default is 0.85 and the value may range from 0.0 to 1.0, inclusive.
+This parameter governs a geometric prior distribution over model lengths.
+Higher values mean longer models are favored a priori.
+Lower values require greater conservation in a column before it is regarded as a "consensus" match column in the model architecture.
+-FASt (--fast)
+determines the architecture of the model heuristically by assigning all columns with more than a certain fraction of gap characters to insert states.
+This is faster than using the default MAP algorithm.
+-GAPS=0.5 (--gapmax 0.5)
+sets the fraction of gap characters in a column that will cause that column to be assigned to the insert state when the -FAS
+t parameter is used.
+If a column contains a higher fraction of gap symbols than this, it gets assigned to an insert column.
+The value can lie between 0.0 and 1.0, inclusive, and is set to 0.5 by default.
+Higher values mean more columns get assigned to the match state, resulting in a longer model; with smaller values, fewer columns are assigned to the match state, and the length of the model is shorter.
+-NULlmodel=amino.null (--null amino.null)
+reads null model data from the file amino.null instead of using the default null model.
+By default, protein sequences use the amino acid frequencies from release 34 of the SWISS-PROT database and p1 = 350/351; for nucleic acids each base is assigned the frequency 0.25 and p1 = 1000/1001.
+-DIRIchlet=amino.pri (--prior amino.pri)
+reads Dirichlet prior data from a file named amino.pri, instead of using the default Dirichlet priors mixture.
+-MATRix=PAM30 (--pam PAM30)
+specifies a substitution matrix to use for a heuristic substitution matrix-based prior in place of the default Dirichlet priors mixture.
+The matrix must be in BLAST matrix format.
+If HmmerBuild can't find the matrix you specified in your working directory, it automatically looks in the directory associated with the logical name BLASTMAT.
+-MATWeight=20.0 (--pamwgt 20.0)
+the number of pseudocounts contributed by the heuristic prior when a substitution matrix-based prior is specified with the -MATR
+ix parameter.
+Any positive real number may be used; the default value is 20.0.
+Very high values can force the scoring system to be entirely driven by the substitution matrix, making a profile HMM behave similarly to a Gribskov profile.
+-NOEffseqnum (--noeff)
+turns off the effective sequence number calculation, and uses the true number of sequences instead.
+This will usually reduce the sensitivity of the final model.
+-WEIghting=B (--wblosum)
+uses the BLOSUM filtering algorithm to weight the sequences.
+Sequences at a given percent identity are clustered, and each cluster is assigned a total weight of 1.0, distributed equally among the members of that cluster.
+-WEIghting=M (--wme)
+uses the Krogh-Mitchison maximum entropy algorithm to weight the sequences.
+This supercedes the Eddy-Mitchison-Durbin maximum discrimination algorithm, which gives almost identical weights but is less robust.
+Maximum entropy weighting seems to give a marginal increase in sensitivity over the default GSC weights, but takes a fair amount of time.
+-WEIghting=V (--wvoronoi)
+uses the Sibbald-Argos Voronoi sequence weighting algorithm in place of the default GSC weighting.
+-WEIghting=N (--wnone)
+turns off all sequence weighting.
+-CLUSTERLevel=0.62 (--idlevel 0.62)
+controls the determination of effective sequence number and the behavior of the -WEI
+ghting=B option.
+The sequence alignment is clustered by percent identity, and the number of clusters at the set cutoff threshold is used to determine the effective sequence number.
+Higher values give more clusters and higher effective sequence numbers; lower values give fewer clusters and lower effective sequence numbers.
+The default is 0.62, corresponding to the clustering level used in constructing the BLOSUM62 substitution matrix, and the value needs to be between 0.0 and 1.0, inclusive.
+-NAME=myhmm (-n myhmm)
+sets the internal name (not file name) of the profile HMM.
+-APPend (-A)
+appends this model to an existing HMM file, specified by -OUT
+file, rather than overwriting it.
+Useful for building profile HMM libraries (like Pfam).
+-BINary (--binary)
+writes the profile HMM to an HMM file in HMMER binary format instead of readable ASCII text.
+-VERbose (--verbose)
+prints additional information to the screen, such as the individual scores for each sequence in the alignment.
+-NOMONitor
+suppresses the display of the program's progress on the screen.
+Printed: January 9, 2002 13:45 (1162) __________________________________________________________________
+[ Program Manual | User's Guide | Data Files | Databases ] __________________________________________________________________
+Technical Support: support-us@accelrys.com or support-eu@accelrys.com
+Copyright (c) 1982-2002 Accelrys Inc.
+A subsidiary of Pharmacopeia, Inc.
+All rights reserved.
+Licenses and Trademarks Wisconsin Package is a trademark and GCG and the GCG logo are registered trademarks of Accelrys Inc.
+All other product names mentioned in this documentation may be trademarks, and if so, are trademarks or registered trademarks of their respective holders and are used in this documentation for identification purposes only.
+Accelrys Inc.
+www.accelrys.com/bio

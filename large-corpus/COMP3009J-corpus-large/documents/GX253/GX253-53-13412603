@@ -1,0 +1,412 @@
+Census 2000 Evaluation R.3.d August 23, 2002 Census 2000 Data Capture System Requirements Study FINAL REPORT This evaluation study reports the results of research and analysis undertaken by the U.S. Census Bureau.
+It is part of a broad program, the Census 2000 Testing, Experimentation, and Evaluation (TXE) Program, designed to assess Census 2000 and to inform 2010 Census planning.
+Findings from the Census 2000 TXE Program reports are integrated into topic reports that provide context and background for broader interpretation of results.
+Prepared by Titan Systems Corporation/ System Resources Division Kevin A. Shaw, Project Manager Planning, Research, and Evaluation Division
+Intentionally Blank
+PREFACE
+Purpose of the System Requirements Study The main objective of the System Requirements Study is to assess the efficacy of the requirements definition processes that were employed by the U.S. Census Bureau during the planning stages of the Census 2000 automated systems.
+Accordingly, the report's main focus is on the opinions of those involved with Census 2000 data capture as these opinions relate to the effectiveness of requirements methodologies, including processes for coordination, communication, and documentation, and their impact on overall system functionality.
+The report also addresses certain contract management issues and their effect on system development and/or operational considerations.
+The System Requirements Study synthesizes the results from numerous interviews with a range of personnel--both U.S. Census Bureau staff and contractors--who were involved with the planning, development, operations, or management of Census 2000 systems.
+Our findings and recommendations in this report are qualitative in nature; they are based on the varied opinions and insights of those personnel who were interviewed.
+The intent is to use the results from this study to inform planning for similar future systems.
+Intentionally Blank
+CONTENTS EXECUTIVE SUMMARY ......... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . iii 1.
+2.
+3.
+4.
+BACKGROUND .......... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 METHODOLOGY ........ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2 LIMITS .................. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3 RESULTS ................ . . . . . .
+4.1 Requirements definition ... . . . . . .
+4.2 Requirements issues ...... . . . . . .
+4.3 Alignment with business processes 4.4 System deficiencies ...... . . . . . .
+4.5 Contract management practices . . .
+RECOMMENDATIONS .... .
+5.1 Project planning ........ .
+5.2 In-house expertise ...... .
+5.3 Project management tools .
+5.4 System development .....
+5.5 Quality assurance ........ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+.3 .4 .4 .6 .8 10 12 12 13 13 14 14
+5.
+References ..................... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+15 Participants ..................... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+i
+Intentionally Blank
+ii
+EXECUTIVE SUMMARY Census 2000 Data Capture provided state-of-the-art hardware and software to capture census data.
+A scanning process created a digital image of census forms; these images passed through Optical Mark Recognition and Optical Character Recognition devices to capture information electronically.
+Manual keying was used to enter data not captured electronically.
+The U.S. Census Bureau outsourced the two major components of the Census 2000 Data Capture program.
+The two components were the Data Capture System 2000 awarded to Lockheed Martin and the Data Capture Services Contract awarded to TRW.
+This study presents information based on debriefings with personnel involved in both components of the Census 2000 Data Capture program.
+Census 2000 Data Capture was a significant challenge involving leading edge technologies; outsourcing of software development, hardware/software integration, and operations; extremely complex requirements; and myriad changes.
+Despite the challenges, the project team was successful in implementing a system that efficiently and effectively processed 150 million forms.
+The project team used innovative technologies and contracting techniques to accomplish this massive effort.
+Major results of the study include: Â· Contractor partnerships were established.
+One of the reasons for the success of the Census 2000 Data Capture program was that the project team established a cooperative relationship with both the prime contractors.
+In addition, the program manager made it clear to each organization that their success was dependent on each other.
+This fact encouraged both contractors to establish close working relationships and cooperate in the identification and resolution of problems.
+Stringent change control was implemented.
+The project team established a stringent change control process at the working level that served to track, evaluate, and control changes to the Data Capture System 2000.
+This process pleased program managers, as it mitigated risks to the data capture program.
+The requirements methodology and change control process implemented were praised by oversight organizations, such as the General Accounting Office and the Inspector General.
+In addition, TRW used a document management system and email to track, control, and issue changes to procedures and training materials as part of the Data Capture Services Contract.
+Although the stringent change control process was successful, some of those individuals requiring data capture information for evaluation purposes thought the process too rigid in meeting their data requirements.
+Operational testing was conducted.
+A series of operational tests and dry runs were conducted at each of the Data Capture Centers.
+These tests provided an opportunity to assess the integration of software and procedures and identified changes and improvements to both components.
+An integrated "Four Site Test" was designed to measure the system's ability to process a large volume of information.
+Quality assurance was implemented.
+There was a philosophical difference between the iii
+Â·
+Â·
+Â·
+Census Bureau Quality Assurance specialists and program managers regarding the application of quality standards on the Data Capture System 2000 component.
+The specialists were assured that quality measurement and corrective actions were available, but it was never clear to the specialists through the available documentation or repeated explanation, as to how quality assurance would be applied and measured during the data capture process.
+It was unclear to the program managers why their documents/ presentations did not answer the Quality Assurance specialists' questions.
+Â· Limited reuse for data capture system.
+The Data Capture System 2000 component was a technological success, but is too sophisticated for regular survey efforts.
+In retrospect, the reuse of the Data Capture System 2000 for non-census work may not be realistic or ideal.
+Reuse cannot be achieved, unless the Decennial Census itself becomes less complex or has fewer specialized requirements that necessitate system customization.
+These and other findings have led to the following recommendations: Â· Project planning - define requirements early.
+Given the short development time and complex requirements, the system used in Census 2000 Dress Rehearsal was a pre-test version.
+Development efforts must be initiated early enough so that requirements such as keying rules can be well documented and so that robust systems are available to test the integration between system components and operational processes.
+Starting the planning and development earlier would provide a greater chance that all identified requirements would be implemented and that sufficient time would exist for testing and refinement.
+In-house expertise - take advantage of institutional knowledge.
+Outsourcing should provide a means to augment and extend the capabilities of in-house personnel.
+The corporate knowledge and understanding of census processes needs to be maintained.
+Experienced system developers, operational customers, and census content experts should be actively involved throughout the requirements identification and development processes.
+As such, decennial managers at all levels need to encourage and require the appropriate staff to participate in the requirements process.
+Project management tools - develop standard tool kit.
+The project team developed a number of processes and tools to support their contract management and development activities.
+Ideally, a standard set of tools would be available for each team project prior to development to avoid diverting project resources from the actual contract management and system development tasks.
+Â·
+Â·
+iv
+1.
+BACKGROUND The Titan Systems Corporation, System Resources Division (Titan/SRD) was tasked by the Planning, Research, and Evaluation Division (PRED) of the U.S. Census Bureau to conduct system requirements studies for 12 automated systems used in the decennial census.
+This report is a study of the Census 2000 Data Capture program.
+It addresses the extent to which the requirements definition process was successful in identifying the needed system functionality and offers one of several evaluation approaches for examining these automated systems.
+The report results are intended to assist in the planning of similar systems for the 2010 Census.
+This report is based primarily on the opinions of those interviewed, as they relate to the effectiveness of the data capture program.
+The Census Bureau is required to produce reports on state level census counts for the President by December 31 of the decennial year.
+The reports must be produced in a timely manner to assist with the determinations of how seats are allocated within the U.S. House of Representatives.
+In order to meet reporting requirements, census data must be captured shortly after its receipt.
+Questionnaire data were captured through a scanning process to create a digital image which was passed through Optical Mark Recognition (OMR) and Optical Character Recognition (OCR) devices.
+Manual keying was used to enter data not captured electronically.
+The data were then aggregated to support detailed tabulations.
+The U.S. Census Bureau outsourced the two major components of the Census 2000 Data Capture program.
+The two components were the Data Capture System 2000 (DCS 2000) which was awarded to Lockheed Martin and the Data Capture Services Contract (DCSC) awarded to TRW.
+Lockheed Martin provided equipment for imaging and data keying as well as the processing systems for four Data Capture Centers (DCCs).
+TRW provided staff and services for data capture, facilities management, office equipment, supplies, and office automation for three of the DCCs.
+A fourth DCC was managed by the National Processing Center (NPC), a permanent Census Bureau facility in Jeffersonville, Indiana.
+Within the report, a distinction is made between the two components, as appropriate.
+For the 1990 Census, data capture employed a Film Optical Sensing Device for Input to Computers (FOSDIC).
+It was an in-house system originally designed by the National Institute for Standards and Technology (formerly the Bureau of Standards) for the 1960 Census.
+It employed optical mark recognition technology and provided the hardware and software necessary to read and microfilm Census questionnaires and transfer the data to magnetic tape for processing.
+FOSDIC evolved over the next several decades incorporating the latest optical and processing technologies.
+Since the 1990 Census required clerical support to operate FOSDIC, the Census Bureau decided to investigate character recognition technologies used by private industry as a means to make the data capture process more efficient (i.e., capture characters on the form).
+A Memo of Understanding was established between Census Bureau and the Rochester Institute of Technology (RIT) to initiate research in these new technologies.
+A requirements model was developed, commercial off-the-shelf (COTS) products were evaluated, and tests were conducted in 1993 and 1995.
+The technologies were deemed effective and a 1
+Request for Proposal (RFP) was developed in 1996 to outsource the development and operation of the data capture system for Census 2000.
+2.
+METHODOLOGY The Titan/SRD Team interviewed key personnel for each of the Census 2000 automated systems using a structured approach centered around four fundamental areas.
+A set of questions under each of those areas was designed to explore: (1) the effectiveness of the requirements definition process; (2) how well the systems were aligned with business processes; (3) identification of any deficiencies in functionality or performance relative to actual operational needs; and (4) how effective the agency contract management activities were in regards to contractor performance.
+A similar, but separate set of questions, was designed for contractors who were identified as key personnel.
+The contractors were asked about the following areas: (1) the clarity of the statement of work and the impact of any changes to the specifications; (2) their interactions with government personnel and the technical direction they received; (3) the timeline for completing the work; and (4) their impressions of the system's suitability and operational effectiveness.
+The purpose of the system requirements study is to summarize the results of interviews with key personnel by system.
+A variety of related system documentation was reviewed in connection with the interviews.
+The assessments provided in Section 4., Results, reflect the opinions and insights of key personnel associated with the Census 2000 Data Capture program who were interviewed by the Titan/SRD Team between January and March 2001.
+Those personnel had varying levels of knowledge about the system based on their involvement with system planning, development, implementation, or operational issues.
+Section 5., Recommendations, provides value-added perspectives from the Titan/SRD Team that seek to illuminate issues for management consideration in the planning of future systems.
+Quality assurance procedures were applied to the design, implementation, analysis, and preparation of this report.
+The procedures encompassed methodology, specification of project procedures and software, computer system design and review, development of clerical and computer procedures, and data analysis and report writing.
+A description of the procedures used is provided in the "Census 2000 Evaluation Program Quality Assurance Process."
+Study participants reviewed the results of this system requirements study.
+Comments have been incorporated to the fullest possible extent.
+2
+3.
+LIMITS The following limits may apply to this system requirements study: Â· The perception of those persons participating in the interview process can significantly influence the quality of information gathered.
+For instance, if there is a lack of communication about the purpose of the review, less than optimal results will be obtained and the findings may lack depth.
+Each interview was prefaced with an explanation about its purpose in order to gain user understanding and commitment.
+In some cases, interviews were conducted several months, even years, after the participant had been involved in system development activities.
+This extended timeframe may cause certain issues to be overlooked or expressed in a different fashion (i.e., more positive or negative) than if the interviews had occurred just after system deployment.
+Each interview was completed within a one to two hour period, with some telephone followup to solicit clarification on interview results.
+Although a detailed questionnaire was devised to guide each interview and gather sufficient information for the study, it is not possible to review each aspect of a multi-year development cycle given the limited time available with each participant.
+Although this is a limitation, it is the opinion of the evaluators that sufficient information was gathered to support the objectives of the study.
+Every effort was made to identify key personnel and operational customers who actively participated in development efforts.
+In the case of the Census 2000 Data Capture program, most of the government personnel who participated in the study are still with the Census Bureau.
+The contractors interviewed for the study are no longer active on the program.
+Â·
+Â·
+Â·
+4.
+RESULTS This section contains findings that relate to the effectiveness of the requirements definition process used during the Census 2000 Data Capture program.
+The requirements process establishes the foundation for a system and, as such, must be designed to thoroughly consider all technical and functional aspects of development and operation of the system.
+3
+4.1 Requirements definition After the Census Bureau was confident that COTS products and contractors could be utilized for Census 2000 data capture, an acquisition strategy was prepared.
+This acquisition strategy outlined a pre-award phase, a development phase, and a deployment and operations phase.
+In the pre-award phase, multiple vendors were asked to conduct an operational capabilities demonstration.
+This demonstration allowed the Census Bureau to identify the contractor most suited to the task of developing DCS 2000 and served to identify and fine-tune requirements for the data capture system.
+Development activities began after an award was made to Lockheed Martin.
+The Statement of Work (SOW) was used for development until after Dress Rehearsal.
+At that point, it was determined that the SOW did not have sufficient detail, so a Functional Baseline (FBL) document was developed based on the SOW.
+The document focused on what functionality was needed, not how that functionality should be developed or implemented.
+A draft of the FBL was submitted to Lockheed Martin and refinements were worked jointly between the government and developer.
+Refinements to requirements continued throughout the development of DCS 2000.
+TRW was awarded the DCSC almost a year after Lockheed Martin started development.
+During this time, Census Bureau and Lockheed Martin had developed an Operations and Facilities Plan.
+This plan was included in the Request for Proposal (RFP) and provided the basic requirements for the operations contractor to establish facilities and procedures for the operation of DCS 2000.
+TRW refined this plan as development proceeded.
+The Census Bureau and personnel from both vendors formed a close and effective working relationship and were in constant communication throughout the project.
+Various teams were established to specialize in the different aspects of the system and its operation.
+The Operational Integrated Working Group was comprised of Census Bureau, Lockheed Martin, and TRW personnel.
+This group met regularly at the start of the project to gain a better understanding of the system and to determine how the operational process could be improved.
+During the operation of the system, an Operational Control Center (OCC) meeting was conducted on a daily basis to report the current status of operations and identify and resolve issues.
+These meetings involved Census Bureau Program Managers, Contractor Program Managers, and Site Representatives from the four processing centers.
+4.2 Requirements issues 4.2.1 New and changing requirements identified throughout development A version of DCS 2000 was tested in the Census 2000 Dress Rehearsal.
+This exercise provided an opportunity to identify changes to both program components; however, changes were identified throughout the development process.
+A formalized change control process was in place; this process required an assessment of impacts associated with each proposed change.
+The effort required to complete these assessments diverted valuable resources away from the development and testing process.
+Changes were costly to implement and some of the changes, especially those identified late in the development cycle, increased the risk that the system would 4
+not be ready in time to support census activities.
+4.2.2 Operational tests and dry runs (OTDRs) were conducted A series of operational tests and dry runs were conducted at each of the DCCs.
+The OTDRs provided an opportunity to test the integration of the software and procedures.
+These tests used different versions of DCS 2000 because the software was continually maturing.
+The tests identified a number of changes needed to improve the software and operational procedures; however, the single site tests did not measure the system's ability to process a large volume of information, so an integrated "Four Site Test" was designed.
+This test used a significant volume of forms to load test the system.
+The need for this test was identified early in the development process; however, funding was not made available until much later.
+As a result, the planning was done very quickly and the test itself was a very expensive undertaking.
+Even so, the integrated test proved effective in identifying and resolving remaining system issues.
+Overall, testing was extensive for the Census 2000 Data Capture program yet, at best, the testing can only provide a simulation of the Census environment.
+Since the census relies on the participation of a diverse public, some variables cannot be anticipated until the actual Census is conducted.
+4.2.3 Formal change control process was implemented A formal change control process was established for the DCS 2000 component.
+A folder of information was maintained on every proposed change.
+The requestor submitted a description of the change, the reason why the change was needed, and other supporting information as necessary.
+The proposed change item was assigned a tracking number.
+The contractor assessed the change in terms of schedule impacts, increased costs, and technological risks.
+Funding was verified before the change was approved for implementation.
+Change pages were then prepared for the FBL to document the new information.
+Lockheed Martin had an internal change control process that was used once the Census Bureau authorized the change.
+A higher level change control process was managed by the Issue Resolution Change Control Board (IR/CC).
+This group consisted of division level managers and was responsible for operational decisions with major budget and policy impacts.
+The group dealt with all decennial systems and made decisions when issues were identified that were outside the scope of a single system or when a Program Manager required executive management oversight and guidance to resolve an issue.
+This level of change control was not considered as effective as the working level change control process implemented for DCS 2000, because it was perceived as being too removed from daily operational issues.
+5
+4.2.4 Perceptions of change control process differed The working level change control process was effective for managing changes to the DCS 2000 component.
+This process pleased program managers, as it mitigated risks to the data capture program.
+The requirements methodology and change control process implemented were praised by oversight organizations, such as the General Accounting Office and the Inspector General.
+In addition, TRW used a document management system and email to track, control, and issue changes to procedures and training materials as part of the Data Capture Services Contract.
+Although the stringent change control process was successful, some of those individuals requiring data capture information for evaluation purposes thought the process was frustrating, as they perceived the system was not clearly defined and too inflexible to address changes and new requirements that were being identified from the testing and evaluation process.
+4.2.5 Institutional knowledge not fully utilized Institutional knowledge and experience gained from previous efforts were not fully utilized in the requirements definition process for the Census 2000 Data Capture program.
+FOSDIC was the in-house system used prior to Census 2000 for data capture.
+FOSDIC used scanning of microfilm questionnaire images to convert information on census questionnaires into a computer readable format.
+Keying data entry was used in conjunction with FOSDIC to replace the labor intensive clerical coding operations of past Census data capture efforts.
+One advantage of the system was that it provided a microfilm image of the form that could be used for archival purposes.
+One disadvantage was that the forms were not collected in any specific order, so indexing was required for later data retrieval.
+Although FOSDIC had been successful in previous decennial censuses, Census Bureau management determined that the technology would be obsolete in 2000 and too expensive to maintain for another decade.
+Management decided that a more automated solution was needed, one that relied less on manual operations, which tend to be less accurate and more costly.
+This decision was based on studies such as the "Benefit/Cost Analysis of the 2000 Census Data Capture Scenario," prepared by Advanced Resource Technologies, Inc.
+(February 1996).
+This study provided a comparison of FOSDIC, 100 percent keying (manual keying of all data), and imaging.
+Some interviewees disagreed with this decision and held the opinion that FOSDIC would have provided a cost-effective means of data capture in Census 2000.
+4.3 Alignment with business processes This section contains findings that relate to how well the Census 2000 Data Capture program supported the specific business processes that were associated with the Census Bureau's need to capture and collate census data.
+6
+4.3.1 Overall system considered effective DCS 2000 and DCSC were significant challenges involving leading edge technologies; outsourcing of software development, hardware/software integration, and operations; extremely complex requirements; and myriad changes.
+Despite the challenges, many of those interviewed believed it was the "right system for the job" providing an efficient and effective means to capture census data.
+4.3.2 Operational procedures were consistent across processing centers The three contractor-operated DCCs and the NPC used the same set of operational procedures and training materials for the DCSC component.
+These procedures were subject to a stringent configuration control process with only two individuals from TRW authorized to issue changes.
+TRW used a document management system and email to track, control, and issue changes to the procedures and training materials.
+The automation enabled a change to be made and issued to each site simultaneously; retraining on the revised procedure was then conducted and completed within 8 to 10 hours from issuance of the change.
+This tightly controlled process helped ensure the operational consistency across each of the sites.
+Approximately 200 to 300 changes were implemented using this approach as documented by TRW.
+4.3.3 Two pass keying approach implemented to meet production schedules Data capture workload was projected from the 1990 mail receipt return rate plus the increase in the number of housing units.
+Initial models of the keying rates were defined from Keying from Image (KFI) statistics, with each field having a confidence value.
+If OCR could not interpret a field with sufficient confidence, then that field was sent to KFI.
+This process was tested during the OTDRs and production slowed when KFI was necessary.
+These slower production rates caused the development and operations teams to review the keying models and lower the anticipated throughput of each keyer.
+The lower anticipated throughput caused concern that production deadlines for the census would not be met.
+Since sample data (e.g., questions such as Income and Type of Work) were not as time critical as 100 percent data (e.g., questions such as Age, Sex, and Race), a new keying process was defined that involved a two pass approach.
+In the first pass, the 100 percent data were captured from the image; after all 100 percent data were processed, the image was then reloaded and sample data were captured.
+Eventually the keying rates improved as the keyers gained more experience.
+All production rates were met or exceeded using this approach.
+4.3.4 System's sophistication limits use in other surveys The DCS 2000 component was a technological success but is too sophisticated for regular survey efforts.
+Since some of the software is not owned by the Census Bureau, contractor resources would be required to modify the system as well as operate it and maintain it between surveys.
+Current surveys are on limited budgets and the high maintenance costs associated with DCS 2000 would preclude them from using the system to meet their needs.
+Even if DCS 2000 technology were used for the 2010 Census, enhancements would be required.
+A data capture 7
+system that can be scaled up or down to meet the current surveys would be an asset.
+In retrospect, 2000 for non-census work may not be realistic or Decennial Census itself becomes less complex or necessitate system customization.
+varied, but less complex requirements of the however, the reuse of the Data Capture System ideal.
+Reuse cannot be achieved, unless the has fewer specialized requirements that
+4.4 System deficiencies This section contains findings that relate to any specific shortcomings that were identified with respect to the system's ability to accomplish what it was supposed to do.
+Recognizing that 100 percent success is rarely achievable, it is still worthwhile to assess deficiencies in the spirit of constructively identifying "lessons learned."
+Such insights can greatly contribute to improvements in future system development activities.
+4.4.1 Earlier process involvement would have benefited system development TRW had little early input into the requirements definition process for the DCS 2000 component.
+Because of funding constraints, the contract for the operation of the system was issued about 11 months after Lockheed Martin had initiated development activities.
+Some of the improvements suggested by TRW during the testing phase could not be implemented due to resource and schedule constraints.
+The system and its operation were successful; however, improvements resulting in faster processing and fewer personnel could have been made if the operations contractor had been involved in the early stages of requirements definition and system development.
+Risks should be weighed against cost and schedule in determining when to bring on each contractor.
+4.4.2 Keying rules played a major role in the data capture process Keying played a major role in data capture for Census 2000.
+When the DCS 2000 component could not identify a number or write-in character, an image of the field was forwarded to a keyer for entry (KFI); when an entire questionnaire could not be imaged, keyers entered data from the document itself (i.e., Key from Paper (KFP)).
+In addition, a number of other questionnaire types were not imaged in DCS 2000 and were keyed directly from the questionnaire.
+Initially, the same keying rules used in the seven processing centers during the 1990 Census were proposed for Census 2000.
+However, different philosophies existed among in-house Census Bureau content and processing experts on the amount of interpretation that should be done by the keyer.
+One philosophy was that the Census Bureau did not want thousands of keyers making interpretations on the respondent's data, as this was the function of the post data capture edit process.
+The other philosophy was that keyers should interpret and correct the respondent's data.
+Some interviewees were confident that NPC keyers could interpret and convert respondent information correctly since they had years of experience in interpreting and processing census data.
+It was believed that if NPC keyers could make interpretations, then contracted keyers could learn the same skills.
+8
+The DCSC contractor was directed to follow the "key what you see" method, with minimal interpretive keying rules.
+The contractor made staffing and budgeting decisions based on this guidance.
+Keying rules were changing even after production began and the rules changed between the first pass (i.e., 100 percent data) and the second pass (i.e., sample data).
+Some of the interviewees requiring data capture information for evaluation purposes felt that they were not always notified of the changes.
+Keying rules remained an issue throughout the contract which created risk to data quality and timely completion of data capture.
+At this point, it is not clear how the change in keying rules impacted the quality of the data captured.
+4.4.3 Philosophies differed on implementation of quality assurance processes Quality standards need to be linked to the sponsor requirements for the data and articulated so that regional differences and special fields can be accommodated.
+This requires an understanding of the way in which the data are used by the sponsor once captured.
+The framework for the overall quality assurance plan was decided by the Census Management Integration Team (CMIT).
+However, there was a philosophical difference between the Census Bureau Quality Assurance (QA) specialists and the CMIT regarding the application of quality standards on the program.
+The QA specialists were involved early in the procurement process and were part of the RFP development team.
+Even though the QA specialists did not document a formal quality assurance plan for the contractors, both Lockheed Martin and TRW developed internal QA programs.
+There was a philosophical difference between the Census Bureau Q A specialists and program managers regarding the application of quality standards on the Data Capture System 2000 component.
+The specialists were assured that quality measurement and corrective actions were available, but it was never clear to the specialists through the available documentation or repeated explanation, as to how quality assurance would be applied and measured during the data capture process.
+It was unclear to the program managers why their documents/presentations did not answer the Quality Assurance specialists' questions.
+Specific recommendations for improving the quality assurance aspect of the program were provided very late in the development process and would have necessitated a major redesign of the DCS 2000 software.
+Time limitations and other factors required the implementation of process workarounds that did not always meet the QA requirements.
+4.4.4 Archive requirements changed after development was completed Originally, the National Archive and Records Administration (NARA) requested only American Standard Code for Information Interchange (ASCII) formatted files from the census data capture process.
+Therefore, the Census Bureau advised Lockheed Martin that images from data capture were not required.
+Later, NARA indicated that microfilmed images and an index to those images would be required to meet federal archive requirements.
+It will take approximately two years to prepare the DCS 2000 images for microfilm.
+Lockheed Martin is now working on Phase III of the contract which includes the preparation of images for processing by the microfilm vendor.
+9
+4.4.5 Documentation too technical for validation Both contractors had rigorous procedures for managing and documenting project activities.
+The volume and detail of this documentation will serve as a basis for development of a new data capture system and process for the 2010 Census.
+Despite the availability and accuracy of the documentation for the DCS 2000 component, much of the material was written in technical jargon and, as such, was difficult to comprehend by subject matter experts that were tasked with providing input to, or validating, the information within the documents.
+It was the responsibility of Headquarters Processing, in conjunction with the Decennial Management Division (DMD), to ensure that information was communicated to the subject matter areas.
+The Census Bureau must provide clear guidance to contractors on documentation requirements and standards to ensure easier and more effective communication between developers and in-house subject matter experts.
+4.4.6 Some in-house experts not involved during requirements definition or development Some of the in-house developers responsible for maintaining and evolving the FOSDIC system were not involved in the Census 2000 Data Capture program.
+Although it may have been difficult for in-house developers to embrace the use of different technologies or to endorse an outsourcing strategy for system development, their knowledge and experience with census operations and data capture systems would have contributed to the requirements definition process.
+Some interviewees indicated that in-house developers were invited to participate but declined.
+4.5 Contract management practices This section contains findings that relate to the effectiveness of contract administration activities.
+Even when system requirements are well defined, ineffective management of contractors can lead to less than optimal results when the system is deployed.
+Consequently, it is beneficial to evaluate past practices in order to gain insights that can lead to improvements in system development efforts.
+Contractors played a pivotal role in the development of the overall data capture system.
+Lockheed Martin was selected in March 1997 to develop the DCS 2000 component.
+Lockheed Martin was responsible for the acquisition, integration, and development of hardware and software to enable the automatic capture of census data.
+Under the DCSC, TRW was selected in February 1998 to establish and operate three of the four Data Capture Centers (DCCs).
+TRW was a user of DCS 2000; as such, TRW was responsible for designing and implementing operational procedures that would allow operators to use DCS 2000 to capture data from census forms.
+4.5.1 Specific criteria were defined for contractor selection 10
+The Census Bureau selected the prime contractors using three primary criteria: (1) past performance on similar, large scale efforts, (2) capabilities of key people and the tie-in of these key people to the company's past performance, and (3) the ability of the contractor to plan, design, and demonstrate products and processes during pre-award demonstrations.
+Four contractors were involved in the bid and proposal process for the development of the DCS 2000 component; three contractors (with one dropping out) were involved in the bid and proposal process for the staffing and operation of DCS 2000.
+Lockheed Martin and TRW demonstrated strength in the three primary selection criteria which resulted in their selection as the prime contractors.
+4.5.2 Census Bureau and contractors established partnerships From the outset, the Census Bureau Program Manager made it clear to each contractor that their success was dependent on the other contractor.
+This mutual dependence caused the contractors to develop strong working relationships and establish ready communications to identify and resolve issues.
+The Census Bureau personnel also established close working relationships with each contractor.
+Constant communication and information exchange were necessary between each of the groups.
+This was accomplished via meetings, teleconferences, and extensive documentation.
+The establishment of these partnerships allowed the Census Bureau and contractor staffs to achieve the primary program objectives despite continuing changes and an accelerated development timeline.
+4.5.3 DCPO and contractors were co-located The Data Capture Program Office (DCPO) was co-located off-site with Lockheed Martin in Bowie, Maryland and with TRW in Lanham, Maryland.
+Overall, this contributed to the close working relationship between the Census Bureau and the contractors and facilitated communications and coordination throughout the development and operations efforts.
+In addition, co-location facilitated the Census Bureau's technical monitoring process over the contractors.
+However, one disadvantage of being located off-site, was the separation of the DCPO Program Manager from other key Headquarters organizations responsible for input to and support of both components of the system.
+A liaison was established between the DCPO and the Decennial Management Division (DMD) as a means to ensure coordination and communication between the Census Bureau groups involved in the Census 2000 Data Capture program.
+Even with this link, the physical separation of the Census Bureau groups may have influenced perceptions of some Headquarters staff that Census Bureau needs were being addressed secondarily to the needs of the development contractor, Lockheed Martin.
+4.5.4 DCPO developed numerous contract management tools The DCPO staff developed a number of processes and tools to assist in the day-to-day management of the Census 2000 Data Capture program.
+A rigorous change control process was designed and implemented.
+A risk database was established to identify, track, and mitigate potential risks.
+A correspondence tracking database was developed and tools to apply earned value methods for project management were implemented.
+These processes and tools enabled 11
+the DCPO to more effectively manage the development and operations contracts.
+4.5.5 TRW used numerous subcontractors for operations For the DCSC, TRW used a different subcontractor for each of the DCC operations.
+These vendors were selected based on (1) experience with paper-based data capture operations, (2) the ability to hire a large number of people in a short timeframe, (3) the resources to set-up sites quickly, and (4) experienced key personnel, capable of running a site of up to 3000 people.
+TRW controlled the budget and award fee for these contracts; this control limited the number of issues that were identified relating to the establishment and operation of the centers and, when necessary, expedited their resolution.
+4.5.6 Contractor performance considered successful Overall, the Lockheed Martin and TRW teams performed exceptionally well to provide a high quality product within a very short timeframe.
+The primes and their subcontract personnel were technically qualified, highly-motivated professionals capable of meeting and even exceeding the development and operational requirements of the Census 2000 Data Capture program.
+5.
+RECOMMENDATIONS This section synthesizes findings from the above sections and highlights opportunities for improvement that may apply to Census Bureau's future system development activities.
+The recommendations reflect insights from the Titan/SRD analysts as well as opinions regarding "lessons learned" and internal "best practices" that were conveyed by Census Bureau personnel during interviews.
+5.1 Project planning - define requirements early.
+The development schedule for the Census 2000 Data Capture program was very aggressive.
+Given the short development timeline and complex requirements, the system that was available for the Census 2000 Dress Rehearsal was only a pre-test version.
+The versions used in the OTDRs were closer to a true Dress Rehearsal because the system and operations had been fully developed.
+Fully functional systems, based on well documented requirements baselines, must be available for the Dress Rehearsal so that necessary changes can be identified, implemented, and tested well before actual deployment.
+Recommendation: Initiate development efforts early enough so that fully tested, robust systems are available for Dress Rehearsal.
+The purpose of the Dress Rehearsal should be to evaluate a fully functional system and fine tune system features, not to identify major changes in system functionality.
+Although some requirements may change from the lessons learned in Dress Rehearsal and from external forces (e.g., Congress), there would be a higher chance that all requirements would be identified and implemented for the actual census.
+In addition, establish 12
+realistic development timelines that incorporate sufficient time for requirements definition, development, testing, and enhancements.
+5.2 In-house expertise - take advantage of institutional knowledge.
+The use of contractor personnel appears to be essential for the Census Bureau to successfully deploy complex, large-scale systems.
+However, outsourcing should provide a means to augment and extend the capabilities of in-house personnel.
+The corporate knowledge and understanding of census processes needs to be maintained.
+Experienced system developers, operational customers, and census content experts should be actively involved throughout the requirements identification and development processes.
+As such, decennial managers at all levels need to encourage and require the appropriate staff to participate in the requirements process.
+Documentation may provide a framework for a contractor to develop a system, but the knowledge and experience of in-house personnel is the key to translating that information into an effective system.
+Recommendation: In-house personnel from all relevant disciplines need to participate in the planning, specification, development, and testing processes for new systems.
+Using these personnel as advisors to the development process will foster more enthusiasm to participate in the development effort and will help ensure that the resulting system meets the complex process and data requirements of the census.
+5.3 Project management tools - develop standard tool kit.
+Numerous tools were developed by the DCPO to manage the Census 2000 Data Capture program.
+The development of the project management tools diverted DCPO resources from the actual contract management and development activities.
+Change control, risk management, correspondence tracking, and financial analysis are standard project management tools that should be available to a team prior to project initiation.
+These type of tools should be standardized across projects to facilitate data sharing and data integration and to minimize retraining requirements as people transition between projects.
+Recommendation: Standard tools need to be defined for all system development efforts so that resources from contract management and development staffs can focus on the actual management and development activities.
+The selection and/or development of project management tools should involve input from program managers and other users to ensure that all requirements are considered.
+The project management tools developed by the DCPO could be used as a starting point for the standardization of such tools within the Census Bureau.
+5.4 System development - improve communication.
+Although many representatives from different divisions provided input to the Census 2000 Data 13
+Capture program, many of these personnel did not remain actively involved in the continued specification and translation of those requirements to the development contractor.
+The DCPO staff provided clarifications and amplifying information to the contractors; however, some of these individuals were contract or technology specialists and did not possess the same depth and breadth of experience in census processes and data.
+Some clarifications may have been perceived by the contractor as new or changing requirements when, in fact, the requirements may have already been defined early in the process.
+Involvement of multiple organizations and numerous specialists requires extensive coordination and communication.
+Even so, the ability of technical and census content experts to interface with development staff and provide necessary clarifications prevents missteps and helps to ensure that the resulting system meets the requirements as they were intended.
+Recommendation: Ensure that all participants in the system development process stay actively involved in the continued translation of requirements and the resolution of technical issues throughout the development effort.
+All participants must remain an integral part of the development team to ensure that the initial intent of the requirements carry forward into the actual product.
+All technical issues and change request information should be circulated to all involved parties with specific guidelines and timeframes for response.
+The need for this internal coordination must be addressed in the project planning stages and fostered by the program managers.
+5.5 Quality assurance - develop standards and guidelines early in process.
+The scope and requirements for quality assurance were not clearly defined early enough in the Census 2000 Data Capture program development causing frustration for QA specialists, program managers, and contractor personnel.
+Although QA specialists were included in some of the planning and contracting processes, they waited until late in the development cycle to provide specific input on their requirements.
+QA should be an integral part of any system design and should be specified to both contractor or in-house personnel prior to any development.
+Recommendation: An overall quality standard and guidelines should be developed by the Census Bureau as a minimum requirement for decennial systems.
+The same minimum standards and procedures should be consistent across the programs with specific quality requirements identified to meet the unique aspects of each program.
+Quality requirements should be included as part of any contract and the contractor should be directed to document and demonstrate the quality control and measurement that will be included as part of the system.
+The Census Bureau must exercise approval authority on any QA system.
+QA specialists should be considered an integral part of any system planning and specification process and be included throughout the process.
+14
+References Census 2000 System Architecture Document, Version 2.0, September 2000.
+Section 5, pages 5-1 through 5-15.
+Draft Program Master Plan (PMP)--Data Capture Systems and Operations, May 10, 2000.
+DCS 2000 Functional Baseline Specifications, Version 9, June 7, 2000.
+Prepared by Bureau of the Census.
+Statement of Work (Section C), Contract No. 50-YABC-7-66010 Modification 72.
+Draft Assessment Report for Data Capture of Paper Questionnaires, September 14, 2001.
+Prepared by Andrea Brinson.
+Final Draft DCS 2000 Data Quality (v.2.0), August 27, 2001.
+Prepared by RIT Research Corporation.
+Benefit/Cost Analysis of the 2000 Census Data Capture Scenario, February 1996.
+Prepared by Advanced Resource Technologies, Inc.
+15
+Participants Tracy Wessler Decennial Systems and Contracts Management Office 2-2301, +1.301.457.3991 Tracy.Wessler@census.gov Decennial Systems and Contracts Management Office DCPO-Lanham, +1.301.429.5375 Alan.J.Berlinger@census.gov Decennial Systems and Contracts Management Office DCPO-Lanham, +1.301.429.5360 Marie.P.Sudik@census.gov Decennial Systems and Contracts Management Office DCPO-Lanham, +1.301.429.5387 Ann.M.Gwynn@census.gov Decennial Systems and Contracts Management Office DCPO-Lanham, +1.301.429.4516 Patricia.McGuire@census.gov Decennial Systems and Contracts Management Office DCPO-Lanham, +1.301.429.5380 Derrell.A.Matthews@census.gov Decennial Systems and Contracts Management Office 2-2321, +1.301.457.4133 Danny.L.Burkhead@census.gov Demographic Statistical Methods Division 3-3711, +1.301.457.4265 Jimmie.B.Scott@census.gov Decennial Statistical Studies Division 2-2501A, +1.301.457.2987 Kevin.D.Haley@census.gov Decennial Statistical Studies Division 2-2409, +1.301.457.8448 Mark.Anthony.Viator@census.gov
+Alan Berlinger
+Marie Sudik
+Ann Gwynn
+Patty McGuire
+Derrell Matthews
+Danny Burkhead
+Jimmie Scott
+Kevin Haley
+Mark Viator
+Participants - Continued 16
+Sue Love
+Housing and Household Economic Statistics Division 3-1071, +1.301.457.3246 Susan.P.Love@census.gov Decennial Management Division 2-2329, +1.301.457.4133 Paul.R.Friday@census.gov Decennial Management Division 2-2014, +1.301.457.4001 A.E.Pike.III@census.gov Decennial Management Division 2-1422, +1.301.457.8234 Charles.F.Fowler.III@census.gov Decennial Management Division 2-1422, +1.301.457.8233 Andrea.F.Brinson@census.gov Lockheed Martin 1.301.809.3486 TRW 1.301.593.1798
+Paul Friday
+Ed Pike (DMD Program Support) Chuck Fowler
+Andrea Brinson
+Sean Murphy Larry Herring
+17

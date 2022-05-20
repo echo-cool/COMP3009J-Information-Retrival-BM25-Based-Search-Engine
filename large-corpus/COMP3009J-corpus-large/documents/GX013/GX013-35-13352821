@@ -1,0 +1,43 @@
+Next: Conclusions Up: Main Previous: Results __________________________________________________________________ Discussion The goal of the present research has been to present a methodology and computational techniques for developing and validating a structural model for C-S-H at the nanometer level.
+While further refinements are always possible, the basic model presented here seems to accurately portray many of the observed characteristics of the C-S-H gel.
+Examples of refinements which could be explored include using a size distribution of C-S-H particles at the macro and/or micro levels or using ellipsoidal particles instead of spheres.
+This would be fairly straightforward as the computational techniques for both of these modifications now exist [21,34].
+Here, we have assumed that the porosity distribution between macro and micro-level models is constant.
+While the data in Fig. 4 supports this hypothesis, other data over a larger range of w/c ratios seems to indicate that this distribution may vary somewhat with w/c ratio [2].
+Using the present model for C-S-H, and previously existing models for cement paste and mortar, one can proceed to computing the shrinkage behavior of cement-based materials via finite element techniques.
+At each scale of interest, one must know the elastic properties and shrinkage of each phase [2].
+For C[3]S paste, a computational study of the elastic behavior of simulated paste microstructure based on these techniques has exhibited good agreement with experimental measurements [35]
+There, however, it was necessary to calibrate the elastic properties of the C-S-H gel via experimental data.
+(The elastic properties of calcium hydroxide and C[3]S were available for direct input).
+With an accurate representation of the nanostructure of C-S-H, one will perhaps be able to directly calculate its elastic properties for input into the micrometer- level cement paste model.
+As an example of this, the conductivity of the macro-level C-S-H gel has been computed by mapping the microstructure into a network of resistors [36].
+The computed formation factor of 200 is in excellent agreement with values of 100-400 previously obtained in calibrating a micrometer level cement paste model against impedance spectroscopy [37,38] and chloride ion diffusion data [36]
+Figure 6 outlines a proposed plan for combining these multi-scale models to investigate the shrinkage of cement paste and mortar.
+Assuming that the elastic properties of each phase are available at each level and that the drying shrinkage is primarily due to capillary type forces, one can proceed as follows.
+Although the following discussion is limited to capillary forces, one should equally be able to incorporate other stresses such as those due to changes in surface free energy or disjoining pressure [4,5], since a complete 3-D representation of structure is available.
+For a given RH, using the techniques described herein, one can compute the locations of all the capillary condensed water in a set of structural models.
+It is worth noting that at a fixed RH, these locations may be different during drying than during self-desiccation [39].
+For the former, one can utilize the desorption algorithm to compute the water locations, while in the latter case, the adsorption algorithm may be more appropriate.
+At the micro C-S-H level, one can specify capillary stresses (based on the critical pore radius fixed by the RH [40]) at all solid/liquid interfaces and determine the bulk shrinkage of the structure using a finite element code.
+At the macro level, this bulk shrinkage will be present in each of the C-S-H particles in addition to the capillary forces again present at solid/liquid interfaces.
+At this level, one will compute the bulk shrinkage of the C-S-H gel which will be input into the cement paste model.
+Next, one will compute the bulk shrinkage of the cement paste at the micrometer level due to the shrinkage of the C-S-H gel that it contains and the capillary stresses in any water-filled capillary pores.
+After computing the bulk shrinkage of a cement paste microstructure at a w/c ratio and degree of hydration of interest, one can finally proceed to compute the shrinkage in a mortar sample.
+Here, as indicated in the figure, one may need to consider the interfacial zone paste and bulk cement paste separately, as their shrinkage characteristics may differ [41]
+Additionally it is at this level that gradients in moisture content may become important so that the shrinkage of each cement paste pixel will be a function of its spatial location and the specimen geometry.
+All of these complications can be systematically addressed within the framework of the multi-scale digital-image-based modelling approach described previously [6].
+[fig7.gif]
+Figure 6.
+Two-dimensional images from three-dimensional structural models for cement-based materials at different scales and proposed manner to model shrinkage at each level.
+Left upper: C-S-H at micro-level.
+White=solid, black=porosity, gray=water (RH=9%, desorption), (25 nm x 25 nm), Capillary forces at liquid/solid interfaces.
+Right upper: C-S-H at macro-level.
+White=solid, black=porosity, (250 x 250 nm), Capillary forces at interfaces, bulk shrinkage of micro C-S-H.
+Left lower: Cement paste at micrometer level.
+White=C[3]S, light gray= calcium hydroxide, dark gray=C-S-H gel, black=capillary porosity, (200 Âµm x 200 Âµm), capillary forces at interfaces, bulk shrinkage of C-S-H gel.
+Right lower: Mortar at millimeter level.
+White=sand, gray= bulk cement paste, black=interfacial zone paste, (10 mm x 10 mm), bulk shrinkage of cement paste as a function of paste type and location in specimen.
+This methodology does not consider stress relief due to microcracking and creep, but will indicate to what extent the non-shrinkage behavior of sand grains and unhydrated cement reduces the bulk shrinkage of a paste or mortar sample.
+Experimentally, a factor of ten reduction has been observed in comparing the shrinkage of micrometer size samples observed in an environmental SEM to that commonly measured in large scale shrinkage tests [2].
+It is hoped that having such a detailed representation of structure at all scales of importance, along with a set of computational tools to compute properties, will provide a sound scientific basis for understanding better the relationships between microstructure and drying shrinkage in cement-based materials.
+Next: Conclusions Up: Main Previous: Results __________________________________________________________________

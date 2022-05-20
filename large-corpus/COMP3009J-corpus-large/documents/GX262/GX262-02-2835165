@@ -1,0 +1,558 @@
+General Index Accelerated convergence of series 166ff.
+Accuracy 28f. achievable in minimization 398, 404, 410 achievable in root finding 353 contrasted with fidelity 841, 849 CPU different from memory 186 vs. stability 710, 736, 839, 853 Acknowledgments xii Adams-Bashford-Moulton method 749 Adams' stopping criterion 373 Adaptive integration 129, 141, 709, 714ff., 725ff., 733f., 737, 744, 749f., 797 Adaptive Monte Carlo integration 316ff., 319ff.
+Addition, multiple precision 916 Addition theorem, elliptic integrals 262 ADI (alternating direction implicit) method 856, 870f., 915 Adjoint operator 876 Adobe Illustrator xiii, xvii Advective equation 835 AGM (arithmetic geometric mean) 915 Airy function 210, 240, 250 routine for 250f.
+Aitken's delta squared process 166 Aitken's interpolation algorithm 108 Algorithms, non-numerical 889ff.
+Aliasing 501, 576 see also Fourier transform All-poles model 573 see also Maximum entropy method (MEM) All-zeros model 573 see also Periodogram Allocation of storage 19, 21f., 940ff.
+Alternating-direction implicit method (ADI) 856, 870f., 915 Alternating series 166f.
+Alternative extended Simpson's rule 134 Amoeba 410 see also Simplex, method of Nelder and Mead Amplification factor 837, 839, 841, 849, 854f.
+Amplitude error 840 Analog-to-digital converter 821, 894 Analyticity 201 Analyze/factorize/operate package 71f., 833 Anderson-Darling statistic 626f.
+Andrew's sine 702 Annealing, method of simulated 394f., 444ff. assessment 454f. for continuous variables 444, 451f.
+965 schedule 445 thermodynamic analogy 444f. traveling salesman problem 445ff.
+ANSI C standard 2f., 14, 25, 930, 941 ANSI macro 17, 930 Antonov-Saleev variant of Sobol' sequence 310ff.
+Apple xvii Macintosh 894 Approximate inverse of matrix 57 Approximation of functions 105f.
+by Chebyshev polynomials 191f., 519 Â´ Pade approximant 200ff.
+by rational functions 204ff.
+by wavelets 601f., 791 see also Fitting Arguments, conversion of data types 24f., 930 Arithmetic arbitrary precision 889, 915ff. complex 23f., 948ff. floating point 889 IEEE standard 285, 890f. rounding 890 Arithmetic coding 889, 910ff.
+Arithmetic-geometric mean (AGM) method 915 Array centered subarray of 119 how to allocate 19 index range 18 one-dimensional 18 relation to C pointer 18 three-dimensional 23 two-dimensional 20f. unit-offset 18, 940f. variable dimension 20 zero-offset 18 Artificial viscosity 840, 846 Ascending transformation, elliptic integrals 262 ASCII character set 5, 896, 903, 910 Assembly language 278 Associated Legendre polynomials 252f., 773 recurrence relation for 253 relation to Legendre polynomials 252 Association, measures of 610, 628ff.
+Asymptotic series 167 exponential integral 224 Attenuation factors 590 Autocorrelation in linear prediction 565
+966 use of FFT 545 Wiener-Khinchin theorem 498, 574 AUTODIN-II polynomial 898 Autonomous differential equations 735f.
+Autoregressive model (AR) see Maximum entropy method (MEM) Average deviation of distribution 611 Averaging kernel, in Backus-Gilbert method 816
+Index
+B
+acksubstitution 42, 47, 50, 98 in band diagonal matrix 54 in Cholesky decomposition 97 complex equations 49 direct for computing A-1 Â· B 48 relaxation solution of boundary value problems 764 in singular value decomposition 64 Backtracking 427 in quasi-Newton methods 384 Backus-Gilbert method 815ff.
+Backward deflation 370 Bader-Deuflhard method 737, 742f.
+Bairstow's method 371, 376f.
+Balancing 483 Band diagonal matrix 50, 51ff. backsubstitution 54 LU decomposition 53f. multiply by vector 52f. storage 52 Band-pass filter 558, 562 wavelets 592, 599f.
+Bandwidth limited function 501 Bank accounts, checksum for 902 Bar codes, checksum for 902 Bartlett window 554 Base of representation 28, 890 BASIC, Numerical Recipes in xv, 1 Basis functions in general linear least squares 671 Bayes' Theorem 819 Bayesian approach to inverse problems 808, 820, 825f. contrasted with frequentist 819 vs. historic maximum entropy method 825f. views on straight line fitting 670 Bays' shuffle 280 Bernoulli number 138 Bessel functions 230ff., 240ff. asymptotic form 230, 236 complex 210 continued fraction 240f., 246f. double precision 230 fractional order 230, 240ff.
+Miller's algorithm 181, 234 modified 236ff. modified, fractional order 246ff. modified, normalization formula 239, 246 modified, routines for 237ff. normalization formula 181 recurrence relation 178, 231, 239, 241f. reflection formulas 242
+reflection formulas, modified functions 247 routines for 232ff., 243ff. routines for modified functions 248f. series for 166, 230 series for K 247 series for Y 242 spherical 240, 251 turning point 241 Wronskian 240, 246 Best-fit parameters 656, 662, 666, 703 see also Fitting Beta function 213 incomplete see Incomplete beta function BFGS algorithm see Broyden-Fletcher-GoldfarbShanno algorithm Bias, of exponent 28 Bias, removal in linear prediction 570 Biconjugacy 84 Biconjugate gradient method elliptic partial differential equations 833 preconditioning 85f., 833 for sparse system 84f., 606 Bicubic interpolation 125f.
+Bicubic spline 127f.
+Big-endian 302 Bilinear interpolation 123f.
+Binomial coefficients 213 recurrences for 215 Binomial probability function 215 cumulative 229 deviates from 290, 295f.
+Binormal distribution 637, 695 Biorthogonality 84 Bisection 117, 366 compared to minimum bracketing 397f., 399f. minimum finding with derivatives 406 root finding 350, 353f., 359ff., 397, 476 BISYNCH 898 Bit 28 reversal in fast Fourier transform (FFT) 505f., 532 Bitwise logical functions 296ff., 898f.
+Block-by-block method 797 Block of statements 6 Bode's rule 132 Boltzmann probability distribution 445 Boltzmann's constant 445 Bootstrap method 691f.
+Bordering method for Toeplitz matrix 92f.
+Borwein and Borwein method for 915 Boundary 161f., 432f., 753 Boundary conditions for differential equations 707f. initial value problems 708 in multigrid method 877f. partial differential equations 514, 828ff., 857ff. for spheroidal harmonics 774 two-point boundary value problems 708, 753ff.
+Boundary value problems see Differential equations; Elliptic partial differential
+Index
+967 Â´ Â´Â´ CCITT (Comite Consultatif International TeleÂ´Â´ graphique et Telephonique) 897f., 909 CCITT polynomial 897f.
+Center of mass 305ff.
+Central limit theorem 658f.
+Central tendency, measures of 610ff.
+Change of variable in integration 144ff., 797 in Monte Carlo integration 307f.
+in probability distribution 287ff.
+Characteristic polynomial digital filter 561 eigensystems 456, 475f. linear prediction 567 matrix with a specified 375 of recurrence relation 180 Characteristics of partial differential equations 827 Chebyshev acceleration in successive overrelaxation (SOR) 868f.
+Chebyshev approximation 91, 130, 189, 190ff.
+Clenshaw-Curtis quadrature 196 Clenshaw's recurrence formula 193 coefficients for 191 Â´ contrasted with Pade approximation 201 derivative of approximated function 189, 195 economization of series 198ff., 201 for error function 220f.
+even function 194 and fast cosine transform 519 gamma functions 242 integral of approximated function 195 odd function 194 polynomial fits derived from 197 rational function 204ff.
+Remes exchange algorithm for filter 560 Chebyshev polynomials 190ff. continuous orthonormality 190f. discrete orthonormality 191 explicit formulas for 190 formula for xk in terms of 199 Check digit 901 Checksum 889, 896 cyclic redundancy (CRC) 896ff.
+Cherry, sundae without a 818 Chi-by-eye 657 Chi-square fitting see Fitting; Least squares fitting Chi-square probability function 216, 221, 621, 660, 806 as boundary of confidence region 693f. related to incomplete gamma function 221 Chi-square test 620f. for binned data 620f. chi-by-eye 657 and confidence limit estimation 693f. for contingency table 630ff. degrees of freedom 621f. for inverse problems 806 least squares fitting 659ff. nonlinear models 681ff. rule of thumb 661 for straight line fitting 661ff.
+equations; Two-point boundary value problems Box-Muller algorithm for normal deviate 289 Bracketing of function minimum 350, 397ff., 409 of roots 348, 350ff., 360, 369, 371, 376, 397 Branch cut, for hypergeometric function 209f.
+Branching 8 Break iteration 12f.
+Brenner, N.M. 506, 522 Brent's method minimization 395f., 402ff., 666 minimization, using derivative 396, 406 root finding 348, 356, 666 Broyden-Fletcher-Goldfarb-Shanno algorithm 397, 426ff.
+Broyden's method 380, 389ff., 393 singular Jacobian 393 Bubble sort 330 Bugs in compilers xiii how to report iv, xviii Bulirsch-Stoer algorithm for rational function interpolation 111f. method (differential equations) 209, 272, 708f., 712, 722, 724ff., 733, 747 method (differential equations), stepsize control 725, 733f. for second order equations 733 Burg's LP algorithm 568 Byte 28
+C ++ 7, 24 C (programming language) 11 ANSI 2f., 14, 25, 930, 941 C++ 7, 24 compilers 3 control structures 5 deficiencies 16, 24f., 26f. external functions 25 features 15f. function declaration 17 function definition 17 header (.h) file 17 implicit conversions 24f., 930 Kernighan and Ritchie 2, 16, 24, 930 nature of 15f.
+Numerical Recipes in xv, 1 operator associativity 25f. operator precedence 25f. prototypes 2, 25, 930 vectors in 18 Calendar algorithms 1f., 11ff.
+Calibration 659 Cards, sorting a hand of 330 Carlson's elliptic integrals 261f.
+Cash-Karp parameters 716f.
+Cauchy probability distribution see Lorentzian probability distribution Cauchy problem for partial differential equations 827f.
+Cayley's representation of exp(-iH t) 853
+968 for straight line fitting, errors in both coordinates 666 for two binned data sets 622 unequal size samples 623 Chip rate 300 Chirp signal 563 Cholesky decomposition 96ff., 430, 462 backsubstitution 97 operation count 97 pivoting 97 solution of normal equations 674 Circulant 592 Class, data type 7 Clenshaw-Curtis quadrature 130, 196, 518, 519 Clenshaw's recurrence formula 181ff., 196 for Chebyshev polynomials 193 stability 181ff.
+Clocking errors 899 cn function 269 Coarse-to-fine operator 873 Coarse-grid correction 873f.
+Coding arithmetic 910ff. checksums 896 decoding a Huffman-encoded message 905 Huffman 903ff. run-length 909 variable length code 903 Ziv-Lempel 903 see also Arithmetic coding; Huffman coding Coefficients binomial 215 for Gaussian quadrature 147ff. for Gaussian quadrature, nonclassical weight function 157ff., 797 for quadrature formulas 131ff., 797 Column degeneracy 32 Column operations on matrix 37, 40f.
+Column totals 630 Combinatorial minimization see Annealing Â´ Â´Â´ Comite Consultatif International Telegraphique Â´Â´ et Telephonique (CCITT) 897f., 909 Communication theory, use in adaptive integration 727 Communications protocol 896 Comparison function for rejection method 290f.
+Complementary error function see Error function Complete elliptic integral see Elliptic integrals Complex arithmetic 23f., 176ff., 948ff. avoidance of in path integration 209 cubic equations 185 for linear equations 49f. quadratic equations 184 Complex error function 259 Complex plane fractal structure for Newton's rule 367f. path integration for function evaluation 208ff., 271 poles in 111, 166, 208f., 213, 561, 573, 724f.
+Index
+Complex systems of linear equations 49f. complex.c utility functions 23f., 948ff.
+Compression of data 603, 889, 903ff., 910ff.
+Concordant pair for Kendall's tau 642f.
+Condition number 61, 85 Confidence level 692f., 696ff.
+Confidence limits bootstrap method 692f. and chi-square 693f. confidence region, confidence interval 692 on estimated model parameters 689ff.
+by Monte Carlo simulation 689ff.
+from singular value decomposition (SVD) 698 Confluent hypergeometric function 210, 246 Conjugate directions 414f., 421ff.
+Conjugate gradient method biconjugate 84 compared to variable metric method 425f. elliptic partial differential equations 833 for minimization 396f., 420ff., 812f., 824 minimum residual method 85 preconditioner 85f. for sparse system 83ff., 606 and wavelets 606 Conservative differential equations 732f.
+Constrained linear inversion method 808ff.
+Constrained linear optimization see Linear programming Constrained optimization 394 Constraints, deterministic 813ff.
+Constraints, linear 431 Contingency coefficient C 631 Contingency table 628ff., 644 statistics based on chi-square 630ff. statistics based on entropy 632ff. continue construction 14 Continued fraction 169ff.
+Bessel functions 240f. convergence criterion 171 equivalence transformation 172 evaluation 169ff. evaluation along with normalization condition 247 even and odd parts 172, 217, 222 even part 255, 257 exponential integral 222 Fresnel integral 255 incomplete beta function 227 incomplete gamma function 217 Lentz's method 171, 219 modified Lentz's method 171 Pincherle's theorem 181 ratio of Bessel functions 246 rational function approximation 170, 217, 227 recurrence for evaluating 170f. and recurrence relation 181 sine and cosine integrals 257 Steed's method 170f. tangent function 169 typography for 169 Continuous variable (statistics) 628 Control structures 6, 8ff. bad 14
+Index
+969 routine for 258f. series 257 Cosine transform see Fast Fourier transform (FFT); Fourier transform Coulomb wave function 210, 240 Courant condition 838, 841, 843, 845 multidimensional 855 Courant-Friedrichs-Lewy stability criterion see Courant condition Covariance a priori 705 in general linear least squares 673, 677 matrix, by Cholesky decomposition 98, 673 matrix, of errors 805, 817 matrix, is inverse of Hessian matrix 685 matrix, when it is meaningful 695ff.
+in nonlinear models 685, 687 relation to chi-square 695ff.
+from singular value decomposition (SVD) 698 in straight line fitting 663 CR method see Cyclic reduction (CR) Cramer's V 631 Crank-Nicolson method 848, 853, 855 CRC (cyclic redundancy check) 896ff.
+CRC-12 898 CRC-16 polynomial 898 CRC-CCITT 898 Creativity, essay on 8 Critical (Nyquist) sampling 500, 550 Cross (denotes matrix outer product) 73 Crosstabulation analysis 629 see also Contingency table Crout's algorithm 44ff., 53 Cubic equations 183ff., 367 Cubic spline interpolation 113ff.
+see also Spline Cumulative binomial distribution 226, 229 Cumulative Poisson function 221 related to incomplete gamma function 221 Curvature matrix see Hessian matrix cvector() utility 943 Cycle, in multigrid method 874 Cyclic Jacobi method 466 Cyclic reduction (CR) 857f., 861f.
+Cyclic redundancy check (CRC) 896ff.
+Cyclic tridiagonal systems 74f.
+Conventions in C programs 25ff.
+Convergence accelerated, for series 166ff. of algorithm for 915 criteria for 353, 398f., 410, 489f., 495, 684f., 767 eigenvalues accelerated by shifting 477f. golden ratio 354, 406 of golden section search 398f. of Levenberg-Marquardt method 684f. linear 353, 400 of QL method 477f. quadratic 57, 358, 364f., 415f., 427, 915 rate 353, 359f., 364f. recurrence relation 181 of Ridders' method 358 series vs. continued fraction 169f. and spectral radius 865ff., 871 convert_matrix() utility 945 Convex sets, use in inverse problems 813f.
+Convolution denoted by asterisk 498 finite impulse response (FIR) 538 of functions 498, 509 of large data sets 543f. for multiple precision arithmetic 918 multiplication as 918 necessity for optimal filtering 542 overlap-add method 544 overlap-save method 543f. and polynomial interpolation 120 relation to wavelet transform 592 theorem 498, 538ff., 553 theorem, discrete 538ff. treatment of end effects 540 use of FFT 530, 538ff. wraparound problem 540 Cooley-Tukey FFT algorithm 509 Co-processor, floating point 894 Copyright rules xvi Cornwell-Evans algorithm 825 Corporate promotion ladder 336f.
+Corrected two-pass algorithm 613 Correction, in multigrid method 872 Correlation coefficient (linear) 636ff.
+Correlation function 498 autocorrelation 498, 546, 565 and Fourier transforms 498 theorem 498, 545 treatment of end effects 546 using FFT 545f.
+Wiener-Khinchin theorem 498, 574 Correlation, statistical 609f., 628 Kendall's tau 640, 642ff. linear correlation coefficient 636ff., 664 linear related to least square fitting 636, 664 nonparametric or rank statistical 639ff. among parameters in a fit 663, 673, 676 in random number generators 277 Spearman rank-order coefficient 640f. sum squared difference of ranks 640 Cosine function, recurrence 178 Cosine integral 255, 257ff. continued fraction 257
+D anielson-Lanczos lemma 504f., 532 Data assigning keys to 897 continuous vs. binned 620 entropy 632ff., 903f. essay on 609 fitting 656ff. fraudulent 661 glitches in 659 iid (independent and identically distributed) 691 modeling 656ff. serial port 899 smoothing 610, 650ff. statistical tests 609ff.
+970 unevenly or irregularly sampled 576, 581f., 654 use of CRCs in manipulating 897 windowing 553ff.
+see also Statistical tests Data compression 603, 889 arithmetic coding 910ff. cosine transform 519 Huffman coding 903ff., 910 linear predictive coding (LPC) 571f. lossless 903 Data Encryption Standard (DES) 300ff.
+Data type 28 DAUB4 592ff., 595, 598f., 601 DAUB6 593 DAUB12 605 DAUB20 598f.
+Daubechies wavelet coefficients 592ff., 596, 598f., 601, 605 Davidon-Fletcher-Powell algorithm 397, 426f.
+Dawson's integral 259f., 606 approximation for 259 routine for 260 D.C. (direct current) 498 Debugging 7 DEC (Digital Equipment Corp.) xvii, 3, 894 Declarations 930ff.
+Decomposition see Cholesky decomposition; LU decomposition; QR decomposition; Singular value decomposition (SVD) Deconvolution 542, 549 see also Convolution; Fast Fourier transform (FFT); Fourier transform Defect, in multigrid method 872 Deferred approach to the limit see Richardson's deferred approach to the limit Deflation of matrix 478 of polynomials 369ff., 377, 378 Degeneracy of linear algebraic equations 32, 61, 65, 676 Degenerate kernel 794 Degenerate minimization principle 804 Degrees of freedom 621f., 660, 695f.
+Demonstration programs 3 Derivatives computation via Chebyshev approximation 189, 195 computation via Savitzky-Golay filters 189, 651 matrix of first partial see Jacobian determinant matrix of second partial see Hessian matrix numerical computation 186ff., 386, 651, 738, 758, 779 of polynomial 173f.
+use in optimization 395f., 406 DES see Data Encryption Standard Descending transformation, elliptic integrals 262 Descent direction 383, 390, 427 Descriptive statistics 609ff.
+see also Statistical tests Design matrix 651, 671, 804, 809
+Index
+Determinant 34, 49 Deviates, random see Random deviates DFP algorithm see Davidon-Fletcher-Powell algorithm Diagonal dominance 51, 684, 789, 865 Difference equations, finite see Finite difference equations (FDEs) Difference operator 167 Differential equations 707ff. accuracy vs. stability 710, 736 Adams-Bashforth-Moulton schemes 749 adaptive stepsize control 709, 714ff., 725, 733f., 738, 744, 749f., 751 algebraically difficult sets 772 backward Euler's method 735 Bader-Deuflhard method for stiff 737, 742f. boundary conditions 707f., 753ff., 757, 760, 779f.
+Bulirsch-Stoer method 209, 272, 708f., 712, 722, 724ff., 747 Bulirsch-Stoer method for conservative equations 733 comparison of methods 708f., 747, 751 conservative 732f. danger of too small stepsize 720 eigenvalue problem 756, 772ff., 779f., 781 embedded Runge-Kutta method 715f., 738 equivalence of multistep and multivalue methods 751 Euler's method 708, 710, 735 forward Euler's method 735 free boundary problem 756, 785 high-order implicit methods 737ff. implicit differencing 735f., 749 initial value problems 708 internal boundary conditions 784ff. internal singular points 784ff. interpolation on right-hand sides 117 Kaps-Rentrop method for stiff 737 local extrapolation 715 modified midpoint method 722f., 726 multistep methods 747ff. multivalue methods 747 order of method 710f., 725 path integration for function evaluation 208ff., 271 predictor-corrector methods 708, 737, 747ff. reduction to first-order sets 707, 753 relaxation method 754f., 762ff. relaxation method, example of 772ff. r.h.s. independent of x 735 Rosenbrock methods for stiff 737 Runge-Kutta method 708f., 710ff., 714ff., 738, 747 Runge-Kutta method, high-order 711 Runge-Kutta-Fehlberg method 715f. scaling stepsize to required accuracy 716f.
+second order 732f. semi-implicit differencing 737 semi-implicit Euler method 737, 743 semi-implicit extrapolation method 737, 743
+Index
+971 Downhill simplex method see Simplex, method of Nelder and Mead Driver programs 3 Dual viewpoint, in multigrid method 883 Duplication theorem, elliptic integrals 262f. dvector() utility 943 DWT (discrete wavelet transform) see Wavelet transform
+semi-implicit midpoint rule 743 shooting method 754, 757ff. shooting method, example 779f., 781 similarity to Volterra integral equations 794f. singular points 724f., 760, 784ff. step doubling 715 stepsize control 709, 714ff., 724, 733f., 738, 744, 749f., 751 stiff 709, 734ff. stiff methods compared 747 Stoermer's rule 732f.
+see also Partial differential equations; Twopoint boundary value problems Diffusion equation 827, 847ff., 864 Crank-Nicolson method 848, 853, 855 Forward Time Centered Space (FTCS) 847ff., 850f., 864 implicit differencing 848 multidimensional 855f.
+Digamma function 222 Digital filtering see Filter Dihedral group D5 902 Dimensions (units) 683f.
+Diminishing increment sort 331 Dirac delta function 293, 789 Direct method see Periodogram Direct methods for linear algebraic equations 35 Direct product see Outer product of matrices Direction of largest decrease 416f.
+Direction numbers, Sobol's sequence 311 Direction-set methods for minimization 396, 412ff.
+Dirichlet boundary conditions 829, 849, 859, 865, 867 Disclaimer of warranty xvi Discordant pair for Kendall's tau 643 Discrete convolution theorem 538ff.
+Discrete Fourier transform (DFT) 500ff.
+as approximate continuous transform 503 see also Fast Fourier transform (FFT) Discrete optimization 444ff.
+Discriminant 184, 464 Diskettes, how to order xvi, 996f.
+Dispersion 840 DISPO see Savitzky-Golay filters Dissipation, numerical 839 Divergent series 167 Division complex 177 multiple precision 919f. of polynomials 175, 369, 377 dmatrix() utility 944 dn function 269 Do-while iteration 12 Dogleg step methods 393 Domain of integration 161f.
+Dominant solution of recurrence relation 179 Dot (denotes matrix multiplication) 33 Double exponential error distribution 701 Double precision as refuge of scoundrels 890 use in iterative improvement 56 Double root 348
+E
+ardley, D.M. 346 EBCDIC 898 Economization of power series 198ff., 201 Eigensystems 456ff. balancing matrix 483 bounds on eigenvalues 58 calculation of few eigenvectors or eigenvalues 461, 494 canned routines 461 characteristic polynomial 456, 475f. completeness 457 defective 457, 482, 494 deflation 478 degenerate eigenvalues 456, 458 elimination method 460, 485 factorization method 460 fast Givens reduction 470 generalized eigenproblem 462 Givens reduction 469f.
+Hermitian matrix 481f.
+Hessenberg matrix 460, 477, 482ff., 494 Householder transformation 460, 469ff., 476, 480, 481, 484f. ill-conditioned eigenvalues 483 implicit shifts 478ff. and integral equations 788ff., 794 invariance under similarity transform 459 inverse iteration 462, 476, 483, 493ff.
+Jacobi transformation 460, 463ff., 469, 481, 495 left eigenvalues 458 list of tasks 461 multiple eigenvalues 495 nonlinear 462 nonsymmetric matrix 482ff. operation count of balancing 483 operation count of Givens reduction 470 operation count of Householder reduction 474 operation count of inverse iteration 494 operation count of Jacobi method 467 operation count of QL method 477, 480 operation count of QR method for Hessenberg matrices 490 operation count of reduction to Hessenberg form 485 orthogonality 457 polynomial roots and 375 QL method 476ff., 481, 494f.
+QL method with implicit shifts 478ff.
+QR method 60, 460, 463, 476ff.
+QR method for Hessenberg matrices 486ff. real, symmetric matrix 156, 474, 794 reduction to Hessenberg form 484f. right eigenvalues 458 shifting eigenvalues 456, 477f., 486f.
+972 special matrices 461 termination criterion 489f., 495 tridiagonal matrix 460, 475ff., 494 Eigenvalue and eigenvector, defined 456 Eigenvalue problem for differential equations 756, 772ff., 779, 781 Eigenvalues and polynomial root finding 375 EISPACK 461, 482 Electromagnetic potential 525 Elimination see Gaussian elimination Ellipse in confidence limit estimation 693 Elliptic integrals 261ff., 915 addition theorem 262 Carlson's forms and algorithms 261ff.
+Cauchy principal value 263 duplication theorem 262f.
+Legendre 261ff., 267ff. routines for 264ff. symmetric form 261f.
+Weierstrass 262 Elliptic partial differential equations 827 alternating-direction implicit method (ADI) 870f., 915 analyze/factorize/operate package 833 biconjugate gradient method 833 boundary conditions 828f. comparison of rapid methods 863 conjugate gradient method 833 cyclic reduction 857f., 861f.
+Fourier analysis and cyclic reduction (FACR) 857ff., 863 Gauss-Seidel method 864, 873, 874f., 884 incomplete Cholesky conjugate gradient method (ICCG) 833 Jacobi's method 864f., 873 matrix methods 833 multigrid method 833, 871ff. rapid (Fourier) method 833, 857ff. relaxation method 832, 863ff. strongly implicit procedure 833 successive over-relaxation (SOR) 866ff., 871, 875 Emacs, GNU xiii Embedded Runge-Kutta method 715f., 738 Encapsulation, in programs 6f.
+Encryption 300 Entropy 903f. of data 632ff., 820 EOM (end of message) 910 Equality constraints 431 Equations cubic 183ff., 367 normal (fitting) 651, 672ff., 809f. quadratic 29, 183ff.
+see also Differential equations; Partial differential equations; Root finding Equivalence classes 345f.
+Equivalence transformation 172 Error checksums for preventing 899 clocking 899 double exponential distribution 701 local truncation 883 Lorentzian distribution 701f.
+in multigrid method 872
+Index
+nonnormal 659, 695, 699ff. relative truncation 883 roundoff 185, 889f. series, advantage of an even 138f., 723 systematic vs. statistical 659 truncation 30, 186, 406, 715, 889f. varieties found by check digits 902 varieties of, in PDEs 840ff.
+see also Roundoff error Error function 220f., 607 approximation via sampling theorem 607f.
+Chebyshev approximation 220f. complex 259 for Fisher's z-transformation 638 relation to Dawson's integral 259 relation to Fresnel integrals 255 relation to incomplete gamma function 220 routine for 220f. for significance of correlation 636 for sum squared difference of ranks 641 Error handling in programs 2, 940 Estimation of parameters see Fitting; Maximum likelihood estimate Estimation of power spectrum 549ff., 572ff.
+Euler equation (fluid flow) 840 Euler-Maclaurin summation formula 138, 142 Euler's constant 223f., 257 Euler's method for differential equations 708, 710, 735 Euler's transformation 166ff. generalized form 168f.
+Evaluation of functions see Function Even and odd parts, of continued fraction 172, 217, 222 Even parity 896 Exception handling in programs 2, 940 exit() function 2 Explicit differencing 836 Exponent in floating point format 28, 890 Exponential deviate 287f.
+Exponential integral 222ff. asymptotic expansion 224 continued fraction 222 recurrence relation 178 related to incomplete gamma function 222 relation to cosine integral 257 routine for En (x) 223f. routine for Ei(x) 225 series 222 Exponential probability distribution 577 Extended midpoint rule 130f., 135, 141f.
+Extended Simpson's rule 134, 796, 799 Extended Simpson's three-eighths rule 797 Extended trapezoidal rule 131f., 133, 136ff., 141, 795 roundoff error 138 extern storage class 25 Extirpolation (so-called) 581f.
+Extrapolation 105ff.
+in Bulirsch-Stoer method 724ff., 731 differential equations 708 by linear prediction 564ff. local 715 maximum entropy method as type of 574
+Index
+973 for multiple precision multiplication 918 number-theoretic transforms 509f. operation count 504 optimal (Wiener) filtering 547ff., 565f. order of storage in 507 partial differential equations 833, 857ff.
+Parzen window 554 periodicity of 503 periodogram 550ff., 574 power spectrum estimation 549ff. for quadrature 130 of real data in 2D and 3D 525ff. of real functions 510ff., 525ff. related algorithms 509f.
+Sande-Tukey algorithm 509 sine transform 514ff., 859 Singleton's algorithm 532 square window 553 treatment of end effects in convolution 540 treatment of end effects in correlation 546 Tukey's trick for frequency doubling 582 use in smoothing data 650 used for Lomb periodogram 581f. variance of power spectrum estimate 552, 556 virtual memory machine 535f.
+Welch window 554 Winograd algorithms 509 see also Discrete Fourier transform (DFT); Fourier transform; Spectral density Faure sequence 310 Fax (facsimile) Group 3 standard 909 fcomplex (data type) 24, 948 Feasible vector 431 FFT see Fast Fourier transform (FFT) Field, in data record 338 Figure-of-merit function 656 Filon's method 590 Filter 558ff. acausal 559 bilinear transformation method 561 causal 559, 650 characteristic polynomial 561 data smoothing 650 digital 558ff.
+DISPO 650 by fast Fourier transform (FFT) 530, 558ff. finite impulse response (FIR) 538, 559f. homogeneous modes of 561 infinite impulse response (IIR) 559, 573 Kalman 705 linear 559ff. low-pass for smoothing 650 nonrecursive 559f. optimal (Wiener) 542, 547ff., 565f., 650 quadrature mirror 592, 600 realizable 559, 561 recursive 559, 573 Remes exchange algorithm 560 Savitzky-Golay 189, 650ff. stability of 561 in the time domain 558ff.
+Fine-to-coarse operator 873
+polynomial 728, 730f., 748 rational function 724ff., 731 relation to interpolation 105 for Romberg integration 140 see also Interpolation Extremization see Minimization
+F
+-distribution probability function 226, 229 F-test for differences of variances 617, 619 FACR see Fourier analysis and cyclic reduction (FACR) Facsimile standard 909 Factorial double (denoted "!!") 253 evaluation of 165 relation to gamma function 213 routine for 214f.
+False position 354ff.
+Family tree 345 FAS (full approximation storage algorithm) 882ff.
+Fast Fourier transform (FFT) 504ff., 889 alternative algorithms 509f. applications 537ff.
+as approximation to continuous transform 503 Bartlett window 554 bit reversal 505f., 532 and Clenshaw-Curtis quadrature 196 convolution 509, 530, 538ff., 918 convolution of large data sets 543f.
+Cooley-Tukey algorithm 509 correlation 545f. cosine transform 196, 517ff., 860f. cosine transform, second form 519, 861 Danielson-Lanczos lemma 504f., 532 data sets not a power of 2 509 data smoothing 650 data windowing 553ff. decimation-in-frequency algorithm 509 decimation-in-time algorithm 509 discrete autocorrelation 546 discrete convolution theorem 538ff. discrete correlation theorem 545 at double frequency 582 endpoint corrections 585f. external storage 532 figures of merit for data windows 554 filtering 558ff.
+FIR filter 559f.
+Fourier integrals 584ff.
+Fourier integrals, infinite range 590f.
+Hamming window 554 Hann window 554 history 504 IIR filter 559 image processing 812, 814 integrals using 130 inverse of cosine transform 518f. inverse of sine transform 517 large data sets 532 leakage 551 memory-local algorithm 535f. multidimensional 521ff. for multiple precision arithmetic 915
+974 Finite difference equations (FDEs) 762, 772, 783 alternating-direction implicit method (ADI) 856, 870f. art, not science 838 Cayley's form for unitary operator 853 Courant condition 838, 841, 845 Courant condition (multidimensional) 855 Crank-Nicolson method 848, 853, 855 eigenmodes of 836f. explicit vs. implicit schemes 836 forward Euler 835f.
+Forward Time Centered Space (FTCS) 836ff., 847ff., 852, 864 implicit scheme 848 Lax method 837ff., 845 Lax method (multidimensional) 854f. mesh drifting instability 843f. numerical derivatives 186 partial differential equations 830ff.
+in relaxation methods 762ff. staggered leapfrog method 842f.
+two-step Lax-Wendroff method 844ff. upwind differencing 841f., 846 see also Partial differential equations Finite element methods, partial differential equations 833f.
+Finite impulse response (FIR) 538 Finkelstein, S. xii FIR (finite impulse response) filter 559f.
+Fisher's z-transformation 637f.
+Fitting 656ff. basis functions 671 by Chebyshev approximation 191f. chi-square 659ff. confidence levels related to chi-square values 696ff. confidence levels from singular value decomposition (SVD) 698 confidence limits on fitted parameters 689ff. covariance matrix not always meaningful 657, 695 degeneracy of parameters 679 an exponential 679 freezing parameters in 674, 705 Gaussians, a sum of 687f. general linear least squares 671ff.
+Kalman filter 705 KÂ­S test, caution regarding 627 least squares 657ff.
+Legendre polynomials 680 Levenberg-Marquardt method 683ff., 825 linear regression 661ff. maximum likelihood estimation 658, 699ff.
+Monte Carlo simulation 627, 660, 689ff. multidimensional 680 nonlinear models 681ff. nonlinear models, advanced methods 688 nonlinear problems that are linear 679 nonnormal errors 662, 695, 699ff. polynomial 90, 120, 197, 650f., 671, 679f.
+by rational Chebyshev approximation 204ff. robust methods 699ff. of sharp spectral features 573
+Index
+standard (probable) errors on fitted parameters 663, 667f., 673, 677, 689ff. straight line 661ff., 673f., 703 straight line, errors in both coordinates 666ff.
+see also Error; Least squares fitting; Maximum likelihood estimate; Robust estimation Five-point difference star 876 Fixed point format 28 Fletcher-Powell algorithm see Davidon-FletcherPowell algorithm Fletcher-Reeves algorithm 396f., 421ff. float to double conversion 24f.
+Floating point co-processor 894 Floating point format 28, 890 care in numerical derivatives 186 IEEE 285, 890f.
+Flux-conservative initial value problems 834ff.
+FMG (full multigrid method) 872, 877f. for iteration 8, 11 Formats of numbers 28, 890 FORTRAN 16, 20 Numerical Recipes in xv, 1 Forward deflation 370 Forward difference operator 167 Forward Euler differencing 835f.
+Forward Time Centered Space see FTCS Fourier analysis and cyclic reduction (FACR) 858, 863 Fourier and spectral applications 537ff.
+Fourier integrals attenuation factors 590 endpoint corrections 585f. tail integration by parts 591 use of fast Fourier transform (FFT) 584ff.
+Fourier transform 105, 496ff. aliasing 501, 576 approximation of Dawson's integral 259 autocorrelation 498 basis functions compared 514f. contrasted with wavelet transform 591f., 601 convolution 498, 509, 538ff., 918 correlation 498, 545f. cosine transform 196, 517ff., 860f. cosine transform, second form 519, 861 critical sampling 500, 550, 552 definition 496 discrete Fourier transform (DFT) 190, 500ff.
+Gaussian function 607 image processing 812, 814 infinite range 590f. inverse of discrete Fourier transform 503 method for partial differential equations 857ff. missing data 576 missing data, fast algorithm 581f.
+Nyquist frequency 500ff., 526, 550, 552, 576, 579 optimal (Wiener) filtering 547ff., 565f.
+Parseval's theorem 498, 504, 551 power spectral density (PSD) 498f. power spectrum estimation by FFT 549ff.
+Index
+975 associated Legendre polynomial 252f., 773 autocorrelation of 498 bandwidth limited 501 Bessel 178, 210, 230ff., 240ff. beta 215f. branch cuts of 209f. chi-square probability 221, 806 complex 208 confluent hypergeometric 210, 246 convolution of 498 correlation of 498 Coulomb wave 210, 240 cumulative binomial probability 226, 229 cumulative Poisson 216 Dawson's integral 259f., 606 declaration 17 definition 17 digamma 222 elliptic integrals 261ff., 915 error 220f., 255, 259, 607, 636, 641 evaluation 165ff. evaluation by path integration 208ff., 271 exponential integral 178, 222ff., 257 external 25 F-distribution probability 226, 229 Fresnel integral 255ff. gamma 213f. hypergeometric 208ff., 271ff. incomplete beta 226ff., 616 incomplete gamma 216ff., 621, 660, 663f. inverse hyperbolic 184, 262 inverse trigonometric 262 Jacobian elliptic 261, 269f.
+Kolmogorov-Smirnov probability 624f., 646f.
+Legendre polynomial 178, 252f., 680 logarithm 262 modified Bessel 236ff. modified Bessel, fractional order 246ff. path integration to evaluate 208ff. pathological 105f., 350f.
+Poisson cumulant 221 prototypes 16f., 25, 930 representations of 496 routine for plotting a 349f. sine and cosine integrals 255, 257ff. sn, dn, cn 269 spherical Bessel 240 spherical harmonics 252f. spheroidal harmonic 772ff., 779f., 781 Student's probability 226, 228 Weber 210 Functional iteration, for implicit equations 748 FWHM (full width at half maximum) 555
+power spectrum estimation by maximum entropy method 572ff. properties of 497f. sampling theorem 501, 550, 552, 606f. scalings of 497 significance of a peak in 577f. sine transform 514ff., 859 symmetries of 497 uneven sampling, fast algorithm 581f. unevenly sampled data 575ff., 581f. and wavelets 599f.
+Wiener-Khinchin theorem 498, 566, 574 see also Fast Fourier transform (FFT); Spectral density Fractal region 367f.
+Fractional step methods 856f.
+Fredholm alternative 789 Fredholm equations 788f. eigenvalue problems 789, 794 error estimate in solution 793 first kind 788 Fredholm alternative 789 homogeneous, second kind 793f. homogeneous vs. inhomogeneous 789 ill-conditioned 789 infinite range 797f. inverse problems 789, 804ff. kernel 788f. nonlinear 790 Nystrom method 791ff., 797f. product Nystrom method 797 second kind 789, 791f.
+with singularities 797 with singularities, worked example 801 subtraction of singularity 798 symmetric kernel 794 see also Inverse problems Freeing of storage 19, 21f., 940ff. free_matrix() utility 946 free_vector() utility 946 Frequency domain 496 Frequency spectrum see Fast Fourier transform (FFT) Frequentist, contrasted with Bayesian 819 Fresnel integrals 255ff. asymptotic form 255 continued fraction 255 routine for 256f. series 255 Friday the Thirteenth 13f.
+FTCS (forward time centered space) 836ff., 847ff., 852 stability of 836ff., 847ff., 864 Full approximation storage (FAS) algorithm 882ff.
+Full moon 13f.
+Full multigrid method (FMG) 872, 877f.
+Full Newton methods, nonlinear least squares 688 Full pivoting 38 Full weighting 876 Function Airy 210, 240, 250 approximation 105f., 190ff.
+G
+amma deviate 290ff.
+Gamma function 213ff. incomplete see Incomplete gamma function Gauss-Chebyshev integration 147, 151, 518f.
+Gauss-Hermite integration 151, 798 abscissas and weights 153 normalization 153
+976 Gauss-Jacobi integration 151 abscissas and weights 154 Gauss-Jordan elimination 36ff., 41, 71 operation count 42, 48 solution of normal equations 673 storage requirements 38f.
+Gauss-Kronrod quadrature 160 Gauss-Laguerre integration 151, 798 Gauss-Legendre integration 151 see also Gaussian integration Gauss-Lobatto quadrature 160, 196, 518 Gauss-Radau quadrature 160 Gauss-Seidel method (relaxation) 864, 866, 873, 874f. nonlinear 884 Gauss transformation 262 Gaussian (normal) distribution 275, 658, 807 central limit theorem 658f. deviates from 288f., 578 kurtosis of 612 multivariate 695 semi-invariants of 614 tails compared to Poisson 659 two-dimensional (binormal) 637 variance of skewness of 612 Gaussian elimination 41f., 59, 63 fill-in 53, 71 integral equations 795 operation count 42 in reduction to Hessenberg form 485 relaxation solution of boundary value problems 762ff., 785 Gaussian function Hardy's theorem on Fourier transforms 607 see also Gaussian (normal) distribution Gaussian integration 133, 147ff., 798 calculation of abscissas and weights 150ff. error estimate in solution 793 extensions of 160 Golub-Welsch algorithm for weights and abscissas 156f. for integral equations 790, 792 from known recurrence relation 156f. nonclassical weight function 157ff., 797 and orthogonal polynomials 148 preassigned nodes 160 weight function log x 159 weight functions 147ff., 797 Gear's method (stiff ODEs) 737 Geiger counter 274 Generalized eigenvalue problems 462 Generalized minimum residual method (GMRES) 85 Geophysics, use of Backus-Gilbert method 818 Gerchberg-Saxton algorithm 814f.
+Gilbert and Sullivan 720 Givens reduction 469f., 480 fast 470 operation count 470 Glassman, A.J. 185 Global optimization 394f., 444ff., 656 continuous variables 451f.
+Index
+Globally convergent minimization 425ff. root finding 380, 383ff., 390, 757f., 761 GMRES (generalized minimum residual method) 85 GNU Emacs xiii Godunov's method 846 Golden mean (golden ratio) 30, 354, 399, 406 Golden section search 348, 396, 397ff., 403 Golub-Welsch algorithm, for Gaussian quadrature 156f.
+Goodness-of-fit 656, 660, 663f., 668, 695 goto statements, danger of 8 Gram-Schmidt biorthogonalization 421f. orthogonalization 100, 457, 458 SVD as alternative to 66 Graphics, function plotting 349f.
+Gravitational potential 525 Gray code 311, 889, 894ff.
+Greenbaum, A. 86 Gregorian calendar 12, 15 Grid square 123f.
+Group, dihedral 902 Guard digits 890 alf weighting 876 Halton's quasi-random sequence 309f.
+Hamming window 554 Hamming's motto 348 Hann window 554 Harmonic analysis see Fourier transform Hashing 303 HDLC checksum 898 Header (.h) files 16f.
+Heap (data structure) 336f., 344, 905 Heapsort 329, 336f., 344 Helmholtz equation 861 Hermite polynomials 151, 153 Hermitian matrix 457ff., 481f.
+Hertz (unit of frequency) 496 Hessenberg matrix 100, 460, 477, 482, 494 see also Matrix Hessian matrix 389, 414, 422, 427, 681ff., 812, 824 is inverse of covariance matrix 673, 685 second derivatives in 683 Hexadecimal constants 285, 303 Hierarchically band diagonal matrix 606 Hierarchy of program structure 5ff.
+High-order not same as high-accuracy 106f., 130, 396, 406, 711, 715, 748f.
+High-pass filter 558 Hilbert matrix 90 Historic maximum entropy method 825f.
+Homogeneous linear equations 61 Hook step methods 393 Hotelling's method for matrix inverse 57, 606 Householder transformation 60, 460, 469ff., 476, 480, 481, 484f., 488ff. operation count 474 in QR decomposition 99 Huffman coding 571, 889, 903ff., 910 Hyperbolic functions, explicit formulas for inverse 184
+H
+Index
+977 Inheritance 7 Initial value problems 708, 827f.
+see also Differential equations; Partial differential equations Injection operator 873 Instability see Stability Integer programming 443 Integral equations 788ff. adaptive stepsize control 797 block-by-block method 797 correspondence with linear algebraic equations 788ff. degenerate kernel 794 eigenvalue problems 789, 794 error estimate in solution 793 Fredholm 788f., 791f.
+Fredholm alternative 789 homogeneous, second kind 793f. ill-conditioned 789 infinite range 797f. inverse problems 789, 804ff. kernel 788f. nonlinear 790, 796 Nystrom method 791f., 797 product Nystrom method 797 with singularities 797ff.
+with singularities, worked example 801 subtraction of singularity 798 symmetric kernel 794 unstable quadrature 796 Volterra 789f., 794f. wavelets 791 see also Inverse problems Integral operator, wavelet approximation of 603f., 791 Integration of functions 129ff. cosine integrals 257 Fourier integrals 584ff.
+Fourier integrals, infinite range 590f.
+Fresnel integrals 255 Gauss-Hermite 153 Gauss-Jacobi 154 Gauss-Laguerre 152 Gauss-Legendre 151 integrals that are elliptic integrals 261 path integration 208ff. sine integrals 257 see also Quadrature Integro-differential equations 791 Interface, in programs 7 Intermediate value theorem 350 Internet xvii Interpolation 105ff.
+Aitken's algorithm 108 avoid 2-stage method 106 avoid in Fourier analysis 576 bicubic 125f. bilinear 123f. caution on high-order 106f. coefficients of polynomial 106, 120ff., 197, 582 for computing Fourier integrals 586 error estimates for 106 of functions with poles 111ff. inverse quadratic 360, 402ff.
+Hyperbolic partial differential equations 827 advective equation 835 flux-conservative initial value problems 834ff.
+Hypergeometric function 208ff., 271ff. routine for 272f.
+Hypothesis, null 609
+I
+BM xvii bad random number generator 277 PC 3, 285, 303, 894 radix base for floating point arithmetic 483 IBM checksum 901f.
+ICCG (incomplete Cholesky conjugate gradient method) 833 ICF (intrinsic correlation function) model 826 Identity (unit) matrix 34 IEEE floating point format 285, 890f.
+if structure 11 warning about nesting 11 IIR (infinite impulse response) filter 559, 573 Ill-conditioned integral equations 789 Image processing 525, 812 cosine transform 519 fast Fourier transform (FFT) 525, 530, 812 as an inverse problem 812 maximum entropy method (MEM) 818ff.
+from modulus of Fourier transform 814 wavelet transform 603 imatrix() utility 944 Implicit conversion of data types 24f., 930 function theorem 347 pivoting 38 shifts in QL method 478ff.
+Implicit differencing 836 for diffusion equation 848 for stiff equations 735f., 749 Importance sampling, in Monte Carlo 316f.
+Improper integrals 141ff.
+Impulse response function 538, 549, 559 IMSL xvii, 35, 72, 212, 371, 376, 461 In-place selection 342 Include files 17, 930 Incomplete beta function 226ff. for F-test 619 routine for 227f. for Student's t 616, 618 Incomplete Cholesky conjugate gradient method (ICCG) 833 Incomplete gamma function 216 for chi-square 621, 660, 663f. deviates from 290ff.
+in mode estimation 616 routine for 218f.
+Increment of linear congruential generator 276 Indentation of blocks 11 Index 965ff.
+this entry 977 Index table 329, 338 Inequality constraints 431
+978 multidimensional 107f., 123ff.
+in multigrid method 876 Neville's algorithm 108f., 188 Nystrom 792 offset arrays 110, 119 operation count for 106 operator 873 order of 106 and ordinary differential equations 107 oscillations of polynomial 106, 120, 396, 406 parabolic, for minimum finding 402 polynomial 105, 108ff., 188 rational Chebyshev approximation 204ff. rational function 105, 111ff., 200ff., 231f., 724ff., 731 reverse (extirpolation) 581f. spline 106, 113ff., 127f. trigonometric 105 see also Fitting Interval variable (statistics) 628 Intrinsic correlation function (ICF) model 826 Inverse hyperbolic function 184, 262 Inverse iteration see Eigensystems Inverse problems 789, 804ff.
+Backus-Gilbert method 815ff.
+Bayesian approach 808, 820, 825f. central idea 808 constrained linear inversion method 808ff. data inversion 816 deterministic constraints 813ff.
+in geophysics 818 Gerchberg-Saxton algorithm 814f. incomplete Fourier coefficients 822 and integral equations 789 linear regularization 808ff. maximum entropy method (MEM) 818ff., 824f.
+MEM demystified 823 Phillips-Twomey method 808ff. principal solution 806 regularization 805ff. regularizing operator 807 stabilizing functional 807 Tikhonov-Miller regularization 808ff. trade-off curve 804 trade-off curve, Backus-Gilbert method 818 two-dimensional regularization 812 use of conjugate gradient minimization 812f., 824 use of convex sets 813f.
+use of Fourier transform 812, 814 Van Cittert's method 813 Inverse quadratic interpolation 360, 402ff.
+Inverse response kernel, in Backus-Gilbert method 816f.
+Inverse trigonometric function 262 ISBN (International Standard Book Number) checksum 901 Iterated integrals 161 Iteration 8 functional 748 to improve solution of linear algebraic equations 55ff., 201
+Index
+for linear algebraic equations 35 required for two-point boundary value problems 753 in root finding 347f.
+Iteration matrix 865 ITPACK 78 ivector() utility 943
+J
+acobi matrix, for Gaussian quadrature 156 Jacobi transformation (or rotation) 100, 460, 463ff., 469, 481, 495 Jacobian determinant 288f., 783 Jacobian elliptic functions 261, 269f.
+Jacobian matrix 381, 383, 386, 389, 738 singular in Newton's rule 393 Jacobi's method (relaxation) 864f., 866, 873 Jenkins-Traub method 376 Julian Day 1, 12, 14 Jump transposition errors 902
+K -S test see Kolmogorov-Smirnov test Kalman filter 705 Kaps-Rentrop method 737 Kendall's tau 640, 642ff.
+Kermit checksum 897 Kernel 788f. averaging, in Backus-Gilbert method 816f. degenerate 794 finite rank 794 inverse response 816f. separable 794 singular 797f. symmetric 793f.
+Kernighan 
+Kuiper's statistic 627 Kurtosis 612, 614 L-estimate 699 Labels, statement 8 Lag 498, 545f., 560 Lagrange multiplier 804 Lagrange's formula for polynomial interpolation 91, 108, 582, 585 Laguerre's method 348, 371ff.
+Lanczos lemma 504f.
+Lanczos method for gamma function 213 Landen transformation 262 LAPACK 35 Laplace's equation 252, 827 see also Poisson equation Las Vegas 631 Latin square or hypercube 315 Laurent series 573 Lax method 837ff., 845, 854f. multidimensional 854f.
+Lax-Wendroff method 844ff.
+Leakage in power spectrum estimation 551, 554f.
+Index
+979 Cholesky decomposition 96ff., 430, 462, 674 complex 49f. computing A-1 Â· B 48 conjugate gradient method 83ff., 606 cyclic tridiagonal 74f. direct methods 35, 71 Gauss-Jordan elimination 36ff.
+Gaussian elimination 41f.
+Hilbert matrix 90 Hotelling's method 57, 606 and integral equations 788ff., 792 iterative improvement 55ff., 201 iterative methods 35, 83ff. large sets of 33 least squares solution 62, 65f., 205, 676 LU decomposition 43ff., 201, 393, 739, 792, 795, 810 nonsingular 33 overdetermined 34f., 205, 676, 806 partitioned 77f.
+QR decomposition 98f., 389, 393, 674 row vs. column elimination 40f.
+Schultz's method 57, 606 Sherman-Morrison formula 73ff., 90 singular 32, 61, 66, 205, 676 singular value decomposition (SVD) 59ff., 205, 676ff., 806 sparse 33, 51ff., 71ff., 739, 813 summary of tasks 34 Toeplitz 90, 92ff., 201 Vandermonde 90ff., 120 wavelet solution 603ff., 791 Woodbury formula 75ff., 90 see also Eigensystems Linear congruential random number generator 276f. choice of constants for 284f.
+Linear constraints 431 Linear convergence 353, 400 Linear correlation (statistics) 636ff.
+Linear dependency constructing orthonormal basis 66, 100 of directions in N -dimensional space 415 in linear algebraic equations 32f.
+Linear equations see Differential equations; Integral equations; Linear algebraic equations Linear inversion method, constrained 808ff.
+Linear prediction 564ff. characteristic polynomial 567 coefficients 564ff. compared with regularization 810 contrasted to polynomial extrapolation 567 related to optimal filtering 565f. removal of bias in 570 stability 567 Linear predictive coding (LPC) 571f.
+Linear programming 394, 430ff. artificial variables 437 auxiliary objective function 437 basic variables 434 composite simplex algorithm 443 constraints 431
+Leakage width 554f.
+Leapfrog method 842f.
+Least squares filters see Savitzky-Golay filters Least squares fitting 650f., 657ff., 661ff., 666ff., 671ff. contrasted to general minimization problems 689 degeneracies in 677, 679 Fourier components 577 freezing parameters in 674, 705 general linear case 671ff.
+Levenberg-Marquardt method 683ff., 825 Lomb periodogram 577 as M-estimate for normal errors 701 as maximum likelihood estimator 658 as method for smoothing data 650f. multidimensional 680 nonlinear 393, 681ff., 825 nonlinear, advanced methods 688 normal equations 651, 672ff., 809f. normal equations often singular 676, 679 optimal (Wiener) filtering 547 QR method in 100, 674 for rational Chebyshev approximation 205 relation to linear correlation 636, 664 Savitzky-Golay filter as 650f. singular value decomposition (SVD) 34f., 59ff., 205, 676ff. skewed by outliers 659 for spectral analysis 577 standard (probable) errors on fitted parameters 673, 677 weighted 658 see also Fitting L'Ecuyer's long period random generator 280ff.
+Left eigenvalues or eigenvectors 458 Legal matters xvi Legendre elliptic integral see Elliptic integrals Legendre polynomials 252f. fitting data to 680 recurrence relation 178 shifted monic 159 see also Associated Legendre polynomials; Spherical harmonics Lehmer-Schur algorithm 376 Lemarie's wavelet 600 Lentz's method for continued fraction 171, 219 Lepage, P. 319 Leptokurtic distribution 612 Levenberg-Marquardt algorithm 393, 683ff., 825 advanced implementation 688 Levinson's method 92f.
+Lewis, H.W. 284 License information xvi Limbo 362 Limit cycle, in Laguerre's method 372 Line minimization see Minimization, along a ray Line search see Minimization, along a ray Linear algebraic equations 32ff. band diagonal 51ff. biconjugate gradient method 84f.
+980 convergence criteria 439 degenerate feasible vector 436 dual problem 443 equality constraints 431 feasible basis vector 433f. feasible vector 431 fundamental theorem 432f. inequality constraints 431 left-hand variables 434 nonbasic variables 434 normal form 433 objective function 431 optimal feasible vector 431 pivot element 435f. primal-dual algorithm 443 primal problem 443 reduction to normal form 436ff. restricted normal form 433ff. revised simplex method 443 right-hand variables 434 simplex method 408f., 430, 433ff., 439ff. slack variables 436 tableau 434 vertex of simplex 433 Linear regression 661ff., 666ff.
+see also Fitting Linear regularization 808ff.
+LINPACK 35 Little-endian 302 Local extrapolation 715 Local extremum 394, 445 Localization of roots see Bracketing Logarithmic function 262 Lomb periodogram method of spectral analysis 576f. fast algorithm 581f.
+Loops 8 Lorentzian probability distribution 292, 701f.
+Low-pass filter 558, 650 LP coefficients see Linear prediction LPC (linear predictive coding) 571f.
+LU decomposition 43ff., 56f., 59, 63, 71, 104, 381, 673, 739 for A-1 Â· B 48 band diagonal matrix 51ff., 53f. complex equations 49f.
+Crout's algorithm 44ff., 53 for integral equations 792, 795 for inverse iteration of eigenvectors 494 for inverse problems 810 for matrix determinant 49 for matrix inverse 48 for nonlinear sets of equations 381, 393 operation count 44, 48 Â´ for Pade approximant 201 pivoting 45f. repeated backsubstitution 48, 54 solution of linear algebraic equations 48 solution of normal equations 673 for Toeplitz matrix 94 Lucifer (encryption algorithm) 300 lvector() utility 943
+Index
+M
+-estimates 699ff.
+how to compute 702f. local 700ff.
+see also Maximum likelihood estimate Machine accuracy 28f., 890 Macintosh, see Apple Macintosh Maehly's procedure 370, 378 Magic in MEM image restoration 823 Â´ in Pade approximation 201 Mantissa in floating point format 28, 890, 918 Marginals 630 Marquardt method (least squares fitting) 683ff., 825 Mass, center of 305ff.
+MasterCard checksum 901f.
+Mathematical Center (Amsterdam) 360 Matrix 33ff. allocating and freeing 21f., 940ff. approximation of 66f., 605f. band diagonal 50, 51ff., 71 band triangular 71 banded 35, 461 bidiagonal 60 block diagonal 71, 762 block triangular 71 block tridiagonal 71 bordered 71 characteristic polynomial 456, 475f.
+Cholesky decomposition 96ff., 430, 462, 674 column augmented 37 compatibility 940 complex 49f. condition number 61, 85 curvature 682 cyclic banded 71 cyclic tridiagonal 74f. defective 457, 482, 494 of derivatives see Hessian matrix; Jacobian determinant design (fitting) 651, 671, 809 determinant of 34, 49 diagonalization 459ff. elementary row and column operations 37 finite differencing of partial differential equations 830ff. freeing a submatrix 23 Hermitian 457, 461, 481f.
+Hermitian conjugate 457 Hessenberg 100, 460, 477, 482, 484f., 494 Hessian see Hessian matrix hierarchically band diagonal 606 Hilbert 90 identity 34 ill-conditioned 61, 63, 120 indexed storage of 78f. and integral equations 788, 792 inverse 34, 36, 42, 48f., 73ff., 77f., 102ff. inverse, approximate 57 inverse by Hotelling's method 57, 606 inverse by Schultz's method 57, 606 inverse multiplied by a matrix 49 iteration for inverse 57, 606 Jacobi transformation 460, 463ff., 469
+Index
+981 see also Linear prediction Maximum likelihood estimate (M-estimates) 695, 699ff. and Bayes' Theorem 820 chi-square test 695 defined 658 how to compute 702f. mean absolute deviation 701, 703 relation to least squares 658 Maxwell's equations 835 Mean(s) of distribution 610f., 614 statistical differences between two 615ff.
+Mean absolute deviation of distribution 611, 701 related to median 703 Measurement errors 656 Median 329 calculating 341 of distribution 611, 614f.
+as L-estimate 699 role in robust straight line fitting 703 by selection 703 Median-of-three, in Quicksort 333 MEM see Maximum entropy method (MEM) Memory, allocating and freeing 19, 21f., 940ff.
+Merit function 656 in general linear least squares 671 for inverse problems 806 nonlinear models 681 for straight line fitting 662, 703 for straight line fitting, errors in both coordinates 666 Mesh-drift instability 843f.
+Mesokurtic distribution 612 Method of regularization 808ff.
+Metropolis algorithm 445f.
+Microsoft xvii Midpoint method see Modified midpoint method; Semi-implicit midpoint rule Mikado, or Town of Titipu 720 Miller's algorithm 181, 234 Minimal solution of recurrence relation 179 Minimax polynomial 192, 204 Minimax rational function 204 Minimization 394ff. along a ray 84, 384f., 396, 412f., 418f., 424, 425 annealing, method of simulated 394f., 444ff. bracketing of minimum 397ff., 409 Brent's method 396, 402ff., 406, 666 Broyden-Fletcher-Goldfarb-Shanno algorithm 397, 426ff. chi-square 659ff., 681ff. choice of methods 395ff. combinatorial 444 conjugate gradient method 396f., 420ff., 812f., 824 convergence rate 400, 415f.
+Davidon-Fletcher-Powell algorithm 397, 426f. degenerate 804 direction-set methods 396, 412ff.
+Jacobian 738 lower triangular 43f., 96, 790 multiplication denoted by dot 33 norm 58 normal 457, 458 nullity 61 nullspace 34, 61, 63, 456, 804 orthogonal 98, 457, 470, 594 orthogonal transformation 459, 470ff., 477 orthonormal basis 66, 100 outer product denoted by 73, 427 partitioning for determinant 78 partitioning for inverse 77f. pattern multiply of sparse 81f. positive definite 35, 96, 674 QR decomposition 98f., 389, 393, 674 range 61 rank 61 residual 57 row and column indices 33 row vs. column operations 40f. self-adjoint 457 similarity transform 459ff., 463, 483, 485, 488 singular 61, 63, 66, 456 singular value decomposition 34f., 59ff., 806 sparse 33, 71ff., 78, 606, 739, 762, 813 special forms 35 splitting in relaxation method 865f. spread 817 square root of 430, 462 storage schemes in C 20f., 33f., 940ff. submatrix of 22, 945 symmetric 35, 96, 457, 461, 469ff., 674, 793f. threshold multiply of sparse 81ff.
+Toeplitz 90, 92ff., 201 transpose of sparse 80f. triangular 460 tridiagonal 35, 50f., 71, 115, 156, 460, 461, 469ff., 475ff., 494, 848f., 862, 870f. tridiagonal with fringes 831 unitary 457 updating 100, 389f. upper triangular 43f., 98 Vandermonde 90ff., 120 see also Eigensystems Matrix equations see Linear algebraic equations matrix() utility 943f.
+Matterhorn 612 Maximization see Minimization Maximum entropy method (MEM) 572ff. algorithms for image restoration 824f.
+Bayesian 825f.
+Cornwell-Evans algorithm 825 demystified 823 historic vs. Bayesian 825f. image restoration 818ff. intrinsic correlation function (ICF) model 826 for inverse problems 818ff. operation count 574
+982 downhill simplex method 396, 408ff., 451f., 702f. finding best-fit parameters 656 Fletcher-Reeves algorithm 396f., 421ff. functional 804 global 394f., 451f., 656 globally convergent multidimensional 425ff. golden section search 397ff., 403 multidimensional 395f., 408ff.
+in nonlinear model fitting 681f.
+Polak-Ribiere algorithm 396f., 422f.
+Powell's method 396, 408, 412ff. quasi-Newton methods 383, 397, 425ff. and root finding 382 scaling of variables 428 by searching smaller subspaces 824 steepest descent method 421, 813 termination criterion 398f., 410 use in finding double roots 348 use for sparse linear systems 84ff. using derivatives 396f., 405ff. variable metric methods 397, 425ff.
+see also Linear programming Minimum residual method, for sparse system 85 MINPACK 688 MIPS 894 Missing data problem 576 Mississippi River 446, 455 Mode of distribution 611, 615 Modeling of data see Fitting Model-trust region 393, 688 Modes, homogeneous, of recursive filters 561 Modified Bessel functions see Bessel functions Modified Lentz's method, for continued fractions 171 Modified midpoint method 722f., 726 Modified moments 158 Modula-2 7 Modular arithmetic, without overflow 278, 281, 284 Modularization, in programs 6f.
+Modulus of linear congruential generator 276 Moments of distribution 610ff. filter that preserves 650 modified problem of 158 problem of 90f. and quadrature formulas 799 semi-invariants 614 Monic polynomial 149 Monotonicity constraint, in upwind differencing 846 Monte Carlo 162, 275 adaptive 316ff., 319ff. bootstrap method 691f. comparison of sampling methods 318f. exploration of binary tree 300 importance sampling 316f. integration 130, 162, 304ff., 316ff. integration, recursive 323ff. integration, using Sobol' sequence 313ff. integration, VEGAS algorithm 319ff.
+Index
+and Kolmogorov-Smirnov statistic 627, 646f. partial differential equations 833 quasi-random sequences in 309ff. quick and dirty 691f. recursive 316ff., 323ff. significance of Lomb periodogram 578 simulation of data 660, 689ff., 695 stratified sampling 317f., 323 Moon, calculate phases of 1f., 13f.
+Mother functions 591 Mother Nature 689, 691 Moving average (MA) model 573 Moving window averaging 650 Mozart 8 MS xvii MS-DOS xii, 3 Muller's method 371, 379 Multidimensional confidence levels of fitting 694 data, use of binning 629 Fourier transform 521ff.
+Fourier transform, real data 525ff. initial value problems 853ff. integrals 130, 161ff., 304ff., 316ff. interpolation 123ff.
+Kolmogorov-Smirnov test 645ff. least squares fitting 680 minimization 408ff., 412ff., 420ff.
+Monte Carlo integration 304ff., 316ff. normal (Gaussian) distribution 695 optimization 395f. partial differential equations 853ff. root finding 347ff., 365, 377, 379ff., 382, 754, 757f., 761, 762 search using quasi-random sequence 309 secant method 380, 389ff. wavelet transform 602 Multigrid method 833, 871ff. avoid SOR 875 boundary conditions 877f. choice of operators 877 coarse-to-fine operator 873 coarse-grid correction 873f. cycle 874 dual viewpoint 883 fine-to-coarse operator 873 full approximation storage (FAS) algorithm 882ff. full multigrid method (FMG) 872, 877f. full weighting 876 Gauss-Seidel relaxation 874f. half weighting 876 importance of adjoint operator 876 injection operator 873 interpolation operator 873 line relaxation 875 local truncation error 883 Newton's rule 882, 884 nonlinear equations 882ff. nonlinear Gauss-Seidel relaxation 884 odd-even ordering 875, 878 operation count 871 prolongation operator 873 recursive nature 874
+Index
+983 equivalent bandwidth 554 fitting data which contains 653, 656 model, for optimal filtering 548 Nominal variable (statistics) 628 Nonexpansive projection operator 814 Non-interfering directions see Conjugate directions Nonlinear eigenvalue problems 462 Nonlinear equations finding roots of 347ff. integral equations 790, 796 in MEM inverse problems 822f. multigrid method for elliptic PDEs 882ff.
+Nonlinear instability 840 Nonlinear programming 443 Nonnegativity constraints 430f.
+Nonparametric statistics 639ff.
+Nonpolynomial complete (NP-complete) 445 Norm, of matrix 58 Normal (Gaussian) distribution 275, 658, 687f., 807 central limit theorem 658f. deviates from 288f., 578 kurtosis of 612 multivariate 695 semi-invariants of 614 tails compared to Poisson 659 two-dimensional (binormal) 637 variance of skewness of 612 Normal equations (fitting) 34f., 651, 672ff., 804, 809f. often are singular 676 Normalization of Bessel functions 181 of floating-point representation 28, 890 of functions 149, 774 of modified Bessel functions 239 Notch filter 558, 562f.
+NP-complete problem 445 nr.h prototypes for Numerical Recipes 17, 930 NRANSI macro 17, 930 NR_END macro, for offset arrays 941 nrerror() utility 2, 942f. nrutil.c utility functions 2, 19, 21f., 940, 942ff. nrutil.h prototypes for utilities 17, 27, 940ff.
+Null hypothesis 609 Nullity 61 Nullspace 34, 61, 63, 456, 804 Number-theoretic transforms 509f.
+Numerical derivatives 186ff., 651 Numerical integration see Quadrature Numerical Recipes compatibility with First Edition 3f. compilers tested 3 Example Book 3 how to get diskettes xvi, 996f.
+how to report bugs iv license information xvi list of all 951ff. machines tested 3 OEM information xvii no warranty on xvi
+relative truncation error 883 relaxation as smoothing operator 874 restriction operator 873 speeding up FMG algorithm 881f. stopping criterion 884 straight injection 876 symbol of operator 875f.
+use of Richardson extrapolation 878 V-cycle 874 W-cycle 874 zebra relaxation 875 Multiple precision arithmetic 915ff.
+Multiple roots 348, 369 Multiplication, complex 177 Multiplication, multiple precision 916, 918 Multiplier of linear congruential generator 276 Multistep and multivalue methods (ODEs) 747ff.
+see also Differential Equations; Predictorcorrector methods Multivariate normal distribution 695 Murphy's Law 413 Musical scores 5
+N
+AG xvii, 35, 72, 212, 461 National Science Foundation (U.S.) xiii, xv Natural cubic spline 115 Navier-Stokes equation 839, 840 Needle, eye of (minimization) 410 Negation, multiple precision 916 Negentropy 820, 904 Nelder-Mead minimization method 396, 408ff.
+Nested iteration 877 Neumann boundary conditions 829, 849, 860, 867 Neutrino 645 Neville's algorithm 108f., 111, 140, 188 Newton-Cotes formulas 131ff., 147 open 132 Newton-Raphson method see Newton's rule Newton's rule 149f., 185, 348, 362ff., 369, 371, 476 with backtracking 384f. caution on use of numerical derivatives 365 fractal domain of convergence 367f. globally convergent multidimensional 380, 383ff., 389, 757f., 761 for matrix inverse 57, 606 in multidimensions 377, 379ff., 757f., 761, 762 in nonlinear multigrid 882, 884 nonlinear Volterra equations 796 for reciprocal of number 919 safe 366 scaling of variables 389 singular Jacobian 393 solving stiff ODEs 748 for square root of number 921 Niederreiter sequence 310 NL2SOL 688 Noise bursty 897 effect on maximum entropy method 574
+984 programming conventions 25ff. programs by chapter and section xix prototypes (nr.h) 17, 930 table of dependencies 951ff. table of prototypes 930 as trademark xvii utility functions 2, 940ff. utility prototypes (nrutil.h) 17, 27, 940ff.
+Numerical Recipes Software xi, xvii address and fax number xvii Nyquist frequency 500ff., 526, 550, 552, 576, 578f.
+Nystrom method 791f., 797f. product version 797
+Index
+O
+bject extensibility 7 Objective function 431 Object-oriented programming 7 Oblateness parameter 773 Odd parity 896 Odd-even ordering in Gauss-Seidel relaxation 875, 878 in successive over-relaxation (SOR) 868 OEM information xvii One-sided power spectral density 498 Operation count balancing 483 Bessel function evaluation 234f. bisection method 353 Cholesky decomposition 97 coefficients of interpolating polynomial 120f. complex multiplication 104 cubic spline interpolation 115 evaluating polynomial 174f. fast Fourier transform (FFT) 504 Gauss-Jordan elimination 42, 48 Gaussian elimination 42 Givens reduction 470 Householder reduction 474 interpolation 106 inverse iteration 494 iterative improvement 56 Jacobi transformation 467 Kendall's tau 643f. linear congruential generator 277 LU decomposition 44, 48 matrix inversion 104 matrix multiplication 103 maximum entropy method 574 multidimensional minimization 420 multigrid method 871 multiplication 918 polynomial evaluation 104, 174f.
+QL method 477, 480 QR decomposition 98 QR method for Hessenberg matrices 490 reduction to Hessenberg form 485 selection by partitioning 341 sorting 329ff.
+Toeplitz matrix 90 Vandermonde matrix 90
+Operator associativity, in C 25f. overloading 7 precedence, in C 25f. splitting 832, 856f., 870 Optimal feasible vector 431 Optimal (Wiener) filtering 542, 547ff., 565f., 650 compared with regularization 810 Optimization see Minimization Ordinal variable (statistics) 628 Ordinary differential equations see Differential equations Orthogonal see Orthonormal functions; Orthonormal polynomials Orthogonal transformation 459, 470ff., 477, 591 Orthonormal basis, constructing 66, 100 Orthonormal functions 149, 252 Orthonormal polynomials Chebyshev 151, 190ff. construct for arbitrary weight 157ff.
+in Gauss-Hermite integration 153 and Gaussian quadrature 149 Gaussian weights from recurrence 156 Hermite 151 Jacobi 151 Laguerre 151 Legendre 151 weight function log x 159 Orthonormality 59f., 149, 470 Outer product of matrices (denoted by ) 73, 427 Outgoing wave boundary conditions 829 Outlier 611, 659, 662, 699, 702 see also Robust estimation Overcorrection 866 Overflow 890 how to avoid in modulo multiplication 278 in complex arithmetic 177 Overlap-add and overlap-save methods 543f.
+Overrelaxation parameter 866 choice of 866f.
+Â´ P ade approximant 111, 200ff.
+Parabolic interpolation 403 Parabolic partial differential equations 827, 847ff.
+Parallel axis theorem 318 Parameters in fitting function 657f., 689ff.
+Parity bit 896 Park and Miller minimal standard random generator 278f.
+Parseval's Theorem 498, 551 discrete form 504 Partial differential equations 827ff. advective equation 835 alternating-direction implicit method (ADI) 856, 870f. amplification factor 837, 843 analyze/factorize/operate package 833 artificial viscosity 840, 846 biconjugate gradient method 833 boundary conditions 828ff.
+Index
+985 Â¨ Schrodinger equation 851ff.
+second-order accuracy 842ff., 848f. shock 840, 846 sparse matrices from 71 spectral methods 833f. spectral radius 865ff., 871 stability vs. accuracy 839 stability vs. efficiency 830 staggered grids 519, 861 staggered leapfrog method 842f. strongly implicit procedure 833 successive over-relaxation (SOR) 866ff., 871, 875 time splitting 856f., 870 two-step Lax-Wendroff method 844ff. upwind differencing 841f., 846 variational methods 833 varieties of error 840ff. von Neumann stability analysis 836f., 839, 842, 849 wave equation 827, 834f.
+see also Elliptic partial differential equations; Finite difference equations (FDEs) Partial pivoting 38 Partition-exchange 332, 341 Partitioned matrix, inverse of 77f.
+Party tricks 102ff., 174f.
+Parzen window 554 Pascal 16, 18, 20 Pascal, Numerical Recipes in xv, 1 Path integration, for function evaluation 208ff., 271 Pattern multiply of sparse matrices 81f.
+PBCG (preconditioned biconjugate gradient method) 85f., 833 PC methods see Predictor-corrector methods PCGPACK 78 PDEs see Partial differential equations Pearson's r 636ff.
+PECE method 749 Pentagon, symmetries of 902 Percentile 329 Period of linear congruential generator 276 Periodic boundary conditions 859, 867 Periodogram 550ff., 574 Lomb's normalized 576f., 581f. variance of 552 Perl (programming language) xiii Perron's theorems, for convergence of recurrence relations 180f.
+Perturbation methods for matrix inversion 73ff.
+Peter Principle 337 Phase error 840 Phase-locked loop 705 Phi statistic 631 Phillips-Twomey method 808ff.
+Pi, computation of 915ff.
+Piecewise parabolic method (PPM) 846 Pincherle's theorem 181 Pivot element 38, 41, 764 in linear programming 435f.
+Pivoting 36, 38ff., 54, 73, 97 full 38 implicit 38, 46
+boundary value problems 828ff., 857f.
+Cauchy problem 827f. caution on high-order methods 853f.
+Cayley's form 853 characteristics 827 Chebyshev acceleration 868f. classification of 827ff. comparison of rapid methods 863 conjugate gradient method 833 Courant condition 838, 841, 843, 845 Courant condition (multidimensional) 855 Crank-Nicolson method 848, 851, 853, 855 cyclic reduction (CR) method 857f., 861f. diffusion equation 827, 847ff., 855, 864 Dirichlet boundary conditions 829, 848, 859, 865, 867 elliptic, defined 827 error, varieties of 840ff. explicit vs. implicit differencing 836 FACR method 863 finite difference method 830ff. finite element methods 833f. flux-conservative initial value problems 834ff. forward Euler differencing 835f.
+Forward Time Centered Space (FTCS) 836ff., 847ff., 852, 864 Fourier analysis and cyclic reduction (FACR) 857ff., 863 Gauss-Seidel method (relaxation) 864, 873ff., 884 Godunov's method 846 Helmholtz equation 861 hyperbolic 827, 834f. implicit differencing 848 incomplete Cholesky conjugate gradient method (ICCG) 833 inhomogeneous boundary conditions 859f. initial value problems 827f. initial value problems, recommendations on 847ff.
+Jacobi's method (relaxation) 864f., 873 Laplace's equation 827 Lax method 837ff., 845, 854f.
+Lax method (multidimensional) 854f. matrix methods 833 mesh-drift instability 843f.
+Monte Carlo methods 833 multidimensional initial value problems 853ff. multigrid method 833, 871ff.
+Neumann boundary conditions 829, 849, 860, 867 nonlinear diffusion equation 851 nonlinear instability 840 numerical dissipation or viscosity 839 operator splitting 832, 856f., 870 outgoing wave boundary conditions 829 parabolic 827, 847ff. periodic boundary conditions 859, 867 piecewise parabolic method (PPM) 846 Poisson equation 827, 861 rapid (Fourier) methods 514ff., 833, 857ff. relaxation methods 832, 863ff.
+986 in LU decomposition 45f. partial 38, 41, 46 and QR decomposition 99 in reduction to Hessenberg form 485 in relaxation method 764 for tridiagonal systems 51 Pixel 525, 603, 812, 820 Planck's constant 851 Plane rotation see Givens reduction; Jacobi transformation (or rotation) Platykurtic distribution 612 Plotting of functions 349f.
+POCS (method of projection onto convex sets) 814 Poetry 5 Pointer to array 18 use for matrices 20, 33f., 940ff.
+Poisson equation 525, 827, 861 Poisson probability function cumulative 221 deviates from 290, 293ff., 579 semi-invariants of 614 tails compared to Gaussian 659 Poisson process 287, 291, 293 Polak-Ribiere algorithm 396f., 422f.
+Poles see Complex plane, poles in Polishing of roots 365, 370f., 376f.
+Polymorphism 7 Polynomial interpolation 105, 108ff.
+Aitken's algorithm 108 in Bulirsch-Stoer method 728, 730f. coefficients for 120ff.
+Lagrange's formula 91, 108f. multidimensional 123ff.
+Neville's algorithm 108f., 111, 140, 188 pathology in determining coefficients for 120 in predictor-corrector method 748 smoothing filters 650f.
+see also Interpolation Polynomials 173ff. algebraic manipulations 175 approximating modified Bessel functions 236 approximation from Chebyshev coefficients 197 AUTODIN-II 898 CCITT 897f. characteristic 375 characteristic, for digital filters 561, 567 characteristic, for eigenvalues of matrix 456, 475f.
+Chebyshev 190ff.
+CRC-16 898 deflation 369ff., 377 derivatives of 173f. division 91, 175, 369, 377 evaluation of 173 evaluation of derivatives 173f. extrapolation in Bulirsch-Stoer method 728, 730f. extrapolation in Romberg integration 140 fitting 90, 120, 197, 650f., 671, 679f. generator for CRC 897f.
+Index
+ill-conditioned 369 matrix method for roots 375 minimax 192, 204 monic 149 multiplication 175 operation count for 174f. orthonormal 149, 190f. primitive modulo 2 296ff., 311f., 897 roots of 183ff., 369ff., 375 shifting of 198f. stopping criterion in root finding 373 Port, serial data 899 Portability 2f., 16 Portable random number generator see Random number generator Positive definite matrix, testing for 97 Positivity constraints 431 Postal Service (U.S.), barcode 902 PostScript xiii, xvii Powell's method 396, 408, 412ff.
+Power (in a signal) 498f.
+Power series 165ff., 173f., 201 economization of 198ff.
+Â´ Pade approximant of 200ff.
+Power spectral density see Fourier transform; Spectral density Power spectrum estimation see Fourier transform; Spectral density PPM (piecewise parabolic method) 846 Precedence of operators, in C 25f.
+Precision, floating point 890 Precision, multiple 915ff.
+Preconditioned biconjugate gradient method (PBCG) 85f.
+Preconditioning, in conjugate gradient methods 833 Predictor-corrector methods 708, 737, 747ff.
+Adams-Bashforth-Moulton schemes 749 adaptive order methods 751 compared to other methods 747f. fallacy of multiple correction 748f.
+with fixed number of iterations 749 functional iteration vs. Newton's rule 749 multivalue compared with multistep 749f. starting and stopping 750, 751 stepsize control 749f.
+Prime numbers 924f.
+Primitive polynomials modulo 2 296ff., 311f., 897 Principal directions 414f.
+Principal solution, of inverse problem 806 Prize, $1000 offered 281 Probability see Random number generator; Statistical tests Probability density, change of variables in 287ff.
+Process loss 554 Product Nystrom method 797 Program(s) as black boxes xiv, 5, 35, 60, 212, 348, 413 dependencies 951ff. encapsulation 6f. interfaces 7 modularization 6f.
+Index
+987 Monte Carlo 130, 162, 304ff., 316ff. multidimensional 130, 161ff.
+Newton-Cotes formulas 131ff., 147 Newton-Cotes open formulas 132 open formulas 131, 132f., 135f., 141 related to differential equations 129 related to predictor-corrector methods 747f.
+Romberg integration 130, 140f., 143, 188, 723, 797 semi-open formulas 135f.
+Simpson's rule 132, 139, 143, 590, 791f., 797, 799 Simpson's three-eighths rule 132, 797, 799 singularity removal 144ff., 797f. singularity removal, worked example 801 trapezoidal rule 131, 133, 136ff., 140, 586, 590, 791f., 795 using FFTs 130 weight function log x 159 see also Integration of functions Quadrature mirror filter 592, 600 Quantum mechanics, Uncertainty Principle 607 Quartile value 329 Quasi-Newton methods for minimization 397, 425ff.
+Quasi-random sequence 309ff., 327, 889, 896 Halton's 309f. for Monte Carlo integration 313ff., 319, 327 Sobol's 311 see also Random number generator Quicksort 329, 332ff., 338, 341 Quotient-difference algorithm 170
+organization 5ff. recipes by chapter and section xix typography of 11 validation 2f.
+Projection onto convex sets (POCS) 814 Projection operator, nonexpansive 814 Prolongation operator 873 Protocol, for communications 896 Prototypes in C 16f., 25, 930 PSD (power spectral density) see Fourier transform; Spectral density Pseudo-random numbers 274ff.
+Puns, particularly bad 173, 752, 755 Pyramidal algorithm 594 Pythagoreans 399
+Q L see Eigensystems QR see Eigensystems QR decomposition 98f., 389, 393 backsubstitution 98 and least squares 674 operation count 98 pivoting 99 updating 100, 389 use for orthonormal basis 66, 100 Quadratic convergence 57, 262, 358, 364f., 415f., 427, 915 equations 29, 183ff., 398, 464 interpolation 360, 371 programming 443 Quadrature 129ff. adaptive 129, 196, 797 alternative extended Simpson's rule 134 arbitrary weight function 157ff., 797 automatic 160 Bode's rule 132 change of variable in 144ff., 797 by Chebyshev fitting 130, 195 classical formulas for 130ff.
+Clenshaw-Curtis 130, 196, 518f. closed formulas 131, 133f. and computer science 889 by cubic splines 130 error estimate in solution 793 extended midpoint rule 135, 141f. extended rules 133ff., 140, 795, 797, 799 extended Simpson's rule 134 Fourier integrals 584ff.
+Fourier integrals, infinite range 590f.
+Gauss-Chebyshev 151, 518f.
+Gauss-Hermite 151, 798 Gauss-Jacobi 151 Gauss-Kronrod 160 Gauss-Laguerre 151, 798 Gauss-Legendre 151, 792, 797 Gauss-Lobatto 160, 196, 518 Gauss-Radau 160 Gaussian integration 133, 147ff., 790, 792, 797 Gaussian integration, nonclassical weight function 157ff., 797 for improper integrals 141ff., 797f. for integral equations 790f., 795
+R
+-estimates 699f.
+Radioactive decay 287 Radix base for floating point arithmetic 483, 890, 916, 922 Radix conversion 910, 914, 922 Ramanujan's identity for 924 RAND_MAX macro 275f., 277 Random bits, generation of 296ff.
+Random deviates 274ff. binomial 295f. exponential 287f. gamma distribution 290ff.
+Gaussian 275, 288f., 578, 807 normal 275, 288f., 578 Poisson 293ff., 579 quasi-random sequences 309ff., 889, 896 uniform 275ff. uniform integer 280, 283ff.
+Random number generator 274ff. bitwise operations 296ff.
+Box-Muller algorithm 289 Data Encryption Standard 300ff.
+good choices for modulus, multiplier and increment 284f. for integer-valued probability distribution 293 integer vs. real implementation 283 L'Ecuyer's long period 280f.
+988 linear congruential generator 276f. machine language 278 Minimal Standard, Park and Miller's 278f. nonrandomness of low-order bits 277 perfect 281 planes, numbers lie on 277 portable 278ff. primitive polynomials modulo 2 296ff. pseudo-DES 300 quasi-random sequences 309ff., 889, 896 quick and dirty 283ff. quicker and dirtier 284f.
+in Quicksort 333 random access to nth number 303 random bits 296ff. recommendations 285f. rejection method 290ff. shuffling procedure 280, 281 in simulated annealing method 445 spectral test 284 subtractive method 282 system-supplied 275ff. timings 285f. transformation method 287ff. trick for trigonometric functions 289 Random numbers see Monte Carlo; Random deviates Random walk 29 RANDU, infamous routine 277 Range 61, 63 Rank (matrix) 61 kernel of finite 794 Rank (sorting) 329, 340f.
+Rank (statistics) 639ff., 699f.
+Kendall's tau 642ff.
+Spearman correlation coefficient 640f. sum squared differences of 640 Ratio variable (statistics) 628 Rational Chebyshev approximation 204ff.
+Rational function 105, 173ff., 200ff., 204ff. approximation for Bessel functions 231f. approximation for continued fraction 170, 217, 227 Chebyshev approximation 204ff. evaluation of 176 extrapolation in Bulirsch-Stoer method 724ff., 731 interpolation and extrapolation using 105, 111ff., 200ff., 204ff., 724ff., 731 minimax 204 as power spectrum estimate 573 Realizable (causal) 559, 561 Rearranging see Sorting Reciprocal, multiple precision 919 Record, in data file 338 Recurrence relation 178ff. associated Legendre polynomials 253 Bessel function 178, 231, 241f. binomial coefficients 215 Bulirsch-Stoer 111f. characteristic polynomial of tridiagonal matrix 475 Clenshaw's recurrence formula 181ff. and continued fraction 181 continued fraction evaluation 170f.
+Index
+convergence 181 cosine function 178, 506 dominant solution 179 exponential integrals 178 gamma function 213 generation of random bits 297f.
+Golden Mean 30 Legendre polynomials 178 minimal vs. dominant solution 179 modified Bessel function 239 Neville's 109, 188 orthonormal polynomials 149 Perron's theorems 180f.
+Pincherle's theorem 181 polynomial interpolation 109, 189 primitive polynomials modulo 2 297f. random number generator 276 rational function interpolation 111f. sequence of trig functions 178f. sine function 178, 506 spherical harmonics 253 stability of 30f., 179ff., 182f., 231, 239, 253 trig functions 579 weight of Gaussian quadrature 150f.
+Recursion, in multigrid method 874 Recursive Monte Carlo integration 316ff.
+Recursive stratified sampling 323ff.
+Red-black see Odd-even ordering Reduction of variance in Monte Carlo integration 308, 316ff.
+References (explanation) 4 References (general bibliography) 926ff.
+Reflection formula for gamma function 213 register storage class 25 Regula falsi (false position) 354ff.
+Regularity condition 784 Regularization compared with optimal filtering 810 constrained linear inversion method 808ff. of inverse problems 805ff. linear 808ff. nonlinear 822f. objective criterion 811 Phillips-Twomey method 808ff.
+Tikhonov-Miller 808ff. trade-off curve 808 two-dimensional 812 zeroth order 805ff.
+see also Inverse problems Regularizing operator 807 Rejection method for random number generator 290ff.
+Relaxation method for algebraically difficult sets 772 automated allocation of mesh points 783f., 786 computation of spheroidal harmonics 772ff. for differential equations 754f., 762ff. elliptic partial differential equations 832f., 863ff. example 772ff.
+Gauss-Seidel method 864, 873ff., 884 internal boundary conditions 784ff. internal singular points 784ff.
+Index
+989 Newton's rule 149f., 185, 348, 362ff., 369, 371, 377, 379ff., 383f., 476, 749, 757f., 762, 796, 882, 884, 919, 921 pathological cases 350f., 362ff., 369, 380 polynomials 348, 369ff., 456 in relaxation method 762 Ridders' method 348, 356, 358 root-polishing 365, 370f., 376ff., 378 safe Newton's rule 366 secant method 354ff., 365, 371, 406 in shooting method 754, 757f. singular Jacobian in Newton's rule 393 stopping criterion for polynomials 373 use of minimum finding 348 using derivatives 362ff. zero suppression 379 see also Roots Root polishing 365, 370, 376ff.
+Roots Chebyshev polynomials 190 cubic equations 184f. multiple 348, 371ff. nonlinear equations 347ff. polynomials 348, 369ff., 456 quadratic equations 183f. reflection in unit circle 567 square, multiple precision 921 see also Root finding Rosenbrock method 737ff. compared with semi-implicit extrapolation 747 stepsize control 738 Roundoff error 29, 889f. bracketing a minimum 406 conjugate gradient method 833 eigensystems 465, 474, 476, 478, 483, 485, 489 extended trapezoidal rule 138 general linear least squares 674, 677 graceful 891 hardware aspects 890 Householder reduction 472 IEEE standard 891 interpolation 107 least squares fitting 664, 674 Levenberg-Marquardt method 685 linear algebraic equations 32f., 36, 38, 55, 64, 91 linear predictive coding (LPC) 571 magnification of 29, 55 maximum entropy method (MEM) 574 measuring 890 multidimensional minimization 426, 430 multiple roots 369f. numerical derivatives 186 recurrence relations 179 reduction to Hessenberg form 485 series 170f. straight line fitting 664 variance 613 Row degeneracy 32 Row-indexed sparse storage 78f. transpose 80f.
+Row operations on matrix 37, 40 Row totals 630
+Jacobi's method 864f., 873 successive over-relaxation (SOR) 866ff., 871, 875 see also Multigrid method Remes algorithms exchange algorithm 560 for minimax rational function 205 Residual 57, 62, 85 in multigrid method 872 Resolution function, in Backus-Gilbert method 816 Response function 538 Restriction operator 873 Reward, $1000 offered 281 Richardson's deferred approach to the limit 140, 143, 188, 708, 724ff., 733f., 796, 878 see also Bulirsch-Stoer method Richtmyer artificial viscosity 846 Ridders' method, for numerical derivatives 188 Ridders' method, root finding 348, 356, 358 Riemann shock problem 846 Right eigenvalues and eigenvectors 458 Rise/fall time 554f.
+Robust estimation 659, 699ff., 705 Andrew's sine 702 average deviation 611 double exponential errors 701 Kalman filtering 705 Lorentzian errors 701f. mean absolute deviation 611 nonparametric correlation 639ff.
+Tukey's biweight 702 use of a priori covariances 705 see also Statistical tests Romberg integration 130, 140f., 143, 188, 723, 797 Root finding 149f., 347ff. advanced implementations of Newton's rule 393 Bairstow's method 371, 377 bisection 350, 353, 359ff., 366, 397, 476, 703 bracketing of roots 348, 350ff., 360, 369, 371, 376 Brent's method 348, 356, 666 Broyden's method 380, 389ff., 393 compared with multidimensional minimization 382 complex analytic functions 371 in complex plane 210 convergence criteria 353, 381 deflation of polynomials 369ff., 377 without derivatives 361 double root 348 eigenvalue methods 375 false position 354ff.
+Jenkins-Traub method 376 Laguerre's method 348, 371ff.
+Lehmer-Schur algorithm 376 Maehly's procedure 370, 378 matrix method 375 Muller's method 371, 379 multiple roots 348
+990 RSS algorithm 323ff.
+RST properties (reflexive, symmetric, transitive) 345 Runge-Kutta method 708f., 710ff., 738, 747 Cash-Karp parameters 716f. embedded 715f., 738 high-order 711 quality control 728 stepsize control 714ff.
+Run-length encoding 909 Rybicki, G.B. 91f., 120, 151, 259, 528, 581, 606 ampling importance 316f.
+Latin square or hypercube 315 recursive stratified 323ff. stratified 317f. uneven or irregular 576, 654 Sampling theorem 501, 550 for numerical approximation 606ff.
+Sande-Tukey FFT algorithm 509 Savitzky-Golay filters for data smoothing 650ff. for numerical derivatives 189, 651 Scallop loss 554 Schrage's algorithm 278 Â¨ Schrodinger equation 851ff.
+Schultz's method for matrix inverse 57, 606 SDLC checksum 898 Searching with correlated values 117f.
+an ordered table 117f. selection 341ff.
+Secant method 348, 354ff., 365, 371, 406 Broyden's method 389ff. multidimensional (Broyden's) 380, 389ff.
+Second Euler-Maclaurin summation formula 142 Second order differential equations 732f.
+Seed of random number generator 275 Selection 329, 341ff. find m largest elements 344 heap algorithm 344 for median 703 operation count 341f.
+by partition-exchange 341 without rearrangement 342 timings 344 use to find median 614f.
+Semi-implicit Euler method 737, 743 Semi-implicit extrapolation method 737, 743 compared with Rosenbrock method 747 stepsize control 744 Semi-implicit midpoint rule 743 Semi-invariants of a distribution 614 Sentinel, in Quicksort 333, 341 Separable kernel 794 Separation of variables 252 Serial data port 899 Series 165ff. accelerating convergence of 166ff. alternating 166f. asymptotic 167 Bessel function K 247
+Index Bessel function Y 242 Bessel functions 166, 230 cosine integral 257 divergent 167 economization 198ff., 201 Euler's transformation 166ff. exponential integral 222, 224 Fresnel integral 255 hypergeometric 208, 271 incomplete beta function 227 incomplete gamma function 217 Laurent 573 relation to continued fractions 169f. roundoff error in 170f. sine and cosine integrals 257 sine function 166 Taylor 362, 414, 708, 715, 763, 767 transformation of 166ff. van Wijngaarden's algorithm 167 Shaft encoder 894f.
+Shakespeare 8 Shampine's Rosenbrock parameters 738 Shell algorithm (Shell's sort) 330ff.
+Sherman-Morrison formula 73ff., 90, 389 Shifting of eigenvalues 456, 477f., 486f.
+Shock wave 840, 846 Shooting method computation of spheroidal harmonics 781 for differential equations 754, 757ff., 779f., 781 for difficult cases 760 example 779f., 781 interior fitting point 760 Shuffling to improve random number generator 280f.
+Sidelobe fall-off 554 Sidelobe level 554 Signal, bandwidth limited 501 Significance (numerical) 28 Significance (statistical) 615f.
+one- vs. two-sided 638 peak in Lomb periodogram 577 of 2-d K-S test 646f.
+two-tailed 619 Similarity transform 459ff., 463, 483, 485, 488 Simplex defined 408f. method in linear programming 396, 408f., 430, 433ff., 439ff. method of Nelder and Mead 396, 408ff., 451f., 702f.
+use in simulated annealing 451f.
+Simpson's rule 130ff., 134, 139, 143, 590, 791f., 796, 797 Simpson's three-eighths rule 132, 797, 799 Simulated annealing see Annealing, method of simulated Simulation see Monte Carlo Sine function evaluated from tan(/2) 179 recurrence 178 series 166 Sine integral 255, 257ff. continued fraction 257
+S
+Index
+991 relaxation method for boundary value problems 762 row-indexed storage 78f. wavelet transform 591, 606 see also Matrix Spearman rank-order coefficient 640f., 699f.
+Special functions see Function Spectral analysis see Fourier transform; Periodogram Spectral density 548 and data windowing 553ff. figures of merit for data windows 554f. normalization conventions 550 one-sided PSD 498 periodogram 550ff., 574 power spectral density (PSD) 498f. power spectral density per unit time 499 power spectrum estimation by FFT 549ff. power spectrum estimation by MEM 572ff.
+two-sided PSD 499 variance reduction in spectral estimation 552 Spectral lines, how to smooth 650 Spectral methods for partial differential equations 833f.
+Spectral radius 865ff., 871 Spectral test for random number generator 284 Spectrum see Fourier transform Spherical Bessel functions 240 routine for 251 Spherical harmonics 252f. orthogonality 252 routine for 254 stable recurrence for 253 table of 253 see also Associated Legendre polynomials Spheroidal harmonics 772ff., 779f., 781 boundary conditions 774 normalization 774 routine for 777ff., 780f., 781f.
+Spline 106 cubic 113ff. gives tridiagonal system 115 natural 115 operation count 115 two-dimensional (bicubic) 127f.
+Spread matrix 817 Spread spectrum 300 Square root, complex 177f.
+Square root, multiple precision 921 Square window 553 Squaring, macro in C 27 Stability 30f. of Clenshaw's recurrence 182f.
+Courant condition 838, 841ff., 845, 855 diffusion equation 849 of Gauss-Jordan elimination 36, 38 of implicit differencing 735f., 849 mesh-drift in PDEs 843f. nonlinear 840, 846 partial differential equations 829, 836f. of polynomial deflation 370 in quadrature solution of Volterra equation 796
+series 257 see also Cosine integral Sine transform see Fast Fourier transform (FFT); Fourier transform Singleton's algorithm for FFT 532 Singular value decomposition (SVD) 33, 34f., 59ff. approximation of matrices 66f. backsubstitution 64 and bases for nullspace and range 61 confidence levels from 698 covariance matrix 698 fewer equations than unknowns 65 for inverse problems 806 and least squares 62, 65f., 205, 674, 676ff.
+in minimization 416 more equations than unknowns 65f. and rational Chebyshev approximation 205 of square matrix 61ff.
+use for ill-conditioned matrices 63f., 66, 456 use for orthonormal basis 66, 100 Singularities of hypergeometric function 209, 271 in integral equations 797ff.
+in integral equations, worked example 801 in integrands 141ff., 797f. removal in numerical integration 144ff., 797f.
+Singularity, subtraction of the 798 SIPSOL 833 Skewness of distribution 612, 614 Smoothing, importance in multigrid method 874 Smoothing of data 120, 650ff.
+in integral equations 790 sn function 269 Snyder, N.L. xii Sobol's quasi-random sequence 311 Sonata 8 Sonnet 8 Sorting 329ff. bubble sort cautioned against 330 compared to selection 341 covariance matrix 675, 687 eigenvectors 468f.
+Heapsort 329, 336f., 344 index table 329, 338 operation count 329ff.
+Quicksort 329, 332ff., 338, 341 rank table 329, 340f. ranking 338 Shell's method 330ff. straight insertion 330f., 468 SPARC or SPARCstation xvii, 3 Sparse linear equations 33, 71ff., 739 band diagonal 51ff. biconjugate gradient method 84f., 606 indexed storage 78f.
+in inverse problems 813 minimum residual method 85 named patterns 71, 831 partial differential equations 831ff.
+992 of recurrence relations 179ff., 182f., 231, 239, 253 and stiff differential equations 735f. von Neumann analysis for PDEs 836f., 839, 842, 849 see also Accuracy Stabilized Kolmogorov-Smirnov test 626f.
+Stabilizing functional 807 Staggered leapfrog method 842f.
+Standard deviation of a distribution 611 of Fisher's z 637 of linear correlation coefficient 636 of sum squared difference of ranks 641 Standard (probable) errors 616, 662, 667, 673, 677, 689 Statement labels 8 Statistical error 659 Statistical tests 609ff.
+Anderson-Darling 626f. average deviation 611 bootstrap method 691f. chi-square 620f., 630ff. contingency coefficient C 631 contingency tables 628ff., 644 correlation 609f.
+Cramer's V 631 difference of distributions 620ff. difference of means 615ff. difference of variances 617, 619 entropy measures of association 632ff.
+F-test 617, 619 Fisher's z-transformation 637f. general paradigm 609 Kendall's tau 640, 642ff.
+Kolmogorov-Smirnov 620, 623ff., 645ff., 699 Kuiper's statistic 627 kurtosis 612, 614 L-estimates 699 linear correlation coefficient 636ff.
+M-estimates 699ff. mean 609ff., 614, 615ff. measures of association 610, 628ff. measures of central tendency 610ff. median 611, 699 mode 611 moments 610ff., 614 nonparametric correlation 639ff.
+Pearson's r 636ff. for periodic signal 577f. phi statistic 631 R-estimates 699f. rank correlation 639ff. robust 611, 640, 699ff. semi-invariants 614 for shift vs. for spread 626f. significance 615f. significance, one- vs. two-sided 619, 638 skewness 612, 614 Spearman rank-order coefficient 640f., 699f. standard deviation 611 strength vs. significance 615, 628 Student's t 616, 637
+Index
+Student's t, for correlation 637 Student's t, paired samples 618 Student's t, Spearman rank-order coefficient 640 Student's t, unequal variances 617 sum squared difference of ranks 640f.
+Tukey's trimean 699 two-dimensional 645ff. variance 609ff., 613, 618 Wilcoxon 699 see also Error; Robust estimation __STDC__ macro 17, 930 Steak, without sizzle 818 Steed's method Bessel functions 240ff., 246 continued fractions 170f.
+Steepest descent method 421 in inverse problems 813 Step doubling 136, 715 tripling 143 Stieltjes, procedure of 157 Stiff equations 709, 734ff.
+Kaps-Rentrop method 737 methods compared 747 predictor-corrector method 737 r.h.s. independent of x 736 Rosenbrock method 737ff. scaling of variables 737 semi-implicit extrapolation method 737 semi-implicit midpoint rule 743 Stiff functions 106, 406 Stirling's approximation 213, 821 Stoermer's rule 732f.
+Stopping criterion, in multigrid method 884 Stopping criterion, in polynomial root finding 373 Storage band diagonal matrix 52 scheme for matrix in C 20f., 33f., 940f. sparse matrices 78f.
+Straight injection 876 Straight insertion 330f., 468 Straight line fitting 661ff., 673f. errors in both coordinates 666ff. robust estimation 703 Strassen's fast matrix algorithms 102ff.
+Stratified sampling, Monte Carlo 317f., 323 Strongly implicit procedure (SIPSOL) 833 Structured programming 5ff.
+Student's probability distribution 226, 228 Student's t-test for correlation 637 for difference of ranks 641 for difference of means 616 for difference of means (paired samples) 618 for difference of means (unequal variances) 617 Spearman rank-order coefficient 640 Sturmian sequence 475f. submatrix() utility 945 Submatrix caution on freeing 23 of existing matrix 22, 945
+Index
+993 Trigonometric functions, linear sequences 178f. functions, recurrence relation 178, 579 functions, tan(/2) as minimal 179 interpolation 105 solution of cubic equation 184f.
+Truncation error 30, 406, 715, 889f.
+in multigrid method 883 in numerical derivatives 186 Tukey's biweight 702 Tukey's trimean 699 Turbo Pascal (Borland) 7 Twin errors 902 Two-dimensional see Multidimensional Two-dimensional KÂ­S test 645ff.
+Two-pass algorithm for variance 613 Two-point boundary value problems 708, 753ff. automated allocation of mesh points 783f., 786 boundary conditions 753ff., 757, 760, 779f. difficult cases 760 eigenvalue problem for differential equations 756, 772ff., 779, 781 free boundary problem 756, 785 grid (mesh) points 754f., 762, 783f., 786 internal boundary conditions 784ff. internal singular points 784ff. linear requires no iteration 759 multiple shooting 762 problems reducible to standard form 756 regularity condition 784 relaxation method 754f., 762ff. relaxation method, example of 772ff. shooting to a fitting point 760ff. shooting method 754, 757ff., 779f., 781 shooting method, example of 779f., 781 singular endpoints 760, 773, 780 see also Elliptic partial differential equations Two-sided exponential error distribution 701 Two-sided power spectral density 499 Two-step Lax-Wendroff method 844ff.
+Sub-random sequences see Quasi-random sequence Subtraction, multiple precision 916 Subtractive method for random number generator 282 Successive over-relaxation (SOR) 866ff., 871 bad in multigrid method 875 Chebyshev acceleration 868f. choice of overrelaxation parameter 866f.
+Sum squared difference of ranks 640 Sums see Series Sun xvii, 894 SPARCstation xvii, 3 Supernova 1987A 645 SVD see Singular value decomposition (SVD) switch structure 14 Symbol, of operator 875f.
+Synthetic division 91, 174, 369, 377 Systematic errors 659
+T ableau (interpolation) 109, 189 Tangent function, continued fraction 169 Taylor series 186, 362, 414, 708, 715, 750, 763, 767 Test programs 3 TEX xiii Thermodynamics, analogy for simulated annealing 444f.
+Threshold multiply of sparse matrices 81ff.
+Tides 568 Tikhonov-Miller regularization 808ff.
+Time domain 496 Time splitting 856f., 870 Toeplitz matrix 90, 92ff., 201 LU decomposition 94 new, fast algorithms 95f. nonsymmetric 93ff.
+Tongue twisters 341 Torus 305ff., 313ff.
+Trade-off curve 804, 818 Trademarks xvii Transformation Gauss 262 Landen 262 method for random number generator 287ff.
+Transforms, number theoretic 509f.
+Transport error 840 Transpose of sparse matrix 80f.
+Trapezoidal rule 131, 133, 136ff., 140, 586, 590, 791f., 795 Traveling salesman problem 445ff.
+Tridiagonal matrix 50f., 66, 156, 460f., 494 in alternating-direction implicit method (ADI) 870f.
+from cubic spline 115 cyclic 74f.
+in cyclic reduction 862 eigenvalues 475ff.
+with fringes 831 from operator splitting 870f. reduction of symmetric matrix to 469ff., 476 see also Matrix
+U
+LTRIX xvii, 3 Uncertainty coefficient 634 Uncertainty principle 607 Underflow, in IEEE arithmetic 891 Underrelaxation 866 Uniform deviates see Random deviates, uniform Unit-offset array 18, 940f.
+Unitary (function) 852f.
+Unitary (matrix) see Matrix UNIX xii, xvii, 3, 16, 285, 303, 894 Upper Hessenberg matrix see Hessenberg matrix Upwind differencing 841f., 846 U.S. Postal Service barcode 902 Utility functions complex.c 23f., 948ff. nrutil.c 2, 19, 21f., 940, 942ff.
+-cycle 874
+V
+994 Validation of Numerical Recipes procedures 2f.
+Valley, long or narrow 410, 413, 416 Van Cittert's method 813 Van Wijngaarden-Dekker-Brent method see Brent's method Vandermonde matrix 90ff., 120 Variable length code 903 Variable metric method 397, 425ff. compared to conjugate gradient method 425f.
+Variable step-size integration 129, 141, 709, 713, 725ff., 733f., 738, 744, 749f.
+Variance(s) of distribution 609ff., 614, 617, 619 pooled 616 reduction of (in Monte Carlo) 308, 316ff. statistical differences between two 615 two-pass algorithm for computing 613 see also Covariance Variational methods, partial differential equations 833 VAX xvii, 285, 303 Vector see Array Vectors, representation in C 18 vector() utility 943 VEGAS algorithm for Monte Carlo 319ff.
+Verhoeff 's algorithm for checksums 902 ` Viete's formulas for cubic roots 184f.
+Virus, computer 897 Viscosity artificial 840, 846 numerical 839, 840, 846 VMS xvii void (parameter type list) 17 Volterra equations 789f. adaptive stepsize control 797 analogy with ODEs 794f. block-by-block method 797 first kind 790, 795 nonlinear 790, 796 second kind 790, 794f. unstable quadrature 796 von Neumann-Richtmyer artificial viscosity 846 von Neumann stability analysis for PDEs 836f., 839, 842, 849 Vowellish (coding example) 904f., 910
+Index
+fast solution of linear equations 603ff. filters 599f. and Fourier domain 599f. image processing 603 for integral equations 791 inverse 594 Lemarie's wavelet 600 of linear operator 603ff. mother-function coefficient 594 mother functions 591 multidimensional 602 nonsmoothness of wavelets 598f. pyramidal algorithm 594 quadrature mirror filter 592 smooth information 593 truncation 601f. wavelet filter coefficient 592, 594 wavelets 591, 598ff.
+Wavelets see Wavelet transform Weber function 210 Weighted Kolmogorov-Smirnov test 626f.
+Weighted least-squares fitting see Least squares fitting Weighting, full vs. half in multigrid 876 Weights for Gaussian quadrature 147ff., 797 nonclassical weight function 157ff., 797 Welch window 554 while iteration 12 Wiener filtering 542, 547ff., 565f., 650 compared to regularization 810 Wiener-Khinchin theorem 498, 566, 574 Wilcoxon test 699 Window function Bartlett 554 flat-topped 555 Hamming 554 Hann 554 Parzen 554 square 553 Welch 554 Winograd Fourier transform algorithms 509 Woodbury formula 75ff., 90 Wordlength 28 Wraparound order for storing spectrum 507 problem in convolution 540 Wronskian, of Bessel functions 240, 246
+W -cycle 874 Warranty, disclaimer of xvi Wave equation 252, 827, 834f.
+Wavelet transform 591ff. appearance of wavelets 598f. approximation condition of order p 592f. coefficient values 594, 596 contrasted with Fourier transform 591f., 601 Daubechies wavelet filter coefficients 592ff., 596, 598, 601, 605 detail information 593 discrete wavelet transform (DWT) 594f.
+DWT (discrete wavelet transform) 594f. eliminating wrap-around 594f.
+X .25 protocol 898 XMODEM checksum 897 X-ray diffraction pattern, processing of 814 Y Z ale Sparse Matrix Package 72, 78
+-transform 561, 567, 572 Z-transformation, Fisher's 637f.
+Zealots 823 Zebra relaxation 875 Zero contours 379f.
+Zero-offset array 18 Zeroth-order regularization 805ff.
+Zip code, barcode for 902 Ziv-Lempel compression 903

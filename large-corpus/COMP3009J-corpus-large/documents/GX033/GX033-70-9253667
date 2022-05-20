@@ -1,0 +1,329 @@
+The new Digital Earth Reference Model Editor: John D. Evans, NASA Digital Earth Office Version 0.5, June 2001 (Previous version) (PDF version)
+The Digital Earth Initiative seeks to facilitate and promote the use of georeferenced information from multiple sources over the Internet.
+This requires interoperability ("working together") among the software systems that provide geospatial data, maps, services, and user applications.
+Geospatial interoperability is based on shared agreements - whether formal government standards or consensus industry specifications - governing essential geospatial concepts and their embodiment in communication protocols, software interfaces, and data formats.
+This document explains some of these agreements within a structured Reference Model of geospatial processing, as they apply to the design of geospatial software and services.
+This Reference Model guides the scope and growth of Digital Earth; but more broadly, it details how any geospatial software can plug into a global "interoperability infrastructure" to draw on many different sources of data and services -- or to support a wide, diverse user audience.
+Two organizations maintain most of the standards and specifications referenced here: the OpenGIS Consortium (OGC), a not-for-profit consortium focused on geographic information systems; and the International Organization for Standardization (ISO) and especially its Technical Committee on Geographic Information/Geomatics (TC211).
+(Note: Some OGC and ISO documents mentioned here are internal working drafts, password-protected and accessible only to member organizations or working groups.)
+Other standards mentioned here belong to the World Wide Web Consortium (W3C), the United States Federal Geographic Data Committee (FGDC), or other bodies as indicated; and are openly available to all.
+0.
+Organization
+a.
+Viewpoints and levels of abstraction
+The Reference Model brings together standards at two different levels, summarized in Table 1: * Implementation specifications tell software developers how to express information or requests within particular distributed computing environments, including access protocols, object models, and naming conventions.
+Such specifications are directly usable within their target computing environment.
+* Abstract models specify what information or requests are valid in principle, irrespective of individual computing environments: they define essential concepts, vocabulary, and structure (type hierarchy) of geospatial services and information transfer.
+These models set the stage for creating implementable specifications, and for extending existing ones to new environments.
+Computation Viewpoint
+Information Viewpoint
+Service Invocation
+Information Transfer
+Implementation specifications ("how")
+Interface
+Encoding
+Abstract models ("what")
+Behavior
+Content
+Table 1.
+Viewpoints and levels of abstraction
+At each of these levels, certain standards define the interfaces that allow different systems to work together, or the expected behavior of software systems: this is the computation viewpoint, whose accent is on invoking services effectively and unambiguously.
+Other standards define the content of geospatial information or its encoding for accurate transfer between different processing systems.
+This is the information viewpoint, which emphasizes efficient, lossless communication.
+OGC's Abstract Specification, Topic 0 ( Overview, Section 2) explains the roles of abstract and implementation models, and the interdependence of service invocation and information transfer.
+ISO's Reference Model (ISO 19101 / DIS: 2000-10 FDIS: 2001-05; IS: 2001-07) provides additional background on conceptual models and their role in specification design.
+The interoperability "stack"
+The Reference Model is structured around these four topics, along a generic "stack" of geoprocessing clients, servers, and intermediate services, depicted in Figure 1.
+[stack2-small.png?]
+Figure 1.
+The interoperability "stack"
+Components in this model are of four essential kinds: * User applications are the software usually seen by users; they may be highly customized analytical or field applications, or general-purpose viewers.
+They draw their input either directly from data repositories or from intermediate services that pre-process data for their use.
+* Geoprocessing services are the "workhorses" of the interoperability stack.
+They may simply draw maps from raw data; or they may perform advanced analytical functions such as feature extraction or coordinate transformation.
+They provide data, maps, or other inputs to user applications - or to other services, in what's known as "service chaining."
+* Content repositories provide geospatial data in the form of features, coverages, and data objects or tables.
+* Catalogs allow clients and services to find out what repositories or services are available and appropriate for their use.
+Gazetteers are another such "meta-service"; they provide the geographic locations of place names.
+The standards referenced here describe and guide the interaction between these components: data queries and their responses; service invocations; metadata retrieval mechanisms, and so on.
+1.
+Data and data access
+a.
+Features
+ISO and OpenGIS standards and specifications define a geographic feature quite generally, as "an abstraction of a real world phenomenon (...) associated with a location relative to the Earth."
+In practice, the term "feature" usually refers to discrete, or "vector" data entities, whose position in space is described by geometric and topological primitives such as points, lines, or polygons.
+Table 2 organizes the various standards and specifications related to geographic features.
+Service Invocation
+Information Transfer
+Implementation specifications
+Interface:
+OGC Simple Features access for SQL, COM, CORBA
+OGC Web Feature Service (WWW)
+Encoding:
+OGC Geography Markup Language (XML)
+OGC Location Organizer Folder (XML/GML)
+Abstract models
+Behavior:
+ISO 19125-1 (Access to Simple Features: Common Architecture)
+Content:
+ISO 19107 (Spatial Schema)
+ISO 19108 (Temporal Schema)
+OGC Topic 1 (Feature Geometry)
+OGC Topic 5 (Features)
+OGC Topic 8 (Feature Relationships)
+Table 2.
+Features
+Implementation specifications
+Three OGC specifications provide direct implementation guidance for access to features: * The Simple Features Access specifications apply to three distributed computing platforms ( SQL, OLE/COM , and CORBA ) and to the simplest and most commonly used geometry types (points, lines, and polygons, and compounds of these).
+All three specifications share a common object model, which ISO TC211 is reviewing for adoption.
+* The Web Feature Service Request For Comments details Web-based access (insertion, update, deletion, query, and discovery) to Simple Features encoded in XML according to OGC's Geography Markup Language (GML) specification.
+* A recent call for specifications on OpenGIS Feature Geometry seeks to extend Simple Features Access to more complex geometry types.
+OGC has also devised two different encoding specifications for its simple features: * "Well-Known Text" and "Well-Known Binary" formats are defined in OGC's Simple Features Access specifications for SQL, OLE/COM , and CORBA .
+* The Geography Markup Language (GML) is an XML Schema model for expressing simple geometries and defining simple features in XML.
+The Location Organizer Folder (LOF) and XML for Image and Map Annotations (XIMA) (both informal Discussion Papers) are two examples of GML-based application schemas.
+Work is underway in OGC to extend GML to encode additional geometry types, feature topology, coverages (see below), temporal variation, and other feature properties.
+Abstract models
+ISO TC211 has published several conceptual models describing geographic features.
+* ISO's Spatial Schema (ISO 19107 / DIS: 2001-04, FDIS: 2001-10, IS: 2001-12) provides a model of 2-dimensional and 3-dimensional geometry and topology, and related operators such as "buffer" or "intersects."
+* ISO's Simple Features Common Architecture (ISO 19125-1 / FDIS: 2001-06, IS: 2001-08) provides further detail on the subset of features described in OGC's Simple Feature Access Implementation Specifications, including well-known encodings and a starter set of Spatial Reference Systems.
+In the OpenGIS Abstract Specification, three separate volumes provide useful structure and vocabulary related to features: * Topic 1 on Feature Geometry describes geometric and topological primitives and operators; * Topic 5 on Features explains how geometries may be used in modelling real-world entities; * Topic 8 on Feature Relationships describes meaningful relationships beyond topological ones, and defines terms such as "lightweight" vs. "heavyweight" relationships.
+Most work thus far has been on 2-D and 3-D time-independent feature models.
+However, ISO's Temporal Schema (ISO 19108: DIS: 2000-11, FDIS: 2001-06, IS: 2001-08) defines how to represent features over time and not just in space.
+b. Coverages
+Very generally speaking, coverages describe a set of spatial locations (the "domain") in terms of one or more characteristics (the "attribute values").
+Examples might include a soil map (soil types of specific areas); a satellite image (brightness of a set of pixels), or a digital elevation model (regularly-spaced elevation data, or triangulated irregular spot elevations).
+Table 3 summarizes the standards and specifications related to coverages.
+Service Invocation
+Information Transfer
+Implementation specifications
+Interface:
+OGC Grid Coverages Access for OLE/COM
+Web Coverage Service
+Encoding:
+GeoTIFF, HDF-EOS
+DTED, NITF
+XDF, ESML (XML)
+Abstract models
+Behavior:
+OGC Topic 6, Coverages
+Content:
+ISO 19123, Coverage Schema
+Table 3.
+Coverages
+Implementation specifications
+OGC has recently released two different specifications for access to coverages: * An Implementation Specification for Grid Coverages Access in OLE/COM or CORBA provides a detailed interface definition that complies with the Abstract Specification (within the realm of Grid Coverages).
+* The recent Web Coverage Service informal Discussion Paper proposes a simple Web-based syntax for access to Grid Coverage data.
+As for encoding Coverages, no single encoding has the "blessing" of OGC or ISO; but the following are a few commonly used file-transfer formats: * GeoTIFF is a widely-used extension of the Tagged Image File Format that embeds georeferencing information within the image file.
+* NITF, the National Image Transfer Format, was devised by the US National Imagery and Mapping Agency (NIMA) and supports mostly defense and intelligence operations.
+* HDF-EOS, the Hierarchical Data Format applied to the Earth Observing System, is the standard file format and application interface for NASA's imagery distribution.
+* DTED has been used by NIMA and the US Geological Survey to distribute Digital Terrain Elevation Data.
+Products from the Feb. 2000 Shuttle Radar Topography Mission (SRTM) will also use this format and NITF.
+Several different XML encodings are in work for coverages, including XDF and the Earth Science Markup Language.
+Discussions are also underway in OGC to extend the Geography Markup Language to coverages.
+Abstract models
+To guide further work on implementations, OGC and ISO each have abstract definitions of coverages: * OGC's Abstract Specification, Topic 6 ( The Coverage Type), provides a definition and detailed overview of coverages and the operations they support; it classifies coverages into a half-dozen primary types.
+OGC implementation specifications have concentrated on the special case of "Grid Coverages" (used for earth imagery, elevation models, and various sensor data), whose domain consists of regularly spaced pixels or posts.
+* ISO's Schema for Coverage Geometry and Functions (ISO 19123 / CD2: 2001-07; DIS: 2002-02; FDIS: 2002-09; IS: 2002-11) supplies additional detail on coverages and their access functions.
+2.
+Metadata 
+By describing data or services, metadata aid their discovery by users, and their widespread use within an interoperable infrastructure.
+Metadata are usually stored in a catalog, and accessible to applications and services via catalog interfaces.
+The GSDI Cookbook (Chapter 4, section on "Relevant standards") provides a concise overview of standards for access to metadata through catalog interfaces, and for metadata content and encoding.
+Service Invocation
+Information Transfer
+Implementation specifications
+Interface:
+OGC Web Registry Server DCIS
+OGC Catalog Services I.S.
+ISO 23950 (ANSI Z39.50), GEO profile
+Encoding:
+OGC Web Registry Server DCIS
+ISO DIS 19115 (Metadata XML encoding)
+Abstract models
+Behavior:
+OGC Topic 13, Catalog Services
+Content:
+FGDC Content Standard
+ISO DIS 19115, Metadata
+Table 4.
+Catalogs and metadata
+Implementation specifications
+Two OGC specifications define catalog access in implementable detail: * OGC's Catalog Interface Implementation Specification defines an SQL-like Common Query Language for search and retrieval of metadata, along with profiles of it for the OLEDB, CORBA, and Web computing environments.
+The Web profile uses ANSI/NISO Z39.50 (a.k.a. ISO 23950) services, either on its own Internet port, or via HTTP using XML-encoded requests and an HTTP "cookie" to maintain state across a client session.
+* OGC's Web Registry Server informal Discussion Paper (OGC Doc.
+01-024r1) sketches a Web-oriented stateless catalog interface.
+As for metadata encoding, XML is generally the preferred option; several standards provide document structures (DTDs): * ISO's Metadata draft standard, Annex F (ISO 19115 / DIS: 2001-04; FDIS: 2001-11; IS: 2002-01) provides a DTD for dataset metadata, auto-generated from a UML model.
+* FGDC provides an earlier, simple DTD that conforms to its Content Standard (see below), also for dataset metadata.
+* OGC's Web Registry Server informal Discussion Paper (OGC Doc.
+01-024r1) proposes an XML DTD for service metadata elements applicable to OGC's Web Map Service, Web Feature Service, and Web Coverage Service.
+In fact, metadata collections with other data structures can still support interoperable catalog searching.
+By mapping their internal data fields to those of Z39.50's GEO profile, a variety of metadata collections can support FGDC Clearinghouse queries.
+Similarly, an earlier Z39.50 profile, the Catalog Interoperability Protocol (CIP), supports Committee on Earth Observing Satellites (CEOS) queries across many different metadata collections.
+CIP is currently being aligned with the GEO profile.
+Abstract models
+OGC's Abstract Specification, Topic 13 ( Catalog Services) defines the generic elements that let applications search and retrieve metadata about geospatial information.
+Metadata content is the subject of two (converging) documents: * The Content Standard for Digital Geospatial Metadata from the US Federal Geographic Data Committee (FGDC) defines the content (but not the encoding or presentation) of metadata describing geospatial data.
+ISO is reviewing this standard for adoption (see below); FGDC will adopt the ISO standard when it becomes final.
+* Step-by-step tutorials for FGDC metadata preparation are available online from the National States Geographic Information Council (NSGIC) and the Wisconsin Land Information Clearinghouse (WISCLINC).
+* ISO's draft standard on Metadata (ISO 19115 / DIS: 2001-04; FDIS: 2001-11; IS: 2002-01) provides a UML model of metadata, based on the FGDC's Content Standard (see above).
+Although most metadata content to date describes data, "service metadata" (describing geospatial server capabilities rather than data) are becoming increasingly important as more network-based services become available.
+* ISO's draft standard on Services (ISO 19119 - Annex C) sketches generic service metadata elements.
+3.
+Maps 
+Rendering geographic information as visually meaningful maps is what makes the data "come alive" to users.
+Table 5 lists the standards that apply to interoperable mapping and visualization.
+Service Invocation
+Information Transfer
+Implementation specifications
+Interface:
+OGC Web Map Service I.S.
+ISO 19128 (Web Map Service)
+Encoding:
+GeoTIFF, SVG, PNG, JPEG
+OGC Styled Layer Descriptor
+Abstract models
+Behavior:
+OGC Doc.
+98-060 (User interaction with geospatial data)
+OGC Doc.
+98-061 (Essential model of interactive portrayal)
+Content:
+ISO CD 19117, Portrayal
+Table 5.
+Maps and visualization
+Implementation specifications
+OGC's Web Map Service is the primary specification for requesting maps and visualization; it details a simple interface for requesting maps via the World Wide Web. Its "GetMap" requests are preceded by a "GetCapabilities" request to ascertain a server's available "layers" of mappable information, and its rendering and processing abilities.
+* Step-by-step tutorials for setting up an OGC Web Map Server are available from NASA's ESIP Federation and International Interfaces, Inc.
+* The OGC Web Mapping Service specification is currently under ISO review (Doc.
+19128).
+Because maps are pictures rather than complex data, they require no special encoding schemes; instead they employ conventional raster formats such as Portable Network Graphics (PNG) , Joint Photographic Experts' Group's (JPEG/JFIF), Tagged Image File Format (TIFF), or GeoTIFF, or vector formats such as Scalable Vector Graphics (SVG).
+OGC's Styled Layer Descriptor informal Discussion Paper sketches an XML expression of portrayal rules that tell an OGC Web Map Server how to render its layers or those of an OGC Web Feature Server.
+Abstract models
+Despite the widespread use of maps and visualization, there has been only limited formal definition of it.
+* ISO's Portrayal draft standard (ISO 19117 / DIS: 2001-06; FDIS: 2002-01; IS: 2002-03) defines rules for portraying geospatial features.
+* OGC's two internal working documents on User interaction with geospatial data (Doc.
+98-060) and interactive portrayal (Doc.
+98-061) sketch the generic services involved.
+OGC's Web Map Service implementation specification, listed above, summarizes the chief concepts in these papers.
+4.
+Coordinate Reference Systems
+Coordinate reference systems -- which associate numbers with locations on the earth -- underlie most geospatial data transfers and service invocations.
+Table 6 describes the standards that guide the choice and expression of coordinate reference systems.
+Implementation specifications
+Encoding:
+EPSG database 
+OGC WKT (in Coord.
+Transform I.S.)
+OGC SRS Encoding in XML
+Abstract models
+Content:
+ISO DIS 19111 (Spatial Referencing by Coordinates)
+OGC's Topic 2 (Spatial Reference Systems)
+Table 6.
+Coordinate Reference Systems
+Implementation Specifications
+* The European Petroleum Survey Group (EPSG) has a database that lists coordinate reference system parameters in use around the world (datums, ellipsoids, meridians, units of measure, etc.) and assembles them into commonly-used "bundles", each with a unique 5-digit ID, that comprise full-fledged coordinate reference systems (e.g., "WGS84 UTM Zone 18N meters").
+Although not a complete set (intended only for petrochemical * A "supported" set of datums, ellipsoids, units of measure, projections, and projection parameters appears in OGC's Simple Features Access specifications for OLE/COM and SQL (Section 4).
+* OGC's Well-Known Text (WKT) encoding of coordinate reference systems, based on the EPSG tables, is detailed in the new Coordinate Transformation Services implementation specification (Section 7).
+This document also sketches (in Appendix C) an XML encoding of the WKT parameters.
+* OGC is now undertaking a more comprehensive XML encoding of coordinate reference parameters.
+OGC's Web-Mapping Service and its Geography Markup Language use EPSG's "parameter bundles," and their numeric IDs, to request maps and to encode features.
+The Web Map Service extends EPSG with orthographic projections.
+Abstract models
+* ISO's draft standard on Spatial Referencing by Coordinates (ISO 19111 / DIS) lays out geodetic concepts (primarily datum and ellipsoid) that underlie earth-based coordinate systems, and transformations between coordinate systems.
+* OGC's Abstract Specification, Topic 2 ( Spatial Reference Systems) provides a taxonomy of coordinate reference systems (2-D Ellipsoidal, 3-D Cartesian/Geocentric, Polar/Spherical, 2-D Projected/Planar, Linear Vertical, or compounds of these such as Ellipsoidal/Vertical), along with principles of geodetic transformations and positional accuracy.
+5.
+Geoprocessing services
+Maps and visualization are a special case (perhaps the most important case) of geoprocessing services.
+Such services may operate on a variety of datatypes: features, coverages, metadata, maps -- even simple text.
+Table 7 summarizes the standards that provide an architecture and taxonomy for these services.
+Implementation specifications
+Interface:
+OGC Basic Services Model DCIS
+WSDL, UDDI
+Abstract models
+Behavior:
+ISO DIS 19119 (Services)
+Table 7.
+Services Architecture
+Implementation Specifications
+Implementation specifications for geoprocessing services are still works-in-progress at this time: * OGC's Web Registry Server informal Discussion Paper sketches an XML DTD for services metadata; * OGC's Basic Services Model informal Discussion Paper gathers the common elements of OGS's Web Services interfaces (Web Map Service, Web Feature Service, and the forthcoming Web Coverage Service).
+Other, more generic specifications for Web-based services may prove useful in the geospatial context: * The Simple Object Access Protocol (SOAP) is an XML-based meta-syntax for invoking services in an HTTP context.
+* The Universal Description, Discovery, and Integration (UDDI) specifications build on SOAP to publish and discover information about Web services in a B2B context.
+* The Web Services Description Language (WSDL) defines abstract services (messages and port types) and binds them to specific network addresses and protocols such as SOAP or HTTP.
+Abstract models
+ISO and OGC are converging on a single generic model of geospatial services: ISO's draft standard on Services ( ISO CD 19119 / DIS 07-2001; FDIS: 2002-02; IS: 2002-04) is being adopted as OGC's Abstract Specification, Topic 12 (Services Architecture).
+This document groups services into five categories (human interaction, information management, workflow management, geo-processing, and communication), defines service chaining and service metadata, and sketches an XML-compatible data dictionary for service metadata.
+The following sections describe the standards related to specific geoprocessing services, such as coordinate transformation, gazetteers, and others.
+a.
+Coordinate transformation
+Given the variety of coordinate reference systems in use, coordinate transformation is one of the most commonly-needed geoprocessing operations.
+These transformations may be exact (using closed-form or iterative computations), or approximate (using error-minimizations, as in the case of a datum change).
+Service Invocation
+Implementation specifications
+Interface:
+OGC Coord.
+Transf.
+I.S. (COM, CORBA, Java)
+Abstract models
+Behavior
+ISO DIS 19111 (Spatial Referencing by Coordinates)
+OGC's Topic 2 (Spatial Reference Systems)
+Table 8.
+Coordinate Transformation
+Implementation Specification
+OGC's new Coordinate Transformation Services implementation specification provides a generic object model for coordinate systems and transformations, with 3 concrete profiles: COM MIDL files, CORBA IDL files, and Java source sode.
+Abstract model
+ISO's draft standard on Spatial Referencing by Coordinates and OGC's Abstract Specification on Spatial Reference Systems, both mentioned earlier, provide geodetic definitions and principles behind coordinate transformations.
+b. Gazetteer
+Gazetteers provide access to geospatial data indexed by place names rather than by coordinate locations.
+Table 9 summarizes standards related to gazetteer services.
+Service Invocation
+Implementation specifications
+Interface:
+OGC Gazetteer Service DCIS
+OGC Geoparser Service DCIS
+OGC Geocoder Service DCIS
+Abstract models
+Behavior
+ISO 19112 (Spatial Referencing by Geographic Identifiers)
+Table 9.
+Gazetteers
+Implementation Specifications
+OGC's Gazetteer Service informal Discussion Paper proposes a gazetteer modeled after the Web Map / Web Feature Service, in terms consistent with ISO's abstract model for Geographic Identifiers (see below).
+However, rather than assume geographic identifiers as its input, it accepts informal place names and lets clients choose among all the corresponding geographic identifiers.
+OGC's informal Discussion Papers on Geoparser and Geocoder services define additional Web-based services that use a Gazetteer service to identify place names in documents, and to tie them to features representing their geographic locations.
+Abstract model
+ISO's draft standard on Spatial Referencing by Geographic Identifiers defines the relationship between geographic identifiers (that is, place names that have been qualified enough -- e.g., "Paris, Texas" -- to designate exacrtly one location) and geographic positions, and the corresponding requirements for gazetteers.
+c.
+Other geoprocessing services
+ISO's and OGC's general taxonomies mention a large number of useful geoprocessing services, most of which currently exist only as internal software functions rather than addressable services: spectral classification, feature generalization, etc.
+It is expected that most of these will share a "common trunk" of metadata and interface / behavior, to be defined in the general service model.
+__________________________________________________________________
+References
+Standards bodies
+European Petroleum Survey Group (EPSG) http://www.epsg.org Federal Geographic Data Committee (FGDC) http://www.fgdc.org International Organization for Standardization (ISO) http://www.iso.ch ISO Technical Committee on Geographic Information/Geomatics (TC211) http://www.statkart.no/isotc211 OpenGIS Consortium (OGC) http://www.opengis.org World Wide Web Consortium (W3C) http://www.w3.org
+OpenGIS implementation specifications
+Adopted technology
+Catalog Access http://www.opengis.org/techno/specs/99-051.pdf Coordinate Transformation Services http://www.opengis.org/techno/specs/01-009.pdf i
+Draft candidate technology
+Basic Services Model discussion paper http://www.opengis.org/techno/discussions/01-022r1.pdf Feature Geometry Request For Proposals http://www.opengis.org/techno/rfp12.pdf Gazetteer Service Discussion Paper http://www.opengis.org/techno/discussions/01-036.pdf Geoparser Discussion Paper http://www.opengis.org/techno/discussions/01-035.pdf Geocoder Discussion Paper http://www.opengis.org/techno/discussions/01-026r1.pdf Location Organizer Folder (LOF) Discussion Paper http://www.opengis.org/techno/discussions/01-037.pdf Project Document #98-060 (User interaction with geospatial data) http://feature.opengis.org/members/archive/arch98/98-060.pdf Project Document #98-061 (Interactive Portrayal) http://feature.opengis.org/members/archive/arch98/98-061.pdf Project Document #01-014r3.pdf (XML encoding of coordinate reference parameters) http://feature.opengis.org/members/archive/arch01/01-014r3.pdf Styled Layer Descriptor Discussion Paper http://www.opengis.org/techno/discussions/01-028.pdf Web Coverage Service Discussion Paper http://www.opengis.org/techno/discussions/01-018.pdf Web Feature Service Request For Comments http://www.opengis.org/techno/discussions/01-023.pdf Web Registry Server Discussion Paper http://www.opengis.org/techno/discussions/01-024r1.pdf XML for Image and Map Annotations (XIMA) Discussion Paper http://www.opengis.org/techno/discussions/01-019.pdf
+OpenGIS Abstract specifications
+Topic 0 - Introduction http://www.opengis.org/public/abstract/99-100r1.pdf Topic 1 - Feature Geometry http://www.opengis.org/public/abstract/99-100r1.pdf Topic 2 - Spatial Reference Systems http://www.opengis.org/public/abstract/99-102r1.pdf Topic 5 - Features http://www.opengis.org/public/abstract/99-105r2.pdf Topic 6 - Coverages http://www.opengis.org/public/abstract/99-106.pdf Topic 8 - Feature Relationships http://www.opengis.org/public/abstract/99-108r2.pdf
+ISO abstract models
+ISO 19101 (Reference Model) http://www.statkart.no/isotc211/protdoc/DIS/DIS19101.pdf ISO 19107 (Spatial Schema) http://www.statkart.no/isotc211/protdoc/211n1096/211n1096.pdf ISO 19108 (Temporal Schema) http://www.statkart.no/isotc211/protdoc/DIS/DIS19108.pdf ISO 19111 (Spatial Referencing by Coordinates) http://www.statkart.no/isotc211/protdoc/DIS/DIS19111.pdf ISO 19112 (Spatial Referencing by Geographic Identifiers) http://www.statkart.no/isotc211/protdoc/211n1022/211n1022.pdf ISO 19115 (Metadata) http://www.statkart.no/isotc211/protdoc/211n1024/211n1024.pdf ISO 19117 (Portrayal) http://www.statkart.no/isotc211/protdoc/211n828/211n828.PDF ISO 19119 (Services) http://www.statkart.no/isotc211/protdoc/211n1044/211n1044.pdf ISO 19123 (Schema for Coverage Geometry and Functions) http://www.statkart.no/isotc211/protdoc/211n1038/readme.htm ISO 19125-1 (Simple Features Common Architecture) http://www.statkart.no/isotc211/protdoc/DIS/DIS19125-1.pdf ISO 19128 (Web Mapping) http://www.statkart.no/isotc211/protdoc/211n939/211n939.PDF
+Common encodings
+Coverages
+DTED
+http://www.nima.mil/publications/specs/printed/89020A/89020A_DTED.pdf Earth Science Markup Language http://esml.itsc.uah.edu GeoTIFF http://www.remotesensing.org/geotiff/geotiff.html HDF-EOS http://heineken.gsfc.nasa.gov/ NITF http://www.ismc.nima.mil/ntb/baseline/1999.html XDF http://tarantella.gsfc.nasa.gov/xml/XDF_home.html
+Maps
+GeoTIFF http://www.remotesensing.org/geotiff/geotiff.html Joint Photographic Experts' Group (JPEG/JFIF) http://www.faqs.org/faqs/jpeg-faq/ Portable Network Graphics (PNG) http://www.libpng.org/pub/png/ Scalable Vector Graphics (SVG) http://www.w3.org/Graphics/SVG Tagged Image File Format (TIFF) http://www.libtiff.org
+Metadata and services discovery
+FGDC Metadata standard
+Content Standard for Digital Geospatial Metadata http://www.fgdc.gov/metadata/contstan.html Tutorials on the FGDC Metadata standard http://www.lic.wisc.edu/metadata/metaprim.htm http://badger.state.wi.us/agencies/wlib/sco/metex/ FGDC Metadata DTD http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd
+Z39.50 Catalog access
+Catalog Interoperability Protocol (CIP) http://www.dfd.dlr.de/ftp/pub/CIP_documents/cip2.4/ CIP/GEO alignment http://www.dfd.dlr.de/ftp/pub/CIP_documents/cip_geo_alignment GEO profile http://www.blueangeltech.com/Standards/GeoProfile/geo22.htm Z39.50 http://www.niso.org/z3950.html http://www.loc.gov/z3950/agency/
+Web-based service discovery
+Simple Object Access Protocol (SOAP) http://www.w3.org/TR/SOAP/ Universal Description, Discovery, and Integration (UDDI) http://www.uddi.org Web Services Description Language (WSDL) http://www.w3.org/TR/wsdl
+Other standards
+EPSG Coordinate systems database http://www.ihsenergy.com/epsg/epsg_v51.zip

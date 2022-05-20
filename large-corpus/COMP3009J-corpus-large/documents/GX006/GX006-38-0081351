@@ -1,0 +1,1488 @@
+CIO Council XML Working Group Wednesday, August 20, 2003 Meeting Minutes State Plaza Hotel 2117 E Street, N.W Washington DC 20037 Please send all comments or corrections to these minutes to Glenn Little at glittle@lmi.org.
+Mr. Owen Ambur:
+I think we better get started.
+I've been assured that a projector will show up shortly.
+I'm sure Ken [Sall] will appreciate it.
+I appreciate Ken being here.
+He's here partly as filler, because Bob Haycock can't get here until about 9:30.
+I appreciate Ken coming and giving us his presentation on Scalable Vector Graphics [SVG].
+We usually start with introductions, and we give everyone an opportunity to introduce themselves and tell us a little about their interest in XML.
+I'm Owen Ambur of the [US] Fish and Wildlife Service, and I co-founded this Working Group in 2000.
+[Introductions]
+[Editor's note: The meeting room was not supplied with a working projector.
+The speakers spoke from their slides, but were unable to project them for the audience.
+The speakers tailored their talks accordingly, thus the discussion does not necessarily follow the slide order.]
+Mr. Ambur:: Ken still doesn't have a projector, so I guess he'll give do a little song and dance, and hopefully the projector will show up in time to show us what SVG looks like.
+Ken Sall
+SiloSmashers
+Scalable Vector Graphics
+Slide 1 [Title slide]: As you can't see, the presentation is entitled `Capabilities of Scalable Vector Graphics (SVG).
+I'd like to stick with the presentation, so I'll do all the text-based slides first, then hopefully show you the visual material all at once.
+It's not the way I would have preferred, but it'll do.
+Slide 2 [What is SVG?]: This is not a tutorial on SVG.
+It's just about its capabilities--what you can do, and why it's important
+Mr. Sall: Rick mentioned that XForms [http://www.w3.org/MarkUp/Forms/] and SVG are a good mix because each complements the other.
+[Mr. Sall worked on resolving the no-image issue with the projector.]
+Mr. Ambur: Why don't we go to Bob [Haycock], and get to the projector presentations later? You mentioned voice or speech interface.
+Obviously, that has great implications for accessibility.
+Hopefully we'll get back to Ken's presentation later.
+Ken, I appreciate your taking the time to brief us on SVG.
+Now let's get to Bob Haycock of the FEAPMO [Federal Enterprise Architecture Program Management Office].
+Bob's going to brief us on the status of the Data and Information Reference Model [DRM, http://www.feapmo.gov/feaDrm.asp].
+Mr. Bob Haycock
+FEAPMO
+Data and Information Reference Model
+One thing I've learned in this gig of the last 14 months is, be prepared for anything, I'm thinking, while watching Ken, that one unrecognized skill set is the ability to switch in a presentation seamlessly.
+I'm quite impressed
+I didn't bring a file to put on the overhead,.
+I wasn't sure of the facilities.
+I brought hardcopy.
+Hopefully there'll be enough.
+I'll send Owen the file.
+I can only stay for about half an hour, and I apologize for that.
+First of all, thanks for having me.
+We tried to do this a month ago, but the schedule didn't work out.
+I recognize some faces here from previous meetings.
+I'm Bob Haycock, with the FEAPMO.
+I've met some of you.
+I've been working on the FEA for about 16-17 months.
+We've just about got all the reference models done and out, as you're aware.
+We released the second version of the Business Reference Model [ BRM, http://www.feapmo.gov/feabrm2.asp] a couple months ago, and the first version of the Service Component [http://www.feapmo.gov/feaSrm2.asp]
+We have a 99.99% complete draft of the Performance Reference Model [http://www.feapmo.gov/feaPrm2.asp] in agency hands now.
+It's not published, because it hasn't been approved and signed by the director of OMB.
+What will go out publicly, though, is in agency hands now.
+The last model, the Data and Information Reference Model, is a work in progress now.
+What I'm going to talk about today is where we stand at this point in time.
+It's been a long road.
+We started in January to think about it seriously.
+We put together some offsite meetings to brainstorm through this.
+Brand [Niemann] was there too.
+We had about three of those meetings, and ended up to where we were a month and a half ago.
+We provided that to the AIC [Architecture and Infrastructure Committee of the CIO Council] in June for their review and comment and feedback to us.
+We've since received it, and we're working with the AIC in that process as well.
+The Industry Advisory Council [IAC, http://www.iaconline.org/] has done one white paper on the DRM [http://www.iaconline.org/documents_presentations/2003/030528_IAC_EA_S IG_Information_and_Data_Reference_Model_Body.pdf]
+We're not there yet.
+Today it's a work in progress, showing what the current thinking is now.
+I have about 20 slides.
+I'll skim through a few, and focus on a few.
+I apologize to the phone folks for any inability to track along with my talk.
+Slide 3: Slide 3 shows the FEA.
+I won't go into it.
+I'm sure you've seen it ad nauseum.
+Slide 4: Slide 4 forms the basis for why we're doing this; what's the purpose for a DRM? The situation in the federal government cries out for something like a DRM.
+How do we do that? How do we think about a data architecture across the entire federal government, and make something useful and viable and effective? That's what we've been struggling through.
+Hopefully, we're getting there.
+The primary issues and barriers are:
+1.
+No common framework to describe data and information across multiple agencies.
+The purpose of the DRM is data sharing across lines of business, the lines being major functional categories that encompass many agencies.
+2.
+There's no definition for the handshake, or partnering of information exchange and sharing.
+How do we set that up?
+3.
+The next one is, that diffused content is very difficult to manage, get one's arms around.
+4.
+Information is not classified well.
+If there's a bottom-line objective for the DRM, it's to describe the information in a consistent way that can be used across multiple agencies.
+5.
+Without a common reference, data is easier to duplicate than integrate.
+That's one issue that Mark Forman [OMB Associate Director for E-Government] had; we create too much duplication, because there's no place to find out what's out there, so we create it again and again.
+That's why the ability to interoperate and share is the key.
+That's where we started with this.
+The result of that is pictorially laid out in Slide 5.
+Slide 5: While there's some data-sharing going on (and there is in specific functions, either between federal or star agencies), at a working level, people find a way around it.
+They always have.
+It exacerbates the problem of needing an efficient way to get at this, so that people can just get the data and focus on the systems they're developing.
+Slide 6: This is where we're at now.
+It's different from what we showed at the agency briefing in June.
+We're still thinking through this construct.
+The changes we made in the model are the direct result of feedback from agencies in the June briefing.
+The contributions were excellent.
+There were thoughtful things that people submitted.
+Essentially, we've organized the DRM into two major categories: one is the description, and one is the data itself.
+One puts the business context on the data, so then you can call it (our term) an "information package," associated with a business process or activity.
+That's the link we didn't have before.
+The DRM provides:
+1.
+A framework for vertical and horizontal information sharing,
+2.
+A framework that lets agencies build and integrate systems that leverage data from within or outside the agency domain, and
+3.
+A framework that allows sharing opportunities for better decisions.
+Mr. Sall: Data Super-Type [from slide].
+What is that?
+Mr. Haycock: I'll get into it in a little bit--in two or three slides.
+Slide 7: I think we're finally at the point where we can understand how the DRM integrates with the other four reference models; how they work together.
+Let me mention a couple other items to give you a sense of what we're thinking.
+What's going on is, we also initiated, through the AIC of the CIO Council, an initiative to look at bringing down the granularity of the BRM to lower levels.
+If you're familiar with the BRM, it's pretty broad.
+It's talking about things like National Defense or law enforcement.
+Sub-functions are more granular, but still broad.
+It's difficult to do anything other than bucket things.
+It's good for OMB, but it doesn't tell us whether people have the same process.
+At that level, we get into arguments about "my process is different."
+We know nothing unless we get to a lower level of granularity, so we need to think about how to approach it across the federal government.
+We're looking at coming up with another "model" for the attributes used to describe processes at different levels, down to an IDEF {Intermediate Data Exchange Format] Level 0 process.
+Start to define those processes in similar ways, and compare the process.
+Hopefully we'll begin to tie data and information packages to those processes and places in the process.
+We're trying to put meat on the bones a little.
+The second piece is a security profile for the FEA: how should we think about security for those five models? It tracks closely to those business processes: what are the risks with those activities? Then you can judge the risk and security needs at that point.
+You can look at the vulnerability of the data, and identify your security mechanism across the models, the security patterns for different businesses in the process.
+That's the direction we're going in.
+Let's turn to Slide 8.
+Slide 8: This is the framework.
+We need a different name.
+If you know one or can think of one...that's why the security profile is called a profile.
+Right now, we're calling it the DRM Framework.
+Essentially, it's the structure of the DRM.
+As Brand remembers, we debated this a whole bunch.
+We decided that the main thing is to describe data in a standard, consistent way.
+That's the bottom line.
+It's based primarily on [International Standards Organization] ISO 11179.
+We also played with ebXML [Electronic Business using eXtensible Markup Language, http://www.ebxml.org/].
+We want to describe it in a consistent way across the federal government at a certain level (not necessarily at the data element level), then put business context around it--what happens at the top, like "Subject Area" and Super-Type.
+The subject in this case is public health.
+It's based on that.
+We can put context on those packages that we can put together in the business exchange.
+We can put a process together of what goes into it, then we can have a consistent process, relate it to the business process, and we can move forward.
+So that's the bottom line, where we're at right now.
+This is the key slide.
+Everything flows from that.
+Mr. James Feagans: We've gotten through putting together an Enterprise Architecture plan.
+We're right in synch with this.
+As a matter of fact, as I was saying to Owen this morning, the "train is leaving" October 1.
+We're perfect with this.
+We really need to do that.
+Mr. Haycock: We're right there, right now.
+Mr. Feagans: We're using the FEA, so we're right there.
+Mr. Arie Brish: The time element of the data--one agency may change something, and another agency might need something from the first.
+There might be some time delay between the change and the usage.
+Is there something in the model that relates to it?
+Mr. Haycock: Not in the model, but in the implementation of the model.
+That's the key issue.
+How do you govern it?
+Unknown participant: There has to be a steward, a...
+Mr. Haycock: That's the hard part.
+The IAC paper on the DRM (I don't see Michael Lang here), that's what he's getting into--how do you govern around a federated process?
+Mr. Brand Niemann: In the pilot, we did differentiated between design time and run time.
+What you do at a moment, and what you do at run time.
+The metamatrix and the XML Collaborator [http://www.blueoxide.com/Pages/xmlcollaborator.html] added to what Michael had done with the XML schema, not only for integrating, but for exchanging data in a real world situation.
+Mr. Haycock: Brand's been out front.
+I think we're beginning to catch up, where we have a model, and we're going to pilot it over time.
+I would not think we're going to go out to agencies in the 2006 process and say, "Give us all your data."
+Mr. Feagans: We're approaching it with a revolutionary process.
+We use COPs [Communities of Practice] for the department to begin with.
+Mr. Haycock: I talk about it in here.
+We have a conceptual approach.
+We begin with COPs.
+One of the lines of business that fell out of last year's budget process is health.
+Martha Chapman of HHS [Department of Health and Human Services, http://www.hhs.gov/] is working on it.
+I have four or five here that we can work with.
+Mr. Ambur: You commented that people's eyes are glazing over but, to the contrary, I think you're making good connections here.
+People are with you.
+Mr. Haycock: My head was spinning at first, but it's starting to clear.
+We had a lot of heads in this.
+Slide 9: This talks about the Community of Practice approach--how we're attacking this.
+We want to work off of the good work of others, leverage as much as we can.
+We've had a lot of others' thinking in here.
+Slide 11: We touched on that [DRM Implementation Strategy].
+I won't get into it.
+We hope to have something that begins to intersect data across multiple agencies for specific business aspects, to put metrics on it, performance service aspects.
+Mr. Ambur: Your 12^th slide depicts boxes delineating portions of the DRM attributable to HHS, USDA, DOI and DOE, with overlaps among them.
+I think of the boxes as being XML schema for each agency, with the overlaps depicting data elements that are common across more than one agency.
+Mr. Haycock: I think I'll leave it there in your hands...leave it as how we get to the interaction layer and schema.
+We're going to run out of time here.
+We can talk about next steps here.
+I'll talk a little about Slide 17.
+Slide 17: We talked about problems, issues and challenges.
+Slide 17 talks about the benefits of the approach, good stuff.
+We've been working on the release document for this model.
+The goal is to release it in draft form by October 6.
+We're driving to that date right now.
+We may have even three documents, or two (with one having two parts).
+First would be the model.
+Second would be how you use it.
+We're talking from a business standpoint, not from a technical standpoint.
+For the business owner or program manager, what's in for them, what they get out of it.
+We're thinking of the same package for the other four reference models also.
+If I'm an Assistant Secretary [of a federal Department], and government-wide we're putting a billion dollars into the FEA, what do I get out of it? So it's the business benefits and technical benefits.
+Clearly there are technical benefits.
+Everyone knows that, but there are a lot of business benefits also.
+One is, it's difficult (if not impossible) to secure data if you don't know where it is.
+If it's all over government, you might not know where all of it [a complete set] is.
+If we can manage it in a consistent way, then we can start the security on it.
+I think that's a major benefit.
+It supports electronic interoperability of information.
+When you get in the development world, you have all these interfaces.
+You're trying to move data, and you have to find out what's changing everywhere else.
+Hopefully this will facilitate that, so we don't end up with a lot of XML schema.
+It provides clear data ownership and stewardship...Who's responsible for managing and maintaining it? It'll make sure it's up to date.
+Mr. Ambur: You used the word "stewardship" and I want to comment favorably on the use of that term.
+One of my pet peeves is the misuse of the word "ownership."
+When we're talking about federal resources, the owners are the taxpayers.
+By contrast, when bureaucrats think they own something, they don't seem to feel the need to consult with or listen to anyone else.
+Thus, I strongly encourage the word "stewardship" - since it more accurately reflects the fact that we, the people of government, are merely temporarily entrusted with problems and opportunities on behalf of "We the People of the United States of America."
+Mr. Haycock: I agree.
+I'm a federal and state steward.
+Mr. Ambur: We're only here a short time.
+We're stewards of the citizens' trust.
+Mr. Haycock: Then the technical benefits are: a common vocabulary and data standardization, and it facilitates the use of electronic registries and repositories.
+We have to have them at some time.
+I was hoping that Marion [Royal] was here.
+We've been talking about bringing together all the registries; essentially have a one-registry concept, probably a federation of registries in consistent way to manage.
+Mr. Ambur: Regarding registries, Marion gave me some bad news recently.
+He said Congress cut funding for the XML registry from GSA's budget.
+Mr. Haycock: Just the House [U.S. House of Representatives].
+Mr. Lew Sanford: We're working to get it restored.
+Mr. Ambur: I'm pleased to hear that.
+Mr. Haycock: The last slides talk about people we've been working with over the last seven or eight months, and talk about the next steps in the process.
+By this Friday, we are finalizing revisions in the slide deck we presented to agencies in June.
+We'll put that back out to the AIC committees for another look.
+We're working on a subject area analysis.
+We've requested agencies, through the AIC, to provide us with the major subject areas in their agencies.
+In the week of September 5, we'll finalize the release documents, release them to agencies for their review, and probably have another "all hands" briefing at the White House Conference Center.
+Actually, we'll probably have another on October 5.
+We're looking to release the first version by early October.
+Probably in the same time frame, we'll talk to agencies about pilot efforts, and say, "Do them between January and February of next year."
+Mr. Mike Lubash: Have you ever considered the use of the term "concept" for the steward? I argue that "concept" is something people can agree to when I try to mediate standards.
+You can plug in a mediation routine that allows you to plug-and-play the standards, so you can mediate irrespective of the standards.
+Mr. Haycock: I absolutely would consider it.
+I encourage you to contact me.
+That is an issue: where do you stop? Clearly, we won't get down to the data level.
+We need to reconcile that at some level.
+We need to determine where.
+Mr. Ambur: I wouldn't suggest that it is exactly what we need in this context, but there's a precursor to the subject area analysis of the DRM.
+The government Blue Pages are supposed to provide an overview of all of the functions of government, in terms that are commonly understood by the public.
+Since the focus of the Blue Pages is the local, printed telephone directories, it may not be as comprehensive as it should be in the context of an online directory of all of the functions of government.
+However, with respect to the potential to share data and the need to avoid reinventing the wheel, the list of functions identified in the Blue Pages should be considered for reuise as the DRM is being specified.
+Mr. Brish: Is industry participating through the Industry Advisory Council?
+Mr. Haycock: The CIO Council has a good relationship with them.
+They've turned out lot of good work working with and through the CIO Council's Architecture and Infrastructure Committee (AIC).
+The IAC is helping on governance component, architecture, and emerging technology.
+At this point, it's a very productive relationship.
+And that's about it.
+Thank you for having me.
+Mr. Ambur: Thank you, Bob.
+We're a little ahead of schedule.
+Let's take a look at where we're at with the projector.
+[inquiries as to working projector]
+The projector is still not projecting, so let's go ahead and take a break.
+Break
+Mr. Ambur: I might mention again that there's an attendance roster circulating.
+It's on the table in front of Arie.
+Arie, if you would hold it up? If you haven't already signed in and would like your presence noted, either initial it or add you name to the list.
+I think we had a few people who came in after we introduced ourselves this morning, so if you'd like to introduce yourself and indicate your interest in XML, now would be an appropriate time.
+[Introductions]
+Our next speakers are Susie Adams and Carolyn Brubaker from Microsoft.
+They're here not in a Microsoft capacity, but as advisors to OMB on the OMB Exhibit 300, which used to be the Capital Asset Plan and Budget Justifiation but is now known at the Capital Asset Plan and Business Case.
+It is the document all agencies are required to submit in the budget process to get funding for any capital investment included in the President's budget request.
+So it's a very important document.
+Last month, we had a presentation on [OMB] Exhibit 53, which is a subset of the Exhibit 300 data focusin solely on major IT investments (as opposed to other kinds of capital investments made by federal agencies).
+Exhibit 300 is related to the FEA, in the sense that all IT investments should be consistent with the FEA.
+So those are the linkages, and when I think about linkages, I think about the potentials of XPath, XPointer, XLink, and related XML standards.
+Susie Adams 
+Microsoft
+Revised/Updated XML Schema for [OMB] Exhibit 300
+XFDL Overview
+Ms. Brubaker: I'm going to talk about the business need and how we got into the program, and Susie will talk about the technical detail of the schema.
+We were approached by OMB.
+They had a business need to collect all the data for the IT process from the OMB 300 for submission in XML format.
+For Fiscal Year `05 planning, they wanted it all in XML format.
+Some agencies are not doing that, and some Departments have not been doing it, so there was a flurry of activity in finding out how to do it.
+They asked us to come up with a technology that could collect, organize, and disseminate data in XML format.
+Susie will talk about why she chose what she chose.
+We did a survey and an assessment.
+We worked closely with OMB staff to come up with the right, simple solution.
+It's been a learning process because of the short time.
+We created a document, or solution, that will be posted to a website today, for small and midsized agencies to use.
+That's the history.
+The key thing is that there was a defined business need, and we worked closely with OMB to make sure the business processes were covered, on a tight timeline.
+Mr. Niemann: What will be posted? The schema, or document, or what?
+Ms. Adams: I'll talk about that.
+I'll go back to the history, and last year, because there are a lot of things involved.
+Ms. Brubaker: I don't want this to be a Microsoft thing, but I'm with the EGov group within Microsoft Federal.
+We're trying to look broadly across government and the EGov initiatives and reusing technology, and trying to identify how Microsoft solutions can complement the initiatives and the FEA.
+Just tracking, staying knowledgeable, communicating out the word.
+Mr. Ambur: As I said, they're here in a role supporting OMB, but on September 29, Betty Harvey of the DC Area XML User's Group [http://www.eccnet.com/xmlug/] and I are coordinating an XML authoring/editing tool forum.
+The purpose of that event is to give vendors an opportunity to show users - particularly government folks and Betty's stakeholders - how they are making it as easy as possible to author and edit valid XML instance documents.
+That would be appropriate for forum in which for Microsoft to demonstrate its XML authoring/editing software and the Exhibit 300 would be a good to document to use in such a presentation.
+Mr. Niemann: The Intelligence Community Metadata Working Group [http://www.xml.saic.com/icml/] is embarking on a year-long effort to do that.
+They're going to produce a lab test and some kind of report.
+They're working on the Harris Watch List schema.
+I'll provide it to you as suggested content for September 29, to position that and move on with this other activity, so I'll post some information on that and encourage these other vendors to participate.
+Ms. Adams: A little history: last year we were working with OMB, in a pro bono type of effort.
+They came to us early-on in the process, and said they'd like to automate submission of the OMB 300 and 53 process.
+They didn't know whether they wanted XML, so we sat down with them and white-boarded, and said they should put it in XML.
+They tried to make a schema, to replicate the data in a schema.
+They hired Booz to help them implement.
+Working with folks like Marion, we stopped and went down the XBRL [eXtensible Business Reporting Language, http://www.xbrl.org/] path, because the thought was that XBRL was a good grammar to replicate.
+We ran into several speed bumps at the end, because XBRL is not the most appropriate grammar for the data we were trying to collect.
+Mr. Lubash: Is this document anywhere? Because it's an issue that's growing: should we use base XML or XBRL, because is there a marketing effort taking place? We want to make an educated decision.
+Ms. Adams: We don't care.
+If it's valid, that's all we want.
+We're not trying to get into the grammar space.
+We actively support the standards, so we can build products that support either.
+We use XBRL, but do we recommend it? Not really.
+Unknown participant: XBRL serves an important niche.
+For repurposing, it's probably a good choice, but if you're the creator and it has to be embedded in your applications, it's not necessarily a good choice.
+Mr. Sylvestri: Can we have part of this for the September 29 meeting?
+Mr. Ambur: It's wide open.
+Ms. Adams: We looked at it fairly late, and in one day we had to create a schema.
+It's difficult, because only ITIPS [Information Technology Investment Portfolio System, http://www.usace.army.mil/itips/] folks are going to be able to submit.
+So we're working with Booz to construct and submit, then parse and get it into a database.
+Prior to this, there were truckloads of paper, with people sitting and keying it in.
+Was the first one reusable? Pretty? Did it have data types? No, but it was good for the first effort.
+To OMB, it was light years better than anything they'd seen, and to agencies, to let them accept and put it into the database, the time saved on their end was huge from prior years.
+They came back to us this year late in the game (there was no kick-off meeting until late June), to construct the schema.
+We ran into a number of roadblocks.
+We had some assumptions.
+By September 8, their back-end systems had to be able to process and accept this data, so we had a real-world business problem to solve, but we also wanted to improve the schema.
+So the assumptions we made were:
+Ã¯Â¿Â½ Valid XSD,
+Ã¯Â¿Â½ Make some modifications, and clean up the schema without reinventing the wheel, and
+Ã¯Â¿Â½ Put data types in there as best we could, and put some constraints in there--make it more restrictive.
+Before, we had no valid data types.
+It also didn't support HTML in the last version, so people were cutting from Word documents and putting it into HTML.
+It's the same this year.
+We focused on cleaning it up from last year, and keeping it simple, because not every agency has an XML guru.
+We're getting calls from almost every agency on how to get their documents into XML.
+The second approach was, we used InfoPath [http://www.microsoft.com/office/preview/infopath/default.asp] to put a free tool out there mainly to make our job easy, because if it's not there, we and OMB are not going to get valid XML, so that's the main reason why we put it out there.
+So if you're in a bind, you can use it, because you know it generates valid information.
+The [OMB Circular, http://www.whitehouse.gov/omb/circulars/a11/03toc.html] A-11 guide and the related guidance are not ready.
+We had some people helping us with that.
+Unknown participant: How many data elements?
+Ms. Adams: I don't know.
+Mr. Sall: At least 389.
+Ms. Adams: If you look at the A-11 guidance, it's not always clear.
+Lots of folks can construct valid documents based on many of these standards, but you have to merge that with what OMB wants to see.
+They don't understand XML or data types.
+They're used to Corel.
+What do you do? Give a "string?" If the string is 500 elements, it blows up.
+It's very complicated.
+We took a lot of issues.
+OMB gave us time, but it takes a lot of time to make it simple enough to be usable if you're not an XML guru.
+I have my bullet-proof vest on today, because the schema has changed multiple times.
+OPM [Office of Personnel Management] looked at it through their information platform.
+Booz Allen has had the schema for a month now.
+The problem is, there's no data, because the guidance won't be finished until the end.
+They're just beginning to go through this process, and again, not being a subject matter expert, and OMB not being XML experts, it's hard to find every single issue.
+We've found some.
+Ken Sall found some.
+Others are more about style.
+Should the OMB schema conform to the [IAC] white paper, and the Developer's Guide published by the XML Working Group? In a perfect world, yes.
+Our goal was to put some restrictions on it, and given the time and our task, we have to help these agencies get the data to them.
+We don't anticipate it to be easy.
+Our job is to make it as simple as possible.
+I'd love to get the schema out to everyone in this room and talk about it for months.
+We're going to recommend that to OMB, but in the current process, as-is today, it's frustrating, because we can't get everyone involved.
+As Bob [Haycock] said, it's still evolving.
+Everyone has great ideas, but when we have to have a working system by September 8, we have to say, "This is where we go" and move forward.
+That's why it's the way it is today.
+We have to start and go ahead, and let it evolve.
+Mr. Sall: The InfoPath tool--it's good news, but I'm wondering whether people have to have Office 2003 to use it?
+Ms. Adams: As it stands today, the beta version of Office is freely available on the Web.
+Do you have to install InfoPath? Yes, but you can install it separately.
+Mr. Sall: So agencies will be allowed to use InfoPath software?
+Ms. Adams: It's officially shipped in October.
+Mr. Sall: You said September 8th is the initial submission date.
+The timing is a little off.
+Ms. Adams: That's the current state of where everything is.
+We're diligently working with OMB to finalize the schema.
+I apologize, but it's not yet final.
+We're still working, and we hope to have some something by about the end of the week
+Mr. Rogers: Could you talk about lessons learned on your integrating a new XML stream into an existing legacy system?
+Ms. Adams: Our existing system from last year was a server page, but because the database was outdated, we had to rebuild it this year.
+The format and the way the relationships were represented prior to now has changed so much that we decided to go with a new structure.
+It's more elegant than last year's.
+It's not complicated, because there are only 360 data elements.
+It doesn't take much time for developers to get them into their database or architect the database.
+I wouldn't call it a business process.
+They're scoring, but they won't let us go there yet.
+Right now, we're focusing on the data analytics of it.
+We want the data in the right format, so we can slice and dice it without needing a developer to run the queries.
+We're trying to throw it into a multi-dimensional database, to be able to look at the information.
+They get the information, slice and dice it, and present it to Congress.
+Our job is to help them do that.
+Next year, we hope the changes will not be as radical; we hope to map from the new to the old schema, and have the data go in.
+We have a product on the back end called BizTalk Server [http://www.microsoft.com/biztalk/] that lets us do that, so we can take the XSLT and map it to last year's.
+We didn't do it this year, because the data need to be scrubbed.
+Mr. Ambur: I think the data changes won't be as radical from year to year in the future, but there will always be changes to the guidance.
+That will entail changes to the database, so we need to make the system readily supportive of change.
+Ms. Adams: Everyone thinks XML is the silver bullet.
+We set it up to receive any XML document and hopefully map it, and look at information from the State to the federal government.
+The federal government says, "You have to give us the data `somehow.'
+With the Department of Education, we got flat form files and all kinds of formats.
+So the idea is, you define the schema and allow people to map to it.
+Whatever schema you want to base your exchange on.
+You'll never get everyone to exchange the same way.
+If you allow them to choose, you get more data.
+If you demand one way, you make it harder for them.
+We're probably light years away from one format, because it would have to be a mandate.
+In the real world, you need the production system today, and you get as much data as possible.
+Unknown participant: Can you talk about data sharing? The IRS is in the process of developing schemas for tax returns as mandated by Congress.
+A committee under [ANSI, American National Standards Institute Accredited Standards Committee, http://www.x12.org/x12org/index.cfm] X12 made up of revenue partners from States and others can negotiate schemas, because States need the data from the IRS, and they need to send them to the IRS, so they're negotiating what's done, so the IRS can use what's done by the States, and developers have a common schema to work from to provide for the taxpayers.
+Ms. Adams: That's great, but it's hard to get everyone to use it.
+If you can mandate it, great, but the federal government can't mandate to States.
+Mr. Ambur: What we should be aiming for is a good forum for that negotiation to take place to achieve the required degrees of consensus.
+Unknown participant: The Tigris Committee [http://www.tigris.org/] is meeting on that next month.
+Sometimes the IRS accommodates it, and some times not, but it's worked out.
+Mr. Kevin Williams: Something you're saying brought something to mind: with respect to XML registries, the idea of one place for everything is sci-fi stuff, but there are smaller Communities of Interest (COIs) for exchange.
+Over time, they will roll up to be more centralized, but it needs to be more centralized.
+The thinking is right, but as Bob said, it needs governance.
+The main point is, you mentioned earlier how it'll accept the data.
+Are you planning on moving to a Web Services interface, or a SOAP [Simple Object Access Protocol, http://www.w3.org/TR/soap12-part1/] interface...
+Ms. Adams: We'd love to.
+We tried last year to get Web Services implemented.
+It's not a technical problem; it's already constructed.
+The problem is hosting it.
+Theoretically, the technology is in front of the policy right now in most agencies.
+If you ask them to put it on an outward-facing server, whether it's Apache (it doesn't have to be Microsoft--there are Sun servers) in most situations, you can construct Web Services inside the firewall, but as soon as you want to go outside and pass information inside, it's not supported.
+It's a huge policy issue.
+Mr. Williams: It boggles my mind that you can send it as an email attachment, but not as Web Services.
+Ms. Adams: We'd love to stand up Web Services, but folks are not ready to get there.
+In fact, we have to pull the data.
+There are a lot of reasons independent of the platform.
+We were working to create an Apache platform, but we couldn't do it.
+Mr. Williams: Is it the security aspects?
+Ms. Adams: It's more a policy thing.
+There are ways to do it.
+It's just a matter of educating folks out there.
+Unknown participant: Another issue is the metadata in there.
+You should have a security application associated with each one, so you can't look at it as a single solution.
+It's a pluralistic society.
+We have to come together.
+The way you describe the OMB 300, it always gets trumped by what you need today.
+I believe, as Kevin submitted, the COIs are the first step.
+Ms. Adams: If we had a year to work on it, that would be great, but the problem is guidance.
+It's not complete, there's a short time frame, and we're restricted on what we can do, but I agree.
+Unknown participant: Two years ago we went to OMB...
+Ms. Adams: All kinds of things are missing: documentation on the schema; it goes on and on.
+We can't create the document by ourselves.
+The business centers have to give us the document, which means they have to know why the schema's implemented.
+I think you'll see them hire an XML person who can bridge the gap to make the job easier.
+If you're technical, you tell me the data and I can make it work.
+Unknown participant: I see an imbalance between the maturity of the parts (non-technical and technical parts).
+You can swap out the technical part.
+We should drive to that; a business side and a technical side.
+Ms. Adams: When you try to do things like that, there are all kinds of policy issues that drive it.
+Our technology is way ahead of the steps they can take.
+Mr. Ambur: That relates to one of my questions--whether the technology is enabling the folks at OMB to see the potential to conduct their business in new and better ways.
+Ms. Adams: I think it is.
+They're like any other business.
+They have to see it, and improve when time allows.
+It's a "it worked last year, we'll be fine, keep going" kind of thing.
+You have to set your priorities...unless this is going to break, this other stuff comes down to the end.
+If anyone has comments on the schema, we'd love them, so we can give them to OMB.
+Owen made great comments on their information collection--stuff we should make visible to other folks.
+We do have a system up now: "FEAMS" [FEA Management System, http://feapmo.gov/feams.asp].
+We want to make this information available to people on an as-needed basis.
+We have it now, all in XML.
+Mr. Ambur: Following up on Bob's presentation, it's one thing to tell agencies that all IT investments should align with the FEA, but just saying it doesn't make it happen - no matter how hard agencies may try to comply.
+Having access to the information provided by other agencies in their Exhibit 300 submissions would help facilitate the necessary coordination.
+Ms. Adams: And they're evolving their process.
+Last year, they didn't have it in XML.
+This year they did.
+Mr. Ambur: I'm a great advocate of the bottom-up approach, together with good documentation that is widely and readily shared.
+I hope we can enable folks all across government to readily share their XML schemas so they don't all have to reinvent the process of sharing their data elements.
+That's the sense in which I'm looking at the registry as a tool to facilitate collaboration among communities of practice.
+It's one thing for agencies to put their schemas on their own website and that is certainly better than nothing, but I hope we do better than that.
+Incidentally, in the registry meeting this afternoon, Ken Gill is going to brief us on the Justice Department's global justice information sharing XML registry requirements.
+Anything else, Roy [Morgan]?
+Mr. Roy Morgan: We'll at least talk about the products we have to play with.
+Please come this afternoon, if you'd like to participate.
+Mr. Ambur: There's a link in today's agenda [http://xml.gov/agenda/20030820.htm] for the revised XSD for Exhibit 300.
+Ms. Adams: There will be another one.
+Mr. Ambur: Should I change the link?
+Ms. Adams: It should be the same.
+Mr. Sall: There should be a different version in it, so it should change.
+Ms. Adams: Look for more information in it.
+Mr. Niemann: Can you answer my question as to what forms are available (because they were originally done on a spreadsheet)?
+Ms. Adams: The OMB 53 was.
+The 300 is hard to do on a spreadsheet.
+Last year, people tried to copy into Excel.
+It has limits.
+Mr. Niemann: So it's only in a schema, not in a spreadsheet?
+Ms. Adams: Correct.
+The order maps directly to the A-11, because we couldn't figure out any other way.
+One way was to take the work document and just go right down in the same order for people unfamiliar with XML.
+Mr. Niemann: Was there any attention to the metadata?
+Ms. Adams: No.
+Unknown participant: If you create a vocabulary or a UID, it eliminates the problem of text itself.
+The fact that it's business-friendly means it can be technology-friendly if a UID is attached.
+Ms. Adams: I completely agree.
+We have limited funds and resources to help OMB do it.
+Most folks don't know what the XML document is, or how to create it.
+They have questions like, "Do we need to hire a developer?" and " What's the tool use?" Big agencies, yes, they might hire a developer.
+Small agencies, no.
+Mr. Sall: Where can we get the free tool?
+Ms. Brubaker: It'll be posted to a URL [Universal Resource Locator].
+We should have it by the end of today.
+Mr. Ambur: I'd like to establish a link on the [XML.gov] website.
+Mr. Sall: There's nothing about the schema or process to prevent someone from using a different tool to input the information they need?
+Ms. Adams: Yes.
+Mr. Sall: Providing a forms interface from the GUI [Graphical User Interface]?
+Ms. Adams: Basically like going from Word over.
+The question was, do we have a tool that allows you to enter it in, and go back and forth from Word? Yes, because Office 11 supports mapping to XSD schema.
+We did not create that.
+OMB looked at it briefly.
+All the testing is just agencies looking at it.
+We anticipated needing a tool.
+This was the easiest way.
+They didn't pay us to do this.
+Mr. Sall: The best way to get people outside Microsoft in is by creating a solution to this?
+Ms. Adams: Schema, or solution.
+Mr. Sall: The guidelines...
+Ms. Adams: Convincing OMB that the guidelines are what they want to implement.
+Our hands are tied.
+Mr. Ambur: If you're talking about the guidance in the [Federal XML] Developer's Guide, this group could recommend that they be elevated through the Emerging Technologies Subcommittee [of the AIC]
+EPA and the Department of the Navy are ahead of the government as a whole for their own internal requirements, but their best thinking needs to be rolled up for the benefit of the government as a whole.
+This is a voluntary group, but we could make that recommendation to the ET subcommittee.
+Mr. Sall: My concern is that the FEA is coming out with all these documents.
+The DRM talks about ISO 11179, and other conventions...ebXML, UBL [Universal Business Language, http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl], ways of defining elements.
+I completely understand that you're focused on getting it out and retrofitting later, and the BizTalk Server XSLT, and mapping this year's to next year's, but my fear is that if something is on the FEAPMO site and people from agencies (who aren't familiar with how it's developed)...I'd say it's the old "eating your own dog food," and with international...
+Unknown participant: That's OMB's discussion.
+Ms. Adams: It would be a task on the list of stuff OMB wants us to do.
+It would cost them money.
+They need to be convinced that there's some value.
+Mr. Ambur: Let me reiterate what I said earlier.
+This is a voluntary group.
+We have no authority to tell anyone to do anything, but we can make recommendations.
+GSA [General Services Administration] is also working on it.
+If there's a strong will in this group to elevate it to the governance subcommittee, I could do that.
+Ms. Adams: We can make it simple first, then complex.
+I think people are going to go the simple path at first.
+To have an XSD document, that's pretty complex for those ones who aren't familiar with it.
+This process is huge, so the next one (simple to complex) isn't as hard.
+Mr. Niemann: This is a tip of the iceberg.
+Booz Allen suggested asking us how to address the problem.
+Some agencies are already using advanced tools.
+OMB has a back-end system trying to move to XML, for receiving part of the information agencies have.
+Both groups wanted to go their own way.
+We suggested that they need to work out the protocols between them.
+The EAs [Enterprise Architects] will tell you this has to be a living process, and work throughout the year as part of the planning process, not just September 8.
+We really need interactive Web Services--a living system where people are working both ends--and do pilots.
+The other point is the need for more than a schema.
+We need to move up in the ontology world, like RDF [Rich Data Format], because this is like a collaborative business case, where you discuss it with others who are doing it, and bring about the consolidation that OMB wants, so it takes on another dimension like ontology markup, so people can discuss it with one another.
+Ms. Adams: That's what FEAMS is there for.
+I agree it should be an evolutionary process, and not wait until the end of the year.
+That's tough for them.
+As you know, they're not really done.
+They have a second submission at the beginning of this next year.
+About the June time frame, they'll bring us in again.
+For them, it's great feedback.
+I encourage you to give it.
+Unknown participant: That ontology is the way the business communicates to taxonomies and business patterns.
+That's the part we're missing.
+Those two work in synch.
+The business people have to map the abstractions.
+That's the real power.
+The business communication.
+Not understanding the ontology.
+Ms. Adams: They don't understand the business value.
+Unknown participant: And that's the way they approach the project--short-sighted, immediate goals.
+The business process is the way it's evolved over the last 20 years.
+The XML group should say, "Let's start building these things to level the playing field."
+Mr. Ambur: I'm not sure people will ever understand ontologies, for example, but they can understand results.
+Bob's presentation about the DRM plays into it.
+Ken's comment about eating our own dog food is also noteworthy; OMB should be eating its own dog food with respect to the DRM. Susie's comments that simple wins over complex is also very well taken, and we should move forward every day, in any small ways that we can, rather than expecting the "big bang" to solve all our problems.
+Ms. Adams: It takes time, re-architecting the ways agencies do business.
+"Data" sometimes is a four-letter word, because data have power.
+I don't necessarily want to give you my data.
+People look at Web Services, and say, "No way, I don't want you to see my data," so people have to be comfortable sharing their data.
+Now people email and say, "You can look at it."
+With that, Bob can go look at it.
+Mr. Ambur: It reminds me of another question.
+I understand OMB intends at some point to make the data from agency Exhibit 300 submissions public.
+Is that your understanding?
+Ms. Adams: I think once the FEAMS is done, that's the intent.
+Mr. Niemann: One or two ITIPS records managers will be given access.
+Mr. Ambur: So your understanding is that it's not public yet?
+Mr. Niemann: No, they're still piloting.
+I think the feeling is, if they give one person at each agency access, they can figure out how to share.
+They want to control it so we don't see 300s show up in the press and other places.
+Mr. Ambur: I suspect if the XML instance documents were made available, a number of vendors could show some great stuff.
+Mr. Niemann: At our September conference, we have about 10 vendors who are going to show what they've done.
+There is already an impressive number of ontology applications in the industry itself.
+We can show that it's more than just talk.
+Mr. Ambur: Are there any other questions or comments for Susie and Carolyn? We're a little ahead of schedule.
+There's nothing wrong with adjourning early--I'm sure you can all use the time.
+The ET subcommittee is charged with developing a process where the IT lifecycle can be managed.
+That's a fancy way of saying that the CIOs can't effectively respond to all the vendors who are trying to communicate with them.
+We need a better way to enhance the efficiency and effectiveness of such communications.
+In my view, the end of the ET process is submission and approval of a fully completed Exhibit 300.
+I'm interested in Susie's comments about the order of the elements of the XSD following the order of the elements of the guidance itself.
+In the early stages of the ET process, it may not use exactly the same elements of the 300 Exhibit, but I believe the data gathered in the ET process should map into Exhibit 300, and whenever possible, the data itself should be reused in the A-11 process.
+I'm thinking of using our next meeting, on September 10, to discuss the elements of the XML schema for the first stage of the ET process, with the aim of delivering a strawman schema to the ET subcommittee at its next meeting.
+If there are no other questions or comments, I thank you all.
+End meeting.
+Attendees:
+Last Name
+First Name
+Organization
+Adams
+Susie
+Microsoft
+Altner
+Bruce
+NASA/SAIC
+Ambur
+Owen
+FWS
+Bennett
+Daniel
+Billups
+Prince
+DISA
+Brish
+Arie
+Conformative Systems
+Cox
+Bruce
+USPTO
+Derrick
+John
+Conformative Systems
+Feagans
+James
+DOJ
+Fong
+Elizabeth
+NIST
+Gorman
+Will
+PureEdge
+Hassam
+Amin
+I411
+Haycock
+Bob
+FEAPMO
+Kantor
+Bohdan
+Library of Congress
+Lubash
+Mike
+DFAS
+McKennirey
+Matthew
+Conclusive
+Morgan
+Roy
+NIST
+O'Connell
+Greg
+PureEdge
+Rogers
+Rick
+Fenestra
+Safran
+Sol
+IRS EPMO
+Sall
+Ken
+SiloSmashers
+Sylvestri
+JD
+Corel
+Turnbull
+Susan
+GSA
+Todd
+Vincent
+GSU XMLlegal
+Williams
+Kevin
+BlueOxide
+Yee
+Theresa
+LMI
+Yenchi
+Greg
+VA
+SVG consist of three types of objects: 1.
+SVG shapes (anything defined by a path; straight lines or curves, and geometric shapes.)
+2.
+Text
+3.
+Images.
+Slide 3 [What is SVG? (continued)]:
+So, because it's text-based and XML-based, the SVG can be generated on the fly, from a database or an application.
+It's really powerful.
+When you think about it, it means that GIS [Geographic Information Systems] applications can generate it as they are doing their processing.
+The [Open] GIS Consortium [http://www.opengis.org/]
+Because it's text within SVG, as opposed to XML tags, it's not bitmapped.
+It's searchable, indexable, selectable, copyable, and accessible (which gets at Section 508 considerations [Section 508 of the Rehabilitation Act,
+http://www.access-board.gov/sec508/508standards.htm]).
+It integrates well with server-side technology.
+It can be transformed, translated, styled, and reused.
+By "reused," I mean that you can define it once and reference it in multiple locations.
+Some of the popular features are things like filter effects, alpha masks, and template objects--things that graphics people are familiar with.
+In terms of vendor support, I'll read the list.
+SVG supports: Adobe, BitFlash, Canon, Corel, CSIRO, Ericsson, Hewlett Packard, ILOG, KDDI, Nokia, Openwave, Schema Software, Sharp, Sun Microsystems, Texas Instruments, and Zoomon.
+Missing from that list is two big companies that start with "M," and one that starts with "I".
+Mr. Ambur: I'd like to mention that the folks on the teleconference have an advantage over those of us here in the conference room, because Ken's presentation is available on the [XML.gov] website and they can view it there.
+Mr. Sall:
+Slide 4 [General Vector Graphics Advantages]:
+Let's talk a little about that first group--vector versus bitmap.
+An SVG file is a small file, so it downloads faster.
+It's a description of how to draw something, as opposed to the actual bits.
+It's device-independent.
+It targets more devices; has better printing capabilities; can pan; can zoom in on details that aren't initially visible; you don't get the pixilation that you get on JPEG; it has a grouping capability; layering; hierarchy; and dynamic generation.
+The good new is that most big vendors of graphics editors already have an export capability for SVG built in.
+Corel does that, right?
+Mr. J.D. Sylvestri: Yes.
+Corel has done it since [Wordperfect] Version 11.
+Slide 6 [XML Family of Specifications: Advantages for SVG]: Now I'll talk about the advantages based on XML.
+We have validation.
+At first you might think that it doesn't make much sense, but there arc cases where it might.
+Integration with Web pages: because you can integrate with XHTML [Extensible Hypertext Markup Language, [http://www.w3.org/MarkUp/], you can use a document model to script events, so it has an interactive capability.
+It has text labels and descriptions; it's directly searchable; it can be indexed by a search engine.
+It's very powerful.
+You don't want to rely on pictures you can store in a database.
+You'd have to rely on a file name.
+Now you have a whole format that's wide open.
+You have the image and the metadata.
+It's all in there, and directly searchable.
+There's a title tag.
+That's perfect for 508 compliance, because any graphic can have a title.
+Much like XHTML, where you have an attribute, this is an element.
+You can link from any part of an image, based on XLink [http://www.w3.org/XML/Linking] and XSLT.
+And, you can reference bitmap graphics.
+You can do complex animations and transformations, and SMIL [Synchronized Multimedia Integration Language, http://www.w3.org/TR/1998/REC-smil-19980615/] gives you the capability for better timing in your animations.
+CSS you can use to change the look of SVG:
+Ã¯Â¿Â½ at run-time, or
+Ã¯Â¿Â½ by a new Stylesheet.
+The other thing is fonts.
+It's not limited to what the device has.
+You can define fonts in the SVG.
+I'm going to skip the graphic, skip the code sample, and skip "Apache."
+[slides 7-14].
+Slide 15 [SVG Converter Applications]: Thinking of what you want to get, and what you can do with it--there are converter applications where you can convert to or from SVG.
+I'll go over those, and see what you can do with this.
+You can extract text out of SVG with XSLT [XSL Transformations, [http://www.w3.org/Style/XSL/] Apache [http://www.apache.org/]
+There are also a Perl [http://www.perl.org/] script and a Python [http://www.python.org/]
+I'm not sure how it works.
+I haven't tried it.
+PDF-to-SVG is going in the opposite direction , with something called Free SVG.
+On the slide, all the bullets have links to information about it.
+Then there's SVGmaker, which allows one to take [Microsoft] Office files and convert directly to SVG.
+You can do [Microsoft] PowerPoint, SVG, [Microsoft]
+Mr. Rick Rogers: The underlying system of Windows is SVG, so you can do anything with SVG that you can print in Windows.
+Mr. Sall: I didn't know that.
+Theirs works so smoothly, it's great.
+Ms. Theresa Yee: Can you please repeat the statement?
+Mr. Sall: Rick said the native Operating System of Windows has SVG capability, so any application can do what I said the SVGmaker can do.
+On the XML.gov website, next to the PowerPoint presentation, is the SVG version of the same talk, produced by SVGmaker.
+You can see that it's visually identical to PowerPoint.
+For some reason it doesn't preserve links.
+I'm not sure why it does that.
+You can also go from SVG to bitmap graphics like PNG and JPEG.
+Sun [Microsystems, http://www.sun.com/] has software for an SVG slide toolkit from about two years ago.
+The idea is, you can think of SVG as a graphical user interface to your XML data.
+I thought we'd talk about, not what's in the picture, but about XSLT.
+Say you have XML sales data or any numeric or text data, and you want a bar or pie chart or any graphic that represents the information.
+You can use XSLT to transform the XML data to SVG.
+Now you have a visual display.
+[A projector was provided, but it would not illuminate the signal.]
+So in terms of XSLT, it can do transformations to SVG, because we know it can swap in a new XSLT stylesheet, and can get many different views of the data.
+They can also do DOM [Document Object Model] scripting, which is a run-time proposition (as opposed to a transformation, which isn't).
+There are a number of editors that natively support SVG, and some that output to it.
+Slide 17 [Recent (2003) SVG Applications]: There's one in particular, which I've not looked at, other than to know it's out there, called SALT [Speech Application Language Tags, http://www.saltforum.org/ - About%20SALT]
+It gives you an interactive speech interface to the graphics.
+Imagine a speech interface to graphics!
+Mr. Matthew McKennirey: Do you have any examples of how it's used currently?
+Mr. Sall: That's actually where I was going.
+Some of the converters gave us an idea.
+I mentioned the GIS Consortium use with GML.
+Many map applications want to show one called "Smart Map."
+Picture an application that has animation, with a toolkit that pops up.
+There are interesting chess applications; not the level of application you're thinking of, but it gives you an idea of what can be done.
+There are three kinds of chess applications: There's one that can move the pieces, but has no knowledge of chess.
+There's one that's animated.
+You can go through a sequence of moves, and show how the game was played.
+There's one that does rules-checking.
+If you make an incorrect move, it knows what to do.
+Mr. McKennirey: I was thinking more in terms of applications in federal agencies.
+Mr. Sall: Rick, you used it in the Census?
+Mr. Rogers: Ken, you said
+SVG allows you to tie into other XML applications.
+You can also try to use it as a user interface.
+One way is using SVG as an interface.
+Mr. Sall: Rick mentioned that XForms [http://www.w3.org/MarkUp/Forms/] and SVG are a good mix because each complements the other.
+[Mr. Sall worked on resolving the no-image issue with the projector.]
+Mr. Ambur: Why don't we go to Bob [Haycock], and get to the projector presentations later? You mentioned voice or speech interface.
+Obviously, that has great implications for accessibility.
+Hopefully we'll get back to Ken's presentation later.
+Ken, I appreciate your taking the time to brief us on SVG.
+Now let's get to Bob Haycock of the FEAPMO [Federal Enterprise Architecture Program Management Office].
+Bob's going to brief us on the status of the Data and Information Reference Model [DRM, http://www.feapmo.gov/feaDrm.asp].
+Mr. Bob Haycock
+FEAPMO
+Data and Information Reference Model
+One thing I've learned in this gig of the last 14 months is, be prepared for anything, I'm thinking, while watching Ken, that one unrecognized skill set is the ability to switch in a presentation seamlessly.
+I'm quite impressed
+I didn't bring a file to put on the overhead,.
+I wasn't sure of the facilities.
+I brought hardcopy.
+Hopefully there'll be enough.
+I'll send Owen the file.
+I can only stay for about half an hour, and I apologize for that.
+First of all, thanks for having me.
+We tried to do this a month ago, but the schedule didn't work out.
+I recognize some faces here from previous meetings.
+I'm Bob Haycock, with the FEAPMO.
+I've met some of you.
+I've been working on the FEA for about 16-17 months.
+We've just about got all the reference models done and out, as you're aware.
+We released the second version of the Business Reference Model [ BRM, http://www.feapmo.gov/feabrm2.asp] a couple months ago, and the first version of the Service Component [http://www.feapmo.gov/feaSrm2.asp]
+We have a 99.99% complete draft of the Performance Reference Model [http://www.feapmo.gov/feaPrm2.asp] in agency hands now.
+It's not published, because it hasn't been approved and signed by the director of OMB.
+What will go out publicly, though, is in agency hands now.
+The last model, the Data and Information Reference Model, is a work in progress now.
+What I'm going to talk about today is where we stand at this point in time.
+It's been a long road.
+We started in January to think about it seriously.
+We put together some offsite meetings to brainstorm through this.
+Brand [Niemann] was there too.
+We had about three of those meetings, and ended up to where we were a month and a half ago.
+We provided that to the AIC [Architecture and Infrastructure Committee of the CIO Council] in June for their review and comment and feedback to us.
+We've since received it, and we're working with the AIC in that process as well.
+The Industry Advisory Council [IAC, http://www.iaconline.org/] has done one white paper on the DRM [http://www.iaconline.org/documents_presentations/2003/030528_IAC_EA_S IG_Information_and_Data_Reference_Model_Body.pdf]
+We're not there yet.
+Today it's a work in progress, showing what the current thinking is now.
+I have about 20 slides.
+I'll skim through a few, and focus on a few.
+I apologize to the phone folks for any inability to track along with my talk.
+Slide 3: Slide 3 shows the FEA.
+I won't go into it.
+I'm sure you've seen it ad nauseum.
+Slide 4: Slide 4 forms the basis for why we're doing this; what's the purpose for a DRM? The situation in the federal government cries out for something like a DRM.
+How do we do that? How do we think about a data architecture across the entire federal government, and make something useful and viable and effective? That's what we've been struggling through.
+Hopefully, we're getting there.
+The primary issues and barriers are:
+1.
+No common framework to describe data and information across multiple agencies.
+The purpose of the DRM is data sharing across lines of business, the lines being major functional categories that encompass many agencies.
+2.
+There's no definition for the handshake, or partnering of information exchange and sharing.
+How do we set that up?
+3.
+The next one is, that diffused content is very difficult to manage, get one's arms around.
+4.
+Information is not classified well.
+If there's a bottom-line objective for the DRM, it's to describe the information in a consistent way that can be used across multiple agencies.
+5.
+Without a common reference, data is easier to duplicate than integrate.
+That's one issue that Mark Forman [OMB Associate Director for E-Government] had; we create too much duplication, because there's no place to find out what's out there, so we create it again and again.
+That's why the ability to interoperate and share is the key.
+That's where we started with this.
+The result of that is pictorially laid out in Slide 5.
+Slide 5: While there's some data-sharing going on (and there is in specific functions, either between federal or star agencies), at a working level, people find a way around it.
+They always have.
+It exacerbates the problem of needing an efficient way to get at this, so that people can just get the data and focus on the systems they're developing.
+Slide 6: This is where we're at now.
+It's different from what we showed at the agency briefing in June.
+We're still thinking through this construct.
+The changes we made in the model are the direct result of feedback from agencies in the June briefing.
+The contributions were excellent.
+There were thoughtful things that people submitted.
+Essentially, we've organized the DRM into two major categories: one is the description, and one is the data itself.
+One puts the business context on the data, so then you can call it (our term) an "information package," associated with a business process or activity.
+That's the link we didn't have before.
+The DRM provides:
+1.
+A framework for vertical and horizontal information sharing,
+2.
+A framework that lets agencies build and integrate systems that leverage data from within or outside the agency domain, and
+3.
+A framework that allows sharing opportunities for better decisions.
+Mr. Sall: Data Super-Type [from slide].
+What is that?
+Mr. Haycock: I'll get into it in a little bit--in two or three slides.
+Slide 7: I think we're finally at the point where we can understand how the DRM integrates with the other four reference models; how they work together.
+Let me mention a couple other items to give you a sense of what we're thinking.
+What's going on is, we also initiated, through the AIC of the CIO Council, an initiative to look at bringing down the granularity of the BRM to lower levels.
+If you're familiar with the BRM, it's pretty broad.
+It's talking about things like National Defense or law enforcement.
+Sub-functions are more granular, but still broad.
+It's difficult to do anything other than bucket things.
+It's good for OMB, but it doesn't tell us whether people have the same process.
+At that level, we get into arguments about "my process is different."
+We know nothing unless we get to a lower level of granularity, so we need to think about how to approach it across the federal government.
+We're looking at coming up with another "model" for the attributes used to describe processes at different levels, down to an IDEF {Intermediate Data Exchange Format] Level 0 process.
+Start to define those processes in similar ways, and compare the process.
+Hopefully we'll begin to tie data and information packages to those processes and places in the process.
+We're trying to put meat on the bones a little.
+The second piece is a security profile for the FEA: how should we think about security for those five models? It tracks closely to those business processes: what are the risks with those activities? Then you can judge the risk and security needs at that point.
+You can look at the vulnerability of the data, and identify your security mechanism across the models, the security patterns for different businesses in the process.
+That's the direction we're going in.
+Let's turn to Slide 8.
+Slide 8: This is the framework.
+We need a different name.
+If you know one or can think of one...that's why the security profile is called a profile.
+Right now, we're calling it the DRM Framework.
+Essentially, it's the structure of the DRM.
+As Brand remembers, we debated this a whole bunch.
+We decided that the main thing is to describe data in a standard, consistent way.
+That's the bottom line.
+It's based primarily on [International Standards Organization] ISO 11179.
+We also played with ebXML [Electronic Business using eXtensible Markup Language, http://www.ebxml.org/].
+We want to describe it in a consistent way across the federal government at a certain level (not necessarily at the data element level), then put business context around it--what happens at the top, like "Subject Area" and Super-Type.
+The subject in this case is public health.
+It's based on that.
+We can put context on those packages that we can put together in the business exchange.
+We can put a process together of what goes into it, then we can have a consistent process, relate it to the business process, and we can move forward.
+So that's the bottom line, where we're at right now.
+This is the key slide.
+Everything flows from that.
+Mr. James Feagans: We've gotten through putting together an Enterprise Architecture plan.
+We're right in synch with this.
+As a matter of fact, as I was saying to Owen this morning, the "train is leaving" October 1.
+We're perfect with this.
+We really need to do that.
+Mr. Haycock: We're right there, right now.
+Mr. Feagans: We're using the FEA, so we're right there.
+Mr. Arie Brish: The time element of the data--one agency may change something, and another agency might need something from the first.
+There might be some time delay between the change and the usage.
+Is there something in the model that relates to it?
+Mr. Haycock: Not in the model, but in the implementation of the model.
+That's the key issue.
+How do you govern it?
+Unknown participant: There has to be a steward, a...
+Mr. Haycock: That's the hard part.
+The IAC paper on the DRM (I don't see Michael Lang here), that's what he's getting into--how do you govern around a federated process?
+Mr. Brand Niemann: In the pilot, we did differentiated between design time and run time.
+What you do at a moment, and what you do at run time.
+The metamatrix and the XML Collaborator [http://www.blueoxide.com/Pages/xmlcollaborator.html] added to what Michael had done with the XML schema, not only for integrating, but for exchanging data in a real world situation.
+Mr. Haycock: Brand's been out front.
+I think we're beginning to catch up, where we have a model, and we're going to pilot it over time.
+I would not think we're going to go out to agencies in the 2006 process and say, "Give us all your data."
+Mr. Feagans: We're approaching it with a revolutionary process.
+We use COPs [Communities of Practice] for the department to begin with.
+Mr. Haycock: I talk about it in here.
+We have a conceptual approach.
+We begin with COPs.
+One of the lines of business that fell out of last year's budget process is health.
+Martha Chapman of HHS [Department of Health and Human Services, http://www.hhs.gov/] is working on it.
+I have four or five here that we can work with.
+Mr. Ambur: You commented that people's eyes are glazing over but, to the contrary, I think you're making good connections here.
+People are with you.
+Mr. Haycock: My head was spinning at first, but it's starting to clear.
+We had a lot of heads in this.
+Slide 9: This talks about the Community of Practice approach--how we're attacking this.
+We want to work off of the good work of others, leverage as much as we can.
+We've had a lot of others' thinking in here.
+Slide 11: We touched on that [DRM Implementation Strategy].
+I won't get into it.
+We hope to have something that begins to intersect data across multiple agencies for specific business aspects, to put metrics on it, performance service aspects.
+Mr. Ambur: Your 12^th slide depicts boxes delineating portions of the DRM attributable to HHS, USDA, DOI and DOE, with overlaps among them.
+I think of the boxes as being XML schema for each agency, with the overlaps depicting data elements that are common across more than one agency.
+Mr. Haycock: I think I'll leave it there in your hands...leave it as how we get to the interaction layer and schema.
+We're going to run out of time here.
+We can talk about next steps here.
+I'll talk a little about Slide 17.
+Slide 17: We talked about problems, issues and challenges.
+Slide 17 talks about the benefits of the approach, good stuff.
+We've been working on the release document for this model.
+The goal is to release it in draft form by October 6.
+We're driving to that date right now.
+We may have even three documents, or two (with one having two parts).
+First would be the model.
+Second would be how you use it.
+We're talking from a business standpoint, not from a technical standpoint.
+For the business owner or program manager, what's in for them, what they get out of it.
+We're thinking of the same package for the other four reference models also.
+If I'm an Assistant Secretary [of a federal Department], and government-wide we're putting a billion dollars into the FEA, what do I get out of it? So it's the business benefits and technical benefits.
+Clearly there are technical benefits.
+Everyone knows that, but there are a lot of business benefits also.
+One is, it's difficult (if not impossible) to secure data if you don't know where it is.
+If it's all over government, you might not know where all of it [a complete set] is.
+If we can manage it in a consistent way, then we can start the security on it.
+I think that's a major benefit.
+It supports electronic interoperability of information.
+When you get in the development world, you have all these interfaces.
+You're trying to move data, and you have to find out what's changing everywhere else.
+Hopefully this will facilitate that, so we don't end up with a lot of XML schema.
+It provides clear data ownership and stewardship...Who's responsible for managing and maintaining it? It'll make sure it's up to date.
+Mr. Ambur: You used the word "stewardship" and I want to comment favorably on the use of that term.
+One of my pet peeves is the misuse of the word "ownership."
+When we're talking about federal resources, the owners are the taxpayers.
+By contrast, when bureaucrats think they own something, they don't seem to feel the need to consult with or listen to anyone else.
+Thus, I strongly encourage the word "stewardship" - since it more accurately reflects the fact that we, the people of government, are merely temporarily entrusted with problems and opportunities on behalf of "We the People of the United States of America."
+Mr. Haycock: I agree.
+I'm a federal and state steward.
+Mr. Ambur: We're only here a short time.
+We're stewards of the citizens' trust.
+Mr. Haycock: Then the technical benefits are: a common vocabulary and data standardization, and it facilitates the use of electronic registries and repositories.
+We have to have them at some time.
+I was hoping that Marion [Royal] was here.
+We've been talking about bringing together all the registries; essentially have a one-registry concept, probably a federation of registries in consistent way to manage.
+Mr. Ambur: Regarding registries, Marion gave me some bad news recently.
+He said Congress cut funding for the XML registry from GSA's budget.
+Mr. Haycock: Just the House [U.S. House of Representatives].
+Mr. Lew Sanford: We're working to get it restored.
+Mr. Ambur: I'm pleased to hear that.
+Mr. Haycock: The last slides talk about people we've been working with over the last seven or eight months, and talk about the next steps in the process.
+By this Friday, we are finalizing revisions in the slide deck we presented to agencies in June.
+We'll put that back out to the AIC committees for another look.
+We're working on a subject area analysis.
+We've requested agencies, through the AIC, to provide us with the major subject areas in their agencies.
+In the week of September 5, we'll finalize the release documents, release them to agencies for their review, and probably have another "all hands" briefing at the White House Conference Center.
+Actually, we'll probably have another on October 5.
+We're looking to release the first version by early October.
+Probably in the same time frame, we'll talk to agencies about pilot efforts, and say, "Do them between January and February of next year."
+Mr. Mike Lubash: Have you ever considered the use of the term "concept" for the steward? I argue that "concept" is something people can agree to when I try to mediate standards.
+You can plug in a mediation routine that allows you to plug-and-play the standards, so you can mediate irrespective of the standards.
+Mr. Haycock: I absolutely would consider it.
+I encourage you to contact me.
+That is an issue: where do you stop? Clearly, we won't get down to the data level.
+We need to reconcile that at some level.
+We need to determine where.
+Mr. Ambur: I wouldn't suggest that it is exactly what we need in this context, but there's a precursor to the subject area analysis of the DRM.
+The government Blue Pages are supposed to provide an overview of all of the functions of government, in terms that are commonly understood by the public.
+Since the focus of the Blue Pages is the local, printed telephone directories, it may not be as comprehensive as it should be in the context of an online directory of all of the functions of government.
+However, with respect to the potential to share data and the need to avoid reinventing the wheel, the list of functions identified in the Blue Pages should be considered for reuise as the DRM is being specified.
+Mr. Brish: Is industry participating through the Industry Advisory Council?
+Mr. Haycock: The CIO Council has a good relationship with them.
+They've turned out lot of good work working with and through the CIO Council's Architecture and Infrastructure Committee (AIC).
+The IAC is helping on governance component, architecture, and emerging technology.
+At this point, it's a very productive relationship.
+And that's about it.
+Thank you for having me.
+Mr. Ambur: Thank you, Bob.
+We're a little ahead of schedule.
+Let's take a look at where we're at with the projector.
+[inquiries as to working projector]
+The projector is still not projecting, so let's go ahead and take a break.
+Break
+Mr. Ambur: I might mention again that there's an attendance roster circulating.
+It's on the table in front of Arie.
+Arie, if you would hold it up? If you haven't already signed in and would like your presence noted, either initial it or add you name to the list.
+I think we had a few people who came in after we introduced ourselves this morning, so if you'd like to introduce yourself and indicate your interest in XML, now would be an appropriate time.
+[Introductions]
+Our next speakers are Susie Adams and Carolyn Brubaker from Microsoft.
+They're here not in a Microsoft capacity, but as advisors to OMB on the OMB Exhibit 300, which used to be the Capital Asset Plan and Budget Justifiation but is now known at the Capital Asset Plan and Business Case.
+It is the document all agencies are required to submit in the budget process to get funding for any capital investment included in the President's budget request.
+So it's a very important document.
+Last month, we had a presentation on [OMB] Exhibit 53, which is a subset of the Exhibit 300 data focusin solely on major IT investments (as opposed to other kinds of capital investments made by federal agencies).
+Exhibit 300 is related to the FEA, in the sense that all IT investments should be consistent with the FEA.
+So those are the linkages, and when I think about linkages, I think about the potentials of XPath, XPointer, XLink, and related XML standards.
+Susie Adams 
+Microsoft
+Revised/Updated XML Schema for [OMB] Exhibit 300
+XFDL Overview
+Ms. Brubaker: I'm going to talk about the business need and how we got into the program, and Susie will talk about the technical detail of the schema.
+We were approached by OMB.
+They had a business need to collect all the data for the IT process from the OMB 300 for submission in XML format.
+For Fiscal Year `05 planning, they wanted it all in XML format.
+Some agencies are not doing that, and some Departments have not been doing it, so there was a flurry of activity in finding out how to do it.
+They asked us to come up with a technology that could collect, organize, and disseminate data in XML format.
+Susie will talk about why she chose what she chose.
+We did a survey and an assessment.
+We worked closely with OMB staff to come up with the right, simple solution.
+It's been a learning process because of the short time.
+We created a document, or solution, that will be posted to a website today, for small and midsized agencies to use.
+That's the history.
+The key thing is that there was a defined business need, and we worked closely with OMB to make sure the business processes were covered, on a tight timeline.
+Mr. Niemann: What will be posted? The schema, or document, or what?
+Ms. Adams: I'll talk about that.
+I'll go back to the history, and last year, because there are a lot of things involved.
+Ms. Brubaker: I don't want this to be a Microsoft thing, but I'm with the EGov group within Microsoft Federal.
+We're trying to look broadly across government and the EGov initiatives and reusing technology, and trying to identify how Microsoft solutions can complement the initiatives and the FEA.
+Just tracking, staying knowledgeable, communicating out the word.
+Mr. Ambur: As I said, they're here in a role supporting OMB, but on September 29, Betty Harvey of the DC Area XML User's Group [http://www.eccnet.com/xmlug/] and I are coordinating an XML authoring/editing tool forum.
+The purpose of that event is to give vendors an opportunity to show users - particularly government folks and Betty's stakeholders - how they are making it as easy as possible to author and edit valid XML instance documents.
+That would be appropriate for forum in which for Microsoft to demonstrate its XML authoring/editing software and the Exhibit 300 would be a good to document to use in such a presentation.
+Mr. Niemann: The Intelligence Community Metadata Working Group [http://www.xml.saic.com/icml/] is embarking on a year-long effort to do that.
+They're going to produce a lab test and some kind of report.
+They're working on the Harris Watch List schema.
+I'll provide it to you as suggested content for September 29, to position that and move on with this other activity, so I'll post some information on that and encourage these other vendors to participate.
+Ms. Adams: A little history: last year we were working with OMB, in a pro bono type of effort.
+They came to us early-on in the process, and said they'd like to automate submission of the OMB 300 and 53 process.
+They didn't know whether they wanted XML, so we sat down with them and white-boarded, and said they should put it in XML.
+They tried to make a schema, to replicate the data in a schema.
+They hired Booz to help them implement.
+Working with folks like Marion, we stopped and went down the XBRL [eXtensible Business Reporting Language, http://www.xbrl.org/] path, because the thought was that XBRL was a good grammar to replicate.
+We ran into several speed bumps at the end, because XBRL is not the most appropriate grammar for the data we were trying to collect.
+Mr. Lubash: Is this document anywhere? Because it's an issue that's growing: should we use base XML or XBRL, because is there a marketing effort taking place? We want to make an educated decision.
+Ms. Adams: We don't care.
+If it's valid, that's all we want.
+We're not trying to get into the grammar space.
+We actively support the standards, so we can build products that support either.
+We use XBRL, but do we recommend it? Not really.
+Unknown participant: XBRL serves an important niche.
+For repurposing, it's probably a good choice, but if you're the creator and it has to be embedded in your applications, it's not necessarily a good choice.
+Mr. Sylvestri: Can we have part of this for the September 29 meeting?
+Mr. Ambur: It's wide open.
+Ms. Adams: We looked at it fairly late, and in one day we had to create a schema.
+It's difficult, because only ITIPS [Information Technology Investment Portfolio System, http://www.usace.army.mil/itips/] folks are going to be able to submit.
+So we're working with Booz to construct and submit, then parse and get it into a database.
+Prior to this, there were truckloads of paper, with people sitting and keying it in.
+Was the first one reusable? Pretty? Did it have data types? No, but it was good for the first effort.
+To OMB, it was light years better than anything they'd seen, and to agencies, to let them accept and put it into the database, the time saved on their end was huge from prior years.
+They came back to us this year late in the game (there was no kick-off meeting until late June), to construct the schema.
+We ran into a number of roadblocks.
+We had some assumptions.
+By September 8, their back-end systems had to be able to process and accept this data, so we had a real-world business problem to solve, but we also wanted to improve the schema.
+So the assumptions we made were:
+Ã¯Â¿Â½ Valid XSD,
+Ã¯Â¿Â½ Make some modifications, and clean up the schema without reinventing the wheel, and
+Ã¯Â¿Â½ Put data types in there as best we could, and put some constraints in there--make it more restrictive.
+Before, we had no valid data types.
+It also didn't support HTML in the last version, so people were cutting from Word documents and putting it into HTML.
+It's the same this year.
+We focused on cleaning it up from last year, and keeping it simple, because not every agency has an XML guru.
+We're getting calls from almost every agency on how to get their documents into XML.
+The second approach was, we used InfoPath [http://www.microsoft.com/office/preview/infopath/default.asp] to put a free tool out there mainly to make our job easy, because if it's not there, we and OMB are not going to get valid XML, so that's the main reason why we put it out there.
+So if you're in a bind, you can use it, because you know it generates valid information.
+The [OMB Circular, http://www.whitehouse.gov/omb/circulars/a11/03toc.html] A-11 guide and the related guidance are not ready.
+We had some people helping us with that.
+Unknown participant: How many data elements?
+Ms. Adams: I don't know.
+Mr. Sall: At least 389.
+Ms. Adams: If you look at the A-11 guidance, it's not always clear.
+Lots of folks can construct valid documents based on many of these standards, but you have to merge that with what OMB wants to see.
+They don't understand XML or data types.
+They're used to Corel.
+What do you do? Give a "string?" If the string is 500 elements, it blows up.
+It's very complicated.
+We took a lot of issues.
+OMB gave us time, but it takes a lot of time to make it simple enough to be usable if you're not an XML guru.
+I have my bullet-proof vest on today, because the schema has changed multiple times.
+OPM [Office of Personnel Management] looked at it through their information platform.
+Booz Allen has had the schema for a month now.
+The problem is, there's no data, because the guidance won't be finished until the end.
+They're just beginning to go through this process, and again, not being a subject matter expert, and OMB not being XML experts, it's hard to find every single issue.
+We've found some.
+Ken Sall found some.
+Others are more about style.
+Should the OMB schema conform to the [IAC] white paper, and the Developer's Guide published by the XML Working Group? In a perfect world, yes.
+Our goal was to put some restrictions on it, and given the time and our task, we have to help these agencies get the data to them.
+We don't anticipate it to be easy.
+Our job is to make it as simple as possible.
+I'd love to get the schema out to everyone in this room and talk about it for months.
+We're going to recommend that to OMB, but in the current process, as-is today, it's frustrating, because we can't get everyone involved.
+As Bob [Haycock] said, it's still evolving.
+Everyone has great ideas, but when we have to have a working system by September 8, we have to say, "This is where we go" and move forward.
+That's why it's the way it is today.
+We have to start and go ahead, and let it evolve.
+Mr. Sall: The InfoPath tool--it's good news, but I'm wondering whether people have to have Office 2003 to use it?
+Ms. Adams: As it stands today, the beta version of Office is freely available on the Web.
+Do you have to install InfoPath? Yes, but you can install it separately.
+Mr. Sall: So agencies will be allowed to use InfoPath software?
+Ms. Adams: It's officially shipped in October.
+Mr. Sall: You said September 8th is the initial submission date.
+The timing is a little off.
+Ms. Adams: That's the current state of where everything is.
+We're diligently working with OMB to finalize the schema.
+I apologize, but it's not yet final.
+We're still working, and we hope to have some something by about the end of the week
+Mr. Rogers: Could you talk about lessons learned on your integrating a new XML stream into an existing legacy system?
+Ms. Adams: Our existing system from last year was a server page, but because the database was outdated, we had to rebuild it this year.
+The format and the way the relationships were represented prior to now has changed so much that we decided to go with a new structure.
+It's more elegant than last year's.
+It's not complicated, because there are only 360 data elements.
+It doesn't take much time for developers to get them into their database or architect the database.
+I wouldn't call it a business process.
+They're scoring, but they won't let us go there yet.
+Right now, we're focusing on the data analytics of it.
+We want the data in the right format, so we can slice and dice it without needing a developer to run the queries.
+We're trying to throw it into a multi-dimensional database, to be able to look at the information.
+They get the information, slice and dice it, and present it to Congress.
+Our job is to help them do that.
+Next year, we hope the changes will not be as radical; we hope to map from the new to the old schema, and have the data go in.
+We have a product on the back end called BizTalk Server [http://www.microsoft.com/biztalk/] that lets us do that, so we can take the XSLT and map it to last year's.
+We didn't do it this year, because the data need to be scrubbed.
+Mr. Ambur: I think the data changes won't be as radical from year to year in the future, but there will always be changes to the guidance.
+That will entail changes to the database, so we need to make the system readily supportive of change.
+Ms. Adams: Everyone thinks XML is the silver bullet.
+We set it up to receive any XML document and hopefully map it, and look at information from the State to the federal government.
+The federal government says, "You have to give us the data `somehow.'
+With the Department of Education, we got flat form files and all kinds of formats.
+So the idea is, you define the schema and allow people to map to it.
+Whatever schema you want to base your exchange on.
+You'll never get everyone to exchange the same way.
+If you allow them to choose, you get more data.
+If you demand one way, you make it harder for them.
+We're probably light years away from one format, because it would have to be a mandate.
+In the real world, you need the production system today, and you get as much data as possible.
+Unknown participant: Can you talk about data sharing? The IRS is in the process of developing schemas for tax returns as mandated by Congress.
+A committee under [ANSI, American National Standards Institute Accredited Standards Committee, http://www.x12.org/x12org/index.cfm] X12 made up of revenue partners from States and others can negotiate schemas, because States need the data from the IRS, and they need to send them to the IRS, so they're negotiating what's done, so the IRS can use what's done by the States, and developers have a common schema to work from to provide for the taxpayers.
+Ms. Adams: That's great, but it's hard to get everyone to use it.
+If you can mandate it, great, but the federal government can't mandate to States.
+Mr. Ambur: What we should be aiming for is a good forum for that negotiation to take place to achieve the required degrees of consensus.
+Unknown participant: The Tigris Committee [http://www.tigris.org/] is meeting on that next month.
+Sometimes the IRS accommodates it, and some times not, but it's worked out.
+Mr. Kevin Williams: Something you're saying brought something to mind: with respect to XML registries, the idea of one place for everything is sci-fi stuff, but there are smaller Communities of Interest (COIs) for exchange.
+Over time, they will roll up to be more centralized, but it needs to be more centralized.
+The thinking is right, but as Bob said, it needs governance.
+The main point is, you mentioned earlier how it'll accept the data.
+Are you planning on moving to a Web Services interface, or a SOAP [Simple Object Access Protocol, http://www.w3.org/TR/soap12-part1/] interface...
+Ms. Adams: We'd love to.
+We tried last year to get Web Services implemented.
+It's not a technical problem; it's already constructed.
+The problem is hosting it.
+Theoretically, the technology is in front of the policy right now in most agencies.
+If you ask them to put it on an outward-facing server, whether it's Apache (it doesn't have to be Microsoft--there are Sun servers) in most situations, you can construct Web Services inside the firewall, but as soon as you want to go outside and pass information inside, it's not supported.
+It's a huge policy issue.
+Mr. Williams: It boggles my mind that you can send it as an email attachment, but not as Web Services.
+Ms. Adams: We'd love to stand up Web Services, but folks are not ready to get there.
+In fact, we have to pull the data.
+There are a lot of reasons independent of the platform.
+We were working to create an Apache platform, but we couldn't do it.
+Mr. Williams: Is it the security aspects?
+Ms. Adams: It's more a policy thing.
+There are ways to do it.
+It's just a matter of educating folks out there.
+Unknown participant: Another issue is the metadata in there.
+You should have a security application associated with each one, so you can't look at it as a single solution.
+It's a pluralistic society.
+We have to come together.
+The way you describe the OMB 300, it always gets trumped by what you need today.
+I believe, as Kevin submitted, the COIs are the first step.
+Ms. Adams: If we had a year to work on it, that would be great, but the problem is guidance.
+It's not complete, there's a short time frame, and we're restricted on what we can do, but I agree.
+Unknown participant: Two years ago we went to OMB...
+Ms. Adams: All kinds of things are missing: documentation on the schema; it goes on and on.
+We can't create the document by ourselves.
+The business centers have to give us the document, which means they have to know why the schema's implemented.
+I think you'll see them hire an XML person who can bridge the gap to make the job easier.
+If you're technical, you tell me the data and I can make it work.
+Unknown participant: I see an imbalance between the maturity of the parts (non-technical and technical parts).
+You can swap out the technical part.
+We should drive to that; a business side and a technical side.
+Ms. Adams: When you try to do things like that, there are all kinds of policy issues that drive it.
+Our technology is way ahead of the steps they can take.
+Mr. Ambur: That relates to one of my questions--whether the technology is enabling the folks at OMB to see the potential to conduct their business in new and better ways.
+Ms. Adams: I think it is.
+They're like any other business.
+They have to see it, and improve when time allows.
+It's a "it worked last year, we'll be fine, keep going" kind of thing.
+You have to set your priorities...unless this is going to break, this other stuff comes down to the end.
+If anyone has comments on the schema, we'd love them, so we can give them to OMB.
+Owen made great comments on their information collection--stuff we should make visible to other folks.
+We do have a system up now: "FEAMS" [FEA Management System, http://feapmo.gov/feams.asp].
+We want to make this information available to people on an as-needed basis.
+We have it now, all in XML.
+Mr. Ambur: Following up on Bob's presentation, it's one thing to tell agencies that all IT investments should align with the FEA, but just saying it doesn't make it happen - no matter how hard agencies may try to comply.
+Having access to the information provided by other agencies in their Exhibit 300 submissions would help facilitate the necessary coordination.
+Ms. Adams: And they're evolving their process.
+Last year, they didn't have it in XML.
+This year they did.
+Mr. Ambur: I'm a great advocate of the bottom-up approach, together with good documentation that is widely and readily shared.
+I hope we can enable folks all across government to readily share their XML schemas so they don't all have to reinvent the process of sharing their data elements.
+That's the sense in which I'm looking at the registry as a tool to facilitate collaboration among communities of practice.
+It's one thing for agencies to put their schemas on their own website and that is certainly better than nothing, but I hope we do better than that.
+Incidentally, in the registry meeting this afternoon, Ken Gill is going to brief us on the Justice Department's global justice information sharing XML registry requirements.
+Anything else, Roy [Morgan]?
+Mr. Roy Morgan: We'll at least talk about the products we have to play with.
+Please come this afternoon, if you'd like to participate.
+Mr. Ambur: There's a link in today's agenda [http://xml.gov/agenda/20030820.htm] for the revised XSD for Exhibit 300.
+Ms. Adams: There will be another one.
+Mr. Ambur: Should I change the link?
+Ms. Adams: It should be the same.
+Mr. Sall: There should be a different version in it, so it should change.
+Ms. Adams: Look for more information in it.
+Mr. Niemann: Can you answer my question as to what forms are available (because they were originally done on a spreadsheet)?
+Ms. Adams: The OMB 53 was.
+The 300 is hard to do on a spreadsheet.
+Last year, people tried to copy into Excel.
+It has limits.
+Mr. Niemann: So it's only in a schema, not in a spreadsheet?
+Ms. Adams: Correct.
+The order maps directly to the A-11, because we couldn't figure out any other way.
+One way was to take the work document and just go right down in the same order for people unfamiliar with XML.
+Mr. Niemann: Was there any attention to the metadata?
+Ms. Adams: No.
+Unknown participant: If you create a vocabulary or a UID, it eliminates the problem of text itself.
+The fact that it's business-friendly means it can be technology-friendly if a UID is attached.
+Ms. Adams: I completely agree.
+We have limited funds and resources to help OMB do it.
+Most folks don't know what the XML document is, or how to create it.
+They have questions like, "Do we need to hire a developer?" and " What's the tool use?" Big agencies, yes, they might hire a developer.
+Small agencies, no.
+Mr. Sall: Where can we get the free tool?
+Ms. Brubaker: It'll be posted to a URL [Universal Resource Locator].
+We should have it by the end of today.
+Mr. Ambur: I'd like to establish a link on the [XML.gov] website.
+Mr. Sall: There's nothing about the schema or process to prevent someone from using a different tool to input the information they need?
+Ms. Adams: Yes.
+Mr. Sall: Providing a forms interface from the GUI [Graphical User Interface]?
+Ms. Adams: Basically like going from Word over.
+The question was, do we have a tool that allows you to enter it in, and go back and forth from Word? Yes, because Office 11 supports mapping to XSD schema.
+We did not create that.
+OMB looked at it briefly.
+All the testing is just agencies looking at it.
+We anticipated needing a tool.
+This was the easiest way.
+They didn't pay us to do this.
+Mr. Sall: The best way to get people outside Microsoft in is by creating a solution to this?
+Ms. Adams: Schema, or solution.
+Mr. Sall: The guidelines...
+Ms. Adams: Convincing OMB that the guidelines are what they want to implement.
+Our hands are tied.
+Mr. Ambur: If you're talking about the guidance in the [Federal XML] Developer's Guide, this group could recommend that they be elevated through the Emerging Technologies Subcommittee [of the AIC]
+EPA and the Department of the Navy are ahead of the government as a whole for their own internal requirements, but their best thinking needs to be rolled up for the benefit of the government as a whole.
+This is a voluntary group, but we could make that recommendation to the ET subcommittee.
+Mr. Sall: My concern is that the FEA is coming out with all these documents.
+The DRM talks about ISO 11179, and other conventions...ebXML, UBL [Universal Business Language, http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl], ways of defining elements.
+I completely understand that you're focused on getting it out and retrofitting later, and the BizTalk Server XSLT, and mapping this year's to next year's, but my fear is that if something is on the FEAPMO site and people from agencies (who aren't familiar with how it's developed)...I'd say it's the old "eating your own dog food," and with international...
+Unknown participant: That's OMB's discussion.
+Ms. Adams: It would be a task on the list of stuff OMB wants us to do.
+It would cost them money.
+They need to be convinced that there's some value.
+Mr. Ambur: Let me reiterate what I said earlier.
+This is a voluntary group.
+We have no authority to tell anyone to do anything, but we can make recommendations.
+GSA [General Services Administration] is also working on it.
+If there's a strong will in this group to elevate it to the governance subcommittee, I could do that.
+Ms. Adams: We can make it simple first, then complex.
+I think people are going to go the simple path at first.
+To have an XSD document, that's pretty complex for those ones who aren't familiar with it.
+This process is huge, so the next one (simple to complex) isn't as hard.
+Mr. Niemann: This is a tip of the iceberg.
+Booz Allen suggested asking us how to address the problem.
+Some agencies are already using advanced tools.
+OMB has a back-end system trying to move to XML, for receiving part of the information agencies have.
+Both groups wanted to go their own way.
+We suggested that they need to work out the protocols between them.
+The EAs [Enterprise Architects] will tell you this has to be a living process, and work throughout the year as part of the planning process, not just September 8.
+We really need interactive Web Services--a living system where people are working both ends--and do pilots.
+The other point is the need for more than a schema.
+We need to move up in the ontology world, like RDF [Rich Data Format], because this is like a collaborative business case, where you discuss it with others who are doing it, and bring about the consolidation that OMB wants, so it takes on another dimension like ontology markup, so people can discuss it with one another.
+Ms. Adams: That's what FEAMS is there for.
+I agree it should be an evolutionary process, and not wait until the end of the year.
+That's tough for them.
+As you know, they're not really done.
+They have a second submission at the beginning of this next year.
+About the June time frame, they'll bring us in again.
+For them, it's great feedback.
+I encourage you to give it.
+Unknown participant: That ontology is the way the business communicates to taxonomies and business patterns.
+That's the part we're missing.
+Those two work in synch.
+The business people have to map the abstractions.
+That's the real power.
+The business communication.
+Not understanding the ontology.
+Ms. Adams: They don't understand the business value.
+Unknown participant: And that's the way they approach the project--short-sighted, immediate goals.
+The business process is the way it's evolved over the last 20 years.
+The XML group should say, "Let's start building these things to level the playing field."
+Mr. Ambur: I'm not sure people will ever understand ontologies, for example, but they can understand results.
+Bob's presentation about the DRM plays into it.
+Ken's comment about eating our own dog food is also noteworthy; OMB should be eating its own dog food with respect to the DRM. Susie's comments that simple wins over complex is also very well taken, and we should move forward every day, in any small ways that we can, rather than expecting the "big bang" to solve all our problems.
+Ms. Adams: It takes time, re-architecting the ways agencies do business.
+"Data" sometimes is a four-letter word, because data have power.
+I don't necessarily want to give you my data.
+People look at Web Services, and say, "No way, I don't want you to see my data," so people have to be comfortable sharing their data.
+Now people email and say, "You can look at it."
+With that, Bob can go look at it.
+Mr. Ambur: It reminds me of another question.
+I understand OMB intends at some point to make the data from agency Exhibit 300 submissions public.
+Is that your understanding?
+Ms. Adams: I think once the FEAMS is done, that's the intent.
+Mr. Niemann: One or two ITIPS records managers will be given access.
+Mr. Ambur: So your understanding is that it's not public yet?
+Mr. Niemann: No, they're still piloting.
+I think the feeling is, if they give one person at each agency access, they can figure out how to share.
+They want to control it so we don't see 300s show up in the press and other places.
+Mr. Ambur: I suspect if the XML instance documents were made available, a number of vendors could show some great stuff.
+Mr. Niemann: At our September conference, we have about 10 vendors who are going to show what they've done.
+There is already an impressive number of ontology applications in the industry itself.
+We can show that it's more than just talk.
+Mr. Ambur: Are there any other questions or comments for Susie and Carolyn? We're a little ahead of schedule.
+There's nothing wrong with adjourning early--I'm sure you can all use the time.
+The ET subcommittee is charged with developing a process where the IT lifecycle can be managed.
+That's a fancy way of saying that the CIOs can't effectively respond to all the vendors who are trying to communicate with them.
+We need a better way to enhance the efficiency and effectiveness of such communications.
+In my view, the end of the ET process is submission and approval of a fully completed Exhibit 300.
+I'm interested in Susie's comments about the order of the elements of the XSD following the order of the elements of the guidance itself.
+In the early stages of the ET process, it may not use exactly the same elements of the 300 Exhibit, but I believe the data gathered in the ET process should map into Exhibit 300, and whenever possible, the data itself should be reused in the A-11 process.
+I'm thinking of using our next meeting, on September 10, to discuss the elements of the XML schema for the first stage of the ET process, with the aim of delivering a strawman schema to the ET subcommittee at its next meeting.
+If there are no other questions or comments, I thank you all.
+End meeting.
+Attendees:
+Last Name
+First Name
+Organization
+Adams
+Susie
+Microsoft
+Altner
+Bruce
+NASA/SAIC
+Ambur
+Owen
+FWS
+Bennett
+Daniel
+Billups
+Prince
+DISA
+Brish
+Arie
+Conformative Systems
+Cox
+Bruce
+USPTO
+Derrick
+John
+Conformative Systems
+Feagans
+James
+DOJ
+Fong
+Elizabeth
+NIST
+Gorman
+Will
+PureEdge
+Hassam
+Amin
+I411
+Haycock
+Bob
+FEAPMO
+Kantor
+Bohdan
+Library of Congress
+Lubash
+Mike
+DFAS
+McKennirey
+Matthew
+Conclusive
+Morgan
+Roy
+NIST
+O'Connell
+Greg
+PureEdge
+Rogers
+Rick
+Fenestra
+Safran
+Sol
+IRS EPMO
+Sall
+Ken
+SiloSmashers
+Sylvestri
+JD
+Corel
+Turnbull
+Susan
+GSA
+Todd
+Vincent
+GSU XMLlegal
+Williams
+Kevin
+BlueOxide
+Yee
+Theresa
+LMI
+Yenchi
+Greg
+VA

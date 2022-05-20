@@ -1,0 +1,85 @@
+SED navigation bar Future Events/Activities Upcoming events Upcoming activities include * Course: Introduction to Bayesian Statistical Methods, Spring, 2002.
+* Course: Bayesian Analysis of Linear Models, Spring, 2002.
+* Talk: "Bayesian Analysis of Interlaboratory Data", NIST, November, 2001.
+* Talk: "Statistical Analysis of the Results of the CCPR Key Comparison on Near-Infrared Spectral Responsivity", Washington, DC, October, 2001.
+Future Activities Future activities in Bayesian metrology include * Bayesian consensus mean * Equivalence * Performance comparison of solutions to combining results from multiple methods * Combined uncertainty * Bayesian analysis and consensus guidance for measurement curves and images from interlaboratory studies * Addition of MCMC to StRD (Statistical Reference Datasets) * Magneto-Optically trapped atoms * Statistical analysis of the LADAR measurements * Data assimilation and Bayesian design for physical/complex/high-dimensional process * Statistical design and standardization of microarray experiments and data analysis * High-dimensional modeling
+Bayesian Consensus Means We will extend the Bayesian consensus means method to include improper priors and Dirichlet process priors.
+This will allow for much more flexibility in the assumptions governing the "borrowing strength" properties of the procedure.
+Improper priors will allow for a more objective analysis than what is available through the vague prior formulation required by BUGS.
+The Dirichlet process priors allow for variation in the degree of borrowing across labs.
+We will implement and apply this methodology to NIST applications.
+We will extend the method to include prior elicitation in situations where prior data or expert opinion is available.
+Equivalence In the Key Comparisons area, the Bayesian consensus mean procedure provides the required reference values and their measures of uncertainty.
+It is common to further require a measure of agreement or equivalence between the labs.
+We will formulate this problem in the Bayesian framework and implement a solution.
+Performance of Consensus Means The problem of determining a consensus mean and its uncertainty from the results of multiple measurement methods or laboratories is an important NIST problem.
+Many solutions, both Bayesian and non-Bayesian, to this problem have been proposed over the years, including those developed by SED.
+However, objective performance comparisons of the proposed solutions have not been studied.
+In this work, we will examine desirable criteria for comparison, and use them to compare the existing solutions.
+Combined Uncertainty The Bayesian paradigm offers a natural way of combining the type A and type B uncertainty present in many NIST applications.
+We will develop a method for such calculations, implement it and apply it to NIST problems.
+Consensus Means for Measurement Curves and Images A general conceptual setup is that we assume measurements from each laboratory consist of laboratory specific bias and measurement errors, common functional curve, effects due to experiment conditions and time, potential interaction effects, and individual measurement errors.
+We propose a Bayesian formulation where block-based Gibbs sampling will allow us to separate the laboratory effects from modeling the common curves, and the MCMC samples will also allow us to construct the uncertainty of the reconstructed curve as well as of laboratory effects.
+The functional data analysis framework allows irregular sampling points of input variable and different data format (such as missing data) from each laboratory.
+The goals for this project are: * The development of consensus and computational algorithms for nonparametric regression and Bayesian solution of functional data analysis.
+* Develop uncertainty assessment and comparison criterion for curve measurements.
+This framework can also be applied to the analysis of image maps.
+Advances in instrumentation enable high throughput measurements such as matrices and images.
+Analyzing and assessing data quality from image maps such as from DNA chips or FMRIs presents challenging issues for future metrology.
+We envision that functional data analysis should provide some useful lessons for analyzing image sequences, and we will work on the image analysis problems in context of some real applications.
+MCMC in StRD In the StRD (Statistical Reference Datasets) project, SED provided datasets with certified values for assessing the accuracy of software for univariate statistics, linear regression, nonlinear regression, and analysis of variance.
+An important new area in statistical computing is Bayesian analysis using MCMC (Markov chain Monte Carlo).
+However, the numerical accuracy of statistical software performing MCMC is largely unknown.
+In this work, we will expand the StRD project to include MCMC.
+Magneto-Optically Trapped Atoms Physicists in the Electron and Optical Physics Division (PL) are using lasers to trap atoms in a magneto-optical trap.
+We are helping them adjust the load rate of atoms flowing into the trap and the decision rules for deciding how many atoms are in the trap at a given time.
+In particular, we have proposed that a decision rule using the Bayes Factor is a sensible way of counting the atoms in the trap in the face of random Poisson noise.
+Analysis of LADAR Measurements In a wide range of applications such as geographic mapping, bathymetry, construction site monitoring, LADAR has become the device of choice for determining the shape of surfaces.
+The analysis of uncertainties in LADAR measurements is, however, not well understood.
+In connection with the competence initiative of the Bayesian metrology, a BFRL/ITL collaboration is working towards inferring uncertainties at the surface level from separate instrument calibration results.
+A 2002 milestone requires implementing software for propogating instrument errors concurrently with surface generation.
+One Bayesian application would be to calibrate surfaces against known artifacts, and use it to refine instrument statistics based on using a "naive" propogation as a "prior".
+In this context, and in conjunction with the commercial sector, NIST initiated the concept of a national, artifact-based, LADAR calibration site, comprising both indoor and outdoor facilities.
+As part of that concept, tools for the proper statistical analysis of collected calibration data need to be developed based on both classical and Bayesian paradigms.
+Data Assimilation and Bayesian Design Data assimilation and model-based Bayesian design have been proposed as a general approach to solving complex design and dynamic control issues for building future factory plants, which include satisfying environmental law, automated data measurements and process control, minimizing costs and maximizing economic benefits.
+The problems will require automated optimization of multipurpose design goals over conflicting conditions, including economic and environmental factors, for large scale systems, which may be complex and nonlinear.
+Similar problems occur in other areas such as virtual measurements, material sciences, and Internet traffic control.
+Common to these diverse problems is the need to model and measure dynamic and high-dimensional processes, where only meager observations are available, and where incorporation of physical models as well as prior information is necessary.
+The Bayesian approach offers the most natural and flexible solution to such problems.
+The advantage is to build a robust design strategy so as to take into account various uncertainty factors in inputs, models, and noisy environments.
+The key is to develop realistically fast computational algorithms for solving complex and nonlinear large scale problems.
+Data assimilation has been studied for a long time in geosciences, especially in atmospheric and oceanic sciences.
+The challenges of producing timely weather forecasts using data assimilation and numerical forecast model code have forced meteorologists to develop various computational tools for dealing with large scale data assimilation and real-time implementation.
+The most recent techniques of targeted observation and ensemble forecasting are particularly noteworthy: the former is an economical way of dynamically collecting critical data to improve intermediate-range forecast, and the latter is an efficient sampling method for high-dimensional nonlinear systems and for producing some kind of uncertainty measures for nonlinear forecasts and may be potentially useful for operational probability weather forecast.
+Our goals in relation to the Bayesian project are to formulate and identify the data assimilation and Bayesian design problems in the context of metrology problems and to leverage the knowledge of data assimilation and Bayesian design gained in geoscience problems.
+We will use and develop realistic physical/dynamic/stochastic models in each context and identify and find a Bayesian solution.
+The goal for this subproject is to develop realistic data assimilation and computational algorithms for Bayesian design which can be applied to real-world dynamic systems and be potentially useful in real-time environments.
+We vision that the strategy of sequential processing and updating algorithms, greedy search algorithms, hierarchical and hidden process models, spatial and dynamic modeling, and problem-based simplifications and approximations will play important roles.
+Standardization of Microarray Experiments and Data Analysis There has been an explosion of research activity in microarray technologies in the last few years; these technologies are associated with greatly improved productivity in gene mapping and disease diagnosis.
+It is quite common to have simultaneous measurements of thousands of genes at different experimental conditions at the same time, and the number of runs and the number of genes that can be accommodated in one experiment will increase rapidly in the near future.
+This movement presents a golden opportunity for statistical and metrological research such as finding signals in huge mountains of noisy data and standardizing various array measuring devices.
+Statistical issues include data cleaning, normalization issues, image analysis, modeling and analysis of variations due to different factors, main effects as well as interactions, and experimental design.
+Statistical experimental design will be extremely relevant.
+Many methods, such as comparison experiments, calibration and replications, factorial design, and balanced or partial balanced incomplete block designs are directly applicable (Kerr and Churchill 2000).
+Another, more fundamental issue is to improve the data quality and information content through adding reference spots and calibration experiments.
+Bayesian analysis is used in analyzing the hierarchical gene expression models where prior information is generated from calibration experiments.
+Our goals are: * Investigate the crucial standardization and experimental design issues in microarray experimentation by keeping pace with the rapid advances in bioinformatics and the budding interest from the statistics community.
+* Actively collaborate with scientists from NIST and other agencies or institutions.
+High-dimensional modeling This project will consist of two subprojects.
+1.
+Classification and prediction Bioinformatics and data mining in IT has revitalized research on clustering and classification (pattern recognition), a traditional area of multivariate analysis in statistics.
+Among the techniques studied, the classification and prediction method proposed by V.N. Vapnik, which he called support vector machines (SVMs), is an especially powerful and promosing approach.
+It is based on statistical learning theory, so it has good automatic predictive properties and avoids the usual ad hoc model selection step.
+By allowing constraints and penalization on the model coefficients, the technique solves a Bayesian classification problem and is very close to the penalized likelihood method in situations when the data are noisy.
+Our goals include the following three parts: + Futher understand and then develop software support for automated tuning of SVMs in both classification and prediction problems.
++ Develop some uncertainty measures and theory for SVM estimation and prediction using Bayesian methods.
++ Apply the methodology to more complicated metrology problems, such as functional data analysis and image analysis.
+2.
+Hierarchial and space-time models The hidden Markov models (HMMs) are the most successful statistical and probabilistic models proposed for DNA and protein sequence analysis.
+HMMs belong to the general class of Markov switching or hierarchical models, for which the Bayesian method and EM algorithms are the default approach.
+EM algorithms, however, do not automatically provide uncertainty measures.
+Hierarchical dynamic models have been used in many other contexts such as hydrology (e.g. Lu and Berliner 1999) and economics.
+Recently internet traffic modeling presents new challenges of modeling heterogeneous and multiscale processes, potentially in continuous time or space-time.
+The aim is to come up with realistic and flexible models which can take into account the underlying physical process as well as multiscale and various subprocesses, so that the model can have good realism as well as predictive power.
+Date created: 8/28/2001 Last updated: 8/28/2001 Please email comments on this WWW page to sedwww@nist.gov.
+[ SED Home | Bayesian Home | Previous | Next ]

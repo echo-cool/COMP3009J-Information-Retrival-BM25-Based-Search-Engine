@@ -1,0 +1,70 @@
+ULTRAWIDEBAND-TO-GLOBAL POSITIONING SYSTEM POTENTIAL INTERFERENCE SCENARIOS Introduction This document is intended to describe the scenarios to be used in the evaluation of potential interference to the Global Positioning System (GPS) from Ultrawideband (UWB) transmission systems.
+The results of this scenario study will be used in conjunction with results from the National Telecommunications and Information Administration (NTIA) Measurement Plan to Determine the Potential Interference Impact to Global Positioning System Receivers From Ultrawideband Transmission Systems in responding to the Notice of Proposed Rule Making (NPRM) issued by the Federal Communications Commission (FCC).
+Construction of Link Budget
+This scenario study will apply data collected during the NTIA measurement program.
+This data consists of the level of UWB signal power (within the GPS band) that can be tolerated without causing harmful interference.
+The data will be input to a link budget, which will take into account GPS antenna gain and propagation loss based upon a minimum separation distance between the GPS receiver and the UWB transmitter or transmitters if an aggregate scenario is being considered.
+The end result of this link budget will be an Equivalent Isotropic Radiated Power (EIRP) which can be radiated by an UWB transmission system without causing harmful interference to GPS.
+The link budget will be based upon the following equation:
+I = (P[T] + G[T]
+where,
+I = Interference Threshold Level Referenced to the GPS Receiver Input In dBm/20 MHz P[T] = UWB Transmitter Power centered on 1575.42 MHz in dBm/20 MHz G[T]
+P[T] + G[T]
+It should be noted that G[R] will depend on the locations of the GPS receiver and the UWB transmission system, which will not always be within the main beam of the GPS antenna.
+The position of the two systems will be accounted for in the scenario development and G[R] will be adjusted accordingly.
+In addition to those parameters listed above, other scenario dependent factors such as antenna shielding, wall attenuation (for indoor UWB applications) and aeronautical safety margins may be present in the link budget calculation.
+Sources of Parameters
+The values to be used in calculation of the link budget will be gathered from various sources.
+I will be obtained from the NTIA GPS measurement program.
+This number will be the average power measured for the applicable UWB parameters in a 20-MHz bandpass filter centered on 1575.42 MHz.
+P[T] + G[T]
+This is the ultimate number sought by this scenario study.
+G[R] is estimated based on typical GPS antennas, and the relative positions of the UWB transmitter and the GPS receiver.
+L[P] is calculated using the free space propagation loss equation shown below.
+using and gives:
+(dB)
+where d is the minimum separation distance in meters.
+The minimum separation distance used in the calculation of the path loss will be determined from the particular scenario parameters.
+Determination of GPS Antenna Gain
+The GPS antenna gain (G[R]) to be used in the calculation of the link budget will be based upon the relative locations of the UWB transmitter and the GPS antenna.
+Figure 1 illustrates the value to be used for G[R], dependent upon the particular scenario.
+Identification of UWB and GPS Applications
+The objective of this task is to identify applications for GPS, and also applications for UWB technology.
+These applications will allow scenarios to be developed in order to assess the potential for harmful interference from UWB transmission systems.
+Table 1 shows GPS applications while Table 2 shows potential UWB applications^(1).
+GPS Application Description Aviation Oceanic and en route navigation; Non-precision and precision all-weather approaches; Direct routing of aircraft for fuel savings; Improved aircraft separation standards for more efficient air traffic management; Airport surface traffic management; Monitor wing deflections in flight; Wind shear detection; Precise airfield and landing aid locations; Seamless (global) air space management; Less expensive avionics equipment; Monitoring aircraft locations in flight; Precision departures; Missed approach applications; Enhanced ground proximity warning system; Automatic dependent surveillance.
+Maritime and Waterways Navigation on the high seas; Search and rescue; All weather harbor approach navigation; Vessel traffic services; Dredging of harbors and waterways; Positioning of buoys and maritime navigation aids; Navigation for recreational vessels; Location of commercial fishing traps and gear; Offshore drilling research; Monitoring deflections in dams as a result of hydrostatic and thermal stress changes; Ice breaking and monitoring icebergs and flows; Observing tides and currents; Observing tides and currents; harbor facility management; Location of containers in marine terminals.
+Emergency Response Ambulance, police, and fire department dispatch; Road service locating disabled vehicles.
+Augmentation Reference Station Differential corrections, both real-time and post-processing.
+Agriculture and Forestry Forest area and timber estimates; Identifying species habitats; Fire perimeters; Water resources; locating property boundaries; Ploughing, planting and fertilizing without operations.
+Electric Power Synchronization of power levels; Event location.
+Environmental Protection Hazardous waste site investigation; Ground mapping of ecosystems; Oil spill tracking and cleanup; Precise location of stored hazardous materials.
+Highway and Construction Intelligent vehicle-highway system operation; Highway facility inventory and maintenance; Accident location studies; Highway construction; Navigation for motor vehicle drivers; Truck fleet on-the-road management; Monitoring status of bridges.
+Law Enforcement and Legal Services Tracking and recovering stolen vehicles; tracking narcotics and contraband movements; maintaining security of high government officials and dignitaries while traveling; border surveillance; Measuring and recording property boundaries; Tort claim evidence in aviation and maritime accidents.
+Public Transportation Bus fleet on-the-road management; Passenger and operator security monitoring.
+Railroad Railroad fleet monitoring; Train control and collision avoidance; Facility inventory control and management.
+Recreation Hiking and mountain climbing; Measuring at sports events; setting lines on sports fields.
+Surveying Electronic bench marker providing absolute reference of latitude, longitude and altitude; High precision surveys in minutes by anyone; Real-time dam deformation monitoring; Hydrographic surveying; Efficient and accurate photo surveys; Measuring areas without triangulation; Oil and mineral prospecting; National spatial data infrastructure.
+Telecommunications Precise timing for interlacing messages/network synchronization.
+Weather, Scientific and Space Use as weather balloon position radiosonde; Measurement of sea level from satellites; Navigating and controlling space shuttles; Placing satellites into orbit;
+Monitoring earthquakes and tectonic plates;
+Measuring ground subsidence (sinking); Measuring atmospheric humidity from ground; Precise global mapping of ionosphere.
+UWB Potential Application Description Altimeter/Obstacle Avoidance Radar To be used in commercial aviation applications for altitude measuring and obstacle detection.
+Tags To be used in intelligent transportation systems, electronic signs, smart appliances.
+Precision Geolocation Systems To be used for high accuracy (1 foot) location solutions in urban environments - including in-building applications where GPS is not available.
+Industrial RF Monitoring Systems To be used as a wireless datalink for status monitoring of industrial processes within a manufacturing facility.
+Smart Home To be used as wireless links connecting all fixed and mobile smart home appliances such as computers, security systems, PDA's and gaming, and televisions and stereos.
+Wireless LAN To supply short-range indoor data and video communications.
+In-Building Communications To be used for transmitting voice, data, and video.
+Rural Communication Systems To be used for supplying wireless self-configuring networks that bring voice and data direct to users in remote areas.
+Intrusion Detection Devices To be used in establishing security zones for home and/or business security systems.
+Through Wall Sensing To detect motion and provide vital information to security and public safety personnel.
+Underground Imaging To reveal both the location and condition of objects and personnel.
+Automotive Sensors To provide collision avoidance sensors and customized timing and inflation of air bags upon impact.
+Locator Beacons To aid Emergency 911 services and tracking mobile inventory.
+Precision Navigation To improve the safety and performance of vehicles and agricultural and industrial equipment.
+Ranging Instruments To determine precise distances between objects for commercial and industrial applications.
+_________________________________________________________________
+Endnote:
+1.
+UWB application information was obtained primarily from UWB manufacturers' web sites including Time Domain Corpoaration (www.timedomain.com) and Multispectral Solutions, Inc. (www.multispectral.com).

@@ -1,0 +1,75 @@
+I.E.C.C.
+Post Office Box 640 Trumansburg N.Y. 14886-0640
+April 27, 1997
+Secretary Federal Trade Commission, Room H-159 Sixth Street 
+Consumer Privacy 1997 -- Request to Participate, P954807
+I write primarily in my capacity as the operator of abuse.net, an informal service that helps Internet users forward their complaints about abusive activities on the Internet.
+Almost without exception, the complaints are about unsolicited e-mail, popularly known as "spam".
+2.16 How widespread is the practice of sending unsolicited commercial e-mail? Are privacy or other consumer interests implicated by this practice? What are the sources of e-mail addresses used for this purpose?
+The volume of unsolicited e-mail has skyrocketed in recent months.
+Abuse.net has approximately 1400 registered users.
+The number of complaints handled per month has grown very rapidly:
+Month Number of messages February 1997 2231 March 1997 7970 April 1997 over 12,000 (extrapolating from 5902 messages received through the 15^th)
+This is just a small fraction of the total complaints sent on the Net, since abuse.net is deliberately somewhat difficult to register for in order to discourage frivolous complaints.
+Many spam messages tell the recipient to send a "remove" response to be removed from the mailer's list, but most e-mail users are reluctant to do so, for two reasons.
+One is that most spam has a forged or non-existent return address, since the vast majority of responses will be complaints or worse, not orders.
+Worse, in many cases, even when the address is valid, sending remove responses as often as not results in the recipient receiving more rather than less junk mail, since spammers usually add all addresses on all mail they receive to their mailing lists for future ads.
+(Many of my acquaintances have verified this by sending a remove request from a freshly created e-mail address that has never been used before, only to start receiving junk e-mail at that address.)
+Since address lists for spam are usually priced solely by the number of addresses, spammers tend to collect addresses wherever they can find them in large volume.
+The most popular source is Usenet, the Internet's global distributed bulletin board system, since Usenet transmits several hundred thousand messages per day and the e-mail addresses in Usenet messages can be harvested in bulk by automated programs.
+On-line mailing lists (topic-specific distribution lists that users can join) have been another popular source, since most lists have in the past permitted anyone to review the membership of a list automatically.
+The World Wide Web is not a major source of addresses for junk e-mail since addresses of a Web user cannot in general be obtained without a deliberate action by the user.
+The Web is widely used to join mailing lists, but since the user has specifically requested to be added to the list, the mail received pursuant to that request is not unsolicited.
+2.17 What are the risks and benefits, to both consumers and commercial entities, of unsolicited commercial e-mail? What are consumers' perceptions, knowledge, and expectations regarding the risks and benefits of unsolicited commercial e-mail?
+Users have come to fear that any time they post a message to a mailing list or Usenet forum, they may be bombarded by junk e-mail.
+This has led many users to disguise their e-mail addresses to make it harder to harvest the address automatically, but which also makes it harder for legitimate correspondents to respond to their messages.
+Other users have curtailed or eliminated their participation in public fora altogether for fear of spam.
+In past months, most non-technical users tended to feel that junk e-mail wasn't a significant problem, and that one could just delete unwanted messages.
+But as the volume of spam has grown, with many users receiving ten or more unwanted messages per day, it has become clear that end-users deleting the growing flood of e-mail isn't practical.
+2.18 What costs does unsolicited commercial e-mail impose on consumers or others? Are there available means of avoiding or limiting such costs? If so, what are they?
+For technical reasons, the cost of processing an e-mail message is borne almost entirely by the recipient and by the recipient's Internet provider.
+This means that junk e-mailers, unlike advertisers in other media, have no incentive to be selective in who they broadcast their ads to, so essentially none of their recipients have any interest in the material advertised.
+Unsolicited commercial e-mail has no benefits other than short-term financial gain to the vendors of spamming software and services.
+The risks and costs are many:
+Unsolicited e-mail fills users' mailboxes, swamping the e-mail that users want to receive.
+Many users of America On Line in particular report receiving more junk e-mail than legitimate e-mail, and on the systems that limit the amount of mail in a user's inbox, junk e-mail can fill a mailbox so that legitimate mail is rejected or discarded.
+Most e-mail systems transfer mail from the provider's system to the user's computer before the user handles it.
+Transferring junk e-mail wastes the user's time, and, for users with metered telephone service, costs money.
+Furthermore, Internet providers find that their disk storage is occupied by unwanted mail, their dial-in ports are occupied unnecessarily by users downloading mail that they didn't want to receive, and providers report spending many man-hours dealing with user complaints about unwanted junk e-mail.
+Every large Internet provider but one now has at least one full-time employee dealing with junk e-mail complaints.
+Users receive so much spam that they are suspicious of any mail they receive with a return address they don't immediately recognize.
+Also, since most spam advertisements are misleading or fraudulent, users have come to assume that nothing advertised by e-mail is legitimate.
+This inhibits business use of e-mail lists gathered legitimately from people who have asked to receive mail.
+For example, I have lists of over 35,000 e-mail addresses from people who have written in response to invitations in books that I have written.
+In each book I clearly said that if they write, I (or my computer) will write back, yet I dare not use those lists to send announcements of new or updated books because far too many recipients will have forgotten that they wrote to me and will instead assume that I'm just another spammer.
+Operators of Internet networks, including myself, have set up blocks to keep spammers from gaining access to our systems.
+These blocks are fairly effective one of my blocks deflected roughly 100,000 spam attempts per month from one persistent spammer to my tiny twelve-user network, but they require considerable skill and effort on the part of the user's Internet provider to maintain.
+It's also possible and common to apply filters based on the contents of messages, but running such filters no less expensive to the provider than delivering the message, since the filter operates at the last stage before the message would be delivered.
+Furthermore, spammers know that users and providers will block junk e-mail when they can, so they have become increasingly devious in their use of indirect mail delivery and misleading information in their messages to defeat users and providers who wish to filter them out.
+For example, I receive about four unwanted pieces of mail daily from Quantum Communications in New Hampshire, yet none of those messages arrives directly from Quantum.
+Instead, they take a "cowbird" approach.
+Due to a historical quirk, most mail systems on the Internet will deliver mail to anyone, not just their own users.
+Quantum relays their junk mail through hundreds of unwitting third party mail systems to evade blocks that prevent them from mailing to many people directly.
+2.19 Are there technological developments that might serve the interests of consumers who prefer not to receive unsolicited commercial e-mail? If so, please describe.
+The blocks and filters I described in the last few paragraphs are of some help, but all require human effort and computer resources on the part of the recipient or his provider.
+This shifts costs away from the advertiser and on to the unwilling recipient and his provider.
+Some people have suggested mandatory labeling of junk e-mail with UNSOL or a similar tag.
+This is unlikely to be effective for two reasons: one is that the costs of tag-based filtering remain on the recipients, not the senders of e-mail.
+The other is that, based on experience to date, spammers are no more likely to put a correct UNSOL tag on their mail than they are to put a valid return address, something that they do less and less every day.
+2.20 How many commercial entities have implemented the Principles for Unsolicited Marketing E-mail presented at the June 1996 Workshop by the Direct Marketing Association and the Interactive Services Association?
+None that I know of.
+Certainly none of the organizations sending me unsolicited advertising e-mail have done so.
+I send out many complaints every day about unsolicited mail, and although I have received many responses from providers who have canceled spammers' accounts, I have yet to receive an apology from any of the junk e-mailers themselves.
+Unsolicited e-mail to children
+3.16 How widespread is the practice of sending children unsolicited commercial e-mail? Are privacy or other consumer interests implicated by this practice? What are the sources of e-mail addresses used for this purpose?
+Since junk e-mailers make no attempt to qualify their lists, any child with an e-mail address is as likely as anyone else to receive unwanted junk e-mail.
+3.17 What are the risks and benefits, to children, parents and commercial entities, of unsolicited e-mail directed to children? What are parents' perceptions, knowledge and expectations of the risks and benefits?
+The risks are the same as for mail sent to adults, with the addition that much unsolicited e-mail advertises sexually oriented goods and services, dubious or fraudulent investments, herbal cures, and other material inappropriate for children.
+3.18 What costs does unsolicited commercial e-mail directed to children impose on children, parents, or others? Are there available means of avoiding or limiting such costs? If so, what are they?
+The costs are the same as those on adults, with the addition that parents increasingly have to screen their children's e-mail to check for inappropriate messages of the types discussed above.
+3.19 Are there technological developments that might serve the interests of parents who prefer that their children not receive unsolicited commercial e-mail?
+The answer is the same as to question 2.19 -- there are some partially effective filters, but they shift costs from advertisers to recipients, and spammers have shown that whenever possible they will evade the filters that are in place.
+3.20 How many children's commercial Web sites have implemented the Principles for Unsolicited Marketing E-mail presented at the June 1996 Workshop by the Direct Marketing Association and the Interactive Services Association?
+I am not aware of any, but since Web sites are not a major source of addresses for unsolicited e-mail, it doesn't really matter.
+Sincerely,
+John R. Levine

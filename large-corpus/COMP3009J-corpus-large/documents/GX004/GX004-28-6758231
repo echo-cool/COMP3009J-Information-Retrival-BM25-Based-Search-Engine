@@ -1,0 +1,24 @@
+Technologies The NASA Space Telerobotics Program [0722.gif] Frequency Analysis of Data on Telerobotic Tasks Spectral signatures could lend insight into design and performance.
+NASAUs Jet Propulsion Laboratory, Pasadena, California
+Data on forces and torques measured in experiments with remote manipulators can be processed into spectral signatures via a special frequency-analysis procedure.
+The spectral signatures complement other measures used to evaluate performances of telerobotic systems and human operators.
+In particular, spectral signatures can contribute to verification of some assumptions made in designing manipulator arms and control subsystems and can be used as feedback by operators engaged in real-time monitoring of telerobotic tasks.
+Spectral signatures also provide useful indications of flows of power between manipulators and their environments: this is important in that it is highly desir able to minimize both task-execution times and the magnitudes of forces and torques employed in tasks, thus minimizing such flows of power.
+The telerobotic experiments involve various tasks and subtasks in which the operator commands the remote manipulator to move a peg to a marked location on a board, tap the peg on the mark, move the peg to a hole in the board, insert the peg in the hole, release the peg, regrasp and extract the peg, return to and tap the mark with the peg, then move the peg to a final position.
+The start-and- stop motions in these subtasks give rise to sudden changes in torques and forces on the manipulator, so that traditional spectral analysis is almost useless in analyzing the resulting force and torque data.
+In the special frequency-analysis procedure, which was developed specifically for this application, segmentation algorithms are used to extract data on homogeneous subtasks from different experiments.
+By so doing, the algorithms synthesize artificial streams of data, such that all data in a given stream pertain to a given subtaskQ for example, move, grasp, or insert.
+The segmentation algorithms include a Viterbi-decoder algorithm based on an underlying hidden Markov model of the peg-in-hole task and its subtasks.
+A hidden Markov model is a mathematical model of a Markov process that cannot be observed directly.
+Each state of the Markov model is associated with a probability density that manifests itself in the experimental observations.
+In most cases, the probability densities overlap, and the problem of recognizing the sequence of states that generates a given sequence of measurement data involves the combination of information on probabilities of transitions between states with state-observation densities and with the specific sequence of observations.
+The figure presents an example of segmentation of force data by use of the hidden Markov model plus intervention by the operator to establish the intermediate RtapS states that correspond to the tapping subtasks.
+Following segmentation, the data that pertain to the taps are eliminated, and the remaining data on each subtask are filtered by use of a Hanning window over time.
+Filtering is necessary to compress the data at the tails of the subtasks an d reduce their effects on the spectra.
+The data on homogeneous tasks are then combined into a single file, and this file is processed with a fast Fourier trans form to obtain the desired spectral signature (see Figure 2).
+More details can be found in:
+P. Fiorini and A. Giancaspro, RA Procedure for the Frequency Analysis of Telerobotics Tasks Data,S IEEE/RSJ International Conference on Intelligent Robots 
+Point of Contact: Antonio Giancaspro, Paolo Fiorini Mail Stop 198-219 Jet Propulsion Laboratory 4800 Oak Grove Drive Pasadena, CA 91109 818-354-9061 Paolo.Fiorini@jpl.nasa.gov [MailIcon.gif] __________________________________________________________________
+Program Description Major Projects Program Plans Participants 
+[AandRLogo.gif] Telerobotics Program page Please email the site webmaster [MailIcon.gif]
+Maintained by: Dave Lavery Last updated: May 10, 1996

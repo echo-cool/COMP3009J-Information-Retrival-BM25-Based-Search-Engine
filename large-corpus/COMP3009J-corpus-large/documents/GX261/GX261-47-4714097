@@ -1,0 +1,334 @@
+STOCHASTIC ATTRIBUTED K -D TREE MODELING OF TECHNICAL PAPER TITLE PAGES Song Mao National Library of Medicine Bethesda, Maryland 20894 Azriel Rosenfeld Center for Automation Research University of Maryland College Park, Maryland 20742 Tapas Kanungo IBM Almaden Research Center San Jose, California 95120 ABSTRACT Structural information about a document is essential for structured query processing, indexing, and retrieval.
+A document page can be partitioned into a hierarchy of homogeneous regions such as columns, paragraphs, etc.; these regions are called physical components, and define the physical layout of the page.
+In this paper we develop a class of models for the physical layouts of technical paper title pages.
+We model physical layout using hidden semi-Markov models for directional projections of page regions, and a stochastic attributed K -d tree grammar model for the 2D hierarchical structure of these regions.
+We use the models to generate sets of synthetic title page images of three distinctive styles, which we use in controlled experiments on page structure analysis.
+1.
+INTRODUCTION AND PRIOR WORK A document page can be partitioned into a hierarchy of physical components, such as pages, columns, paragraphs, textlines, words, tables, figures, halftones, etc.
+This structural information is essential for structured query processing, indexing, and retrieval the content of the document.
+Document understanding modules, such as Optical Character Recognition (OCR) and graphics recognition modules, can also be selectively applied to the structural components of document page images.
+Title pages of technical papers contain rich bibliographical information about the papers, which is crucial for their indexing and retrieval.
+In this paper, we demonstrate how to analyze the layout of the physical components of technical paper title pages using hidden semi-Markov models [1] and a stochastic attributed K -d tree grammar.
+Document structure analysis can be regarded as a syntactic analysis problem.
+The order and containment relations among the components of a document page can be described by an ordered tree structure and can be modeled by a tree grammar which describes the page at the component level in terms of regions or blocks.
+We will introduce a class of such grammars in Section 2.
+A few researchers have developed document physical layout analysis algorithms that make use of grammatical methods.
+Kopec and Chou [2] describe an algorithm for segmenting a column of text that is modeled using a stochastic regular grammar, but their algorithm must be given templates for the symbols in the language and that the page is segmented into columns by some other procedure.
+Tokuyasu and Chou [3] used regular grammars to describe the structure of document page images in terms of axis-parallel rectangles, and used a Turbo decoding approach to estimate the 2D image from the observations, but they provided very limited experimental verification of their approach.
+Krishnamoorthy et al. [4] described an algorithm that constructs a tree in which each node represents an axis-parallel rectangle, but the segmentation and labeling process in their algorithm is based on heuristically specified parameters, not on estimated ones.
+2.
+THE MODEL Our physical layout model consists of two parts: (1) a hidden semi-Markov model that describes the grouping of lowestlevel page regions (strips, in a given direction) into rectangular blocks; (2) a K -d tree grammar (defined below) that describe the hierarchical decomposition of the page into these blocks.
+To parse a given page image, we first divide it into thin parallel strips and count the number of black pixels in each strip.
+The resulting sequence of pixel counts is taken to be the observation sequence of a hidden semi-Markov model.
+The state changes of the model then indicate boundaries between groups of strips.
+For example, a line of text contains a group of strips with high pixel counts, and the strips in a gap have low pixel counts.
+The states define labels of the groups of strips.
+These labels are vocabulary symbols of a stochastic attributed K -d tree grammar which we use to find possible physical layouts of the page.
+In the following description we assume K = 2.
+The "productions" ri of the grammar are directional subdivision processes, each of which is of the form ri : Xi i . i
+Here i is a set of trees defined on the vocabulary in which non-leaf nodes are labeled with nonterminal symbols and leaf nodes are labeled with either terminal or nonterminal symbols; i denotes the coordinate direction along which the subdivision takes place; and the children of each parent node in each tree in i are ordered.
+The trees can be of two types: a terminating type, in which all the leaf nodes are labeled with terminal symbols, and a nonterminating type, in which one or more of the leaf nodes are labeled with nonterminal symbols.
+Each symbol represents a rectangular region.
+The position and size of this region are defined by the pairs of coordinates of two of its opposite corners.
+The coordinates associated with the start symbol S represent the entire page, and the region associated with a parent node is the union of the regions associated with its children.
+For each ri , let Lef t(ri ) and Leav es(ri ) denote the left-side symbol Xi of ri and the set of ordered sets of rightside leaf nodes of the trees in i . ri is applied in direction i to partition the rectangular region D(Lef t(ri )) into a set of ordered sets of rectangular regions D(Leav es(ri )).
+Associated with each node of each tree in i is its coordinate (in that direction) relative to the coordinate of the region represented by Lef t(ri ).
+Also associated with each leaf node of ri are two features, black pixel count and size, which are used to determine which sets of strips can be grouped into the region associated with the leaf node.
+A derivation in the grammar involves the application of a sequence of ri 's.
+In a generative derivation, the application of ri attaches some tree in i to a leaf node that has the label Lef t(ri ).
+In a parsing derivation, the application of ri joins a set of root nodes that have labels of Leav es(ri ) to a new root node that has the label Lef t(ri ).
+When ri is applied and rj is applied to the result (i.e., Lef t(rj ) Leav es(ri )), the directions of ri and rj must be different.
+The grammar is stochastic, as defined by the following probabilities: Â· pi , the probability of applying ri ; for any symbol A, Lef t(ri )=A pi = 1.
+Â· For each ri , each node of Leav es(ri ) represents a group of strips.
+The process of grouping the strips into subregions is performed by a hidden semi-Markov model i .
+The sequence of strip black pixel counts is taken to be the observation sequence of i .
+The states of i are vocabulary symbols of the grammar.
+Â· i = (Ai , Bi , Ci , i ), where Â­ Ai denotes the state transition probability matrix of i .
+Â­ Bi is a matrix of the probabilities that the pixel count of a strip has a given value if the strip belongs to a given state.
+Â­ Ci denotes the size (or duration) probability matrix: a matrix of the probabilities that the number of strips belonging to a given state has a given value.
+Â­ i denotes the initial probability vector: the probability that i starts in a given state.
+An attributed complete tree is a tree whose root node is labeled S and has associated coordinates that represent the initial region, and whose leaf nodes are labeled with terminal symbols and have associated coordinates that define a partition of that region, as well as associated feature values.
+The complete language of the grammar is the set of attributed complete trees that can be created either in a generative derivation starting from a single node labeled S , or in a parsing derivation starting with a set of nodes that have terminal labels.
+The probability of generating an attributed complete tree T in the grammar is a product of probabilities taken over the ri 's that are used in the deriving T .
+For each of these ri 's, we multiply pi by the probability of the sequence of strips and feature values that are associated with the most probable set of leaf nodes of any tree in i .
+Let qi denote the partition of the strips of D(Lef t(ri )) into groups of strips associated with one of the ordered sets in Leav es(ri ) and let oi be the vector of feature observations on the strips of D(Lef t(ri )).
+Thus if a sequence r1 , r2 , . . . , rk , a sequence of feature value vectors o1 , o2 , . . . , ok , and a sequence of state vectors q1 , q2 , . . . , qk are used to generate T , the probability of generating T is k k
+pi P (oi , qi |i ) i=1 r1 ,o1 ,q1
+= i=1
+P (i )P (oi , qi |i ) rk ,ok ,qk
+where S = T1 = T2 . . .
+= T , If we are given an image I , the feature observations (o's) on the strips of the leaf nodes in a derivation of I are fixed.
+However, there can be more than one derivation of I using different combinations of r's and q's.
+We can use the grammar to find a maximum-probability hierarchical partition (i.e., a maximum-probability parse) of I .
+To do this, we divide I into strips, and we consider all possible partitions of these strips into groups each of which corresponds to a leaf node of some tree in i .
+With each ri and each partition qi we associate the probability P (i )P (oi , qi |i ).
+We find the sequence of ri 's and associated partitions for which the product is as great as possible (* denotes the optimum): k
+r2 ,o2 ,q2
+T (I )
+=
+arg
+r1 ,r2 ,...,rk ,q1 ,q2 ,...,qk
+max
+P (ri )P (oi , qi |i ) i=1 k
+=
+arg
+1 ,2 ,...,k ,q1 ,q2 ,...,qk
+max
+P (i )P (oi , qi |i ) i=1
+X S Y S P Y P B B
+L
+g
+R
+n
+lm
+P
+rm
+n
+n
+tm
+h
+g
+1
+TI
+g2
+AU
+g3
+B
+g4
+ft
+bm
+n
+L
+g
+R
+n
+lm
+P
+rm
+n
+ti g
+ti
+ti g
+au gau g au
+au
+ti
+n
+tm
+h
+g
+1
+ti
+g
+2
+au
+g3
+B
+g4
+ft
+bm
+n
+Y L L
+R
+R
+or
+Y R R or
+Y R R
+AB
+g
+5
+BT
+g
+6
+FN
+SP
+SP
+gph
+BT
+BT
+ab g
+ab
+ab SE g ph
+sp gsp SE fn g fn
+sp SE gph SE
+fn
+sp gsp
+sp
+SE
+g
+ph
+SE
+SH
+g
+hp
+SP
+SH
+g
+hp
+SP
+SH
+ghp
+SP
+SH
+ghp
+SH SP
+g
+hp
+SP
+SH
+g
+hp
+SP
+sh g
+sh
+sh
+sp gsp g
+sp
+sh g
+sh
+sh
+sp gsp
+sp
+sh g
+sh
+sh
+sp gsp
+sp
+sh gsh
+sh
+sp gsp
+sp
+sh gsh
+sh
+sp gsp
+sp
+sh g
+sh
+sh
+sp gsp
+sp
+g
+ab
+sh
+g
+sp
+g
+fn
+gsh
+gsp
+ab
+g
+1
+sh
+g
+hp
+sp
+g
+2
+fn sh
+ghp
+sp
+g
+ph
+gph
+(a)
+(b) Fig. 1.
+A two-column title page image (a) and its physical layout model (b). k
+arg
+1 ,2 ,...,
+max
+P (i )P (oi , q |i ) i k
+i=1
+Table 1.
+Symbol descriptions in the technical paper title page physical layout grammar.
+Note that the descriptions of the gaps are omitted.
+Symbol Type Nonterminal Description S: start symbol; P: main body of text; TI: title AU: author; B: two-column body; L, R: left, right column AB: abstract; BT: sections; FN: foot note SH: section heading; SP: section paragraph h: header; lm, rm, tm, bm : left, right, top, and bottom margin n: noise streak; ti: title line; au: author line; ft: footer line ab: abstract line; fn: footnote line sh: section heading line; sp: section paragraph line
+The attributed complete tree T defined by this sequence, r1 ,q1 r2 ,q2 rk ,qk i.e., S = T1 (I ) = T2 (I ) . . .
+= T (I ), specifies the maximum-probability hierarchical partition of the image.
+To find T (I ) we use a dynamic programming algorithm called the DV (for "duration Viterbi") algorithm.
+As we will see, this algorithm is much more powerful than the conventional Viterbi algorithm ("V algorithm"), in which state durations are not used (i.e. there is no C matrix).
+Our model differs from non-grammar-based tree methods in the following aspects: 1) Our model is generative.
+2) symbols are rewritten as sets of trees representing subdivisions of a region in a given direction.
+3) the tree nodes in our grammar have associated coordinates which define K dimensional rectangular regions.
+The coordinate aspect of our grammar makes it a very appropriate tool for generating and parsing Manhattan document layouts.
+The physical layout analysis model for technical paper title pages of two-column format is shown in Figure 1.
+The descriptions of the symbols in the grammar are given in Table 1.
+Our performance metric was based on the fraction of correctly detected textlines.
+Let lH be a set of groundtruth textlines, each of which has a logical label.
+A textline is said to be correctly detected if it does not have any of the following six types of textline errors: 1) false dismissals: no segmented line significantly overlaps lH ; 2) false alarms: a segmented line does not significantly overlap any lH ; 3) merges: two or more groundtruth lines sig-
+Terminal
+nificantly overlap a segmented line; 4) cuts: lH significantly overlaps both a segmented line and its complement; 5) excessive height: the segmented line that significantly overlaps lH is too thick (vertically); and 6) incorrect labeling: the line is correctly segmented (on the basis of the significant overlap and height criteria), but is not labeled correctly.
+Since there are many textlines on a document page, measures based on textlines provide a statistically meaningful evaluation of performance.
+3.
+EXPERIMENTS We conducted experiments on technical paper title pages that had three styles: one-column, mixed one- and two- column, and two-column.
+The one-column style is used by SPIE conferences; the mixed one- and two- column style is used by SICE conferences; and the two-column style is used by many IEEE transactions and conferences.
+We obtained A LTEXstyle files for these title page styles from the IEEE, SPIE, and SICE web sites.
+Algorithm Performance Image Resolution = 300dpi Â£
+Algorithm Performance Image Resolution = 300dpi Â£
+Algorithm Performance Image Resolution = 300dpi Â£
+0.8
+0.8
+DV algorithm V algorithm
+0.8
+DV algorithm V algorithm
+0.6
+0.6
+0.6
+percentage
+percentage
+0.4
+DV algorithm V algorithm
+0.4
+percentage 0.4 0.2 0.2 0.0 0.00
+0.2
+(a) (b) (c) Fig. 2.
+Performance using the V and DV algorithms and the 2-d tree grammar with model parameters estimated on noise-free training images (a) and on images degraded at two levels (b-c).
+Table 2.
+Dataset descriptions for three layout styles.
+Style one-column mixed one- and two-column two-column Training Dataset 13 pages 11 pages 9 pages Test Dataset 16 pages 10 pages 8 pages
+(a)
+(b)
+lower of the two degradation levels is quite substantial.
+Each page in the test datasets was degraded at ten degradation levels.
+Two of these levels were the same as the levels used for training.
+Figure 3 shows an example of the segmentation of a two-column title page into page, text body, columns, and textlines using the K -d tree grammar and the DV algorithm.
+Figure 2 shows evaluation results using the V and DV algorithms on a set of title page images that had all three layout styles, using a combined grammar.
+The performance using the DV algorithm is significantly better than that for the V algorithm in nearly all cases.
+In all cases, both algorithms attain the best performance at the noise level used for algorithm training.
+4.
+REFERENCES [1] D. R. Cox and H. D. Miller, The Theory of Stochastic Processes, Methuen and Co LTd, London, 1965.
+[2] G. E. Kopec and P. A. Chou, "Document image decoding using Markov source models," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 16, pp. 602Â­617, 1994.
+[3] T. A. Tokuyasu and P. A. Chou, "Turbo recognition: A statistical approach to layout analysis," in Proceedings of SPIE Conference on Document Recognition and Retrieval, San Jose, CA, January 2001.
+[4] M. Krishnamoorthy, G. Nagy, S. Seth, and M. Viswanathan, "Syntactic segmentation and labeling of digitized pages from technical journals," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 15, pp. 737Â­747, 1993.
+[5] T. Kanungo, R. M. Haralick, and I. Phillips, "Nonlinear local and global document degradation models," International Journal of Imaging Systems and Technology, vol. 5, pp. 220Â­230, 1994.
+(c)
+(d)
+Fig. 3.
+Segmentation of a noisy image into page (a), text body (b), columns (c), and textlines (d) using the DV algorithm and the 2-d tree grammar.
+The algorithm parameters were estimated on a training dataset with the same degradation level.
+We used our stochastic generative document model to randomly generate a dataset of noise-free synthetic title page images with groundtruth for each of the three styles.
+The page text was taken from the symbolic text of the title pages in the University of Washington III dataset.
+Each page image was sampled at 300 dpi.
+Table 2 shows the dataset descriptions for the three styles.
+We modified the DVI2TIFF software to generate clean images and their textline groundtruth, including the logical label of each line.
+Each page in the training datasets was degraded at two degradation levels using the document degradation model of [5].
+As can be seen from Figure 3, even the
+Â¡
+Â¢
+Â¡
+Â¢
+Â¡
+Â¢
+0.0 0.00
+0.02
+0.04 0.06 degradation
+0.08
+0.10
+0.02
+0.04 0.06 degradation
+0.08
+0.10
+0.0 0.00
+0.02
+0.04 0.06 degradation
+0.08
+0.10

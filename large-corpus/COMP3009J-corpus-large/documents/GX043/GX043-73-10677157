@@ -1,0 +1,18 @@
+#next previous up next next up previous Next: 2^62 -2^16 + 1 Up: Random Number Generators Previous: 61-bit Prime Modulus Linear 2^64 -2^10 + 1 Modulus Linear Congruential Generator Due to the discovery of a pattern for random number generators based on Mersenne primes, a family of prime modulus generators has been explored that removes this pattern while still maintaining good efficiency for modular arithmetic.
+In addition to removing the offending pattern, these generators also offer a slightly longer period because they use more of the available 64-bits in the random number state.
+As discussed in [5], the key to removing the pattern resulting from the Mersenne prime modular arithmetic is using special primes with a ``+1'' instead of ``-1'' as the last term in the expression composed of powers of two.
+The first of these is a prime modulus linear congruential generator provided by the recurrence relation:
+x[n] = a x[n - 1]
+Where the multiplier, a = 3355703948966806693, is hardwired into the algorithm and p is the prime, 2^64 -2^10 + 1.
+The multiplier was again chosen to obtain maximal period of the generator, 2^64 -2^10 $ \approx$ 1.8 x 10^19.
+The interface routines for this generator are declared as: Rng_Type RngP64_10Seed( Rng_UInt32 i, Rng_UInt32 j );
+Rng_Type RngP64_10Spawn( Rng_Type *x );
+int iRngP64_10( Rng_Type *x );
+double dRngP64_10( Rng_Type *x );
+float fRngP64_10( Rng_Type *x );
+This random number generator suffers from no patterns that we are aware of.
+We are currently evaluating its quality using statistical tests.
+The fact that this generator has a prime modulus and its period is close to 2^64 makes it very attractive.
+This generator also traps a zeroed state, making it equally useful for debugging.
+__________________________________________________________________
+next up previous Next: 2^62 -2^16 + 1 Up: Random Number Generators Previous: 61-bit Prime Modulus Linear

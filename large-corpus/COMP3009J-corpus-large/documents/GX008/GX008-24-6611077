@@ -1,0 +1,128 @@
+SED navigation bar Supported Graphics Devices Introduction Dataplot supports a number of graphics device drivers.
+Some of these (e.g., Postscript) are built-in directly and are thus available on all implementations of Dataplot.
+Other drivers require local installation (typically, this just means linking with an appropriate graphics library) and may or may not be available on a given implementation.
+Certain types of graphics output may be post-processed by external software.
+Chapter 7 of Volume I of the online Reference Manual discusses the commands for specifying the graphics devices.
+The Frequently Asked Questions discusses the issues of printing graphs and importing graphs into word processors in the PC Windows environment.
+Built-in Device Drivers DATAPLOT supports the following built-in device drivers: * Tektronix - most models (4010, 4014, 4105, 4113, 4027, 4663, and related devices) * REGIS - for DEC terminals (VT-240, VT-340) * HP-GL - Hewlett-Packard plotters (widely emulated by many other plotter vendors, can use with the LaserJet III) * HP 2622 - Hewlett-Packard terminal, also includes many related models (2623, 2647, and others) * POSTSCRIPT - used by many laser printers (includes encapsulated Postscript), both black and white and color Postscript supported *
+SVG (Scalable Vector Graphics) - this is the new XML based graphics protocol.
+It's primary use is for web applications.
+However, the SVG format is an editable and I expect many graphics programs (such as Adobe Photoshop, Corel Draw, etc.) to support SVG import in the future.
+That is, you could import a Dataplot SVG graph into a sophisticated graphics editor.
+Although this is still a new and developing format, with the increasing importance of XML I expect this to be an important format over the next few years.
+* QUIC - protocol used by QMS (and some Talaris) laser printers (obsolete) * HP 7221 - Hewlett-Packard 7221 plotter * GENERAL - DATAPLOT specific metafile * CGM - Computer Graphics Metafile (ANSI standard metafile).
+DATAPLOT currently only supports the clear text encoding.
+CGM never really seemed to catch on, so I never got around to implementing the binary encoding (I may, but this is a fairly low priority).
+* DISCRETE - if you do not have a screen device available, using DISCRETE will generate a line printer type graphic to the screen.
+Many devices support either Tektronix, Postscript, or HP-GL emulation.
+Device Drivers That May Require Some Local Installation In addition, the following devices are available, but may require some local installation (usually linking the proper device library).
+The installation notes give instructions for installing these devices (when the appropriate vendor library is available).
+* X11 - MIT windowing system, supported on most Unix based workstations.
+Has been tested on Sun, SGI, HP-9000, VAX workstation, IBM RS-6000, Linux, Cray, Convex, MAC OSX. Unix installations (including MAC OSX) will include the X11 driver when they are built.
+Windows installations will not.
+For non-Unix, non-PC platforms, you may need to investigate whether your system supports X11 before building Dataplot.
+* QWIN - available only for the PC version built with the Microsoft PowerStation Fortran compiler or the Compaq (now Intel) Visual Fortran compiler.
+These compilers are currently used to build the command line version for the Windows 95/98/ME/NT 4/2000/XP platform.
+* LAHEY - available only for the PC version built with the LAHEY compiler.
+Note that this was built using the version of the compiler for DOS/Windows 3.1.
+It is obsolete for the Lahey F90 and Lahey F95 compilers.
+The graphics library for the current version of the Lahey compilers (LF90 and LF95) is Winteractor.
+Although I have done some testing with this library, there are some problems.
+Specifically, Winteractor combines the graphics and GUI.
+As we use Tcl/Tk for the GUI, this presents some compatiblity problems.
+The Lahey compiler is used for the GUI version under Windows.
+Screen graphics are generated using Tcl/Tk.
+There is currently no screen graphics if running the Lahey version independently of the GUI. * VGA - available for the PC version built with the OTG compiler only.
+As we no longer support this compiler with Dataplot, this is an obsolete driver.
+* GD 
+This is the library used by Perl (and a number of other popular freeware programs).
+PNG and JPEG are primarily used to support web applications.
+Almost all web browsers support JPEG graphics and most of them now support PNG as well.
+These are alternatives to the GIF format.
+Note that there are patent/royalty issues with the GIF format.
+For this reason, freeware programs such as Dataplot do not typically support GIF.
+The PNG driver is currently available for the pre-built Unix executables (including MAC OSX).
+I am currently working on porting this to the PC.
+The situation is the same for the JPEG driver with the exception that JPEG does not work on a few specific Unix platforms.
+PNG and JPEG can also be useful as an alternative format for importing into word processors and page publishing programs.
+Although they do not provide the high resolution quality obtained by importing Postscript, they are sometimes more convenient to work with.
+* Calcomp - uses the standard Calcomp library.
+Many vendors, particularly plotters, support this library.
+Although this is essentially an obsolete driver, note that there are graphics packages that still operate with a Calcomp interface.
+This means that you could possibly use the Calcomp driver to link to a graphics library that might support a device that Dataplot does not support directly.
+* Zeta - uses a slightly modified version of the Calcomp library for Zeta devices (dashed lines handled differently).
+This is essentially an obsolete device.
+* Sun CGI - available on the Sun only.
+Uses the CGI library and runs in a gfxtool or suntool window.
+Sun no longer supports the CGI library.
+Use the X11 device if you run Open Look or Solaris Common Desktop Environment.
+SunView is obsolete.
+You would only build this version if you are running a very old Sun that is running SunView.
+To use it, do a global replace of "CSUN" to " " in the files dp37.f, dp38.f, and dp39.f and then link in the needed CGI libraries.
+Adding New Device Drivers I have a number of devices that I plan to add support for in Dataplot.
+Feel free to send me requests for additional device support.
+My criteria for deciding to add a device are:
+* Availability - the most basic criterion is simply whether or not I have a device (and related, the documentation) to do the testing.
+* Usefulness - I have limited time/resources to develop device drivers for Dataplot.
+Therefore, device drivers with wide applicability will take precedence over a device driver for a specific, narrowly available device.
+For example, Postscript and X11 have extremely wide applicability (essentially all Unix environments support X11, many offline devices use Postscript).
+On the other hand, a device driver for a specific printer is unlikely to get written.
+* Device drivers for specific devices are good candidates for user contributed code.
+I (Alan Heckert) am willing to provide guidance.
+The device drivers I am currently considering are:
+* OpenGL - the main purpose for supporting OpenGL is to provide a foundation for improved high performance 3d graphics.
+I believe OpenGL provides the best balance between high performance and portability (i.e., it is available on the major platforms: Unix, Windows, MacIntosh).
+* GDI - graphic device interface for Microsoft Windows.
+The purpose of this would be to provide generic printer support in Dataplot under Windows.
+This one is complicated by the fact that graphics under Microsoft is typically mixed with graphical interfaces.
+Our use of Tcl/Tk for the Dataplot GUI probably prohibits the use of this driver with the GUI version of Dataplot.
+However, it might be possible to implement this for the command line version.
+As alternatives, I am also looking into using the ghostscript library.
+This would not be as general as a native GDI driver, but it would support many common printers in both the PC and Unix environments.
+Another alternative is a GDI Tcl/Tk extension.
+This would only apply to the GUI version for PC's, but it might be a way around the window compatibility issues in this environment.
+NOTE: See the NOTE in the Ghostscript/Ghostview section below.
+This provides a Ghostscript interface to GDI for the PP command.
+For this reason, I have lowered the priority for this device driver.
+* Quartz - this is the native mode graphics library for MAC OSX. Quartz outputs PDF format files.
+My initial implementation will probably be for file output (i.e., a PDF format output file).
+The next step would be to generate screen output.
+This step will require my obtaining the Absoft MAC OSX compiler first (Quartz does not provide the windowing).
+The advantage of this would be to allow a version of Dataplot for MAC OSX that does not require installing an X11 server.
+However, as with the GDI driver for Windows, there is intermixing of graphics/windows issues.
+This means the quartz screen driver would probably be limited to the command line version.
+The Tcl/Tk base GUI would still need to be run in X11 mode.
+* Latex using EEPIC package - this will be a fairly specialized driver.
+Its main purpose would be for generating high quality presentation graphics for publication.
+It will primarily be of interest to those already familiar with Latex who would like to incorporate some of Latex's capabilities into Dataplot graphs.
+Ghostscript/ Ghostview Using the popular and freely downloadable Ghostscript/Ghostview programs can greatly extend the list of supported devices on the Unix and Microsoft Windows platforms.
+Ghostscript/Ghostview can read Postscript files and view them on the screen or convert them to many other common formats.
+In particular, the most common use of Ghostscript/Ghostview is to print Postscript files on non-Postscript printers.
+NOTE: Recent enhancements (as of 1/2003) to Dataplot now invoke Ghostview or Ghostscript automatically.
+Specifically, * Under Windows, the SET GHOSTSCRIPT PRINTER ON command uses the Ghostview program GSPRINT (this is installed when Ghostview is installed) to implement the PP command (PP prints the most recent graph).
+See the GHOSTSCRIPT PRINTER command for details.
+GSPRINT uses the generic Windows printer driver, so most Windows printers should now be supported.
+* Under Windows and Unix, the SET POSTSCRIPT CONVERT command can be used to invoke ghostscript to automatically convert Dataplot Postscript output to JPEG, TIFF, PDF (Portable Document Format), or any of the four PBM formats (PBM, PGM, PPM, and PNM).
+This provides additional options for formats that can be imported into external programs (e.g., word processors).
+See the POSTSCRIPT CONVERT command for details.
+Using PC as Terminal If you are using a PC as a terminal for a version of DATAPLOT on another host, there are 2 basic approaches:
+1.
+find a communications package that provides either Tektronix, REGIS, or HP 26xx emulation.
+2.
+If Dataplot is running on a Unix host, you can use an X11 software package for the PC.
+As a technical note, the X11 driver in Dataplot is built using only the "xlib" library (not Xt or Motif or one of the other toolkits).
+This means just about any X11 server software should work with Dataplot (e.g., on my own PC, I use a free X11 package that works just fine for Dataplot).
+Dataplot Post Processor Many years ago I wrote a post-processor for DATAPLOT.
+This will read either DATAPLOT metafiles (i.e., the GENERAL device) or Tektronix 4014 format files.
+There are currently 2 versions available.
+One uses the Disspla subroutine library while the other uses the Template subroutine library.
+If you have one of these commercial libraries available, this is a way to provide support for additional graphics devices.
+This works fairly well for off-line devices such as film recorders or plotters, but is less useful for terminals.
+With the availability of Ghostview/Ghostscript and the emergence of Postscript, I don't really find any particular need for this anymore.
+However, the source is available upon request (the most likely use is to adapt it to a local graphics library).
+If you are interested in the post processor, contact Alan Heckert.
+The CGM metafile can be used if you have a local post-processor that reads CGM format files.
+DATAPLOT currently only generates clear text ecoded CGM files.
+Many post-processors only read binary encoded CGM files.
+Date created: 6/5/2001 Last updated: 2/13/2002 Please email comments on this WWW page to sedwww@cam.nist.gov.
+[ Dataplot | Dataplot Downloading | Documentation ]

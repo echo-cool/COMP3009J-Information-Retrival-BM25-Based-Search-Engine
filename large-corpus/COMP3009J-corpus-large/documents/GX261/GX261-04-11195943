@@ -1,0 +1,218 @@
+SANDIA REPORT SAND2000-1005 Unlimited Release Printed March 2001 Agent Concept for Intelligent Distributed Coordination in the Electric Power Grid Douglas C. Smathers and Steven Y.
+Goldsmith P repared by S andi a Nat i onal Laborat ori es A l buquerque, New Mexi c o 87185 and Li verm ore, Cal i f orni a 94550 S andi a i s a m u l t i p rogram l aborat ory operat ed by S andi a Corporat i on, a Loc k heed M a rt i n Com pany, f o r t he Uni t ed S t at es Depart m ent of E nergy under Cont rac t DE -A C04-94A L85000.
+A pproved f or publ i c rel eas e; f urt her di s s em i nat i on unl i m i t ed.
+Issued by Sandia National Laboratories, operated for the United States Department of Energy by Sandia Corporation.
+NOTICE: This report was prepared as an account of work sponsored by an agency of the United States Government.
+Neither the United States Government, nor any agency thereof, nor any of their employees, nor any of their contractors, subcontractors, or their employees, make any warranty, express or implied, or assume any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represent that its use would not infringe privately owned rights.
+Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government, any agency thereof, or any of their contractors or subcontractors.
+The views and opinions expressed herein do not necessarily state or reflect those of the United States Government, any agency thereof, or any of their contractors.
+Printed in the United States of America.
+This report has been reproduced directly from the best available copy.
+Available to DOE and DOE contractors from U.S. Department of Energy Office of Scientific and Technical Information P.O. Box 62 Oak Ridge, TN 37831 Telephone: Facsimile: E-Mail: Online orde (865)576-8401 (865)576-5728
+reports@adonis.osti.gov ring: http://www.doe.gov/bridge
+Available to the public from U.S. Department of Commerce National Technical Information Service 5285 Port Royal Rd Springfield, VA 22161 Telephone: Facsimile: E-Mail: Online orde (800)553-6847 (703)605-6900
+orders@ntis.fedworld.gov r: http://www.ntis.gov/ordering.htm
+SAND2000-1005 Unlimited Release Printed March 2001
+Agent Concept for Intelligent Distributed Coordination in the Electric Power Grid
+Douglas C. Smathers and Steven Y.
+Goldsmith Secure Networks and Information Systems Department Sandia National Laboratories P. O. Box 5800 Albuquerque, New Mexico 87185-0455
+ABSTRACT Intelligent agents and multi-agent systems promise to take information management for real-time control of the power grid to a new level.
+This report presents our concept for intelligent agents to mediate and coordinate communications between Control Areas and Security Coordinators for real-time control of the power grid.
+An appendix describes the organizations and publications that deal with agent technologies.
+3
+Prepared for the Transmission Reliability Program Office of Power Technologies Assistant Secretary for Energy Efficiency and Renewable Energy U.S. Department of Energy
+The work described in this report was funded by the Assistant Secretary of Energy Efficiency and Renewable Energy, Office of Power Technologies of the U. S. Department of Energy.
+Sandia is a multiprogram laboratory operated by Sandia Corporation, a Lockheed Martin Company, for the United States Department of Energy under contract DE-AC04-94AL85000.
+4
+CONTENTS 1.
+Introduction .................................................................................................................................
+6 2.
+State of the Art in Agent Technologies.......................................................................................6 3.
+Agent Concept ............................................................................................................................
+8 4.
+Prototype Agent System .............................................................................................................
+8 5.
+Agent Mediated Communication Paths ......................................................................................
+9 6.
+Conclusions ...............................................................................................................................
+11 Appendix .......................................................................................................................................
+12
+5
+1.
+Introduction Application of intelligent agents to perform soft real-time control functions for the bulk power grid is a way to introduce new information management techniques and information security functions to the power grid.
+The state of intelligent agent technologies has blossomed in the last decade with much of the effort focused on information management and intelligent information search and retrieval functions for the World Wide Web.
+Deregulation in the power industry promises to dramatically expand the number of participants and the amount of information that needs to be managed.
+In addition, marketing information and operating information must be kept separate and only shared among authorized parties.
+There is also the threat from cyber attacks on the networks and computers that handle the information.
+In our opinion, applying patches to the existing information systems will sooner or later fail to accommodate the increased information management demands.
+It is time to start working on the new technologies that promise to manage the expanded volume of information in a reliable, secure, and robust manner.
+This report presents our concept for intelligent agents to mediate and coordinate communications between Control Areas and Security Coordinators for real-time control of the power grid.
+2.
+State of the Art in Agent Technologies Computer science research in artificial intelligence provides the conceptual basis for an intelligent agent.
+One way to define an intelligent agent and distinguish it from other types of software applications is to describe its characteristic properties (after Wooldrige and Jennings) [1].
+Autonomy: agents operate without the direct intervention of humans or others, and have some kind of control over their actions and internal states; Social ability: agents interact with other agents (and possibly humans) via some kind of agentcommunication language; Reactivity: agents perceive their environment and respond in a timely fashion; Pro-activeness: agents do not simply act in response to their environment, they are able to exhibit goal-directed behavior by taking the intiative.
+A multi-agent system is a collective of intelligent agents that communicate with each other and work cooperatively to achieve common goals.
+Significant progress has been made in recent years and a number of successful applications have been introduced.
+The research has resulted in an academic specialty area with associated technical journals, international conferences, books, and organizations dedicated to sharing research developments and promoting commercial applications of the technologies.
+To many in the electric power industry, the concept of intelligent agents is new.
+A non-technical article
+6
+about intelligent agents was recently published in Nature [2].
+James Hendler uses the analogy of a travel agent to discuss properties of intelligent agents and discusses progress in this field.
+Dozens of books have been published about multi-agent systems ranging from technical descriptions to textbooks for academic classes.
+Intelligent Software Agents is a high-level, nontechnical overview of the potential for intelligent agents [3].
+Many of the recent applications for intelligent agents are related to electronic commerce over the Internet.
+Other applications reported in the literature are business management, concurrent engineering, economics, information retrieval and knowledge management, manufacturing, communications networking, and planning and scheduling.
+At a high level, the multi-agent systems approach is intuitively simple.
+The distributed software agent idea is powerful in allowing the software developer to gain a solid conceptualization of problem solving required in distributed control.
+A recent paper on agent technology in communications systems lists some of the benefits of the multi-agent systems approach cited in the literature [4]: 1) To address problems that are too large for a centralized single agent, for example because of resource limitations or for robustness concerns (the ability to recover from fault conditions or unexpected events); 2) To allow for interconnecting and interoperation of multiple existing legacy systems, e.g., expert systems, decision support systems, legacy network protocols; 3) To improve scalability - the organizational structure of the agents can dynamically change to reflect the dynamic environment - i.e. as the network grows in size the agent organization can re-structure by agents altering their roles, beliefs, and actions that they perform; 4) To provide solutions to inherently distributed problems, e.g., telecommunications control, air traffic control, and workflow management; 5) To provide solutions which draw from distributed information sources; and 6) To provide solutions where the expertise is distributed.
+Critical requirements for intelligent agents are the ability to capture the knowledge that an agent needs to reason, ability of the agent to manipulate the knowledge, the ability of the agent to learn as new information is presented, and the ability of the agent to communicate with other agents to share knowledge.
+Agent designers must have an accurate and complete representation of the knowledge that will be used and generated by the system at the time the agents are designed.
+The artificial intelligence community has developed several approaches to represent this body of knowledge.
+The first step to knowledge representation is to build an ontology.
+An ontology is a formal definition of a body of knowledge.
+An ontology is a taxonomy of class and subclass relations coupled with definitions of the relationships between these things.
+The most common way for multi-agent systems to communicate information is the Knowledge Query and Manipulation Language (KQML).
+It is both a message format and a message-handling protocol to support run-time knowledge sharing among agents.
+Additional information and references to intelligent agent technologies are presented in the Appendix.
+7
+3.
+Agent Concept Application of a multi-agent system to perform soft real-time control functions for the bulk power grid is a way to introduce new information management techniques and information security functions to the power grid.
+By soft real-time control [5], we mean control actions that occur in seconds to minutes.
+The initial functions for the agents will be to mediate communications between Control Areas and Security Coordinators and to coordinate securityrelated transactions among Control Areas.
+In addition, agents will address information security issues.
+While others are working on intelligent agents to perform marketing functions, we are focused on real-time information management for grid operations.
+We are not addressing replacing microprocessor-based relays, automatic control of protective equipment operation, or software analysis applications such as load flow calculations.
+A few definitions of intelligent agent terminology may help to describe the concept we are pursuing.
+Mediation is an intelligent communication function performed by agents to improve the timeliness and quality of the information exchanged between agents.
+One element of mediation is receiver-specific transformation of information.
+The sending agent is aware of the goals and procedures of the receiving agent and will transform the information appropriately before it is sent.
+Another element of mediation is notification of other agents.
+In this context, a human operator can be thought of and can act like another agent.
+The sending agent is aware of the interests of the other agents and may notify other agents automatically when exception conditions are either detected or may be probable or imminent.
+Coordination among agents involves cooperative management of transactions to ensure consistency and correctness.
+Agents monitor local states and cooperate with one another to ensure an admissable global state.
+For this to occur, agents are required to have models of their own local system and at least partial models of the global system.
+Sandia National Laboratories has focused on developing agents that reason about information security of transactions between agents.
+In addition, the agents can relieve the operators from many routine information management tasks and detect errors in the data or lack of timely arrival of required information.
+The information security functions are tightly integrated with the domain-specific coordination and mediation functions.
+This tight coupling of information security with other functions enables the agents to make intelligent trade-offs in functionality during malicious attacks on the system.
+For example, agents can detect an attack or malfunction of a specific node and invoke a contingency plan based on the tasks of that agent and the current state of its transactions with other agents.
+4.
+Prototype Agent System We are leveraging funding from the Consortium for Electric Reliability Technology Solutions (CERTS) with other Sandia agent research programs to develop a prototype test bed in FY01.
+The test bed comprises multiple networked agents performing the functions associated with 8
+information communications between Control Areas and a Security Coordinator schematically shown in Figure 1.
+Specifically, we will build a representative network of ten (10) Linux-based servers networked with standard TCP/IP protocols (Internet protocols).
+A software agent developed with Sandia's Secure Agent Framework will inhabit each server.
+Nine agents (eight Control Area Agents and one Security Coordinator Agent) will function as a closed, secure multi-agent system conducting collaborative operations associated with real-time operations.
+The agents will have advanced cyber-security capabilities and will employ secure multiparty cryptography to ensure robust operations immune to external cyber attacks and certain attacks from malicious insiders.
+An attack agent will inhabit the tenth server that will facilitate network monitoring and perform standard and special cyber attacks and introduce various types of operator errors on the multi-agent system with the objective of disrupting simulated real-time operations (i.e. impact calculations of adequacy and security).
+Control Area Control Center Sites
+IP Network Secure Agent Server
+Attack Agent Console
+Security Coordinator Site Red Team Site
+Agent-based Control Area Test Bed
+Figure 1.
+Proposed Control Area / Security Coordinator Test Bed
+5.
+Agent Mediated Communication Paths A simplified data flow diagram is shown in Figure 2.
+This figure was developed in the report on operating evironment and functional requirements [6].
+The initial functions of the Control Area / Security Coordinator agents will be to mediate the communication paths G through J.
+9
+Bulk Power Substation
+A B
+C
+Control Area control center
+Tie Line Substations D
+E
+Generator Units
+F
+G
+H
+J I
+Adjacent Control Areas Security Coordinator
+Figure 2.
+Data flows for real-time operations at a control area 1.
+(G) Security Coordinator to Control Area control center An agent situated at the Security Coordinator site will mediate communications to and from the various agents situated at the Control Area control centers.
+The Security Coordinator Agent (SCA) monitors conditions of interest to the Control Area control center(s).
+The following tasks will be simulated realistically and red-team analyses will be performed: 1.1 Notify Control Area of transaction curtailment to relieve constrained facilities (Transaction ID).
+1.2 Notify Control Area of generation unit redispatch per transmission load relief (TLR) procedure (Generation unit, MW and MVAR).
+1.3 Notify Control Area of transmission reconfiguration according to TLR procedures (Trans-mission ID, configuration changes).
+1.4 Notify Control Area of required load curtailment (Location, MW).
+The impact of cyber attacks and operator errors on adequacy of service and security coordination will be evaluated for each of the above-mentioned transactions.
+Defensive protocols will be developed and incorporated into notional cooperative algorithms to address each specific threat.
+2.
+(H) Control Area control center to Security Coordinator An agent situated at Control Area control center will mediate communications from command center personnel to the Security Coordinator and will monitor and evaluate all transactions.
+The processes discussed in Section 1 will be repeated for the following communication paths: 2.1 2.2 2.3 2.4 Proposed interchange transaction schedules (MW and MVAR, Start time, Stop time, etc).
+Bus voltages for major substations (KV).
+Power flows for major transmission lines (MW and MVAR).
+Actual or potential generation deficiencies in the Control Area (Location, MW and MVAR).
+2.5 Emergency or planned equipment outages (Equipment ID, Date/Time).
+10
+3.
+(I) Adjacent control areas to Control Area command center 3.1 Hourly contingency reserve quota from Reserve Sharing Group manager (MW).
+4.
+(J) Control Area command center to adjacent control areas 4.1 Hourly contingency reserve quota from Reserve Sharing Group manager (MW).
+4.2 Control Area command center to adjacent control areas.
+4.3 Hourly projections for next day firm load and largest contingency hazard to Reserve Sharing Group manager (MW).
+4.4 Actual contingency reserves to Reserve Sharing Group manager (MW).
+4.5 Emergency assistance requests to Reserve Sharing Group (MW).
+4.6 Verify Net Interchange Schedule (MW, Time).
+4.7 Establish short-notice revised schedules (MW, Time).
+5.
+(Q) Security Coordinator to Control Area control center 5.1 Approval of interchange transactions which sink in Control Area /Pending).
+(Approve/Deny
+6.
+(R) Control Area control center to Security Coordinator 6.1 Request for approval of an interchange transaction that sinks in Control Area (MW, Date/Time, ancillary services, and transmission path).
+Once an adequate analysis of the types of information management errors and other threats to Security Coordinator and Control Area operations have been addressed, we propose a follow-on development activity that scrutinizes other data flow paths occurring within a Control Area.
+The agents will eventually require an interface to the legacy Energy Management Systems to exchange data.
+Subsequent work will address an interface to simulate the protocol of the Interregional Security Network.
+6.
+Conclusions Intelligent agents and multi-agent systems promise to take information management for realtime control of the power grid to a new level.
+The specific application that appears to provide the most leverage for agents is the mediation and coordination of communications between Control Areas and Security Coordinators.
+At the completion of the prototype test bed in FY01, we will perform an assessment of the performance of the multi-agent system and show the incremental benefits of this approach over existing techniques.
+Since this is a new approach, appropriate metrics will be developed.
+If clear benefits to control of the power grid can be demonstrated, plans for expanding the functions of the multi-agent systems and presenting the concept to the power industry can proceed.
+11
+Appendix Intelligent agent research has established a well-established body of knowledge.
+This appendix describes the organizations and publications that deal with agent technologies.
+In addition, a number of companies sell commercial products that employ intelligent agents or multi-agent systems.
+The major technical organizations that deal with multi-agent systems are Computists International, American Association for Artificial Intelligence, The Society for the Study of Artificial Intelligence and the Simulation of Behavior, International Joint Conferences on Artificial Intelligence, and the Special Interest Group on Artificial Intelligence (SIGART) of the Association for Computing Machinery (ACM).
+The Foundation for Intelligent Physical Agents (FIPA) is an organization promoting standardization in the area of agents.
+A lot of intelligent agent research is going on in the UK and other foreign locations.
+Over two dozen conferences and workshops are held each year which address intelligent agent technologies.
+Ongoing conferences include the International Conference on Multiagent Systems (ICMAS), Intelligent Agents (Agent 2000), the International Joint Conference on Artificial Intelligence (IJCAI), the American Association for Artificial Intelligence conference (AAAI), Agent Theories, Architectures and Languages (ATAL), the Agent-Oriented Information Systems conference and workshop, and the ACM Conference on Information and Knowledge Management.
+A number of other conferences address specialized areas of multi-agent systems and may or may not become ongoing conferences.
+Articles about agent technologies frequently appear in computer science journals while application articles appear in journals associated with the applications.
+Some of the computer science journals are Artificial Intelligence, International Journal of Autonomous Agents and Multi-Agent Systems, Knowledge and Information Sytems, IEEE Intelligent Systems, Journal of Artificial Intelligence Research, IEEE Concurrency, International Journal of Cooperative Information Systems, Artificial Intelligence Review, Computational Intelligence, IEEE Expert, Journal of Automated Reasoning, Journal of Intelligent Systems, Knowledge-Based Systems, Journal of Experimental and Theoretical Artificial Intelligence, Knowledge Engineering Review, and International Journal of Applied Artificial Intelligence.
+In addition, many of the conferences publish proceedings.
+Much of the information is available on the Word Wide Web.
+One of the better web sites to get more information about intelligent agents is the University of Maryland Baltimore County AgentWeb site at http://agents.umbc.edu.
+Intelligent agent research has matured to the point that commercial products are available.
+Most of the commercial products deal with information search and management over the Internet.
+Over thirty companies sell products and services which utilize agent technologies.
+A few of the companies are AgentSoft, Bizbots, Blackboard Technology, Cycorp, FerretSoft.com, Frictionless Commerce Inc., General Magic, Inc., Global Infotek, ISX Corporation, Intelligenesis, Kinetoscope, Mergent.com, Nearlife, Net Perceptions, NetBotz, Neuromedia, Inc., Nimble.com, Reticular Systems, Inc., Soar Technology, Thiink Ltd, Tryllian Inc., and Zoesis, Inc.
+12
+References [1] Wooldridge, M. and Jennings, N. "Intelligent Agents: Theory and Practice", Knowledge Engineering Review, Vol. 10, No. 2, 1995.
+[2] Hendler, James, "Is There an Intelligent Agent in Your Future?" Nature, 11 March 1999, only on web at http://helix.nature.com/webmatters/ [3]
+[4] Hayzelden, A. L. G. and Bigham, J. "Agent Technology in Communications Systems: An Overview", Knowledge Engineering Review, Vol. 14, No. 4, 1999.
+[5] Burns, A. and Wellings, A. Real-Time Systems and Programming Languages, AddisonWesley, 1997, p. 2 and p. 379.
+[6] Smathers, D. and Akhil, A. "Operating Environment and Functional Requirements for Intelligent Distributed Control in the Electric Power Grid," SAND2000-1004, Sandia National Laboratories, April 2000.
+13
+Distribution 3 US Department of Energy, EE-15 Office of Power Technologies 1000 Independence Avenue, SW Washington, DC 20585-0121 Attn: Philip Overholt Lawrence Berkeley National Laboratory 1 Cyclotron Road Berkeley, CA 94720 Attn: Joseph Eto, MS 90-4000 Southern California Edison 2131 Walnut Grove Ave.
+Rosemead, CA 91770 Attn: Carlos Martinez Pacific Northwest National Laboratory P.O. Box 999 Richland, WA 99352 Attn: Jeff Dagle, MS-K5-20 Carl Imhoff Washington State University (2) School of Electrical Engineering and Computer Science P.O. Box 642714 Pullman, WA 99164-2714 Attn: Anjan Bose David Bakken Electric Power Group 201 South Lake Avenue, Suite 400 Pasadena, CA 91101 Attn: Vikram Budhraja Cornell University 428 Phillips Hall Ithaca, NY 14853 Attn: Robert Thomas Oak Ridge National Laboratory P. O. Box 2008, MS 6186 Oak Ridge TN 37831-6186 Attn: Marilyn Brown
+3
+1
+2
+2
+1
+1
+1
+14
+1 1 1 1 2 1 2 1 2 1 1 1 2 1
+M M M M M M M M M M M M M M
+S S S S S S S S S S S S S S
+0449 0451 0451 0455 0455 0455 0455 0741 0741 1140 9011 9018 0899 0612 For
+Jason Stamp Ronald Trellue Jennifer Nelson Reynold Tamashiro Steven Goldsmith Laurence Phillips Douglas Smathers Marjorie Tatro Abbas Akhil Samuel Varnado Barry Hess Central Technical File Technical Library Review 
+6516 6501 6515 6517 6517 6517 6517 6200 6201 6500 8910 8945-1 9619 9612
+15

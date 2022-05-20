@@ -1,0 +1,13 @@
+Java is becoming an increasingly dominant language in many fields of scientific computing.
+In High-Energy and Nuclear physics Java is catching on more slowly, but is already in use by many experiments.
+The FreeHEP and HEP libraries are an attempt to reduce unnecessary duplication of effort by making common cross-function functionality available to the entire community.
+The FreeHEP library started as an means of pulling common functionality from the JAS and WIRED projects into a common base library.
+It has now expanded beyond that immediate goal and includes: A vector graphics package for generating encapsulated postscript, Scalable Vector Graphics and other graphics formats.
+General GUI utilities which are not present in the base Swing library Jaco - A package to simplify Java Access to C++ objects Classes for building large applications, such as a command dispatcher and XML based menu builder.
+While the FreeHEP library has been developed within HEP, it contains code which would be of general applicability outside of the field.
+By contrast the HEP library contains code which is more specific to high energy and nuclear physics, and can be thought of as a Java analog of the CLHEP library.
+Currently the HEP library consists of packages dealing with: 3 and 4 vectors and associated utilities Jet finding and Event Shapes Particle Properties A Diagnostic Event generator An implementation of the AIDA histogram interface Both libraries are being actively developed following an Open-Source model, using CVS for distributed code management.
+Developers interested in using or contributing to either library are encouraged to contact the authors.
+__________________________________________________________________
+Back to Program
+Back to ACAT Web page

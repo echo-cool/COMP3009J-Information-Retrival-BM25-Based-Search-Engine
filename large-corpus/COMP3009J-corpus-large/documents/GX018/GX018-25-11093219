@@ -1,0 +1,113 @@
+banner - information technology Extensible Markup Language (XML): A Primer Executive Summary On October 6, 2000, the World Wide Web Consortium (W3C) announced the publication of the Extensible Markup Language (XML) 1.0 Second Edition as a W3C Recommendation.
+XML, a simplified subset of the Standard Generalized Markup Language (SGML), extends todays static display of Web information to a new format that allows programs to derive meaning from data and provides greater flexibility and interactivity.
+For example, XML separates content from structure, allowing the same XML document to be displayed on a variety of devices, such as computer monitors, palm tops, cellular phone displays, or even translated into voice output.
+XML files may include Java applets that allow information to be quickly searched, sorted, and displayed to increase ease of use.
+XML is an important standard because it provides an avenue of evolution for Web-based information and applications.
+XML provides the rules for developing markup languages for industry-specific applications of XML.
+Various communities of interest, such as government, business, or medical, will need to step up to the task of developing a standard XML that reflects the nuances of how their respective professions describe, categorize, and interchange information.
+A number of organizations are supporting XML deployment.
+The Federal CIO Council is actively involved in XML's deployment in the Federal sector.
+The Organization for the Advancement of Structured Information Standards (OASIS) is a non-profit, international consortium dedicated to the standardization of XML applications.
+OASIS sponsors a number of XML initiatives, such as e-business XML, conformance, improvements to graphics, and resource consolidation.
+The XML specification is a first step in increasing the functionality and utility of Web applications and making the Web easier to use.
+The W3C is developing a family of XML-related standards to fully exploit the potential of XML.
+Evolution of Markup Languages
+The Webs main language, Hypertext Markup Language (HTML), an SGML subset, has been enormously successful, but it is superficial.
+HTML's tags describe how the browser should display text and arrange graphics, but its utility is limited.
+With the emergence of e-commerce and e-government, people want to place orders, perform business functions, transmit complex records, and conduct searches for detailed information.
+HTML is not up to these tasks; even adding new tags is a complicated bureaucratic process.
+E-business may grind to a halt when every customer interaction requires translations and numerous interactions between overburdened servers, databases, the browser display, and graphics.
+XML is bringing new utility to the Web and adding meaning to the way information is coded and processed.
+For example, in HTML, the 
+With XML, information is tagged to reflect content, meaning, and use, such as 
+With this type of information, an application could easily recognize a publication order and people could readily search and retrieve information.
+The information on the Web gains new metadata (data that describes data) and becomes much easier to search and manipulate.
+XML enriches the Web with new meaning and utility.
+This enrichment will not come over night.
+The XML specification is only one of the first steps in the evolution of the Web.
+The XML specification provides rules and a framework for getting started, but it will take a great deal of work by subject matter experts, standards bodies, and developers to realize XMLs potential.
+Communities of Interest
+In this brave new XML-based Web, standardization becomes increasingly important.
+The XML specification provides the rules necessary to create a markup language.
+These rules ensure that languages created via XML can be processed via a parser, making it easy to write applications that recognize this standard language and manipulate the data it encodes.
+However, the rules do not define the industry-specific XML tag sets that are necessary for broadly deploying and using the specification across various professions and businesses.
+Within the specification, each community of interest must agree on the markup tags used in their area of expertise.
+For example, the medical profession will need to develop a standard markup language for encoding medical records while the business community will need to agree on how to describe the elements of a transaction.
+Any group that wants to have a viable, reliable Web-presence will need to agree on how to represent the information they commonly exchange and develop a standard ontology of well-defined tags for this information.
+A number of communities of interest are hammering out their subject-specific XML markup languages.
+For example, the W3C has been working with companies and organizations experienced in editing and processing math on computers.
+This work has culminated in a markup language called MathML.
+On July 7, 1999 the W3C Math Working Group posted its latest version, MathML 1.01.
+MathML ultimately will make it possible for browsers to natively render mathematical expressions.
+OASIS is an independent non-profit, international consortium dedicated to the standardization of XML applications.
+OASIS is actively involved with XML repository standards and with the National Institute of Standards and Technology (NIST) in XML conformance.
+OASIS and the United Nations body for Trade Facilitation and Electronic Business (UN/CEFACT) have established the Electronic Business XML (ebXML) initiative to develop a technical framework to allow XML to be used consistently for the exchange of all electronic business data.
+If it is successful, ebXML will enable anyone, anywhere to do business with anyone else over the Internet.
+EbXMLs primary objective is to lower the barrier of entry to electronic business in order to facilitate trade, particularly with respect to small- and medium-sized enterprises and developing nations.
+It is worth noting that Microsofts BizTalk is an alternative approach to standardizing e-business XML. BizTalk is an industry initiative started by Microsoft and supported by an organization of technology vendors and users.
+BizTalk is not a standards body, but a community of standards users, with the goal of driving the rapid, consistent adoption of XML to enable electronic commerce and application integration.
+The groups intent is to establish BizTalk as a de facto industry standard.
+OASIS, via its CGM Open consortium, is helping to advance the Computer Graphics Metafile (CGM) standard (ANSI/ISO/IEC 8632) and other web graphics standards.
+OASIS provides The XML Cover Pages, a comprehensive online reference resource for XML and other standards.
+OASIS also hosts the XML.ORG registry, the open community clearinghouse for XML application schemas.
+Federal Activity
+The Federal CIO Council has chartered the XML Working Group to explore how Federal Agencies can improve services and advance high-priority Federal objectives via the use of XML.
+Potential uses for XML include the nonproprietary exchange of documents and data with States, rendering government forms, and establishing a core set of metadata tags for the classification, discovery, and retrieval of government records.
+The XML Working Groups activities include identifying pertinent standards and best practices, partnering with industry and public interest groups, partnering with governmental communities of interest, and conducting education and outreach.
+Interested parties may subscribe to the groups listserv by sending a message to: listserv@www.gsa.gov with "subscribe xmlwg firstname lastname" in the body of the message.
+The XML Family
+XML is a family of related standards with many areas under development.
+The XML specification is only the first step in the XML evolution of the Web.
+The W3C is developing a family of XML-related standards to enhance functionality.
+The components listed below are some of the major XML initiatives in progress.
+The W3C web page provides a comprehensive overview of XML activity.
+The W3C HTML Working Group has redeveloped HTML as a suite of XML tags, allowing documents marked up via HTML to conform to XML rules.
+In addition to working with OASIS to improve graphics standards, the W3C is developing a Scalable Vector Graphics (SVG) language that defines an XML tag set for vector graphics.
+The W3C has issued SVG as a Candidate Recommendation.
+A Document Type Definition (DTD) provides the markup language components that define the vocabulary of tags that compose the language and the structure for how the tagged elements will nest within one another.
+Communities of interest must reach consensus on these components, as well as the rules for processing tagged information.
+While XML does not require a DTD, the potential for chaos without one is too great to ignore.
+Developers will need guidelines that describe what the tags mean and how they are used.
+XML schemas provide a superset of the capabilities found in XML 1.0 DTDs.
+XML Schema Part 0: Primer is an introduction.
+XML Schema Part 1: Structures specifies the XML Schema definition language, which offers facilities for describing the structure and constraining the contents of XML 1.0 documents.
+XML Schema Part 2: Datatypes specifies a robust, extensible datatype system for XML.
+These schemas were released as W3C Working Drafts in September 2000.
+Unlike HTML, XML tags do not provide any clues about how information should be displayed.
+XML stylesheets provide the rules to format XML-tagged information for various devices.
+XML stylesheets are developed using the Extensible Stylesheet Language (XSL).
+Using XML stylesheets, the same information can de displayed on various devices, rendered into Braille, or output to speech.
+XML-enabled web browsers read an XML document, retrieve the appropriate stylesheet, and use it to format the information for the output device.
+XSL is a W3C Working Draft.
+As the use of XML grows, it will transform the Web into a better-organized, more responsive resource.
+As more industry-specific applications are deployed, it will become much easier to conduct detailed searches.
+The development of XML has included a sister standard for metadata.
+The Resource Description Framework (RDF) will function like a library catalog, ensuring that web resources are properly and uniformly described to facilitate easy retrieval.
+RDF Scheme Specification 1.0, March 2000, is a W3C Candidate Recommendation.
+The W3C is working to recast the Platform for Internet Content Selection (PICS) as part of the RDF.
+PICS provides a method for attaching labels to material and has been used to indicate whether content is suitable for children.
+Nothing can be more annoying to web users than the familiar "404 File Not Found" error, and web maintainers are hard pressed to constantly check links to avoid exposing their users to this annoyance.
+XLink, a standard for XML-based hypertext, will make a number of improvements to the linking function.
+It will allow users to choose from a list of multiple destinations, and it will have hyperlinks that insert text or images at the location where users click, rather than taking users to another page.
+With XLink, authors will be able to store link information in a central database and point web page links to this central resource, rather than directly to the linked page.
+When a link changes, the author need only update the database, rather than making many changes on individual references.
+XML Linking Language (XLink) 1.0, July 2000, is a W3C Candidate Recommendation.
+It is important to remember that the Web is, indeed, world wide.
+Web sites are developed in languages spoken in many different countries and written in a variety of alphabets.
+XML relies on Unicode, a new standard for a character-encoding system that supports the intermingling of text in the world's major languages.
+Not only will XML bridge the gap between myriad computer systems and devices, but also it will function across national borders.
+Unicode is fully compatible with the second edition of International Standard ISO/IEC 10646-1:2000, Information technology -- Universal Multiple-Octet Coded Character Set (UCS) -- Part 1: Architecture and Basic Multilingual Plane.
+In December 2001, the W3C issued Working Draft 13 of XML 1.1.
+The proposed new XML version will expand Unicode coverage to accommodate the many character sets being incorporated into Unicode 3.1 and beyond.
+Forms are a key tool for conducting business or organizing information on the Web. HTML-based forms, first introduced in 1993, are now outdated.
+The W3Cs Xforms Working Group is engaged in updating the forms concept to enable access to Web-based services from a dramatically diverse range of devices and provide a richer user interface to meet the needs of business, consumer and device control applications.
+XML-based forms will accommodate paper-based forms via capability to print and then scan.
+The W3C has many XML-related Working Groups and initiatives, providing a standardized approach to the deployment of XM and helping to ensure its success as the basis for the next generation Internet.
+Conclusion
+XML is poised to significantly enhance the functionality of Web-based applications that will lead to new ways of conducting business, offering government services, and organizing Internet resources.
+XML is included in the Information Architecture Profile of Adopted Standards 2000, and the IT Standards program continues to monitor the XML family of standards.
+As always, we welcome your input.
+Please send comments to Carol Blackston.
+Feedback
+Comments or Questions regarding this site can be sent to the Standards Webmaster
+Comments or Questions regarding the IT Standards Program should be sent to the IT Standards Manager, Carol Blackston carol.blackston@hq.doe.gov U.S. Department of Energy Business 

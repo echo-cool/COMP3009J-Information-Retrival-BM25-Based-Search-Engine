@@ -1,0 +1,1332 @@
+FEDERAL AVIATION ADMINISTRATION National Airspace System (NAS) System Protection Profile Template Supplement Version 1.0 FAA logo March 11, 2002 Prepared by The MITRE Corporation for the Office of Information Services __________________________________________________________________ Table of Contents 1 Introduction 1.1 Identifying Information 1.2 The Nature of the Information Systems Security Problem 1.3 Using the CC in the NAS 1.4 Related Documents 2 NAS Description 2.1 NAS High Level Description 2.2 {NAS System} Description in the Context of the NAS 2.3 NAS System Boundaries, Constraints and Assumptions 2.4 Information Security Intent of the {NAS System} 2.5 Risk Management Paradigm 3 Security Objectives 4 Security Environment 4.1 Information Systems Threats to Security 4.2 Non-Information Systems Threats to Security (3.2) 4.3 Organizational Security Policy 4.3.1 FAA Information Systems Security Program Policy Guidance 4.3.2 FAA Information Systems Security Architecture Policy Guidance 4.3.3 CSPP - Guidance for COTS Security PPs 4.3.4 NAS System Policy Guidance 4.4 Assumptions 4.4.1 NAS Environmental Security Assumptions 4.4.2 NAS-Wide Security Services Assumptions 5 Functional Security Specifications 5.1 Identification and Authentication (FIA) 5.1.1 Identification (FIA_UID) 5.1.2 Authentication (FIA_UAU) 5.1.3 Authentication Failures (FIA_AFL) 5.1.4 User Attribute Definition (FIA_ATD) 5.1.5 Enforcing Quality Metrics on Secrets (FIA_SOS) 5.2 Security Audit (FAU) 5.2.1 Security Audit Data Generation (FAU_GEN) 5.2.2 Intrusion Identification Analysis (FAU_SAA) 5.2.3 Security Audit Review (FAU_SAR) 5.2.4 Security Audit Event Selection (FAU_SEL) 5.2.5 Security Audit Event Storage (FAU_STG) 5.2.6 Operational Attack and Vulnerability Analysis and Remediation (FDP_SDI) 5.3 Security Management (FMT) 5.3.1 Management of Security Functions Behavior (FMT_MOF.1) 5.3.2 Management of Security Attributes (FMT_MSA) 5.3.3 Management of NAS System Security Data (FMT_MTD) 5.3.4 User and Security administrator Roles (FMT_SMR) 5.4 Cryptographic Support (FCS) 5.4.1 Key Management Cryptographic Support 5.4.2 Cryptographic Operation (FCS_COP) 5.4.3 Data Storage Encryption 5.4.4 Data Authentication (FDP_DAU) 5.5 Network Security Protection 5.5.1 System Protection 5.6 Application Data Protection (FDP) 5.6.1 Access Control (FDP_ACC, FDP_ACF) 5.6.2 Information Flow Control (FDP_IFF, FDP_IFC) 5.6.3 Import from External Systems (FDP_ITC) 5.6.4 Export to External Systems (FDP_ETC) 5.7 Protection of the NAS System Security Functions (FPT) 5.7.1 Internal NAS System Data Transfer (FPT_ITT and FPT_SSP) 5.7.2 Tamper Protection (FPT_PHP) 5.7.3 Security Policy Enforcement Modularity and Continuity (FPT_TRC) 5.7.4 Trusted Recovery (FPT_RCV) 5.7.5 Reference Mediation (FPT_RVM) 5.7.6 Domain Separation (FPT_SEP) 5.7.7 Time Stamps (FPT_STM) 5.7.8 NAS System Self Test (FPT_TST) 5.8 Resource Utilization (FRU) 5.8.1 Priority of Service (FRU_PRS) 5.8.2 Resource Allocation (FRU_RSA) 5.9 NAS System Access (FTA) 5.9.1 Limitation on scope of Selectable Attributes (FTA_LSA) (5.9.1) 5.9.2 Limitation on Multiple Concurrent Sessions (FTA_MCS) 5.9.3 Session Locking (FTA_SSL) 5.9.4 Access Banners (FTA_TAB) 5.9.5 Access History (FTA_TAH) 5.9.6 Session Establishment (FTA_TSE) 5.10 Trusted Path (FTP_TRP) 6 Assurance Security Specifications 6.1 Security System Subsystem Specification (ASE) 6.1.1 NAS System Security Description (ASE_DES) 6.1.2 NAS System Security Environment (ASE_ENV) 6.1.3 Allocation of Security Objectives (ASE_OBJ) 6.1.4 NAS System Security Summary Specification (ASE_TSS) 6.2 NAS System Configuration Management (CM) (ACM_CAP.2) 6.2.1 CM Automation (ACM_AUT) 6.2.2 CM Capabilities (ACM_CAP) 6.3 Delivery and Operation (ADO) 6.3.1 Delivery (ADO_DEL) 6.3.2 Installation, Generation, and Start-up Procedures (ADO_IGS) 6.4 Development (ADV) 6.4.1 NAS System Functional Security Specification (ADV_FSP) 6.4.2 Descriptive High-Level Design (ADV_HLD.1) 6.4.3 NAS System Functional Specification (ADV_FSP) 6.4.4 Descriptive High-Level Functional Design (ADV_HLD) 6.5 Guidance Documents (AGD) 6.5.1 Security administrator Guidance (AGD_ADM) 6.5.2 User Guidance (AGD_USR) 6.6 Life Cycle Support (ALC) 6.6.1 Development Security (ALC_DVS) 6.6.2 Flaw Remediation (ALC_FLR) 6.6.3 Life Cycle Definition (ALC_LCD) 6.7 Life Cycle Assurance Maintenance (AMA) 6.7.1 Assurance Maintenance Plan (AMA_AMP.1) 6.7.2 Evidence of Assurance Maintenance (AMA_EVD) 6.7.3 Security Impact Analysis (AMA_SIA) 6.8 Tests (ATE) 6.8.1 Testing Coverage (ATE_COV) 6.8.2 ;Testing Depth (ATE_DPT) 6.8.3 Security Functional Tests (ATE_FUN) 6.8.4 Preparation for Independent Testing (ATE_IND) 6.9 Vulnerability Assessment (AVA) 6.9.1 Strength of Security Functions (AVA_SOF) 6.9.2 Developer Vulnerability Analysis (AVA_VLA) 6.10 Cross Reference of Assurance Component Dependencies 7 List of References 8 Glossary 8.1 Definitions 9 Specifications Coverage Appendix A Risk Management Concepts A.1 Threat Source Component A.2 Consequence Component A.3 Direct and Indirect Threat Appendix B Applying the CC to System Development Lifecycle in the Acquisition Management System B.1 CC Paradigms Applied to AMS B.2 Relationship with Acquisition Management System B.3 Mission Analysis B.4 Solution Implementation B.5 Deferring Some CC Decisions B.6 Applying the CC to Service Acquisition B.7 Lifecycle Security Impact B.8 PP - ST Paradigm B.9 Forms of NAS System Contracting B.9.1 Linear Model B.9.2 Two Phase Contract B.9.3 IPT and Developer Working Together B.9.4 Task Order Contracting Appendix C Considerations in Applying the CC to System Development C.1 Specifications Could Be Considered Functional or Assurance C.2 Assurance Overview C.3 COTS Assurance Goals C.3.1 Baseline EAL Selection C.3.2 EAL1 Not Sufficient C.3.3 EAL3 Too Much C.3.4 System Trade-Offs Preclude Any EAL List of Figures 1-1.
+NAS System PP Structure
+4-1.
+FAA Security Goals
+B-1.
+FAA Lifecycle Acquisition Process
+List of Tables
+1-1.
+Terminology Mapping Between the NAS System PP and CC
+4-1.
+Threats to NAS Systems 4-2.
+Non-Information System Threat 4-3.
+Policy Related to Goals 4-4.
+NAS System Security Assumptions 4-5.
+NAS-wide Security Services Assumptions
+5-1.
+Vulnerability Analysis Differentiated by Time
+6-1.
+Correspondence of CC Assurance Elements and Solicitation Sections 6-2.
+Assurance Component Dependencies
+9-1.
+Specifications Coverage
+A-1.
+Threat Source Characteristics A-2.
+Direct Threat Examples A-3.
+Indirect Threat Examples
+B-1.
+Application of the CC Paradigm to the Solution Implementation Stages
+C-1.
+Summary Assurance Specifications C-2.
+Necessary Assurance - EAL1 Not Sufficient C-3.
+Necessary Assurance - EAL3 Too Much
+__________________________________________________________________
+1 Introduction
+Security analysis in National Airspace System (NAS) Systems begins early in the development lifecycle when a concept is rendered and a high level Mission Needs Statement is created as part of initial budgeting estimates.
+In creating the initial Mission Needs Statement, security services are considered at high level along with other system functional services and recorded in the context of a high level Security Outline which is part of the Mission Needs Statement.
+The Security Outline is refined to specific secuirty specifications as part of the Screening Information Request (SIR) as the system function and scope are fully defined.
+The Security Outline portion of the Mission Needs Statement evolves into the NAS System Protection Profile (PP) that acts as a record of the security analysis performed during this specification generation process.
+It provides a place to record the threats that are being considered, the security objectives that are being pursued, and the actual security specifications as they are created.
+Therefore, a NAS PP should be viewed as an evolving document that is not simply the "result" of the initial security analysis, but, when completed, is the full record of the security analysis performed during the course of the specification generation process.
+Its creation is part of the initial analysis and its completion is realized when the full scope of the system is understood and specific security specifications are acknowledged.
+As a completed security specification, it is expected to be included by reference in the system Screening Information Request (SIR) and later utilized as part of the risk management activity performed as part of the Security Certification and Accreditation Program (SCAP).
+The NAS System Protection Profile Template is written for a subordinate system of a very large system-of-systems, the NAS.
+The purpose of the profile template is to provide guidance for the creation of a series of NAS System protection profiles that describe security specifications for various systems of the architecture that will be procured over the lifecycle of the NAS.
+The purpose of this supplement is to provide additional tutorial and explanatory information.
+This template provides a set of specification statements and clauses that will be useful for building a NAS System PP.
+Not every specification stated in this template is needed for every NAS System.
+For example, an air traffic control system may have significantly different security specifications than that of a radar unit.
+Specification selection must be based on appropriate risk analysis by the NAS System architect; however, Federal Aviation Administration (FAA) policy stipulates certain security features that must be included independent of the risk analysis.
+All other specifications must be based on risk assessment and residual risk acceptance must be the basis for all security specifications and associated mitigation measures.
+The specifications should be tailored to ultimately be driven by the objectives, threats, vulnerabilities, and available countermeasures that are relevant to the NAS System.
+The NAS System PP authors may even have to add brand new specifications based on new threats that are identified as well as new assumptions of the environment, given the rapidly changing security environment.
+Ultimately, the NAS System PP writers must use their own judgement and rationalization to arrive at the correct security specifications.
+The NAS System PP establishes a requirements baseline for the NAS System.
+The NAS System is then presented to system designers and developers who are responsible for building a system that meets the requirements baseline.
+As discussed in section C.3.4, In those cases where a particular requirement or specification may not be met, the system designer/developer will negotiate acceptance of the trade-offs with the customer.
+The NAS System Protection Profile (PP) Template provides a common format for the author to record the results of the security engineering analysis.
+The analysis methodology is not specified.
+Some guidance is provided.
+The template provides a set of specification statements and supporting structure for recording the results of the security analysis.
+A coverage matrix relates the policy and threats to the specifications.
+Much of the information in these PPs will be common in that, at any given point, all components should be working in the context of a commonly understood architecture and security environment.
+The specific goals for this template are to provide: * Profile components common to all NAS Systems * A structure that can be used with relative ease to address the specific security concerns of a specific NAS System * Guidance on how to fill in sections of a system PP
+This template generally uses the Common Criteria for Information Technology Security Evaluation (CC) as a guideline to present a set of security specifications for NAS PP authors to use in formulating their own system security specifications.
+As such, where appropriate, Common Criteria text is referenced via a hyperlink when the intent of the specification is the same as originally stated in the CC.
+In the CC methodology of security specification, these are referred to as "refined requirements."
+Specifications not having a CC reference are those that have been created to meet the specific needs of the FAA community.
+In the context of the CC methodology of security specification, these specifications are considered to be "explicit requirements."
+This National Airspace System (NAS) System Protection Profile (PP) Template Supplement augments the NAS System PP Template with additional background information, such as explanations of the content of the NAS System PP Template and how the PP template will be used.
+This supplement is not intended to be a self-contained document; it is bound separately only as a convenience.
+More importantly, the supplement demonstrates the technical soundness of the NAS System PP by showing that the PP specifications specify an adequate solution to the security problem addressed by the PP.
+This supplement is not a contractual document; it does not levy requirements.
+Under no circumstances should the developer, or any other entity, consider the Supplement as binding, directive, or authoritative.
+This supplement uses the same section titles and numbering as the NAS System PP Template.
+When there is no information to add, the body is marked "reserved."
+When there are additional sections in the Supplement that do not appear in the Template, letters will be used for subsections (e.g., 1.A).
+It is axiomatic among information security engineers that security concerns should be considered from the very beginning of a system-development project.
+There are security concerns at each stage of a system's lifecycle, and they need to be anticipated as soon as possible.
+The security concerns are relevant to system engineering, specifications analysis, design, security planning, security administration, and security operations.
+Security objectives must be balanced against objectives arising from other system engineering disciplines.
+For example, security must be balanced against other important NAS System demands including performance, schedule, and cost in order be successful.
+The following fundamental observations should be kept in mind when developing a PP for a specific NAS System: * There will be trade-offs among system engineering concerns and objectives throughout the lifecycle.
+* When the NAS System project is in its early stages; much of the information and analysis that the Common Criteria (CC) assumes will precede PP development does not yet exist.
+* The PP reflects real world business practices in that the project advances even though some relevant analysis and data remain unfinished.
+* Most NAS Systems will be developed incrementally over a long lifecycle, during which almost everything may change.
+Security policy and practices applicable to the entire NAS are distributed in several documents, including: * The Federal Aviation Administration Information System Security Architecture (FAA, 2000) * Information Systems Security Program, FAA Order 1370.82 (FAA, 2000b) * Office of Management and Budget, February 8, 1996, Security of Federal Automated Information Systems, OMB Circular No.
+A-130, Revised (Transmittal Memorandum No. 3)
+The NAS System PP Template provides additional interpretations and guidance, in line with the above overarching guidance, that essentially constitutes additional security policy and practices applicable to the entire NAS.
+Additional security policy, practice, and concept of operations for the specific NAS System may not exist at the time of writing the PP for that system.
+Many design decisions may be deferred or delegated to the system developer.
+Where feasible, these deferred decisions should be explicitly identified and plans for their resolution provided.
+They may appear in the PP as specifications for work to be done rather than as decisions based on analysis completed.
+This Supplement also provides additional clarification for key security concepts that will be useful in maintaining the specific NAS System PP over its entire lifecycle.
+One of the major objectives of the Supplement is to document the reasoning behind the design decisions and specifications to support subsequent revisions to the PP.
+The FAA has embraced an Evolutionary Spiral Process (ESP) (SPC, 1995) for developing large systems such as the NAS System.
+One implication for the PP is that the long-term understanding of both the entire NAS and the specific system functionality and architecture, including information security concerns, will probably change.
+Terminology relevant to the NAS environment has been used in preference to CC terminology to facilitate communication among stakeholders in NAS.
+Table 1-1 contains examples of such usage.
+This refinement should pose no problem to readers familiar with the CC.
+CAPTION: Table 1-1.
+Terminology Mapping Between the NAS System PP and CC
+Usage in the NAS System PP
+CC Usage
+NAS System
+Target of Evaluation (TOE)
+NAS System Security Function
+TOE Security Function (TSF)
+NAS System Security Policy
+TOE Security Policy (TSP)
+1.1 Identifying Information
+Reserved
+1.2 The Nature of the Information Systems Security Problem
+Reserved
+1.3 Using the CC in the NAS
+This NAS System PP template treats the CC as guidance, and incorporates selected CC provisions.
+It is structured like a standard Common Criteria PP as described in Part 1, Appendix B of the CC. Figure 1-1 illustrates this recommended format which is further described in other international guidance on the subject of writing CC PPs (Donaldson, 1998).
+Some CC text is incorporated directly.
+Some CC text is available through hyperlink.
+CC text has also been used as the basis for new expression suitable for use in FAA acquisition documents.
+Each section in the PP may have two types of descriptions.
+For example, one type of description will be guidance or instruction on how to complete that section in the context of creating a NAS System PP.
+It may reference the CC itself, the Common Evaluation Methodology (CEM), or other publicly available guidance.
+Other descriptions could include Statement of Work Elements and Functional Security Specification Elements or Data Item Description Elements.
+Figure 1-1.
+NAS System PP Structure
+Section 1: Introduction - States the NAS System security problem and establishes that PPs are required per FAA policy.
+Section 2: NAS System Description - Provides the context for the security specifications by describing the Information Technology (IT) system.
+Section 3: NAS System Security Environment - Describes the NAS threats, security policies from the ISSA and other pertinent sources, and the security assumptions that will drive the specifications.
+Section 4: Security Objectives - Offers a high level description of the IT security measures provided by the NAS System to counter identified threats and/or satisfy identified organizational security policies.
+Section 5: Functional Security Specifications - A set of technical specifications derived from the CC that counter the NAS System threats and meet the defined security objectives.
+Section 6: Assurance Security Specifications - A set of technical specifications derived from the CC that show evidence and measures of the adequacy and trustworthiness of NAS System security.
+Using the CC paradigm to capture system security specifications in a system-of-systems the size of NAS requires some flexibility that the CC, as written, does not readily offer.
+Specifically, there is a need to address a constantly evolving architecture, as a system the size of NAS will take years to procure and implement.
+In this context, this template does not dictate a single level of assurance (i.e., EAL) for all systems.
+Actually, a specific NAS Ssystem may contain components of more that one EAL.
+Since CC mutual recognition is not applicable to NAS Systems, the value of EALs is significantly diminished.
+This PP Template is general and useable for all NAS Systems.
+The term authorized user refers to an individual who has been granted a right or a permission to access a controlled resource.
+Both permissions and resources should be carefully managed to properly protect the NAS System.
+Not all users require the same permissions.
+The principle of least privilege is that users should be granted access to those resources necessary to perform their job, or role, and no more.
+Access Control Policies are the rules governing the authority for specified authorized users or other entities to operate upon specified resources and the nature of any allowable operations.
+For example, some users may be authorized to read certain files while other users may be authorized to both read and write those files.
+Role Based Access Control associates an individual with a specific predefined set of rules establishing the allowed interactions between the user and the resources.
+The set of rules is identified with a function performed by the user in the organization (e.g., air traffic controller, computer service technician) or duties as assigned (e.g., supervisor of controllers).
+The term authorized security administrator refers to an individual who acts in a role to control or otherwise effect certain security parameters of the NAS System.
+Each role is granted certain privileges that are denied to the ordinary user.
+There may be multiple authorized security administrator roles.
+As a separations of duties example, an authorized security administrator responsible for password management may have the privilege of resetting a user's password to a default value that is to be used for one-time authentication so that the user may log-in and change his/her password; whereas another authorized security administrator for managing access control may control the access control list for files associated with his/her project.
+1.4 Related Documents
+Other Guidance documents used in writing the PP include the following: * TCSEC Glossary Trusted Network, "Glossary of Computer Security Terms," (National Computer Security Center [NCSC], 1988).
+* National Information Systems Security (INFOSEC) Glossary (National Security Telecommunications and Information Systems Security Instruction [NSTISSI], 1992).
+* Office of Management and Budget (OMB) Circular No.
+A-130, Revised, (Transmittal Memorandum No. 4), "Management of Federal Information Resources," November 2000.
+* "Evolutionary Spiral Process Overview" (Software Productivity Consortium, 1995).
+* "Generally Accepted Principles and Practices for Security Information Technology" (Swanson, June 1996).
+References to other documents are required to fully address all issues.
+A PP is intended to be internally consistent, but external consistency cannot be guaranteed because the related documents may not be consistent and they may change asynchronously.
+The reader is cautioned to obtain the most recent version of all references and to extrapolate from the versions that were current at the time the PP was written.
+1.A Referencing the NAS System PP in a Contract
+One of the great challenges, but one that offers significant gain if done properly, is the integration of the PP into the FAA acquisition process.
+Appendix B is devoted exclusively to this problem.
+It draws parallels between the CC and the FAA system acquisition paradigm.
+This appendix also discusses the use of the PP with regard to different types of acquisition, such as a service acquisition and provides recommendations on handling deferred or unresolved decisions, an idea which is foreign to the CC.
+The CC includes evaluator action elements in assurance specifications.
+This specification of evaluator action elements alerts the developer to the criteria and methodology that will be used in determining whether the NAS System satisfies the specifications.
+Knowing the evaluation criteria and methods certainly can help prepare the NAS System.
+Because NAS System PPs are intended to become part of a government contract, it is not appropriate to include the evaluator action elements in the PP because they do not directly levy requirements on the developer.
+However, the CC evaluator action elements are available as guidance for acceptance procedures that the FAA may employ.
+In FAA contracting, the statements of what a NAS System should do are considered part of the requirements.
+Instructions to the developer on how to perform the work are considered part of the statement of work (SOW).
+Deferral of design decisions and CC operations causes the effected statements to be properly treated as part of the SOW rather than the requirements.
+The Assurance Specifications in the PP are mostly, if not all, part of the SOW.
+Assurance specifications that refer to documentation produced by the developer may also require Contract Data Requirements List (CDRL) specifications.
+The determination of exactly how to incorporate the NAS PP in an system development contract is outside the scope of the PP, but it is important to keep such usage in mind.
+The recommended approach is for the NAS System contract to include the NAS System PP by reference in the SOW in a phrase such as: "The developer shall implement the security functions and assurances of this system as described in the system PP and shall deliver the documents defined in the CDRL list."
+A NAS System PP is intended for inclusion by reference in FAA contractual documents.
+Information that is customarily not included in such contractual documents, but that is relevant to understanding and maintenance, is located in this Supplement.
+Information in the Supplement includes: * Explanations of how CC requirements, specifications, and recommendations are satisfied * Reasoning behind government decisions useful for maintaining the PP but not customarily available to contractors
+1.B Deferred Decisions
+The ability to complete many of the operations in the CC assumes that analysis and design leading to documented decisions such as security architecture, security policy, and security concept of operations have been performed.
+Such is not necessarily the case in practice with NAS Systems.
+Operations could not be completed because the necessary analysis and design have not been performed and are, therefore, deferred in the NAS System PP Template.
+It is assumed that the developer will be tasked to perform the analysis and design.
+The PP indicates this deferral with elements of the form "the developer shall recommend."
+The requirement that the developer make a recommendation implies that the FAA retains approval authority.
+The tasking of the developer indicates that this element belongs in the SOW.
+Deferral of design decisions is a natural byproduct of the evolutionary system development lifecycle.
+It enables the developer to take advantage of the latest technology and other advances in IT security.
+For example, the application of biometric-based authentication may be a preferred choice, due to quality enhancement and decrease in cost, at the time the developer selects specific authentication mechanisms.
+To some extent the PP Template is written to encompass the anticipated eventual functionality and connectivity of NAS, not only the present or near-term configuration.
+Many decisions must be left unresolved in the PP Template to be resolved at the time that a specific task order is negotiated instructing the developer to implement a function.
+While the specifications section of the PP Template clearly identifies these deferred decisions and the responsible parties, it does not emphasize that operations have occurred on CC components nor does it emphasize the CC terminology.
+The security engineer should anticipate the alternative upgrades and identify the cost-effective countermeasures that will be needed.
+Not all operations are deferred because necessary analysis and design have not been performed; they are deferred for other reasons.
+Some operations require knowledge of ambient conditions at the time that the task is executed.
+Since the NAS will evolve over many years, the execution of appropriate tasking will occur one or more times during that evolution.
+For example, the cost-effectiveness of COTS products and the attack scenarios will be assessed periodically.
+Some operations are deferred to authorized security administrators who respond to changing ambient conditions.
+The strength or authenticators and secrets (e.g., passwords and cryptographic keys) may change due to heightened security concerns or advances in attack technology.
+1.C Relationship of PP to Security Certification and Authorization Package
+One of the most important security procedures mandated in FAA Order 1370.82 is the Security Certification and Authorization Package (SCAP).
+FAA Order 1370.82 defines the SCAP as the FAA's process and documentation standard for system security Certification and Authorization.
+The SCAP is a series of analyses and corresponding documentation that includes a risk assessment, mitigation plan, test plan, test results, contingency plan, and authorization statement.
+The mitigation plan essentially defines the security implementation and includes operational, management, and technical countermeasures.
+Therefore, both the SCAP and the PP contain security requirements.
+However, there are two key distinctions between the two: 1) the PP is performed early in the system development lifecycle and is based primarily on a functional notion of the system while the SCAP is performed later in the system development lifecycle and is based on a specific system architecture and design, and 2) the PP defines functional security and assurance requirements while the SCAP defines security implementation.
+The primary purpose of NAS System PP is to specify security requirements for acquisition while the purpose of the security requirements in the SCAP is to describe implemented countermeasures for approval by the Designated Approving Authority (DAA).
+There should be consistency between the PP requirements and the SCAP requirements.
+One way of ensuring the consistency is to use a matrix or table that maps the two.
+There should also be consistency between the risk assessment performed in support of the PP and the risk assessment required for the SCAP.
+While the PP and SCAP risk assessments are developed at two different times in the system lifecycle and with a different level of detail (moderate-to-high detail for the PP and low detail for the SCAP), the identified risks should match.
+One technique to help ensure consistency is to use the risk assessment information (threats, vulnerabilities, etc.) from the NAS System PP as the basis for the SCAP risk assessment.
+Should new risks or modification of existing risk information be identified during the SCAP process, changes should be made to the NAS System PP.
+In fact, FAA Order 1370.82 requires that the SCAP be updated whenever there are changes to the system (e.g., new interfaces) or changes to the security environment (e.g., new threats).
+The NAS System PP should also be managed as a living document, with corresponding updates as system and environmental changes are realized.
+2 NAS Description
+The NAS Description section provides the context for the security specifications by describing the IT system.
+2.1 NAS High Level Description
+The design of NAS is evolving.
+Spurred by inadequacies of traditional acquisition strategies, the FAA is developing large software systems such as NAS through the process of Evolutionary Spiral Development (ESP) (SPC, 1995), also called Managed Evolutionary Development (MED).
+NAS is evolving over a 20-year period from dependence on proprietary and obsolete hardware and software toward open systems and Commercial Off The Shelf (COTS) hardware and software.
+Legacy components are being replaced as system specifications evolve and budgetary constraints permit.
+The next year or two are in sharp focus while the vision of the far-term is seen only as meeting general objectives.
+It is prudent to assume that NAS will never cease to change.
+The security specifications are similarly evolving.
+Many legacy systems rely on "security through obscurity," predicated on a threat model focused on low-resourced malicious activity.
+Executive Order 13010 and Presidential Decision Directive (PDD) 63, recognizing contemporary concerns for integrity and availability of the National Information Infrastructure (NII)--of which the NAS is a recognized component--have stimulated the FAA to revise its information security posture.
+The shift to COTS computer platforms and public protocols, as well as the emergence of potential well-resourced terrorist threats, contribute new vulnerability elements driving the pace of the evolving security specifications.
+ESP incorporates a strategy for system development and use when achievement of the desired overall capability will require the system to evolve during its development, manufacture, or deployment.
+ESP accommodates both the potential shortfalls of COTS technology and evolving specifications as the users get their hands on the system and evolve new expectations.
+The major approach that underlies ESP is the encouragement of early fielding of a well-defined core capability in response to a validated specification that is expected to persist over a significant portion of the evolution.
+The FAA has adapted a "build a little, field a little" approach.
+For programs with requirement uncertainties, succeeding blocks of work after completing the first block cannot be adequately specified until feedback from some user, technology, or policy maker is received on the usefulness of the solution, and modifications perceived as needed.
+Given the evolving nature of the NAS, a system PP must be applied in an evolutionary manner.
+The PP must be treated as an evolving document and brought under configuration management.
+Selected portions of the system architecture will be implemented at certain points in time in a build a little, field a little approach.
+Relevant parts of the PP will be applied as part of this evolutionary approach.
+2.2 {NAS System} Description in the Context of the NAS
+The Mission Needs Statement and Requirements Documents are produced very early in the acquisition process.
+See Appendix D for a brief overview.
+It is prudent to include both of these documents as part of the System Description.
+NAS System descriptions in other PPs or in the worked examples may be consulted for examples.
+2.3 NAS System Boundaries, Constraints and Assumptions
+Reserved.
+2.4 Information Security Intent of the {NAS System}
+As used in the NAS, defense-in-depth involves using a combination of products and technologies to reduce the level of residual risk lower than that which is available from any individual COTS product or protection approach.
+Defense-in-depth is an approach to securing the FAA's mission and business functions and managing the information technology infrastructure by employing technical and non-technical policies, plans, procedures, techniques, and mechanisms that provide protection, detection, reaction, and recovery capabilities.
+Prevention is applied at several points.
+One set of countermeasures focuses on individual IT systems employing classical information security mechanisms such as controlling entry (logon controls), access control to resources within these systems, auditing, rollback to a previous secure state, disaster recovery, and intrusion detection.
+A similar set of countermeasures are implemented at the network level, including such mechanisms as firewalls, address filtering, and active vulnerability detection.
+Non-technical measures such as procedures, administrative measures, and management measures, are applicable across the entire NAS.
+While the whole is probably not greater than the sum of its parts, the combination does provide improved security posture.
+One important element of defense-in-depth involves the procedures that are invoked when a system fails or its performance drops below a point such that it cannot be used for its intended purpose (e.g., to maintain safe separation).
+For example, when en route communications is lost between controller and pilot, there are established procedures that involve handing off control to adjacent en route centers or radar-equipped terminal control facilities, holding aircraft on the ground until the communications is restored, etc.
+It is reasonable to anticipate that such procedures will be taken into account by the DAA in determining acceptable residual risk.
+2.5 Risk Management Paradigm
+The OMB policy concerning information systems is directly relevant to NAS Systems: * Obtain written management authorization, based on the acceptance of risk to the system, prior to connecting to other systems.
+* Incorporate controls such as separation of duties, least privilege, and individual accountability into the application and application rules, as appropriate.
+As present and future NAS System connections are considered, any additional risk needs to be weighed routinely against the strength of countermeasures available and the residual risk judged to be acceptable.
+See Appendix A for further discussion of Risk Management Concepts.
+2.A NAS Security Goals
+The overarching security goal is to do no harm to the NAS.
+This goal may be difficult to achieve, but helps focus the mitigation on minimizing the impact of a potential security incident.
+Specific NAS System goals for integrity, availability, accountability, and confidentiality, are presented below.
+Integrity is the property that data has not been changed, destroyed, or lost in an unauthorized or accidental manner.
+Unauthorized change results in an integrity violation.
+Integrity also includes the notion of accuracy and consistency of the information that data values represent, rather than of the data itself.
+Integrity is of the utmost importance to the NAS.
+Safety critical decisions are continuously made in the Air Traffic Management (ATM) system, based on information provided by the NAS to controllers, pilots, and traffic management specialists.
+The FAA goes to great lengths in the design of their systems to ensure that information is accurate.
+In the past, the primary NAS concern was to safeguard against accidental data errors.
+However, today, with the tremendous growth of malicious IT activity, the FAA must consider safeguards against terrorism and information warfare, hacker attacks, and similar attacks that threaten data integrity.
+Availability is the property of a system or a system resource being accessible and usable upon demand by an authorized system entity, according to performance specifications for the system; i.e., accessible when needed without undue delay.
+The ATM system is increasingly dependent on IT.
+The deployment of new and improved IT systems is enabling the FAA to manage the increasing levels of air traffic.
+While this trend is positive, it also means ATM suffers more when the systems fail.
+Security mitigation measures which can help achieve increased availability are expected to be prominent in the NAS.
+Threats that affect availability, such as Denial of Service (DoS) attacks, are already considered as a key factor in NAS System risk assessments.
+Accountability ensures that the actions of a system entity (human or IT) may be traced uniquely to that entity, which can be held responsible for its actions.
+It implies security safeguards which support identification and authentication, access controls, and non-repudiation.
+Accountability is important to the FAA.
+For example, in today's voice-based ATC system, all controller/pilot dialog is recorded for just this purpose.
+As the NAS enters the world of controlling air traffic via digital data, measures to enable accountability, including security-based, will remain a strong requirement.
+Confidentiality ensures that data are held in confidence and protected from unauthorized disclosure.
+Confidentiality is often not the most important security goal for NAS IT systems.
+Many systems in the NAS provide information shared by many users and entities, some of which is routinely made available to the general public.
+However, certain specific applications, such Collaborative Decision Making (CDM), use sensitive proprietary airline data that must be protected.
+In a case such as this, confidentiality is a critical system requirement.
+In security engineering, encryption is often a means of accomplishing confidentiality and is expected to be an increasingly common feature within the FAA, although it should not be used indiscriminately due to the potential impacts on performance.
+3 Security Objectives
+The FAA Security Policy is a tangible expression of the need to provide guidance to employees and contractors for information and the information systems that process, store, and communicate this information.
+Policy can be expressed at many degrees of generality, abstraction, and specificity.
+In this Supplement, the most general statement is called a goal.
+More detail is contained in an objective, which presents a high level description of the IT security measures implemented to counter identified threats and/or satisfy identified organizational security policies.
+In some relevant documents these are called control objectives.
+These control objectives offer a basis for stakeholders to interpret and interpolate the specifications in this NAS System PP Template and subsequent derived documents.
+They serve several overlapping purposes: * To determine the effectiveness with which threats are countered and policies are met * To identify responsibilities for the NAS System and for its environment * To provide decision makers--including the security manager, DAA, and integration contractor--with high-level design guidance * To support trade-off analysis among all system objectives
+In general, Security Objectives are driven by the NAS Security Goals.
+The goals to provide data integrity, availability, accountability, and confidentiality may vary over time.
+The data may have a sensitivity, or value, that decreases with the passage of time.
+The change in value may occur linearly, or may be a step function (e.g., an airline's schedule must not be disclosed until it has been announced by that airline).
+The sensitivity can be expressed in attributes about the data that are associated with the data, or the sensitivity can be expressed in the rules that constitute the security policy.
+Security Objectives should offer a more concrete vision of the mechanisms to be implemented by the system.
+A Security Objective is a simple, clear statement about what security functions, procedure, and assurances should be implemented.
+The process of determining NAS System objectives should begin by examining the IT threats, FAA policies and the rest of the IT environment.
+For each threat and policy that is deemed appropriate for the system, the PP author will identify an IT security functional or assurance objectives that is to be implemented by taking overall Acquisition and O
+During the objective definition process, the PP author will prioritize the security countermeasures of the systems based on perceived breadth and probability of occurrence of the associated threat.
+Those objectives deemed to be of most importance will yield stronger statements concerning their strength compared to lower priority objectives (e.g., a strong, one time authentication mechanism vs. a typical 8 character password mechanism to counter a user spoofing threat).
+The objectives help characterize the nature and priority of the functional mechanisms and assurances that are to be implemented.
+This notion of prioritization is an acknowledgement that there will be some very difficult security problems (i.e., threats) that are going to be nearly impossible to counter within the cost constraints required by NAS programs and there are going to be some strong mechanisms that are required that are within appropriate cost ranges.
+It also acknowledges that there are different levels of a threat which, depending on the environment, may warrant stronger mechanisms.
+The creation of NAS System PP Security Objectives should take into account and address the severity of the threat when making tradeoffs between effectiveness and the residual risk that the security manager and DAA may be willing to accept.
+Donaldson (1998) points out that there is no added value in reiterating the threats slightly reformatted as objectives.
+The general statement "to respond to every threat to the NAS System in order to reduce the risk to an acceptable residual level" is sufficient.
+Security objectives can be satisfied by IT mechanisms and environmental controls, such as physical, procedural, and administrative measures.
+The PP author must decide how much latitude to give the developer in determining whether to address the threat as an IT Security Objectives or an Environmental Security Objective.
+The decision depends on such factors as the cost effectiveness of COTS technology, budget, and schedule.
+It may be decided to implement countermeasures solely in technology or the environment, jointly in technology and the environment, to reduce the scope and functionality of the system, or to accept specified residual risk.
+4 Security Environment
+The Security Environment section describes the NAS threats, security policies from the ISSA and other pertinent sources, and the security assumptions that will drive the specifications.
+A threat is described as the existence of the probability that a given vulnerability of a system will be exploited resulting in a compromise of the system or the data it processes.
+Security policies are described as rules enforced (either procedurally or as part of the IT solution) to counter known threats.
+In general, a given system will always have a certain level of threat associated with it and it may have (but not always) have specific policies to counter those threats.
+This section of the PP helps identify the threats for which policies have been formed to address and threats for which policies need to be formed.
+Environmental considerations include all of the security domains in which the NAS System will operate or to which it will interface.
+A security domain enforces a common policy and is under the control of the same management.
+Although all operational systems are all owned by Air Traffic Services (ATS), there may be different policies in some systems (e.g., NIMS has unique requirement and policies).
+External environments include security domain outside the FAA security domain (i.e., not under FAA security policy or management).
+Examples of external environments include the Internet and NAS communications service providers.
+In contrast to the elementary engineering analysis advice to first define the system, it must be recognized that the boundaries of the NAS are essentially undefined.
+Parts of the NAS are located in FAA-controlled and protected space.
+It is prudent to anticipate that some parts of NAS will be located in unprotected space and that the NAS will communicate with non-NAS systems using public communications facilities including the Internet.
+The NAS will exchange data with external entities such as commercial air carriers and foreign civil aviation administrations.
+Some interfaces between NAS and these other systems must be assumed to be unprotected.
+Thus, the NAS must operate in an environment of multiple security domains.
+These domains must be assumed to operate under different security administrations, in dissimilar legal and regulatory environments, enforcing different security policies.
+Some of these administrations may be mutually hostile or at least competitive.
+If a source of information is untrusted, then the NAS system can be protected against threats from that source.
+Thus, different security capabilities for different connected systems can be handled in an acceptable manner by the NAS.
+4.1 Information Systems Threats to Security
+This section contains elaboration on the PP explaining the models used in the analysis.
+Threats that may be categorized jointly as technical and non-technical have been included in the technical category.
+The developer may choose countermeasures that are solely technical, solely non-technical, or, more likely, a combination of technical and non-technical measures.
+Because the NAS System developer is generally a commercial contractor and the ultimate operators of the system will likely be Government personnel, the choice of countermeasures must involve both contractor recommendations for technical measures, and the Government input related to the usability and Operations and Maintenance (O
+Table 4-1 below is an expansion of Table 4-1 from the NAS System PP Template by examples of common threat sources, likely causes (i.e., technical or organizational vulnerabilities), and specific threat actions that cause harm or loss.
+These examples are illustrative; they are not intended to be complete or to constitute a taxonomy.
+The set of examples and causes is unbounded.
+New flaws and vulnerabilities may be discovered.
+New attacks may be invented.
+Technological changes may affect the amount of work necessary for a successful attack.
+Table 4-1.
+Threats to NAS Systems
+T-1 An unauthorized person may gain logical access to the NAS System.
+An authorization is a right or a permission that is granted to a system entity to access a system resource.
+In this case, the entity is a person and the resource is the NAS System.
+This threat is a form of masquerade by individuals that impersonate authorized users.
+Common threat sources include people outside the organization, hackers, hostile intelligence agents, industrial espionage agents, terrorists, and ex-employees.
+Specific causes include: * Lax security enforcement (e.g., inadequate authentication) * User carelessness * Failure to adapt to changes in the threat environment
+Specific attack methods include: * Interception of NAS System internal communications * Interceptions of communications among NAS Systems * Interceptions of communications between NAS Systems and external information systems * Impersonation (e.g., via password guessing) * Off-line password guessing * Autodialer scanning * Exploiting inadequate authentication
+T-2 A unauthorized person (insider), or an unauthorized person masquerading as an authorized user, may gain access to the NAS System resources or perform operations for which no access rights have been granted.
+Common threat sources are insiders, people within the organization.
+This includes individuals who intentionally or unintentionally violate the integrity of the system.
+Specific causes include: * Inadequate access control * Incorrect setting of security attributes * Masquerade and stealing of user's rights
+Specific threat actions include: * Passive observation exposure * Scavenging * Deliberate disclosure * Exploiting inference and aggregation vulnerabilities (e.g., reverse engineering) * Exploiting product vulnerabilities, (e.g., exploiting covert channels) * Inappropriate disclosure threats, browsing, searching for exploitable patterns * Inappropriate disclosure, preparation for misuse; code-breaking efforts * Deliberate compounding of small errors * Misapplication of software, application to wrong data * Misapplication of software, miscommunication of inputs
+T-3 One or more persons may engage in a denial of service attack which may cause the resources of the NAS System to become unavailable.
+Common threat sources include other NAS Systems, users, and outsiders.
+Specific causes include: * Lack of resource availability * Failure of resource-assuring measures * Inappropriate use of security parameters
+Specific attacks include: * Denial-of-service attacks * Distributed denial of service attacks * Loss of Service Threats, Usage threats; Overload * Benign excess usage * Runaway programs * Overload-Personal use of organization computers
+T-4 Someone may physically attack the NAS System and compromise its information security.
+Common threat sources include inanimate agents.
+This includes such things as routine water damage, power surges and failures, physical calamities, hardware failure within the information technology product, malfunctioning external devices and systems, and disabled external devices and systems.
+Specific causes include inadequate physical protection.
+Specific attacks include: * Theft of physical media * Physical trespass and observation * Implanting eavesdropping devices * Disarming controls (e.g., via routine maintenance) * Implanting malicious hardware * Disarming hardware controls * Deliberate hardware modification * Disabling critical components * Shutting off system or power supply * Implanting self-destruct devices * Routine maintenance * Accidental damage (e.g., water damage) * Interference (e.g., electronic jamming) * Deliberate denial of service
+T-5 Security-relevant events may not be recorded or may not be traceable.
+Common threat sources include both authorized users and outsiders.
+Specific causes include: * Mismanagement of the audit facility * Scope of audit requested * Insufficient integration of audit trails * Audit storage exhaustion * Other inadequacies of the audit mechanism * User negligence (e.g., failing to log out when leaving a workstation) * Failure to properly audit a user action opens the possibility of repudiation (falsely denying origin or receipt of information)
+T-6 Outsiders may intrude on the NAS System via its communications capabilities.
+Common threat sources include unauthorized access attempts by potentially hostile outsiders via the data communications facilities that constitute an enabling technology for NAS.
+Technical measures will be employed to detect and, if possible, prevent unauthorized communications access
+Unauthorized persons masquerading as authorized users may attempt acts of subversion and abuse.
+Whether similar acts can be attributed to authorized users is a moot point under these assumptions.
+Specific threat actions include: * Eavesdropping * Wiretapping * Traffic analysis * Other forms of signals intelligence
+T-7 Architecture, design, and implementation and maintenance flaws in the NAS System may lead to information security failures.
+Common threat sources include system developers, careless or ill-intended users and security administrators, and by outsiders masquerading as authorized users.
+Specific exploits and corresponding causes include: * Faulty reuse of objects or devices * Inadequate argument validation * Miscellaneous logic errors * Hardware flaws * Exploiting covert channels * Inadequate authentication * Trap doors that bypass system checks * Malfunctioning hardware (via aging, routine maintenance) * Inadequate deadlock and livelock avoidance * Inadequate response to transient errors * Exploiting product vulnerabilities
+T-8 A system crash may compromise the secure state of the NAS System.
+Note that a crash is regarded as a direct threat with respect to availability and as an indirect threat with respect to other security policies.
+Specific causes include: * Unmaskable action failures that always result in a system crash (e.g., transient failures of hardware or firmware, power failures, processor failures, communication failures) * Media failures causing part or all of the media representing trusted objects to become inaccessible or corrupt (e.g. parity errors, disk head crash, persistent read/write failure caused by misaligned disk heads, worn-out magnetic coating, dust on the disk surface) * Discontinuity of operation caused by erroneous administrative action or lack of timely administrative action (e.g. unexpected shutdowns by turning off power, ignoring the exhaustion of critical resources, inadequate installed configuration)
+T-9 Someone may introduce unauthorized software into the NAS System.
+Common threat sources include malicious or well-intended users, maintenance personnel, and outsiders.
+A likely cause of these threats is inadequate operational configuration management.
+Exploits associated with these vulnerabilities include: * Masquerade (e.g., Trojan horses) * Trap doors that bypass system checks * Creating, planting, and arming malicious software * Deliberate falsification via data entry of modification * Accidental falsification via data entry or modification * Surreptitiously introduction of software via wireless means (e.g., infrared)
+T-10 Someone may tamper with the protection-relevant mechanisms of the NAS System.
+Common threat sources include security administrators and outsiders masquerading as ordinary users.
+Exploits associated with these vulnerabilities include: * Disarming controls (e.g., via routine maintenance) * Deliberate hardware modification * Disabling critical components
+T-11 People in trusted roles, such as administration and maintenance of the NAS System, may cause information security failures.
+The common threat sources here are the security administrators.
+The threat could be the result of an intentional act by the system security administrator, or more likely through an unintentional act or the unintentional failure to accomplish expected administrative tasks.
+These unintentional acts, not uncommon in complex systems operation, are usually referred to as errors and omissions.
+Some administrative attacks are highly leveraged and can have a wide variety of effects; others are more narrow in scope.
+Specific causes include: * Misuse of authentication data (e.g., editing password files) * Improper setting or modification of object security attributes (e.g., access control attributes) * Improper setting or modification of user security attributes (e.g., user privileges) * Mishandling of encryption keys and related information * Installing flawed application software * Improper runtime environment * Willful neglect and other errors of omission * Failure to order necessary supplies * Failure to perform routine maintenance * System shutdown * Disabling user accounts * Accidental deletion of critical data
+T-12 Improper operation of the NAS System may cause information security failures.
+Specific causes include: * Non-compliance with policy and procedures * Errors, omissions, or malice by users or operators
+T-13 Improper restart and/or recovery from failure of the NAS System may cause information security failures.
+Specific causes include: * Improper initialization or recovery procedures * Corrupted or destroyed recovery data
+T-14 Changes in the environment of the NAS System may introduce vulnerabilities.
+Common causes and examples include: * Newly discovered vulnerabilities or new attacks could render existing security tactics obsolete or even counterproductive * Normal aging
+T-15 Limitations and flaws in countermeasures and mitigation strategies may be circumvented by a knowledgeable adversary.
+Common threat sources include attackers knowledgeable concerning countermeasures and mitigation strategies.
+Common causes and examples include: * Attacking the countermeasures.
+For example, if more than five invalid passwords cause an account to be disabled, then a denial-of-service attack could be accomplished by purposely attempting to log in with bad passwords.
+* Targeting the mitigation strategy or capabilities.
+4.2 Non-Information Systems Threats to Security (3.2)
+Certain threats of a non-information systems nature can affect NAS System security and must be dealt with in the operating environment in concert with the technical countermeasures.
+The threat possibilities presented in Table 4-2 below are expanded from the corresponding Table 4-2 in the NAS System PP Template.
+These threats must be countered in order to support the technical security capabilities but are not addressed, in whole or in part, by the technical security countermeasures.
+One threat that is normally considered in NAS System development and operations is natural disaster.
+Rather than address this threat within an IT security context, it is recommended that it be mitigated as part of the normal operational risk environment by applying appropriate system engineering, procedural, and natural disaster recovery planning.
+Table 4-2.
+Non-Information System Threats
+T-16 An authenticated, (authorized) user may gain non-malicious, unauthorized access using non-technical means.
+This threat is based on authorized authenticated users gaining access to information that they were not intended to have, even though they have credentials to access the system.
+An example of this type of threat is deals control on printed output where multiple users invoke the same printer.
+There is the threat that users may see information for which they have no access.
+T-17 An individual, other than an authenticated user, may gain access to processing resources or information using non-technical means.
+This threat is explicitly non-technical and its mitigation requires environmental controls.
+T-17 is listed as a separate threat from T-16 because the likely mitigating controls applied to authenticated users are different from those applied to unauthorized individuals not authorized IT access.
+This threat is generally a non-technical threat but may be mitigated by a technical or procedural security mechanism.
+Common causes and examples include: * Tricking an authorized individual into disclosing access control information.
+This is sometimes referred to as "social engineering."
+* Taping a password to the terminal and another user uses the password to log in.
+Typically this type of threat is to be countered by non Environmental Objectives and IT Specifications.
+T-18 The development and assignment of user roles may be done in a manner that undermines security.
+Common causes and examples include: * Roles could be developed that have an incorrect or improper combination of authorizations.
+* Users could be assigned to roles that are not commensurate with their duties, giving them either too much or too little scope of authorization.
+* Users could be assigned conflicting roles with respect to separation of duties.
+T-19 User input error could result in incorrect data resulting in corrupted output information .
+This threat applies to a system user, with good intentions, makes a mistake and causes unintentional harm to the system.
+The classic example is incorrect data entry (entering 2000 instead of 200).
+Mitigation can be through good human factors engineering, exception handling in system software, and use of thresholds and sanity checks for data entry.
+T-20 Natural disaster or deliberate attack could result in critical operations that are halted and/or NAS services that are interrupted.
+Contingency plans and safety analysis that are adequate for natural disaster may be insufficient in the face of deliberate attack.
+4.3 Organizational Security Policy
+The FAA, like most government agencies, has a rich collection of policies and practice that apply to the NAS System.
+For all NAS System PPs, these policies need to be acknowledged and referenced.
+The stated policies coupled with the identified threats of the previous section will serve as the basis for justifying the security specifications in subsequent sections of the document.
+Specific policy statements in this PP template have been drawn from numerous FAA and other generally available documentation to include the FAA Information System Security Program Policy Guidance document, the FAA Information System Security Architecture (ISSA), the Commercial Security PP (CSPP) and FAA Order 1370.82.
+In general, policies are implemented through procedural means that are supported an IT solution (and associated evidence).
+The IT support for specific policies is identified in the IT Specifications Coverage Matrix (see Section 9) where each specification is explicitly mapped to the policy it supports.
+4.3.1 FAA Information Systems Security Program Policy Guidance
+Reserved.
+4.3.2 FAA Information Systems Security Architecture Policy Guidance
+There are usually exceptions to general rules.
+Some ISSA policies may not apply exactly as written to every possible NAS System.
+Clear and convincing analysis must support a waiver of a policy.
+The rationale for waiving the policy must be stated (e.g., the system performance is not acceptable when the policy is enforced) and accepted by all stakeholders.
+The threat, vulnerability and risk analyses, must show an acceptable residual risk to all stakeholders in the NAS System, perhaps after alternate mitigation strategies have been applied (e.g., procedural countermeasures instead of technical ones).
+4.3.3 CSPP - Guidance for COTS Security PPs
+Reserved.
+4.3.4 NAS System Policy Guidance
+Analysis of the specific NAS System will result in policies that are specific to that system.
+These system-specific policies may be interpretations of more general policies such as those obtained from FAA Order 1370.82 and the ISSA.
+These documents present policies and objectives at a high level of abstraction so that they are applicable to a wide range of systems and programs.
+It is necessary to interpret these policies and objectives in more specific terms when they are applied to a specific NAS System, considering how each policy is to be met (e.g., by operational doctrine, by IT mechanisms, by development or implementation activities, or by procedures).
+In addition, each NAS System will probably establish its system-specific policies as a result of creating programmatic documents such as security concept of operations, and security architecture; and the risk, threat, and vulnerability analysis.
+The system-specific policies should also factor in other decisions that may be made during the acquisition period, such as the maintenance concepts for the system (contractor or FAA maintenance).
+In general, the PP's policies must be supported by its specifications.
+Unless specified otherwise, the PP assumes access control policies based on security attributes.
+The PP specifications specify implementation of such access control policies.
+It is prudent to defer binding of policy to enforcement.
+Coding specific policy into a NAS System makes it unnecessarily difficult to adapt to changing conditions.
+Concerning security policies enforced at run time, (ISO, 1996) treats security policy enforcement as a decision based on rules, where the rules express relationships among relevant attributes associated with initiators and targets, attributes and data associated with actions, and access control context.
+In general, security policies are represented within computers by sets of rules.
+These rules employ various attributes to specify whether a proposed action is permitted or not.
+These attributes include characteristics of the originator of the action, the data affected, and ambient conditions such as time-of-day.
+The specifications in the PP are predicated on this concept of rules employing attributes to determine the permissiveness of an attempted action.
+Most of the NAS System PP template policies are derived from existing FAA Security Policy Documents (e.g., FAA Information System Security Architecture).
+They are written at many different levels of abstraction: some dictating explicit security mechanisms, some dictating broad security specifications with decisions deferred to design and implementation of the system.
+There are usually some exceptions to general rules.
+Some ISSA policies may not apply exactly as written to every possible NAS System.
+Clear and convincing analysis must support changing or eliminating a policy.
+The reason(s) for deviating from the policy must be stated (e.g., the system performance is not acceptable when the policy is enforced).
+The threat, vulnerability, and risk analyses must show an acceptable residual risk, perhaps after alternate mitigation strategies have been applied (e.g., procedural countermeasures instead of technical ones).
+Policy Guidance derived from ISSA, R1 through R12 and C1 through C8 are risk driven specifications.
+Rather than repeatedly tag all appropriate PG statements as "risk driven," this guidance will suffice.
+References to the term "user" means individual system users.
+In the NAS PP Template, PG-14 and PG-15 may appear to be identical.
+However, PG-14 is a statement of the "capability" to modify access rights, whereas PG-15 is about enforcement of the rights.
+This style of specifications statement, pairing a "capability" specification with an "enforcement statement" appears in other places, such as Section 5, Functional Security Specifications.
+PG-26, PG-32, and PG-35 are specifications for the NAS Systems operations when the developer is also responsible for system operations and maintenance.
+Otherwise, if the FAA operates and maintains the NAS System, the FAA is responsible for the specifications.
+PG-40, resistance to direct attack, is needed because PDD 63 requires that our nation's critical transportation infrastructure be protected against direct cyber attacks.
+PG-48, which requires adherence to FAA information flow control policies, has to do with flow of information between NAS Systems, and between NAS Systems and systems and networks not under FAA security policy, such as the Internet.
+Flow control policies are those that enable or deny certain information and services.
+There is a strong relationship between the Policy Guidance and the security goals that the FAA is striving to achieve.
+The FAA is embracing a System Protection Model that features 5 security goals as shown in Figure 4-1.
+From the top to bottom these ISS Technology areas are Authentication, Access Control, Confidentiality, Integrity/Non-repudiation, and Availability.
+Authentication establishes a means of verifying an individual's authorization to receive specific categories of information and contributes to supporting an accountability policy.
+Access Control prevents unauthorized access to--and unauthorized use of--resources.
+Confidentiality ensures that data are held in confidence and protected from unauthorized disclosure.
+Integrity ensures that data cannot be altered from their source without detection.
+This includes accidental or malicious modification, alteration or destruction.
+Non-repudiation aligns closely with integrity (and to a lesser degree, authentication).
+Non-repudiation technology enables a recipient of a message to prove the identity of the source of the message, and do so to the satisfaction of an independent third party.
+It also enables the receipt of a delivered message such that it cannot be denied by the recipient.
+Availability is the property that information and/or services are not being withheld in an unauthorized manner,and thus, are accessible when needed without undue delay.
+While all of these goals are vital to the security of the FAA, Integrity and Availability are the most important.
+Five layer pyramid depicting FAA Security Goals: Top layer: Authentication Second layer: Access Control Third Layer: Confidentiality Fourth Layer: Integrity/Non-repudiation Fifth (base) layer: Availability Figure 4-1.
+FAA Security Goals
+Table 4-3 relates the policy guidance to these FAA goals:
+CAPTION: Table 4-3.
+Policy Related to Goals
+Policy
+Authentication
+AccessControl
+Confidentiality
+Integrity/Non-repudiation
+Availability
+PG1
+X
+X
+NO DATA
+NO DATA
+NO DATA
+PG2
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG3
+X
+X
+NO DATA
+NO DATA
+NO DATA
+PG4
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG5
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG6
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG7
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG8
+X
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG9
+NO DATA
+NO DATA
+NO DATA
+X
+NO DATA
+PG10
+NO DATA
+NO DATA
+NO DATA
+X
+NO DATA
+PG11
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG12
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG13
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG14
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG15
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG16
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG17
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG18
+NO DATA
+NO DATA
+NO DATA
+X
+NO DATA
+PG19
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG20
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG21
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG22
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG23
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG24
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG25
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG26
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG27
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+X
+PG28
+X
+X
+X
+X
+X
+PG29
+X
+X
+X
+X
+X
+PG30
+X
+X
+X
+X
+X
+PG31
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG32
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG33
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+NO DATA
+PG34
+X
+X
+X
+X
+X
+PG35
+X
+X
+X
+X
+X
+PG36
+X
+X
+X
+X
+X
+PG37
+X
+X
+X
+X
+X
+PG38
+X
+X
+X
+X
+X
+PG39
+X
+X
+X
+X
+X
+PG40
+X
+X
+X
+X
+X
+PG41
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG42
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG43
+NO DATA
+X
+NO DATA
+NO DATA
+NO DATA
+PG44
+X
+X
+X
+X
+X
+PG45
+X
+X
+X
+X
+X
+PG46
+NO DATA
+NO DATA
+X
+X
+NO DATA
+PG47
+NO DATA
+NO DATA
+X
+X
+NO DATA
+PG48
+NO DATA
+NO DATA
+X
+X
+NO DATA
+PG49
+X
+X
+X
+X
+X
+PG50
+NO DATA
+NO DATA
+NO DATA
+X
+NO DATA
+PG51
+X
+X
+X
+X
+X
+PG52
+X
+X
+X
+X
+X
+4.4 Assumptions
+An assumption is an assumed condition or characteristic.
+Assumptions establish the parameters or basis upon which a system was designed or a cost estimated.
+An assumption may or may not be accurate.
+If an assumption is found to be inaccurate, then, in this case, the PP would need to be revised to reflect the new set of assumptions.
+An example is the assumption that the Computer Security Incident Response Center (CSIRC) collects and analyzes security incident data.
+If this assumption were not met, each NAS System would have to plan and budget for such an activity.
+Some assumptions may be noted as procedural or IT countermeasures that must exist in this environment.
+Such assumptions help bound the security problem and help to clearly define the role of IT in countering threats and supporting security policies.
+Other assumptions may characterize the nature of the procedures that are followed, the level of training necessary for administrators or personnel interacting with the system.
+In determining appropriate assumptions for the NAS System Environment, PP authors should consider the cost tradeoffs of assuming security countermeasures existing in the IT environment and requiring security measures being implemented in the IT solution.
+Factors to consider in this tradeoff analysis are cost and security effectiveness.
+For example, some procedural security mechanisms are not costly, but they are sometimes not effective because of the difficulty in implementing the procedures and the negative impact they have on the overall mission.
+On the other hand, some IT mechanisms are not strong enough by themselves to counter the perceived threat.
+The reality is that all IT security measures depend on some appropriate environmental axioms for the security policy to be enforced and for threats to be countered.
+IT mechanisms and environment assumptions (read non IT mechanisms) work together to implement the stated policy in a cost effective manner that does not inhibit the overall NAS System mission.
+The tradeoff analysis should yield the appropriate mix that is warranted.
+4.4.1 NAS Environmental Security Assumptions
+Many characteristics of the security environment affect the security of the NAS.
+These characteristics derive from FAA policy and procedures, commonly accepted security practice, and other causes too numerous to identify.
+Those characteristics that are germane to a NAS System satisfying its security objectives (Section 4) and information security intent (Section 2.4) are identified in this section as assumptions.
+Assumptions tend to be things that are true, whereas policies tend to be things that need to be true.
+In general, it is assumed that security specifications will be balanced against other specifications such as acquisition cost, O
+Since acquisition IPTs often focus primarily on acquisition (Facilities and Engineering) costs, it is necessary to consider both acquisition costs and O
+It is realistic to anticipate that some security specifications will not be implemented and hence, "assumed away."
+Such assumptions should be noted in this section.
+One of the primary purposes of the supplemental information concerning assumptions is to provide guidance so that requirements are not overspecified or incorrectly applied The goal of the PP is to provide a reasonable level of confidence that assets are adequately protected by reducing residual risks to an acceptable level.
+Without clear and explicit guidance in this area, the teams may over specify security requirements (in an attempt to be comprehensive).
+The necessity, appropriateness, relevance, and/or correctness of the assumptions is presented in Table 4-4.
+Assumptions A-1 through A-7 are assumptions about the environment in which the NAS System will be developed and operated.
+It is incumbent upon the FAA product team to consider the relationship between the NAS System and the external environment in which it will operate or interface.
+Table 4-4.
+NAS System Security Assumptions
+A-1 Competent security administration is performed.
+* All authorized administrators and operators of the NAS System will be adequately trained, enabling them to effectively implement technical and non-technical security policies, including administrative, physical, and procedural security.
+* There will be provisions for periodic and regularly scheduled education and training activities.
+Unless the NAS System is administered competently in an on-going manner, security is not feasible.
+In general, it is reasonable to assume that the NAS maintenance personnel assigned administrative responsibilities for NAS Systems will have received appropriate training necessary to competently perform their duties.
+This implies that adequate training must be offered to ensure that this assumption is met.
+Although this is an assumption on the IT environment, the IT system developers have a role in meeting this assumption by ensuring that appropriate materials are available to support such training.
+This specification on the system is noted in the PP template when it calls for the developer to provide administrative and user documentation (see Section 6.5) to support the general operation of the system.
+A-2 All authorized users are trusted to not act maliciously, nor attempt to circumvent nor by-pass access controls.
+In general, authorized users should be (1) trusted to not maliciously attempt to circumvent nor by-pass access controls, and should be (2) considered to lack the motivation or capability for sophisticated penetration attempts.
+Trusting users is essential.
+In general, the NAS security mechanisms will not be designed to prevent intentional malicious actions on the part of trusted system users.
+For example, mechanisms that require two different personnel to authorize specific actions are, in general, not practical in the FAA environment due to staffing concerns, response constraints, and other reasons.
+However, there may be cases where appropriate separation mechanisms are appropriate, but even in these cases, the required strength of the separation mechanism should be moderate relative to mechanisms protecting against attacks from outside the NAS.
+A-3 Availability may depend on the raw communications throughput obtained from providers, such as common carriers and FAA communications systems, and communications processing and switching implemented as part of the System.
+Fluctuations in availability of raw communications capacity due to natural or man-made calamities are outside the scope of the PP. Deterioration of communications processing and switching implemented as part of the System is within the scope of the PP. Sufficient safeguards are provided to reduce the risk of a denial-of-service attack to an acceptable level.
+These assumptions bound the security problem by identifying known facts about the NAS environment and by identifying threats that are assumed to be adequately addressed via measures not described in the PP.
+A-4 The NAS System may be developed employing Evolutionary Spiral Process (ESP) methodology over multiple years.
+It is very important that the mutual impact between the PP and the NAS System' evolutionary development over an extended lifecycle is recognized.
+A-5 NAS Systems will implement many capabilities using potentially untrusted communication networks.
+Recognition of untrusted communication network vulnerabilities and the reality of the installed and planned communications networks is a prerequisite to effective countermeasures.
+A-6 The following personnel conditions will exist:
+There will be individuals assigned to manage the NAS System, including the security of the information it contains and the allocation of levels of system resources.
+Users possess the necessary privileges, based on roles, to access the information they require to perform their assigned duties.
+There is some potential for damage due to errors, omissions, and attempts to perform operations on data for which authorized users have no authority.
+Personnel are crucial to security.
+These assumptions establish a reasonable basis for establishing an information security program.
+* All authorized administrators and users of the NAS System will be adequately trained, enabling them to effectively implement technical and non-technical security policies, including administrative, physical, and procedural security.
+There will be provisions for periodic and regularly scheduled education and training activities.
+FAA Order 1370.82 requires that all users of NAS Systems will have received appropriate security training necessary to competently perform their duties.
+This implies that adequate training must be offered to ensure that this assumption is met.
+Although this is an assumption on the IT environment, the IT system developers have a role in meeting this assumption by ensuring that appropriate materials are available to support such training.
+This specification on the system is noted in the PP template when it calls for the developer to provide user documentation (see Section 6.5) to support the general operation of the system.
+A-7 NAS Systems will be used in areas that have differing levels of physical control and monitoring.
+* Some, but not all, NAS Systems will be located within controlled access facilities that will prevent unauthorized physical access.
+* NAS Systems not adequately physically protected will require additional physical and technical measures to detect and, if possible, prevent unauthorized physical access.
+* NAS Systems critical to security policy enforcement will be physically protected from unauthorized access by potentially hostile outsiders.
+The physical security environment varies.
+The particular characteristics at each installation must be taken into account in devising an effective set of countermeasures.
+A-8 Adequate Continuity of Operations Plans (COOP) provide countermeasures to natural disaster or deliberate attack could result in critical operations being halted and/or NAS services interrupted.
+Continuity of operations is part of a strategy of defense in depth.
+Analysis should show the relative cost/benefit of recovery countermeasures.
+4.4.2 NAS-Wide Security Services Assumptions
+NAS-wide security services (e.g., common boundary protection, network-based intrusion detection) must be addressed in the NAS System PP Template.
+It would be irresponsible to not assign specifications for effective countermeasures.
+The decision concerning the balance between assigning all responsibility to a central organization responsible for NAS-wide security services versus making each NAS System responsible for all external interface security services is vested in the authors of the Information System Security Architecture.
+The following set of functional security assumptions for the NAS-wide security service are based on the policy and threats.
+Responsibility for implementing these assumptions is assigned to a hypothetical centralized organization, the NAS Protection Organization (NPO), responsible for NAS-wide security services and to each NAS System based on professional judgement and knowledge of experience in other organization.
+Some specifications would be assigned to both under the principle or defense-in-depth.
+Everyone must recognize that no centralized organization responsible for NAS-wide security services currently exists.
+Hence, the NAS System PP Template is in danger of assuming the problem away.
+Assumptions concerning NAS-wide security services are presented in Table 4-5.
+Table 4-5.
+NAS-wide Security Services Assumptions
+A-9 NAS Systems will be used in an environment of multiple security domains.
+* Connection to and use of the Internet is governed by FAA Orders 1370.83 and 1370.79A.
+In general, because of the significant risk exposure from Internet connectivity, connections between NAS systems and the Internet will be limited, specifically authorized, and carefully managed.
+Access to the Internet will only be permitted through one of the designated Internet access points as specified in FAA Order 1370.83 and 1370.79A.
+A-10 An organization, referenced as the NAS Protection Organization (NPO), exists for implementing protection between the NAS, the Internet, the public switched telephone network, and all other connections not directly under the FAA security control.
+A-11 The FAA practices defense-in-depth.
+As determined to be appropriate, the NPO and the system Program Management may implement complementary protective mechanisms (e.g., email may be scanned for malicious code at the Internet boundary and the NAS System may also implement malicious code protection).
+A-12 FAA Orders, AIS guidelines, and other policies and procedures exist to address: individual responsibilities, system administrator responsibilities, connecting to the NAS, passwords and shared accounts, remote connectivity to the NAS, modems, virus and malicious code protection, reporting viruses and INFOSEC incidents, non-approved software, computer equipment disposal, NAS System security, boundary protection architecture (e.g., DMZ Policy), FAA incident response policy, and FAA wireless connection device policy.
+A-13 Systems must not reduce the overall security posture of the NAS.
+Countermeasures above and beyond just protecting the system must be considered to prevent the system from introducing additional security risk to the NAS as a whole.
+Connection to security domains outside the FAA (e.g., ARINC, other states' Civil Aviation Administration) must be examined for potential risks.
+* AIS will facilitate development of common policies, procedures, and mechanisms.
+* Operation of these protections may be assigned to NPO.
+* Policies and countermeasures corresponding to special or unique vulnerabilities of the NAS System are the responsibility of that system.
+A-14 The NPO operates a Public Key Infrastructure (PKI) for the NAS implementing a particular trust model and all the things required to keep the trust model intact, providing (but not limited to) the following activities: cryptographic certificate generation, distribution, storage, access, destruction, renewal, expiration, and revocation.
+A-15 The PKI components include: * Over arching security policy * A certificate policy (CP) and a Certificate Practice Statement (CPS) * A Certification Authority (CA) plus coordinated Registration Authority (RA) and support mechanisms * Directory or publishing mechanism * PKI aware applications that meet the FAA's trust model
+A-16 NPO provides a single voice for NAS in the event of a detected security incident that involves law enforcement and/or national security officials.
+5 Functional Security Specifications
+The Functional Security Specifications are a set of technical specifications, derived from the CC that counter the NAS System threats and meet the defined security objectives.
+While the functional specifications are derived from the CC, which provides a basis for the intent of the specification, the language chosen for the NAS System functional specifications deliberately avoids using the CC-specific terminology to allow easier understanding of the specifications.
+Hyperlinks are provided to the appropriate CC source specification.
+Certain specifications in this template are new FAA security specifications not found in the CC.
+The author of a NAS System PP may wish to consult the CC for further information.
+The specifications in the CC provide an opportunity for the PP author to provide information or specifications that are specific to that PP.
+One service that this NAS System PP Template provides is that most of this information and specification is common to all NAS Systems and has already been provided.
+In some circumstances the PP author may wish to see exactly how the specifications in the Template were derived from the CC.
+The hyperlinks will facilitate the comparison of the two documents.
+There is an additional source of information about the functional security requirement in the CC. Part 2 of the CC, Security Functional Requirements, includes annexes C through M that present application and evaluation notes for the functional classes defined in the main body of this part of the CC.
+These notes contain additional supporting information that is considered relevant or useful.
+The presentation is informative and can cover a variety of areas where specific attention might be needed.
+This can include clarifications of meaning and specification of the way to interpret specifications, as well as caveats and warnings.
+The application notes contain additional refinement in terms of narrative qualification as it pertains to a specific component.
+Certain specifications are stated as "The developer shall...," which allows the specific specification to be determined by the developer based on their security engineering judgement.
+For example, specification 5.1.2.c., allows the developer to perform a market survey to determine appropriate authentication technology to meet the needs of the FAA.
+Therefore, the specific decision regarding the function can be deferred until issue of a task order, or other activation, under contract (see Appendix B).
+Selected developer actions, such as Section 5.2.6.a, Survey of Product Capabilities, may need to be repeated periodically throughout the system lifecycle, when a security violation occurs or when the security environment (e.g., known attacks) changes.
+It should be noted that there is a significant emphasis on the need for administrative tools.
+Specifications for such tools can be found in the security management requirement (FMT) section as well as throughout the other functional requirements.
+These specifications are present to mandate the development of tools to minimize errors by authorized security administrators, offer choices to reduce the training required and to offer flexibility while reducing the probability of error.
+Such tools can be used in building the system while some can be used at run time.
+The PP will be incorporated by reference in the contract.
+The Functional Security Specifications that prescribe what the NAS System shall do are contractual specifications properly referenced in the specifications section of the contract.
+Specifications levied on the developer to perform analysis or conduct other activities are properly referenced in the statement of work (SOW).
+Specifications that describe the contents of a document are candidates for inclusion as Contract Data Requirements List (CDRL) items.
+Without claiming a rigorous taxonomy, the functional security specifications are organized in an attempted logical order.
+Other orders may be equally valid and even more clear to some stakeholders.
+In general, privileges are reserved to "an authorized security administrator."
+This term does not imply the number of such individuals.
+The number of security administrators and the assignment of their responsibilities, authorities, and privileges need to be flexible to accommodate changes to conditions such as the environment and the role of the NAS System.
+The entire list of specifications in Section 5 constitutes a list of specifications statements that may or may not apply to the system.
+A risk assessment will determine what the product team considers as security concerns.
+The security concerns will drive the selection of appropriate mitigation, in the form of functional and assurance specifications.
+5.1 Identification and Authentication (FIA)
+In general, the need for identification and authentication specifications is to support accountability and access control policies.
+5.1.1 Identification (FIA_UID)
+The NAS System may use passive identification and authentication techniques that do not require active user participation.
+The PP author should determine the set of well-defined operations that an anonymous user is permitted to perform.
+If the set is empty, then specification 5.1.1.a is not appropriate; this determination should be recorded in the PP Rationale.
+The specification for identification is independent of the technology used.
+While typing at a keyboard is the most common technology for a human, many alternatives exist including speaking into a microphone, or wearing a machine-sensible badge (that might work in proximity to a reader or might require physical interaction with the reader).
+Some identification mechanisms may be combined with authentication (e.g., wireless token) or may require independent explicit authentication.
+In determining if identification specifications are needed, one must consider the nature of the authentication mechanism being required.
+In some cases where authentication information by itself can arguably be shown to be unique per individual entity (e.g., a biometric device), there may not be a need for a separate identification mechanism.
+On the other hand, if the authentication mechanism chosen cannot be guaranteed to be unique to and individual entity (e.g., passwords) an explicit identification specification may be warranted.
+5.1.2 Authentication (FIA_UAU)
+For the purposes of this document, strong authentication refers mechanisms which significantly decreases the ability for an attacker to "guess" the information that is required to "authenticate" an individual or entity that is requesting access to the NAS System.
+This includes multiple authentication mechanisms as well as those that use some cryptographic functions (e.g., one time passwords) to counter guessing attacks.
+The selection of multiple authentication mechanisms (e.g., memorized secrets such as PINS and passwords, time-based tokens, biometric characteristics) depends on the availability of COTS products.
+Multiple authentication mechanisms refer to two (or more) factor authentication; usually something you have (a token) and something you know (a PIN).
+Specification of these mechanisms is deferred.
+The NAS System Security Policy may require the use of separate authentication mechanisms for specific authentication events (e.g., local and remote users).
+The use of tools (e.g., menus) tends to limit errors and omissions.
+Authentication may apply to IT systems as well as people.
+Authentication policy may treat all users of another IT system as a group that is authenticated as part of the authentication of the IT system or may distinguish individual users of the other IT systems and require each such user to be authenticated.
+Such policy may be unique for each NAS System.
+The NAS System Security Policy may require re-authentication for certain actions that are considered highly sensitive.
+5.1.3 Authentication Failures (FIA_AFL)
+Reserved.
+5.1.4 User Attribute Definition (FIA_ATD)
+Concerning security policies enforced at run time, (ISO, 1996) treats security policy enforcement as a decision based on rules, where the rules express relationships among relevant attributes associated with initiators and targets, attributes associated with actions and data associated with actions, and access control context.
+In general, security policies are represented within computers by sets of rules.
+These rules employ various attributes to specify whether a proposed action is permitted or not.
+These attributes include characteristics of the originator of the action, the data affected, and ambient conditions such as time-of-day.
+The specifications in the PP are predicated on this concept of rules employing attributes to determine the permissiveness of an attempted action.
+The selection of multiple security attributes is part of the detailed design of the NAS System to be conducted by the developer.
+This detailed design depends, in part, on the availability of COTS products.
+Specification of these mechanisms is deferred.
+The NAS System Security Policy may refer to one or more security attributes.
+The use of tools tends to limit errors and omissions
+5.1.5 Enforcing Quality Metrics on Secrets (FIA_SOS)
+Data known by the user(s) and provided to authenticate a claimed user identity is assumed to be kept secret by the user(s).
+This specification defines functions for mechanisms that enforce defined quality metrics on provided secrets (e.g., automated checking of user supplied passwords).
+The NAS System can ensure that the external generated secret (password) adheres to certain standards, for example a minimum size, not present in a dictionary, and/or not previously used.
+For example, quality metrics have to do with password strength, such as length and character mix, number of bits for keys, and other strength factors.
+A system that can detect and reject prior passwords employed by a particular user provides increased strength of mechanism relative to a system that allows password reuse.
+The term secrets while applicable to authentication data, is intended to also be applicable to other types of data that must be kept secret in order to enforce a specific security policy.
+For example, a trusted communications mechanism that relies on cryptography to preserve the confidentiality or integrity of information being transmitted can only be as strong as the method used to generate and keep the cryptographic keys secret from unauthorized disclosure.
+5.2 Security Audit (FAU)
+Reserved.
+5.2.1 Security Audit Data Generation (FAU_GEN)
+When crafting procurement language associated with this specification (i.e., a contract), it is very important to define, as clearly as possible, the notion of "any other security relevant events."
+Not doing so may cause difficulty later in the development when decisions have to be made on what must be auditable and what need not be.
+5.2.2 Intrusion Identification Analysis (FAU_SAA)
+Specifications described in this section relate to the nascent FAA Computer Security Incident Response Center (CSIRC).
+Little capability exists at present, but improvements are planned.
+Many of the NAS System intrusion identification analysis specifications may become part of the CSIRC capability in the future.
+5.2.3 Security Audit Review (FAU_SAR)
+Reserved.
+5.2.4 Security Audit Event Selection (FAU_SEL)
+Reserved.
+5.2.5 Security Audit Event Storage (FAU_STG)
+Reserved.
+5.2.6 Operational Attack and Vulnerability Analysis and Remediation (FDP_SDI)
+Multiple, sometimes overlapping, security solutions are commonly employed since no one security solution will provide robustness or the answer for all operational needs or for all environments.
+The terms "layered security solutions" and "defense-in-depth" are commonly applied.
+Operational Vulnerability Analysis and Remediation focus on detection and reaction, prevention being addressed in other specifications.
+Shortcomings in the prevention can be mitigated in part by detection and reaction safeguards.
+Host-based capability to identify vulnerabilities, attacks, and suspicious activity includes system monitoring and management, intrusion detection, and malicious code and virus detectors.
+Risk reduction measures can operate automatically, such as dynamic throttling of riskier services entering or leaving the NAS System or elimination or neutralization of viruses and malicious code, or can provide information for manual measures, such as inventories of configuration shortcomings and suggested remediation.
+There is a need for the ability to perform vulnerability analysis during NAS System operation.
+The potentially overlapping areas of detection and analysis, as expressed in auditing and intrusion-detection specifications, may be differentiated according to tense, as shown in Table 5-1.
+CAPTION: Table 5-1.
+Vulnerability Analysis Differentiated by Time
+Specification
+Time of Attack
+Audit Analysis
+Past
+Intrusion Detection
+Present
+Vulnerability Analysis
+Future
+Recommendations should address the detection, reaction, and prevention options.
+Products of various forms are expected to satisfy this specifications.
+With vulnerability scanners (future), a manual report can be generated listing the specific vulnerability, related source information, and recommendations on countermeasures.
+Resulting actions are at the user discretion, usually involving careful planning execution.
+This is in contrast to the virus checker (present), which catches and mitigates security problems in real time.
+5.3 Security Management (FMT)
+Reserved.
+5.3.1 Management of Security Functions Behavior (FMT_MOF.1)
+The assignment of authorized identified roles has been made to an authorized security administrator.
+The assignment of a list of other functions management specifications has been explicitly added.
+Disabling remote access to a facility or service may be necessary under extreme circumstances.
+5.3.2 Management of Security Attributes (FMT_MSA)
+Reserved.
+5.3.3 Management of NAS System Security Data (FMT_MTD)
+Reserved.
+5.3.4 User and Security administrator Roles (FMT_SMR)
+This specification implements Role-Based Access Control, which was introduced in Section 1.3.
+Conditions, as used in User and Security administrator Roles (FMT_SMR) (5.3.4.g), are a catch all for things not covered in subjects, sequential ordering, separation of duties, etc.
+Condition examples are time of day or location.
+Role separation can be an important mitigation measure in the FAA environment.
+For example, certain critical air traffic management changes require supervisor authorization.
+Changing air space sector boundaries is one such example.
+5.4 Cryptographic Support (FCS)
+Cryptography can support a number of security objectives such as integrity, confidentiality, and non-repudiation.
+In the cases where cryptographic functionality is used to meet such security objectives, the individual functional components specify the objectives that cryptographic functionality must satisfy.
+Technology and commercial products are evolving from a focus on key management to an integrated Public Key Infrastructure (PKI).
+The FAA is following this evolution.
+5.4.1 Key Management Cryptographic Support
+Cryptographic keys must be managed throughout their lifetime.
+The typical events in the lifecycle of a cryptographic key include (but are not limited to): generation, distribution, entry, storage, access (e.g., backup, escrow, archive, recovery), and destruction.
+As a minimum, cryptographic keys should at least go through the following stages: generation, storage, and destruction.
+The inclusion of other stages is dependent on the key management strategy being implemented, as the NAS System need not be involved in all of the key lifecycle (e.g., the NAS System may only generate and distribute cryptographic keys).
+5.4.1.A Public Key Infrastructure (PKI)
+One approach for key management cryptographic support is public key technology.
+Guidance is available in (Kuhn, 2001).
+This document was developed to assist decision-makers in determining if a PKI is appropriate for their agency, and how PKI services can be deployed most effectively.
+The document provides a brief overview of issues related to the emerging Federal PKI and its implementation within government agencies.
+It also reviews the risks and benefits of various PKI components, and some of the tradeoffs that are possible in the implementation and operation of PKIs within the Federal government.
+The Federal PKI (FPKI) Steering Committee (http://www.cio.gov/fpkisc/) has been assigned the task of providing Government-wide guidance and coordination of Federal activities necessary to implement a public key infrastructure.
+The FPKI Steering Committee will coordinate, oversee, monitor, implement, and report on the development of a public key infrastructure to support secure electronic commerce and electronic messaging as well as other Federal agency programs requiring the use of public key cryptography.
+FIPS 140-1 is for the testing of cryptographic modules, not the implementation of specific cryptographic algorithms/functions.
+A PKI typically includes one or more Certification Authorities (CA), Registration Authorities (RA), and directories.
+The CA is responsible for issuing certificates, managing them during their lifecycle (including renewing and revoking them), and publishing the certificates and its status to a central repository (e.g., directories).
+The RA registers users and is responsible for verifying the user identities before authorizing the CA to issue the certificate.
+Directories provide the repositories for certificates, user information, and certificate validity for access by users and applications.
+Most organizations employing PKI establish a CA/RA service that is available for the entire Agency.
+Assuming the FAA will follow suite, NAS Systems will be required to use the Agency PKI/CA/RA services and not develop their own.
+5.4.1.B Potential PKI Specifications
+If a PP author desires specifications for a PKI infrastructure, following are specifications for a COTS Public Key Infrastructure (PKI) solution to support key and certificate lifecycle and consequently defines specifications for the following activities: cryptographic certificate generation, distribution, access, destruction, renewal, expiration, and revocation.
+Functional Security Specification Elements a.
+The NAS System shall incorporate a COTS PKI providing (but not limited to) the following activities: user registration, public key certificate generation, registration, distribution, storage, access, destruction, renewal, expiration, and revocation. b.
+The NAS System PKI shall conform to all applicable Federal standards and guideline including (but not limited to) FIPS 140-2, June 2001, Security Requirements for Cryptographic Modules; FIPS 180-1, April 1995, Secure Hash Standard; FIPS 186-2, January 2000, Digital Signature Standard (DSS); and guidance issued by the FPKI Steering Committee.
+c.
+The NAS System PKI shall employ cryptographic modules tested as specified in FIPS 140-2 (FIPS, 2001). d.
+The NAS System PKI shall generate cryptographic keys and X.509 version v3 (or its most recent version) certificates compatible with the NAS-wide PKI. e.
+The NAS System PKI shall be compatible with X.509 certificates issued by the NAS-wide PKI operated by the NAS Protection Organization (NPO). f.
+The NAS System shall provide the tools for the authorized administrator to manage and change cryptographic certificates.
+g.
+The NAS System shall provide the capability to audit success and failure of the Cryptographic Key Management activities.
+5.4.2 Cryptographic Operation (FCS_COP)
+Reserved.
+5.4.3 Data Storage Encryption
+Reserved.
+5.4.4 Data Authentication (FDP_DAU)
+It was deemed logical to include Data Authentication with the other cryptographic services.
+This specification provides for the protection of information at rest (general data import, files at rest, etc.) and transaction oriented data that would require non repudiation functionality.
+5.5 Network Security Protection
+The NAS-wide Security Services Assumptions A-8 through A-13 address security issues arising from the fact that the NAS is a large distributed system with connections to domains that are outside FAA control.
+Specifically, A-9 postulates the existence of a NPO, responsible for implementing protection between the NAS, the Internet, the public switched telephone network, and all other connections not directly under the FAA security control.
+A-13 makes Systems responsible for maintaining the overall security posture of the NAS.
+Countermeasures above and beyond just protecting the system must be considered to prevent the system from introducing additional security risk to the NAS as a whole.
+Connection to security domains outside the FAA (e.g., ARINC, other states' Civil Aviation Administration) must be examined for potential risks.
+Policies and countermeasures corresponding to special or unique vulnerabilities of the NAS System are the responsibility of that System.
+These specifications assume that threat and vulnerability analysis have been performed prior to writing specifications and that these analyses incorporate the current and foreseen NAS-wide Security Services.
+These specifications also assume that the FAA delegates certain security analysis and architecture tasks to the developer, as described in the Section B.9.3 IPT and Developer Working Together and that the contractual vehicle employs B.9.4 Task Order Contracting.
+If other arrangements are made the specifications will have to be changed accordingly.
+5.5.1 System Protection
+These specifications are necessarily quite general.
+More specificity may be possible after the threat and vulnerability analyses have been performed as well as following the FAA's review and approval of the recommended security architecture.
+5.6 Application Data Protection (FDP)
+Reserved.
+5.6.1 Access Control (FDP_ACC, FDP_ACF)
+There is a close relationship between Security Attribute Management, found in Template Section 5.3.2., and Access Control.
+In addition to these management specifications, 5.
+6.1.d, in the Template, requires that a security administrator be able to create certain rules that will define situations when access to information is always denied for certain information.
+These rules are similar to security attributes as control whether a user obtains access to information or not.
+However, they are invoked only by a security administrator when the environmental situation changes.
+For example, the security administrator is able to declare that maintenance is being performed on a certain part of the system and that write access to that part of the system will be denied until the maintenance is completed.
+Another example is when a security administrator detects (or is informed of) the need for heightened alert where certain threats are deemed to be present.
+In such a situation, access to information may be more restrictive than in normal operations.
+It is expected that rules such as this will be invoked (changed) relatively infrequently as opposed to the modification of the general security attributes defined in Section 5.3.2.
+Also of note, 5.3.2.d is that of "other environmental attributes.
+These attributes will not be associated with a subject or an object but with the environment.
+An example of such an attribute is the "time of the attempted access."
+In 5.3.2.e, the term "All" is used in the context of the specification to audit operations.
+In writing the PP, the author must determine the scope of what operations must be audited.
+Note that applications data are also protected by Data Storage Encryption.
+Although cryptographic functions can be construed as being attribute based, cryptographic functions are addressed separately in the PP.
+5.6.2nformation Flow Control (FDP_IFF, FDP_IFC)
+In order for the NAS to implement strong integrity protection in the context of interacting with untrusted (e.g., external) software, controls on information flow are required.
+Access controls (as described in Section 5.6.1) are not sufficient because they only control access to information containers (e.g., files), allowing the information they contain to flow, without controls, throughout a system, possibly corrupting the NAS system itself or disclosing information that could lead to NAS system corruption or attack.
+The specifications in this section require the PP architect to consider the applicability of information flow to/from the NAS and within the NAS and determine the information flow control points upon which to implement an information control policy.
+One example application of such information control (there are others) can be illustrated in the context of a domain protection device (e.g., a firewall) that may be used to protect the NAS from external attack or corruption.
+This type of device restricts information flow from one network to another based upon assumed or explicitly stated attributes of the information.
+A typical firewall information flow control policy could be: * Information originating from the Internet is assumed to be malicious in nature and may flow into a protected system only under certain conditions (e.g., it is filtered or that it originates from a trusted source).
+All other information originating from the Internet would not be allowed to flow through the device to the internal network.
+* Information originating from an (internal) trusted network is assumed to be non malicious and may flow freely.
+This policy could be implemented by a number of mechanisms to include cryptography in the context of a virtual private network to establish trust in originator of traffic and protect transmission and IP filtering mechanisms to control which hosts can communicate with the internal network.
+5.6.3 Import from External Systems (FDP_ITC)
+Reserved.
+5.6.4 Export to External Systems (FDP_ETC)
+Reserved.
+5.7 Protection of the NAS System Security Functions (FPT)
+Protection of the NAS System Security Functions contains functional specifications that relate to the integrity and management of the mechanisms that provide the Security Functions, and to the integrity of the data used to implement the security functions.
+In some sense, these specifications may appear to duplicate components in user data protection and may even be implemented using the same mechanisms.
+However, the difference is focus on user data protection as contrasted with security-implementing data protection.
+It is important to note that user data protection depends on protection of the NAS System Security Functions to prevent tampering or bypass.
+There are three significant portions that make up the NAS System Security Functions: 1.
+The abstract machine, which is the virtual or physical machine upon which the specific implementation executes.
+2.
+The implementation, which executes on the abstract machine and implements the mechanisms that enforce the NAS System Security Functions.
+3.
+The data, which are the administrative databases that guide the enforcement of the NAS System Security Functions.
+5.7.1 Internal NAS System Data Transfer (FPT_ITT and FPT_SSP)
+Reserved.
+5.7.2 Tamper Protection (FPT_PHP)
+This specification is one that is often allocated to the environment of the NAS IT System.
+Physical protection can be provided through low technology alarmed locked cabinets and tamper detection seals applied to computing and network equipment.
+High technology solutions, such motion detectors and surveillance, are also available.
+5.7.3 Security Policy Enforcement Modularity and Continuity (FPT_TRC)
+It must be assumed that parts of the NAS may be out of service or disconnected from time to time and that such status will also change from time to time.
+The NAS System must provide a degree of robustness to provide continuity of security service.
+5.7.4 Trusted Recovery (FPT_RCV)
+Note that Trusted Recovery also addresses recovery after discontinuity or interruption of communication of and among the NAS System components.
+5.7.5 Reference Mediation (FPT_RVM)
+Reserved.
+5.7.6 Domain Separation (FPT_SEP)
+Reserved.
+5.7.7 Time Stamps (FPT_STM)
+It is critical in the current environment to be able to recreate actions that have taken place on any given NAS System.
+An important component of any recreation is a consistent view of the time that event took place which leads to the specification for a reliable time stamp to be placed in audit records.
+Reliable time can be achieved (within some acceptable tolerance) using a number of different approaches to include use of the Network Time Protocol (RFC-1305), the Simple Network Protocol (RFC-2030) or the Global Position System time service for more mobile systems.
+The PP author should carefully consider the applications and time stamp options when determine which mechanisms is appropriate for the specific NAS System under consideration.
+5.7.8 NAS System Self Test (FPT_TST)
+Testing hardware and software configuration conformance to a reference configuration may involve the CM function to determine the authorized configuration.
+It may also involve the use of tools, such as Tripwire, to test for hidden modifications.
+5.8 Resource Utilization (FRU)
+Reserved.
+5.8.1 Priority of Service (FRU_PRS)
+Reserved.
+5.8.2 Resource Allocation (FRU_RSA)
+Reserved.
+9 NAS System Access (FTA)
+Reserved.
+5.9.1 Limitation on scope of Selectable Attributes (FTA_LSA) (5.9.1)
+Session security attributes control which user actions are permitted, and the subjects to which a user may be bound.
+The decision may be based on: the method of access, the location or port of access, and/or the time (e.g., time-of-day, day-of-week).
+5.9.2 Limitation on Multiple Concurrent Sessions (FTA_MCS)
+Reserved.
+5.9.3 Session Locking (FTA_SSL)
+Reserved.
+5.9.4 Access Banners (FTA_TAB)
+Reserved.
+5.9.5 Access History (FTA_TAH)
+Reserved.
+5.9.6 Session Establishment (FTA_TSE)
+Reserved.
+5.10 Trusted Path (FTP_TRP)
+Users often need to perform functions through direct interaction with the TSF.
+A trusted path provides confidence that a user is communicating directly with the NAS System whenever it is invoked.
+A user's response via the trusted path guarantees that untrusted applications cannot intercept or modify the user's response.
+6 Assurance Security Specificationss
+The philosophy of protection implicit in this document is that the threats to security and organizational security policy commitments should be clearly articulated and the proposed security measures be demonstrably sufficient for their intended purpose.
+The FAA requires grounds for confidence that an IT product or system meets its security objectives.
+Assurance is the name given to such grounds.
+In conformance with FAA acquisition regulations, this PP provides assurance through active investigation (evaluation) of the IT system in order to determine its security properties.
+Evaluation techniques can include, but are not limited to: a. analysis and checking of process(es) and procedure(s) b. checking that process(es) and procedure(s) are being applied c. analysis of the correspondence between NAS System design representations d. analysis of the NAS System design representation against the specifications e. verification of proofs f. analysis of guidance documents g. analysis of security test plans, procedures, and results h. independent functional security testing i. analysis for vulnerabilities (including flaw hypothesis) j. penetration testing
+Whenever possible, the assurance specifications specify measuring the validity of the documentation and the resulting IT system by expert evaluators with increasing emphasis on scope, depth, and rigor.
+Greater assurance results from the application of greater evaluation effort.
+The goal is to apply the minimum effort required to provide the necessary level of assurance.
+The increasing level of effort is based upon: a. scope -- that is, the effort is greater because a larger portion of the IT system is included.
+b. depth -- that is, the effort is greater because it is deployed to a finer level of design and implementation detail.
+c. rigor -- that is, the effort is greater because it is applied in a more structured, formal manner.
+6.A Security Assurance Needs
+A key concept in assurance is how much security is enough.
+Many specifications can be satisfied with varying degrees of enforcement.
+Determining the "right" level is much more an art than a science.
+Nevertheless, specification of how much is enough is an important part of determining security measures.
+Office of Management and Budget (OMB) Circular A-130, Appendix III, prescribes that security measures must be commensurate with the risk and magnitude of potential harm resulting from the loss, misuse, or unauthorized access to or modification of information.
+Once determined, the appropriate level of assurance must be clearly specified as part of the agreement between developer and customer.
+Approval of the system developer's Configuration Management (CM) Plan and Software Development Plan are part of such an agreement.
+The assurance activities that are performed when procuring an FAA system compliant to a PP fall into one of two categories.
+The first category offers confidence that the offeror's proposed technical solution and the FAA PP are consistent.
+These activities specifically focus on content specifications of the offeror's solution in an effort to ensure that it indeed meets the needs of the FAA.
+The nature of the offeror's technical solution and its relationship to the PP is addressed in section 6.1 Security System Subsystem Specification (SSSS).
+The second category of activities offers confidence that the developed system intended to meet the FAA specifications, does so with no unacceptable flaws and incorporates appropriate lifecycle support and configuration management processes to ensure the long term viability of the system.
+These activities are described in sections 6.2 through 6.9.
+6.B Elements Placement in Solicitation
+The CC defines an assurance element as a security specification which, if further divided, would not yield a meaningful evaluation result.
+An assurance element is the smallest security specification recognized in the CC.
+As shown in Table 6-1, the three types of assurance elements generally correspond to three sections of the solicitation.
+CAPTION: Table 6-1.
+Correspondence of CC Assurance Elements and Solicitation Sections
+CC Assurance Element
+Solicitation Section
+Developer action
+Statement of Work (SOW)
+Content and presentation of evidence
+Data Item Description (DID)
+Evaluator action
+Most evaluator actions will be considered for a security testing guide.
+Developer action (Statement of Work) elements identify the activities that shall be performed by the developer.
+This set of actions is further qualified by developer provided evidence referenced in the following set of elements.
+CC specifications for developer actions are identified by the letter "D" at the end the element number.
+Content and presentation (Data Item Description) of evidence elements identify the evidence required, what the evidence shall demonstrate, and what information the evidence shall convey.
+CC requirements for content and presentation of evidence are identified by the letter "C" at the end the element number.
+The developer actions and content and presentation of evidence define the assurance specifications that are used to represent a developer's responsibilities in demonstrating assurance in the NAS System security functions.
+Evaluator action elements identify the activities that shall be performed by the CC evaluator, [add tech center] usually an independent evaluation laboratory.
+In the United States, these labs are accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) for Common Criteria Testing under NVLAP Lab Code 200427.
+NIAP Common Criteria Evaluation and Validation Scheme (CCEVS) Approved Common Criteria Testing Laboratory (CCTL).
+A list of accredited labs may be found at http://www.commoncriteria.org/services/LabCountry.htm.
+The description of evaluator actions is very useful to the developer.
+Further guidance to evaluators has been published in version 1.0 of the Common Methodology for Information Technology Security Evaluation (CEM), available at http://csrc.nist.gov/cc/cem/cemlist.htm.
+In developing the NAS System PP Template, most of the evaluator actions have been omitted because the PP is envisioned to become part of contract specifications for the developer.
+The evaluator actions apply to the FAA, or a contractor acting on behalf of the FAA.
+It is anticipated that a separate Security Testing Guide will be developed, incorporating this material.
+6.1 Security System Subsystem Specification (ASE)
+The goal of documenting the developer's understanding is to enhance communication among all stakeholders and to demonstrate that the PP is complete, consistent, technically sound, and suitable for use as the basis for the development of the security aspects of the NAS System.
+It also provides a basis for acceptance testing by specifying the developer's understanding of the PP.
+The CC ASE--Security Target evaluation offers actions to ensure that the customer and developer have consistent understandings of system security properties.
+The Protection Profile embodies the FAA's statement of its security specifications along with supporting and clarifying information.
+The offeror responds with a proposed technical solution of the architecture, design, and specific mechanisms to meet the specifications.
+Both the PP and offeror's technical solution will evolve.
+The FAA may require the offeror to clarify or expand the technical solution during contract negotiations or after contract award.
+as part of the contract negotiations.
+After contract award, the SOW may call for periodic delivery of revised and enhanced documentation.
+6.1.1 NAS System Security Description (ASE_DES)
+The statement of the developer's understanding of the NAS System's security description may be incorporated in the contract and used as part of the process to determine contractual acceptance.
+It should be noted that, even if the contract is satisfied, the SCAP may fail if the system does not reduce the residual risks to an acceptable level.
+6.1.2 NAS System Security Environment (ASE_ENV)
+The security environment includes all the other systems constituting the NAS as well as any external systems with which the NAS System is directly interfaced.
+The architecture and design of non-security functions combined with interfaces, protocols, and the way these interfaces and protocols are used can have an impact on the security of the NAS as a whole.
+Therefore, analysis is required to show that no adverse effect will occur.
+This documentation is a road map that describes all the assurance documentation that will be provided.
+As identified in PG-1, external security domains outside the control of the FAA must be consider potentially hostile.
+Attacks from external domains must be anticipated and suitable countermeasures implemented.
+6.1.3 Allocation of Security Objectives (ASE_OBJ)
+The developer may identify security specifications that were not identified in the PP.
+6.1.4 NAS System Security Summary Specification (ASE_TSS)
+The NAS System PP adapts the CC paradigm as part of a government contract.
+The governing body of regulations are government contract law and practice, not the CC paradigm.
+Some components of the CC paradigm must be explicitly included in the NAS System PP instead of assuming that they are incorporated by reference.
+The Security System Subsystem Specification (SSSS) builds on the TOE Summary Specification (ASE_TSS) component.
+Although the tasking negotiated between the FAA and the developer may be regarded as similiar to an ST in that it establishes a set of criteria against which the acceptability of the delivered TOE may be judged, specific ST components must be contractually specified.
+By including ASE_TSS, the developer is required to produce a description of his solution, separating the PP's functional and assurance specifications it meets and does not meet, and providing a justification for the DAA explaining why certain specification are not met.
+All contractual deliverables must be itemized; the developer is under no obligation to produce anything not specified.
+Informal style refers to writing in prose in natural language (e.g., English).
+Informal style is not subject to any notational or special restrictions other than those required as ordinary conventions for language grammar and syntax.
+While no notational restrictions apply, the informal style does require providing definitions for terms that are used in a context other than that accepted by normal usage.
+The relationship between the IT security functions and the security functional specifications can be a "many to many" relationship.
+Nevertheless, every security function shall contribute to the satisfaction of at least one security specification.
+Security functions that do not fulfil this relationship should normally not be necessary.
+6.2 NAS System Configuration Management (CM) (ACM_CAP.2)
+Configuration Management (CM) policy in the FAA is expressed in Order 1800.66 and is part of the Acquisition Management System (AMS) (FAA, 2001).
+CM policy is resident on the FAA AMS Toolset (FAST).
+Order 1800.66 makes an IPT/PT responsible for: * CM specifications * CM planning * CM plan documenting CM processes and procedures
+ISS concerns are a subset of the motivations for CM.
+The CM specifications in the PP may be combined with CM specifications from other sources when included in solicitation and contract documents.
+The solicitation may require the offeror to describe specified aspects of its CM program in a proposal.
+6.2.1 CM Automation (ACM_AUT)
+The objective of introducing automated CM tools is to increase the effectiveness of the CM system.
+While both automated and manual CM systems can be bypassed, ignored, or prove insufficient to prevent unauthorized modification, automated systems are less susceptible to human error or negligence.
+The NAS System requires such automated CM tools.
+The IPT/PT may decide to furnished the CM system to the developer as government furnished equipment (GFE) or to require the developer to employ a COTS CM system to ease the transition of using the CM system from developer to the FAA.
+6.2.2 CM Capabilities (ACM_CAP)
+A unique reference is required to ensure that there is no ambiguity in terms of which instance of the NAS System is being evaluated.
+Labeling the NAS System with its reference ensures that users of the NAS System can be aware of which instance of the NAS System they are using.
+Unique identification of the configuration items leads to a clearer understanding of the composition of the NAS System.
+6.3 Delivery and Operation (ADO)
+Reserved.
+6.3.1 Delivery (ADO_DEL)
+Secure delivery addresses T-9 that someone may introduce unauthorized software into the NAS System.
+6.3.2 Installation, Generation, and Start-up Procedures (ADO_IGS)

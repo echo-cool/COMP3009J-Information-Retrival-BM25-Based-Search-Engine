@@ -1,0 +1,413 @@
+STRUCTURED APPROACH TO THE INTELLIGENT SYSTEM DESIGN Dr. Leonid M. Polyakov Professor of the Department of Computer Systems and Math Globe Institute of Technology New York, NY Leonid@globeinstitute.org
+Artificial Intelligence (AI) is a science of intelligence system design.
+Existing definitions of intelligence don't answer some important questions of engineering procedures.
+What kinds of intellectual tasks do we have? Who is more intelligent or smarter: a scientist or a wood-maker (human or machine), a metal-maker or a wood-maker? How to design a system with reasoning as the most powerful intellectual function? What is intuition? Can we design a system with intuition?.
+All these topics are subjects of discussion in this paper.
+The goal of this paper is to find active, productive may be not the best way to determine the starting position and some directions of intelligent system design.
+ABSTRACT
+where the gene pool has been unaffected by migration, the longer that children attend a school, the higher their I.Q.'s on average.
+The knowledge base is a module, organized memory of an intelligent system and knowledge is just a content of this base.
+"Intelligence is an internal property of the system, not a behavior" [20], but a behavior is the main criterion of an intelligence level.
+This level can be determined by a test.
+The natural system inherits strong information through genetic code.
+They have very strong general intelligence.
+The artificial system has relatively weak information power from the hardware and the software.
+Inherited "brain power" of natural intelligence is determined by power of a neuron net (number of neurons and power of connections: value of a weight function, a threshold and a transfer function).
+A process of knowledge collection creates an information flow through the neuron net and increases power of connections ( Hebb).
+As a result "brain power" increases.
+In a simple brain model a neuron is a variable with two values: ON and OFF.
+The simple rule of knowledge (if...then) in KB can be presented as a variable with two values.
+The more rules the more connections between the variables the higher intellectual power of a system.
+In AI systems that are not based on neuron net technology, increasing a number of rules in KB increase a number of virtual connection between the different parameters as well.
+The knowledge base is the main source of information and intellectual power of artificial systems.
+Inheritance is the main source of natural intelligence power.
+A definition is not a description of a system design.
+Good definition presents a term from the user (customer, supervisor, etc.) point of view and helps to recognize it among the other terms.
+It should be as simple as possible.
+Now we can try to design an intelligence definition.
+influence mental and physical behavior in accordance General intelligence (inherited or hardware intelligence) is an organized combination of conscious and unconscious potentials (cognitive and expressive potentials) in a sentient system that able to direct and with a system goal.
+General intelligence is a capability opposite to ability of the system.
+It can be evaluated indirectly through electrical and
+Keywords: intelligence, intuition, associative thinking, fuzzy, agent classes, intelligence classes, structure, reasoning, preposition logic, predicate logic, knowledge base, rules of reasoning, application rules, design.
+INTELLIGENCE DEFINITION There are many different definition of intelligence [1--19], but none of them give the answer acceptable by a scientific community.
+First of all, intelligence is a fuzzy term.
+In some cases it is very difficult to draw a line between intelligent and nonintelligent natural and artificial systems.
+For example, biological adaptation or any kind of evolution can be presented as learning intelligent ability or non-intelligent process.
+It is difficult to determine when expert system became an AI system.
+All intellectual activities are triggered by the goal.
+"A system can be intelligent only in relation to a defined goal..." [11].
+All kinds of intellectual activities in the specific area are based on knowledge, but intelligence is not knowledge.
+Knowledge is a "tool" of intelligence.
+If you don't understand a goal, you are not capable to reach it.
+An ability to learn is an important intellectual ability that can improve knowledge.
+Knowledge reinforces intellectual activities.
+There are two components of intelligence: general intelligence that is inherited at birth, and knowledge-based intelligence that can be improved by learning.
+Twin studies support this approach but the twin result of intelligent level measurement depends on intelligent definition and the measurement method that still are problems.
+Professor Ulric Neisser (Cornell University) notes [30] that in isolated areas
+chemical brain activities are measured by instrumentation.
+A level of fuzziness determines a level of confidence.
+Knowledge-based intelligence can be defined as a knowledge-based general intelligence (or ability) of a domain-oriented system to act under existing constraints (limitations) and reach external or internal goals or decrease the distance between the starting and the goal's stages.
+A goal's description can be presented in crisp, fuzzy, or probability and statistics theory languages.
+This definition covers not just cognitive power but a power of sensing system and the actuators.
+In this case cognitive power is limited by knowledge and extended by learning.
+Knowledge-based intelligence can be evaluated by behavior tests.
+General intelligence of AI systems can be evaluated by reading of design documentation and program source code.
+Unfortunately access to this information usually is not available under secrecy conditions.
+Both of these definitions of intelligence agree with existing two-factors, multipleintelligence, and information-processing theories of natural intelligence [23].
+This is the extreme definition.
+As a working definition of AI system it is possible to accept: the system with one or more intellectual abilities (Fig 1) or the system that emulate one or more intellectual abilities.
+Note: a condition statement "if-then" in a hard coded program is not an element of a knowledge base.
+The conventional closed-loop information system (control system) is not knowledge-based.
+Only the intelligent system is based on knowledge.
+This statement supports fuzzy nature of intelligence definition.
+The time it takes to execute the goal is one of many important characteristics of a system performance such as learning ability, duration of the object recognition, etc. and should not be incorporated into the definition.
+The statement "...a goal should be reached for a certain period of time..." does not make any sense and does not make the definition better.
+In some discussions we can hear that sometimes a high intelligent system performs some specific job worse then a lower level of a intelligence system (in human society we have the same).
+So what, don't use the tractor instead of the hammer.
+The right choice is a very important characteristic of human and artificial intellect as well.
+view AI is a software design technology to create programs with intellectual abilities.
+These programs can be used for wide area of the problem solutions.
+What kinds of intellectual tasks do we have? Who is more intelligent or smarter: a scientist or a wood-maker (human or machine), a metal-maker or a wood-maker? In [23] we can read: "Who's more intelligent: a Supreme Court Justice or professional golfer?" Task classification can help to design system.
+Intelligence abilities can be presented as the multilevel structure [2,32].
+But this structure presents a system view from one side.
+A multilevel structure of functions (abilities) (see Fig. 1) with expressive and cognitive thinking at the upper levels of the structure; learning, problem solving, and etc at the middle level; and generalization, reasoning, conceptualization, induction, information collection, perception, etc. at the lower level of the structure presents the system from another point of view.
+Perception can be presented as a set of the different signal, emotion Â­ as a set of the different kinds of emotions.
+Conceptualization itself consists of two levels: identification of important characteristics and identification of how the characteristics are logically linked.
+Certainly this structure is based on some level of simplification of the relationship as well as the set size of abilities.
+But any way, this structure can help to determine the set of abilities related to the certain goal, their relationships, and determine the metric structure to evaluate the system intelligence levels.
+It takes longer to exercise the upper level abilities than the lower level abilities.
+Different tasks need different sets of abilities to fulfil these tasks.
+"Animal behavior ought to be used as a model to define a hierarchy of intelligence tasks"[28].
+The structure of the intelligent functions was discussed early, for example, in [20].
+In accordance with the definition in this paper "intelligence is an ability..." but what kind of abilities are "the information and values the system has stored in its memory"? The mixture of different levels like reasoning and problem solving (reasoning is the lower level ability relatively to problem solving), reward and punishment with value judgement (reward and punishment is the lower level ability relatively to value judgement) creates the wrong structure.
+Computation power (speed, sophistication of the algorithm of computation or something else?) and number of processors, knowledge representation mechanisms and symbols (symbols of what?), and many others are placed in one row as dimensions of intelligence.
+In [1] and [2]
+The goal is a result of the intelligent system actions.
+"A system can be intelligent only in relation to a defined goal or environment"[11].
+Different tasks, different areas of activities have different goals.
+Similar goals can be combined into one class, which we can call the goal
+CLASSIFICATION OF THE INTELLIGENCE TASKS AND ABILITY OF THE AGENTS TO ACHIEVE THEIR GOALS The system design is based on set of (abilities) and relationships between software design technology creates specific problem solution.
+From the desirable system tasks them.
+A conventional the programs for the programmer point of
+class .
+The goal class (similarity) is determined by minimal set of abilities to fulfil the goal of the task with the same weight functions of each ability.
+All agents that exercises the same minimal set of abilities to carry out the goal with the same set of weight functions can be combined into one class which we can call the agent class.
+The members of the same agent class can fulfil the goals of the same goal class .
+A scientist, a wood-maker, and a metal-maker are trained to perform different classes of tasks (goal classes) and we cannot make any comparisons between different agents of different agent classes.
+So, it is impossible to compare a scientist and a handyman, as long as they fulfill different tasks under different goals.
+In some cases it is possible to combine the systems with visible different intelligence levels into one agent class.
+For example, agent from the "handyman class" and agent from the "scientist class" can be combined into one class if these systems act under similar goals as for example, surviving, reproduction, repairing something that does not need any special scientific knowledge, etc.
+Performance of these systems and level of their intelligence can be compared.
+Multiple-intelligence theory [23] supports this point of view.
+Achievement of the same goal by the different agents usually involves the same set of their abilities with the same set of weight functions.
+It is impossible to compare a car and bookstore even if you use the money scale to evaluate them.
+But as soon as you look at them as investment choices (taxi or shop), you will be able make a comparison: the same goal (profit) and the same set of characteristics.
+The stock market permits the use money scale to compare almost everything because the same investment goal and the same parameters of evaluation.
+Good gamblers in reality use vector function, but non-sophisticated people play by price difference.
+It is reasonable to suppose that a scientist has better training in abstract abilities than a handyman.
+It is reasonable to make serious decision about differences of the intelligence level of these systems.
+Different domain applications are determined by different sets of abilities.
+But it is possible that a handyman (human or machine) has grater level of intelligence (special abilities) then a scientist (human or machine).
+If these handyman's special extra abilities are not fit to the his/her/its kinds of activities then they can not be utilized in the professional activities of a scientist and a handyman as well.
+Performance of the different tasks utilizes the certain limited sets of intelligent abilities.
+In this case a very smart metal-maker will not be able to use full his/her/its available intelligence power and will not be able to demonstrate the full set of abilities that are not important to fulfil standard metal-worker task.
+In order to make an evaluation of a real "brain" power of the system, we should assign a reasonable and comparable goal level.
+It is important to avoid using the overqualified agent.
+By the way, it is a big problem of the job market.
+Human intelligence is not a subject-oriented set of abilities.
+We are not talking about a genius; we are talking about ordinary people.
+I myself don't understand the nature of genius.
+Machine intelligence (for the time being) is a subjectoriented ability.
+There are different levels (capacities) of intelligence.
+Sometimes different levels of performance (skills) can be presented as different levels of intelligence.
+Different levels of performance are determined in many cases by limitation of one or more elements of the system.
+Advanced upper level abilities of the intelligent structure (generalization, conceptualization, etc.) are not guarantying a high level of the skills.
+For example, low capability of the sonar sensors can prevent a person to be a musician even if he/she/it has a suitable capability of the rest of the subsystems.
+Beethoven was not a deaf man; he lost his ability to hear.
+Composer as music designer can "hear" his music with his inner "sensor".
+The famous woman Helen Keller, author and educator was deaf, blind and mute but she had a sensitive tactile system and sense of smell.
+She learns to "hear" and to speak and she was able to make her great intellectual power work [14].
+A scientist with a high level of intelligence may have a problem doing a manual job if he/she/it does not have suitable actuators.
+A "handyman" is not a handyman without hands.
+There are two choices to design the definition of intelligence: to extend definition and include sensors and actuators or to add separate explanation of sensors and actuator importance.
+As soon as we talk about intelligence as "...an ability of a system to act appropriately..."[1], we include an actuator into this definition.
+No sensors Â­ no knowledge, no actuators Â­ no performance; and it is impossible to evaluate the level of intelligence.
+Globe Institute of Technology has strong positive experiences to reeducate people of different backgrounds into very good programmers.
+Our experience shows that a medical doctor, a psychologist, an engineer, a teacher, and people who worked in many other fields, can fulfill tasks of the high level programmer and they like doing it.
+There are a lot of people who are good scientists, medical doctors or have other professions and at the same time are good writers or musicians, biologists or good mathematicians, etc.
+These examples support the assumption that human intelligence is determined by a goal achievement activity level but not by area of application.
+In other words, agents in many different domains can be combined in one agent class if they exercise the same minimal set of abilities at the same levels.
+AGENT WITH REASONING.
+THE STRUCTURE DESIGN Reasoning is the most powerful intellectual function but it is not easy to emulate it.
+The main problem is determined by the nature of reasoning that is based on computation with words instead of computation with numbers.
+There are a lot of different approaches to the knowledge representation in the agents.
+The most important languages of knowledge
+representation are preposition logic and predicate logic.
+Agent models of reasoning based on preposition and predicate logic are topics of this discussion.
+Reasoning, as we know, is the process of drawing conclusion from facts.
+There is a lot of research dedicated to the problems of reasoning and the agent structure design [7,9,18].
+All of them are based on representation of knowledge as rule-based, semantic net, or frame structure knowledge base.
+These knowledge bases (KB) include just application knowledge (AKB) (domain oriented KB).
+Rules of reasoning are applied on AKB in different ways for different agents.
+This approach decreases the level of universality of the agent.
+Most existing systems with reasoning are not universal theorem provers ( http://wwwformal.stanford.edu/clt/ARS/Entries/acl2).
+These systems are based on rules of reasoning and don't work with application knowledge.
+Some of them, like ACL2, are designed as multiKB with (Deductive machinery, Dynamics, Persistence).
+However, all these systems are based just on preposition logic.
+The most interesting result in the area of reasoning is the Jess language ( Jess, the Java Expert System Shell http://herzberg.ca.sandia.gov/jess/demo.html).
+This language is based on just one KB-AKB.
+Information is presented by predicate logic.
+Rules of reasoning are incorporated into a source code.
+A possible way to increase the level of universality of the agent is by creating the double KB agent structure.
+The first KB is application knowledge base (AKB); the second one is rule of reasoning KB-RKB. RKB is universal KB.
+It can be used with different AKB.
+The Double-KB structure of a system (the programmer Mr. U.Rozenblad) is shown on Fig.2.
+Complicated application rules should be decomposed to simple rules by DeMorgan's, associative, and other laws.
+The idea of a multi-KB in search engines also was described by Dr. Lotfi Zadeh in "The Prototype-Centered Approach to Adding Deduction Capability to Search Engines- The Concept of Protoform" (BISC letter, 21 Dec 2001) http://www.cs.berkeley.edu/People/Faculty/Homepages/zade h.html .
+In this letter: "The deduction database is assumed to consist of logical database and a computational database, with the rules of deduction..."
+Rules of deduction are Implication Elimination, AndÂ­Elimination, And-Introduction, etc.
+These rules transfer rules of application in canonical form.
+Transformation can be done during of application role presentation or during a program execution.
+First way is more time efficient, second one does not change of application roles presentation and make them easy recognizable.
+Advantages of reasoning rules separation from a program: 1.
+Simple choice of the set of rules from the prepared list of rules for each area of application.
+2.
+Standardization of a program by coding only reading functions and functions of recognition.
+The standard program can be easy designed and testing.
+The standard program has a high level
+of universality and can be easy adapted to the different areas of application.
+3.
+Separation of rules of reasoning from a program makes a program easy readable, better understandable, and as a result more reliable.
+INTUITION It is not the question: does machine have intuition or doesn't have it? If we are machines and we have intuition then a machine has intuition.
+The problem is to define the word intuition to make it worktable.
+There is a lot of different definitions [ 3,8,10,12,15,16,18,21,24,25,31,32,34].
+From the practical point of view we need the positive, constructive approach even if in the beginning we design system just with the realization of the simple process of the intuition imitation.
+The most famous definition of intuition is "the immediate knowing, or learning of something without the conscious use of reasoning; instantaneous apprehension" (Webster's New universal unabridged dictionary).
+The difference between intuition and association (by Webster's) is: the first is a nonconscious process, the second is a conscious process.
+This definition is not productive.
+It is impossible to extract knowledge from nothing.
+If you never heard about the stock market or brain surgery, you will never have intuitive decision in these areas.
+Knowledge extraction is a conscious process.
+There are two conditions under which one idea is able to recall another.
+"These conditions may be classified under two general heads, the law of contiguity (in reality is law of associations ), and the law of associations (in reality is law of reasoning ).
+The first states the fact that actions, sensations, emotions, and ideas, which have occurred together, or in close succession, tend to suggest each other when any one of them is afterward presented to the mind.
+The second indicates, or ideas tend to recall their like from among previous experiences.
+On their physical side the principles of association correspond with the physiological facts of reexcitation of the same nervous centers " (Webster's New universal unabridged dictionary).
+These two definitions relate to two different processes.
+One is associated thinking, second one is intuition.
+The memory is a network hierarchy [23].
+It is arrangement of nodes or categories such that concrete ideas are at the bottom of the hierarchy and are connected to more abstract ideas above them.
+The most abstract ideas are at the top.
+Intuition is the process of searching a problem solution and ideas along the hierarchy of a memory.
+Association is the process of searching a problem solution and ideas through direct relationship between them.
+Analogy is based on semantic similarity, similarity of memorization time combination of the objects in the set based on different criterions, etc.
+Intuition is a result of free "travel" through the memory structure.
+The typical example of associative learning is a baby learns to associate the smell of its mother
+with food (classical conditioning).
+A student learns that working hard usually produces good grades (operating conditioning) [26].
+This definition is worktable, reasonable and non-contradictable.
+Such presentation of intuition may not be the best but is very productive for artificial intelligence system design.
+In [33] there is description of personality with intuition as a personality with "focus on implication and inferences ."
+Associative thinking creates the net between different objects, events, and images.
+Intuition is not just the search of the similar solution of the problem but sometimes is "design" of a solution as a sophisticated assembly of the several elements.
+In this case we deal with more complicated procedures.
+From the external point of view intuition looks like associative thinking.
+In opposite, the research and decision searching are motivated intendment organized processes of a solution of a problem searching.
+Importance of intentionality is mentioned by many philosophers.
+For Edmund Husserl (German philosopher) intentionality is " one essential feature of any consciousness".
+For Jean-Paul Sartre (French philosopher and writer) " intentionality is consciousness".
+Spontaneous brain activities can be triggered by a non-verbal fuzzy defined problem that is dominated in the memory at this particular time.
+In this case, accidental knowledge activates the algorithm searching for patterns, history, relationships and etc. to find solution of the problem.
+The more data and information that is stored in the memory, the better the result of the intuition process.
+The higher information diversity the more efficient an intuition solution.
+There are two kinds of information: genetic and non-genetic.
+In artificial systems genetic information is stored in the hardware and partly in software and contributes to the artificial intuition.
+Intuition is an "automated" high speed process.
+Cognitive thinking in most cases is a low speed "manual" process executed under control of human will.
+All knowledge about objects and processes has to be presented as models designed from the different points of view (structural models, math models, logical models, chemical models, electrical and information model, etc).
+For example, a human body can be presented in the different ways as a structured model, a chemical model, an information model, a mechanical model, etc.
+Such ways of knowledge presentation make it possible to easily identify common features in different areas.
+The structured organization of the knowledge in the memory is a very important condition of effective functioning of the artificial intuition.
+In our case, (artificial system). we don't have problem of the natural brain in attaching meaning to the symbolic representation [21].
+Existence of the memory makes reasonable the materialist point of view and cognitivist
+point of view as well [21].
+Anyway this problem is not a subject of our discussion.
+In the reconstruction of new knowledge when any past event or experience is recalled, the act of recollection tends to bring again into use other events and experiences that have become related to this event in one or more of certain specific ways this association.
+Associative memory refers to the ability to recall complete situations from partial information These systems correlate input data with information stored in memory Information can be recalled from even incomplete input.
+Associative memory can detect similarities between new input and stored patterns [10, 12, and 21].
+So intuition and association should work together.
+Realization of the associative memory can be done as the Hopfield Neuron Network [21].
+Spontaneous brain activities can be triggered by spontaneous interest of the system to the problem.
+For example the problem of dangerous environment for the system existence.
+It can be the cause of spontaneous problem formulation.
+Spontaneous undependable problem formulation is possible just in case of the availability of the powerful sensor system.
+This system collects information about simple, separately non-dangerous events, puts it together independently from a human will, looking for patterns and creates a sense of danger.
+The process and information are presented in fuzzy description.
+Let us look at the simple scenario.
+At nighttime you left a party with your friends and were going home.
+You were thinking about the good time you had.
+Suddenly you step-into a dark street as a part of your way home (level of darkness may be different-fuzzy descripted).
+Nothing is wrong around but your body becomes alerted even if you try to calm yourself through reasoning.
+Intuition vs. reasoning! Intuition can win because reasoning is based on the same knowledge! Reasoning can just add some new information and knowledge.
+As a result, correction of the sense and behavior can be obtained.
+When we meet a stranger, we receive a complex of information about his/her appearance, body language, and way of talk, etc.
+Our brain compares this information with the fuzzy or statistical models of a "good" or "bad" object appearance, behavior, etc. and creates our "fuzzy" impression model about this object.
+"Good" or "bad" object models are based on our previous experience.
+This situation was emulated on the computer (the programmer Ms. N. Elisseeva).
+The system was able to generate intuitive impression at the meeting with a stranger (Fig. 3).
+Unintentional brain activity can include the testing procedures.
+One day I sent an e-mail but forget to attach my file I promised to my friend.
+I was sure that I did not make a mistake.
+In the middle of the night, I suddenly woke up and
+realized that I did not attach the file.
+My brain was testing my activities stored in the short memory against the goal procedure and sent me the error massage.
+It's remind automatic virus testing software when we rebut the computer without special activation.
+Certainly, it is just analogy.
+This ability the control a human activities is a very useful part of Artificial Intelligence.
+The "Testing" module can do this test.
+The described approach can be illustrated by another example.
+Suppose we have the AI system, which has extensive working experience in the different areas of knowledge and powerful learning ability from the experienced external teacher.
+The knowledge is represented as the models: linguistic, math, logical, structured, etc, above.
+Suppose the system has knowledge about a damper, which is presented as a linguistic model (damper, controller of acceleration, brakes, and etc) and as a math equation of a damper: y=(1+e Â­t/T ) or the transfer function W(p) = k/(1+Tp), as a physical object (hydrodamper, pneumatic damper, capacitor, inductance, robber damper, spring, mechanical brakes, electrical brakes, flywheels etc), and so on.
+All these models create the hierarchical structure in the knowledge base.
+The more abstract the description, the higher location levels.
+The linguistic description belongs to the higher level.
+The physical description belongs to the lower level.
+Suppose we have a control system and would like to reduce the acceleration of the moving parts.
+The AI system has information (through the sensors) about the problem and starts looking at a solution of the problem without our interference.
+The search procedure is shown in Fig.4.
+Each level represents a new level of goals.
+Each new goal motivates a next search step.
+Intuition can be activated in the slipping stage when the brain is working without participation of the human will.
+In an interview with The New York Times (Nov. 14, 2000) Dr. Terrence J. Sejnowski (a neuroscientist at the Salk Institute in San Diego) said: "There has always been a close connection between sleep and creativity, which may be a byproduct of the way that nature chose to consolidate memories".
+CONCLUSION: 1.
+Intelligence consists of two parts: inherited and developed.
+2.
+Intelligence abilities can be presented as the functional multilevel structure.
+Similar goals of the agents can be combined into the goal class.
+The goal class is determined by minimal set of abilities to fulfil this goal of the task and one set of weight function.
+3.
+All for each alternative Â­ class member agents that exercises the same minimal set of abilities and common set of weight functions to carry out the goal can be
+combined into the agent class.
+The members of the same agent class can fulfil the goals of the same goal class.
+4.
+The structure of intelligence system should be designed as a two-knowledge base system.
+One is an application knowledge base, another one is a reasoning knowledge base.
+5.
+Intuition is the process of searching a problem solution and ideas along the hierarchy of a memory.
+Association is the process of searching a problem solution and ideas through direct relationship between them.
+REFERENCES: [1] Albus J., Outline for Theory of Intelligence.
+IEEE Transactions on Systems, Man, and Cybernetic , ol. 21, No 3.
+May/June, 1991.
+[2] Albus James S., Meystel Alexander, Behavior Generation in Intelligent Systems, NIST. [3]
+[4] Boden, Margaret A., Artificial Intelligence and Natural Man, Basic Books, Inc., New York, NY, 1977.
+[5] Bock, Peter, The Emergency of Artificial Intelligence: Learning to Learn, The AI Magazine, Fall , 1985.
+[6] Charnik, Eugene and McDermott, Drew, Introduction to Artificial Intelligence, Addison-Wesley Pub. Co., Reading, MA 1985.
+.
+[7] Cawsey A.
+The Essence of Artificial Intelligence.
+Prentice Hall, 1995 [8] Computers and The Mind with Howard Rheingold.
+Conversation On The Leading Edge of Knowledge and Discovery with Dr. Jeffry Mishlove, 1998.
+[9 ] Dean T., Allen J., Aloimonos Y.
+Artificial Intelligence.
+Theory and Practice.
+The Benjamin/ Cummings Publishing Company, 1995.
+[10]Decision Support and Expert Systems1997. .
+Management Support Systems by Efraim Turban.
+Prentice Hall.
+1995.
+[11] Finkelstain Robert, A Method For Evaluating the "IQ" of Intelligent System, Preliminar Proceedings "Performance Metrics for Intelligent Systems Workshop, August 14-16, 2000, Gaithersburg, MD. [12]
+[13] Huffman Karen, Vernoy Mark, Vernoy Judith, Psychology in Action, John Wiley 
+The Story of My Life, 1902.
+[15] Language And Consciousness.
+Part 4: Consciousness and Cognition with Dr. Steven Pinker.
+Conversation On The Leading Edge Of Knowledge and Discovery With Dr. Jeffry Mishlove, 1998.
+[16] Meystel A. Evolution of Intelligent Systems Architectures.
+What Should Be Measured? Performance Metrics for Intelligent Systems.
+Workshop.
+August 14-16, 2000, Gaithersburg, MD
+[17] Mind Over Machine With Dr. Hubert Dreyfus.
+Conversation On The Leading Edge of Knowledge and Discovery with Dr. Jeffry Mishlove, 1998 [18] Mind As A Myth with U. G. Krishnamurti.
+Conversation On The Leading Edge of Knowledge and Discovery with Dr. Jeffry Mishlove, 1998.
+[19] Myers David G. Psychology, Worth Publish, 1995.
+[20] Negnevitsky M. Artificial Intelligence.
+A Guide to Intelligence Systems, Addison-Wesley, 2001 [21] Neural Networks and Physical Systems with Emergent Collective Computation Abilities by Hopfield, J. Proceedings, Natural Academy of Sciences USA 79, 1985.
+Their Minds, PHOENIX, 1999.
+[22] Panos Antsaklis, Defining Intelligent Control.
+Report of the Task Force on Intelligent Control, IEEE Control Systems, June 1994.
+[23] Plotnik R. Introduction to Psychology, Brooks/Cole Publishing Company, 1995 [24]
+[25] Psychology by Peter Gray, Worth Publishers, 1999.
+[26] Psychology by Crider A. B., Goethals G. R., Kavanaugh R. D., Solomon P. R. Harper Collins College Publishers, 1993.
+[27] Russell Stuart, Norvig Peter, Artificial Intelligence.
+A Modern Approach, Prentice Hall, 1995.
+[28] Subhash Kak, Grading Intelligence in Machines: Lessons from Animal Intelligence, Preliminary Proceedings "Performance Metrics for Intelligent Systems Workshop, August 14-16, 2000, [29]
+Ulric Neisser, American Psychological Association, 1995.
+[31] The Transcendence Of The Ego.
+An Existentialist Theory Of Consciousness by Jean-Paul Sartre.
+Hill and Wang-New York, 1997.
+[32] The Oxford Companion to MIND, edited by Richard L. Gregory, Oxford University Press, 1987 [33]
+Little, Brown and Co. 1995.
+[34] Unlocking your Subconscious Wisdom.
+Part 1: Using Intuition with Dr. Marcia Emery.
+Conversation On The Leading Edge Of Knowledge and Discovery With Dr. Jeffry Mishlove, 1998.
+Intellectual abilities
+Expressive
+Cognitive (Logical)
+Imagination
+Emotions
+Learning
+Creativity (Problem solving)
+Perception
+Sensation
+Reasoning Conceiving Recognition Generalization
+Conceptualization
+Induction
+Identification of important characteristics
+Identification of how the characteristics are logically linked
+Discrimination
+Intuition Associative thinking
+Judgement
+Fig. 1.Structure of the most important intelligent abilities
+Reasoning Knowledge base (Rules of reasoning) RKB
+Application Knowledge base (Application rules) AKB Inference engine
+Database (Factscurrent situation)
+System
+Translator
+User interface Fig. 2 The double-KB system structure
+Developer interface
+Feeling
+Amygdala converts words into real feeling [23].
+Good feeling
+Bad feeling
+Good object Occure: 80% 20%
+Bad object 20% 80%
+Circle
+Square
+Circle
+Square
+Level of good feeling from a circle : 0.8 Â­ 0.2 = 0.
+6 Level of good feeling from a circle : 0.8 Â­ 0.2 = 0.
+6 "Good" and "bad" can be described as fuzzy variables.
+Fig. 3 The memory structure.
+The goal description
+Acceleration changing Fast Slow
+Acceleration control Math models
+Brake
+Damper
+Electrical equipment
+Hydraulic equipment
+Physical objects (models) Physical objects (models)
+Math models
+Fig. 4.
+Acceleration control system design (search through the goal hierarchy).
+Sensor system
+Model design
+Information structure creation
+Solution
+Fuzzy problem description
+Testing
+Knowledge base
+Problem description defuzzines
+Knowledge extraction Trigger of action Fig. 5.
+The Artificial Intuition System Structure.
+Solution synthesis

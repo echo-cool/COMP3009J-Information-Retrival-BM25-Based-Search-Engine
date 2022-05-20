@@ -1,0 +1,531 @@
+Energy Policy 29 (2001) 1255Â­1270 Energy futures for the US transport sector David L. Greenea,*, Steven E. Plotkin a
+$
+b
+Oak Ridge National Laboratory, National Transportation Research Center, 2360 Cherahala Boulevard, Knoxville, Tennessee 37932 USA b Argonne National Laboratory, 955 L'Enfant Plaza, S.W., Suite 6000, Washington, DC 20024-2578, USA Received 12 April 2001
+Abstract This paper explores how advanced transportation technologies and alternative fuels, together with policies aimed at reducing greenhouse emissions and energy use, can help address the energy challenges facing the US transportation system over the coming decades.
+Three scenarios of future transportation energy use are constructed to represent alternative views of the urgency with which the federal government and the American people will view these challenges, and the policy interventions they will seek.
+The analysis concludes, first, that US transportation energy use and greenhouse emissions will increase virtually unchecked without policy intervention or unforeseen large, long-lasting fuel price increases, and second, that policies that stimulate technology development and deployment can substantially slow this growthFthough not without a considerable time lag due to the slow turnover of the vehicle fleet and limits on the rate of technology development and deployment.
+r 2001 Elsevier Science Ltd.
+All rights reserved.
+Keywords: Transportation; Energy efficiency; Advanced technology
+1.
+Introduction This paper explores how advanced transportation technologies and alternative fuels, whose development and deployment are facilitated by policies aimed at reducing greenhouse emissions, air pollution and energy use, can help to address the energy challenges facing the US over the coming decades.
+Three scenarios of future transportation energy use are constructed to represent alternative views of the urgency with which the federal government and the American people will view these challenges.
+The business-as-usual (BAU) scenario, represents a future with little change in attitudes and policy from today's, and is essentially identical to the Energy Information Administration's (EIA's) 1999 Annual Energy Outlook (AEO) Reference Projection.
+Two additional scenarios, called Moderate and Advanced, examine futures where a changed political $ Prepared by the Oak Ridge National Laboratory, Oak ridge, Tennessee 37831, managed by Ut-Battelle, LLC for the US Department of Energy, under contract DE-AC05-00OR22725.
+This manuscript has also been created by the University of Chicago as Operator of Argonne National Laboratory under Contract No.
+W-31-109-ENG38 with the U.S. Department of Energy.
+*Corresponding author.
+E-mail addresses: dlgreene@ornl.gov (D.L. Greene), splotkin @anl.gov (S.E. Plotkin).
+climate allows the implementation of new policies aimed at reducing GHG emissions and oil useFlow-cost, nonintrusive policies in the Moderate scenario, somewhat more aggressive and costly policies in the Advanced scenario.
+The policy sets in each scenario should be considered as representative of a range of similar policies that could be enacted; the analysis makes no attempt to identify the best policies or to estimate the costs and benefits of individual policies.
+The key tool for this analysis is the Transportation Sector Model of the National Energy Modeling System (NEMS), with some modifications that we believe improve the realism with which the model represents transportation energy markets (hereafter referred to as CEF-NEMS).1 The model embodies a variety of assumptions about technology performance and costs, consumer behavior, andother factors that are inherently difficult to predict.
+Nevertheless, we argue that the results obtained represent reasonable expectations of what might happen if the policy implementation, energy prices, and other descriptors of the scenarios were to play out as 1 ``CEF'' is short for the ``Scenarios for a Clean Energy Future,'' the larger study that includes the transportation analysis that is summarized here (Interlaboratory Working Group, 2000; Brown et al., 2001).
+0301-4215/01/$ - see front matter r 2001 Elsevier Science Ltd.
+All rights reserved.
+PII: S 0301 -4215(01 )0 0071-4
+1256
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+described.
+In particular, the CEF-NEMS Model limits the rates at which technologies can enter the market based on realistic rates of turnover of productive capital and vehicle stock, subjects market entry to economic tests, and explicitly allows for consumer desires for features such as increased performance.
+The analysis concludes, first, that US transportation energy use and greenhouse emissions will increase virtually unchecked without policy intervention or unforeseen large, long-lasting fuel price increases, and second, that policies that stimulate technology development and deployment can substantially slow this growthFthough not without a considerable time lag due to the slow turnover of the vehicle fleet and limits on the rapidity of technology development and deployment.
+The accuracy of its projections depends crucially on the inherently uncertain success of an increased research and development program.
+However, sensitivity analyses imply that the results are quite robust in the face of the likely failure of some technologies, primarily because there are many technology options available.
+The paper first discusses briefly the role of transportation in climate change, air quality, and oil dependence/ national security issues, then describes the underlying assumptions of the three scenarios and the policies undertaken, describes the methodology used to compute the energy and greenhouse emissions outcomes of the scenarios, presents key results, and finally provides an overview and set of conclusions.
+2.
+Background The US transportation sector contributes to a range of societal problems, including climate change, healthrelated air pollution, and US oil dependence and oilrelated national security concerns.
+In 1997, the sector consumed about 25 quads of primary energy, over 27 percent of total US energy consumption.
+Transportation is the nation's dominant oil user, consuming 12.1 million barrels per day (mmbd) in 1997Ftwo-thirds of the nation's consumption.
+In the same year, its carbon emissions of 473 mmt (million metric tons) were almost one-third of the US total (Davis, 2000).
+And its healthrelated emissions were large portions of the US totalFthree-quarters of the carbon monoxide, nearly half of the nitrogen oxides, and four-tenths of the volatile organic hydrocarbons.
+Transportation emissions of small particles under 2.5 mm in size were ``only'' '' 4 percent of the nation's 1997 PM-2.5 emissions, but a large portion of these particles were emitted in urban areas where most Americans live (US DOT/BTS, 1999, p. 119).
+Some of the environmental and energy concerns associated with US transportation are already being
+addressed with important policy initiatives.
+For example, mandated changes in fuel quality and emissions controls for highway vehicles (EPA's Tier II standards) will substantially reduce emissions of criteria pollutants from the transportation sector.
+And although continued growth in vehicle miles traveled will eventually eat away at these gains, the history of environmental regulation of highway vehicles implies that emissions regulations will continue to be tightened as emissions control capabilities improve.
+In the energy area, Congress has chosen to keep fuel economy standards at their current levels, but substantial gains in technology R
+Further, ``zero emission vehicle'' requirements demanded by the State of California have stimulated considerable development in technologies such as fuel cells and electric drivetrains.
+And fuel efficiency improvement initiatives elsewhereFa voluntary commitment between the European Union and the European Automobile Manufacturers Association2 (calling for a 33 percent improvement in fleet fuel economy by 2008) and new Japanese fuel economy standards (ordering about a 23 percent improvement by 2010) conceivably could affect the US market.
+Despite these and other positive signs, most observers believe that the US transportation sector's oil and energy use (and greenhouse emissions) will continue to grow robustly over the next few decades unless additional policies are implemented.
+The reference case projection of the EIA's AEO forecasts an annual growth in transportation energy consumption of 1.7 percent between now and 2020 (US DOE/EIA, 1999, Table A7), slightly faster than the 1.6 percent annual growth rate of 1970Â­1998 and much faster than the 1.2 percent annual growth rate of the past decade (Davis, 2000, Table 2.3).
+If the projected growth rates hold, US transportation energy and greenhouse emissions will have grown (from a 1998 base) by 26 percent in 2010 and nearly 46 percent in 2020Fwith obvious negative implications for oil imports, climate change progress, and so forth.
+Forecasts like this one are inherently uncertain even discounting the possibilities for changes in government policy, because they depend critically on future oil prices, economic growth rates, developments in new technology, consumer tastes, and other factors that are themselves inherently uncertain.
+Nevertheless, the forecast appears plausible in light of important trends in transportation energy over the past few decades, for example: *
+In the light-duty passenger vehicle segmentFfleet fuel economy has declined over the past decade and a
+2 All three domestic US manufacturers belong to this association and have signed the commitment.
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+1257
+*
+*
+*
+half.
+Increasing vehicle size, weight, and performance have nullified the fuel economy gains that increased use of port fuel injection, structural redesign using supercomputers, four valves/cylinder engines, and a range of other technologies might otherwise have brought.
+Growth in highway travel has been remarkably robust for decades, with annual growth in vehicle miles of 3 percent during 1970Â­1997 (Davis, 2000, Table 6.5).
+Although factors may slow the future rate of growth, our BAU projection already incorporates an assumption of much slower annual growth in vmt: 1.7 percent for the period.
+Air transportation is the most rapidly growing transportation mode both in service and energy use.
+Revenue passenger-miles have increased at an annual rate of 4.1 percent during 1987Â­1997 (Davis, 2000, Table 12.1) and show little sign of slowing.
+Although efficiency has steadily improved (Btu/passenger miles dropped by 1.6 percent/yr during 1987Â­1997, Davis, 2000, Table 2.12) it has not kept pace with the growth in traffic.
+The prices of transportation fuels in the US are very low by world standards, and although prices may spike or decline precipitously for short periods of time due to market imbalances, most forecasters expect the long-term prices of gasoline and other transportation fuels to remain close to present levels.
+*
+*
+* *
+EPACT alternative fuels requirements and (previous) California zero emission vehicle requirements for a 10 percent ZEV penetration by 2003.3 A group of modest Climate Change Action Plan programs are assumed to be included: reform of Federal parking subsidy, telecommuting promotion, tire efficiency labels.
+No changes to fuel economy standards.
+The 1999 AEO reference case forecasts of economic growth and future energy prices.
+The average crude oil price in 2020 is $22.73 a barrel (1997 dollars).
+Real gross domestic product is projected to increase by 2.1 percent per year over the period.
+The choice of policies designed to ``fit'' the qualitative descriptions of the two additional scenarios is subjective, because the connection between societal conditions and public policy choices is by no means straightforward.
+It is far from clear, for example, how far public perceptions must change before Congress would be willing to enact measures that resemble gasoline taxes (carbon permits, ``pay at the pump'' auto insurance) or before auto manufacturers will offer a voluntary commitment to raise auto fuel economy, as the European manufacturers have done.4 We claim only that we have made an honest attempt to assemble two groups of policies reasonably compatible with the described societal conditions of the scenarios.
+The Moderate scenario policies include: *
+3.
+Scenarios The three scenariosFBusiness-as-usual, Moderate, and AdvancedFevaluated in this analysis encompass a range from a future that foresees no changes in energy policy and no significant shifts in societal attitudes to a future in which American society is increasingly concerned about these issues and sanctions some significant new policies aimed at curbing energy use and greenhouse emissions.
+Although it is difficult to characterize the scenarios in terms such as ``aggressive'' or ``conservative'' without running into problems of context, the policies in the Advanced scenario are not out of line with policies already adopted in Europe (for example, the voluntary agreement on fuel economy is quite similar in stringency to the EU/ACEA Commitment).
+The BAU scenario adopts the assumptions of the AEO99 reference case: *
+*
+Tier II vehicle emission standards and low-sulfur fuels.
+*
+50 percent increase in governmental/industry R
+The Federal government, primarily the Department of Energy (DOE), currently spends several hundred million dollars annually, in support of the development of advanced vehicle technology.
+A key program is the PNGV, with about $300 million/year in spending from public and private partners.
+Other Federal agencies, including Transportation, the National Aeronautics and Space Administration, and the Department of Defense have important programs.
+Many of the existing programs would benefit from funding increases.
+For example, the National Research Council (NRC) has called PNGV's financial resources ``far below the level needed to meet the challenges on a timely basis (NRC, 1999).''
+Cellulosic ethanol commercialization program.
+Aside from an increase in research resources, this program includes an extension of current ``gasohol'' tax breaks and other market incentives for investment in new ethanol production.
+Tax credit for high efficiency vehicles.
+Credits of from $1000 (for a gasoline hybrid) to $4000 for a hydrogen fuel cell, phased out after 50,000 units per year.
+4
+3 The ZEV requirement has now been superseded by more modest requirements.
+It is now clear that the EPACT requirements will not be met.
+Thus, the scenario's results for alternative fuels are decidedly overly optimistic.
+Although it is noteworthy that both Ford and General Motors recently announced their intentions to improve the fuel economy of their light truck fleets.
+1258 *
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+Acceleration of air traffic management improvements.
+Rapid deployment of a joint EPA/FAA program to reduce aircraft energy wasted by waiting in queues, airport circling, etc., consists primarily of sophisticated computer soft and hardware for improved decision making, rescheduling of aircraft at their originations to account for evolving traffic patterns on their flight paths and at their destinations, etc.
+The Advanced scenario includes all of the policies contained in the Moderate scenario, as well as a group of policies that would require a substantial increase in public and congressional concern about global warming coupled with a willingness to move to more intrusive and possibly more costly programs.
+A crucial change from Moderate scenario policy is a further increase in government/industry-sponsored R
+Crucial new policies are: *
+mental concern about global warming.
+It is difficult to predict how high a level of public concern would be necessary to overcome opposition, and we elected to leave mandatory standards out of the Advanced scenario.
+Given our ambivalence about this decision, a sensitivity case was run with stringent mandatory fuel economy standards of 50 mpg by 2020 for the combined light-duty fleet, about 10 mpg higher than the voluntary agreement targets in the Advanced scenario.
+4.
+Method and approach In commissioning the CEF Study, the DOE established two major goals for the assessment: yto produce fully documented scenarios that assess how energy-efficient and clean energy technologies can address key energy and environmental challenges of the next century while enabling continued economic growth.
+yanalysis of the energy, environmental, and economic impacts of different public policies and programs, and the identification of policy implementation pathways that can form the basis for attractive national solutions to those challenges.
+The emphasis on how technologies can address energy and environmental challenges, rather than whether necessary technological advances can be achieved is appropriate, given the difficulty of predicting specific technological advances.
+Consistent with this focus, the first part of our approach is to assume certain technological advances and predict their impacts, given a set of policies designed to promote them.
+We wish to be clear on this point.
+Although we associate different levels of technological progress with different levels of public and private investment in R
+Instead, we rely on our own judgment, supported by assessments conducted by others, stated goals of R
+Certainly, numerous technologies already exist that can mitigate greenhouse gas (GHG) emissions from the transportation sector.
+Yet we believe that additional, significant technological advances will be necessary if major reductions in GHG emissions from transportation are to be made in the face of growing demand for transportation services.
+Nevertheless, technological progress alone is not likely to be sufficient.
+It is not reasonable to expect free markets to fully and efficiently utilize clean energy technologies to achieve such societal goals as reducing greenhouse gas emissions without
+*
+*
+Voluntary agreements to improve fuel economy, for LDVs, freight trucks, and aircraft.
+These policies are modeled on the EU/ACEA voluntary commitment for light-duty vehicles, and are assumed to have been stimulated by industry concerns about mandatory controls.
+The light-duty targets are 40 miles per gallon (mpg) in 2010 and 50 mpg in 2020 for automobiles, and 26 mpg in 2010 and 33 mpg in 2020 for light trucks.
+For comparison's sake, the European target is about 40.7 mpg by 2008; given Europe's less-powerful and smaller fleet and less stringent emissions standards, the Advanced scenario's 2010 target levels are the more demanding.
+The base year for the model runs is 1997, so 13 years are available for compliance.
+``Variabilization'' of motor vehicle operation.
+Variabilization policies transfer the incidence of fixed or infrequently-paid costs of motor vehicle operation (e.g. insurance, parking, etc.) to variable costs, e.g. the cost of gasoline.
+The scenario uses ``pay at the pump'' automobile insurance to represent such policies.
+The policy transfers about one-fourth of automobile insurance costs to a surcharge on the price of gasoline.
+Average drivers will pay more for their gasoline but save approximately the same amount in lower annual insurance premiums.
+Domestic carbon trading system with assumed permit price of $50/tC.
+Carbon permit programs define acceptable levels of carbon emissions and allocate permits to individual sources, with trading allowed.
+The assumed $50/tC permit price translates to about $0.12/gal of gasoline, which will have at best a very modest impact on gasoline demand.
+It is likely that serious consideration of new fuel economy standards would accompany any new policy discussions arising from increased public and govern-
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+1259
+effective policy intervention.
+Thus, the second element of our approach is to formulate sets of policies that are consistent with the themes of the three scenarios and able to significantly impact energy and environmental goals.
+We do not claim that these are the only policies that will work, or even that these are the best policies.
+We used a modified version of the 1999 version of the US DOE's NEMS transportation sector mode as a tool for integrating our technology and policy assumptions, and predicting their impacts on energy use, oil dependence and GHG emissions.
+We refer to the modified model as CEF-NEMS.
+Because CEF-NEMS covers all sectors of the US economy, we were able to integrate our results with those of the other sectoral analysis teams (see Brown et al., 2001) to account for sectoral interdependencies.
+CEF-NEMS represents all transport modes, but at differing levels of detail (US DOE/EIA, 1998), in rough proportion to energy use.
+Light-duty highway vehicles (passenger cars and light trucks) that account for 60 percent of US transportation energy use, are represented in the greatest detail, followed by heavy trucks (16 percent) and air travel (9 percent) (Davis, 2000, Table 2.6).
+Representations of the water (5 percent), pipeline (4 percent), and rail transport (2 percent) modes, on the other hand, are rudimentary.
+In addition to changing inputs to reflect scenario assumptions, we made several significant changes to the CEF-NEMS model code, intended to enhance the model's ability to address the technologies and policies of our scenarios.
+The changes are described in detail in the CEF report (Interlaboratory Working Group, 2000, Appendix A-3), and generally below.
+We would not have been able to use CEF-NEMS effectively, had it not been for the cooperation and advice of the EIA's professional staff.
+Of course, EIA staffs are not responsible for any errors we may have introduced or for any misinterpretation of the NEMS model by us.
+First, assumed technological changes are translated into changes in CEF-NEMS inputs.
+Next, policies are translated into changes in inputs and, in a few instances, changes in the transportation sector model code.
+After testing the results by running the transportation sector model in stand-alone mode, the inputs and new code were transferred to the integration team at LBNL, which carried out integrated CEF-NEMS runs for all sectors simultaneously.
+In addition to the three scenarios, three sensitivity cases address: (1) the possibility that diesel engines may not be viable due to inability to meet emissions standards, (2) the possibility that dramatic reductions in the cost of fuel cell power systems may make them no more expensive than conventional internal combustion engines, and (3) the impacts of mandatory versus voluntary fuel economy standards.
+5.
+Implementation of technology assumptions The characterization of technologies in the CEFNEMS Transportation Sector Model ranges from very detailed to virtually non-existent, depending on the mode.
+More than fifty light-duty automotive technologies are characterized in detail.
+Technologies for the rail and water modes are represented in a very general way by an annual rate of improvement in energy intensity per ton-mile.
+5.1.
+Light-duty vehicles Understanding certain fundamental aspects of the CEF-NEMS algorithms for light-duty vehicles is helpful for interpreting its predictions.
+Conventional and advanced alternative fuel technologies are handled by different subroutines with often-different assumptions about consumer behavior.
+Conventional technologies are dealt with in the fuel economy module (FEM), which attempts to represent manufacturers' decisions about technology implementation based primarily on the economic trade-off between first cost and the present value of fuel savings.
+The 1999 AEO reference case, on which we base our BAU scenario, contains a list of 59 technologies affecting the fuel economy of conventional gasoline passenger cars, as well as 15 alternative fuel technologies.
+Technologies are represented by their fuel economy improvement potential, retail price, date of first introduction, ancillary impacts on weight and performance, maximum market share by size class, and interactions with other technologies.
+Advanced and alternative fuel technologies are handled by the alternative fuels and vehicles module (AFVM), which uses a two-stage multinomial logit (MNL) model to represent consumers' choices among discrete, alternative technologies.
+Once a conventional technology becomes available for mass production, its market penetration is determined by three factors: (1) its cost-effectiveness, (2) the elapsed time since its first introduction, and (3) its assumed maximum market penetration.
+Cost-effectiveness depends on interactions with other technologies and performance-fuel economy trade-offs, but is fundamentally a function of first price andthe present value of future fuel savings.
+Cost-effectiveness is summarized by an index equal to the ratio of present value minus price, divided by price.
+Thus, when value and price are equal, the ratio is zero.
+Market penetration is a logistic function of the cost-effectiveness index, as illustrated in Fig. 1.
+Even an index value of Â­1 (which indicates that a technology costs twice as much as it returns in present value fuel savings) obtains a market penetration of about 10 percent in the FEM algorithm, while a technology that saves twice as much as it costs receives only a 90 percent market share.
+This continuous rather
+1260
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+Fig. 1.
+NEMS FEM market penetration curve.
+AEO 1999 list already included such technologies as lean-burn, direct injection gasoline engines and gasoline hybrid vehicles.
+The costs of direct-injection gasoline were reduced to $200 for 4-cylinder and $300 for 6cylinder engines, but their fuel economy benefit was also reduced from 17 to 12 percent, to reflect recent estimates of fuel economy benefits achievable while meeting US Tier II emissions standards.
+Technological advances and learning were assumed to cut the cost of a gasoline hybrid vehicle from $11,250 for a 3000 lb vehicle to $4500 in both scenarios.
+No other conventional technology costs were reduced.
+Light-duty vehicle fuel economy and GHG emissions are also affected by the sales of alternative fuel and advanced vehicle technologies.
+Alternative fuel and advanced technologies include methanol and ethanol fuel flexible vehicles, CNG/gasoline and LPG/gasoline bi-fuel vehicles, dedicated ethanol, methanol, CNG and LPG vehicles, diesel hybrid vehicles, hydrogen-, methanol- or gasoline-powered fuel cell vehicles, and batterypowered electric vehicles.
+Fig. 2.
+Permissible percent of potential market penetration.
+5.2.
+Freight trucks The NEMS freight truck module is similar in concept to the light-duty vehicle fuel economy module, but less detailed.
+Technologies are given an introduction date, but are not actually implemented until the price of fuel exceeds a ``trigger price.''
+When and if that occurs, the technologies follow a prescribed logistic market penetration curve towards a specified maximum market penetration.
+To avoid double counting of technology benefits, certain technologies are designated to replace others so that the sum of their market shares cannot exceed 100 percent.
+In the BAU scenario, five fuel economy technologies are available to be introduced after the CEF-NEMS base year for truck technology data of 1992.
+Four have been introduced by 1997, leaving only one future technology: the turbo-compound diesel.
+We deleted the turbo-compound engine, and added the LE-55 engine with a net fuel economy benefit of 20 percent, and set for introduction in 2010 in the Moderate scenario and 2005 in the Advanced.
+Improved tires and lubricants were assigned a 5 percent benefit, while the benefits for advanced aerodynamics and electronic transmission controls were set at 5 and 3 percent for heavy-duty trucks.
+In the Advanced scenario, hybrid truck technology was introduced in 2005, with a fuel economy benefit of 25 percent versus diesel engines and 45 percent versus gasoline engines.
+The maximum market penetrations for hybrid drive were set at 25 percent for trucks currently using diesel engines and 100 percent for trucks currently using gasoline engines.
+than all-or-nothing adoption of technologies is intended more accurately to represent real-world markets in which consumer preferences vary and technologies often affect other vehicle attributes besides fuel economy.
+For example, multi-point fuel injection not only improves fuel economy but also reduces emissions and improves engine response.
+The predicted market penetration also depends on how much time has elapsed since the technology was introduced.
+In the initial year of introduction, CEFNEMS allows a technology to achieve only about 1 percent of its hypothetical market share.
+The realizable percentage increases to 100 percent at eight years (Fig. 2).
+The purpose of this is to simulate the orderly replacement of productive capital in automobile manufacturing.
+If mandatory fuel economy standards are imposed, CEF-NEMS allows the time to full market penetration to be cut by up to a half if it appears that fuel economy standards would not otherwise be met.
+In the BAU scenario, no changes were made to the list of light-duty technologies contained in the AEO 1999 version of NEMS.
+Only two technologies were added for the Moderate and Advanced scenarios: (1) a 25 percent weight reduction achieved via materials substitution (not downsizing) at a cost of $1.25 /lb, available in 2007 for passenger cars and 2009 for light trucks, and (2) a further round of materials substitution capable of achieving a 30 percent weight reduction at $1.50 /lb, starting in 2010 for cars and 2012 for light trucks.
+The
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270 Table 1 Aircraft technology assumptions for the three scenarios Technology BAU scenario Year Ultra-high bypass engine Propfan engine Hybrid laminar flow Advanced aerodynamics Light-weight materials Thermodynamic efficiency 1995 2000 2020 2000 2000 2010 % Impr. 10 23 15 18 15 20 Moderate scenario Year 1995 2010 2020 1995 1995 1995 % Impr. 13 23 15 8 8 13 Advanced scenario Year 1995 2008 2015 1995 1995 1995
+1261
+% Impr. 13 15 10 8 8 13
+5.3.
+Commercial air transport The Moderate and Advanced scenarios were represented by changes to the assumptions about commercial aircraft technology (Table 1).
+Like the truck freight model, each technology is assigned a trigger price that initiates its implementation in new aircraft.
+For all but the ultra-high bypass engine and weight reduction by materials substitution, the trigger prices in the BAU scenario are higher than any fuel price in the forecast, so that only those two technologies have any effect.
+In the Moderate scenario, the introduction dates for advanced aerodynamics, weight reduction, and thermodynamic improvements were decreased to 1995, their trigger prices were reduced to insure that introduction would begin immediately, but their expected efficiency improvements were reduced such that the sum of their benefits, plus the propulsive efficiency gains of ultra-high bypass engines equaled approximately 40 percent at full market penetration.
+This equals the cumulative efficiency gain anticipated from these sources through 2020 by the National Research Council (NRC, 1992).
+In the Advanced scenario, greater investment in R
+Their availability dates were also advanced.
+However, their impacts on fuel consumption were also reduced, to reflect our view that these technologies will not be applicable to 100 percent of commercial aircraft.
+5.4.
+Other modes For rail and waterborne freight, the CEF-NEMS transportation model represents efficiency improvements by an annual percentage reduction in energy intensity per ton-mile.
+The rate is not sensitive to fuel prices or policies.
+In the BAU scenario, both rail and waterborne energy intensities decrease by 0.5 percent per year.
+This is relatively low in comparison to the performance of these modes over the past three decades (2.3 percent/yr for rail, 0.8 percent/yr for water).
+Opportunities for improving energy efficiency in these models range from more efficient diesel engines to fuel cell propulsion systems, with potential efficiency gains of up to 20 percent.
+Improved maintenance and operations could yield another 10 percent efficiency improvement.
+In the Moderate scenario, we assume rates of improvement of 0.7 percent/yr. for water and 1.0 percent/yr for rail.
+In the Advanced scenario, we assume rates of 1.0 percent/yr for water and 1.5 percent/yr for rail.
+There is no functional connection between these rates and the policies implemented in the scenarios.
+However, in the appendix to the CEF report, we list the specific technologies and market penetrations to demonstrate that such improvements are possible by 2020.
+6.
+Implementing policies Some policies can be readily captured by straightforward changes to the inputs or code of the CEF-NEMS transportation sector model.
+For example, adding a surcharge to the price of fuel is a reasonable way to represent pay-at-the-pump insurance.
+For other policies, a good deal more judgment must be used.
+Policies to accelerate the introduction of automotive fuel economy technologies range from enhanced R
+We represent the combined effect of these policies by accelerating the introduction dates for new technologies by 30 percent in the Moderate scenario, and 40 percent in the Advanced scenario.
+No introduction date was set earlier than 2003.
+In the BAU scenario, introduction dates for light truck technologies lag those of passenger cars by a few years.
+In the Advanced scenario, light truck introduction dates were set equal to those for passenger cars.
+The Advanced scenario voluntary fuel economy standards call for a fleet average of 40 mpg for new passenger cars by 2010 and 50 mpg by 2020.
+The light truck standards are 25 mpg in 2010, 32.5 mpg in 2020.
+With voluntary standards in effect, one may expect manufacturers to have a greater level of concern about fuel economy.
+We represent this by a more positive
+1262
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+evaluation of the private benefits of fuel economy improvement.
+In the Advanced scenario, fuel savings were discounted over a full vehicle life of 12 yr at a real annual rate of 15 percent as opposed to counting only the first four years of savings at a 8 percent discount rate, as was done in the other scenarios.
+This change increases the present value of fuel savings by about 45 percent, versus the BAU and Moderate scenarios.
+Technologies capable of improving fuel economy can often be used to increase vehicle horsepower or weight instead.
+We assume that the commitment to voluntary standards would shift the balance towards fuel economy.
+Two changes were made to input data that influence future increases in horsepower and weight.
+In the BAU scenario, the weight of passenger cars gradually increases to 20 percent greater than in 1992, the base year for vehicle characteristics.
+The increase for light trucks is larger, 30 percent by 2020.
+Such weight increases would reduce fuel economy by 13.3 and 20 percent, respectively.
+In the Moderate scenario, the total increase is limitedto 10 percent for both vehicle types.
+In the Advanced scenario, weight increases were capped at the levels actually achieved by 1998 (6 percent for passenger cars and 8 percent for light trucks).
+The second change altered the trade-off between performance and fuel economy.
+In the BAU scenario the horsepower of new cars increases with increasing income with an elasticity of 0.9 and with increasing fuel economy with an elasticity of 0.2.
+Horsepower decreases with increasing vehicle price with an elasticity of Ã€0.9, and with increasing fuel prices with an elasticity of Ã€0.2.
+There is also a vehicle class specific multiplier for these effects.
+In the BAU scenario, all classes have multipliers of either 1.0 or 2.0.
+As a result, the average horsepower of passenger cars and light trucks increase by 48 and 43 percent, respectively, from 1999 to 2020.
+In the Advanced scenario, these multipliers were reduced to 0.5 for all classes except domestic and imported sports and luxury cars, which were set to 1.0.
+The combined effects of these changes plus the increased costs of gasoline due to the carbon permit fee and pay-at-thepump insurance is that horsepower increases by less than 10 percent in the Advanced scenario.
+6.1.
+Fiscal policies Only in the Advanced scenario, pay-at-the-pump automobile insurance was effected by imposing a surcharge of $0.34/gal of motor gasoline beginning in 2003.
+This amount should cover minimum liability insurance for low-risk drivers.
+Motorists with higher risk or requiring additional coverage would purchase it from a carrier in the usual way.
+As fuel economy improves the charge per gallon must be increased to maintain revenues for insurance premiums, so in 2013, the surcharge was raised to $0.51/gal.
+Pay-at-the-pump
+insurance reduces vehicle travel, increases the implementation of fuel economy technology, and affects choices among alternative fuel and advanced vehicle technologies, as well as among vehicle size classes.
+Tax credits for hybrid and fuel cell electric vehicles were implemented both in Moderate and Advanced scenarios by decreasing the initial, low volume production prices for hybrid and fuel cell vehicles.
+In the CEFNEMS AFV module, the prices of alternative fuel and advanced technology vehicles with less than 50,000 units per year of sales volume are increased to reflect the absence of scale economies.
+We subtracted the tax credits from the low volume (5000 units/yr.)
+price for hybrid and fuel cell vehicles.
+This simulates a subsidy that would be phased out as demand for these vehicles increased.
+The subsidies were $1000 for gasoline-hybrid vehicles, $2000 for diesel-electric hybrids, $3000 for gasoline or methanol fuel cell vehicles, and $4000 for hydrogen fuel cell vehicles.
+As we have implemented them, the subsidies will decrease with increasing volume and disappear when these technologies reach scale economies at 50,000 units per year.
+6.2.
+Cellulosic ethanol Blending of ethanol derived from cellulosic biomass with gasoline is the most significant fuel-based policy for reducing transportation's GHG emissions in the Moderate scenario.
+Changes were made to the CEF-NEMS refinery model to reflect greater technological progress due to increased investment in R
+The BAU case assumes that by 2020, the cost of producing ethanol from cellulose will decrease by 20 percent from current levels for cornbased production.
+Consistent with the NRC's (1999) most optimistic case for biomass-derived transportation fuels, we assume that a 50 percent cost reduction can be achieved by 2020 in the Advanced scenario, implying production costs in the vicinity of $0.70/gal of ethanol.
+In the BAU scenario, investments in cellulosic ethanol plants are assumed to require a risk premium above the rate of return of normal investments, and limits are placed on the rate of expansion of cellulose-to-ethanol production capacity.
+In the Moderate and Advanced scenarios, government loan guarantee programs are assumed to eliminate the risk premium.
+In addition, the limit on annual capacity expansion is raised from 250 to 650 million gallons per year after 2005.
+In the BAU scenario, the expansion limit implies that no more than 3.75 billion gallons of ethanol can be produced in 2020.
+The change raises the maximum 2020 production capacity to 10 billion gallons, which exceeds the quantity demanded in the Advanced scenario.
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270 Table 2 Energy use in the BAU, moderate and advanced scenarios 1997 2010 BAU Energy use by mode (quadrillion Btu) Light-duty vehicles (vehicle miles traveled) Commercial light trucks (vehicle miles traveled) Freight trucks (vehicle miles traveled) Air (seat miles demanded) Rail (ton miles traveled) Marine (ton miles traveled) Pipeline fuel Other Total 13.9 0.6 4.2 3.4 0.5 1.3 0.7 0.2 24.9 18.1 0.8 5.3 5.2 0.6 1.6 0.9 0.3 32.8 Moderate 17.7 0.7 5.0 5.1 0.6 1.6 0.8 0.3 31.9 Advanced 15.9 0.7 4.8 4.8 0.5 1.6 0.9 0.3 29.5 2020 BAU 19.6 0.8 5.7 6.4 0.7 2.0 1.0 0.3 36.4 Moderate 18.2 0.8 4.8 6.1 0.6 2.0 0.9 0.3 33.7
+1263
+Advanced 14.4 0.7 4.0 5.8 0.5 2.0 0.9 0.3 28.6
+Table 3 Utilization and efficiency indicators by mode 1997 2010 BAU Level of travel by mode (billion) Light-duty vehicles (vehicle miles traveled) Commercial light trucks (vehicle miles traveled) Freight trucks (vehicle miles traveled) Air (seat miles demanded) Rail (ton miles traveled) Marine (ton miles traveled) Energy-efficiency indicator by mode New light-duty vehicle (mpg)a New car (mpg) New light truck (mpg) Light-duty fleet (mpg) New commercial light truck (mpg) Stock commercial light truck (mpg) Aircraft (seat miles/gallon) Freight truck (mpg) Rail (ton miles/kBtu) a
+2020 Moderate 2892 91 245 1818 1508 882 Advanced 2829 90 246 1781 1352 883 BAU 3303 104 270 2462 1698 961 Moderate 3320 104 272 2471 1666 967 Advanced 3184 103 273 2425 1428 968
+2301 69 177 1049 1229 756
+2886 91 243 1813 1516 877
+24.0 27.9 20.2 20.5 19.9 14.6 51.0 5.6 2.7
+25.5 31.7 20.8 20.3 19.8 15.0 55.7 6.1 2.9
+27.4 34.7 22.1 20.9 21.1 15.3 56.7 6.5 3.1
+32.8 41.5 26.4 22.8 24.3 16.0 59.9 6.8 3.4
+26.5 32.1 22.0 21.4 21.0 15.6 59.6 6.3 3.1
+30.5 38.0 24.8 23.4 23.5 16.5 62.6 7.6 3.5
+41.6 51.4 33.9 28.3 29.2 18.7 65.8 9.0 3.9
+Light-duty vehicles are passenger cars and light trucks combined.
+7.
+Results 7.1.
+Main points Even in the Advanced scenario, carbon emissions from the US transport sector are 14 percent higher in 2020 than in the base year of 1997, and energy use is 16 percent higher.
+Robust growth of travel demand and the significant lead times required for the introduction of advanced technologies make it difficult to prevent increases in GHG emissions from transport.
+Nevertheless, carbon emissions in the Advanced scenario are 155 mmt (22 percent) lower than in the BAU scenario.
+Transportation manages the smallest percentage reduction of the four sectors, yet it accounts for 29 percent of the economy-wide carbon emissions reductions in the Advanced scenario in 2020 (see, Brown et al., this issue).
+Reducing GHG emissions from transportation sector will be challenging, but it will also be critical to achieve a meaningful economy-wide carbon emissions reductions.
+Energy use in the BAU scenario grows from the 1997 level of 24.9Â­32.8 quads in 2010 and 36.4 in 2020, an overall increase of 46 percent (Table 2).
+This is driven by increases of 44 percent in passenger vehicle travel, 53 percent in freight truck vehicle miles, and 135 percent in travel by air (Table 3).
+Rail and waterborne freight increase 38 and 27 percent, respectively.
+Activity levels change little across the three scenarios.
+Despite fuel price increases due to carbon permit costs and pay-atthe-pump automobile insurance, the cost of fuel per mile remains low because of efficiency gains.
+In general, rebound effects are reflected in the CEF-NEMS projections, but they are relatively small.
+1264
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+Table 4 Carbon emissions in the BAU, Moderate and Advanced scenarios 1997 2010 BAU Carbon emissions by mode (MtC) Light-duty vehicles (vehicle miles traveled) Commercial light trucks (vehicle miles traveled) Freight trucks (vehicle miles traveled) Air (seat miles demanded) Rail (ton miles traveled) Marine (ton miles traveled) Pipeline fuel Other Total 267.0 11.3 82.4 63.3 12.2 27.3 10.6 3.8 477.8 346.4 14.5 100.8 98.8 14.1 33.7 12.8 7.4 628.4 Moderate 337.6 14.2 95.3 97.5 13.6 33.5 12.1 7.2 611.0 Advanced 304.5 13.4 91.7 91.4 11.5 33.3 12.2 7.0 565.1 2020 BAU 376.3 16.1 108.0 122.1 15.0 40.8 14.1 7.7 700.2 Moderate 348.0 15.2 91.0 117.2 14.2 40.6 12.7 7.1 646.0 Advanced 274.3 13.1 76.5 110.2 10.9 40.2 13.1 6.6 544.9
+Energy efficiencies, especially for new equipment, differ substantially across scenarios (Table 3).
+While BAU new light-duty vehicle fuel economy in 2020 is only 2.5 mpg higher than in 1997, it is 6.5 mpg higher in the Moderate scenario and increases by 17.6 mpg (73 percent) in the Advanced scenario.
+In the Advanced scenario, new passenger car fuel economy increases by 84 percent to over 50 mpg in 2020.
+New truck mpg increases by 68 percent.
+Because the expected lifetime of a new car or light truck exceeds ten years, the efficiency improvements to new equipment accomplished by 2020 will not have their full impact on energy use and carbon emissions until after 2030.
+In the Advanced scenario, the average mpg of all light vehicles in use improves by only 38 percent (from 20.5 to 28.3 mpg) through 2020, while new light-duty vehicle mpg increases by 73 percent.
+BAU scenario emissions of carbon dioxide from transportation increase by 222.4 million metric tons of carbon (mmtC), from 477.8 mmtC in 1997 to 700.2 mmtC in 2020 (Table 4).
+The largest share comes from light-duty vehicles, whose emissions grow by 109 mmtC.
+Carbon emissions from air travel nearly double, from 63.3 mmtC in 1997 to 122.1 mmtC in 2020.
+Passenger travel by highway and air combined account for 168.1 mmtC out of the projected 222.4 mmtC increase in carbon emissions from transportation (75.6 percent).
+7.2.
+Light-duty vehicles, key technologies The five technologies making the greatest contributions to efficiency gains and GHG reductions by passenger cars and light trucks are: (1) direct injection gasoline and diesel engines (15Â­20 and 30Â­40 percent mpg gains, respectively), (2) hybrid electric drivetrains (up to a 50 percent efficiency improvement under average driving conditions and up to 100 percent under congested, stop-and-go conditions), (3) Fuel cell power-
+plants (efficiency gains ranging from 70 percent for gasoline to 160 percent for hydrogen, however, fuel cycle GHG reductions would be substantially less, depending on how the fuels are produced), (4) cellulosic ethanol used as a blending stock with gasoline to replace up to 5 percent of gasoline by 2020, and (5) lighterweight materials (mostly ultra-light steel and aluminum designs) to reduce vehicle weight by up to 30 percent while fully retaining structural integrity.
+The percent improvements shown in Fig. 3 reflect the varying market penetrations of all technologies.
+Engine improvements (including lean-burn direct-injection), hybridization and materials substitution account for most of the 28.6Â­44.1 mpg gain in gasoline-powered, passenger car fuel economy in the Advanced scenario (Fig. 3).
+Of the 54.2 percent improvement, 23.9 percentage points can be attributed to a variety of engine improvements, ranging from friction reduction to multivalve designs, variable valve timing and lift control, and lean-burn direct injection.
+Increased sales of gasolineelectric hybrids alone provide a 12.6 percent improvement.
+Weight reduction via materials substitution offsets more than a 2.9 percent fuel economy loss due to increased vehicle size.
+Next in importance are lower aerodynamic drag and reduced rolling resistance, largely due to advanced tire designs.
+Advanced multi-speed automatics and continuously variable transmissions provide an additional 2.9 percent.
+Clearly, no single technology predominates, suggesting that the scenario results may be robust to the failure of one or a few technologies.
+Alternative fuel and advanced technology vehicles reach a 50 percent share of the light duty vehicle market by 2020, in the Advanced scenario (Fig. 4).
+The turbocharged, direct-injection diesel clearly plays a major role.
+Sales exceed one million units annually after 2005 and reach 2.6 million by 2020.
+In 2020, in the Advanced scenario there are 30 million TDI diesel light-duty vehicles on the road.
+Together with 7 million diesel-
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+1265
+Fig. 3.
+Sources of passenger car mpg improvements: gasoline engine technology only, advanced scenario, 2020.
+diesel vehicles may not be able to meet future emissions standards and therefore may be unavailable for GHG mitigation.
+Another considers the possibility that fuel cells may not cost more than conventional internal combustion engine vehicles.
+A final sensitivity case examines higher, mandatory fuel economy standards.
+The sensitivity cases were run using the CEF-NEMS Transportation sector model in stand-alone mode, ``unintegrated'' with the other sectors.
+The outputs are therefore not precisely the same as those shown above for the three scenarios.
+7.4.
+No-diesel case The diesel's acceptability in the future will depend on its ability to curb particulate and NOx emissions to meet stringent Tier II emissions standards.
+Although the EPA's recent decision to require low sulfur diesel fuel, and technological advances in particulate traps and lean-burn catalysis give reasons for optimism about advanced clean diesels, it is by no means certain that a practical clean diesel can be developed (Mark and Morey, 1999).
+The diesel's 15 percent share of the on-road fleet in 2020 and 40 percent fuel economy improvement potential, would seem to suggest that it is crucial to achieve the Advanced scenario's reductions in GHG emissions and oil use.
+In the stand-alone Advanced case run, sales of TDI diesels increase from 60,000 in 1999 to 2.2 million annually in 2010 and over 3.1 million in 2020.
+Sales of diesel electric hybrids grow from zero in 2002 to peak at over 800,000 units in 2013.
+To simulate the absence of diesels, we raised their price by $10,000 per vehicle after 2003.
+The model responded by reducing their predicted sales to zero.
+The drastic effect on diesel sales, however, is not reflected in
+Fig. 4.
+Alternative fuels and vehicles market shares, advanced scenario.
+electric hybrids, they power 15 percent of the light-duty vehicle fleet.
+Fuel cell vehicles, which do not appear in significant numbers in the Moderate or BAU scenarios, account for 2.2 million light-duty vehicle sales in 2020 in the Advanced scenario.
+Hydrogen fuel cell vehicles, which according to our assumptions are somewhat less expensive and more energy efficient than the other fuel cell options, comprise 1.0 million of the 2.2 million FCVs sold.
+By 2020, there will be 9.4 million FCVs on the road out of total of 255 million light-duty vehicles.
+About 3.9 million will be hydrogen FCVs. 7.3.
+Sensitivity cases Three variations of the Advanced scenario were analyzed.
+One addresses the possibility that light-duty
+1266
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+7.5.
+Fuel cell success Of all the technologies considered for the transportation sector, fuel cells combine the greatest promise for increasing energy efficiency and reducing GHG emissions with the greatest uncertainty with respect to their cost and performance.
+Recent dramatic improvements in fuel cell technology may explain why nearly every major manufacturer has announced commercial introduction of fuel cell vehicles in the 2003Â­2005 period.
+When the ``5-Lab'' study (Interlaboratory Working Group, 1997) was conducted just three years ago, such a prediction seemed too unlikely to be included even in our ``high-efficiency'' technologically optimistic scenario for 2015.
+Yet fuel cell technology still has a long way to go before it can compete head-to-head with conventional internal combustion engine technology.
+In the sensitivity cases presented here we measure the impacts of fuel cell system costs, and particularly the rate of reduction in costs, on predicted market success.
+Our cost estimates are based on a study by Directed Technologies, Inc.
+(Thomas et al., 1998) for the US DOE based on a bottom-up design and costing methodology (details of the CEF-NEMS implementation may be found in Appendix A-3).
+The key components of a fuel cell system are: (1) the fuel cell stack, (2) the electric motor and associated controllers, etc., (3) the reformer and hydrogen storage buffer in the case of a methanol or gasoline-powered system, and (4) the hydrogen storage tank in the case of a hydrogen FCV.
+Since these components will make the internal combustion engine drivetrain unnecessary, there will also be a credit for its elimination.
+For each component, Thomas et al. (1998) analyzed the cheaper materials and processes, emphasizing the reduction of the parts count and the minimization of manufacturing costs.
+They intended their cost estimates to apply in the vicinity of the year 2005.
+Cost estimates are shown in Table 5 for passenger cars with weights typical of the years 2010 and 2020 in the Advanced scenario.
+In 2010, the heavier fuel cell vehicle requires 67 kW if powered by hydrogen, 76 kW if powered by gasoline.
+The additional stack size primarily reflects a loss of fuel cell efficiency when operating on reformer gas versus pure hydrogen, but also some increase in weight.
+The stack cost alone ranges from $2840 to $3060.
+The gasoline andmethanol versions also require reformers, while the hydrogen version requires an expensive fuel tank to store the hydrogen.
+In 2010, the incremental cost of the fuel cell system, including overhead, ranges from $4190 to $4390.
+When the cost factor falls to 69 percent in 2020, the net cost approaches zero.
+A 75 percent overhead multiplier magnifies the benefit of each $1 of fuel cell system cost reduction.
+In addition, the fuel cell system costs are more sensitive to weight than the cost of the ICE powerplant.
+As a result,
+Fig. 5.
+Sales of alternative fuel vehicles: no diesel case.
+Fig. 6.
+Light-duty mpg and energy use: diesel sensitivity case.
+fuel economy or energy use trends (Figs. 5 and 6).
+With no diesels, the fuel economy of new light-duty vehicles grows from 24.0 in 2000 to 31.4 in 2010 and 40.5 in 2020, just 1.4 mpg lower than the result when diesels were included.
+Energy use in 2010 increases to 15.7 quads with no diesels, and 2020 energy use is 14.6 quads, just 0.5 quads higher.
+The modest impact is partly due to increased sales of competing technologies.
+For example, sales of fuel cells and battery electric vehicles in 2020 increase from 2.7 million units in the stand-alone Advanced case to 4.3 million in the no-diesels case.
+In addition, although the sales of diesels are substantial in the Advanced case, they still represent only 15 percent of the light-duty vehicles on the road in 2020.
+When several attractive technologies are available, the success or failure of even one of the most important technologies does not appear to have a drastic impact on the outcome.
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270 Table 5 Case fuel cell vehicle costs and fuel economy Gasoline 2010 Cost factor Vehicle weight (pounds) Stack size (kW) Stack cost (1998 $) $/kW Motor cost (1998 $) Reformer cost (1998 $) Hydrogen tank (1998 $) Fuel Cell System Cost (1998 $) ICE credit (1998 $) Net cost+overhead (1998 $) Fuel economy (GE mpg) 112% 2790 76.1 $3061 $40 $99 $960 $5012 Ã€$2502 $4392 48.8 2020 69% 2195 59.9 $1650 $28 $521 $483 $2654 Ã€$2097 $976 62.1 Methanol 2010 112% 2790 73.6 $2999 $41 $968 $932 $4898 Ã€$2502 $4193 56.0 2020 69% 2195 57.9 $1620 $28 $510 $469 $2599 Ã€$2097 $879 71.2 Hydrogen 2010 112% 2790 67.2 $2843 $42 $909 $1,147 $4899 Ã€$2502 $4195 75.3 2020
+1267
+69% 2195 52.9 $1544 $29 $481 $559 $2585 Ã€$2097 $854 95.7
+Fig. 7.
+Fuel cell sensitivity cases.
+case, two-thirds of the fuel cell vehicles sold in 2020 are powered by hydrogen.
+Clearly, the outlook for fuel cell vehicles is highly uncertain at the present time.
+Despite dramatic progress in the past five years, automotive fuel cell technology still has a long way to go before it will be competitive with conventional gasoline vehicles in terms of both cost and performance.
+And hydrogen fuel cell vehicles face formidable infrastructure barriers not included in our analysis.
+Still, these sensitivity cases illustrate just how sensitive market success is likely to be to cost.
+Much will also depend on how consumers react to the less readily quantified differences between fuel cell and conventional vehicles (e.g., noise, vibration, reliability, etc.).
+7.6.
+Mandatory fuel economy standards According to economic theory, voluntary environmental standards require at least the threat of mandatory standards to be taken seriously by firms (Segerson and Miceli, 1998).
+In addition, mandatory standards might be implemented if it were considered necessary to force fuel economy well above levels that are costeffective on the basis of private costs to motorists.
+Beginning in the year 2005, the mandatory standards increase gradually to 50 mpg by 2020 for combined passenger car andlight truck sales.
+Domestic andimport fleets are also combined, and credit trading between companies is implicitly allowed.
+In comparison to the Advanced scenario, new lightduty vehicle fuel economy is about 10 mpg higher in the CAFE sensitivity case, reaching 52 mpg in 2020.
+For the fleet as a whole, fuel economy in the CAFE case is about 4 mpg greater than in the Advanced scenario (Fig. 8), and annual energy use by the fleet is more than one and one-half quads lower.
+Imposing CAFE constraints increases the use of advanced fuel economy technologies.
+In the Advanced
+while fuel cell system costs are cut in half between 2010 and 2020, the incremental cost of the fuel cell systems falls by 75Â­80 percent.
+Three alternative learning curves were assumed: (1) the Moderate scenario curve in which costs decline from 2.0 times the 2005 mass-production cost levels to 1.0 times in 2020, (2) the Advanced scenario curve in which costs decline to 0.7 times the 2005 mass-production level by 2020, and (3) a ``fuel cell success'' curve in which costs decline to 0.6 times the 2005 mass-production level by 2020.
+In the fuel cell success case, fuel cell vehicles cost about $1000 less than a conventional gasoline ICE vehicle in 2020.
+Assuming Moderate scenario fuel cell costs but all other Advanced scenario policies results in negligible fuel cell vehicle sales (180,000 units) even by 2020 (Fig. 7).
+The fuel cell success case assumptions increase annual sales to close to over two million units in 2015 and almost four million units in 2020, a 25 percent market share that is still headed upward in 2020.
+In the Advanced case, 15 percent of the fuel cell vehicles sold in 2010 are powered by hydrogen.
+By 2020 hydrogen's share increases to 49 percent.
+In the fuel cell success
+1268
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+Fig. 8.
+Light-duty stock fuel and energy use, CAFE sensitivity case.
+Table 6 Market penetrations of selected fuel economy technologies in passenger cars in the CAFE scenario Technology Gasoline hybrid Gasoline direct injection 4-cyl.
+Gasoline direct injection 6-cyl.
+Advanced materials Advanced drag reduction 2010 Advanced 12.7 9.5 5.3 0.0 8.2 2010 CAFE (%) 31.1 16.5 11.1 0.0 9.5 2020 Advanced (%) 23.0 22.9 13.2 34.2 36.5 2020 CAFE (%) 56.6 36.1 27.5 53.8 58.6
+scenario, gasoline hybrids comprise 12.7 percent of gasoline vehicle sales in 2010 and 23.0 percent in 2020.
+In the CAFE case, this increases to 31.1 and 56.6 percent, respectively (Table 6).
+Use of direct injection gasoline engines also increases markedly, as do the market shares of advanced materials (primarily aluminum and plastics) and advanced drag reduction technologies.5 The greater use of fuel economy technologies increases the price of new vehicles.
+For gasoline-powered vehicles,6 the cost of fuel economy technologies in the CAFE case averages $1337 per passenger car in 2010 and $2383 in 2020, versus $811 in 2010 and $1548 in 2020 in the Advanced scenario.
+For light trucks, the CAFE case requires $1365 worth of fuel economy technologies in 2010 and $3305 in 2020, as compared with $1028 and $2040 in the Advanced scenario.
+Even with the higher CAFE standards, the total present value 5 Advanced materials include NEMS materials categories VÂ­VII.
+Advanced drag is Drag Reduction V. 6 We have not been able to devise a way to calculate the additional costs of alternative fuel technologies using outputs produced by NEMS.
+In principle, the AFV purchases are the outcome of market decisions by consumers, so that in the context of NEMS, the value of the AFVs to consumers exceeds their cost.
+Thus, in focusing on the cost of gasoline vehicle technologies, we are focusing on the only area where, at least in theory, costs could exceed direct benefits to consumers.
+of lifetime fuel savings to motorists exceeds the initial cost in 2010.
+In 2020, however, estimated initial costs exceed the estimated present value of fuel savings at a 15 percent annual discount rate.
+A 53 mpg 2020 passenger car would emit 6.4 fewer tC annually, at an average net cost of $16/tC.
+However, the marginal cost per ton of C saved by model year 2020 versus 2010 vehicles is about $300.
+The estimates for light trucks show a similar pattern.
+7.7.
+Impacts on US oil dependence The analysis below includes the impacts of oil demand reductions from all sectors on US oil dependence.
+Changes in the transportation sector, however, are by far the most important.
+In 1998, the US transportation sector accounted for over 66 percent of US petroleum consumption, and transportation uses nearly all the high-value, light products that drive petroleum markets.
+Total US oil consumption rises to 24.5 mmbd in 2020 in the BAU scenario, but is only 19.4 mmbd in the Advanced scenario (Fig. 9).
+In the BAU scenario, US petroleum imports rise from 10.6 mmbd in 2000 to 15.9 mmbd in 2020.
+In the Advanced scenario, only 11 mmbd are imported in 2020.
+Under BAU, US oil imports increase from 49 percent of US demand today, to 65 percent in 2020.
+In the Advanced scenario, the share of imports also increases, but to only 56 percent.
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270
+1269
+Fig. 9.
+US primary petroleum consumption.
+The CEF-NEMS model assumes that when world oil demand falls, OPEC will cut production by an equal amount, so that world oil prices remain constant.
+Because of this, the reduction of US oil imports will be maximized but there will be no economic benefits from lower oil prices.
+Significant reductions in US oil demand, such as predicted in the Moderate and Advanced scenarios, would exert downward pressure on world oil prices, other things equal.
+If OPEC were to maintain its oil production in the face of reduced demand, and allow world oil prices to fall, we estimate that prices might drop from $20.17/bbl in 2020 to perhaps $16/bbl.
+While this might increase US oil imports by 1 million bbl/day or more, it would also reduce US oil expenditures by more than $20 billion per year.
+8.
+Conclusions Energy use and carbon emissions from transportation have grown steadily over time and appear likely to continue to grow without new policies or sharp changes in fuel prices and availability.
+A variety of existing technology options offers the potential to slow the growth of energy use and carbon emissions, and a substantial portfolio of promising new energy-saving technologies is under development.
+Continued progress in transportation technology is critically important to achieve the greenhouse gas reductions of the Advanced scenario.
+Realizing the potential energy and emission reductions, these technologies promise will require overcoming a number of barriers including low fuel prices, consumer interest in performance, long lead times for diffusion of advanced technologies and vehicle stock turnover, and technological and market risks.
+Both market forces and technological progress are crucial to reducing transportation energy use and
+greenhouse emissions.
+Polices that focus on accelerating technology development are useful but not sufficient to obtaining the desired energy and emissions benefits; additional policies that change market incentives for consumers and vehicle manufacturers will also be required.
+For the BAU scenario, with no change in the level of public concern and no new policies, energy use rises from 25 quads in 1997 to 36.4 quads in 2020, and carbon emissions rise from 478 to 700 MtC during the same periodFincreases of over 45 percent.
+In the Moderate scenario, which focuses primarily on advancing technology development and does not attempt to strongly influence markets, transportation energy use still grows to 34.1 quads and carbon emissions to 646 MtC by 2020, in both cases, growth of more than one-third from 1997 levels.
+Only in the Advanced scenario, where policies focus on both developing technology and influencing markets, does growth in energy use and greenhouse emissions slow markedly.
+In that scenario, transportation energy use rises only 16 percent by 2020, to 28.9 quads, and carbon emissions rise only 12 percent, to 545 MtC.
+A key aspect of this scenario is that the roll-in of advanced technologies is only partially complete, even by 2020; the full impacts have yet to be realized.
+The scenarios depend critically on the assumptions we have made about progress across a range of future transportation technologies currently under development, and about the effectiveness of various policies.
+Although we have chosen these assumptions with care, we admit readily that technology forecasting is a highly uncertain art, and further that the outcomes of some of the chosen policies, such as increased R
+Nevertheless, we note that the types of improvements we project are in line with historical improvements in transportation technology.
+Further, our sensitivity analyses show that the results are robust in the face of failure of a key technology; an important result because we cannot claim that our choice of technological ``winners'' is necessarily the correct one.
+Restraining the future growth of transportation's carbon emissions and petroleum demand while at the same time insuring steady progress in reducing air pollution depends not only on continued technological progress, but also on the implementation of policies that direct technological advances toward greater energy efficiency and cleaner energy sources.
+Acknowledgements This research was supported by the Office of Energy Efficiency and Renewable Energy of the US Department of Energy.
+The views expressed however, are those of the authors alone.
+1270
+D.L. Greene, S.E. Plotkin / Energy Policy 29 (2001) 1255Â­1270 National Research Council (NRC), 1999.
+Review of the Research Strategy for Biomass-Derived Transportation Fuels.
+Board on Energy and Environmental Systems, National Academy Press, Washington, DC.
+Segerson, K., Miceli, T.J., 1998.
+Voluntary environmental agreements: good or bad news for environmental protection? Journal of Environmental Economics and Management 36 (2), 109Â­130.
+Thomas, C.E., James, B.D., Lomax, Jr., F.D., Kuhn, Jr., I.F., 1998.
+Societal impacts of fuel options for fuel cell vehicles.
+SAE Technical Paper Series No. 982496, Society of Automotive Engineers, Warrendale, PA. US Department of Energy, Energy Information Administration (US DOE/EIA), 1998.
+Model Documentation Report: Transportation Sector Model of the National Energy Modeling System, Vols.
+I and II.
+Office of Integrated Analysis and Forecasting, Washington, DC.
+US Department of Energy, Energy Information Administration (US DOE/EIA), 1999.
+Annual Energy Outlook 1999, DOE/EIA-0383, Washington, DC.
+US Department of Transportation, Bureau of Transportation Statistics (US DOT/BTS), 1999.
+Transportation Statistics Annual Report 1999.
+BTS99-03, Washington, DC.
+References Brown, M.A., Levine, M.D., Short, W., Koomey, J.G., 2001.
+Scenarios for a clean energy future.
+Energy Policy, 29(14), 1179Â­1196.
+Davis, S.C., 2000.
+Transportation Energy Data Book, 20th Edition.
+ORNL-6959, Oak Ridge National Laboratory, Oak Ridge, Tennessee.
+Interlaboratory Working Group, 2000.
+Scenarios for a clean energy future.
+Lawrence Berkeley National Laboratory, Berkeley, CA (LGNL-44029), National Renewable Energy Laboratory, Golden, CO (NREL/TP-620-29379) and, Oak Ridge National Laboratory, ORNL/CON-476, Oak Ridge, TN, http://www.ornl.gov/ORNL/ Energy Eff/CEF.htm.
+Interlaboratory Working Group on Energy-Efficient andClean Energy Technologies, 1997.
+Scenarios of US carbon reductions.
+Oak Ridge National Laboratory, ORNL/CON-444, Report to the Office of Energy Efficiency and Renewable Energy, US Department of Energy, Washington, DC.
+Mark, J., Morey, C., 1999.
+Diesel passenger vehicles and the environment.
+Union of Concerned Scientists, Berkeley, California.
+National Research Council (NRC), 1992.
+Aeronautics and Space Engineering Board, Aeronautical Technologies for the TwentyFirst Century.
+National Academy Press, Washington, DC.

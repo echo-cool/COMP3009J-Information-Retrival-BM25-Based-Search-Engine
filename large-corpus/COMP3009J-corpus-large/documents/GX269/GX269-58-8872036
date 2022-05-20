@@ -1,0 +1,127 @@
+CENSUS 2000 GEOGRAPHIC TERMS AND CONCEPTS (All definitions were extracted from the United States Census Bureau' Summary File 1 Technical s, Documentation, Appendix A and the Decennial Management Division Glossary, April 1999) Address The house number and street name or other designation assigned to a housing unit, special place, business establishment, or other structure for purposes of mail delivery or to allow emergency services, delivery people, and visitors to find the structure.
+See basic street address, city-style address, E-911 address, fire number, house number and street name address, location description, mailing address, and non-city-style address.
+Block Census blocks are areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and by invisible boundaries, such as city, town, township, and county limits, property lines, and short, imaginary extensions of streets and roads.
+Generally, census blocks are small in area; for example, a block bounded by city streets.
+However, census blocks in sparsely settled areas may contain many square miles of territory.
+All territory in the United States, Puerto Rico, and the Island Areas has been assigned block numbers, as was the case for the 1990 census.
+To improve operational efficiency and geographic identifications, the U.S. Census Bureau has introduced different numbering systems for tabulation blocks used in decennial census data products, and for collection blocks, used in administering the census.
+(In 1990, there generally was a single numbering system.)
+Collection block numbers are available only in the TIGER/Line data products; the U.S. Census Bureau does not tabulate data for collection blocks Tabulation blocks do not cross the boundaries of any entity for which the U.S. Census Bureau tabulated data, including American Indian areas, Alaska Native areas, Hawaiian home lands, census tracts, congressional districts, counties, county subdivisions, places, state legislative districts, urban and rural areas, school districts, voting districts, and ZIP Code tabulation areas (ZCTAs).
+Tabulation blocks also generally do not cross the boundaries of certain landmarks, including military installations, national parks, and national monuments.
+Tabulation blocks are identified uniquely within census tract by means of a four-digit number.
+(The 1990 census block numbers had three digits, with a potential alphabetic suffix.)
+The Census 2000 collection blocks are numbered uniquely within county (or statistically equivalent entity), and consist of four or five digits.
+For its Census 2000 data tabulations, the U.S. Census Bureau created a unique set of census block numbers seen in the data presentations.
+For the 1990 census, the U.S. Census Bureau created a separate block with a suffix of "Z" to identify crews-of-vessels population.
+For Census 2000, crews-of-vessels population is assigned to the land block identified by the U.S. Census Bureau as associated with the home port of the vessel.
+Block Boundary A census map feature, visible (street, road, stream, shoreline, and so forth) or non-visible (county line, city limit, property line, and so forth), that delimits a census block.
+Two or more features usually delimit a block, but a single feature may delimit a block in the case of an island or a circular street.
+A boundary generally must include at least one addressable feature, that is, a feature that can have an address assigned to it.
+The boundary of a state or county is always a block boundary
+Block Group A block group (BG) is a cluster of census blocks having the same first digit of their four-digit identifying numbers within a census tract.
+For example, block g2oup 3 (BG3) within a census tract includes all blocks numbered from 3000 to 3999.
+BGs generally contain between 600 and 3,000 people, with an optimum size of 1,500 people.
+BGs on American Indian reservations, offreservation trust lands, and special places must contain a minimum of 300 people.
+(Special places include correctional institutions, mil itary installations, college campuses, worker' dormitories, s hospitals, nursing homes, and group homes.)
+BGs never cross the boundaries of states, counties or statistically equivalent entities, except for a BG delineated by American Indian tribal authorities, and then only when tabulated within the American Indian hierarchy.
+BGs never cross the boundaries of census tracts, but may cross the boundary of any other geographic entity required as a census block boundary.
+Block Map A large scale map of an individual census collection block showing the individual roads, streets, and other features, together with their names (if any) within and adjacent to the block.
+Field staff use block maps to guide them in their canvass of each block, to annotate map changes, and to mark (map spot) and number the location of each residential structure.
+See collection block, and block number Block Number Collection block numbers and tabulation block numbers are assigned to each census block Boundary A line identifying the extent of a geographic entity such as: a block, census tract, county, or place.
+The legal boundaries the Census Bureau recognizes for a census are those in place on the first day of the census year Census Designated Place Census designated places (CDPs) are delineated for each decennial census as the statistical counterparts of incorporated places.
+CDPs are delineated to provide census data for concentrations of population, housing, and commercial structures that are identifiable by name but are not within an incorporated place.
+CDP boundaries usually are defined in cooperation with state, local, and tribal officials.
+These boundaries, which usually coincide with visible features or the boundary of an adjacent incorporated place or other legal entity boundary, have no legal status, nor do these places have officials elected to serve traditional municipal functions.
+CDP boundaries may change from one decennial census to the next with changes in the settlement pattern; a CDP with the same name as in an earlier census does not necessarily have the same boundary.
+For Census 2000, for the first time, CDPs did not need to meet a minimum population threshold to qualify for tabulation of census data.
+For the 1990 census and earlier censuses, the U.S. Census Bureau required CDPs to quality on the basis of various minimum population size criteria.
+Census Geography A collective term referring to the geographic entities used by the Census Bureau for data collection and tabulation.
+There is collection geography and tabulation geography Census Tract (See Tract)
+Collection Block A physical block enumerated as a single geographic area, regardless of any legal or statistical boundaries passing through it.
+(Except the state and county boundaries are always block boundaries.)
+See block, block number, and tabulation block.
+County A type of governmental unit that is the primary legal subdivision of every state except Alaska and Louisiana (boroughs and parishes, respectively).
+The Island Areas also do not have counties as their primary legal subdivision (county is a minor civil division in American Samoa).
+See county equivalent and governmental unit.
+County Equivalent A geographic entity that is not legally referred to as a county but is recognized by the Census Bureau as equivalent to a county for purposes of data presentation.
+Because they contain no county-type subdivision, the Census Bureau treats the District of Columbia and Guam as county equivalents (as well as state equivalents).
+Decennial Census The census of population and housing, taken in each year ending in zero.
+Article 1, section 2 of the Constitution requires that a census be taken every 10 years for the purpose of apportioning the U.S. House of Representatives.
+The first census of population was taken in 1790.
+The Census Bureau first conducted the census of housing in 1940 Digital exchange file An electronic file of roads and streets, their names, address ranges, and ZIP codes obtained from a local government or commercial source and Federal Information Processing Standards (FIPS) Code Federal Information Processing Standards (FIPS) codes are assigned for a variety of geographic entities, including American Indian area, Alaska Native area, Hawaiian home land, congressional district, county, county subdivision, metropolitan area, place, and state.
+The structure, format, and meaning of FIPS codes used in U.S. Census Bureau data products appear in the appropriate technical documentation.
+The objective of FIPS codes is to improve the ability to use the data resources of the federal government and avoid unnecessary duplication and incompatibilities in the collection, processing, and dissemination of data.
+The FIPS codes and FIPS code documentation are available online at http://www.itl.nist.gov/fipspubs/indes.htm.
+Geocode A code that identifies a specific geographic entity.
+For example, geocodes needed to identify a census block for data collection are the state code, the county code, and the block number.
+Geocoding The assignment of an address, structure, key geographic location, or business name to a location that is identified by one or more geographic codes . the assignment of x,y spatial coordinates and census 2000 geographic area layers (county, census tract, block group and block) to the location of individual records in a database based on an address for each record
+Incorporated Place Incorporated places recognized in decennial census data products are those reported to the U.S. Census Bureau as legally in existence on January 1, 3000, under the laws of their respective states, as cities, boroughs, city and boroughs, municipalities, towns, and villages.
+In four states (Maryland, Missouri, Nevada, and Virginia), there are one or more incorporated places known as "independent cities" that are primary divisions of a state and legally not part of any county (i.e. Baltimore City).
+For data presentation purposes, the U.S. Census Bureau may treat an independent city as a county equivalent, county subdivision, and place.
+There are few incorporated places that do not have a legal description.
+An incorporated place is established to provide governmental functions for a concentration of people as opposed to a minor civi l division, which generally is created to provide services or administer an area without regard, necessarily, to population.
+Independent City An incorporated place that is a primary division of a state and legally not part of any county.
+The Census Bureau treats an independent city as both a county equivalent and county subdivision for data tabulation purposes.
+See county equivalent, and incorporated place.
+Legal Entity An entity whose origin, boundary, name, and description result from charters, laws, treaties, or other administrative or governmental action, such as, the United States, states, the Island Areas, counties, cities, townships, boroughs, towns, villages, American Indian Reservations, Alaska Native Villages, congressional districts, and school districts.
+The legal entities recognized for a decennial census are those in existence on January 1 of the decennial census year.
+Master Address File The MAF is a list of all living quarters nationwide and their geographic locations.
+The computer file was created by combining the addresses in the 1990 address control file with the current versions of the U.S. Postal Service delivery sequence file, and supplementing this with address information provided by state, local, and tribal governments.
+The MAF ties to the TIGERÂ® database.
+The MAF is updated throughout the decade to provide addresses for delivery of Census 2000 questionnaires, to serve as the sampling frame for the Census Bureau's periodic demographic surveys, and to support other Census Bureau statistical programs.
+Minor Civil Division Minor civil divisions (MCDs) are the primary governmental or administrative divisions of a county in many states.
+MCDs represent many different kinds of legal entities with a wide variety of governmental and /or administrative functions.
+MCDs are variously designated as American Indian reservations, assessment districts, boroughs, charter townships, election districts, gores, grants, locations, magisterial districts, parish governing authority districts, plantations, precincts, purchases, road districts, supervisors'districts, towns, and townships.
+In some states, all or some incorporated places are not located in any MCD (independent places) and thus serve as MCDs in their own right.
+In other states, incorporated places are part of the MCs in which they are locted (dependent places), or the pattern is mixed-some incorporated places are independent of MCDs and others are included within one or more MCDs.
+Independent cities, which are statistically equivalent to a county, also are treated as a separate MCD equivalent in states containing MCDs.
+Place Places, for the reporting of decennial census data, include census designated places, consolidated cities, and incorporated places.
+Each place is assigned a five-digit Federal Information Processing Standards (FIPS) code, based on the alphabetical order of the place name within each state.
+If place names are duplicated within a state and they represent distinctly different areas, a separate code is assigned to each place name alphabetically by primary county in which each place is located, or if both places are in the same county, alphabetically by their legal description (for example, "city" before "village").
+Statistical Entity Any specially defined geographic entity, such as, a metropolitan area, urbanized area, tribal designated statistical area, census county division, census designated place, census tract, block group, or census block, for which the Census Bureau tabulates data.
+Statistical entity boundaries are not legally defined, and the entities have no governmental standing.
+See legal entity.
+Tabulation Block A physical block that does not have any legal or statistical boundaries passing through it or each portion of a physical block after the Census Bureau recognizes any legal or statistical boundaries that pass through it.
+See block, block number, and collection block TIGERÂ® Database TIGERÂ® is an acronym for the Topologically Integrated Geographic Encoding and Referencing (System or database).
+It is a digital (computer-readable) geographic database that automates the mapping and related geographic activities required to support the U.S. Census Bureau' census s and survey programs.
+The U.S. Census Bureau developed the TIGER System to automate the geographic support processes needed to meet the major geographic needs of the 1990 census: producing the cartographic products to support data collection and map presentations, providing the geographic structure for tabulation and dissemination of the collected statistical data, assigning residential and employer addresses to the correct geographic location and relating those locations to the geographic entities used for data tabulation, and so forth.
+TIGERÂ®/Line File The computer-readable extract of the TIGERÂ® database that the Census Bureau makes available to the public.
+It contains data representing: roads, railroads, bodies of water, boundaries of legal and statistical entities, and other visible and nonvisible features, along with their attributes (names, address ranges, geographic codes, census feature class codes, and the like)
+Tract Census tracts are small, relatively permanent statistical subdivisions of a county or statistically equivalent entity delineated by local participants as part of the U.S. Census Bureau' Participant s Statistical Areas Program.
+The primary purpose of census tracts is to provide a stable set of geographic units for the presentation of decennial census data.
+Census tracts in the United States generally have between 1,500 and 8,000 people, with an optimum size of 4,000 people.
+Counties and statistically equivalent entities with fewer than 1,500 people have a single census tract.
+Census tracts on American Indian reservations, off-reservation trust lands, and special places must contain a minimum of 1,000 people.
+(Special places include correctional institutions, military installations, college campuses, workers'dormitories, hospitals, nursing homes, and group homes.)
+When first delineated, census tracts are designed to be relatively homogeneous with respect to population characteristics, economic status, and living conditions.
+The spatial size of census tracts varies widely depending on the density of settlement.
+Census tract boundaries are delineated with the intention of being maintained over many decades so that statistical comparisons can be made from decennial census to decennial census.
+However, physical changes in street patterns caused by highway construction, new developments, and so forth, may require occasional boundary revisions.
+In addition, census tracts occasionally are split due to population growth or combined as a result of substantial population decline.
+Census tracts are identified by a four-digit basic number and may have a two-digit numeric suffix; for example, 6059.02.
+The decimal point separating the four-digit basic tract number from the two-digit suffix is shown in the printed reports and on census maps.
+In computer readable files, the decimal point is implied.
+Many census tracts do not have a suffix; in such cases, the suffix field is either left blank or is zero-filled.
+For the 1990 census, the .00 suffix was reserved for census tracts/block numbering areas (BNAs) that contained only crew-of-vessels population; for Census 2000, the crew-of-vessels population is included with the related census tract.
+Visible Feature A feature that can be seen on the ground, such as, a street or road, railroad track, power line, stream, shoreline, fence, ridge, or cliff.
+A visible feature can be a manmade or natural feature.
+See feature and visible feature Voting District (VTD) Voting district (VTD) is the generic name for geographic entities, such as precincts, wards, and election districts, established by state, local, and tribal governments for the purpose of conducting elections.
+States participating in the Census 2000 Redistricting Data Program as part of Public Law 94-171 (1975) may provide boundaries, codes, and names for their VTDs to the U.S. Census Bureau.
+The U.S. Census Bureau first reported data for VTDs following the 1980 census.
+Because the U.S. Census Bureau requires that VTDs follow boundaries of census blocks, participating states often adjusted the boundaries of the VTDs they submit to conform to census block boundaries for data presentation purposes.
+If requested by the participating state, the U.S. Census Bureau identifies the VTDs that have not been adjusted as an "A" for actual in the VTD indicator field of the PL data file.
+The VTD indicator for all other VTDs is shown as "P" for pseudo.
+For Census 2000, each VTD is identified by a one- to six- character alphanumeric census code that is unique within county.
+The code "ZZZZZZ" identifies parts of a county in which no VTDs
+were identified.
+For state or county that did not participate in the VTD project, the code fields are blank.
+Zip Code (USPS) ZIP codes are administrative units established by the U.S. Postal Service for the distribution of mail.
+ZIP stands for zone improvement plan.
+It is a 5-, 7-, 9-, or 11-digit code assigned by the U.S. Postal Service to a street or portion of a street, a collection of streets, a business, or other establishment or structure, or a group of post office boxes to expedite the delivery of mail.
+The Census Bureau uses only 5-digit ZIP codes for the addresses and address ranges in most Census 2000 operations.
+ZIP Code Tabulation Area (ZCTATM) A ZIP CodeÂ® tabulation area (ZCTATM) is a statistical geographic entity that approximates the delivery area for a U.S. Postal Service five-digit or three-digit ZIP Code.
+ZCTAs are aggregations of census blocks that have the same predominant Zip Code associated with the residential mailing addresses in the U.S. Census Bureau' Master Address File.
+Three-digit ZCTA codes are applied s to large contiguous areas for which the U.S. Census Bureau does not have five-digit ZIP Code information in its Master Address File.
+ZCTAs do not precisely depict ZIP Code delivery areas, and do not include all ZIP Codes used for mail delivery.
+The U.S. Census Bureau has established ZCTAs as a new geographic entity similar to, but replacing, data tabulations for ZIP Codes undertaken in conjunction with the 1990 and earlier censuses.
+FOR MORE CENSUS DEFINITIONS GO TO: WWW.CENSUS.GOV

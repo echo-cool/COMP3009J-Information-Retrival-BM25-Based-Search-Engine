@@ -1,0 +1,1084 @@
+Detection and Measurement of Land Subsidence Using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, California, 1998Â­2000 U.S. Geological Survey Water-Resources Investigations Report 02-4239
+Prepared in cooperation with the Coachella Valley Water District
+Detection and Measurement of Land Subsidence Using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, California, 1998Â­2000 By Michelle Sneed1, S.V. Stork1, and Marti E. Ikehara 2
+U.S. GEOLOGICAL SURVEY Water-Resources Investigations Report 02-4239 Prepared in cooperation with the COACHELLA VALLEY WATER DISTRICT
+1
+U.S. Geological Survey, Placer Hall, 6000 J Street, Sacramento, CA 95819-6129 National Geodetic Survey, 1727 30th Street, MS35, Sacramento, CA 95816
+2
+7417-14
+Sacramento, California 2002
+U.S. DEPARTMENT OF THE INTERIOR GALE A. NORTON, Secretary
+U.S. GEOLOGICAL SURVEY Charles G. Groat, Director
+Any use of trade, product, or firm names in this publication is for descriptive purposes only and does not imply endorsement by the U.S. Government.
+For additional information write to: District Chief U.S. Geological Survey Placer Hall, Suite 2012 6000 J Street Sacramento, California 95819-6129 http://ca.water.usgs.gov/
+Copies of this report can be purchased from: U.S. Geological Survey Information Services Building 810 Box 25286, Federal Center Denver, CO 80225-0286
+CONTENTS Abstract ................................................................................................................................................................
+Introduction ..........................................................................................................................................................
+Purpose and Scope ......................................................................................................................................
+Description of Study Area ...........................................................................................................................
+Acknowledgments .......................................................................................................................................
+Geohydrologic Setting..........................................................................................................................................
+Mechanics of Pumping-Induced Land Subsidence ..............................................................................................
+Global Positioning System (GPS) Surveys ..........................................................................................................
+Land-Subsidence Monitoring Network .......................................................................................................
+Determination of Ellipsoid Heights ............................................................................................................
+1998 GPS Survey ...............................................................................................................................
+2000 GPS Survey ...............................................................................................................................
+GPS Results .................................................................................................................................................
+Ground-Water Levels ..................................................................................................................................
+Interferometric Synthetic Aperture Radar (InSAR) .............................................................................................
+InSAR Results .............................................................................................................................................
+Comparison with GPS Results ...........................................................................................................
+Areas of Land Subsidence..................................................................................................................
+Ground-Water Levels ..................................................................................................................................
+Future Monitoring ................................................................................................................................................
+Summary And Conclusions ..................................................................................................................................
+References Cited ..................................................................................................................................................
+1 2 4 4 4 5 7 8 8 8 11 11 12 15 15 19 22 23 27 27 27 28
+Contents
+iii
+FIGURES Figure 1.
+Map showing location of study area and of six Continuously Operating Reference Stations (CORS) in or near Coachella Valley, California.
+................................................................
+Figure 2.
+Map showing generalized geology of the Coachella Valley, California ...........................................
+Figure 3.
+Map showing network of Global Positioning System (GPS) stations and wells used to monitor vertical changes in land surface and ground-water levels, respectively, in the lower Coachella Valley, California....................................................................................................
+Figure 4.
+Graphs showing water-surface elevations for selected wells near the three uplifted monuments in the lower Coachella Valley, California..........................................................................................
+Figure 5.
+Interferograms showing areas of subsidence and locations of GPS stations in the land-subsidence monitoring network in Coachella Valley, California.
+Area of figure 5 is shown on figure 1...............................................................................................................................
+Figure 6.
+Amplitude image processed from SAR scenes showing land-surface features and selected production wells in Coachella Valley, California ..............................................................................
+Figure 7.
+Interferograms showing areas of subsidence and profiles showing vertical changes in land surface in Coachella Valley, California, for (A) June 17, 1998, through June 2, 1999, and (B) November 24, 1999, through October 4, 2000 .....................................................................
+Figure 8.
+Hydrographs showing water-surface elevations for selected production wells in areas where InSAR-generated maps show subsidence in the Coachella Valley, California .................................
+3 6
+9 14
+16 17
+20 24
+iv Figures
+TABLES Table 1.
+Horizontal position, elevation change prior to 1996, ellipsoid heights for 1998 and 2000, and ellipsoid-height change for 1998Â­2000 of geodetic network monuments, and water-level changes for 1998Â­2000 in selected wells in the Coachella Valley, California ..................................
+Vertical change measured using interferometric synthetic aperture radar (InSAR) and Global Positioning System (GPS) for selected monuments in the Coachella Valley, California ...............................................................................................................................
+13
+Table 2.
+22
+Tables
+v
+CONVERSION FACTORS, VERTICAL DATUM, AND ABBREVIATIONS CONVERSION FACTORS
+Multiply kilometer (km) square kilometer (km2) meter (m) millimeter (mm) millimeter (mm)
+By 0.6214 0.3861 3.281 0.03937 0.003281
+To obtain mile (mi) square mile (mi2) foot (ft) inch (in.) foot (ft)
+Temperature in degrees Celsius (Â°C) may be converted to degrees Fahrenheit (Â°F) as follows: Â°F = (1.8 Ã— Â°C) + 32.
+Vertical displacements determined by InSAR and coordinates determined by global positioning system (GPS) surveying generally are reported in metric units.
+The industry standard for GPS usage is that field measurements and subsequent computations, including standard error determinations, are done in the metric system.
+The use of dual units in this report is intended to facilitate application of the data by maintaining the integrity of the original units of measurement for GPS surveying.
+Vertical Datum Sea level: In this report, "sea level" refers to the National Geodetic Vertical Datum of 1929 (NGVD of 1929)--a geodetic datum derived from a general adjustment of the first-order level nets of both the United States and Canada, formerly called Sea Level Datum of 1929.
+Ellipsoid heights: In this report, Global Positioning System (GPS) measurements of ellipsoid heights are based on the North American Datum of 1983 (NAD83).
+Abbreviations CORS CSRC CVWD DEM GPS InSAR NAD83 NGS SAR SCIGN USGS Continuously Operating Reference Station California Spatial Reference Center Coachella Valley Water District digital elevation model Global Positioning System interferometric synthetic aperture radar North American Datum of 1983 National Geodetic Survey synthetic aperture radar Southern California Integrated GPS Network U.S. Geological Survey
+vi
+Conversion Factors, Vertical Datum, and Abbreviations
+WELL-NUMBERING SYSTEM
+Wells are identified and numbered according to their location in the rectangular system for the subdivision of public lands.
+Identification consists of the township number, north or south; the range number, east or west; and the section number.
+Each section is divided into sixteen 40-acre tracts lettered consecutively (except I and O), beginning with "A" in the northeast corner of the section and progressing in a sinusoidal manner to "R" in the southeast corner.
+Within the 40-acre tract, wells are sequentially numbered in the order they are inventoried.
+The final letter refers to the base line and meridian.
+In California, there are three base lines and meridians; Humboldt (H), Mount Diablo (M), and San Bernardino (S).
+All wells in the study area are referenced to the San Bernardino base line and meridian (S).
+Well numbers consist of 15 characters and follow the format 006S008E02D001S.
+In this report, well numbers are abbreviated and written 6S/8E-2D1.
+Wells in the same township and range are referred to only by their section designation, 2D1 The following diagram shows how the number for well 6S/8E-2D1 is derived.
+R8E RANGE R1W T5S R1E R7E R8E R9E
+6S/8E-2D1 3
+6 7 T6S
+5 8
+4 9 16
+2
+1
+10
+11 12 13
+TOWNSHIP
+San Bernardino Meridian
+18 17 19 30 20
+15 14
+D E M N
+C F L P
+B
+A H J R
+T6S
+21 22 23 24 27 26 25 34 35 36
+T7S
+2
+G K Q
+29 28
+31 32 33
+Well-numbering diagram
+SECTION 2
+Well-Numbering System
+vii
+Detection and Measurement of Land Subsidence Using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, California, 1998Â­2000 By Michelle Sneed, S.V. Stork, and Marti E. Ikehara monuments in the lower Coachella Valley indicate ABSTRACT Land subsidence associated with groundwater-level declines has been recognized as a potential problem in Coachella Valley, California.
+Since the early 1920s, ground water has been a major source of agricultural, municipal, and domestic supply in the valley.
+Pumping of ground water resulted in water-level declines as large as 15 meters (50 feet) through the late 1940s.
+In 1949, the importation of Colorado River water to the lower Coachella Valley began, resulting in a reduction in ground-water pumping and a recovery of water levels during the 1950s through the 1970s.
+Since the late 1970s, demand for water in the valley has exceeded deliveries of imported surface water, resulting in increased pumping and associated ground-water-level declines and, consequently, an increase in the potential for land subsidence caused by aquifer-system compaction.
+The location, extent, and magnitude of the vertical land-surface changes in Coachella Valley between 1998 and 2000 were determined using Global Positioning System (GPS) and interferometric synthetic aperture radar (InSAR) methods.
+GPS measurements made at 15 geodetic that Â­34 to +60 millimeters Â± 45 millimeters (Â­ 0.11 to +0.20 foot Â± 0.15 foot) of vertical change in the land surface occurred during the 2-year period.
+Changes at three of the monuments exceeded the maximum uncertainty of Â± 45 millimeters (Â± 0.15 foot) at the 95-percent confidence level, which indicates that small amounts of uplift occurred at these monuments between October 1998 and August 2000.
+Water-level measurements made at wells near the three uplifted monuments during this 2-year period indicate that the water levels fluctuate seasonally; water-level measurements made at these wells in September 1998 and September 2000 indicate that the water levels rose slightly near two monuments and declined slightly near the third.
+The relation between the seasonally fluctuating, but fairly stable, water levels between September 1998 and September 2000 and the slight uplift at the monuments may indicate that the water levels are fluctuating in the elastic range of stress and that the preconsolidation stress of the aquifer system was not exceeded during the 2-year period.
+Abstract
+1
+Results of the InSAR measurements made between June 17, 1998, and October 4, 2000, indicate that land subsidence, ranging from about 40 to 80 millimeters (0.13 to 0.26 foot), occurred in three areas of the Coachella Valley; near Palm Desert, Indian Wells, and La Quinta.
+Measurements made between June 17, 1998, and June 2, 1999, indicate that about 15 millimeters (0.05 foot) occurred southeast of Lake Cahuilla.
+All the subsiding areas coincide with or are near areas where ground-water levels declined between 1998 and 2000; some water levels in 2000 were at the lowest levels in their recorded histories.
+The coincident areas of subsidence and declining water levels suggest that aquifer-system compaction may be causing subsidence.
+If the stresses imposed by the historically lowest water levels exceeded the preconsolidation stress, the aquifer-system compaction and associated land subsidence may be permanent.
+Although the localized character of the subsidence signals look typical of the type of subsidence characteristically caused by localized pumping, the subsidence also may be related to tectonic activity in the valley.
+INTRODUCTION Ground water has been a major source of agricultural, municipal, and domestic water supply in Coachella Valley, California (fig. 1), since the early 1920s.
+Pumping of ground water resulted in water-level declines as large as 15 m (50 ft) between the early 1920s and late 1940s.
+In 1949, the importation of Colorado River water through the Coachella Branch of the All-American Canal to the lower Coachella Valley began.
+As a result of the importation of surface water, pumping of ground water decreased in the lower Coachella Valley during the 1950s through the 1970s, and water levels in some wells in the lower valley
+recovered as much as 15 m (50 ft).
+Since the late 1970s, however, the demand for water in the lower Coachella Valley has exceeded the deliveries of the imported surface water, pumping has increased, and water levels have again declined.
+By 2000, water levels in many wells in the lower Coachella Valley had declined 15 to 30 m (50 to 100 ft); some wells were at their lowest recorded water levels.
+Declining water levels can contribute to or induce land subsidence in aquifer systems that consist of a significant fraction of unconsolidated fine-grained sediments (silts and clays).
+Ikehara and others (1997) reported that as much as 150 mm Â± 90 mm (0.5 ft Â± 0.3 ft) of subsidence occurred in the southern parts of the Coachella Valley between 1930 and 1996.
+Land subsidence can disrupt surface drainage; cause earth fissures; and damage wells, buildings, roads, and utility infrastructure.
+A large earth fissure was discovered in 1948 about 3 km (2 mi) north of Lake Cahuilla; because subsidence had not been documented in the southern parts of the Coachella Valley prior to the report by Ikehara and others (1997), it isn't known if this fissure formed in response to differential land subsidence during the earlier period (early 1920sÂ­late 1940s) of ground-water-level declines.
+Subsidence-related earth fissures and reactivated surface faults have been identified in many other ground-water basins in the western United States (Holzer, 1984).
+The Coachella Valley Water District (CVWD) is responsible for managing the water supply for a large part of the Coachella Valley (fig. 1).
+As part of their water-management strategy, the CVWD plans to monitor vertical changes in land surface to determine whether land subsidence may be occurring.
+In 1996, the CVWD entered into a cooperative agreement with the U.S. Geological Survey (USGS) to establish a geodetic network of monuments to monitor vertical changes in land surface in the lower Coachella Valley using Global Positioning System (GPS) surveys and to establish baseline values for comparisons with results of future surveys.
+2
+Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+117Â°00' San Bernardino Mts
+116Â°30' Little
+116Â°00'
+115Â°30'
+34Â°00'
+Yucaipa 10 San Gorgonio Pass
+San
+Bernardino Mts WHITEWATER STORMWATER CHANNEL
+Whitewater River H Palm Coachella Springs
+Indi o
+WIDC ill s
+Area of figure 5 Point Happy
+111 COTD Cathedral City Palm Desert Indian Wells La PIN1 Quinta Santa Jacinto M ts
+San
+Indio TMAP
+Coachella Thermal 111 Me
+Cottonw
+ood M ts
+HNPS
+10 cca Hills COACHELLA BRANCH OF THE ALL-AMERICAN CANAL
+Va lley
+33Â°30'
+Lake Cahuilla
+Mecca
+86 Rosa s Mt
+Durmid DHLG
+Coachella Valley Water District boundary 86 33Â°00' Base prepared by U.S. Geological Survey from digital elevation data, 1:1,000,000, 1987 North American Datum 1927 0 0 50 Kilometers
+Salton
+Sea 111 50 Miles
+EXPLANATION DHLG
+Continuously Operating Reference Station (CORS) and name
+RN FO LI CA Los Angeles
+San Francisco
+Area of enlargement
+IA
+Colorado River
+Figure 1.
+Location of study area and of six Continuously Operating Reference Stations (CORS) in or near Coachella Valley, California.
+Introduction
+3
+This study is the third in a series of landsubsidence studies that began in 1996.
+Ikehara and others (1997) documented the development of the geodetic monitoring network and areas of possible land subsidence in Coachella Valley by comparing historical leveling measurements with GPS surveying measurements made in 1996.
+The vertical changes in land surface between 1996 and the earliest measurements at monuments in the monitoring network do not exceed 150 mm (0.5 ft) (Ikehara and others, 1997).
+The range of uncertainty (Â±90 mm or Â±0.3 ft) of these calculated vertical changes in land surface, however, is large because the historical leveling surveys were done at different times and sometimes by different agencies using different methods.
+Furthermore, the methods used for the leveling surveys had different standards of accuracy and the networks were of different geographic extents (Ikehara and others, 1997).
+Sneed and others (2001) reported that small amounts of subsidence occurred between 1996 and 1998 at some monuments in the monitoring network; they used interferometric synthetic aperture radar (InSAR) to detect and quantify land subsidence throughout much of the Coachella Valley.
+InSAR measurements made between 1996 and 1998 indicate that as much as 70 mm (0.23 ft) of land subsidence occurred in areas near Palm Desert, Indian Wells, and Lake Cahuilla.
+Description of Study Area The Coachella Valley is a 100-km (65 mi) long, northwest-trending valley in southeastern California (fig. 1).
+The valley covers about 1,000 km2 (400 mi2) (California Department of Water Resources, 1964) and includes the cities and communities of Palm Springs, Palm Desert, Indio, and Coachella.
+The valley is bordered by the San Jacinto and Santa Rosa Mountains on the west, the San Bernardino and the Little San Bernardino Mountains on the north, the Cottonwood Mountains and the Mecca Hills on the east, and the Salton Sea on the south (fig. 1).
+The Coachella Valley is drained primarily by the Whitewater River, which flows into the Whitewater Stormwater Channel and eventually discharges into the Salton Sea (fig. 1).
+Land-surface elevations vary from more than 3,000 m (10,000 ft) above sea level at the peaks of the surrounding mountains to more than 70 m (230 ft) below sea level at the Salton Sea.
+The climate of the Coachella Valley floor is arid.
+Average annual rainfall ranges from 80 mm (3 in.) on the valley floor to more than 760 mm (30 in.) on the crests of the mountains to the west and north of the valley (California Department of Water Resources, 1964).
+Temperatures range from about 50Â°C (120Â°F) on the valley floor in the summer to below 0Â°C (32Â°F) in the surrounding mountains in the winter.
+Purpose and Scope This study supports part of the watermanagement strategy of CVWD to monitor changes in land surface to determine where changes may be occurring in Coachella Valley.
+This report presents the results of comparisons between GPS data collected at the monuments in the monitoring network during surveys in 1998 and 2000 and spatially detailed maps of vertical land-surface changes generated using InSAR.
+The InSAR-generated maps extend from near Palm Springs to near the Salton Sea (fig. 1).
+Groundwater-level change data for 1998Â­2000 were examined and compared with the GPS measurements and the InSAR-generated maps to determine if the vertical changes in land surface may be related to the changes in ground-water levels.
+Acknowledgments Daniel C. Aguirre and Luis G. Luna of the Coachella Valley Water District are gratefully acknowledged for their help in finding suitable locations for, and installation of, bench marks and for their help during the 1998 and 2000 GPS surveys.
+Successful completion of the fieldwork would not have been possible without the support of the CVWD Chief Surveyor and creative problem solver, Tim Lytsell.
+We acknowledge the Southern California Integrated GPS network (SCIGN) and its sponsors, the W.M. Keck Foundation, the National Aeronautics and Space Administration, the National Science Foundation, the USGS, and the Southern California Earthquake Center for providing data used in this study.
+Radar data used to produce the interferograms shown in this report were obtained from the European Space Agency, distributed through Eurimage Corporation for purposes of research and development.
+4
+Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+GEOHYDROLOGIC SETTING The Coachella Valley is the northernmost extent of the Salton Trough, which is the landward extension of a ridge/transform fault system (the East Pacific Rise) of the Gulf of California (McKibben, 1993).
+Near the end of the Miocene, a spreading center separating the western Farallon plate from the eastern Pacific plate was obliquely subducted under the North American continent (McKibben, 1993).
+The modern Gulf of California and the Salton Trough formed about 12 million years ago during a period when subduction ceased and when the formation of an inland belt of eastÂ­west extension, alkali basalt volcanism, and crustal-spreading induced subsidence and basin sedimentation began (McKibben, 1993).
+Prior to about 6 million years ago, the shear zone constituting the principal tectonic boundary between the Pacific and North American plates appears to have shifted about 250 km (155 mi) inland into this belt initiating the formation of the modern Gulf of California and the Salton Trough.
+As the Salton Trough opened, it was filled with sediment from the delta of the Colorado River.
+The river has been building its delta from the east into the trough since about 5 million years ago, and sedimentation has apparently kept pace with the crustal-spreading induced subsidence (McKibben, 1993).
+The relation between subsidence that has occurred on a geologic time scale and vertical landsubsidence changes measured during this study are unknown.
+The Coachella Valley is filled with as much as 3,700 m (12,000 ft) of sediments; the upper 610 m (2,000 ft) are water-bearing (California Department of Water Resources, 1979).
+In this report, the waterbearing deposits are referred to as the aquifer system, which consists of a complex unconsolidated to partly consolidated assemblage of gravel, sand, silt, and clay of alluvial and lacustrine origins (fig. 2).
+Sediments
+tend to be finer grained (contain more silt and clay) in the southern part of the valley than in the northern part because of the greater depositional distance from mountain runoff and lacustrine deposition from ancient Lake Cahuilla.
+In the lower Coachella Valley, the aquifer system consists of a semiperched zone that is fairly persistent southeast of Indio, an upper aquifer, a confining layer, and a lower aquifer (California Department of Water Resources, 1964, 1979).
+The lower aquifer is the most productive source of ground water in the lower Coachella Valley; it consists of unconsolidated and partly consolidated silty sands and gravels with interbeds of silt and clay.
+The top of the lower aquifer is about 90 to 180 m (300 to 600 ft) below land surface.
+Available data indicate that it is at least 150 m (500 ft) thick and may be as much as 600 m (2,000 ft) thick (California Department of Water Resources, 1964, 1979).
+This thick aquifer is overlain by a confining layer that is 30 to 60 m (100 to 200 ft) thick.
+The upper aquifer overlies this confining layer and is similar in lithology to the lower aquifer, although it is only about 45 to 90 m (150 to 300 ft) thick.
+The near-surface semiperched zone consists of silts, clays, and fine sand; is as much as 30 m (100 ft) thick; and generally is an effective barrier to deep percolation (California Department of Water Resources, 1964, 1979).
+Geologic structures in the Coachella Valley have a marked influence on the occurrence and movement of ground water.
+The principal structural features of Coachella Valley are faults, and fault-related drag and compressional folds.
+The most notable fault system is the northwest-trending San Andreas Fault Zone that flanks the eastern side of the valley (fig. 2).
+Although movement within the San Andreas Fault Zone is predominantly right lateral (across the fault, movement is to the right), vertical displacement has downdropped the southwest block (California Department of Water Resources, 1964).
+Geohydrologic Setting
+5
+EXPLANATION Consolidated rock 116Â°45'
+Partly consolidated deposits Aquifer system Unconsolidated deposits Fault 116Â°30'
+NO AR D I SAN BERN 34Â°00'
+TAINS UN MO LIT TLE
+116Â°15'
+SA N 10
+0 0 5
+5
+10 Miles 10Kilometers
+SA N J
+IND IO 111
+CO Palm AC Springs HE LL A
+H IL LS
+BE RN AR DI NO M
+116Â°00' OU
+TO IN AC IN S TA UN MO
+NS AI NT
+33Â°45'
+Palm Desert
+Indian Wells La Quinta
+San Indio C
+Andreas Fault Zon e T
+LA EL CH OA
+Coachella
+H NC BRA
+SA NT A RO SA M
+Lake Cahuilla
+OF
+Thermal
+HE
+ME L-A AL
+111
+VA
+San Francisco
+Mecca
+R IC AN
+EY LL
+C AN AL
+NS AI NT OU
+33Â°30' Los Angeles
+86
+SALTON SEA
+Figure 2.
+Generalized geology of the Coachella Valley, California.
+Figure modified from Tyley (1971).
+6
+Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+MECHANICS OF PUMPING-INDUCED LAND SUBSIDENCE Land subsidence is known to occur in valleys containing aquifer systems that are at least in part made up of fine-grained sediments and that have undergone extensive ground-water development.
+The pore structure of a sedimentary aquifer system is supported by a combination of the granular skeleton of the aquifer system and the pore-fluid pressure of the ground water that fills the intergranular pore space (Meinzer, 1928).
+For a constant total stress on the aquifer system (equivalent to a constant total weight of the overlying sediments and pure fluid--the overburden), when ground water is withdrawn in quantities that result in reduced pore-fluid pressures and water-level declines, the reduction of the pore-fluid pressure support increases the intergranular stress, or effective stress, on the skeleton.
+A change in effective stress deforms the skeleton--an increase in effective stress causes some degree of skeletal compression and a decrease in effective stress causes some degree of expansion.
+The vertical component of this deformation sometimes results in irreversible compaction of the aquifer system and land subsidence.
+An aquifer-system skeleton that primarily consists of fine-grained sediments, such as silt and clay, is much more compressible than one that primarily consists of coarse-grained sediments, such as sand and gravel.
+Aquifer-system deformation is elastic (recoverable) if the effective stress imposed on the skeleton is smaller than any previous effective stress
+(Leake and Prudic, 1991).
+The largest historical effective stress imposed on an aquifer system-- sometimes as a result of the lowest ground-water level--is the "preconsolidation stress."
+If a stress imposed on the skeleton is greater than the preconsolidation stress, the pore structure (granular framework) of the granular matrix of the fine-grained sediments is rearranged; this new configuration results in a reduction of pore volume and, thus, inelastic (largely irreversible) compaction of the aquifer system.
+Furthermore, the compressibility of the fine-grained sediments and any resulting compaction under stresses greater than the preconsolidation stress are 20 to more than 100 times greater than they are under stresses less than the preconsolidation stress (Riley, 1998).
+Inelastic compaction of coarse-grained sediment is negligible.
+For an aquifer-system skeleton that contains an appreciable thickness of fine-grained sediments, a significant part of the total compaction may be residual compaction [delayed compaction that occurs in thick fine-grained interbeds and confining layers while heads equilibrate with heads in the adjacent aquifers (Terzaghi, 1925)].
+Depending on the thickness and the vertical hydraulic diffusivity of a confining layer, pressure equilibration--and thus compaction--lags behind pressure, or head, changes in the adjacent aquifers.
+For a more complete description of aquifersystem compaction, see Poland (1984), and for a review and selected case studies of land subsidence caused by aquifer-system compaction in the United States, see Galloway and others (1999).
+Mechanics of Pumping-Induced Land Subsidence
+7
+GLOBAL POSITIONING SYSTEM (GPS) SURVEYS GPS is a U.S. Department of Defense satellitebased navigation system designed to provide continuous worldwide positioning and navigation capability.
+For this study, GPS surveys were done to determine the position of monuments in the geodetic monitoring network.
+The network was established in 1996 by the USGS to determine changes in landsurface elevations in the network (Ikehara and others, 1997) and to establish baseline values for comparisons with results of future surveys.
+Land-Subsidence Monitoring Network The geodetic monitoring network, henceforth referred to as the land-subsidence monitoring network, consists of geodetic monuments used as GPS stations (fig. 3A).
+Geodetic monuments are markers that are anchored in the ground or to a structure and can be used to make repeat surveying measurements of horizontal or vertical positions.
+During the 1996 study by Ikehara and others (1997), historical data for monuments in the lower Coachella Valley were compiled and reviewed to determine the location and the quality of the vertical-control data.
+Sources of the data include the National Geodetic Survey [NGS (formerly the U.S. Coast and Geodetic Survey)], the California Department of Transportation (Caltrans), the U.S. Bureau of Reclamation, and the Coachella Valley Water District (Ikehara and others, 1997).
+The geodetic monuments were examined at the beginning of the 1996Â­98 study (Sneed and others, 2001) and this study (1998Â­2000) to determine whether any had been damaged or destroyed and to evaluate their suitability for GPS observations.
+The original subsidence monitoring network in the lower Coachella Valley was established in 1996 and consisted of 17 geodetic monuments.
+The network was modified for the 1998 GPS survey by replacing two monuments that had been destroyed with two nearby monuments [G70 1928 (G70) and Caltrans 13.2 1986 (C132)].
+The network was also modified for the 2000 GPS survey because monument 54JA was horizontally unstable; the replacement monument (JA54) was installed about 6 m (20 ft) northwest of monument 54JA.
+In addition, four new monuments--MAGF, MANI, OSDO, and DEEP--were added in the Palm Desert and Indian Wells areas (fig. 3) because the InSAR maps processed for 1996Â­98 showed subsidence in these areas (Sneed and others, 2001).
+The spacing between the monuments meets the generalized network design criterion established by Zilkoski and others (1997), which requires that the distance between local network points not exceed 10 km (6 mi).
+Determination of Ellipsoid Heights GPS measurements were made at the geodetic monuments to determine their horizontal positions and ellipsoid heights.
+Ellipsoid height is the vertical coordinate relative to a geodetically defined reference ellipse; the ellipsoid that closely approximates the Earth's shape in the study area is the North American Datum of 1983 (NAD83).
+To determine changes in ellipsoid heights, the heights from successive GPS surveys are compared, and the differences in the heights are used to determine the location and magnitude of any vertical land-surface changes.
+The vertical land-surface changes between the 1998 and 2000 GPS surveys were calculated by differencing the ellipsoid heights of the geodetic monuments determined for the two surveys.
+8
+Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+33 Â° 50'
+116 Â° 30' 10
+20'
+10'
+116 Â° 00'
+115 Â° 50'
+5S/7E-9F1 45'
+MAGF
+5S/7E-8Q1
+COCH DUNE 5S/8E-17N1 5S/8E-20C2
+Indian Wells OSDO MANI
+San
+Palm Desert DEEP 40'
+6S/8E-2F1 10
+Andreas
+111
+Point Happy
+6S/8E-2D1
+Coachella 6S/8E-5P1
+R70R
+JA54 CAHU 6S/7E-23D3
+54JA
+6S/8E-5R2 5211 6S/8E-12Q1 6S/8E-19D1
+Fault Zone
+S753 86
+6S/8E-27C1 111
+PAIN 7S/9E-7H2
+35'
+7S/7E-1C1
+6S/8E-32R1
+C132 7S/8E-20H1
+K572 7S/8E-22K1
+7S/9E-17K1
+JOHN
+7S/9E-23N1
+7S/10E-27A1
+C101 7S/8E-28G1 7S/8E-34G1 33 Â° 30'
+7S/9E-30M1
+P572
+SWC
+K70
+8S/8E-11A4
+Salton Sea 5 5 10 Kilometers
+G70
+C427 8S/8E-24L1
+8S/8E-24A1
+A EXPLANATION Geodetic monuments-- C427 MANI
+0 0
+10 Miles
+GPS station and identifier used in the 1998 and 2000 surveys New (2000) GPS station and identifier Abandoned GPS station and identifier GPS control station for 1998 and 2000 surveys and identifier GPS control station for 2000 survey and identifier
+54JA C101 DEEP
+8S/8E-24L1
+Well and identifier
+Figure 3.
+Network of Global Positioning System (GPS) stations and wells used to monitor vertical changes in land surface and ground-water levels, respectively, in the lower Coachella Valley, California.
+A, Locations and status of GPS stations in 2000 and locations of wells.
+B, Vertical changes at GPS stations and water-level changes in wells between 1998 and 2000.
+Global Positioning System (GPS) Surveys
+9
+33 Â° 50'
+116 Â° 30' 10
+20'
+10'
+116 Â° 00'
+115 Â° 50'
+5S/7E-9F1 45'
+MAGF
+5S/7E-8Q1
+COCH DUNE 111
+MANI
+Palm Desert DEEP 40'
+Indian Wells
+5S/8E-17N1
+San 6S/8E-2F1 10
+5S/8E-20C2
+Andreas
+OSDO Point Happy
+6S/8E-2D1
+Coachella 6S/8E-5P1
+R70R 6S/8E-5R2
+Fault Zone
+JA54 CAHU 6S/7E-23D3
+6S/8E-19D1 86
+5211 6S/8E-12Q1 S753 6S/8E-27C1 111
+PAIN 7S/9E-7H2
+35'
+7S/7E-1C1
+6S/8E-32R1
+C132 7S/8E-20H1
+K572 7S/9E-17K1 7S/8E-22K1 7S/9E-30M1
+JOHN
+7S/9E-23N1
+7S/10E-27A1
+C101 7S/8E-28G1 7S/8E-34G1 33 Â° 30'
+P572
+SWC
+K70
+8S/8E-11A4
+Salton Sea 5 5 10 Kilometers
+G70
+C427 8S/8E-24L1
+8S/8E-24A1
+B
+0 0
+10 Miles
+EXPLANATION Vertical changes at GPS stations between October 1998 and August 2000.
+(Number is station identifier) C427 5211
+Water-level changes in wells between late summer/early autumn 1998 and late summer/early autumn 2000.
+(Number is well identifier.
+The abbreviated well number is given in the explanation) 8S/8E-24L1
+Vertical change not computed Possible land subsidence [less than 45 millimeters (0.15 foot)] Possible land uplift [less than 45 millimeters (0.15 foot)]
+Decline of 0Â­2.2 meters (0.0Â­7.3 feet)
+C101
+Rise of 0Â­2.0 meters (0.0Â­6.6 feet)
+SWC
+Note: The late summer/early autumn 2000 measurement for wells 5S/7E-8Q1, 5S/8E-20C2, and 7S/8E-22K1 was interpolated or estimated to compute water-level change
+Figure 3.--Continued.
+10 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+1998 GPS Survey
+GPS measurements for the 1998 survey were made using five dual-frequency, full-wavelength, Pcode GPS receivers (Ashtech MD-XII) and choke-ring antennas (Ashtech DorneÂ­Margolin).
+The measurements were made to determine the horizontal positions and the ellipsoid heights of the 17 geodetic monuments in the land-subsidence monitoring network during October 5Â­9, 1998.
+The GPS survey was done in accordance with version 4.3 of "Guidelines for Establishing GPS-Derived Ellipsoid Heights" by Zilkoski and others (1997).
+The GPS measurements were made at the monuments on at least 2 different days, and data were recorded during 45-minute observation periods.
+Five of the 17 geodetic monuments were used as network control stations-- COCH, CAHU, PAIN, C101, and G70 (fig. 3).
+GPS measurements were made at these five stations on 3 additional days, and data were recorded during 4.5-hour observation periods.
+The only variation from the guidelines established by Zilkoski and others (1997) was that single-baseline, rather than multibaseline, processing software was used for postprocessing.
+There are no known conclusive tests that permit an objective evaluation of the effect of using single-baseline, rather than multi-baseline, processing software (Craymer and Beck, 1992); singlebaseline processing software was used for this study because it was readily available.
+The software used for the postprocessing (baseline and relative-positioning computations) was GPSurvey version 2.30 (Trimble).
+Determining the ellipsoid heights of the 17 geodetic monuments in the 1998 network involved two phases of relative positioning.
+During the first phase, the horizontal coordinates and the ellipsoid heights of the five Coachella Valley network control monuments were determined by processing the GPS measurements made at these monuments with measurements made simultaneously at three Continuously Operating Reference Stations [CORS (DHLG, PIN1, and WIDC)] in southern California (fig. 1) and by using precise satellite orbital data and accurate coordinates of the CORS produced by the California Spatial Reference Center (CSRC).
+The GPS measurements for the CORS
+were recorded continually (at 30-second intervals) and archived by members of the SCIGN.
+The network control monuments were selected on the basis of their geographic distribution (they are located at the perimeter of the monitoring network).
+For the second phase of relative positioning, the positions of the 5 Coachella Valley network control monuments were held fixed at the positions determined during the first phase, and the positions and ellipsoid heights of the other 12 monuments were determined.
+The accuracy of the ellipsoid heights is Â±20 mm (Â±0.07 ft) at the 95percent confidence level.
+An accuracy at the 95-percent confidence level means that 95 percent of the repeat measurements are expected to be within Â±20 mm (Â±0.07 ft) of their true value.
+2000 GPS Survey
+GPS measurements for the 2000 survey were made using six dual-frequency, full-wavelength, Pcode GPS receivers (5 Trimble 4000SSIs and 1 Trimble 4000SSE) and compact L1/L2 Trimble antennas (with groundplane).
+The measurements were made to determine the horizontal positions and the ellipsoid heights of the 21 geodetic monuments in the landsubsidence monitoring network between August 28 and September 1, 2000.
+The GPS survey was done in accordance with version 4.3 of "Guidelines for Establishing GPS-Derived Ellipsoid Heights" by Zilkoski and others (1997).
+The GPS measurements were made at the monuments on at least 2 different days, and data were recorded during 35-minute observation periods.
+Six of the 21 geodetic monuments were used as network control stations--COCH, DEEP, CAHU, PAIN, C101, and G70 (fig. 3).
+GPS measurements were made at these six stations on 3 additional days, and data were recorded during 5-hour observation periods.
+The only variation from the guidelines established by Zilkoski and others (1997) was that single baseline, rather than multi-baseline, processing software was used for postprocessing.
+The software used for the postprocessing (baseline and relative-positioning computations) was GPSurvey version 2.30 (Trimble).
+Global Positioning System (GPS) Surveys
+11
+Determining the ellipsoid heights of the 21 geodetic monuments in the network involved two phases of relative positioning.
+During the first phase, the horizontal coordinates and the ellipsoid heights of the six Coachella Valley network control monuments were determined by processing the GPS measurements made at these monuments with measurements made simultaneously at five CORS (DHLG, PIN1, COTD, TMAP and HNPS) in southern California (fig. 1) and by using precise satellite orbital data and accurate coordinates of the CORS produced by CSRC.
+The GPS measurements of the CORS were recorded continually (at 30-second intervals) and archived by members of the SCIGN.
+Because of the addition of monuments in the Palm Desert and Indian Wells areas since the 1998 survey, a new network control monument, DEEP, was added to the network (fig. 3) to provide control for the new part of the network.
+During the second phase of relative positioning, the positions of the 6 previously established network control monuments were held fixed at the positions determined during phase 1, and the horizontal positions and ellipsoid heights of the other 15 monuments were determined.
+The accuracy of the ellipsoid heights is Â±40 mm (Â±0.13 ft) at the 95percent confidence level.
+The uncertainty of the ellipsoid heights determined from data collected during the 2000 survey is larger, by a factor of two, than that determined from the GPS data collected during the 1998 survey because the GPS data collected during the 2000 survey was of lower quality.
+The lower quality of the GPS data collected in 2000 may have been due to flawed GPS equipment, environmental factors (such as solar flares), and (or) other factors.
+GPS Results The ellipsoid heights of the monuments determined from the 2000 GPS survey were compared with those from the 1998 GPS survey to determine the location and magnitude of vertical land-surface changes in the lower Coachella Valley (fig. 3B; table 1).
+Because five new monuments were added to the GPS network in 2000 (DEEP, MANI, MAGF, OSDO, and JA54) and because of the poor quality (large discrepancies between the repeat measurements) of the GPS measurements made at monument C427 in 2000,
+the ellipsoid heights of only 15 of the 21 monuments surveyed in 2000 were suitable for comparison with the heights determined from the 1998 survey (fig. 3B; table 1).
+Data collected at monument C427 during the 1996 survey also were of poor quality and, thus, were not compared with data collected at this monument during the 1998 survey (Sneed and others, 2001).
+This monument may be unstable or otherwise unsuitable for GPS surveying.
+The ellipsoid heights determined for the five new monuments can serve as baseline measurements for future surveys.
+The calculated vertical changes between 1998 and 2000 ranged from Â­34 to +60 mm Â± 45 mm (Â­0.11 to +0.20 ft Â± 0.15 ft) at the 15 monuments that were suitable for comparison (table 1).
+The ellipsoid-height differences for three of the monuments (K572, JOHN, and SWC) exceeded the uncertainty of Â±45 mm (Â±0.15 ft), which indicates that small amounts of uplift [46 to 60 mm Â± 45 mm (0.15 to 0.20 Â± 0.15 ft)] occurred between 1998 and 2000 at these monuments (fig. 3B, table 1).
+The vertical changes at these three monuments were small or insignificant between 1996 and 1998 (Sneed and others, 2001).
+Prior to 1996, vertical change at monument K572 was Â­120 mm Â± 90 mm (Â­0.4 ft Â± 0.3 ft) and insignificant at monuments JOHN and SWC (Ikehara and others, 1997).
+(See table 1 for measurement intervals.)
+The ellipsoid-height differences between 1998 and 2000 for the remaining 12 monuments suitable for comparison (DUNE, COCH, R70R, 5211, CAHU, S753, PAIN, C132, C101, K70, P572, and G70) did not exceed the uncertainty of Â±45 mm (Â±0.15 ft).
+The vertical changes at these monuments ranged from Â­34 to +36 mm Â±45 (Â­0.11 to +0.12 ft Â± 0.15 ft) (table 1).
+The ellipsoidheight differences calculated for 10 of these 12 monuments during the 1996Â­98 study by Sneed and others (2001) indicate vertical changes ranging from Â­13 to Â­67 mm Â± 45 mm (Â­0.04 to Â­0.22 ft Â± 0.15 ft).
+The ellipsoid-height differences for the remaining two monuments (G70 and C132) for 1996Â­98 were not calculated because the monuments had not been surveyed in 1996.
+Prior to 1996, vertical changes ranged from Â­150 to +30 mm Â± 90 mm (Â­0.50 to +0.1 ft Â± 0.3 ft) at 7 of the 12 monuments; the 5 other monuments had no vertical-change data prior to 1996 (Ikehara and others, 1997) (table 1).
+12 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+Table 1.
+Horizontal position, elevation change prior to 1996, ellipsoid heights for 1998 and 2000, and ellipsoid-height change for 1998Â­2000 of geodetic network monuments, and water-level changes for 1998Â­2000 in selected wells in the Coachella Valley, California
+[Latitude, longitude, and ellipsoid height are referenced to the North American Datum of 1983.
+Elevation-change data from Ikehara and others, 1997.
+Negative values for elevation change and ellipsoidheight change indicate subsidence.
+Uncertainty for elevation change is Â±90 millimeters (Â±0.3 foot).
+Uncertainty for ellipsoid-height change is Â±45 millimeters (Â±0.15 foot).
+Negative values for water-level change indicate decline.
+ft, foot m, meter; mm, millimeter; --, no data] Status Ellipsoid-height Water-level change, Global Elevation change Ellipsoid height of change Well 1998 Â­20006 Positioning Monument Measurement monument near System Latitude Longitude October August October 19
+DUNE -- -- -- -- -60 -- -90 -- -.3 -- 1946Â­96 New Suitable -- -32.721 190.404 Â­32.754 1 1
+DUNEPORT Azimuth -- -- -- -- -.2 1956Â­96 Suitable -54.453 Â­54.445 1
+-90 -- -- -- -- 8 (.03) -- Â­34 (Â­.11) New New New -- -- -- 27.748 2.972 13.496 -- -- -- Suitable 33.417 33.418 11
+1
+-0.3 (.00)
+1991Â­96
+Suitable
+-17.388
+Â­17.382
+1
+6 (0.02)
+COCH 3
+COACH 1931
+MAGF MANI OSDO
+5S/7E-8Q1 2 5S/7E-9F1 5S/8E-17N1 5S/8E-20C2 2 -- -- --
+-1.8 -1.8 Â­.8 +2.0 -- -- --
+-6.0 -5.9 Â­2.5 +6.6 -- -- --
+R70R
+Magnesium Falls Drive Manitou Drive Osage Trail and El Dorado Drive R70 Reset 1958
+DEEP 4 5211
+Deep Canyon USBR 52.11
+54JA
+Avenue 54 and Jackson
+33Â°3924 116Â°1300
+--
+--
+--
+Replaced -46.415
+--
+--
+JA54 CAHU 3 S753 1 1
+Jackson and Avenue 54 Lake Cahuilla S753 1945 33Â°3643 116Â°0030 33Â°3459 116Â°1054 33Â°3409 116Â°0542 33Â°3303 116Â°0318 33Â°3244 116Â°0916 1 1
+33Â°3924 116Â°1300 33Â°3819 116Â°1625 33Â°3813 116Â°0949 -- -- -120 -90 130 -.4 -.3 1.1 1939Â­96 1991Â­96 1986Â­96 -- -- -- -- Suitable Suitable Suitable Suitable Suitable
+-- -- -90
+-- -- -.3
+-- -- 1945Â­96
+New Suitable Suitable
+-- -30.807 -68.253 93.339 -74.029 -91.543 -94.178 -50.425
+Â­46.904 Â­30.805 Â­68.248 1
+12 15
+-- (.01) (.02) 93.355 Â­74.025 Â­91.483 Â­94.131 Â­50.410 1
+PAIN 3 C132
+Painted Canyon Caltrans 13.2 1986
+16 (.05) 4 (.01) 60 (.20) 47 (.15) 1 15 (.05) 1 1
+K572 JOHN C101 3
+K572 1939 Johnson Caltrans 10.1 1986
+K70 P572 SWC G70 3 C427
+K70 1928 P572 1939 Stormwater channel G70 1928 Caltrans 4.27 1987
+33 33 33 33 33
+Â°32 Â°31 Â°31 Â°30 Â°28
+09 32 27 27 25
+116 116 116 115 116
+Â°00 Â°06 Â°04 Â°54 Â°06
+21 46 42 51 27
+-150 -150 1 -30 -- 10
+-.5 -.5 1 -.1 -- 1 .0
+1928Â­96 1939Â­96 1967Â­96 -- 1987Â­96
+Suitable -91.525 Suitable -91.286 Suitable -100.313 Suitable -93.093 (5) -73.356
+Â­91.495 Â­91.251 Â­100.267 Â­93.080 --
+30 (.10) 36 (.12) 46 (.15) 1 13 (.04) --
+6S/8E-5P1 6S/8E-5R2 -- 6S/8E-2D1 6S/8E-2F1 6S/8E-12Q1 6S/7E-23D3 6S/8E-19D1 -- -- 6S/8E-19D1 6S/8E-27C1 -- 6S/8E-32R1 7S/7E-1C1 7S/9E-7H2 7S/9E-17K1 7S/8E-20H1 7S/8E-22K1 2 7S/8E-28G1 7S/9E-23N1 7S/8E-34G1 7S/9E-30M1 7S/10E-27A1 8S/8E-11A4 8S/8E-24A1 8S/8E-24L1
+Â­.3 Â­.1 -- +.1 +1.3 +.6 -2.2 -.2 -- -- -.2 Â­1.4 -- -1.6 -1.3 +.2 +1.1 -1.6 -.6 -1.3 +1.2 +.6 Â­1.2 Â­.1 +.2 -.7 -2.1
+Â­.8 Â­.2 -- +.3 +4.3 +1.8 -7.3 -.5 -- -- Â­.5 Â­4.7 -- -5.2 Â­4.4 +.7 +3.6 -5.1 -1.9 -4.2 +3.9 +1.9 Â­3.8 Â­.2 +.7 -2.2 -6.8
+Global Positioning System (GPS) Surveys
+1
+2Measurement
+13
+Value is within measurement error indicating relative vertical stability.
+was interpolated or estimated for the water-level change computation.
+3Network control monument for 1998 and 2000 surveys.
+4 Network control monument for 2000 survey.
+5Suitability for GPS survey questionable because of poor quality data from each survey.
+6Comparison includes available water-level measurements collected late summer/early autumn 1998 and late summer/early autumn 2000.
+-150 -50 -55 -60 -65 -70 -75 10/5/98Â­8/28/00
+-160 -170 -180 -190 -200 -210 -220
+7S/9E-7H2, screened in the upper aquifer (near monument K572)
+-230 -240 -250
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+-55 10/5/98Â­8/28/00
+-185 -195 -205
+-60 -65 -70 -75 -80 1955
+-215 -225 -235 -245
+7S/9E-17K1, screened in the upper and lower aquifers (near monument JOHN) 1960 1965 1970 1975 1980 1985 1990 1995 2000
+-255 -265 -275
+-155 -50 -60 -70 -80 -90 -100 10/5/98Â­8/28/00
+-175 -195 -215 -235 -255 -275 -295 -315 -335 -355
+7S/9E-30M1, screened in the perched and upper aquifers (near monument SWC) 1926 1931 1936 1941 1946 1951 1956 1961 1966 1971 1976 1981 1986 1991 1996
+YEAR
+Figure 4.
+Water-surface elevations for selected wells near the three uplifted monuments in the lower Coachella Valley, California.
+14 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+2001
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+-175
+Ground-Water Levels In general, water levels declined in the western part of the geodetic network during 1998Â­2000 and recovered in the eastern part of the network (fig. 3B).
+Water levels in wells 7S/9E-7H2 and 17K1, near two of the three uplifted monuments, rose slightly between late September 1998 and late September 2000, but the water level in well 7S/9E-30M1, near the third uplifted monument, declined slightly (fig. 4).
+The water level in well 7S/9E-7H2 rose 0.2 m (0.7 ft) during the 2-year period; this well is located near monument K572 at which 60 mm Â± 45 mm (0.20 ft Â± 0.15 ft) of uplift was measured.
+The water level in well 7S/9E-17K1 rose 1.1 m (3.6 ft) during the 2-year period; this well is near monument JOHN, which had a slight uplift [47 mm Â± 45 mm (0.15 ft Â± 0.15 ft)].
+The September 2000 water level in well 7S/9E-30M1 declined 1.2 m (3.8 ft) from the September 1998 measurement; however, the other measurements collected after September 1998 and before September 2000 were higher (fig. 4).
+This well is near monument SWC, which also had a slight uplift [46 mm Â± 45 mm (0.15 ft Â± 0.15 ft)].
+The slight uplift at these monuments and the small changes in water levels in the nearby wells indicate that the water levels fluctuated in the elastic range of stress (that is, they did not exceed the preconsolidation stress) and therefore the vertical changes at these monuments were elastic (recoverable).
+The water levels in the three wells near the uplifted monuments were more than 10 m (30 ft) higher than the historical lows of the mid-1990s (fig. 4) which further suggests that water levels were fluctuating in the elastic range of stress during the 2year period.
+The inverse relation of the water-level decline in well 7S/9E-30M1 during this period and the slight uplift at monument SWC suggests that residual deformation may have occurred.
+However, because water levels in wells 7S/9E-7H2, 17K1, and 30M1 fluctuated significantly during short periods, the water levels measured in late September 1998 and in late September 2000 most likely do not represent the precise water-level changes that occurred between the weeks of October 5, 1998, and August 28, 2000 (fig. 4).
+INTERFEROMETRIC SYNTHETIC APERTURE RADAR (INSAR) InSAR is a powerful technique that uses the differences in the reflected phases between two reflected satellite radar images acquired at different times to measure ground-surface deformation that occurred between the two acquisitions.
+This technique has been used to investigate deformation resulting from earthquakes (Massonnet and others, 1993), volcanoes (Massonnet and others, 1995), and land subsidence related to the extraction of subsurface fluids (Massonnet and others, 1997; Fielding and others, 1998; Galloway and others, 1998; Amelung and others, 1999).
+Interferograms, maps of relative ground-surface displacement constructed from InSAR data, have demonstrated great potential for high-density spatial mapping of ground-surface displacement (Galloway and others, 2000).
+Two interferograms were developed for a part of the Coachella Valley using synthetic aperture radar (SAR) scenes acquired from the European Earth Remote-Sensing satellites (ERS-1 and -2).
+Four SAR scenes (two pairs) that had nearly identical acquisition geometries were combined to form two "change" interferograms.
+One interferogram has a temporal baseline of 350 days (June 17, 1998, to June 2, 1999) and the other interferogram has a temporal baseline of 315 days (November 24, 1999, to October 4, 2000) (fig. 5).
+The amplitude component of the change interferogram (fig. 6) shows land-surface features such as mountains, roads, drainage ways, and engineered structures.
+The phase component shows the coherent displacements imaged by radar and it shows a residual topographic component.
+The topography was removed from the image using a 30-m resolution digital elevation model (DEM) (fig. 5).
+However, it was not possible to completely remove the topographic component from the image for the mountainous terrain northeast and southwest of Coachella Valley because the 30-m resolution DEM was inadequate for accurately describing this terrain characterized by large topographic gradients.
+Interferometric Synthetic Aperture Radar (InSAR)
+15
+10
+111
+A
+Sa n
+An dr ea s
+Fa ul t
+MAGF
+DUNE
+Zo ne COCH 111 10
+1 EXPLANATION
+OSDO MANI
+2 DEEP
+R70R
+1 -- Palm Desert Area 2 -- Indian Wells Area 3 -- La Quinta Area 4 -- Lake Cahuilla Area P572
+3
+JA54 CAHU 86
+5211 S753 PAIN C132 C101 K572 JOHN 111
+4
+-- GPS station (Number is station identifier)
+K70
+P572
+SWC
+10
+0 0 5
+5 10 Kilometers
+10 Miles
+111
+B Palm Springs
+Sa n
+N An dr ea s Fa ul t
+MAGF
+DUNE
+Zo ne COCH 111 10
+Cathedral City
+1
+OSDO MANI
+2 Palm Desert Indian Wells La Quinta -28 mm subsidence 0 relative +28 mm uplift
+R70R
+DEEP
+JA54
+3
+5211 86
+CAHU S753 PAIN C132 C101 K572 JOHN 111
+Lake Cahuilla Coachella
+K70
+P572
+SWC
+Figure 5.
+Areas of subsidence and locations of GPS stations in the land-subsidence monitoring network in Coachella Valley, California.
+A, June 17, 1998, to June 2, 1999.
+B, November 24, 1999, to October 4, 2000.
+Boxes indicate areas of subsidence.
+Displacement is in millimeters (mm).
+Area of figure 5 is shown on figure 1.
+16 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+116Â°30'
+25'
+116Â°20'
+10 33Â°50'
+N
+Palm Springs
+Area 1 in figures 5B and 7B 111 5S/6E-6M2 5S/6E-5Q1 COUNTRY PORTOLA
+DRIVE CLUB
+Whitewater River
+Area 1 in figures 5A and 7A San Ja 45'
+5S/6E-9M1
+5S/6E-7M1 5S/6E-8N3 5S/6E-17M2
+AVENUE
+5S/6E-16M1 WARING DRIVE
+FRED
+cinto Mounta ins
+1
+Palm Desert
+Area
+Area 2 in figures 5 and 7 5S/6E-7M1
+Well and identifier Well
+Santa Ro sa Mountai 33Â°40'
+ns
+Figure 6.
+Amplitude image processed from SAR scenes showing land-surface features and selected production wells in Coachella Valley, California.
+Boxes indicate areas of subsidence (see figures 5 and 7).
+Hydrographs for labeled wells are shown in figure 8.
+Interferometric Synthetic Aperture Radar (InSAR)
+17
+15'
+116Â°10'
+5S/6E-22B1 EL DORADO DRIVE
+5S/6E-24F1
+ells Indian W Area
+2
+Indio 111
+10
+MANITOU DRIVE
+5S/6E-23N1
+golf course
+Coachella 5S/7E-31A1 5S/6E-25A1 5S/7E-31Q2 6S/7E-6B1
+5S/6E-23K2 5S/6E-27C2
+Area3in figures 5 and 7 86
+6S/6E-12G1 6S/7E-16D1
+6S/7E-16A2 6S/7E-16R2
+3
+La Quinta Area Lake Cahuilla
+6S/7E-21D1
+Area4in figures 5A and 7A
+4 Figure 6.--Continued.
+Lake Cahuilla Area 0 0 5Kilometers 5 Miles
+18 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+For landscapes with radar reflectors (such as buildings or other engineered structures, or undisturbed rocks and ground surfaces) that are fairly stable over time, it is possible to make high-precision measurements (Â±5 to Â±10 mm or Â±0.02 to Â±0.03 ft) of the changes in the positions, or the displacements, of the reflectors (Galloway and others, 1998; Galloway and others, 2000).
+Displacements are computed from the phase change at each point in the interferogram.
+The phase change is determined by "interfering" (differencing) two radar images made of the same area at different times (Galloway and others, 2000).
+Because the phase of the radar echo is proportional to the distance traveled by the pulse, any motion of the ground surface between two SAR scenes causes a phase difference, or shift, in the interferogram.
+Propagation delays of the radar signal, such as the delays caused by variable water vapor content in the atmosphere, also can cause a phase shift (Zebker and others, 1997).
+The phase shifts (0Â­2 pi) are scaled over one-half the wavelength of the radar signal--from 0 to 28 mm (0 to 0.09 ft) for the C-band radar used by ERS1 and -2.
+Because the phase shifts are ambiguous, that is, shifts of 2, 4, and 6 pi or equal fractions thereof, are indistinguishable, the first product of the interferometric process is termed the "wrapped" interferogram--meaning the phase shifts from pixel to pixel are ambiguous and mapped modulo 2 pi.
+Figure 5 shows wrapped interferograms for the Coachella Valley.
+Phase shifts are "unwrapped" by a procedure that results in a continuous map of phase shifts and, thus, of displacement over the extent of the image for areas where it was possible to resolve potential ambiguities (Rosen and others, 2000).
+Figure 7 shows the unwrapped interferograms for each of the areas previously demarcated in the Coachella Valley where it was possible to unwrap the interferogram.
+The areas that are decorrelated (the areas where the data are not smooth and continuous) are not shown on the unwrapped interferogram (the white areas in figure 7).
+Except for the atmospheric variations associated with altitude in the mountainous regions fringing the Coachella Valley, all coherent phase shifts shown on the interferograms (fig. 5) were attributed to range displacements of the ground surface, which were assumed vertical.
+An area of coherent displacements is shown by color fringes that define a shape.
+More color fringes indicate more change; in figures 5 and 7, one color cycle--for example, blue to blue--indicates 28 mm (0.09 ft) of range change.
+The direction of change--subsidence or uplift--is indicated by the color progression of the fringes toward the center of the shape.
+For interferograms in this report, the colorfringe progression of blue-green-yellow-orange-redpurple indicates subsidence; the opposite progression indicates uplift.
+InSAR techniques cannot be used for landscapes without substantial stable radar reflectors, such as agricultural land where farming practices disturb the ground surface.
+The colors on the interferograms of such landscapes do not show a defined shape, but instead, show an incoherent speckled pattern similar to that shown, for example, for the area along much of Highway 86 in figure 5, where the land use is predominantly agricultural.
+InSAR Results The InSAR-generated maps of the Coachella Valley show at least four areas with coherent signals; these signals indicate that significant subsidence occurred between June 17, 1998, and June 2, 1999 (fig. 5A).
+The maps also show at least three areas with coherent signals indicating subsidence between November 24, 1999, and October 4, 2000 (fig. 5B).
+These signals are located in the vicinities of Palm Desert (area 1), Indian Wells (area 2), La Quinta (area 3), and Lake Cahuilla (area 4).
+The interferograms show that other areas in the Coachella Valley also may have deformed (fig. 5), but the extent of these areas and the amount of deformation generally are small.
+Interferometric Synthetic Aperture Radar (InSAR)
+19
+AREA 1.
+Palm Desert Area 5S/6E-9M1 5S/6E-7M1 5S/6E-8N3
+AREA 3.
+La Quinta Area 5S/7E-31A1 5S/7E-31Q2
+C A'
+C'
+A 5S/6E-17M2 Relative vertical land-surface change, in millimeters 30 20 10 0
+5S/6E-16M1 6S/7E-6B1
+6S/6E-12G1
+-10 -20 -30 -40 0 2 4 6 8 8.9
+Relative vertical land-surface change, in millimeters
+10 0 -10 -20 -30 -40 -50 0
+Distance from A, in kilometers
+AREA 2.
+Indian Wells Area 5S/6E-23K2 5S/6E-24F1 5S/6E-22B1 5S/6E-23N1 5S/6E-25A1 Lake Cahuilla
+2
+3.7
+Distance from C, in kilometers
+AREA 4.
+Lake Cahuilla Area B'
+B 5S/6E-27C2
+D Relative vertical land-surface change, in millimeters 20 10 0 -10 -20 -30 0 2 4 6 8 9.2
+D'
+Relative vertical land-surface change, in millimeters
+0 -10 -20 -30 0 2 3.7
+Distance from B, in kilometers
+Distance from D, in kilometers
+A
+-- June 17, 1998, through June 2, 1999
+-28 mm subsidence
+0 relative
++28 mm uplift
+Figure 7.
+Areas of subsidence and profiles showing vertical changes in land surface in Coachella Valley, California, for (A) June 17, 1998, through June 2, 1999, and (B) November 24, 1999, through October 4, 2000.
+See figure 5 for locations of areas of subsidence.
+White areas on interferograms and line breaks on land-surface profiles indicate no data.
+White circles and numbers are well locations and identifiers, respectively.
+20 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+AREA 1.
+Palm Desert area 5S/6E-6M2 5S/6E-5Q1 5S/6E-9M1 5S/6E-7M1 5S/6E-8N3
+AREA 3.
+La Quinta area 5S/7E-31A1 5S/7E-31Q2
+C
+C'
+A 5S/6E-17M2 5S/6E-16M1
+A'
+6S/7E-6B1
+6S/6E-12G1 Relative vertical land-surface change, in millimeters 30 20 10 0 -10 -20 -30 -40 0 2 4 6 8 8.9
+Relative vertical land-surface change, in millimeters
+10 0 -10 -20 -30 -40 -50 0 2 3.7
+Distance from A, in kilometers
+Distance from C, in kilometers
+AREA 2.
+Indian Wells area 5S/6E-23K2 5S/6E-24F1 5S/6E-25A1 -28 mm 0 relative +28 mm uplift subsidence
+5S/6E-22B1
+B
+5S/6E-23N1 5S/6E-27C2
+B'
+Relative vertical land-surface change, in millimeters
+20 10 0 -10 -20 -30 0 2 4 6 8 9.2
+Distance from B, in kilometers
+B
+-- November 24, 1999, through October 4, 2000
+Figure 7.--Continued.
+Interferometric Synthetic Aperture Radar (InSAR)
+21
+Comparison with GPS Results
+The vertical changes measured using InSAR are comparable to the vertical changes measured using GPS for at least five of the monuments surveyed during the 1998 and 2000 GPS surveys (table 2).
+Four of the monuments (DUNE, COCH, 5211, and R70R) surveyed during the 1998 and 2000 GPS surveys are in the areas that have coherent signals on the June 17, 1998, to June 2, 1999, interferogram.
+Five of the monuments (DUNE, COCH, 5211, R70R, and S753) surveyed during the 1998 and 2000 GPS surveys are in the areas that have coherent signals on the November 24, 1999, to October 4, 2000, interferogram.
+The vertical changes at the remaining monuments (CAHU, PAIN, C132, K572, JOHN, C101, K70, P572, SWC, G70, and C427) are not comparable because they either are in decorrelated areas of the interferograms or are not within the areal extent of the interferograms.
+The vertical movement shown on the interferograms agrees reasonably well with that determined from the GPS surveys for DUNE, COCH, 5211, and R70R monuments, especially considering that the measurement intervals are different for InSAR and
+GPS and that about a 6-month period (June 2, 1999, to November 24, 1999) is not represented in the interferograms.
+The June 17, 1998, to June 2, 1999, interferogram (fig. 5A) shows that less than 5 to 10 mm (0.02 to 0.03 ft) of relative uplift occurred at monuments DUNE and COCH and that less than 5 to 10 mm (0.02 to 0.03 ft) of subsidence occurred at monuments 5211 and R70R.
+The November 24, 1999, to October 4, 2000, interferogram (fig. 5B) shows that a small amount of subsidence (5 mm or 0.02 ft) occurred at monument DUNE and that monuments COCH, 5211, R70R, and S753 were fairly stable.
+The GPS results indicate that uplifts of 8 mm (0.03 ft) or less occurred at monuments DUNE, COCH, R70R, and S753 between October 1998 and August 2000 and that subsidence of about 34 mm (0.11 ft) occurred at monument 5211 (table 1).
+It should be noted that the GPS processing results for monument 5211 indicated significantly larger errors than the results for any other monument in the network.
+The discrepancy between the InSAR and GPS measurements for this location probably is the result of the poor GPS data for monument 5211.
+Table 2.
+Vertical change measured using interferometric synthetic aperture radar (InSAR) and Global Positioning System (GPS) for selected monuments in the Coachella Valley, California [mm, millimeter; ft, foot. --, no data]
+Measurement type InSAR InSAR GPS
+Measurement interval June 17, 1998Â­ June 2, 1999 November 24, 1999Â­ October 4, 2000 October 5, 1998Â­ August 28, 2000
+Vertical change DUNE 5 to 10 mm (0.02 to 0.03 ft) -5 mm (-0.02 ft) 6 mm (0.02 ft)
+COCH 5 to 10 mm (0.02 to 0.03 ft) 0 1 mm (0.00 ft)
+5211 -5 to -10 mm (-0.02 to -0.03 ft) 0 -34 mm (-0.11 ft)
+R70R -5 to -10 mm (-0.02 to -0.03 ft) 0 8 mm (0.03 ft) -- 0
+S753
+5 mm (0.02 ft)
+22 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+Areas of Land Subsidence
+A subsidence signal was detected in the northwestern part of Palm Desert (area 1 in figures 5 and 7); this signal was previously detected by Sneed and others (2001) using InSAR methods.
+The part of the signal that has the largest magnitude is nearly circular (slightly elongated north to south); it is about 1 km (0.6 mi) in diameter and covers an area of about 1 km2 (0.4 mi2) (area 1 in figures 5 and 7).
+This part of the signal is approximately bounded by Country Club Drive on the north, Fred Waring Drive on the south, Highway 111 and the San Jacinto and Santa Rosa Mountains on the west, and Portola Avenue on the east (figs. 6).
+The part of the signal that is smaller in magnitude extends to the north and east (area 1 in figure 5) and has a pronounced northwestÂ­southeast elongation.
+The interferogram for June 17, 1998, to June 2, 1999, shows that the signal extends northwest from Palm Desert to near Palm Springs and southeast from Palm Desert to Indian Wells (fig. 5A).
+The interferogram for November 24, 1999, to October 4, 2000, shows that the signal extends northwest from Palm Desert toward Cathedral City and southeast from Palm Desert almost to Indian Wells (fig. 5B).
+The San Jacinto and Santa Rosa Mountains, which are outcropping consolidated rock, may act as a barrier to subsidence farther to the southwest; and the Indio Hills, which are outcropping partly consolidated deposits, (fig. 2) may act as a barrier to subsidence farther to the northeast.
+A lack of barriers to the northwest and southeast may explain the pronounced elongation of the subsidence signal in these directions.
+A maximum of about 30 mm (0.1 ft) of subsidence occurred in the center of the northwestern part of the Palm Desert between June 17, 1998, and June 2, 1999 (area 1 in figure 7A).
+About 30 mm (0.1 ft) of subsidence also occurred in this area between November 24, 1999, and October 4, 2000 (area 1 in fig. (7B).
+Consequently, if no recovery occurred between June 2, 1999, and November 24, 1999, a minimum of 60 mm (0.2 ft) of subsidence occurred in the center of the subsidence bowl between June 17, 1998, and October 4, 2000.
+Two distinct subsidence signals were detected in the Indian Wells area near a golf course (area 2 in figures 5, 6, and 7), and a small subsidence signal was detected about 1 km (0.6 mi) southeast of the distinct subsidence bowl to the east of the golf course.
+The existence and magnitude of the small subsidence
+signal, however, are suspect because of the proximity of this area to steep topographic terrain; thus, this subsidence signal is not discussed further in this report.
+The western subsidence bowl is in the Indian Wells area and is approximately bounded by Highway 111 on the north, the San Jacinto and Santa Rosa Mountains on the south, El Dorado Drive on the west, and a golf course on the east (fig. 6).
+The eastern subsidence bowl is approximately bounded by Highway 111 on the north, the San Jacinto and Santa Rosa Mountains on the south, a golf course on the west, and Manitou Drive on the east (fig. 6).
+The bowl to the west, which is elongated northwestÂ­southeast, is about 1.6 km (1 mi) long and about 0.8 km (0.5 mi) wide (northeastÂ­ southwest) and has an area of about 1.3 km2 (0.5 mi2).
+The bowl to the east, which is elongated westÂ­east, is about 1.5 km (0.9 mi) long and about 0.8 km (0.5 mi) wide (northÂ­south) and has an area of 1.2 km2 (about 0.5 mi2) (area 2 in figures 5 and 7).
+The maximum subsidence for the two bowls was about 20 mm (0.07 ft) for both the June 17, 1998, through June 2, 1999, and the November 24, 1999, through October 4, 2000, periods (area 2 in figure 7).
+If no recovery occurred between June 2, 1999, and November 24, 1999, then a minimum of about 40 mm (0.13 ft) of subsidence occurred in the centers of each of the subsidence bowls between June 17, 1998, and October 4, 2000.
+A third area of subsidence was detected in the area extending from near La Quinta on the northwest to just southeast of Lake Cahuilla (areas 3 and 4 in figure 5A).
+This area is about 10 km (6 mi) in length and ranges from about 1.5 to 2 km (0.9 to 1.2 mi) wide (areas 3 and 4 in figure 5A).
+The northwestern-most extent of this subsidence signal is fairly coherent (area 3 in figures 5 and 7), but the southeastern part of the signal southeast of Lake Cahuilla was detected only in the June 17, 1998, to June 2, 1999, interferogram (area 4 in figures 5A and 7A), which shows that at least 15 mm (0.05 ft) of subsidence occurred there.
+A maximum of about 40 mm (0.16 ft) of subsidence occurred in the northwestern part of the signal between June 17, 1998, to June 2, 1999, and between November 24, 1999, and October 4, 2000 (area 3 in figure 7).
+If no recovery occurred between June 2, 1999, and November 24, 1999, then a cumulative minimum of 80 mm (0.26 ft) of subsidence occurred in the northwestern part of the signal between June 17, 1998, and October 4, 2000.
+Interferometric Synthetic Aperture Radar (InSAR)
+23
+11/24/99Â­10/4/00
+A 15 10 5 0 -5 15
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+40 20
+20 15
+60 40
+5S/6E-8N3, screened in the upper and lower aquifers
+10 5 0 20 15
+0 -20 60 40 20
+5S/6E-5Q1, screened in the upper and lower aquifers
+20 0 60 40
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+10 5 0 -5
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+10 5 0 1966
+20
+5S/6E-7M1, screened interval unknown
+0 -20 60
+5S/6E-16M1, screened in the upper aquifer 1974 1984 1982 1986 1990 1992 1994 1970 1980 1996 1976 1968 1978 1998 2000 1972 1988
+0
+15 10 5 0 -5 30 25 20 60 15 10 40 20
+YEAR
+5S/6E-17M2, screened in the upper and lower aquifers
+0 -20 100 80
+5S/6E-6M2, screened in the upper and lower aquifers
+40 20 60
+15 10 5 0 -5 1980
+40 20
+5S/6E-9M1, screened in the upper and lower aquifers 1982 1984 1986 1988 1990 1992 1994 1996 1998 2000
+0 -20
+YEAR
+Figure 8.
+Water-surface elevations for selected production wells in areas where InSAR-generated maps show subsidence in the Coachella Valley, California.
+A, Palm Desert (area 1).
+B, Indian Wells (area 2).
+C, La Quinta/Lake Cahuilla (areas 3 and 4).
+(See figures 6 and 7 for well locations.)
+24 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+60
+6/17/98Â­6/2/99 11/24/99Â­10/4/00
+6/17/98Â­6/2/99
+80
+11/24/99Â­10/4/00
+B 5
+6/17/98Â­6/2/99 11/24/99Â­10/4/00 20 5
+6/17/98Â­6/2/99
+25 5 -15
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+-5 -10 -15
+-5 -10 -15
+-20
+5S/6E-23K2, screened in the upper aquifer
+-40
+5S/6E-25A1, screened in the upper and lower aquifers
+-35 -55 70 50 30 10
+5 0 -5 -10 -15
+20 0 -20
+20 15 10 5 0
+5S/6E-23N1, screened in the upper aquifer
+-40
+5S/6E-27C2, screened in the upper aquifer -10 60
+5 0 -5 -10 1980
+20 0 -20
+15 10 5 0 40 20
+1974
+1984
+1970
+1994
+1982
+1984
+1986
+1988
+1990
+1992
+1994
+1996
+1998
+2000
+1980
+YEAR
+YEAR
+Figure 8.--Continued.
+Interferometric Synthetic Aperture Radar (InSAR)
+1990
+2000
+1976
+1986
+1988
+1966
+1968
+1996
+1972
+1978
+1982
+1992
+1998
+-15
+5S/6E-24F1, screened in the upper and lower aquifers
+-40
+5S/6E-22B1, screened in the upper aquifer
+0 -20
+-5
+25
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+0
+0
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+0
+11/24/99Â­10/4/00
+C -15 -20 -25 -30 -35
+11/24/99Â­10/4/00
+6/17/98Â­6/2/99
+6/17/98Â­6/2/99 -40 -15 -60 -20 -80
+-40 -60 -80 -100 -120 -70
+6S/7E-16D1, screened in the upper and lower aquifers
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+5S/7E-31A1, screened in the upper and lower aquifers
+-100 -120 -40
+-30 -35
+WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+-15 -60 -20 -25 -30 -35 -80
+-25 -30 -35 -40 -45
+6S/7E-16R2, screened in the upper and lower aquifers
+-90 -110 -130 -150 -70
+5S/7E-31Q2, screened in the upper and lower aquifers
+-100 -120 -35
+-15 -20
+-55 -75
+-25 -30
+-90 -110
+-25 -30
+-35 -40 1980 -45
+6S/7E-6B1, screened in the lower aquifer
+-95 -115 -70
+6S/7E-21D1, screened in the upper and lower aquifers 1982 1984 1986 1988 1990 1992 1994 1996 1998 2000
+-130 -150
+-25 -30 -35 -40 1980 -45
+-90 -110
+YEAR
+6S/7E-16A2, screened in the upper and lower aquifers 1982 1984 1986 1988 1990 1992 1994 1996 1998 2000
+-130 -150
+YEAR WATER-SURFACE ELEVATION, IN METERS ABOVE SEA LEVEL
+6/17/98Â­6/2/99 11/24/99Â­10/4/00
+-23 -43
+-10 -15 -20 -25 -63 -83
+6S/6E-12G1, screened in the upper aquifer -30 1974 1984 1994 1970 1980 1982 1986 1968 1990 1996 2000 1966 1976 1978 1988 1972 1992 1998 -103
+YEAR
+Figure 8.--Continued.
+26 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+WATER-SURFACE ELEVATION, IN FEET ABOVE SEA LEVEL
+-25
+Ground-Water Levels All the areas where significant subsidence was detected using InSAR--Palm Desert, Indian Wells, and La Quinta/Lake Cahuilla--coincide with or are near areas where ground-water pumping generally caused ground-water levels to decline between 1998 and 2000.
+In 2000, many of these wells were at the lowest levels in their recorded histories (fig. 8).
+The coincident areas of the subsidence signals and the declining water levels and the localized character of the subsidence signals typical of subsidence caused by localized pumping strongly suggests a relation between subsidence and ground-water-level declines.
+If the stresses imposed by the historically lowest water levels exceeded the preconsolidation stress, the subsidence may be permanent.
+SUMMARY AND CONCLUSIONS Ground water has been a major source of agricultural, municipal, and domestic water supplies in the Coachella Valley since the early 1920s.
+Groundwater levels declined throughout the Coachella Valley from the 1920s until 1949.
+In 1949, the importation of surface water from the Colorado River to the lower Coachella Valley began, resulting in decreased pumping and a recovery of water levels in some areas.
+Since the 1970s, the demand for water in the lower Coachella Valley has exceeded the deliveries of imported surface water, and ground-water levels have again declined.
+The declining water levels have the potential to induce or renew land subsidence in the Coachella Valley.
+Results of a previous study by the U.S. Geological Survey indicate that land subsidence may have been as much as about 150 mm (0.5 ft) in the southern parts of the valley between about 1930 and 1996.
+The location and magnitude of vertical landsurface changes during 1998Â­2000 were determined using GPS and InSAR techniques.
+The geodetic network used for the GPS measurements described in this report covers the area from the Salton Sea on the south to Palm Desert on the north.
+The extent of the maps processed using InSAR overlaps the part of the geodetic network west of Coachella and north of Lake Cahuilla and includes the Palm Desert area.
+The InSAR-generated maps were more useful for determining land-surface changes in urban (nonagricultural) areas than were the GPS measurements, and the GPS measurements were more useful for determining changes in agricultural areas.
+The InSAR-generated maps also were useful for determining land-surface changes in areas where the changes had not previously been detected when only the relatively sparse monuments and GPS methods had been used.
+Five locations had GPS and InSAR measurements that were comparable; these measurements agree reasonably well.
+FUTURE MONITORING Continued monitoring in the lower Coachella Valley is warranted because ground-water levels continue to decline in some areas of the valley and, therefore, the small amounts of land subsidence documented by this study are likely to increase.
+Because the changes in the vertical positions of the monuments in the GPS network during 1998Â­2000 generally were negligible (less than or equal to the expected error in GPS measurements), future GPS surveys could be done less frequently than biannually.
+Measurement intervals of 3 to 5 years may be adequate for detecting changes significantly larger than the expected GPS measurement error.
+Spatially detailed InSAR-derived maps of ground displacements, however, could continue to be processed annually (depending on data availability) because InSAR can detect changes in vertical position as small as 5 mm (0.02 ft) (Hoffmann and others, 2001).
+Because the areas of subsidence detected using InSAR spatially overlap the GPS network, future monitoring of the GPS network could be used to provide ground truth for the more spatially detailed and higher resolution InSAR measurements.
+Summary and Conclusions
+27
+GPS measurements made at 15 geodetic monuments in the lower Coachella Valley indicate that Â­34 to +60 millimeters Â± 45 millimeters (Â­0.11 to +0.20 foot Â± 0.15 foot) of vertical change in the land surface occurred during the 2-year period.
+Changes at three of the monuments exceeded the maximum uncertainty of Â± 45 millimeters (Â± 0.15 foot) at the 95-percent confidence level, which indicates that small amounts of uplift occurred at these monuments between October 1998 and August 2000.
+Water-level measurements made at wells near the three uplifted monuments during this 2-year period indicate that the water levels fluctuate seasonally; water-level measurements made at these wells in September 1998 and September 2000 indicate that the water levels rose slightly near two monuments and declined slightly near the third.
+The relation between the seasonally fluctuating, but fairly stable, water levels between September 1998 and September 2000 and the slight uplift at the monuments may indicate that the water levels are fluctuating in the elastic range of stress and that the preconsolidation stress of the aquifer system was not exceeded during the 2-year period.
+Results of the InSAR measurements made between June 17, 1998, and October 4, 2000, indicate that land subsidence, ranging from about 40 to 80 millimeters (0.13 to 0.26 ft), occurred in three areas of the Coachella Valley--near Palm Desert, Indian Wells, and La Quinta.
+In addition, measurements made between June 17, 1998, and June 2, 1999, indicate that about 15 millimeters (0.05 ft) of subsidence occurred just southeast of Lake Cahuilla.
+All the subsiding areas coincided with areas that are in or near areas where ground-water levels declined during the 2-year period, which suggests that subsidence and declining water levels are related.
+If the stresses imposed by the declining water levels exceeded the preconsolidation stress, then the subsidence may be permanent.
+Although the localized character of the subsidence signals look typical of the type of subsidence characteristically caused by localized pumping, the subsidence also may be related to tectonic activity in the valley.
+Future monitoring of land surface change is needed to determine if the land subsidence is the result of localized pumping or tectonic activity.
+REFERENCES CITED Amelung, Falk, Galloway, D.L., Bell, J.W., Zebker, H.A., and Laczniak, R.J., 1999, Sensing the ups and downs of Las Vegas: InSAR reveals structural control of land subsidence and aquifer-system deformation: Geology, v. 27, no. 6, p. 483Â­486.
+California Department of Water Resources, 1964, Coachella Valley Investigation: California Department of Water Resources, Bulletin 108, 145 p. ------1979, Coachella Valley area well standards investigation: Los Angeles, California Department of Water Resources, Southern District, 40 p. Craymer, M.R., and Beck, N., 1992, Session versus baseline GPS processing, in the Proceedings of the 5th International Technical Meeting of the Institute of Navigation: Albuquerque, New Mexico, Institute of Navigation GPS-92, September 16Â­18, 1992.
+Fielding, E.J., Blom, R.G., and Goldstein, R.M., 1998, Rapid subsidence over oil fields measured by SAR interferometry: Geophysical Research Letters, v. 25, p. 3215.
+Galloway, D.L., Hudnut, K.W., Ingebritsen, S.E., Phillips, S.P., Peltzer, G., Rogez, F., and Rosen, P.A., 1998, InSAR detection of aquifer system compaction and land subsidence, Antelope Valley, Mojave Desert, California: Water Resources Research, v. 34, p. 2573Â­2585.
+Galloway, D.L., Jones, D.R., and Ingebritsen, S.E., 1999, Land subsidence in the United States: U.S. Geological Survey Circular 1182, 175 p. Galloway, D.L., Jones, D.R., and Ingebritsen, S.E., 2000, Measuring land subsidence from space: U.S. Geological Survey Fact Sheet 051-00, 4 p. Hoffmann, J., Zebker H.A., Galloway, D.L., and Amelung, F., 2001, Seasonal subsidence and rebound in Las Vegas Valley, Nevada, observed by synthetic aperture radar interferometry: Water Resources Research, v. 37, no. 6, p. 1551Â­1566.
+Holzer, T.L., 1984, Ground failure induced by ground-water withdrawal from unconsolidated sediment: Reviews in Engineering Geology, v. 6, p. 67Â­105.
+Ikehara, M.E., Predmore, S.K., and Swope, D.J., 1997, Geodetic network to evaluate historical elevation changes and to monitor land subsidence in Lower Coachella Valley, California, 1996: U.S. Geological Survey Water-Resources Investigations Report 974237, scale 1:63,000, 1 sheet [folded in envelope].
+Leake, S.A., and Prudic, D.E., 1991, Documentation of a computer program to simulate aquifer-system compaction using the modular finite-difference groundwater flow model: U.S. Geological Survey Techniques of Water-Resources Investigations, book 6, chap A2, 68 p.
+28 Detection and Measurement of Land Subsidence using Global Positioning System and Interferometric Synthetic Aperture Radar, Coachella Valley, CA
+Massonnet, D., Briole, P., and Arnaud, A., 1995, Deflation of Mount Etna monitored by spaceborne radar interferometry: Nature, v. 375, p. 567Â­570.
+Massonnet, D., Holzer, T., and Vadon, H., 1997, Land subsidence caused by the East Mesa geothermal field, California, observed using SAR interferometry: Geophysical Research Letters, v. 24, p. 901Â­904.
+Massonnet, D., Rossi, M., Carmona, C., Adragna, F., Peltzer, G., Feigl, K., and Rabaute, T., 1993, The displacement field of the Landers earthquake mapped by radar interferometry: Nature, v. 364, p. 138Â­142.
+McKibben, M.A., 1993, The Salton Trough rift, in Reynolds, R.E., and Reynolds, Jennifer, eds., Ashes, faults and basins: San Bernardino County Museum Association Special Publication, v. 93Â­1, p. 76Â­80.
+Meinzer, O.E., 1928, Compressibility and elasticity of artesian aquifers: Economic Geology, v. 23, no. 3, p. 263Â­291.
+Poland, J.F., ed., 1984, Guidebook to studies of land subsidence due to ground-water withdrawal, v. 40 of UNESCO Studies and Reports in Hydrology: Paris, France, United Nations Educational, Scientific and Cultural Organization, 305 p., 5 appendixes.
+Riley, F.S., 1998, Mechanics of aquifer systems--The scientific legacy of Joseph F. Poland, in Borchers, J., ed., Land subsidence--Case Studies and Current Research: Proceedings of the Dr. Joseph F. Poland Symposium on Land subsidence, Association of Engineering Geologists Special Publication 8, p. 13Â­227.
+Rosen, P.A., Hensley, Scott, Joughin, I.R., Li, F.L., Madsen, S.N., Rodriguez, Ernesto, and Goldstein, R.M., 2000, Synthetic aperture radar interferometry: Proceedings of the of Civil Engineers, v. 88, no. 3, p. 333Â­382.
+Sneed, Michelle, Ikehara, Marti E., Galloway, D.L., and Falk Amelung, 2001, Detection and measurement of land subsidence using global positioning system and interferometric synthetic aperture radar, Coachella Valley, California, 1996Â­98: U.S. Geological Survey Water-Resources Investigations Report 01Â­4193, 26 p. Terzaghi, Karl, 1925, Principles of soil mechanics, IV -- Settlement and consolidation of clay: Engineering News-Record, 95 (3), p. 874Â­878.
+Tyley, S.J., 1971, Analog model study of the ground-water basin of the upper Coachella Valley, California: U.S. Geological Survey Open-File Report, 89 p. Zebker, H.A., Rosen, P.A., and Hensley, S., 1997, Atmospheric effects in interferometric synthetic aperture radar surface deformation and topographic maps: Journal of Geophysical Research, v. 102, p. 7547Â­7563.
+Zilkoski, D.B., D'Onofrio, J.D., and Frakes, S.J., 1997, Guidelines for establishing GPS-derived ellipsoid heights, (Standards: 2 cm and 5 cm) version 4.3: Silver Spring, Md., National Geodetic Survey, 10 p, 3 appendices.
+References Cited
+29

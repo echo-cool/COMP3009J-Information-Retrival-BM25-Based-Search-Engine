@@ -1,0 +1,89 @@
+A Marine Nowcast System for San Francisco Bay, California By Chad A. English, Jeffery W. Gartner, Richard E. Smith and Ralph T. Cheng
+Abstract
+[onebyone.gif] San Francisco PORTS (SFPORTS) uses an array of sensors at twelve locations in San Francisco Bay to provide real time observations of sea level (tides), tidal currents, water temperature and salinity, wind speed and direction, wind gust, air temperature and barometric pressure.
+A nowcast numerical model is used to fill spatial data gaps between observed data points and to provide tidal predictions and tidal current patterns.
+The SFPORTS system and the nowcast numerical model are combined as the San Francisco Bay Marine Nowcast System.
+The observed data and model results are presented to users on the Internet at http://sfports.wr.usgs.gov/sfports.html.
+The system was originally designed to aid in the prevention of and response to marine accidents and spills of toxic substances.
+Although the target users are navigators and spill-response authorities, scientists and educators have used the San Francisco Bay Marine Nowcast System as a resource to further develop our understanding of the bay ecosystem.
+Introduction
+[onebyone.gif] Located near the middle of the California coast, the San Francisco Bay estuarine ecosystem is one of the most complex estuaries in the United States.
+The San Francisco Bay region is a center of commerce and recreation.
+Thus the bay waters are heavily traveled by tankers, cargo ships, and small craft serving the population around the bay and around the Pacific Rim.
+Despite preventive measures, vessel traffic accidents and spills of toxic substances will continue to be a threat to the bay and its users.
+To protect this fragile estuarine ecosystem, in 1995 National Oceanic and Atmospheric Administration (NOAA) initiated installation of Physical Oceanographic Real Time System (PORTS) in San Francisco Bay to aid safe navigation and hazard mitigation.
+Completed in 1998, the PORTS installation in San Francisco Bay (SFPORTS) provides real-time observations of tidal and meteorological conditions.
+The San Francisco Bay estuary is characterized by wide shoals and narrow channels, thus limited real-time observations are insufficient to adequately describe variations of the complex tides and tidal currents.
+In order to fill spatial gaps in the real-time observations the SFPORTS system is combined with a nowcast numerical model (Cheng and Smith, 1998) to compose the San Francisco Bay Marine Nowcast System (Cheng and others, 1998a).
+SFPORTS field observations and nowcast numerical model results are available to users through a user-friendly interface on the Internet at the World Wide Web address http://sfports.wr.usgs.gov/sfports.html.
+This paper gives a brief overview of the San Francisco Bay Marine Nowcast System .
+SFPORTS System
+[onebyone.gif] The data collection component of SFPORTS consists of five shore stations where water level (tides) and temperature, salinity, wind speed and direction, wind gust, air temperature, and barometric pressure are measured every six minutes.
+In addition, five Acoustic Doppler Current Profilers (ADCPs) have been installed to measure water velocity profiles every six minutes.
+The instrument sensor locations are shown in Figure 1.
+Characteristics of sensors, and precise sensor locations can be found on the Internet (Cheng and others, 1998b).
+[figure1.gif] Figure 1.
+This map depicting SFPORTS data-collection stations is found on the SFPORTS Internet website.
+[onebyone.gif] The original sensor data are first sent to a "Data Acquisition System" (DAS) and subjected to NOAA's Continuous Operational Real-time Monitoring System (CORMS) to verify validity.
+These data are reformatted to a PORTS Uniform Flat File Format (PUFFF), and then sent to a server by e-mail whenever a new observation becomes available.
+E-mail was chosen as the messenger for transmitting field data (PUFFF) to the server because it utilizes a well-tested data buffering system to minimize data loss due to communication problems between computers.
+The observed field data received on the server are archived as time series.
+In addition to archived time-series data, a copy of "most-recent 24-hour time-series" data for each station and for each ADCP is maintained on the server.
+The "most-recent 24-hour time-series", which contains the observations for the immediate previous 24 hours, is updated every six-minutes on a sliding time scale.
+These data are used to generate display graphics, and to develop boundary conditions for the nowcast numerical model.
+Nowcast Numerical Model
+[onebyone.gif] The nowcast hydrodynamic numerical model is designed to reproduce tides and tidal current distributions for the past 24 hours and to predict the tides and tidal currents for the next 24 hours.
+The field observations from the past 24 hours and the results of model simulations are examined by an assimilation algorithm to produce boundary conditions leading to an optimal numerical simulation of the tides and tidal currents for the next 24 hours.
+The hydrodynamic model, based on TRIM2D, solves the nonlinear, depth averaged, shallow water equations using a semi-implicit finite-difference scheme (Cheng and others, 1993).
+The assimilation algorithm and the over-all nowcast numerical modeling procedures are presented by Cheng and Smith (1998).
+Each hour the model outputs current-velocity patterns for the entire bay.
+The model also generates time series of salinity, water level and currents corresponding to each of the SFPORTS observation locations.
+[onebyone.gif] NOAA tide tables are calculations of astronomical tides and do not take into account effects of local weather variations.
+By using the actual water level measurements from the past 24 hours, more accurate short-term tidal variations are predicted for the future 24 hours.
+These "predicted tides", plotted along with NOAA tide table information and observed water levels, are very useful to those who work on or near the bay (Figure 2).
+[figure2.gif]
+Figure 2.
+Time series graphic used on the SFPORTS Internet website to compare astronomical tides with measured tides.
+The difference of over 2 feet is significant to users of the bay.
+Presentation of Data
+[onebyone.gif] Recent advances in Internet technologies and the explosion in World Wide Web usage indicate that the Internet is the appropriate medium for data presentation in SFPORTS.
+This approach was successfully tested by making the real-time wind distribution over the San Francisco Bay region available on the Internet website http://sfbay7.wr.usgs.gov (Cheng and others, 1997).
+User feedback and usage greater than ten-thousand page-views a month provide further assurance that an Internet -based system is effective in delivering the information provided by the San Francisco Bay Marine Nowcast System.
+[onebyone.gif] Design of the SFPORTS user interface considers the balance of the computational efficiency, limitations in the rate of data transmission, and effective graphics presentation.
+Computational demands are kept to a minimum by judicious choice of the information to be displayed.
+Keeping individual page size less than 40 kilobytes and offering ASCII text alternatives to graphics accommodates those users limited by low data transmission rates.
+Finally, the graphics and page layouts deliver data in an easily understood, user-friendly manner.
+[figure3.gif]
+Figure 3.
+Wind roses and tide staffs for SFPORTS shore stations.
+The roses and staffs are linked to time-series plots like figure 2.
+[onebyone.gif] The homepage of the SFPORTS website has direct links to all data display categories.
+In addition to a common header with links to both the homepage and a user feedback questionnaire, each page has links to other related data.
+For example, a link on the homepage connects to the "Winds and Tides" page where graphic displays of the wind and tide data from each station are superimposed on a map of the San Francisco Bay area (Figure 3). [onebyone.gif] Links connect to the "San Francisco Bay area Wind Patterns" and to the "Time-Series Plots".
+Clicking on the map will also link to the "Time-Series Plots" (Figure 2). [onebyone.gif] Figure 2 shows an example of a time series, taken directly from the SFPORTS website, of water levels during a storm in 1998, an extreme El Nino event.
+The solid line is a plot of observed data.
+The dot-dashed line shows NOAA tide table values, and the dashed line plots the predicted tide described earlier.
+The box in the lower right corner indicates that the difference between the NOAA tide table and the nowcast predicted tide exceeds two feet.
+A difference this large is unusual and important to navigators, disaster response teams, flood control officials, and those who work and live on or near the bay.
+[figure4.gif]
+Figure 4.
+Graphic used on the SFPORTS website to display nowcast numerical model output of current patterns.
+Arrow size is proportional to velocity magnitude.
+The background is a NOAA nautical chart.
+[onebyone.gif] The model-generated current-velocity maps are another form of data display.
+The numerical model grid and water depths are defined using a coordinate system based on Mercator projection so the model outputs can be directly superimposed on NOAA navigation charts, a format that is familiar to the maritime community (Snyder, 1987).
+Figure 4 shows the model-generated current velocity vectors at the Golden Gate.
+Buttons around the image's edges link to adjacent images and a navigation bar allows links to time-series and current profiles at the nearest field observations.
+Summary
+[onebyone.gif] As the populations served by the San Francisco Bay estuary grow so do the demands upon the bay and the possibility of hazardous spills and toxic contamination.
+By combining the nowcast numerical model results, the real-time field observations, and Internet technologies, the San Francisco Bay Marine Nowcast System is a unique and potentially powerful resource to help prevent and aid response to such concerns.
+The combination of observed data and numerical model results gives a picture of the past, present and future state of the bay on an hourly time-scale.
+Beyond the immediate utility of these data for prevention of and response to contaminant spills, the availability of SFPORTS on the Internet invites constructive feedback from those who use and study the estuary.
+REFERENCES: Cheng, Ralph T., McKinnie D., English C. A., and Smith R. E., 1998a, An overview of San Francisco Bay PORTS: Ocean Community Conference '98, Baltimore, MD, November 1998.
+Cheng, Ralph T., Smith R. E., 1998, A nowcast model for tides and tidal currents in San Francisco Bay, California: Ocean Community Conference '98, Baltimore, MD, November 1998.
+Cheng, R. T., Casulli Vincenzo, and Gartner J. W., 1993, Tidal, Residual, Intertidal Mudflat (TRIM) Model and its applications to San Francisco Bay, California: Estuarine, Coastal, and Shelf Science, Vol. 36, p. 235-280.
+Ludwig, F. L., Cheng R. T., Feinstein J., Sinton, Douglas, and Becker, Allen, 1997, An on-line diagnostic wind model applied to the San Francisco Bay region: 13-th Inter.
+Conf. on Interactive Information and Processing System (IIIP) for Meteorology, Oceano-graphy, and Hydrology, Long Beach, Feb 2-7, 1997, Am.
+Meteorological Society.
+Snyder, J. P., 1987, Map projections - A working manual: USGS Professional Paper 1395.
+Cheng, R. T., Ludwig F. L., Feinstein, Jonathan, Cate, John, 1996: San Francisco Bay wind patterns, URL: http://sfbay7.wr.usgs.gov/wind Cheng, R. T., McKinnie, David, English C. A., Smith R. E., 1998b: San Francisco PORTS, URL: http://sfports.wr.usgs.gov/sfports.html

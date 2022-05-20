@@ -1,0 +1,407 @@
+http://gai.fgdc.gov/girm/v1.1/ A Geospatial Interoperability Reference Model (G.I.R.M.)
+Prepared by the FGDC Geospatial Applications and Interoperability (GAI) Working Group Editor: John D. Evans (NASA Geospatial Interoperability Office) Version1.1,December 2003 - http://gai.fgdc.gov/girm/v1.1/ Read changes from v1.0 Sendcomments to girm-comments@gai.fgdc.gov
+Contents Introduction: Purpose, Scope, Applicability 1.
+Overview: How-to, viewpoints, criteria, the "stack" 2.
+Data anddata access: features, coverages 3.
+Metadata and catalog access 4.
+Maps andvisualization 5.
+Geospatial reference systems 6.
+Geoprocessingservices: general, coordinate transformation, gazetteer, other References AppendixA.Standards proposals AppendixB.
+Publicly-available "de facto" standards
+Introduction a.
+Purpose The FGDC Geospatial Applications and Interoperability Working Group seeks tofacilitate and promote the use of georeferenced information from multiple sources over the Internet.
+This requires interoperability ("workingtogether") amongthe software systems that provide geospatial data,maps, services, anduser applications.Geospatial interoperabilityis basedon sharedagreements (that is, voluntaryconsensus standards) governing essential geospatial concepts andtheir embodiment incommunicationprotocols,software interfaces, and data formats.
+b. Scope This document references standards and specifications needed for interoperability among distributedgeospatial services accessible over the Internet.It describes andexplains them within a structuredmodel of geospatial processing, as they apply tothe design of geospatial software andservices, toguide the reader to the most relevant standards for a given design,policy,or procurement.
+This Reference Model guides the scope and growthof geospatial applications and interoperability; but more broadly, it details how any geospatial software can pluginto a larger
+Page 1 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+infrastructure todraw onmany different sources of data andservices -- or to support a wide, diverse user audience.
+This Reference Model is focused onmechanisms for effective cooperation between geoprocessing software components.
+Effective use of geospatial information ina given context mayalsorequire policies suchas humaninterface guidelines,data content or portrayal requirements, or conventions for data storage or georeferencing.
+Such policies -- whichinclude several important standards endorsed by FGDC -- are outside the scope of this Reference Model.
+c. Applicability The Geospatial InteroperabilityReference Model (GIRM) is intendednot as a rigiddefinitionof standards to be implemented, but rather as a consultative tool tohelpdecisionmakers define what standards applytoa given set of activities,technologies,or organizations,to facilitate interoperable geoprocessing.
+This document is intended for anyone engagedindesigning, building, or buying geospatial data systems or services.Inparticular,portions of it may applyto federal programs that generate, archive,use or disseminate geospatial data.
+1.
+Overview a.
+How to use this model This Reference Model partitions the standards "landscape" ina varietyof ways: 1.
+2.
+3.
+4.
+5.
+Geospatial topics are the model's primaryorganizingstructure.In choosing standards, the first decisionis whether the intended activities involve Data or Data Access (Section2); Metadata or Catalog Access (Section 3); Maps or Visualization(Section4); Spatial Reference Systems (Section 5); or other Geoprocessing Services (Section6).
+Viewpoints.
+Within a particular geospatial topic, the next choice is whether tofocus on Service Invocationor InformationTransfer -- or both.
+Section 1.bprovides guidelines for this decision.
+Levels of abstraction.
+Withina given topic and viewpoint,the next choice is Abstract models vs. Implementationspecifications.
+Section1.b explains how tomake this choice, basedprimarilyon the intendedcomputingenvironment.
+Evaluationcriteria,finally,indicate whether a standardis reliable and usable.Section1.c lists the criteria for includingstandards inthe Reference Model.
+Inparticular, it defines levels of maturity (proposed, draft,final) wherebystandards can be compared.
+The interoperability "stack" in Section 1.d shows typical links betweencomponents of a distributedsystem, andhighlights related geospatial topics and standards to consider.
+(At each of these "choice points," the options are not mutually exclusive: for instance, agiven project or procurement may touch onseveral topics and viewpoints.)
+b. Viewpoints and levels of abstraction The Reference Model brings together standards at twodifferent levels of abstraction,and under
+Page 2 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+twodifferent architectural viewpoints, as summarizedinTable 1 below.
+l
+Implementationspecifications tell software developers how toexpress informationor requests within a particular distributed computing environment (e.g., World Wide Web, CORBA, .NET).
+Implementation specifications generally include access protocols, object models,andnaming conventions.
+Such specifications are specific to, and directly usable within, their target computing environment.
+Abstract models specify what information or requests are valid inprinciple,irrespective of individual computing environments.
+Theydefine essential concepts, vocabulary, and structure (type hierarchy) of geospatial services and informationtransfer.
+These models set the stage for creatingimplementable specifications, andfor extending existing ones tonew environments.
+l
+Which of these to applydepends onthe design lifecycle, and on the intended computing environment.Earlier designstages often draw on Abstract Models tosketch a system concept; whereas later implementation stages follow Implementation Specifications in detail.
+Whenit comes towriting software, if a suitable Implementation Specification already exists for the applicable computingenvironment,it shouldbe the standard of choice.
+Otherwise,the relevant Abstract Model(s) should guide the design of a new Implementation Specificationfor that environment.
+Computation Viewpoint Service Invocation Implementation specifications ("how") Abstract models ("what") Interface Information Viewpoint Information Transfer Encoding
+Behavior
+Content
+Table 1.
+Viewpoints and levels of abstraction At either the abstract or the implementation level, standards of two different kinds may apply: l
+l
+Service invocation: these standards define the interfaces that allow different systems to worktogether,or the expected behavior of software systems.The ISO/IEC Reference Model for Open DistributedProcessing(RM-ODP) calls this the computationviewpoint; its focus is on invokingservices effectivelyand unambiguously.
+Informationtransfer: these standards define the content of geospatial information or its encoding for transfer betweendifferent processingsystems.
+In RM-ODP parlance,this is the informationviewpoint, emphasizing efficient, lossless communication.
+For distributedcomputing,the service and informationviewpoints are crucial andintertwined.
+For instance,information content isn't useful without services to transmit and use it.Conversely, invokinga service effectively requires that its underlying information be available and its meaningclear.However, the twoviewpoints are also separable: one may define how torepresent
+Page 3 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+information regardless of what services carryit; or how toinvoke a service regardless of how it packages its information.
+Ina givencontext,either the computationview (behavior implemented as interfaces) or the information view (content implemented as encodings) maytake priority, dependingon the diversityof the target community, the expected complexityof data and data processing, the preexistence of relatedstandards, and so on.
+The OpenGIS Consortium's Abstract Specification,Topic 0 (Overview,Section2) explains the roles of abstract and implementation models, andthe interdependence of service invocation and information transfer.
+The International Organization for Standardisation (ISO)'s Reference Model (ISO 19101:2002) provides additional background onconceptual models andtheir role in specification designusing the Unified Modeling Language (UML).
+c. Criteria This Reference Model is intendedto evolve withthe collective understandingof the geospatial community, and with the progress of the principal geospatial standards bodies.As it evolves,it favors standards that perform well accordingto the followingcriteria*: *These criteria are based on a synopsis of the U.S. Office of Management and Budget (OMB)'s Circular A-119; FGDC's own Standards Reference Model; ISO/IEEE's Open System Environment (ISO/IEC 14252:1996); the Internet Standards Process of the Internet Engineering Task Force (IETF); and the U.S. Defense Department's Joint Technical Architecture (JTA). l
+Openness: basedon voluntary consensus, decidedin a public forum (the broader the better); not encumberedby patents,copyrights,or other intellectual property rights; and freelyavailable over the World Wide Web.
+Appendix B presents several geospatial "de facto standards" -- that is, format or interface conventions that are in common use (often due to the dominance of a single supplier of data or software), but are not defined or maintained by an open consensus process.
+l
+l
+Geospatial Interoperability: enablingdifferent software systems to work together on geospatial topics.(Thus, generic underlying standards such as TCP/IP,thematic data content standards, and organizational rules andprocedures,are beyond the scope of the GIRM.)
+Documentation: clear, concise, accessible,and descriptive documentationthat is consistent withother relatedstandards.
+Note: the "lock" icon ( ) denotes online drafts that are password-protected, and accessible only to members of a consortium or editing committee.
+l
+l
+Implementation: usedandtested byseveral independent parties; adopted by mainstream commercial vendors.
+Maturity: complete and nolonger subject to significant changes; applicable to a variety of implementations (i.e., robust); adopted(or ontrackfor adoption) by a recognized standards body.
+This Reference Model color-codes standards according to their degree of maturity: - "final" standard, adoptedby a recognized standards body(though new versions maybecome available); and
+Page 4 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+- complete draft, publicly reviewedandunlikelyto undergo deep changes.
+Appendix A presents several less-mature standards proposals -- that is, early drafts that are public and around which a consensus has begun to form, but that may yet change significantly.
+Furthermore,the Reference Model emphasizes standards maintained bythe following organizations: l
+l
+l
+the International Organization for Standardization (ISO), especially its Technical Committee onGeographic Information/Geomatics (TC211); the UnitedStates Federal Geographic Data Committee (FGDC),the American National Standards Institute (ANSI),andthe International Committee for Information Technology Standards (INCITS), technical committee L1 on Geographic Information Systems.
+the Open GIS Consortium (OGC), a not-for-profit industry association focused on geographic information systems.
+Other standards mentioned here belongtothe WorldWide Web Consortium (W3C), or other bodies as indicated.
+Some of these organizations have reference models of their own.
+The GIRM is not intended to rival or replace these models, but to describe the standards and specifications that underlie the work of FGDC's Geospatial Applications and Interoperability (GAI) working group.
+d.
+The interoperability "stack" Finally,this Reference Model organizes standards along a generic "stack" of geoprocessing clients,servers, andintermediate services, depictedinFigure 1.
+Page 5 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Figure 1.
+The interoperability "stack" shows relationships between the different kinds of components in a distributed system.
+The standards referencedhere describe and guide the interactionbetween these components: data queries and their responses; service invocations; metadata retrieval mechanisms, and so on.
+Components in this model are of four essential kinds: l
+l
+l
+l
+User applications are the software usually seen by users; they may be highly customized analytical or fieldapplications, or general-purpose viewers.
+Theydraw their input either directlyfrom data repositories or from intermediate services that pre-process data for their use.
+Catalogs allow clients andservices to find out what repositories or services are available andappropriate for their use.
+Gazetteers are another such "meta-service"; theyprovide the geographic locations of place names.
+Content repositories provide geospatial data in the form of features, coverages,and data objects or tables.
+Geoprocessing services are the "workhorses" of the interoperabilitystack.
+They may simply draw maps from raw data; or they mayperform advancedanalytical functions such as feature extractionor coordinate transformation.
+They provide data, maps,or other inputs touser applications Â­or to other services,inwhat's known as "service chaining."
+Another important kind of component is a "portal."
+A portal is anassembly of components that provides a community-wide access point todistributed data services.Aninteroperable geospatial portal employs standardsoftware interfaces to connect tocatalog,map, and feature services set
+Page 6 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+upbyproviders.
+A portal often serves a specific community, but it may use a generic user interface that other communities can adapt.
+A portal usually offers personalized or customized views of some kind.Interoperable geospatial portals are anactive design area in OGC and FGDC; noportal specifications are available yet.
+2.
+Data and data access The topic of geospatial data,and access to such data, is unified in theory; but conventional practice divides it intotwo distinct sub-topics: discrete geometric features vs. fields of measured values,oftentermedcoverages (including but not limitedtoearthimages).
+Sections 2.a and2.b treat eachof these topics inturn.
+a.
+Features ISO,OpenGIS, andFGDC standards and specifications define a geographic feature quite generally,as "an abstraction of a real world phenomenon (...) associated witha location relative to Figure 2.
+Features use geometries to the Earth."
+In practice, the term "feature" usually represent phenomena on the earth refers todiscrete data entities whose position inspace is describedby geometric and topological primitives suchas points, lines,or polygons.Feature data typicallyrepresent road networks, land boundaries,point locations of incidents or samples, andother discrete,identifiable geospatial entities Table 2organizes the various standards and specifications relatedto geographic features.
+Service Invocation Interface: OGC Simple Features access for OLE/COM, CORBA, SQL (SQL option a.k.a. ISO 19125-2) OGC Web Feature Service Behavior: ISO 19125-1 (Access to Simple Features: Common Architecture) Information Transfer Encoding: OGC Geography Markup Language (GML), v3.0 ANSI/FGDC Spatial Data Transfer Standard (SDTS) Topological Vector Profile 
+Implementation specifications
+Abstract models
+Page 7 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+ISO 19108 (Temporal Schema) Table 2.
+Features For guidance on how tointerpret anduse this table, please see Section1.a. i. Implementation specifications Three OGC specifications provide implementationguidance for access to features: The Simple Features Access specifications apply to three distributed computing platforms (SQL, OLE/COM,and CORBA) and to the simplest and most commonlyused geometrytypes (points, lines, and polygons, and compounds of these).
+(ISO TC211is adopting OGC's Simple Features Access CommonArchitecture (ISO 19125-1) and SQL option (ISO 19125-2).)
+The WebFeature Service (WFS) and Filter Encoding specifications detail Web-based access to Simple Features (insertion,update,deletion,query, and discovery).
+WFScompliant servers must encode outgoing features in(at least) OGC's Geography Markup Language (GML), v2.1.
+Several feature encodings are available to meet the needs of various application domains: OGC's "Well-KnownText" and "Well-KnownBinary" formats are defined inthe Simple Features access specifications for SQL, OLE/COM,and CORBA.
+OGC's Geography Markup Language (GML),v3.0,expresses feature geometry and topology, coverages, temporal variation,andother feature properties in XML (the W3C's Extensible Markup Language).GML serves as a basis for building specialized "applications schemas" (see Appendix A).
+ISO's draft on Encoding (ISO 19118) provides guidance on deriving XML schemas for geospatial data from UnifiedModeling Language (UML) schemas.
+ISO 19118and GML are not compatible; however ISO and OGC are working to harmonize them (ISO 19136).
+The Spatial Data Transfer Standard(SDTS) (ANSI NCITS 320-1998) is a very general, self-describing data model and encoding scheme, resulting from a ten-year consensus and designeffort.
+FGDC has defined a number of SDTS profiles, in particular the Topological Vector Profile (TVP) (now ANSI SDTS Part 4) and Point Profile.
+(ANSI recentlybegan its 5-year review of SDTS.)
+Appendix B references several several additional feature encoding conventions defined and maintained by government agencies or dominant GIS vendors (but not by a voluntary consensus process).
+ii. Abstract models ISO TC211 has published several conceptual models describinggeographic features.
+Page 8 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Rules for application schema (ISO 19109) contains the general feature model for ISO TC211.It guides the use of classes,relationships,interfaces,and properties indesigning feature schemas for data transfers or transactions.
+Feature cataloguingmethodology (ISO 19110) provides a basis for describing feature types to be pooled across a community of users .
+(OGC's Abstract Specificationtreats similar topics inits volumes on Features and Feature Relationships.
+However,most implementations have drawn on the ISO feature model.)
+Spatial Schema (ISO 19107:2003) provides a model of 2-dimensional and3-dimensional geometry andtopology, and relatedoperators such as "buffer" or "intersects."
+OGC has adoptedthis model into its Abstract Specification, as Topic 1 (Feature Geometry).
+Simple Features Common Architecture (ISO 19125-1) provides further detail onthe subset of features describedin OGC's Simple Feature Access Implementation Specifications,including well-knownencodings and a starter set of Spatial Reference Systems.
+Most workthus far has beenon 2-D and 3-D time-independent feature models.However, ISO's Temporal Schema (ISO 19108:2002) defines how torepresent features over time as well as in space
+b. Coverages Coverages are the other broadcategory of geospatial data: theydescribe the characteristics (the "range") of a set of spatial locations (the "domain").
+Examples might include a soil map(soil types of specific areas); a satellite image (brightnesses of pixels ina set), or a digital elevation model (regularly-spacedelevationdata, or triangulated Figure 3.
+Coverages represent space-varying irregular spot elevations).Given the widespread use of phenomena aerial andsatellite imagery, grid coverages (whose domainconsists of a rectangular arrayof points, cells, or pixels) are animportant special case.
+Table 3summarizes the standards andspecifications related to coverages.
+Service Invocation Implementation specifications Interface: OGC Grid Coverages Access (OLE/COM, CORBA) Information Transfer Encoding: GeoTIFF, BIIF SDTS Raster Profile Abstract models Behavior: Content:
+Page 9 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+OGC Topic 6, Coverages Table 3.
+Coverages
+ISO 19123, Coverage Schema
+For guidance on how tointerpret anduse this table, please see Section1.a. i. Implementation specifications OGC provides twospecifications for access to grid coverages: The GridCoverages Access Implementation Specification for OLE/COM and CORBA provides a detailedinterface definition that complies withthe Abstract Specification(within the realm of GridCoverages).
+The WebCoverage Service Implementation Specification defines a Web-based syntax for access to Coverage data.
+As with features,several coverage encodings are available to meet differingapplicationneeds: GeoTIFF is a widely-usedextension of the TaggedImage File Format (TIFF) that embeds georeferencing "tags" within the image file.
+SDTS (mentioned in2.a.i above) defines a Raster Profile and Extensions to encode twodimensional images and grids,with optional use of ISO BIFF (see below), JPEG/JFIF, or GeoTIFF.
+ISO Basic Image Interchange Format,or BIIF (ISO/IEC 12087-5), is used bythe US National Imagery and Mapping Agency (NIMA) tosupport defense and intelligence operations.It is based onNIMA's National Image Transfer Format (NITF).
+Appendix A references several emerging proposals for encoding coverages.
+Appendix B references several "de facto" standards for encoding coverages.
+ii. Abstract models Toguide further work onimplementations,OGC and ISO share a general definition of coverages: ISO's Schema for Coverage Geometryand Functions (ISO 19123) defines the various types of coverages and their access functions.
+OGC's Abstract Specification, Topic 6 (The Coverage Type andits Subtypes) incorporates and extends ISO 19123.
+Appendix A references ISO's recent work on a general model of imagery.
+3.
+Metadata 
+Metadata describe data contents and appropriate use (much l interoperable infrastructure.
+Metadata are usually stored a nutrient label describes food) ina catalog, andaccessible to applications andservices via catalog interfaces.The GSDI Cookbook(Chapter 4,section on "Relevant standards") ike
+Page 10 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+provides a concise overview of standards for access to metadata throughcatalog interfaces,and for metadata content andencoding.
+Service Invocation Interface: OGC Catalog Interface (OLEDB, CORBA, WWW) ISO 23950 (a.k.a. ANSI Z39.50) w/ GEO, CIP profiles Behavior: OGC Topic 13, Catalog Services Table 4.
+Catalogs and metadata For guidance on how tointerpret anduse this table, please see Section1.a.
+Information Transfer Encoding: ASN.1, XML encoding of GEO, CIP profiles
+Implementation specifications
+Abstract models
+Content: FGDC Content Standard ISO 19115, Metadata
+a.
+Implementation specifications OGC's CatalogInterface Implementation Specification defines an SQL-like Common Query Language for search and retrieval of metadata,alongwith profiles of it for the OLEDB, CORBA, andWebcomputingenvironments.The Web profile uses the ANSI/NISO Z39.50 (a.k.a. ISO 23950) protocol,either on its ownInternet port, or via HTTP using XML-encoded requests.
+The OGC Catalog Interface is stateful: servers "remember" their clients and fill later requests based on earlier ones.
+However, the Web (linked by the HTTP protocol) is stateless: servers treat each request independently.
+The Web profile of the OGC Catalog Interface simulates a stateful session using an HTTP "cookie."
+Appendix A references OGC's in-progress work on a stateless catalog interface and a generalized Web Registry Service.
+As for metadata encoding, XML is generally the preferredoption.
+For structuring XML metadata,an FGDC Metadata DTD (Document Type Definition) is available that conforms to FGDC's Content Standardfor Geospatial Metadata (described below).
+Infact,metadata collections with other data structures can still support interoperable catalog searching.By mappingtheir internal data fields to those of Z39.50's GEO profile, a varietyof metadata collections cansupport FGDC Clearinghouse queries.
+Similarly, an earlier Z39.50 profile,the Catalog Interoperability Protocol (CIP), supports Committee on EarthObserving Satellites (CEOS) queries across manydifferent metadata collections.CEOS has aligned CIP withGEO where the two schemas overlap.
+b. Abstract models OGC's Abstract Specification,Topic 13 (Catalog Services) defines the generic elements that let applications search and retrieve metadata about geospatial information.
+Page 11 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Metadata content is currentlythe subject of twodocuments: ISO's standard on Metadata (ISO 19115:2003) provides a UML model of metadata, basedonthe FGDC's Content Standard (describednext).
+It features a small set of required elements andmany optional ones, andthus facilitates community-specific profiles.
+(OGC's Abstract Specification, Topic 11 (Metadata) is identical toISO 19115, although OGC intends tosupplement it and correct it.)
+FGDC's Content Standard for Digital Geospatial Metadata defines the content (but not the encoding or presentation) of metadata describinggeospatial data.This was the starting point for ISO's Metadata draft standard (see above).
+Step-by-step tutorials for preparing FGDC metadata are available online from the National States Geographic Information Council (NSGIC) and the Wisconsin Land Information Clearinghouse (WISCLINC)
+ANSI's INCITS L1 committee andFGDC have workedto harmonize the two standards.
+These metadata content standards are used bothontheir ownandas a basis for specialized extensions andprofiles.For instance, FGDC has specialized its Metadata Content Standardwith Extensions for Remote SensingMetadata andprofiles for Biological Data and Shoreline Data.
+c. Service metadata and registries Althoughmost metadata content to date describes data,"service metadata," describing geoprocessing service capabilities rather thandata, are increasinglyimportant.
+(Section6 below provides details ongeoprocessingservices.)
+Implementation-level service metadata is an active workarea inOGC, but no stable drafts are available yet.
+At the abstract level, ISO's Services draft (ISO 19119 - AnnexC) sketches generic service metadata elements.
+(See GeoprocessingServices below.)
+OGC's recent workwith Webservices has greatlyexpanded the set of service metadata elements beyondthose inISO 19119.
+4.
+Maps 
+Figure 5.
+Maps are pictures made from geographic data
+Implementation specifications
+Service Invocation Interface: OGC Web Map
+Information Transfer Encoding: GeoTIFF, SVG,
+Page 12 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Service (WMS) ISO 19128, Web Map Server Interface
+PNG, JPEG CGM, WebCGM OGC Styled Layer Descriptor (SLD) Content: ISO CD 19117, Portrayal
+Abstract models
+Behavior: OGC Web Map Service (WMS), v1.0
+Table 5.
+Maps and visualization For guidance on how tointerpret anduse this table, please see Section1.a.
+a.
+Implementation specifications OGC's Web MapService is the primaryspecificationfor requestingmaps and visualization via the World Wide Web.Its "GetMap" requests are preceded by a "GetCapabilities" request to ascertaina server's available "layers" of information,and its rendering andprocessing abilities.
+ISO's draft Web Map Server Interface (ISO 19128) is basedonthe OGC Web Map Service specification.
+Step-by-step tutorials for setting up an OGC Web Map Server are available from NASA's ESIP Federation and International Interfaces, Inc.
+OGC has based twoadditional interface specifications on its Web MapService: StyledLayer Descriptor defines an XML syntaxfor portrayal rules that tell an OGC Web MapServer how torender either its owndata or the output of anOGC WebFeature Server or WebCoverage Server.
+Web MapContext Documents defines an XML syntaxfor creating,storing,and exchangingmap views from the WebMapService.
+As for map encodings: because maps are pictures rather than complexdata,they employ commonraster formats such as Portable Network Graphics (PNG), the Joint Photographic Experts'Group JPEG / JFIF and JPEG2000 (a.k.a. ISO/IEC 15444); TaggedImage File Format (TIFF), or vector formats such as W3C's Scalable Vector Graphics (SVG), ANSI/ISO's Computer Graphics Metafile (CGM), or W3C's WebCGM (a profile of CGM).
+Maps mayalsobe encoded using simple coverage encodings suchas GeoTIFF,listedin2.b.i above.The choice of map encoding depends on the graphical content to be conveyed (e.g., continuous vs.discrete color variations; transparency; color depth) and the capabilities of the client viewer.
+b. Abstract models
+Page 13 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Despite the widespreaduse of maps andvisualization, there has been onlylimited formal definitionof portrayal processes: ISO's Portrayal draft standard (ISO 19117) defines rules for portraying geospatial features.
+OGC's initial WebMapService specification summarizes the chief concepts of user interactionwith geospatial data andinteractive portrayal.
+5.
+Geospatial Reference Systems Geospatial reference systems identifygeospatial locations, usingeither place names or numeric coordinates.
+As such, theyunderlie most geospatial data transfers and service invocations.Table 6describes the standards that guide the choice and expressionof geospatial reference systems.
+Numeric coordinates EPSG database 
+Transformation specification) ISO 6709 (Lat-Lon encoding) ANSI X3.61 (Geographic Point Locations) Abstract models ISO 19111 (Spatial Referencing by Coordinates) OGC Topic 2 (Spatial Reference Systems) Table 6.
+Geospatial Reference Systems For guidance on how tointerpret and use this table,please see Section1.a.
+Place names 
+Implementation specifications
+a.
+Implementation Specifications i. Numeric coordinates Manydifferent organizations have specified geodetic andcartographic reference systems,as well
+Page 14 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+as coordinate encodings: The EuropeanPetroleum Survey Group(EPSG) has a database that lists coordinate reference system parameters (datums, ellipsoids, meridians, units of measure, etc.) and "bundles" them into commonly-used coordinate reference systems (e.g., "WGS84 UTM Zone 18N meters").
+OGC's Web Map Service and Geography Markup Language use EPSG's parameter "bundles," and their identifiers, to request maps and to encode features.
+The Web Map Service extends EPSG with orthographic projections.
+OGC's Simple Features Access specifications for OLE/COM and SQL (Section 4) list a "supported" set of datums,ellipsoids,units of measure, projections,andprojection parameters.
+OGC's Coordinate TransformationServices specification (see Section 6.c) details WellKnownText (WKT) encoding of coordinate reference systems (based on the EPSG tables) and sketches an XML encoding.
+OGC recommends a specific XML encodingof coordinate reference parameters.
+ISO 6709 specifies a syntax for expressingexpress latitude, longitude, and altitude values.
+ANSI X3.61 extends this syntaxto the Universal Transverse mercator and State Plane projectedcoordinate reference systems.
+ii. Place names and identifiers Place names and codes are also the subject of several national and international standards: ISO 3166 defines codes for countries and their subdivisions.
+Inthe UnitedStates, FIPS 5-2 (adopted as ANSI X3.38) lists states andterritories using ISO 3166subdivision codes.
+FIPS 6-4 adds county codes (using ANSI X3.31 coding rules); FIPS 8-6 adds metropolitanareas; FIPS 55 identifies populated places (using ANSI X3.47 coding rules); and FIPS 9-1 identifies congressional districts.
+ANSI X3.145 (USGS Circular 878-A) defines Hydrological Unit Codes for river basins and sub-basins.
+The USGS Geographic Names Information System (GNIS) hosts the official codes for US populatedplaces (defined in FIPS 55).
+The NIMA GEONames server hosts codes for the world's countries and their subdivisions (definedin FIPS 10-4).
+b. Abstract models i. Numeric coordinates ISO's standard on Spatial Referencing by Coordinates (ISO 19111:2003) defines geodetic concepts andparameters (primarilydatum and ellipsoid) that underlie earth-basedcoordinate systems,as well as transformations between coordinate systems.
+OGC's Abstract Specification,Topic 2 (Spatial Referencing by Coordinates), "supplements andcorrects" ISO 19111.
+Page 15 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+ii. Place names and identifiers ISO's draft standard on Spatial Referencing by Geographic Identifiers (ISO 19112) defines the relationship between geographic positions andgeographic identifiers (that is, place names that have beenqualifiedenough -- e.g., "Moscow, Idaho" -- to designate exactly one location).This paves the way for gazetteers (describedbelow).
+6.
+Geoprocessing services Maps andvisualization are a special case of more general geoprocessingservices.Suchservices mayoperate on a varietyof datatypes: features, coverages, metadata, maps -- even simple text.
+Table 7summarizes the standards that provide an architecture and taxonomy for these services.
+Service Invocation Implementation Interface: specifications [none] Abstract Behavior: models ISO DIS 19119 (Services) Table 7.
+Services Architecture For guidance on how tointerpret and use this table,please see Section1.a.
+a.
+Implementation Specifications The practical description and discovery of geoprocessingservices are active works-in-progress in OGC at this time.
+AppendixA provides details.
+b. Abstract models ISO and OGC share a model of Geospatial Services (ISO 19119,identical toOGC Abstract Specification, Topic 12).This document groups services intofive categories (humaninteraction, information management,workflow management, geo-processing,and communication), defines service chaining and service metadata, andsketches an XML-compatible data dictionary for service metadata.
+The followingsections describe the standards related tospecific geoprocessing services,suchas coordinate transformation, gazetteers, and others.
+c. Coordinate transformation Giventhe variety of coordinate reference systems in use,coordinate transformation(that is, reexpressinggeospatial positions ina new coordinate reference system) is one of the most commonly-needed geoprocessing operations.These transformations maybe exact (using closedform or iterative computations, as with projections), or approximate (using error-minimizations, as inthe case of a datum change).
+Page 16 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Service Invocation Implementation specifications Interface: OGC Coord.
+Transformation (COM, CORBA, Java) Abstract models Behavior ISO 19111 (Spatial Referencing by Coordinates) OGC's Topic 2 (Spatial Reference Systems) Table 8.
+Coordinate Transformation For guidance on how tointerpret anduse this table, please see Section1.a. i. Implementation Specification OGC's Coordinate TransformationServices specification provides a generic object model for coordinate systems andtransformations, with 3 concrete profiles: COM MIDL files, CORBA IDL files,and Java source sode. ii. Abstract model ISO's draft standardon Spatial Referencing by Coordinates (ISO 19111:2003) and OGC's Abstract SpecificationTopic 2on Spatial ReferencingbyCoordinates, both mentionedearlier, provide geodetic definitions and principles behind coordinate transformations.
+d. Gazetteer Gazetteers provide access to geospatial data indexedbyplace names rather than by coordinate locations.Table 9 summarizes standards related to gazetteer services.
+Service Invocation Interface: [none] Behavior ISO 19112 (Spatial Referencing by Geographic Identifiers) Table 9.
+Gazetteers For guidance on how tointerpret and use this table,please see Section1.a. i. Implementation Specifications OGC has explored gazetteers andrelatedservices, but has not yet released stable drafts.
+AppendixA lists a few proposals.
+Implementation specifications Abstract models
+Page 17 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+ii. Abstract model ISO's Spatial Referencingby Geographic Identifiers (ISO 19112) sets the stage for gazetteer services.
+e.
+Other geoprocessing services ISO's andOGC's general taxonomies mentiona large number of useful geoprocessingservices, most of which currently exist only as internal software functions rather thanaddressable services: spectral classification, feature generalization,etc.
+It is expected that most of these will share a "commontrunk" of metadata and interface / behavior, tobe definedinthe general service model.
+References Standards bodies American National Standards Institute (ANSI) http://www.ansi.org Federal Geographic Data Committee (FGDC) http://www.fgdc.gov http://gai.fgdc.gov (GAI / Geospatial Applications andInteroperability) International Organization for Standardization (ISO) http://www.iso.ch http://www.isotc211.org (TC211 / Geographic Information/Geomatics) International Committee for InformationTechnology Standards (INCITS) http://www.incits.org http://www.incits.org/tc_home/l1.htm (L1 / Geographic InformationSystems) OpenGIS Consortium (OGC) http://www.opengis.org WorldWide Web Consortium (W3C) http://www.w3.org
+Standards and Architectures Architecture Standards for Information Systems - A GST White Paper (G.Percivall,June 2002) http://www.gst.com/Library/arch_standards_is.pdf Internet EngineeringTask Force (IETF) Internet Standards Process http://www.ietf.org/rfc/rfc2026.txt
+Page 18 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Status of FGDC Standards http://www.fgdc.gov/standards/status/textstatus.html FGDC Standards Reference Model http://www.fgdc.gov/standards/refmod97.pdf ISO/IEC 10746,OpenDistributedProcessing- Reference Model: Overview http://www.iso.ch/iso/en/ittf/PubliclyAvailableStandards/c020696_ISO_IEC_10746-1_1998 (E).zip ISO/IEEE OpenSystem Environment (OSE) http://csrc.nist.gov/publications/nistpubs/800-7/node8.html (summary) http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=23985 (full document) U.S.Department of Defense Joint Technical Architecture http://www-jta.itsi.disa.mil/ OMB Circular A-119,Feb.1998 http://www.whitehouse.gov/omb/circulars/a119/a119.html http://www.whitehouse.gov/omb/circulars/a119/a119.html#4 (voluntaryconsensus standards)
+OpenGIS implementation specifications CatalogInterface http://www.opengis.org/docs/02-087r3.pdf Coordinate Transformation Services http://www.opengis.org/docs/01-009.pdf Filter Encoding http://www.opengis.org/docs/02-059.pdf Geography Markup Language (GML) http://www.opengis.org/docs/02-023r4.pdf (v3.0) http://www.opengis.net/gml/02-069/GML2-12.html (v2.12) GridCoverages Access http://www.opengis.org/docs/01-004.pdf Recommended XML encodingof coordinate reference system definitions http://www.opengis.org/docs/03-010r7.pdf Simple features access for CORBA http://www.opengis.org/docs/99-054.pdf Simple features access for OLE/COM http://www.opengis.org/docs/99-050.pdf Simple features access for SQL
+Page 19 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+http://www.opengis.org/docs/99-049.pdf StyledLayer Descriptor http://www.opengis.org/docs/02-070.pdf WebCoverage Service http://www.opengis.org/docs/03-065r6.pdf WebFeature Service http://www.opengis.org/docs/02-058.pdf WebMapContext Documents http://www.opengis.org/docs/03-036r2.pdf WebMap Service http://www.opengis.org/docs/03-086.pdf (current v1.2) http://www.opengis.org/techno/specs/01-068r3.pdf (previous v1.1.1) http://www.opengis.org/docs/00-028.pdf (original v1.0) Tutorials on OGC Web MapService http://oceanesip.jpl.nasa.gov/esipde/guide.html http://www.intl-interfaces.net/cookbook/WMS/
+OpenGIS Abstract specifications Topic 0- Introduction http://www.opengis.org/docs/99-100r1.pdf Topic 1- Feature Geometry (identical toISO 19107) http://www.opengis.org/docs/01-101.pdf Topic 2- Spatial Referencingby Coordinates (supplements and corrects ISO 19111) http://www.opengis.org/docs/02-102.pdf Topic 5- Features http://www.opengis.org/docs/99-105r2.pdf Topic 6- The coverage type and its subtypes http://www.opengis.org/docs/00-106.pdf Topic 8- Feature Relationships http://www.opengis.org/docs/99-108r2.pdf Topic 11- Metadata (identical toISO 19115) http://www.opengis.org/docs/01-111.pdf http://www.opengis.org/docs/01-053r1.pdf (planned corrections and extensions) Topic 12- Services (identical to ISO 19119) http://www.opengis.org/docs/02-112.pdf
+Page 20 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Topic 13- CatalogServices http://www.opengis.org/docs/99-113.pdf
+ISO standards and drafts ISO 19101:2002 (Reference Model) http://www.ncits.org/ref-docs/ISO_DIS_19101.pdf (final draft) http://webstore.ansi.org/ansidocstore/product.asp?sku=ISO+19101:2002 (int'l standard) ISO 19107:2003 (Spatial Schema) http://www.ncits.org/ref-docs/ISO_DIS_19107.pdf (final draft) http://webstore.ansi.org/ansidocstore/product.asp?sku=ISO+19107:2003 (int'l standard) ISO 19108:2002 (Temporal Schema) http://www.ncits.org/ref-docs/ISO_DIS_19108.pdf (final draft) http://webstore.ansi.org/ansidocstore/product.asp?sku=ISO+19108:2002 (int'l standard) ISO 19109 (Rules for ApplicationSchema) http://www.ncits.org/ref-docs/DIS_19109.PDF ISO 19110 (Methodologyfor Feature Cataloguing) http://www.ncits.org/ref-docs/ISO_DIS_19110.pdf ISO 19111:2003 (Spatial Referencing by Coordinates) http://www.ncits.org/ref-docs/FDIS_19111.pdf (final draft) http://webstore.ansi.org/ansidocstore/product.asp?sku=ISO+19111:2003 (int'l standard) ISO 19112 (Spatial ReferencingbyGeographic Identifiers) http://www.ncits.org/ref-docs/ISO_DIS_19112.pdf ISO 19115:2003 (Metadata) http://www.ncits.org/ref-docs/FDIS_19115.pdf (final draft) http://webstore.ansi.org/ansidocstore/product.asp?sku=ISO+19115:2003 (int'l standard) ISO 19117 (Portrayal) http://www.ncits.org/ref-docs/ISO_DIS_19117.pdf ISO 19118 (Encoding) http://www.ncits.org/ref-docs/ISO_DIS_19118.pdf ISO 19119 (Services) http://www.ncits.org/ref-docs/DIS19119.PDF ISO 19123 (Schema for Coverage Geometry and Functions) http://www.geog.umd.edu/gis/standards/ISO-TC211/CD 19123.2Schema for coverage geometryandfunctions.pdf (unofficial copy) http://www.isotc211.org/protdoc/211n1227/211n1227.pdf (ISO master copy) ISO 19125-1(Simple Features Access - Part 1: CommonArchitecture)
+Page 21 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+http://www.ncits.org/ref-docs/ISO_DIS_19125-1.pdf ISO 19125-2(Simple Features Access - Part 2: SQL option) http://www.ncits.org/ref-docs/ISO_DIS_19125-2.pdf ISO 19128 (WebMapServer Interface) http://www.isotc211.org/protdoc/211n1477/211n1477.pdf ISO 19136 (GeographyMarkupLanguage) http://www.isotc211.org/protdoc/211n1220/211n1220.pdf ISO 3166 (country andsubdivision codes) http://www.iso.org/iso/en/prods-services/iso3166ma/index.html (country codes only) http://www.wikipedia.org/wiki/ISO_3166-2 (subdivisioncodes) ISO 6709 (representationof latitude,longitude,andaltitude) http://www.isotc211.org/protdoc/211n1255/211n1255.pdf
+Encodings Features Spatial Data Transfer Standard (SDTS) http://mcmcweb.er.usgs.gov/sdts/ http://mcmcweb.er.usgs.gov/sdts/SDTS_standard_oct91/index_4.html (Topological Vector Profile) http://www.fgdc.gov/standards/documents/standards/sdts_point/sdts_pt6.pdf (Point Profile) Coverages Basic Image Interchange Format (BIIF, a.k.a. ISO/IEC 12087-5) http://www.ismc.nima.mil/ntb/baseline/docs/biif/ GeoTIFF http://www.remotesensing.org/geotiff/geotiff.html Spatial Data Transfer Standard (SDTS) http://mcmcweb.er.usgs.gov/sdts/ http://www.fgdc.gov/standards/documents/standards/sdts_pt5/srpe0299.pdf (Raster Profile) Maps ANSI / ISO Computer Graphics Metafile (CGM) http://www.itl.nist.gov/div897/ctg/graphics/cgm_std.htm GeoTIFF http://www.remotesensing.org/geotiff/geotiff.html Joint Photographic Experts'Group (JPEG)
+Page 22 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+http://www.jpeg.org/public/jpeglinks.html (JPEG/JFIF) http://www.jpeg.org/JPEG2000.html (JPEG 2000, a.k.a.ISO/IEC 15444) W3C Portable Network Graphics (PNG) http://www.libpng.org/pub/png/ W3C Scalable Vector Graphics (SVG) http://www.w3.org/Graphics/SVG TaggedImage File Format (TIFF) http://www.libtiff.org W3C WebCGM http://www.w3.org/Graphics/WebCGM/
+Geospatial locations (See alsoISO 3166and ISO 6709 above) ANSI X3.61(Geographic Point Locations -- extends ISO 3166) http://webstore.ansi.org/ansidocstore/product.asp?sku=ANSI+INCITS+61-1986+(R2002) ANSI X3.31(Coding rules for US counties -- used in FIPS 6-4) http://webstore.ansi.org/ansidocstore/product.asp?sku=ANSI+INCITS+31-1988+(R2002) ANSI X3.38(US states and territories -- adopts FIPS 5-2) http://webstore.ansi.org/ansidocstore/product.asp?sku=ANSI+INCITS+38-1988+(R1999) ANSI X3.47(Coding rules for populated places, county divisions, etc.-- used in FIPS 55) http://webstore.ansi.org/ansidocstore/product.asp?sku=ANSI+INCITS+47-1988+(R2000) ANSI X3.145(Hydrologic Unit Codes -- also known as USGS Circular 878-A) http://water.usgs.gov/pubs/circ/circ878-A/pdf/gsc_878-a.pdf FIPS 5-2(US states andterritories) http://www.itl.nist.gov/fipspubs/fip5-2.htm FIPS 6-4(US counties -- uses ANSI X3.31rules) http://www.itl.nist.gov/fipspubs/fip6-4.htm FIPS 8-6(US metropolitanareas) http://www.itl.nist.gov/fipspubs/fip8-6-0.htm FIPS 9-1(US congressional districts) http://www.itl.nist.gov/fipspubs/fip9-1.htm FIPS 10-4(Countries andcountry subdivisions) http://www.nima.mil/gns/html/fips10-4.html
+Page 23 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+FIPS 55(Populatedplaces,countydivisions, etc. -- uses ANSI X3.47 rules) http://geonames.usgs.gov/fips55.html
+Metadata and catalog access FGDC Metadata standard Content Standardfor Digital Geospatial Metadata http://www.fgdc.gov/metadata/contstan.html Tutorials on the FGDC Metadata standard http://www.lic.wisc.edu/metadata/metaprim.htm http://badger.state.wi.us/agencies/wlib/sco/metex/ FGDC/ISO Metadata StandardHarmonization http://www.fgdc.gov/metadata/whatsnew/fgdciso.html FGDC Metadata DTD http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd Extensions for Remote SensingMetadata http://www.fgdc.gov/standards/documents/standards/remote_sensing/MetadataRemoteSensingExtens.pdf
+Profile for Biological Data http://www.fgdc.gov/standards/status/sub5_2.html Profile for Shoreline Data http://www.fgdc.gov/standards/status/sub5_6.html Z39.50 Catalog access CatalogInteroperability Protocol (CIP) http://www.dfd.dlr.de/ftp/pub/CIP_documents/ CIP/GEO alignment http://www.dfd.dlr.de/ftp/pub/CIP_documents/cip_geo_alignment GEO profile http://www.blueangeltech.com/Standards/GeoProfile/geo22.htm Z39.50 http://www.niso.org/standards/resources/Z3950_Resources.html http://www.loc.gov/z3950/agency/
+Other standards EPSG Coordinate systems database http://www.ihsenergy.com/epsg/epsg_v63.zip
+Page 24 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+UnifiedModelingLanguage (UML) Resource Page http://www.omg.org/uml/ W3C Extensible Markup Language (XML) http://www.w3.org/XML/
+Appendix A. Standards proposals An informative appendix to the Geospatial Interoperability Reference Model (GIRM) of the FGDC Geospatial Applications and Interoperability Working Group Editor: John D.Evans (NASA Geospatial InteroperabilityOffice) Version1.0, May 2003 This Appendixreferences several standards projects currently underwaywithin recognized standards bodies such as OGC, FGDC, or ISO.These projects are selected according tosame criteria as the GIRM (openness, geospatial interoperability, documentation,implementation, and maturity).However,these standards drafts are not yet mature enoughto be inthe GIRM: most are likelytoundergo significant change before adoption.
+Nonetheless, these drafts are openly available; a consensus has begunto form aroundthem; and (for implementation specifications) technologyprototypes have beenpubliclydemonstrated.
+The drafts presented here are intendednot as requirements, but as informative glimpses of the community's "leanings."
+Onseveral geospatial topics, viewpoints,or abstractionlevels, these proposals extendmore establishedstandards tonew environments such as the Web.
+In some cases,noestablished standard exists: these proposals capture the current state of the art.
+The proposals are ordered bythe same high-level geospatial topics as those in the GIRM.
+Data and data access GML feature encoding OGC has developedseveral applicationschemas based on GML 2 and GML 3.0; inparticular, the Location Organizer Folder (LOF) and XML for Image and MapAnnotations (XIMA),are the subject of informal OGC DiscussionPapers.
+Coverage encoding Several different XML-based encodings are in workfor coverages, including NASA's eXtensible Data Format (XDF) and EarthScience Markup Language (ESML).
+OGC's Geography Markup Language (GML) 3.0 sketches constructs for describingand encodingcoverages.
+MappingScience,Inc.
+has developed the GeoJP2 image format,whichembeds GeoTIFF headers intothe JPEG2000 format.
+Page 25 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+Coverage abstract models ISO's Imagery, Griddedand Coverage Data framework (ISO 19129) sketches a commonabstract model intendedto harmonize the variety of coverage encodings.
+Metadata 
+ISO XML schema ISO's Metadata working groupis draftingan ISO 19115XML Schema (within the ISO 19139 workitem) toimplement the ISO 19115Metadata draft standard in XML.
+Geospatial Reference Systems ISO's Geodetic codes andparameters (ISO 19127) provides rules for maintaining and coordinatingregistries of parameters used in coordinate reference systems.
+Maps and visualization Encoding ISO is considering a proposed PDF Archive (PDF/A) encodingscheme basedonthe Portable Document Format (PDF) specification from Adobe Systems.
+Geoprocessing services Service Information Model OGC's Interoperability Program Service Model provides a frameworkfor publishing, finding, bindingto,and chaining services, and a"common trunk" of metadata and interface / behavior sharedbyall geoprocessing services.
+Boththis andthe Web RegistryService proposal cast geoprocessingservices as XML Web services,describingthem using ebXML (Electronic Business usingExtensible Markup Language) or WSDL (Web Services DescriptionLanguage) withUniversal Description, Discovery,andIntegration(UDDI) for service discovery andbinding.The OASIS consortium (Organizationfor the Advancement of Structured Information Standards) is working on interoperability betweenebXML andUDDI.
+Gazetteer, Geoparser, Geocoder
+Page 26 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+OGC's Gazetteer Service informal Discussion Paper proposes a gazetteer modeledafter the Web Map/ WebFeature Service.Unlike ISO's abstract model for Geographic Identifiers, it accepts informal (ambiguous) place names andlets clients choose among all the corresponding geographic identifiers.
+OGC's informal Discussion Papers on Geoparser and Geocoder services define additional Webbasedservices that use a Gazetteer service to identify place names indocuments, and to tie them tofeatures representingtheir geographic locations.
+Appendix B. Publicly-available "de facto standards" An informative appendix to the Geospatial Interoperability Reference Model (GIRM) of the FGDC Geospatial Applications and Interoperability Working Group Editor: John D.Evans (NASA Geospatial InteroperabilityOffice) Version1.0, May 2003 This Appendixreferences several encoding schemes for geospatial data that are in commonuse, oftendue to the dominance of a single supplier of data or software.
+These specifications are publiclyavailable, and allow anyone to write software to encode or decode data in these formats.
+However,these are "de facto" rather than "open" standards: theyare not defined or maintained bya voluntaryconsensus process.
+The encodingschemes presentedhere are intended not as requirements,but as a descriptive overview.
+(This document omits proprietary formats, whose use requires a license (and/or software) from the format's owner.
+The specification for such a proprietary format is usually not published; but it may [also/instead] be protected by a patent.)
+Feature encoding Several commercial vendors have published specifications for simple proprietary formats: e.g., ESRI's Shapefile, MapInfo's MIF/MID format,or AutoDesk's Drawing eXchange Format (DXF).
+This has enabled others towrite software libraries such as shapelib (for ESRI Shapefiles) and MITAB (for MapInfo files).
+VPF (Vector Product Format) is the US National Imageryand Mapping Agency (NIMA)'s format for the Digital Chart of the World (now known as VMAP 0) and other feature-baseddata products.VPF implements NATO's more general Digital Geographic Exchange Standard (DIGEST).
+Coverage encoding The US National Imagery andMapping Agency (NIMA) uses CADRG (CompressedArc DigitizedRaster Graphics) for scannedmaps.
+HDF-EOS,a profile of the Hierarchical Data Format,is the standardfile format and software library for NASA's EarthObserving System.
+Page 27 of 28
+FGDC GAI Geospatial InteroperabilityReference Model v1.1
+http://gai.fgdc.gov/girm/v1.1/
+DTED,used byNIMA and the US Geological Survey, encodes Digital TerrainElevation Data.
+NetCDF (NetworkCommon Data Form), from the U.S. National Center for Atmospheric Research(NCAR), is a software libraryand anencoding format for array-oriented scientific data.
+GRIB (GRid In Binary) and BUFR (Binary Universal Form for the Representation of meteorological data) are the World Meterological Organization's standards for encodingdiscrete point data and data grids, respectively.
+Map encoding Adobe Systems'Portable Document Format (PDF) is a common encodingfor vector-based maps.
+Geospatial reference systems NATO's Digital Geographic InformationExchange Standard (DIGEST),Part 3 defines parameters for geodetic and cartographic referencing.
+Page 28 of 28

@@ -1,0 +1,13 @@
+#PHP Manual Mathematical functions min mt_srand PHP Manual Prev Next _______________________________________________________________________ mt_rand mt_rand -- generate a better random value Description int mt_rand( [int min] , [int max]
+By default, PHP uses the libc random number generator with the rand() function.
+mt_rand() function is a drop-in replacement for this.
+It uses a random number generator with known characteristics, the Mersenne Twister, which will produce random numbers that should be suitable for cryptographic purposes and is four times faster than what the average libc provides.
+The Homepage of the Mersenne Twister can be found at http://www.math.keio.ac.jp/~matumoto/emt.html, and an optimized version of the MT source is available from http://www.scp.syr.edu/~marc/hawk/twister.html.
+If called without the optional min, max arguments mt_rand() returns a pseudo-random value between 0 and RAND_MAX.
+If you want a random number between 5 and 15 (inclusive), for example, use mt_rand (5, 15).
+Remember to seed the random number generator before use with mt_srand().
+Note: In versions before 3.0.7 the meaning of max was range.
+To get the same results in these versions the short example should be mt_rand (5, 11) to get a random number between 5 und 15.
+See also mt_srand(), mt_getrandmax(), srand(), rand() and getrandmax().
+_______________________________________________________________________
+Prev Home Next min Up mt_srand

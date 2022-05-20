@@ -1,0 +1,124 @@
+USGS -- SMIG -- Surface-water quality and flow Modeling Interest Group Effects of Model Output Time-Averaging on the Determination of the Assimilative Capacity of the Waccamaw River and Atlantic Intracoastal Waterway near Myrtle Beach, South Carolina by Paul A. Conrads
+USGS, Water Resources Division Stephenson Center, Suite 129 720 Gracern Road Columbia, SC 29210-7651 Internet: pconrads@usgs.gov Phone: (803) 750-6140 FAX: (803) 750-6181 __________________________________________________________________
+Editor's note: This paper was written for the First Federal Interagency Hydrologic Modeling Conference, held in Las Vegas on April 19-23, 1998.
+Citation: Conrads, P.A., 1998, Effects of model output time-averaging on the determination of the assimilative capacity of the Waccamaw River and Atlantic Intracoastal Waterway near Myrtle Beach, South Carolina, in Proceedings of the First Federal Interagency Hydrologic Modeling Conference, April 19-23, 1998, Las Vegas, NV: Subcommittee on Hydrology of the Interagency Advisory Committee on Water Data, p. 2-93 to 2-100.
+__________________________________________________________________
+Contents
+o Abstract o Introduction o Description of Study Area o Methods o Results o Discussion and Conclusion o References
+Abstract
+A Branched Lagrangian Transport Model, was calibrated and validated for the tidally influenced portions of the Waccamaw and Pee Dee Rivers, Bull Creek, and the Atlantic Intracoastal Waterway near Myrtle Beach, South Carolina.
+In determining the assimilative capacity of the Atlantic Intracoastal Waterway, 1-hour, 24-hour, 14-day, and 30-day averaging intervals were used.
+For each averaging interval, point-source loadings in the model were increased until the State dissolved-oxygen standard was violated.
+Results of the averaging intervals and point-source loadings for two locations were evaluated by comparing time series of dissolved-oxygen concentration at critical locations and longitudinal profiles of average dissolved-oxygen concentration for particular reaches of the system.
+The concentrations of the oxygen-consuming constituents that can be assimilated vary by 180 percent, depending upon the averaging interval used for interpreting the simulation model output.
+Introduction
+The Grand Strand is a rapidly growing resort area on the northeastern coast of South Carolina (fig. 1).
+The municipalities of Myrtle Beach and North Myrtle Beach have experienced tremendous growth in the 1990's and have become one of the leading tourist destinations in the country.
+As the Grand Strand continues to grow, there are increasing demands on the water resources in the area.
+The Atlantic Intracoastal Waterway (AIW) and Bull Creek provide municipal source water and the AIW and Waccamaw River receive municipal wastewater-treatment effluent.
+(fig. 1)
+Figure 1.
+Location of study area and model boundaries.
+In order to protect the aquatic life in these receiving streams, the capacity to assimilate treated wastewater must be determined.
+For many reasons, the procedure for determining assimilative capacity for coastal waters is not well as established as compared to upland, riverine systems.
+The dynamic, oscillatory nature of flows in estuarine waterbodies makes statistically determined low-flow values very difficult to compute.
+Critical dissolved-oxygen concentrations may not occur during low-flow periods when estuarine waterbodies are influenced by ocean water which usually has dissolved-oxygen concentrations higher than those in the freshwater.
+Most water-quality standards in South Carolina were written for upland streams and not for coastal waters, where, in the case of South Carolina, the waters may not meet the dissolved-oxygen concentration standard due to natural conditions.
+For these waters in South Carolina, effluent releases are permitted only if the instream dissolved-oxygen concentration is minimally affected, which is quantified as less than a tenth of a milligram per liter decrease from the natural condition -- also known as the point-one rule (South Carolina Department of Health and Environment Control, 1993).
+For water-resource management, assimilative capacity is expressed as pounds per day (lbs/d) of ultimate oxygen demand (UOD) that can be assimilated without causing a violation of the State water-quality standard for dissolved oxygen.
+In municipal wastewater effluent, the principal oxygen-consuming constituents are ammonia and biodegradable organic substances.
+The UOD is the total, theoretical demand for oxygen from carbonaceous and nitrogenous sources.
+The South Carolina Department of Health and Environmental Control (SCDHEC) defines UOD by the equation (South Carolina Department of Health and Environment Control, 1991):
+UOD = (BOD[5] x F[ratio]
+where UOD is the ultimate oxygen demand in pounds per day, BOD[5] is the five-day carbonaceous biochemical oxygen demand in milligram per liter, F[ratio]
+The U.S. Geological Survey (USGS), in cooperation with the Waccamaw Regional Planning and Development Council, applied the one-dimensional dynamic flow model BRANCH (Schaffranek and others, 1981) and the dynamic mass transport and water-quality model Branched Lagrangian Transport Model (BLTM) (Jobson and Schoelhamer, 1987; Jobson, 1997) to the Waccamaw River, Pee Dee River, Bull Creek, and Atlantic Intracoastal Waterway.
+Results from the model were used to determine the assimilative capacity for a range of streamflows of four reaches within the Grand Strand (Drewes and Conrads, 1995).
+Results from these models indicated that the assimilative capacity is dependent upon the flow conditions selected, the allowable dissolved-oxygen concentration decrease, and the averaging interval used in assessing the point-one rule.
+The coastal waters of the Grand Strand experience forcing functions of various tidal frequencies; tidal days of 24.42 hours, spring/neap cycles of 14 days, and lunar cycles of 28 days.
+The State water-quality standard does not specify the appropriate averaging interval to use for interpretation of simulation model output.
+The U.S. Environmental Protection Agency has used 1-day, 7-day, and 30-day averaging intervals in developing national water-quality criteria (U.S. Environmental Protection Agency, 1986).
+There has been interest from various parties involved in the permitting process of these coastal waters that an averaging interval longer than 24-hours be used in determining the assimilative capacity for a tidal system due to the longer frequencies of the dominant driving forces of tidal waters.
+The purpose of this paper is to document the effects of averaging interval of modeling results on the determination of assimilative capacity in the AIW and Waccamaw River.
+Description of Study Area
+The Pee Dee River Basin, approximately 13,000 square miles (mi^2), and the Waccamaw River Basin, approximately 1,300 mi^2, supply freshwater inflow to the Grand Strand.
+The Pee Dee River branches into three smaller creeks as it flows towards Winyah Bay.
+The first branch (south of the U.S. Highway 701 bridge) forms Bull Creek, the second branch forms Thoroughfare Creek, and the third branch forms Schooner Creek.
+The three creeks eventually flow into the Waccamaw River, and the net flow from these creeks is to the south through Winyah Bay.
+The Waccamaw River originates in North Carolina and enters the AIW about 10 miles north of the mouth of Bull Creek.
+Prior to the 1930's, the Waccamaw River flowed to the south towards Winyah Bay.
+In the 1930's the U.S. Army Corps of Engineers constructed a canal to form the AIW from Enterprise Landing to the Little River Inlet.
+After the construction of the canal, the flow of the Waccamaw River to the confluence with the AIW is north towards Little River Inlet.
+The majority of the freshwater flow to the segment of Waccamaw River south of its junction with the AIW is from the Pee Dee River Basin and is carried by Bull Creek.
+The annual average streamflow from the Pee Dee Basin is about 14,100 ft^3/s (cubic feet per second), which is the combined streamflow of the three major rivers (Pee Dee, Little Pee Dee, and Lynches Rivers) (Carswell and others, 1988).
+The Pee Dee River (below the confluence with the Little Pee Dee River), Bull Creek, and Thoroughfare Creek are tidally affected during low and medium streamflows.
+The annual average streamflow of the Waccamaw River at Longs, S.C., is 1,220 ft^3/s, net flow of the AIW at the confluence with the Waccamaw River is north towards Little River Inlet from the Waccamaw River (Carswell and others, 1988).
+Saltwater enters the system through Winyah Bay to the south and Little River Inlet to the north.
+The AIW is affected by semidiurnal tides throughout the entire reach with a mean tide-range of 4.0 ft (feet) at Nixons Crossroads and 3.5 ft at Hagley Landing (National Oceanic and Atmospheric Administration, 1995).
+The Pee Dee and Waccamaw Rivers are tidally affected during low and medium streamflows downstream of the U.S. Highway 701 bridge and U.S. Highway 501 bridge, respectively.
+The simulated streamflow for the Waccamaw River near Wachesaw Landing for July 1990 (fig. 2a) shows peak ebb flows are between 11,000 and 15,000 ft^3/s, whereas peak flood flows are more variable and are between 5,000 and 15,000 ft^3/s.
+The simulated streamflow for the AIW near S.C. Highway 544 for July 1990 (fig. 2b) shows peak ebb flows are between 1,800 and 2,800 ft^3/s, whereas peak flood flows are more variable and are between 1,000 and 2,500 ft^3/s.
+(fig. 2)
+Figure 2.
+Simulated streamflow hydrographs for two locations on the Grand Strand, S.C., July 1990.
+Methods
+The BRANCH and BLTM models were used to simulate the streamflow and water-quality for the low-flow period of July 1990.
+For the purposes of this analysis, only two point-source discharges were included in the model; one on the Waccamaw River near Wachesaw Landing and the other on the Atlantic Intracoastal Waterway near S.C. Highway 544.
+The hydraulic data for the BLTM were simulated with the BRANCH model by using measured water-levels at the model boundaries.
+Steady-state water-quality boundary conditions for the BLTM were determined by SCDHEC as part of the wasteload allocation process.
+Boundary conditions for ammonia-nitrogen, nitrate-nitrogen, and ultimate carbonaceous biochemical oxygen demand represented the 95^th percentile of the monthly monitoring data for SCDHEC stations near the model boundaries for the period 1980-1994.
+Boundary conditions for temperature and dissolved-oxygen concentration represent the 95^th and 5^th percentiles, respectively, of the daily mean values from the USGS continuous monitors at the boundaries for the period 1990-1994.
+Various point-source loading conditions are compared with a condition where there is no point-source discharge into the system, described to be a "no load" condition.
+The effects of the point-source loading conditions can be evaluated by comparing the differences in the dissolved-oxygen concentration for simulation.
+The model is used to compare relative differences between various point-source loading conditions rather than to predict the absolute dissolved-oxygen concentration of the system under a particular point-source loading condition.
+The modeled absolute value could be in error, but relative differences in the simulated results are more likely to be accurate.
+A "no load" condition was simulated by omitting the point-source loadings.
+Simulations were made for the "load" condition.
+Point-source loadings (15 milligrams per liter [mg/L] ultimate carbonaceous oxygen demand, 1 mg/L ammonia-nitrogen, and 6 mg/L dissolved oxygen) were input to the system at the two discharge locations.
+The dissolved-oxygen concentration minimum (dissolved-oxygen sag) was located downstream of the discharge location.
+Model simulations were compared with the no-load simulation.
+For each averaging interval, point-source discharges were increased until the State dissolved-oxygen standard was violated.
+The UOD was determined for each averaging interval and loading condition (equation 1).
+Results
+The simulated dissolved-oxygen concentrations for each averaging interval were evaluated to determine the extent of excursions from the no-load condition.
+For the Waccamaw River near Wachesaw Landing, the maximum hourly excursions from the no-load condition was 0.20 mg/L and the majority of the excursions were less than 0.1 mg/L for all the loading conditions.
+For the AIW at S.C. Highway 544, the maximum excursion from the no-load condition was 0.28 mg/L and majority of hourly excursions were less than 0.1 mg/L for all the loading conditions (table 1).
+(table 1)
+A time series of 7 days of the July 1990 simulation at the location of the sag downstream from Wachesaw Landing on the Waccamaw River (fig. 3a) shows that the loading to the system decreased the dissolved-oxygen concentration over the duration of the simulation, with the greatest excursion occurring on July 28 and 29.
+Loadings affect the dissolved-oxygen profile for approximately 18 miles for the Waccamaw River and Bull Creek reach (fig. 3b).
+A maximum 7-day mean difference of 0.11 mg/L from the no-load condition which occurred 4.9 miles upstream of the confluence of the Waccamaw River and the Pee Dee River.
+(fig. 3)
+Figure 3.
+(A) Simulated dissolved-oxygen concentration for six loading conditions for the Waccamaw River south of Wachesaw Landing, July 24-30, 1990.
+(B) Longitudinal 7-day mean dissolved-oxygen concentration profile for the reach of the Waccamaw River and Bull Creek near Wachesaw Landing.
+The time series of dissolved-oxygen concentration for the AIW site north of S.C. Highway 544 (fig. 4a) show that the increased loading to the waterway had noticeably different effects there than at the site on the Waccamaw River.
+Rather than decreasing the dissolved-oxygen concentration for the entire simulation, significant differences occur at the peaks and troughs of the dissolved-oxygen concentration oscillations.
+Smaller differences occur on the rising and falling portions of the oscillation.
+The increased loading had an effect on the dissolved-oxygen profile for approximately 20 miles (fig 4b), with a maximum 7-day mean difference of 0.07 mg/L occurring 13.4 miles south of the S.C. Highway 544 bridge.
+(fig. 4)
+Figure 4.
+(A) Simulated dissolved-oxygen concentration for six loading conditions for the Atlantic Intracoastal Waterway north of S.C. Highway 544, July 24-30, 1990.
+(B) Longitudinal 7-day mean dissolved oxygen concentration profile for the reach of the Atlantic Intracoastal Waterway near S.C. Highway 544.
+For the Waccamaw River near Wachesaw Landing, point-source loadings can increase by 125 percent with a maximum difference in dissolved-oxygen concentration from the no-load condition of 0.20 mg/L, or 5.9 percent of a 7-day mean dissolved-oxygen concentration of 3.4 mg/L (table 1, fig. 3b).
+For the AIW near S.C. Highway 544, point-source loadings can increase by 180 percent with a maximum difference in the dissolved-oxygen concentration of 0.28 mg/L, or 7.0 percent of a 7-day mean dissolved-oxygen concentration of 4.0 mg/L (table 1, fig. 3b).
+Discussion and Conclusion
+The ultimate goal of determining the assimilative capacity for wasteload allocations for a receiving stream is to protect the designated uses of the system.
+Water-resource managers must decide the allowable exposure from impacted waters that the aquatic community can accommodate and still be healthy.
+For two locations on the Grand Strand, the use of different averaging intervals resulted in increased loading by 125 percent for the Waccamaw River near Wachesaw Landing while having a maximum impact on the dissolved-oxygen concentration of 5.9 percent from the "natural" or no-load condition for the July 1990 simulation.
+For the AIW near S.C. Highway 544, the loading can increase by 180 percent, with a maximum impact of 7.0 percent on the no-load dissolved-oxygen concentrations by use of different averaging intervals.
+Water-resource managers must decide the excursion from a natural condition that is acceptable while balancing the environmental and economic consequences of the permitting point-source discharges.
+As the demographic and economic pressures on coastal areas continues to grow, there is a need to develop a more comprehensive procedure for determining wasteload allocations and total maximum daily loads for tidal waters to ensure integrity of the aquatic community.
+References
+Carswell, W.J., Sanders, C.L., and Johnson, D.M., 1988, Freshwater supply potential of the Atlantic Intracoastal Waterway near Myrtle Beach, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 88-4066, 45 p.
+Drewes, P.A., and Conrads, P.A., 1995, Assimilative capacity of the Waccamaw River and the Atlantic Intracoastal Waterway near Myrtle Beach, South Carolina, 1989-92: U.S. Geological Survey Water-Resources Investigations Report 95-4111, 58 p.
+Jobson, H.E., 1997, Enhancements to the Branched Lagrangian Transport Modeling System: U.S. Geological Survey Water-Resources Investigation Report 97-4050, 56 p.
+Jobson, H.E., and Schoelhamer, D.H., 1987, Users manual for a Branched Lagrangian Transport Model: U.S. Geological Survey Water-Resources Investigation Report 87-4163, 73 p.
+National Oceanic and Atmospheric Administration, 1995, Tide tables 1995, high and low predictions - East Coast of North and South America, Including Greenland: U.S. Department of Commerce, National Ocean Service, 301 p.
+Schaffranek, R.W., Baltzer, R.A. and Goldberg, D.E., 1981, A model for simulation of flow in singular and interconnected channels: U.S. Geological Survey Techniques of Water-Resource Investigation, book 7, chap. C3, 100 p.
+South Carolina Department of Health and Environmental Control, 1991, Agreement on the development of wasteload allocations/total maximum daily loads and NPDES permit limitations, 43 p.
+---- 1993, Water classifications and standards (Reg. 61-68) and classified waters (Reg. 61-69) for the State of South Carolina, 36 p.
+U.S. Environmental Protection Agency, 1986, Ambient Water Quality Criteria for Dissolved Oxygen, p. 33-36.
+__________________________________________________________________
+Back to the SMIG Features Page
+[ISMAP:buttons.gif]
+Home | Mailing List | Features | Conferences | Classes | Reading | Model Archives | Feedback __________________________________________________________________
+Stewart Rounds, SMIG coordinator 

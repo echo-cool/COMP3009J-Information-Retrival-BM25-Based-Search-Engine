@@ -1,0 +1,46 @@
+[pjscolour.gif] Padhraic Smyth [jpl_logo_noborder.gif]
+You can visit my Web page at UCI to get an idea of what I am up to there.
+However I still have a visiting appointment here at JPL and visit regularly to participate in several ongoing research projects.
+This page will continue to reflect my JPL interests, but may be less than completely up to date.
+__________________________________________________________________
+Research Interests:
+* Statistical pattern recognition, machine learning, applied statistics, image and time series analysis, source coding, telecommunications, and fun problems in general.
+Specific topics of interest at the moment include multivariate density estimation, hidden Markov and graphical models, combining probabilistic opinions of multiple experts, novel methods for decision tree and rule induction, and automated feature extraction for discrimination in spatial and temporal data.
+For a publications list click here.
+__________________________________________________________________
+What I do at the Jet Propulsion Laboratory (JPL):
+* At JPL I work on the development of theory, algorithms, and tools for the analysis of very large datasets, typically collaborating with various researchers and scientists here at JPL and at universities.
+Sample projects include automated detection of volcanoes in images of Venus, extracting qualitative patterns from spatio-temporal atmospheric datasets, identifying and tracking sunspots in images of the Sun, automated algorithms for intelligent data analysis on-board micro-spacecraft, and hidden Markov models for online fault monitoring in various hardware systems such as NASA Deep Space Network ground antennas.
+__________________________________________________________________
+New Items:
+* A new technical report on hidden Markov models and probabilistic independence networks is available by ftp in compressed postscript.
+* The 1997 AI and Statistics Workshop now has a Website up and running.
+The Web pages are in rainy Seattle but the workshop will be in the warmer climes of Florida.
+* A new book which has just been published: U. M. Fayyad, G. Piatetsky-Shapiro, P. Smyth, and R. Uthurasamy, Advances in Know ledge Discovery and Data Mining an edited volume describing the latest research and applications in the field of knowledge discovery in databases is now available from AAAI Press/The MIT Press.
+__________________________________________________________________
+Some recent papers available online:
+* P. Smyth, A. Gray, U. Fayyad, "Retrofitting Decision Tree Classifiers using Kernel Density Estimation," (Unix Compressed Postscript, 172k) in Proceedings of the 1995 Machine Learning Conference.
+Introduces a method for obtaining smooth class probability estimates from classification trees by embedding nonparametric kernel density methods in the tree structure.
+* P. Smyth, "Markov Monitoring with Unknown States," (Unix Compressed Postscript, 345k) in IEEE Journal on Selected Areas in Communications (JSAC), Special Issue on Intelligent Signal Processing for Communications, December 1994.
+Describes the use of hidden Markov models for online fault detection with applications to fault monitoring of JPL/NASA Deep Space Network ground antenna systems: the "unknown" in the title refers to states/classes not in the training data, the paper discusses methods for handling this situation which frequently occurs in fault monitoring applications.
+* P. Smyth et al., "Inferring Ground Truth from Subjective Labelling of Venus Images," (Unix Compressed Postscript, 227k), in Advances in Neural Information Processing Systems 7, MIT Press, 1995 (NIPS94 paper).
+How can one combine class label estimates from multiple experts? Problem is discussed in the context of volcano counting in images of Venus, a particular probabilistic model for expert uncertainty is applied, parameter estimation via EM, empirical results discussed for data from a particular set of geologists for this problem.
+Also available is the default reference paper on the volcano classification problem, "Automating the hunt for volcanos on Venus,", by Burl et al. from the CVPR 1994 conference.
+* C. Brodley and P. Smyth "The Process of Applying Machine Learning Algorithms," (Unix Compressed Postscript, 70k), paper for ML95 workshop on Applying Machine Learning in Practice.
+Discussion paper which identifies and categorizes the various factors and issues which typically occur when one applies classification or regression algorithms in practical applications.
+A model for the overall application development process is proposed and illustrated with references to various real-world applications.
+__________________________________________________________________
+Teaching:
+* Pattern Recognition, CNS/EE 124, Caltech, Spring 1995.
+An introductory course on statistical pattern recognition at the senior/first-year graduate level.
+* Probabilistic Machine Learning: Putting Theory into Practice IJCAI-95 Tutorial.
+A four hour tutorial on machine learning from a probabilistic perspective.
+__________________________________________________________________
+Research Links of Interest:
+* The JPL Machine Learning Group * The JPL Public Home Page * Statistical Pattern Recognition Information * A Guide to Statistics Home Pages * The Uncertainty in AI Page * Society for AI and Statistics * Signal Processing Information __________________________________________________________________
+You can email me at:
+pjs@galway.jpl.nasa.gov
+Postal Address:
+JPL 525-3660 California Institute of Technology 4800 Oak Grove Drive Pasadena, CA 91109.
+Telephone, FAX:
+tel: 818 306 6422 fax: 818 306 6912

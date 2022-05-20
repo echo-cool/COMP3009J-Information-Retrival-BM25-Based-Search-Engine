@@ -1,0 +1,38 @@
+#next previous up next next up previous Next: 64-bit Linear Congruential Generator Up: The RNG Random Number Previous: Design Requirements Random Number Generators The RNG library provides a family of linear congruential generators of the form x[n] = a x[n - 1]
+The multiplier, a, the addend, b, and the modulus, m, are chosen to provide a variety of high quality generators for the code developer to employ.
+Two power-of-two modulo generators, a Mersenne prime modulo generator, and several other prime modulo generators are provided.
+Generators using a modulus that is a power of two are the fastest, but suffer from a hierarchy of patterns [4] in the low order bits that may pose a problem for some applications.
+Generators using a prime modulus do not suffer from the hierarchy of patterns noted for a power of two modulus, with the choice of Mersenne primes [4] being particularly efficient.
+Patterns of a different form have been discovered for Mersenne primes [5], however.
+Primes of a slightly more complicated construction remove this defect while not being significantly more expensive for modular arithmetic.
+The prime modulus generators provided in the RNG library have the useful feature that the value zero does not occur as a valid random number state.
+By carefully zeroing a random number state when it is copied or retired, the random number generator routines will trap on the invalid value should the retired random number state be recycled.
+This has proven to be very useful when debugging applications that implement per-particle random number state.
+The interface routines for the random number generators in the RNG library take the general form:
+Rng_Type RngXSeed( Rng_UInt32 i, Rng_UInt32 j );
+Rng_Type RngXSpawn( Rng_Type *x );
+int iRngX( Rng_Type *x );
+double dRngX( Rng_Type *x );
+float fRngX( Rng_Type *x );
+where X is replaced with a token that indicates the type of linear congruential recurrence relation being used for the random number generator.
+The RngXSeed() function creates a randomly selected state by passing the two integer arguments through the cryptographic hash function.
+The resulting random number state is returned.
+Rng_Type, Rng_UInt32 and the function declarations are defined in the header file rng.h.
+The routine RngXSpawn() takes an existing RNG state, called the parent, and advances it.
+A copy of the advanced parent state is then hashed to produce an uncorrelated child RNG state that is returned.
+As an example of the use of RngXSpawn(), consider the case where a ``parent particle'', parent, spawns three ``child particles'', child[3].
+The particles are represented by a struct that has a Rng_Type member named rng.
+Then, the following lines of code demonstrate the seeding of the children's RNG states using the parent's RNG state.
+for( i = 0; i 
+child[i].rng = RngXSpawn( 
+}
+Note that parent.rng is advanced three times in this example.
+Finally, note that both RngXSeed() and RngXSpawn() take 64-bits values, RngXSeed() in the form of two 32-bit unsigned integers, and hash them through the same hashing algorithm described in Section 4.
+The last three functions step the random number state and return uniformly distributed numbers in integer and floating point formats.
+The function iRngX() returns a 31-bit integer in the range [0, 2^31).
+The function dRngX() returns a double precision floating point value in the range [0,1).
+The function fRngX() returns a single precision floating point value in the range [0,1).
+If one casts the value returned by dRngX() to a float, it is possible for the value 1.0 to occur due to rounding.
+__________________________________________________________________
+Subsections * 64-bit Linear Congruential Generator * 48-bit Linear Congruential Generator * 48-bit CRI Linear Congruential Generator * 61-bit Prime Modulus Linear Congruential Generator * 2^64 -2^10 + 1 Modulus Linear Congruential Generator * 2^62 -2^16 + 1 Modulus Linear Congruential Generator __________________________________________________________________
+next up previous Next: 64-bit Linear Congruential Generator Up: The RNG Random Number Previous: Design Requirements

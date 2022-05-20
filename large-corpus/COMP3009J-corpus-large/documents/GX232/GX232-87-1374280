@@ -1,0 +1,194 @@
+Fermi National Accelerator Laboratory FERMILAB-TM-1999 Recent Transition Crossing Results from the Fermilab Main Ring C.M. Bhat and K.Y. Ng
+Fermi National Accelerator Laboratory P.O. Box 500, Batavia, Illinois 60510
+March 1997
+Operated by Universities Research Association Inc. under Contract No.
+DE-AC02-76CH03000 with the United States Department of Energy
+Disclaimer This report was preparedas an account of work sponsored by an agency of the United States Government.
+Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, expressed or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights.
+Reference herein to any speci c commercial product, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof.
+The views and opinions of authors expressed herein do not necessarily state or re ect those of the United States Government or any agency thereof.
+Distribution Approved for public release; further dissemination unlimited.
+TM-1999
+RECENT TRANSITION CROSSING RESULTS FROM THE FERMILAB MAIN RING C.M. Bhat and K.Y. Ng Fermi National Accelerator Laboratory, P.O. Box 500, Batavia, IL 60510
+(January, 1997)
+I. II.
+III.
+IV.
+Transition Problems at Main Ring Recent Measurements Some Considerations Conclusions
+Expanded from a talk given at the Transition Crossing Mini-Workshop, May 20-23, 1996, Fermilab
+Operated by the Universities Research Association, Inc., under contract with the U.S. Department of Energy.
+1
+I. TRANSITION PROBLEMS AT MAIN RING The Fermilab Main Ring accelerates protons from 8.9 GeV to 120 or 150 GeV and crosses transition at 17.696 GeV or at t = 18:860 [1].
+In recentyears, passive and active dampers have been installed in the Booster to suppress the longitudinal coupled-bunch instabilities driven by the parasitic modes of the Booster rf cavities.
+As a result, bunches delivered to the Main Ring nowhave bunch area almost independent of intensity.
+At injection in the Main Ring, typically, the 95% bunch area is in the range of 0.06 to 0.09 eV-sec.
+After crossing transition, the longitudinal emittance will be blown up by a factor of 2 to 3, resulting in a nal emittance approximately in the range of 0.18 to 0.25 eV-sec.
+There are also beam losses during transition crossing.
+We outline below the known mechanisms responsible for the emittance dilution and beam loss during transition crossing: 1.
+Scraping The Main Ring has a rather small momentum aperture of about 0:25%.
+This had been measured by injecting low-intensity bunches with gradually increasing emittance until beam loss was observed [2].
+The scraping is in the vertical direction.
+One reason of having a large vertical amplitude beam is the coupling between vertical and horizontal betatron oscillations.
+The main cause, however, is the result of the implementation of the overpass across one of the experimental areas, whichintroduces vertical dispersion and alters the closed orbit of the beam in the vertical direction.
+2.
+Johnsen's nonlinear eect [3] Because, the slippage factor is momentum dependent, the higher- and lowermomentum particles in a bunch will cross transition at dierent times [4]
+The switching of the rf synchronous phase during transition crossing, however, is done as soon as the synchronous particle crosses transition energy.
+Hence the higher- and lower-momentum particles will travel along defocusing tra jectories for a part of the time during transition crossing.
+After crossing transition, these defocusing tra jectories end up as two tails at the edge of the bunch.
+Filamentation will therefore lead to emittance growth.
+These two tails may also fall outside the tight moving bucket during acceleration, resulting in beam loss.
+Recent improvements in reducing the initial emittance of the bunches at injection by suppressing the longitudinal coupled bunch instabilities in the Booster [5] have diminished the Johnsen's non-linear eect in Main Ring transition crossing.
+2
+3.
+Bunch length mismatch The space-charge force is repulsive.
+However above transition, it behaves as an attractive force.
+Thus, the eective rf focusing force becomes stronger after transition.
+The bunch with a shorter equilibrium bunch length in the rf bucket will develop quadrupole oscillations.
+This leads to emittance growth after transition.
+In the case of the Main Ring, a quadrupole damper has been installed [6].
+It tracks the quadrupole synchrotron-frequency signal from the bunch and feeds back the necessary correction rf voltage to the main ampli ers.
+Figures 1(a) and (b) depict the bunch length after transition without and with the quadrupole damper turned on.
+It is evident that with the damper operating, the quadrupole oscillation amplitude is damped out signi cantly.
+Figure 1: (a) Quadrupole synchrotron oscillations are observed after transition due to the mismatch of equilibrium bunch lengths.
+(b) These oscillations are very much damped when the quadrupole damper is turned on.
+3
+4.
+Microwave and negative-mass instabilities Negative-mass instability is driven by the space-charge force.
+The growth rate increases linearly with frequency until 77 GHz [7].
+Simulations of transition crossing in the Main Ring have been performed using ESME for 0.1 eV-sec bunches with 4 1010 particles per bunch including space-charge force and resistivewall impedance.
+The top phase-space plot in Fig. 2 represents the shape of a bunch in the longitudinal
+Figure 2: Simulation results of a 0.1 eV-sec Main Ring bunchof intensityof4 1010 protons.
+The top plot shows the results 100 turns after transition using 20,000 macro-particles with 256 bins in the 18.8 ns rf wavelength.
+Fringes of microwave growth up to 6.8 GHz are observed.
+In the lower plot, 512 bins and 8 times the macro-particles are used.
+Fringes corresponding to 13.6 GHz are observed.
+4
+phase space at about 100 turns after the transition.
+In this calculation, 20000 macroparticles were populated in 256 bins of equal width across an rf wavelength of 18.8 ns; i.e., the resolution of the simulation was as high as 56=(2 18:8) = 6:81 GHz.
+The fringes seen (in the edges of the bunch) corresponds this frequency.
+In the lower plot of Fig. 2, the size of the bins was halved and the number of macro-particles was increased by a factor of eight [9].
+Here, we see fringes corresponding to 13.6 GHz.
+This indicates that the present simulation studies have to be improved to incorporate instability arising from the high-frequency components.
+In other words, we are still not able to predict on paper the emittance growth due to negative-mass instability.
+Experimentally, some signatures of microwave instability has been observed in the Main Ring just after crossing transition [7].
+Figure 3 shows the signals from the bunches of intensity2:2 1010 per bunch at zero span centered at 5 GHz as a function of time.
+The rst plot is for the bunchhaving an emittance of 0.06 eV-sec, while the second is of 0.10 eV-sec, demonstrating Here, we see obviously that the signals grew at a higher rate when the frequency was higher.
+These measurements demonstrate clearly that the signals came from an intensity-dependent instability driven by a space-charge force.
+Figure 3: The oscilloscope was set at zero span centered at 5 GHz.
+We see that the microwave growth for a bunch with emittance 0.06 eV-sec ( rst plot) is larger than that with 0.1 eV-sec (second plot).
+In each case, the transition was crossed at the 4th time division.
+5
+Figure 4: Microwave signals were observed from 0.07 eV-sec Main Ring bunches as functions of time, when the oscilloscope was set at zero span, centered at 4, 5, 6, and 7 GHz.
+We see that the growth in amplitude increases as the frequency increases.
+In each plot, the arrow points to the time at which transition was crossed.
+The instability occurs near the transition region when Landau damping due to the slippage factor is too small.
+One way to avoid excessive growth is to shorten the transition time by raising the ramp rate across transition.
+In the present collider run in the early half of 1996, the rate of transition crossing has been increased from t =90s 1 to 125 s 1 .
+Of course, the best way out is to implementa t -jump scheme.
+_ 5.
+Beam loading For a high-intensity operation of the Main Ring, beam loading onto the cavities 6
+is an important concern.
+Although there is a bunch-by-bunch compensation in the Main Ring low-level rf system, the feedback has not been ideal.
+For a long train of 84 bunches, the end bunches usually contain the most beam-loading errors.
+Of course, there may have been some coupled-bunch motions also.
+For this reason, beam loss has been severe at higher intensities.
+This can be seen in the recent measurement depicted in Figs. 5.
+We see no beam loss in the 3-turn injection and larger and larger losses as the intensity of the injection was increased to 7 turns.
+Although most of this loss occurred near transition, there was also beam loss just after injection.
+If there were no beam losses, the average bunchintensity should increase linearly with the number of turns at injection.
+Figure 6 shows a drop from this linear relationship indicating that beam loss increases with intensity.
+Figure 5: Transition crossing was monitored for a batch of 84 consecutive Main Ring bunches.
+No loss was seen at (C) 4-turn injection.
+However, losses were observed for (A) 7-turn and (b) 6-turn injections.
+II.
+RECENT MEASUREMENTS Recently an experiment on transition crossing was performed with only 13 proton 7
+Figure 6: The bunch intensity as a function of turn number of Booster injection shows the deviation from linearity after 5-turn injection.
+This is the result of beam loss due to the increase in beam loading at higher injection intensity.
+bunches injected into the Main Ring with the ramp rate at transition, t = 125:3s 1.
+_ The rf voltage was dipped or ducked under right before transition, but with the ramp rate at transition held constant at t = 125:3 s 1.
+Since the momentum spread of a _ q bunchvaries as Vrf = , it can be made not growing too excessively during transition crossing by reducing the rf voltage Vrf .
+This rf manipulation during transition crossing is referred to as \duck under."
+As shown in Fig. 7, no loss was observed across transition even when the intensity reached the highest available intensityof 3:1 1010 per bunch.
+From the mountain-range plots in Fig. 8, the bunch lengths before and after transition were determined.
+Together with the rf voltage and the rf synchronous phase, we found that the 95% emittance before transition was 95 0:096 eV-sec, and it increased to 95 0:12 eV-sec after transition.
+The increase appears to be 25%.
+However, there is a large uncertaintyof 15%, and most of it comes from the mountain-range plot.
+Because of the large error involved, it is not possible to derive the growth in emittance as a function of bunchintensity.
+8
+Figure 7: For a batch of 13 consecutive Main Ring bunches, no loss was observed during transition crossing with the rf voltage ducked under, even when the intensity corresponded to 8-turn injection.
+Figure 8: Mountain-range plots of a Main Ring bunch for the situations of 2turn and 8-turn injections, with the rst two traces (from bottom upward) before transition, the third one roughly at transition, and the last two after transition.
+Horizontal scale is 2 ns per division.
+9
+III.
+SOME CONSIDERATIONS The rf voltage Vrf in the Main Ring during duck under was 2.64 MV and the synchronous phase was s =69:17 .
+The nonadiabatic time Tc [10] is T c
+=
+" 2 4 ! !# tan s 1=3 t t
+2!0h
+t2 _
+=3:16 ms ; q
+(3.1)
+where we have used the relative velocity at transition t = 1 t 2, revolution frequency !0=(2) = 47:480 kHz, and rf harmonic h = 1113.
+In Eq. (3.1), the rst bracket depends on the lattice of the accelerator and cannot be changed easily.
+Inside the second bracket, the rate of crossing transition t is determined by the ramp curve, _ and the synchronous phase s is determined by the Vrf table.
+Raising t will make _ the nonadiabatic time smaller and thus reduce emittance growth due to collective instabilities.
+However, there are other eects which come into play.
+For example, the half bunch length at transition is 6 = 35=62 (1=3) where the 95% emittance just before E0 =0:93827 GeV is the proton rest
+p
+! 95 Tc2 t 1=2 _ E0 t2 t4 !
+=0:725 ns ;
+(3.2)
+6 (1=3) 95 t2 1=2 =0:26% : ^ = (3.3) 232=3 t2Tc2 tE0 _ This maximum momentum spread is very close to the measured momentum aperture of 0:25% for Main Ring.
+It is important to note that from Eqs. (3.2) and (3.3), E =1:1595 , which indicates that the bunch shape is tilted in the longitudinal phase space at transition.
+This may explain why there was no beam loss even for the high-intensity bunches.
+Without duck under, we think that there would be beam loss due to scraping as was seen in our studies.
+^ Equations.
+(3.1), (3.2) and (3.3) suggest that Tc, , and are dependentupon t and s as follows: _ 1 3 tan 3 s ; / tan 1 s ; Tc / 2 1 t3 _ t6 _ Hence, as t is increased from 90 s 1 to 125:3 s 1 _ ^ of 1.25 which raises by a factor of 1.12.
+This
+p
+transition is taken as 95 = 0:09 eV-sec, and energy.
+The half momentum spread is
+: (3.4) 3 tan 1 s , Tc will be decreased by a factor will, in turn, help to reduce the t
+^
+/
+_
+1 6
+10
+^ onset of microwave instability.
+However, with a larger , the beam will become more susceptible to scraping.
+Dipping the rf voltage from 2.93 MV to 2.64 MV will increase s from 50:69 ^ to 69:17 .
+Thus, Tc increases by a factor of 1.29, but decreases by the same fac^ tor.
+Therefore, without dipping the Vrf , we expect = 0:34%, which exceeds the momentum aperture of the Main Ring leading to beam scraping.
+IV.
+CONCLUSIONS For a beam emittance smaller than 0.1 eV-sec in the Main Ring, the Johnsen's nonlinear eect across transition should no longer be a problem.
+As the local density inside a bunch increases, microwave and negative-mass instabilities will become more and more important.
+In this recent transition crossing studies in the MR with bunch intensity 3:1 1010 protons per bunch, the increase in bunch emittance after the transition was about 25%.
+However, in the future when the bunch intensity is increased signi cantly compared with 3:1 1010 protons per bunch and at the same time if the bunch emittance is further reduced, microwave and the negative-mass instabilities will become serious issues.
+When the rf voltage was ducked under, we do not see any beam loss across transition for a train of 13 bunches at the peak intensityof 3:1 1010 per bunch, when the rf voltage was ducked under.
+Our analysis shows that if the rf voltage was not ducked under, the momentum spread of the bunchwould exceed the 0:25% momentum aperture of the Main Ring resulting in beam loss.
+The Main Injector will have ^ amuch large momentum aperture 2:0%.
+In addition the rate of cross transition will be much faster, since the same rf system of the Main Ring will be used and the Main Injector has a revolution period 13:25=7 2 times shorter than that of the 3 Main Ring.
+The nonadiabatic time will be 2 2 times smaller, and the momentum 1 spread of the bunch 2 6 times smaller.
+Therefore, there should not be any scraping even if the bunch emittance is doubled.
+Beam loading is certainly a big problem in transition crossing in the Main Ring.
+It leads to emittance growth and eventual beam loss due to scraping.
+Work is being done to the beam-loading compensation system now, and hopefully the problem will be solved in the next collider run of the Tevatron.
+11
+References [1] K.Y. Ng, C.M. Bhat, I. Kourbanis, J. MacLachlan, M. Martens, and J. Shan, Debunching Studies at Energies close to Transition, Proc.
+XV Int. Conf. on High Energy Accelerators, Hamburg, Germany, July 20-24, 1992, Ed. J. Rossbach, p 1049.
+I. Kourbanis and K.Y. Ng, Experimental Study of the Main Ring Transition Crossing, ibib, p 1046.
+[2] R. Gerig and C. Ankenbrandt, Main Ring Momentum Acceptance at 8 GeV, Fermilab Accelerator Expt. 132, 1986.
+[3] K. Johnsen, Proc.
+CERN Symposium on High-Energy Accelerators and Pion Physics, Geneva, 1956, Vol.~ p. 106.
+1, [4] I. Kourbanis, J. MacLachlan, and K. Meisner, Fermilab Internal Report EXP172, 1991.
+[5] D. Wildman and K. Harkay, HOM RF Cavity Dampers for Suppressing Coupled Bunch Instabilities in the Fermilab Booster, Proc. of the 1993 Particle Accelerator Conference, Washington, DC, May 17-20, 1993, p 3258.
+[6] I. Kourbanis and D.P. McGinnis, private communication.
+[7] I. Kourbanis and K.Y. Ng, Transition Crossing in the Fermilab Main Ring, Past and Present, Proc. of the 1993 Particle Accelerator Conference, Washington, DC, May 17-20, 1993, p 3630.
+W. Hardt, Gamma-transition-jump scheme of the CPS, Proc. 9th Int. Conf. on High Energy Accelerators, Stanford, 1974.
+[8] See for example, K.Y. Ng, Emittance Growth due to Negative-Mass Instability Above Transition, Proc.
+Workshop on Beam Instabilities in Storage Rings, Heifei, China, 1994 Ed. W. Chou, Y.
+Jin, and H. Liu, p 251.
+[9] This follows from the 3-in-1 rule.
+See for example, J. Wei, Longitudinal Dynamics of the Non-Adiabatic Regime on Alternating-Gradient Synchrotrons, Ph D thesis, SUNY (1990).
+[10] A. Srenson, Particle Accelerators 6, 141 (1975).
+12

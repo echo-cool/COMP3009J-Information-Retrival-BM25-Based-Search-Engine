@@ -1,0 +1,97 @@
+The opinion in support of the decision being entered today was not written for publication and is not binding precedent of the Board.
+Paper No. 41 UNITED STATES PATENT AND TRADEMARK OFFICE ________________ BEFORE THE BOARD OF PATENT APPEALS AND INTERFERENCES ________________ Ex parte MICHIHIRO NAGAISHI ________________ Appeal No. 1998-3062 Application 08/425,319 ________________ HEARD: MARCH 7, 2001 ________________ Before KRASS, FLEMING and LEE, Administrative Patent Judges.
+FLEMING, Administrative Patent Judge.
+DECISION ON APPEAL This is a decision on appeal from the final rejection of claims 7-12.
+Claims 1-6 have been canceled.
+The invention
+relates to apparatus for using computer technology to recognize characters.
+More specifically, the present
+inventions relates to an apparatus for character segmentation in which hand-written characters are provided as input, -1-
+Appeal No. 1998-3062 Application 08/425,319
+characters are segmented from
+character data therefrom and the result of the segmentation are used for character recognition.
+Independent claim 7 is reproduced as follows: 7.
+An apparatus for segmenting a desired character from an array of characters, comprising: an input receiving an array of characters represented as electronic data; a computer configured to calculate a field of induction at points within a proximity of said array of characters and for determining a character region of each character by using fields of induction for segmenting a character from the array of characters; and an output containing electronic data representing individual characters from said array of characters.
+The Examiner relies on the following reference: Kubota, Tadashi et al., "Handwritten Character Recognition Using Transformation by Field", Systems, Computers, Controls, vol. 3, No. 3, pgs. 1-9 (May 1972).
+Claims 7-12 stand rejected under 35 U.S.C. Â§ 103 as unpatentable over Kubota.
+Rather than reiterate the arguments of Appellant and the Examiner, reference is made to the brief and answer for the respective details thereof.
+-2-
+Appeal No. 1998-3062 Application 08/425,319
+OPINION We will not sustain the rejection of claims 7-12 under 35 U.S.C. Â§ 103.
+The Examiner has failed to set forth a prima facie case.
+It is the burden of the Examiner to establish why one having ordinary skill in the art would have been led to the claimed invention by the express teachings or suggestions found in the prior art, or by implications contained in such teachings for suggestions.
+In re Sernaker, 702 F.2d 989, 995, 217 USPQ 1, 6 "Additionally, when determining
+(Fed.
+Cir. 1983).
+obviousness, the claimed invention should be considered as a whole; there is no legally recognizable 'heart' of the invention."
+Para-Ordnance Mfg. v. SGS Importers Int'l, Inc.,
+73 F.3d 1085, 1087, 37 USPQ2d 1237, 1239 (Fed.
+Cir. 1995), citing W. L. Gore 
+Cir. 1983).
+-3-
+Appeal No. 1998-3062 Application 08/425,319
+On pages 10 and 11, Appellant argues that Kubota does not segment a character.
+Appellant further argues that Kubota
+does not utilize a field of induction as defined by Appellant's specification and as claimed.
+In particular
+Appellant points out that independent claim 7 requires "an apparatus for segmenting a
+desired character from an array of characters, comprising ... a computer configured to calculate a field of induction at points within a proximity of said array of characters and for determining a character region of said character by using fields of induction for segmenting a character from the array of characters."
+On page 12 of the brief, Appellant also
+points out that independent claim 9 requires "an apparatus for character recognition with segments a desired character from an array of characters and which recognizes the segmented character, comprising ... a computer configured to calculate a field of induction at points within a proximity of said array of characters and for determining a character region of each character using fields of induction for segmenting a character from the array of characters."
+On pages 12 and 13 Appellant -4-
+Appeal No. 1998-3062 Application 08/425,319
+argues that claim 11 recites "a method of segmenting characters in an electronic image of text containing pixels, comprising the steps of: a. b. induction c. said selecting at least a portion of said image; determining within said portion, a field of at a variety of points; and determining character boundaries using values of field of induction."
+As pointed out by our reviewing court, we must first determine the scope of the claim.
+the claim."
+"[T]he name of the game is
+In re Hiniker Co., 150 F.3d 1362, 1369, 47 USPQ2d Moreover, when interpreting a
+1523, 1529 (Fed Cir. 1998).
+claim, words of the claim are generally given their ordinary and accustomed meaning, unless it appears from the specification or the file history that they were used differently by the inventor.
+Carroll Touch, Inc. v. Electro
+Mechanical Sys., Inc. 15 F.3d 1573, 1577, 27 USPQ2d 1836, 1840.
+Although an inventor is indeed free to define the
+specific terms used to describe his or her invention, this must be done with reasonable clarity, deliberateness, and
+-5-
+Appeal No. 1998-3062 Application 08/425,319
+precision.
+In re Paulsen, 30 F.3d 1475, 1479, 31 USPQ2d 1671,
+1674 (Fed.
+Cir. 1994).
+Upon our reading of Appellant's claims, we agree with the Appellant that the claims require using a field of induction technique to segment characters.
+Furthermore, we note that
+the term "field of induction", is defined in the specification.
+In particular Appellant defines the term In
+"field of induction" on page 12 by equation (1).
+particular, Appellant states that the field of induction is calculated using equation (1) which determines the intensity MP of the field of induction on the
+retina at point P.
+Appellant further points out that in
+equation (1), only the sum of scanning of portions directly irradiated by light emitted from point P is calculated.
+the term "field of induction" has a particular meaning as defined by Appellant's specification.
+Turning to Kubota, we agree with Appellant that Kubota is not directed to segmenting a desired character from an array of characters.
+In particular, on page 1, Kubota states that Thus
+the character has already been segmented and their method is -6-
+Appeal No. 1998-3062 Application 08/425,319
+directed to now recognizing that character.
+Furthermore, we
+note that Kubota does mention the term induction field.
+However, Kubota states that the method used to generate a pattern is constructed with imaginary charged particles.
+These particles have initial field which is a function of distance, and they then move to forces of attraction and repulsion between them.
+Thus, Kubota is not directed to the
+field of induction as defined by Appellant's claims.
+In view of the foregoing, we have not sustained the rejection of claims 7-12 under 35 U.S.C. Â§ 103.
+Therefore, the Examiner's decision is reversed.
+REVERSED
+ERROL A. KRASS Administrative Patent Judge
+MICHAEL R. FLEMING -7-
+) ) ) ) )
+)
+BOARD OF PATENT
+Appeal No. 1998-3062 Application 08/425,319
+Administrative Patent Judge
+JAMESON LEE Administrative Patent Judge
+) ) ) ) ) )
+APPEALS AND INTERFERENCES
+-8-
+Appeal No. 1998-3062 Application 08/425,319
+McDermott, Will 
+-9-

@@ -1,0 +1,372 @@
+U.S. DEPARTMENT OF COMMERCE Office of Inspector General
+PUBLIC RELEASE
+BUREAU OF THE CENSUS PAMS/ADAMS Should Provide Adequate Support for the Decennial Census, but Software Practices Need Improvement Final Inspection Report No.
+OSE-11684/March 2000
+Office of Systems Evaluation
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+Table of Contents EXECUTIVE SUMMARY ......................................................... i INTRODUCTION ................................................................
+1 PURPOSE AND SCOPE ..........................................................
+1 BACKGROUND ................................................................
+2 OBSERVATIONS ...............................................................
+5 I. II.
+III.
+IV.
+V. VI. Deficiencies in Testing PAMS/ADAMS Have Been Compensated for by Extensive Operational Use ............................
+5 Procedures for Problem Tracking and Resolution Are Effective .....................
+7 Procedures for Releasing Capabilities to the Field Are Effective ....................
+8 Augmented Computing Resources Will Improve Performance .....................
+8 Procedures to Identify Potential Duplicate Pay Need Improvement ................
+10 The Bureau Should Continue to Develop and Test the Alternative Data Entry Component .......................................
+11
+CONCLUSION .................................................................
+13 RECOMMENDATIONS .........................................................
+14 ATTACHMENT A: Census Bureau's Response to Draft Inspection Report
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+EXECUTIVE SUMMARY As the largest peacetime civilian mobilization in the United States, the 2000 Decennial Census will entail processing over 3 million applicants for more than 860,000 temporary jobs needed to support the peak workload.
+The Census Bureau will rely on the Pre-Appointment Management System/Automated Decennial Administrative Management System (PAMS/ADAMS) for all applicant processing, personnel actions, and payroll functions for temporary employees during the decennial census.
+PAMS/ADAMS was initially deployed to support the 1998 Dress Rehearsal.
+It has been in use since then and has undergone significant changes.
+We conducted this evaluation to determine whether PAMS/ADAMS will provide accurate, timely hiring and payroll processing during the decennial census.
+Because earlier OIG reviews found that the way in which daily payroll forms were being processed during the dress rehearsal allowed employees to be paid multiple times for the same hours worked, we added the objective of evaluating whether the bureau had solved this problem.
+As a consequence of other dress rehearsal problems, the bureau is developing an alternative data entry system, called PAMS/ADAMS Data Entry (PADE).
+At the request of the Principal Associate Director and Chief Financial Officer and the Associate Director for Decennial Census, we included the additional objective of assessing the bureau's approach to testing PADE.
+In developing PAMS/ADAMS, the bureau did not follow a well-managed software development process.
+As a result, the bureau did not have current and complete requirements and test documentation.
+Consequently, the accuracy and completeness of PAMS/ADAMS cannot be determined by reviewing this information or by independent testing, activities normally associated with a systematic software development effort.
+However, PAMS/ADAMS has been subjected to extensive operational use since the dress rehearsal.
+Such use has allowed the bureau to identify and correct errors and to evaluate changes in an operational environment.
+Indeed, in conducting ongoing pre-census operations, the bureau has been hiring applicants and meeting payrolls, and field representatives have expressed confidence that PAMS/ADAMS will support the requirements of the decennial.
+We believe that the continuous operational use of PAMS/ADAMS has provided a reasonable degree of assurance that the system can adequately support decennial operations.
+At the time of our fieldwork, the bureau had addressed the issue of preventing duplicate pay by implementing a set of procedures to be followed at each local census office (LCO).
+These procedures required LCO payroll clerks to request a report from PAMS/ADAMS identifying employees who had submitted multiple payroll forms for a particular day and then to review the payroll forms identified to determine whether they covered the same hours.
+The opportunity for duplicate pay remained, however, because the approach relied on clerical action to request the i
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+report.
+In response to our recommendation, the bureau has implemented an improved method for avoiding duplicate pay.
+The new data entry system, PADE, was developed without requirements, design, or testing documentation.
+Therefore, we were unable to assess the adequacy of testing.
+In addition, the software that transfers the data from LCOs to regional census centers has serious performance problems, so this component is being redesigned.
+Nonetheless, operational testing and use of PADE in the field suggest that it processes data correctly and has the potential to significantly improve the efficiency of payroll and applicant processing operations.
+Therefore, we recommended that the bureau continue to develop PADE, test it at headquarters, and use it operationally, with the goal of having a thoroughly tested system ready for use in all LCOs in time for the update/leave operation, which began in February 2000.
+Based on PADE's performance in that operation, the bureau should decide whether it should be used as the principal system during the decennial census.
+Extensive operational use has given the bureau reasonable assurance that PAMS/ADAMS will adequately support the decennial census.
+However, a well-managed software development process would have increased the bureau's and our confidence by producing documentation and applying techniques to allow issues regarding accuracy, completeness, and performance to be identified and corrected during development rather than in hindsight, possibly revealing problems that have not yet been encountered in operational use.
+Moreover, use of more effective software management practices would have prevented disruptive problems in the dress rehearsal, allowed the bureau to avoid the late redesign of the data entry component, and reduced cost.
+In previous evaluations, we found similar problems with software development for decennial information processing systems at headquarters, and we reported that while the bureau has software engineering standards, they are neither required nor widely used.
+Better software management practices would improve timeliness, quality, and user satisfaction and reduce development and maintenance costs on all census systems.
+Although it is too late to attain significant improvements for the 2000 Decennial Census, we believe that the bureau should make a concerted effort after the decennial to improve software development for all future programs, decennial and nondecennial alike.
+In January 2000, after issuing the draft version of this report, we learned that the bureau had determined that the measures it was using to improve performance of PAMS/ADAMS would most likely not ensure that the system would provide adequate support for decennial census operations.
+As a result, the bureau evaluated two separate approaches to improving performance and selected one involving extensive software modifications.
+The bureau has implemented the ii
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+modifications and operationally tested PAMS/ADAMS at all 12 regional census centers and their respective LCOs.
+While the tests were successful, the bureau will continue to evaluate performance and intends to implement additional improvements should the need arise.
+We believe, however, that any significant software or hardware modifications at this late date would be risky.
+As a result of this issue, we have updated our discussion of PAMS/ADAMS performance (Observation IV).
+We recommended that the bureau strengthen its procedures to identify and avoid duplicate pay; continue development, testing, and field evaluation of PADE; and ensure that the capability to use the non-PADE version of PAMS/ADAMS is retained in every LCO in the event that PADE cannot be deployed for the decennial.
+The bureau has agreed with and implemented all of our recommendations.
+It has new software and procedures in place to avoid duplicate pay, has successfully implemented and tested a faster and more reliable batch transfer component in PADE, and indicates that it has an adequate number of clerks trained with the non-PADE version of PAMS/ADAMS at every LCO.
+Our complete recommendations and a synopsis of the bureau's response begin on page 14.
+The bureau's complete response is included as Attachment A.
+iii
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+INTRODUCTION The decennial census is the largest peacetime civilian mobilization in the United States.
+As such, the 2000 Decennial Census will involve over 3 million applicants for more than 860,000 temporary jobs required to support the census at its peak workload.
+In order to process this large volume of applicants, control fiscal resources, and minimize employee turnover and dissatisfaction, the Census Bureau will need to provide timely processing of applicants and ensure that all employees are provided accurate and timely compensation for their efforts.
+The bureau will rely on its computer-based Pre-Appointment Management System/Automated Decennial Administrative Management System (PAMS/ADAMS) to support all applicant processing, personnel actions, and payroll functions for temporary employees during the decennial census.
+PAMS/ADAMS will be used at all 12 regional census centers (RCCs) and the 520 local census offices (LCOs) that will support decennial census operations.
+PAMS/ADAMS was initially deployed to perform applicant processing and payroll functions in support of the 1998 Dress Rehearsal.
+The system has been in use since then and has undergone significant changes.
+PURPOSE AND SCOPE The primary objective of this inspection was to determine whether PAMS/ADAMS will provide accurate, timely hiring and payroll processing during the decennial census.
+In support of this objective, our evaluation assessed (1) whether testing will demonstrate that the system can adequately support decennial operations, (2) the effectiveness of the procedures used for system acceptance, release of capabilities to field operations, and problem tracking and resolution, and (3) PAMS/ADAMS computing resources to determine if the required system performance can be achieved.
+During our fieldwork for this evaluation, we identified an additional objective based on earlier OIG reviews, which had determined that the way in which daily payroll forms were being processed during the dress rehearsal allowed employees to be paid multiple times for the same hours worked.1 Thus, the second objective was to assess whether this problem has been solved.
+Columbia Dress Rehearsal Identifies Needed Improvements in Personnel Administration, ATL-11050, September 1998, and Atlanta Region Experienced Late Pay Problems for Census 2000 Employees, ATL-11640, December 1999.
+1
+1
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+Finally, we were asked by the Principal Associate Director and Chief Financial Officer and the Associate Director for Decennial Census to provide an independent assessment of the bureau's testing of newly developed software for entering applicant and payroll data into PAMS/ADAMS, called PAMS/ADAMS Data Entry (PADE).
+As a result, our third and final objective was to assess the bureau's approach to testing this new software.
+In conducting our evaluation, we interviewed PAMS/ADAMS system developers from the Financial and Administrative Systems Division and the Systems Support Division, requirements staff from Field Division, Beta Site2 staff from the Decennial Systems and Contracts Management Office, and help desk staff from the Technologies Management Office.
+In addition, we reviewed and evaluated requirements and design documentation, help desk logs, error reports and change requests, Beta Site test procedures, and the PAMS/ADAMS operations manual.
+We also interviewed automation staff and clerical personnel from RCCs and LCOs.
+Furthermore, we performed independent testing to determine whether our earlier concerns about duplicate pay were adequately addressed.
+In evaluating PADE, we interviewed the system developers from the Financial and Administrative Systems Division and the Systems Support Division.
+In addition, we performed independent testing of the PADE data entry component and reported any problems that we uncovered to the developer, who was extremely responsive in making corrections.
+As the developer made refinements based on recommendations from the development team, testers at the Beta Site, and us, he provided updated versions of the software so that we could continue testing.
+Finally, we observed the operational testing of PADE and training of employees in its use at the Kansas City, Kansas, LCO in October 1999.
+This inspection was conducted in accordance with the Inspector General Act of 1978, as amended, and the Quality Standards for Inspections, March 1993, issued by the President's Council on Integrity and Efficiency.
+BACKGROUND History of PAMS/ADAMS During the mid 1990s, the bureau, with assistance from an independent consultant, evaluated the suitability of several commercially available software packages for handling personnel and payroll functions during the 2000 decennial.
+As a result, the bureau chose the PeopleSoft Commercial Payroll and Federal Human Resources packages as the basis for PAMS/ADAMS, recognizing 2
+The Beta Site is a test facility for decennial systems.
+2
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+that modifications to these packages would be necessary to accommodate requirements peculiar to the decennial.
+In addition, the bureau chose a commercially available database system and computer operating systems for the implementation and operation of PAMS/ADAMS.
+The bureau implemented PAMS/ADAMS to support the following general functions: (1) tracking applicants for temporary positions, (2) processing applicants through the FBI's criminal background check, (3) listing qualified applicants on a selection register, (4) providing management reports to monitor the effectiveness of recruiting efforts, (5) establishing a personnel record for each new employee, (6) supporting the setting of pay rate structures and position changes as well as all other required personnel actions, and (7) supporting payroll operations for all temporary employees.
+The bureau also added the capability to electronically scan data from personnel and payroll forms rather than manually keying the data.
+PAMS/ADAMS is a client/server application whose software runs at all RCCs and LCOs.
+The database server software resides on a DEC AlphaServer at the RCCs, and the client software resides on personal computers at the RCCs and LCOs.
+Each LCO has access to 15 personal computers on a local area network.
+The LCOs are primarily responsible for the entry of employee applications and the daily entry of payroll forms.
+Each LCO communicates with its associated RCC via a frame relay network connection.
+The RCCs actually run the payroll application on a weekly basis and interface with the Treasury Department to effect the electronic transfer of funds or issue paychecks.
+The RCCs communicate with Census Bureau headquarters systems via high-speed T-1 connections.
+PAMS/ADAMS During the 1998 Dress Rehearsal and Beyond In early 1998, the bureau deployed PAMS/ADAMS to the RCCs in Chicago, Charlotte, and Seattle and to their respective LCOs in Menominee, Wisconsin, Columbia, South Carolina, and Sacramento, California, to support the 1998 Dress Rehearsal.
+The system was used throughout the dress rehearsal to process applicants, hire them, and pay them.
+During the dress rehearsal, we visited the Charlotte RCC and Columbia LCO in May 1998, and the Seattle RCC and Sacramento LCO in June.
+During our visits, we noted that PAMS/ADAMS was unacceptably slow to respond to routine operator requests and to requests to produce standard reports and summary information.
+As a result, we became concerned about the system's ability to support the workload during the decennial census, when each RCC would be required to accommodate about 40 fully staffed LCOs.
+In addition, we noted that the system was unable to accurately capture data from scanned personnel and payroll forms and that operators had to resort to manually entering the data.
+The scanning operation reliably scanned the various forms; however, the software that interpreted the 3
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+handwritten information and various fields that were marked on the forms (optical character recognition and optical mark recognition, respectively) and converted them to a computerreadable format was unreliable.
+Consequently, the bureau abandoned the scanning operation, and payroll clerks had to manually key personnel and payroll data using the data entry capabilities of the modified PeopleSoft product.
+The bureau recognized that using the existing manual keying capabilities of the system posed several problems that were not present under the scanning option.
+Primarily, using the modified PeopleSoft product to perform manual keying of data from forms requires that the LCO be connected to the RCC during the data entry process, whereas the scanning operation allowed data to be entered at the LCO for later transfer to the RCC.
+In addition, because the data entry panels presented to the operator during manual keying do not follow the physical layout of the forms, they are inefficient and difficult to learn to use effectively.
+Because of the problems associated with using the manual keying capabilities of the modified PeopleSoft product, the bureau decided to develop an alternative data entry system that will allow keying of data from the applicant and payroll forms without a connection between the LCO and RCC and that will allow entry of data in the same order as it appears on the forms.
+The planned data entry alternative will allow clerks at the LCO to prepare batches of data for later transfer to the RCC in much the same manner as under the scanning operation.
+The bureau has designated the alternative data entry approach as PADE and is continuing its development.
+A Description of PADE The PADE system allows clerks at an LCO to prepare batches of data for later transfer to the RCC. PADE consists of three components.
+The first, the data entry component, accommodates the actual entry of data from applicant and payroll forms.
+It allows a clerk to input data from forms in batches as has been done since the release of PAMS/ADAMS during the dress rehearsal.
+The major difference is that in PADE, a template of the form is displayed to the clerk, and data is entered directly from the form into corresponding fields on the displayed image rather than requiring entry of the data via several displayed panels.
+This component includes a "help" feature that can be used to resolve problems related to the keying process and to assist in error correction.
+It also provides extensive editing features and, for each form in a batch, displays an indication of any errors related to the input data.
+Generally, if any of the forms in a batch contain errors, those errors must be corrected before the batch can be sent to the RCC for verification and inclusion in the database.
+The second component, batch transfer, moves batches from the LCO to the RCC, where the data in the batch is verified.
+If errors are detected in the batch, a report is sent to the LCO indicating the nature of the errors, and the batch is returned to the LCO for correction.
+If there are no errors in the batch, the third component, database update, adds the batch data to the RCC database.
+4
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+The batch is then returned to the LCO for archiving, along with a report indicating that the batch data has been incorporated into the database.
+The bureau had intended to deploy PADE in early summer 1999 to evaluate its performance during a period of high field activity, the third wave of block canvassing.
+However, PADE was not ready for deployment at that time.
+Instead, the bureau targeted deployment of PADE for early October, a time when little field activity was scheduled.
+As a result of the delay, the Principal Associate Director and Chief Financial Officer and the Associate Director for Decennial Census grew concerned about the risk of introducing PADE into PAMS/ADAMS at such a late date, particularly if PADE could not be tested during a period of high demand on PAMS/ADAMS.
+Consequently, they requested that our office provide an independent assessment of the bureau's testing of PADE.
+OBSERVATIONS I. Deficiencies in Testing PAMS/ADAMS Have Been Compensated for by Extensive Operational Use
+In a well-managed software development process based on software engineering principles, formal acceptance testing is performed to determine whether a system meets its functional and performance requirements before deploying it to the field for operational use.
+However, in developing PAMS/ADAMS, the bureau did not follow a well-managed process.
+The bureau's process was not based on standards for preparing, documenting, and maintaining high quality software specifications and designs or for ensuring that rigorous testing is conducted.
+The bureau thus did not have formal system acceptance test procedures or an acceptance process for PAMS/ADAMS, nor did it have formal plans and procedures for the earlier phases of the development cycle (e.g., requirements definition, design, and unit and integration testing, and system testing).3 Consequently, the accuracy and completeness of PAMS/ADAMS cannot be determined by reviewing this information, by evaluating test results, or by independent testing, activities normally associated with a systematic software development effort.
+Nevertheless, PAMS/ADAMS has been subjected to extensive operational use in the field since the dress rehearsal.
+Such use has given the bureau the opportunity to identify and correct errors and deficiencies and to evaluate changes in an operational environment.
+We believe that, in this way, the bureau has been able to achieve a reasonable degree of assurance that PAMS/ADAMS will support decennial operations.
+A formal activity is one that is conducted in accordance with plans and procedures that have been reviewed and approved by a customer, user, or designated level of management.
+3
+5
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+PAMS/ADAMS was developed using an existing commercial software package, making modifications to accommodate the particular needs of the bureau.
+Developers performed unit testing to ensure that the software satisfied their understanding of the requirements.
+They then turned the software over to the requirements staff, who performed integration testing to ensure that it met the functional requirements.
+However, testing was performed on an ad hoc basis without documented test procedures or test results.
+Moreover, the bureau did not maintain a complete, up-to-date requirements document, so testers had to rely on the operations manual as the source of requirements.
+This manual, by its nature, does not contain all requirements.
+For example, it does not include requirements concerning interfaces to other systems, system capacity, and performance.
+PAMS/ADAMS was first deployed to the field to support the1998 Dress Rehearsal and has been used in various decennial census operations ever since.
+Because of insufficient planning and testing, the system experienced numerous problems as described previously.
+For these reasons and because of normal requirements changes and additions identified through operational use, PAMS/ADAMS has undergone extensive modification since the dress rehearsal, and numerous versions have been deployed to the field.
+After the dress rehearsal, the bureau instituted procedures for releasing new versions of PAMS/ADAMS using the Beta Site to distribute the software over the bureau's wide area network.
+These procedures introduced formality into testing by requiring developers to provide written test procedures to the Beta Site testers and the Beta Site testers to test all changes and additions before releasing new versions to the field.
+These new procedures assure that changes and additions are tested and, most likely, improve the thoroughness of testing.
+However, without documented requirements and test procedures for the entire system, it is not possible for either the bureau or us to determine whether all known requirements have been implemented and, if implemented, whether they have been tested and are correct.
+Nonetheless, the dress rehearsal provided the bureau with the opportunity to determine what modifications PAMS/ADAMS would need to support the decennial requirements.
+The continuous operational use of each release of PAMS/ADAMS since the dress rehearsal has essentially provided an ongoing operational test of the system.
+Despite the lack of a formal acceptance process and a rigorous testing approach during development, applicants are being hired and payrolls are being met in support of pre-census field activities.
+Furthermore, field representatives indicate that PAMS/ADAMS has performed well during periods of relatively high activity since the dress rehearsal.
+For example, one RCC indicated that PAMS/ADAMS supported the processing of over 50,000 applicants and successfully provided payroll support for more than 5,000 employees during the address listing operation in the summer and fall of 1998.
+However, because this processing was performed at an RCC before any of its LCOs were activated, the performance does not take into account the effect of communications between the RCC and its LCOs.
+In general, field representatives have expressed confidence that 6
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+PAMS/ADAMS will support the requirements of the decennial census.
+Our evaluation indicates that with the implementation of specific computer hardware and telecommunications enhancements planned by the bureau, the system can adequately support the decennial census.
+II.
+Procedures for Problem Tracking and Resolution Are Effective
+The procedures for tracking problems with and managing changes to PAMS/ADAMS, as well as for resolving problems encountered in the field, have been used extensively both during and after the dress rehearsal and have been demonstrated to be effective.
+They should provide adequate support to the decennial census.
+In order to evaluate the appropriateness of proposed changes, enhancements, and corrections to the system, and assign a priority for implementing those that are approved, the bureau established a PAMS/ADAMS Configuration Control Board.
+Established in early 1997, the board meets regularly to review and monitor the status of approved items and to schedule releases of modified software to the field.
+A System Investigative Report (SIR) is used to describe and account for system changes, enhancements, and corrections.
+Each SIR is assigned an identification number and includes the following additional information: (1) descriptive title, (2) person originating the SIR, (3) date the issue was identified, (4) general characteristics, including the responsible development team, general functional nature of the issue, implementation complexity, estimated hours required for implementation, and whether the issue is an enhancement or a correction to a problem, (5) a description of the issue, and (6) a description of the likely resolution of the issue.
+In order to provide a means of tracking implementation progress, PAMS/ADAMS developers maintain an on-line SIR database from which various status reports are generated.
+At the time of our field work, the bureau had successfully dealt with over 480 SIRs.
+To facilitate the reporting, resolution, and tracking of problems identified by field personnel, the bureau has created a dedicated PAMS/ADAMS help desk at headquarters.
+When LCO personnel experience a problem, they typically call an automation specialist at the RCC for help.
+If the RCC specialist cannot provide assistance, the specialist places a call to the help desk and describes the problem.
+Using a commercial software tool, the help desk staff document the problem and assign a "trouble ticket" number for subsequent reference.
+If the staff can solve the problem, they provide the solution to the RCC automation specialist, who relates it to the LCO.
+If a problem cannot be resolved immediately, the staff conduct research and provide a solution later.
+Help desk staff are intimately familiar with PAMS/ADAMS hardware and software, and can usually provide prompt solutions to reported problems.
+However, if they are unable to solve a 7
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+problem, they have access to the PAMS/ADAMS developers, who will provide assistance.
+If the solution to the problem is a software modification, the problem is documented in a SIR and submitted to the Configuration Control Board for action.
+The procedures for tracking problems and managing changes to PAMS/ADAMS have been in place since early 1997 and used successfully to accommodate numerous changes, enhancements, and corrections.
+The help desk has been in place since the start of the dress rehearsal and has been used extensively to resolve problems encountered in the field.
+Finally, field staff have told us that they are highly satisfied with the service provided by the help desk.
+III.
+Procedures for Releasing Capabilities to the Field Are Effective
+Since the dress rehearsal, the bureau has instituted procedures for releasing new versions of PAMS/ADAMS to the field using the Beta Site to distribute the software over the bureau's wide area network.
+The Beta Site uses an automated process to distribute the new software versions to each RCC, and the RCCs then distribute the new versions to each associated LCO, usually during early morning hours when there is no LCO activity.
+The bureau has also developed procedures for distributing emergency software releases to the field to accommodate the correction of any problems that require immediate attention.
+At least 50 new versions of PAMS/ADAMS software have been successfully delivered since the dress rehearsal.
+The bureau's procedures for releasing software to the field should prove effective during the decennial census.
+IV.
+Augmented Computing Resources Will Improve Performance
+The bureau recognized that the level of responsiveness provided by PAMS/ADAMS during the dress rehearsal will not be satisfactory for the decennial census, when workload demands on an RCC will be multiplied by a factor of about 40.
+Therefore, the bureau performed stress testing of the system to identify inefficiencies in the software and evaluate the ability of the computer system hardware to support user workloads anticipated for the decennial.
+4 In addition, the bureau conducted a study of the communications bandwidth requirements for PAMS/ADAMS to identify and eliminate potential communications bottlenecks.
+The bureau used commercially available software to perform stress testing of PAMS/ADAMS at the Beta Site.
+This software allowed the bureau to develop a variety of test scenarios to evaluate performance aspects of PAMS/ADAMS under different user loads.
+The test scenarios provided a way to assess performance by emulating the effect that actual users would have on the system while performing various applicant and payroll processing activities.
+For example, one test 4
+Stress testing is designed to overload the system in various ways.
+8
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+scenario emulated 900 users simultaneously performing various personnel and payroll operations requiring access to the PAMS/ADAMS database on an RCC server.
+This test represents a scenario only slightly more demanding than the "worst case" that could exist during the decennial census at the Atlanta RCC when 55 LCOs, each with 15 personal computers, might require access to the database.
+By performing stress testing, the bureau identified ways to improve the performance of the software that provides access to the database and to speed payroll and applicant processing.
+Stress testing also identified the need to upgrade the DEC AlphaServer that runs at each RCC.
+As a result, the bureau has modified the software associated with database processing and has revised applicant and payroll processing software to improve overall responsiveness.
+The bureau is currently implementing upgrades to the AlphaServers at each RCC.
+The upgrades effectively double their processing power and quadruple their memory capacity.
+The bureau has already completed these upgrades at three RCCs and the Beta Site, and expects to complete the upgrades to the remaining nine RCCs by the end of December.
+As soon as all performance-related software changes are completed, the bureau will rerun stress test scenarios at the Beta Site to verify that the software changes, along with the upgrades to the AlphaServer, provide the expected performance improvements.
+A separate telecommunications study was conducted to determine the required communications bandwidth.
+As a result, the bureau plans to double the bandwidth of the circuits that the study found is needed to support communications between the RCCs and their LCOs and between the RCCs and headquarters.
+At the conclusion of our field work for this review, we were aware that the bureau was continuing to work with PeopleSoft consultants to make improvements in responsiveness for log-in and several personnel-related functions in PAMS/ADAMS.
+At our December 1999 exit conference, bureau representatives did not express concern that these ongoing efforts to improve performance might not be adequate to support the decennial census.
+However, early in January 2000, after issuing the draft version of this report, we learned that the bureau had determined that changes being contemplated to improve the performance of PAMS/ADAMS would most likely not ensure that the system would provide adequate support for decennial census operations.
+As a result of further discussions with PeopleSoft consultants, the bureau decided to evaluate two separate approaches to realizing the necessary performance improvements.
+The first approach involved minimal modifications to the PAMS/ADAMS software, but required the installation of specialized hardware at each of the RCCs and the Beta Site, whereas the second approach involved extensive modifications to the PAMS/ADAMS software, but required no additional hardware.
+The bureau determined that both approaches would provide viable 9
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+solutions to the performance problems, but decided that the second approach would provide a more cost-effective solution.
+The bureau has successfully modified the PAMS/ADAMS software and operationally tested it at all 12 RCCs and their respective LCOs.
+The updated software is currently being used to support personnel and payroll functions at all regions, and reports from the field indicate that the modifications have provided significant performance improvements as expected.
+The bureau has indicated that it will focus on correcting any problems encountered with the newly released software.
+Thus far, the problems have not affected the ability of PAMS/ADAMS to provide the necessary personnel and payroll support for the decennial.
+Furthermore, bureau management is confident that the new software will support the rapidly approaching peak processing loads for the decennial.
+In addition, the bureau will continue to monitor and evaluate PAMS/ADAMS' performance and intends to implement additional performance improvements should the need arise.
+We believe, however, that any significant software or hardware modifications at this late date would be risky.
+V. Procedures to Identify Potential Duplicate Pay Need Improvement
+During the 1998 Dress Rehearsal, we found that the way in which daily payroll forms were being processed allowed employees to be paid multiple times for the same hours worked.
+The bureau responded by providing a separate report within PAMS/ADAMS to identify every instance of the submission of multiple payroll forms for an employee on the same day, even if the day pertains to an earlier pay period.
+This report is to be run at the LCOs at the request of the payroll clerk.
+During our field work for this review, we independently confirmed that the added report does identify every instance of multiple payroll forms submitted for an employee on the same day.
+Given this report, a clerk can check every case involving multiple payroll forms for an employee and appropriately adjust the reported hours if necessary to prevent paying an employee multiple times for the same work.
+The bureau has issued guidance for using this added report to all regional directors.
+However, the procedures that were implemented still leave an opportunity for duplicate pay to occur.
+Specifically, generating the new report requires an explicit request by an LCO clerk.
+If the clerk does not request the report, no indication of multiple payroll forms for an employee will be provided, allowing the potential for duplicate payments.
+We believe that a more effective approach would be to have the PAMS/ADAMS software automatically check for multiple payroll forms for each employee for the same day and generate the report as appropriate.
+This approach would avoid having to rely on clerical action to produce the report.
+Regardless of the mechanism for generating the report, avoiding multiple payments depends on clerical diligence in reviewing the payroll forms identified on the report.
+Therefore, a strictly enforced policy for resolving multiple payroll forms for an employee needs to be in place at each LCO. 10
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+Since the time of our fieldwork, the bureau has modified the software to prevent an LCO from closing out its payroll until the report has been run at least once on the same day as the last batch was keyed for a pay period.
+The bureau has also updated manuals, workflow charts, and payroll processing schedules and has issued detailed procedures to LCOs for properly resolving multiple payroll forms.
+VI.
+The Bureau Should Continue to Develop and Test the Alternative Data Entry Component
+The bureau used the PAMS/ADAMS development facility at headquarters and the Beta Site for test and evaluation of PADE as it evolved.
+Like the other portions of PAMS/ADAMS, PADE was developed without documented test plans, test procedures, or test results, and also lacks requirements documentation.
+Consequently, we were unable to assess the adequacy and quality of PADE testing.
+However, operational testing and use of PADE in the field shows that it has the potential to significantly improve the efficiency of payroll and applicant processing operations if one component, batch transfer, can be redesigned to handle the heavy decennial workload.
+PADE is being developed by a knowledgeable, dedicated team of bureau employees who are intimately familiar with both the operational requirements and software structure of PAMS/ADAMS.
+Therefore, we believe that the bureau should continue to develop PADE and use it operationally with the goal of having it implemented and thoroughly tested in time for use in the 2000 update/leave operation.
+Based on the performance of PADE in that operation, the bureau should determine whether it can handle the decennial workload and whether the PADE-based PAMS/ADAMS system should therefore be used.
+A. Operational Testing and Use of PADE Have Been Successful, but Development Must Continue in Order to Handle Decennial Workloads
+Early in October, the bureau installed the PADE-based version of PAMS/ADAMS at the Kansas City RCC and the Kansas City, Kansas, LCO for operational testing and training.
+At that time, the bureau provided PADE training at the LCO for administrators, clerks, and automation personnel from the RCC, the LCO, and the Kansas City, Missouri, LCO.
+Employees entered data from actual applicant and personnel forms, transferred the data to the RCC, and verified that the data had been received by the RCC and that the database had been properly updated.
+Members of the PADE development team monitored the transfer of batches between the LCO and the RCC, and verified the accuracy and integrity of the transferred batches.
+11
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+After the testing and training session, the Kansas City, Kansas, LCO tried to use the PADE-based system operationally.
+However, problems with batch transfer required the LCO to revert to the non-PADE version of PAMS/ADAMS for data entry.
+The bureau has since corrected the batch transfer problem, and the LCO, as well as several other LCOs in the region, have been successfully using PADE to input data.
+Since the initial training session, personnel from the RCC have provided PADE training for personnel at the region's other LCOs.
+In late October, the bureau installed the PADE-based version of PAMS/ADAMS at the remaining 11 RCCs and provided training for the RCC staff and staff from selected LCOs.
+Each of these RCCs then provided PADE training for the associated LCOs that were not represented at the bureau-provided sessions.
+Following the training, LCOs were able to use PADE to handle applicant and payroll data entry.
+The PADE development team has been monitoring the performance of PADE in an operational environment since the initial testing and training session and has concluded that it is effectively supporting applicant and payroll processing.
+However, even though PADE has performed well, it has done so during periods of relatively little field activity.
+The bureau recognizes that the current implementation of the batch transfer component will not provide the support needed for the heavy processing loads that will be encountered during the decennial census.
+Consequently, the bureau is redesigning the batch transfer component to ensure that PADE will be able to accommodate decennial workloads.
+B.
+The Bureau Should Implement and Thoroughly Test PADE Before the February Update/leave Operation
+In addition to working on the design of an improved batch transfer component, the bureau is developing a plan for stress testing the improved version of PADE to ensure that it will perform as required during the decennial.
+Stress testing is critical because the field will not experience heavy workloads until mid-February or early March, when a fully capable PAMS/ADAMS must be in place to support the update/leave operation.
+As a result, stress testing of PADE should emulate the anticipated load that would be placed on an RCC having 55 LCOs entering data and transferring files within the requisite time period during the decennial.
+Bureau managers expect to know by the end of this year whether PADE will be able to handle the required applicant and payroll loads.
+PADE potentially can provide significant benefits to the bureau's decennial operations--namely, removing the requirement for LCO-to-RCC communications to effect data entry at an LCO; furnishing an intuitive, user-friendly, and efficient method of data entry that is easy to learn; and providing error identification at the LCO.
+Therefore, the bureau should continue to dedicate the developer staff necessary to maximize the likelihood of its successful implementation.
+The bureau should implement the improved batch transfer component as soon as possible; conduct 12
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+thorough testing, including stress testing; and redeploy PADE to the field so that it can be evaluated in an operational environment before the update/leave operation.
+If the bureau can accomplish these tasks, it should use PADE for update/leave and evaluate its performance to decide whether PADE-based PAMS/ADAMS should be used as the principal system during the decennial census.
+In any case, PADE will be useful to the decennial, and its development can be continued with little risk.
+It will be useful because even if the software cannot be redesigned to handle the decennial workload, PADE can still be employed as a backup at an LCO in the event that a communications failure prevents LCO-to-RCC communications using the non-PADE version of PAMS/ADAMS.
+PADE development is low risk as long as the bureau ensures, as a contingency, that staff at every LCO are trained in the use of the non-PADE version of PAMS/ADAMS data entry and are capable of using it in case the development of PADE does not progress as expected.
+Since the time of our fieldwork, the bureau has successfully implemented a faster and more reliable batch transfer component in PADE and has also deployed PADE to all the regions.
+Before deploying the modified software to the field, the bureau extensively tested all PAMS/ADAMS and PADE functions in the development environment and at the Beta Site.
+CONCLUSION Because the bureau did not use a well-managed software development process, the accuracy and completeness of PAMS/ADAMS cannot be assessed through a review of requirements, design, and test documentation or independent testing, activities usually associated with a well-managed, systematic software development effort.
+Primarily because of extensive operational use in the field, the bureau has been able to identify and correct problems and achieve a reasonable degree of assurance that PAMS/ADAMS can support the decennial census.
+However, a well-managed software development process would have increased this assurance by producing documentation and applying techniques to allow issues regarding accuracy, completeness, and performance to be identified and corrected during development rather than in hindsight, possibly revealing problems that have not yet been encountered in operational use.
+Moreover, use of more effective software management practices would have prevented the dress rehearsal problems of slow response times and inability to accurately capture data from scanned forms and would have allowed the bureau avoid the late redesign of the data entry software.
+It
+13
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+would also have reduced the time to field a fully functioning system, caused less disruption to field personnel, and reduced cost.
+The bureau is using a similar ad hoc approach on PADE and must rely heavily on operational use, rather than the combination of sound software management and operational testing, to decide whether it should become the principal means of data entry during the decennial.
+The knowledge and dedication of the development team are a significant factor in our conclusion that PADE has a high probability of being completed successfully.
+Nonetheless, a talented team does not diminish the need for good software management practices.
+In previous evaluations, we found similar problems with software development for decennial information processing systems at headquarters, and we reported that while the bureau has software engineering standards, they are neither required nor widely used.5 Better software management practices would improve timeliness, quality, and user satisfaction and reduce development and maintenance costs.
+Although it is too late to attain significant improvements for the 2000 Decennial Census, we believe that the bureau should make a concerted effort after the decennial to improve software development for all future programs, decennial and nondecennial alike.
+RECOMMENDATIONS We recommend that the Director of the Census Bureau direct senior management for the 2000 Decennial Census to take the necessary actions to: 1.
+Strengthen procedures to identify and avoid duplicate pay by: a.
+Determining the feasibility of modifying PAMS/ADAMS software to automatically produce the report that identifies employees for whom multiple payroll forms have been submitted for the same day.
+Implementing the software modification, if feasible.
+If the software modification is not feasible, provide each LCO with additional guidance for generating the report and take any actions necessary to ensure that this is being done.
+b.
+Headquarters Information Processing Systems for the 2000 Decennial Census Require Technical and Management Plans and Procedures, OSE-10034, November 1997, and Improvements Needed in Multiple Response Resolution to Ensure Accurate, Timely Processing for the 2000 Decennial Census, OSE-10711, September 1999.
+5
+14
+U.S. Department of Commerce Office of Inspector General
+Final Report OSE-11684 March 2000
+c.
+Taking the necessary actions to ensure that forms identified on the report are resolved properly, regardless of the mechanism used for generating the report.
+The bureau has agreed with this recommendation.
+However, instead of modifying the software to automatically produce the report, the bureau has modified the software to preclude an LCO from closing out its payroll if the report has not been run at least once on the same day as the last batch was keyed for a pay period.
+The bureau's solution provides more effective control than automatically generating the report would have provided.
+In addition, the bureau has updated procedural manuals, workflow charts, and payroll processing schedules and has issued detailed procedures to LCOs for properly resolving multiple payroll forms.
+2.
+Continue development and field evaluation of PADE by: a. b. c. Developing plans for stress testing PADE and performing stress testing at the Beta Site to evaluate the ability of PADE to handle the decennial workload.
+Deploying the redesigned batch transfer component if stress testing demonstrates that PADE can handle the workload.
+Using the redesigned version of PADE in the February 2000 update/leave operation, and evaluating its performance to determine whether PADE should be the principal data entry system for the decennial census.
+The bureau has agreed with this recommendation.
+The bureau has completed stress testing of PADE according to plans and is using PADE operationally in all 12 regions to support the earliest stage of the update/leave operation.
+The bureau intends to further monitor and evaluate PADE's performance during the peak processing period for update/leave.
+3.
+Ensure that a sufficient number of employees in each LCO have the necessary training and experience to use the non-PADE version of PAMS/ADAMS in the event that a decision is made to not use PADE or that PADE is deployed for the decennial but encounters problems.
+The bureau has agreed with this recommendation and states that adequate numbers of clerks at the LCOs have been trained in the use of the non-PADE version of PAMS/ADAMS.
+15

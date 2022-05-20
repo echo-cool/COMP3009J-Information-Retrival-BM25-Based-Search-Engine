@@ -1,0 +1,463 @@
+BDGP Logo Berkeley Drosophila Genome Project BDGP Resources The Role of the Genome Project __________________________________________________________________ Cell 86: 521-529, 1996 The Role of the Genome Project in Determing Gene Function: Insights From Model Organisms George L. Gabor Miklos^1 Gerald M. Rubin^2
+1 The Neurosciences Institute, 10640 John Jay Hopkins Drive, San Diego, California 92121 2 Department of Molecular and Cell Biology, Howard Hughes Medical Institute, University of California at Berkeley, Berkeley, California 94720-3200 Introduction Large amounts of data, from DNA sequences to on-line brain atlases, are rapidly accumulating in public databases, and there is a heightened expectation that the increasingly powerful computer analyses of integrated databases will be sufficient to take us from DNA sequence to biological function.
+To what extent is this likely to be the case? We have examined this question by considering: gene number in different evolutionary lineages; data derived from mutagenesis and gene knockouts in Drosophila melanogaster, Caenorhabditis elegans, Danio rerio, Mus musculus, Arabidopsis thaliana and Saccharomyces cerevisiae; gene regulatory dynamics in different systems; the utility of gene transfer methods that allow precisely controlled misexpression of genes; and the extent to which various processes are conserved between organisms in different lineages.
+Our analysis suggests that the information in databases will not, by itself, be sufficient to determine biological function, but will provide an important foundation for the design of appropriate experiments.
+The application of transgenesis and other genetic methods - in conjunction with total genome sequence and database information on gene expression patterns, morphological changes during development, and mutant phenotypes - should significantly enhance our ability to unravel the multilayered networks that control gene expression and differentiation.
+This knowledge, which will only be rapidly obtainable in the model organisms, will allow the reduction of most of the approximately 70,000 individual genes encoded by the human genome into a much smaller number of multicomponent, core processes of known biochemical function.
+Bacterial Gene Numbers Vary from Approximately 500 to 8000 and Overlap Those of Single-Celled Eukaryotes The bacterial genome projects already provide excellent estimates for the number and types of protein and RNA molecules made by free living prokaryotes (Table 1).
+Their gene densities of approximately 1 gene per 1.1 kb, suggest that bacterial gene numbers will vary from the 473 identified genes in Mycoplasma genitalium (Fraser et al., 1995), to an estimated 8000 or so in Myxococcus xanthus (Table 1) .
+Estimates from the S. cerevisiae genome project indicate that there are roughly 5800 protein coding genes in the genome of this fungus (Dujon, 1996).
+In the tiny free living alga Cyanidioschyzon merolae (Maleszka, 1993), we have estimated that there will be approximately 5000 genes if the gene density in this single celled alga is similar to that in yeast.
+In the single celled protozoan Oxytricha similis, there are about 12,000 genes (John and Miklos, 1988).
+Eukaryotes of Very Different Organizational Complexity, such as Protozoa, Caenorhabditis and Drosophila, Have Similar Gene Numbers in the 12,000 to 14,000 Range In D. melanogaster, previous estimates of gene number range from 8,000 to 20,000 (Lewin,1994; Nusslein-Volhard, 1994).
+We have examined the available data and conclude that gene number in this fly is closer to 12,000, a figure comparable to that in Oxytricha and Caenorhabditis.
+__________________________________________________________________
+TABLE 1.
+Current Predictions of Approximate Gene Number and Genome Size in Organisms in Different Evolutionary Lineages.
+Genes Genome Size in Mb Prokaryota Mycolplasma genitalium 473 0.58 Haemophilus influenzae 1,760 1.83 Bacillus subtilis 3,700 4.2 Escherichia coli 4,100 4.7 Myxococcus xanthus 8,000 9.45 Fungi Saccharomyces cerevisiae 6,300 13.5 Protoctista Cyanidioschyzon merolae 5,400 11.7 Oxytricha similis 12,000 600 Arthropoda Drosophila melanogaster 12,000 165 Nematoda Caenorhabditis elegans 14,000 100 Mollusca Loligo pealii 
+Data from Kamalay and Goldberg, 1980; Capano et al., 1986; John and Miklos, 1988; Miklos, 1993a; Brenner et al., 1993; Gibson and Somerville, 1993; Fleischmann et al., 1995; Fraser et al., 1995; Collins, 1995; Waterston and Sulston, 1995; Dujon, 1996.
+__________________________________________________________________
+The haploid genome of D. melanogaster consists of two compartments, a heterochromatic gene-poor 50 Mb and a euchromatic gene-rich 115 Mb.
+The 50 Mb houses no more than 25 essential loci and consists largely of satellite DNA sequences, ribosomal genes, and transposable elements (John and Miklos, 1988).
+We have estimated the coding capacity of the 115 Mb compartment in three ways.
+First, we determined the lengths of transcription units by analyzing cDNAs from the literature using 278 cases where the cDNA could be aligned with genomic DNA.
+These transcription units come from nearly every division of the genome and have been isolated in chemical and ionizing radiation mutagenesis screens, by insertion of transposons, in chromosomal walks, by molecular sequence similarity, and in mutagenesis screens designed to isolate behavioral mutants as well as mutants with altered brain anatomy.
+A transcribed genomic sequence that gives rise to one or more proteins with shared exons was scored as one transcription unit, and its length was taken from the position of RNA initiation to that of the site of polyadenylation, as measured on the underlying genomic sequence.
+Multiple transcripts arising from alternative initiation or polyadenylation sites, or alternative RNA splicing at a single locus were not considered as multiple genes but as variants of a single transcription unit.
+When placed end to end, the 278 transcription units used for analysis occupied 2.4 Mb of genomic DNA.
+Assuming this ratio applies generally, the 115 Mb euchromatic genome could accommodate 13,200 transcription units.
+This is an overestimate, since the 115 Mb portion contains at least 15 Mb of mobile elements, and since we have not allowed for any regulatory DNA sequences between transcription units or included transcription units in excess of 100 kb.
+Our second estimate utilizes only those examples in which a minimum of two transcription units are available in any contiguous stretch of genomic DNA and hence includes the DNA between transcription units.
+This yields 158 transcription units embedded in 1.7 Mb of DNA, approximately 11,000 transcription units per genome.
+Our third estimate is a reevaluation of polysomal mRNA hybridization data which was originally based on an average mRNA size of 1250 nt (Levy and Manning, 1981).
+The appropriate mRNA length estimated from current molecular data is 2100 nt (Maroni, 1994, 1996), leading to a revised estimate of 10,000 transcription units.
+Since the two most reliable estimates based on cloned material vary from 11,000 to about 13,000 transcription units, we take 12,000 as a working figure for the number of protein coding genes in D. melanogaster.
+A comparison with other organisms reveals that a unicellular protozoan, a nematode worm, and a fly develop and function with 12,000-14,000 genes (Table 1).
+These three examples illustrate that there can be large differences in morphological complexity among different organisms that have similar numbers of genes.
+Gene number per se is not likely to provide a useful measure of biological complexity.
+The increase in the average amount of DNA occupied by a genetic unit from 1kb in bacteria, to 2kb in yeast, to 10kb in flies is likely to reflect an increased requirement for cis-acting regulatory elements in metazoan organisms.
+The Number of Core Biochemical Pathways and Mechanisms is Likely to be Similar in All Metazoa Polysomal mRNA data indicate that the squid Loligo pealii has at least 35,000 genes (Capano et al., 1986), and our re-evaluation of data from tetraploid tobacco (Kamalay and Goldberg, 1980), in the light of cloned mRNA lengths (Maroni, 1996), shows that this plant has approximately 43,000 genes.
+Thus, excluding vertebrates, the variation in gene number in multicellular eukaryotes currently ranges from approximately 12,000 to about 43,000, assuming the squid and tobacco estimates, which are based solely on a single method, are accurate.
+Human and mouse genomes are thought to have approximately 70,000 genes (Antequera and Bird, 1993; Collins, 1995).
+Although over 270,000 human expressed sequence tags (ESTs) were available in public databases as of October, 1995, it is still unclear how many genes have been identified by this methodology (Jordan, 1996).
+On the basis of presently available data, the human genome could have less than 50,000, or greater than 100,000 genes.
+This uncertainty is unlikely to be resolved until a large sample of the genome has been sequenced so that the fraction of genes represented in the EST databases can be assessed.
+Why are mammals likely to have four to six times as many genes as Caenorhabditis and Drosophila? One possibility is that a significant component of the mammalian increase has occurred by polyploidization, a common evolutionary feature in most unicellular and metazoan lineages (John and Miklos, 1988).
+The evolution of mammalian genomes is thought to include at least two whole genome duplications of an ancestral genome (Holland et al., 1994), as well as duplication of sub-chromosomal segments together with extensive gene duplication that has given rise to many large multigene families (Lundin, 1993).
+If the genome projects verify the underlying octoploid nature of the human and mouse genomes, then the basic vertebrate gene number may be similar to that of the fly and worm, about 12,000 to 14,000 genes.
+Interestingly, the urochordate Ciona intestinalis has a genome size and a repetitive DNA content similar to that of D. melanogaster (John and Miklos,1988).
+If this were to be indicative of a basic chordate genome, then the number of core biochemical pathways and mechanisms is unlikely to be greatly different in flies, nematode worms, early chordates and humans.
+The duplicated pathways in mammals are, however, likely to have adopted specialized expression patterns and biological functions.
+How widespread is duplication at the genomic level? Analysis of Haemophilus influenzae reveals that 30% of its 1760 genes are essentially identical duplication products (Brenner et al., 1995).
+Estimates from Escherichia coli indicate that 46% of its 4100 genes are recognizable as gene duplicates (Koonin et al., 1995).
+In yeast, the published genomic sequences show that at least 14% of its 5800 genes are clear duplicates.
+In worms, flies, mice and human, there are insufficient data as yet to determine what proportion of genes are duplication products.
+The majority of genes in the mouse and human genome exist as multigene families, some of whose memberships are in the hundreds to thousands.
+It is estimated that there are 2000 or so protein kinases and perhaps as many as 1000 phosphatases (Hunter, 1995).
+This compares with an estimated 350 protein kinases and 80 phosphatases in the worm (Hodgkin et al., 1995).
+However, if mammalian genomes are minimally octoploid, then a substantial proportion of the mouse and human genomes will, initially at least, have consisted of duplication products.
+Anecdotal data on an increasing number of genes support this view: Drosophila has one copy each of the Ras, Raf and Notch genes, as well as of the genes of the Hox cluster, while vertebrates have three or more of each of these genes.
+In multicellular organisms, functional duplicate copies of a gene can exist in a genome, but if their expression patterns do not overlap, their products are unable to compensate for each other if either gene is mutated.
+The information gathered in databases will provide an essential guide to analyzing the extent of potential compensation during the life cycle of an organism by providing detailed information on the sites of expression of each gene.
+In Yeast, Worms, Flies, and Mice, Only About 1 in 3 Genes is Essential for Viability The consequences of some genomic perturbations cannot be compensated for by normal epigenetic processes and result in the death of the organism prior to adulthood.
+To determine the extent of compensation, we first summarize data on Drosophila genes whose inactivation leads to lethality, and then compare the fly data with those from other organisms.
+The number of lethal loci in the Drosophila genome is thought to be about 5000 (Nusslein-Volhard, 1994; Lewin, 1994), but new data allow us to refine this figure downwards.
+We have evaluated the published data from 27 different chromosomal regions that have been subjected to extensive mutagenesis.
+From this large sample comprising a quarter of the fly genome we estimate that there are approximately 3600 lethal loci in a Drosophila genome of 12,000 genes (Table 2).
+__________________________________________________________________
+TABLE 2.
+Frequencies of Lethal Loci in Different Regions of the Drosophila Genome Expressed in Terms of the Number of Polytene Bands in the Mutagenized Interval
+Chromosome Number of Bands Analyzed Number of Lethal Loci Ratio of Bands to Lethal Loci Extrapolation of Lethal Loci per Genome X 450 298 0.66 3350 2 415 267 0.64 3260 3 343 235 0.69 3470 4 50 34 0.68 3440 Total 1253 836 0.67 3380
+Most Intensively Studied Regions on the X Chromosome
+X 373 265 0.71 3600
+_______________________________________________________________________ _ The 27 individual chromosomal intervals analyzed and the references on which these estimates are based, are available from G.L.G.M. or G.M.R. __________________________________________________________________
+The estimates for Caenorhabditis range from 2,900 to 3,500 lethal loci in a genome of approximately 14,000 genes (Table 3).
+These estimates are based on extrapolations from three regions of the worm genome that together constitute about 8% of the genetic map (Clark et al., 1988; Howell and Rose, 1990; Johnsen and Baillie, 1991).
+__________________________________________________________________
+TABLE 3.
+Estimation of Lethal Loci in Different Regions of the C. elegans Genome.
+Chromosome Region Length in Map Units Loci Found Predicted Number of Loci Extrapolated Number per Genome unc-22(sDf2) Chromosome 4 2.2 31 48 3500 hDf6 Chromosome 1 1.5 19 25 3300 eT1(III;IV) Chromosome 5 23.0 101 120 2850 __________________________________________________________________
+In S. cerevisiae, approximately 900 genes out of 5800 are cell lethals, and an additional 900 act to stop cell cycle processes or cause impairment of growth on specific media ( Burns et al., 1994).
+Hence about 1800 genes in toto are equivalent to the lethal class of multicellular organisms (Table 4).
+__________________________________________________________________
+TABLE 4.
+The Estimated Number of Transcription Units and Lethal Loci in Different Organisms.
+Transcription Units Lethal Loci S. cerevisiae 6,300 1,900 C. elegans 14,000 2,700-3,500 D. melangoaster 12,000 3,600 A. thaliana 25,000 500 D. rerio N 5,000 F. rubripes 70,000 N M. musculus 70,000 5,000-26,000 __________________________________________________________________
+In Arabidopsis there are approximately 500 lethal genes (Meinke, 1994) in a genome that is reported to house about 25,000 genes (Goodman et al., 1995).
+Whether this finding is a peculiarity of plant reproductive processes and embryonic development, whether the current estimates for the number of lethal genes or total gene number are unreliable ones (or both) awaits future analysis.
+In the zebrafish it is estimated that there are roughly 5,000 lethal genes (Haffter et al., submitted), although the total number of genes in the genome is not known.
+The only estimate of gene number in a teleost is from the pufferfish Fugu rubripes, which is claimed to have as many genes as humans (Brenner et al., 1993), although this estimate is based on a sample of only 0.1% of the genome.
+In Mus, the available data on lethal loci largely stem from three sources: from the 263 gene knockouts summarized by Brandon et al. (1995); from small promoter trap analyses, such as that of Friedrich and Soriano (1991); and from a mutagenesis analysis of the t region of chromosome 17 (Dove, 1987).
+Of the 263 knockouts, approximately 25 percent are embryonic lethals.
+Taken at face value, these figures indicate that there would be approximately 18,000 lethal loci if the mouse genome houses 70,000 genes.
+However, this is a highly selected sample of genes and the extent to which it is a reliable guide to the whole genome is not known.
+In the promoter trap study, 9 out of 24 knockout strains yield homozygous embryonic lethals, indicating that there would be approximately 26,000 lethal loci if these figures are used.
+In the genetic analysis of the t region, 17 lethal loci were recovered and it is on this minute sample that the figure of 5,000 to 10,000 lethal loci in the mouse genome is based (Dove 1987).
+It is clear that an estimate of the number of lethal loci in the mouse genome is uncertain, and presently ranges from 5,000 to 26,000.
+The Phenotypic Consequences of Gene Inactivation Depend on Genetic Background The interpretation of gene inactivation, deletion, or knockout data needs to be treated with caution (Erickson, 1993; Weintraub, 1993; Thomas, 1993; Crossin, 1994; Pickett and Meeks-Wagner, 1995), since detecting subtle phenotypic alterations under laboratory conditions is difficult.
+In addition, the current methods used in evaluating function are often inadequate, and small reductions in fitness are usually not measured.
+In yeast, for example, the total deletion of a membrane protein coding for a probable acetic acid exit pump usually has little phenotypic effect.
+However, the cells die when grown on glucose at low pH and when perturbed with acetic acid (Oliver, 1996).
+In multicellular organisms, it is not always possible to comprehend fully the phenotypic consequences of a knockout or gene perturbation.
+In Drosophila, for example, second-site mutations often partially suppress the phenotype of a gene perturbation, and these modifiers accumulate in cultures of Drosophila maintained as homozygous stocks (Ashburner, 1989).
+In humans it is clear that simple single gene diseases are rare (van Heyningen, 1994; Mulvihill, 1995; Brandon et al., 1995).
+As described below, to fully understand the phenotypic changes caused by mutation of a gene requires knowledge of the different cell types, developmental stages and cellular processes in which it functions as well as of the compensatory changes that may occur to allow that function to be accomplished in a different way.
+A gene knockout can result in different phenotypes when it is placed in different genetic backgrounds.
+For the mouse epidermal growth factor receptor knockout there is preimplantation death on a CF-1 background.
+There is mid-gestation death on a 129 / Sv background.
+On a CD-1 background, the mutant mice live for 3 weeks or so (Threadgill et al., 1995).
+Similarly the mouse activin / inhibin bB subunit knockout has an eye defect that is not seen in a 129 Sv background, but is penetrant in both 129Sv / C57BL / 6 and 129 Sv / BALB / c backgrounds (Vassalli et al., 1994).
+Different genetic backgrounds can allow or eliminate intestinal tumors in mice, and in humans there is variation between different members of the same family inheriting the APC mutation, which predisposes them to colon cancer (Dietrich et al., 1993).
+The human phenotypic spectrum can differ from that of the mouse for the same gene, the perturbations of the ret receptor tyrosine kinase being a good example (van Heyningen, 1994).
+All of these data draw attention to the compensatory resiliency that is known to occur in developmental networks in different organisms (Crossin, 1994; Pickett and Meeks-Wagner, 1995).
+One of the challenging future research avenues is to examine single and multiple gene inactivations in different genetic backgrounds and to map, isolate and characterize the major contributors to the variation (Lander and Schork, 1994).
+Nearly All Gene Products are Expressed and Utilized at Multiple Places and Times during Development The classical genetic studies in Drosophila and Mus revealed that certain genes affected many aspects of the phenotype, and these were termed pleiotropic.
+Indeed Gruneberg (1952) first pointed out for the mouse that all genes that had been studied with any care had pleiotropic effects.
+In Drosophila, pleiotropy is the rule rather than the exception (Greenspan et al., 1996).
+In molecular terms, pleiotropy can arise if a protein (or RNA) is functionally required in different places, at different times, or both.
+The expression of the Notch transmembrane protein of Drosophila is one example.
+It is involved with different ligands in cell-cell interactions in different tissues in a variety of regulative events (Artavanis-Tsakonas et al., 1995).
+A large scale analysis of functional requirements has been undertaken in the Drosophila germ line and the compound eye (Perrimon et al., 1989; Thaker and Kankel, 1992).
+The data suggest that 75% of the 3600 lethal loci in the fly genome are functionally required during oogenesis, since the absence of their products results either in cell death or in abnormal oogenesis.
+An analysis of the assembly and neural connectivity of the developing eye yields a similar result: 70% of the 3600 lethal loci are predicted to be functionally required for the development of the eye (Thaker and Kankel, 1992).
+If the pleiotropy of lethal loci is not substantially different from that of non-lethal loci, then in excess of 70% of the genes in the genome would be used in the construction of each of these organ systems.
+A further indication of potential pleiotropy emerges from studies of gene expression that almost always reveal expression of a gene in more than one place or at more than one time.
+In a study of nearly 600 randomly selected enhancer trap lines found to be expressed in the Drosophila larval brain, only two lines gave staining exclusively in the nervous system.
+Most lines revealed expression outside of the central nervous system with little tissue or organ specificity (Datta et al., 1993).
+In a similar study of nearly 20,000 enhancer trap lines, over 15% were expressed early during development of the retina, but only one was found to be limited to the visual system (U. Gaul, L. Higgins and G. Rubin, unpublished data).
+Furthermore, in studies of reporter gene expression in over 3700 enhancer trap lines during embryogenesis, there was extensive expression at different times and at different places (Bier et al., 1989).
+These are large samples of localized genomic activity and it is clear that nearly all Drosophila genes are expressed in at least two different places or times during development.
+However, it is not safe to assume that whenever a protein is expressed in a cell, it is expressed there for functional reasons; aspects of an expression pattern may simply reflect the default outcome of the regulatory networks in which that gene happens to be embedded.
+Databases of Gene Structure and Expression Patterns will be Critical but Insufficient to Decipher Gene-Regulatory Networks One approach to the functional evaluation of regulatory elements is to identify evolutionarily conserved regulatory regions by interspecies comparisons, in combination with transgenic analyses.
+For example, DNA sequence comparisons of the promoter regions of four different rhodopsin genes from D. melanogaster and D. virilis reveal an interchangeable conserved set of core sequences with additional upstream sequences conferring cell type specificity.
+Detailed mutagenesis studies of 31 regulatory regions reveal that 7 of the 8 conserved sequences are compromised in their functions when mutagenized, whereas none of the 23 nonconserved regions perturb normal function when altered (Fortini and Rubin, 1990).
+It is likely that computer analyses between different species will reveal a proportion of conserved core regulatory sequences for genes.
+The extent to which this holds within and between phyla awaits experimental analyses.
+It is already clear that such comparisons between Mus and Homo will be a preferred method for defining the control regions of mammalian genes (Ravetch et al., 1980) and provide a strong argument for syntenic sequencing of the human and mouse genomes.
+To what extent will the knowledge of all the regulatory components during development provide information on the strengths of molecular interactions and the thresholds which determine normal developmental or physiological responses? We turn to this issue, which relates to networks, thresholds, and non-linear responses in biological systems (Edelman, 1987, 1988; Weintraub, 1993).
+Many biological systems function synergistically rather than as on / off switches.
+Protein tyrosine phosphatases for example, act synergistically with protein kinases to produce particular physiological responses (Fischer, 1993; Cool and Fischer, 1993).
+In addition, there are threshold effects when transcription factors bind combinatorially to other proteins, as well as to high and low affinity DNA sites, or when the spacing between DNA binding sites is altered (Gray et al., 1995).
+For example, high levels of the Dorsal protein activate the twist and snail genes, whereas low levels repress zerknult and decapentaplegic (Jiang and Levine, 1993).
+Multiple protein-protein interactions also have significant effects on target affinities (Struhl, 1996).
+In general, synergistic interactions can lead to large responses following small changes in the concentrations of transcriptional components, an effect that is also produced by phosphorylation of transcription factors.
+The order in which proteins are assembled into a multisubunit transcription complex is important, as are the rate-limiting steps in assembly and the physiologically relevant protein-protein interactions (Tjian and Maniatis, 1994; Struhl, 1996; Goodrich et al., 1996).
+However, neither the order nor the rate of assembly can be derived by computer analysis from the knowledge of the number and type of protein components active in a particular cell.
+The outputs of multisubunit protein complexes, be they transcription complexes or phosphorylated receptor-docking protein complexes, are nonlinear.
+Insights into their nature cannot be extracted directly from any combination of databases because they are not an explicit property of the information itself, but of time-dependent combinatorial interactions that must be analyzed across many levels.
+To obtain insights into these time-dependent interactions, thresholds and networks, particularly during development, will require transgenic organisms in which precise molecular alterations have been engineered.
+Core Cellular Processes and Pathways are Largely Conserved among the Model Organisms The problem of understanding developmental processes in different organisms is compounded by the finding that, on the one hand, there are highly conserved genes and gene networks in distantly related organisms, yet on the other hand some genes and gene networks occur in one lineage but are absent from another.
+For example, the bacterial genome projects reveal that H. influenzae has 68 genes for amino acid biosynthesis whereas Mycoplasma genitalium has only 1.
+In addition, the majority of genes in the archaebacterium Methanococcus jannaschii are claimed to have no equivalents in other organisms (Holden, 1996).
+In S. cerevisiae, over 30% of the genes as yet has no relatives in any other organism (Dujon, 1996).
+Furthermore, we still have little idea how many of the genes that are present in vertebrate, invertebrate, fungal, plant and Protoctistan genomes are unique to a lineage.
+Some major classes of genes, however, are clear signatures for particular lineages.
+The immunoglobulin genes of the vertebrate immune system are not found in the yeast, fly or worm genomes.
+Collagens are not found in unicellular eukaryotes, and receptor tyrosine kinases appear to be a metazoan invention (Hunter, 1994).
+On the other hand, many thousands of proteins, with varying degrees of sequence similarity, are common to many lineages, and these proteins make up much of the cellular machinery.
+Conservation of function also occurs at higher levels.
+In many cases not only individual protein domains and proteins, but entire multisubunit complexes and biochemical pathways are conserved.
+In some cases, the way in which these complexes and pathways are utilized in the development and physiology of the organism are also conserved.
+For example, it is known that intracellular protein transport in yeast and synaptic vesicle release in neurons have conserved protein components (Rothman, 1994).
+In signaling pathways such as those involving the Ras and Notch cascades, many of the protein components are conserved between yeasts, flies, worms and humans (Wassarman et al., 1995; Artavanis-Tsakonas et al., 1995).
+The CREB transcription factor has been implicated in the cAMP-PKA pathway involved in synaptic plasticity and the formation of long term memory processes in the Mollusca, Arthropoda and Vertebrata (Greenspan, 1995; Deisseroth et al., 1996).
+The use of similiar cell adhesion molecules by Drosophila, Caenorhabditis, and Gallus gallus provides evidence for phylogenetically conserved mechanisms of growth cone guidance of neurons (Goodman, 1996).
+Examples of apparent conservation even extend to processes that had not been thought to have a shared ancestor, such as vertebrate and invertebrate limb formation (Shubin et al., 1996).
+Assessing conservation of function is much more difficult than assessing structural conservation.
+For structure, the different genome projects will provide the absolute basis on which core components such as protein domains, proteins, and multisubunit complexes, can be compared in different evolutionary lineages.
+However, to assess functional conservation one must determine the function of a protein or pathway in more than one organism.
+As we argue, obtaining the requisite knowledge of gene networks and regulatory elements will require sophisticated genetic and transgenic experimentation that is now only possible in a few organisms.
+One important task will be to determine the extent to which the novel use of conserved core processes in a given lineage, as opposed to the invention of new molecular processes, has contributed to producing morphological and biochemical novelties (for further discussion see Miklos, 1993a,1993b; Miklos et al., 1994; Miklos and Campbell, 1994).
+In the Chordate lineage alone, these novelties include the immune system, the presence of myelin sheaths, electroreception and infra-red vision.
+The genome project and transgenic data will not only help to determine the extent to which functional interchangeability at the gene level is possible among different organisms, but will also allow better choices to be made about what genes to use for such interspecies transfers.
+Analysis of Loss-of-Function Mutations Needs to Be Complemented with Studies of the Effects of Gene Misexpression Much of the knowledge of developmental processes in the fly, worm, mouse and zebrafish, and of the cell biology of yeast, has been obtained via loss-of-function perturbations (Nusslein-Volhard, 1994; Mullins et al., 1994; Burns et al., 1994; Spradling et al., 1995; Brandon et al., 1995).
+The information gained from careful analysis of loss-of-function phenotypes has proven to be valuable in elucidating complex genetic pathways such as the yeast cell cycle (Hartwell, 1991) and early pattern formation in the Drosophila embryo (Nusslein-Volhard and Weischaus, 1980).
+Nevertheless, the loss-of-function approach quickly reaches a pragmatic limit for several reasons.
+First, the majority of genes have no easily assayable loss-of-function phenotype.
+Second, even when a phenotype is observed, it only reflects that part of the function of a gene that cannot be compensated by other genes and pathways.
+In many cases this will represent only a small fraction of the function of a gene in the organism.
+Third, pleiotropy of gene function complicates analysis.
+For example, it is difficult to examine the role of a gene in a cellular process if its mutation arrests cell proliferation and thereby prevents the generation of a population of homozygous mutant cells.
+If a mutation results in embryonic lethality, it is difficult to study the role of that gene in the formation of an adult organ, although it is sometimes possible to use temperature-sensitive mutations to surmount these dificulties.
+The use of site-specific recombination systems in transgenic animals offers a general approach to generating lineage specific mutations.
+These approaches are being exploited in the mouse by the use of the bacteriophage P1 cre-loxP system (Gu et al., 1994) and in the fly by the yeast FLP-FRT system (Xu and Rubin, 1993).
+Spatially and temporally targeted misexpression of individual genes provides an alternative way to perturb gene-regulatory networks.
+In Drosophila, this can be achieved using the GAL4-UAS system in which an enhancer trap vector that expresses the yeast transcriptional activator GAL4, has been mobilized to generate hundreds of lines that drive GAL4 expression from a large number of genomic enhancers (Brand and Perrimon, 1993).
+Each of these can be used to activate specifically a target gene of choice.
+The GAL4 line whose individuals exhibit the experimentally desired expression pattern is then crossed to UAS target gene-bearing individuals and the gene is activated only in those cells where GAL4 is expressed.
+The target gene can come from any organism, can be a synthetic combination of domains, or encode a protein with either unregulated or dominant negative (Herskowitz, 1987) function, can code for a site-specific recombinase.
+In this way, and without interfering with the developmental processes leading to adult structures, gene products from any organism or synthetic source can be expressed in specific parts of the fly, such as the nervous system, as well as targeted to different subcellular locations such as synapses (Callahan and Thomas, 1994).
+As with all such modifications, the difficult task is to make sense of the organismal behaviors following genomic changes (Ferveur et al., 1995).
+Another approach to generating controlled misexpression relies on site-specific recombination systems to remove a transcriptional terminator that separates a gene from its promoter (Struhl and Basler, 1993).
+For example, misexpressing the decapentaplegic (dpp) gene in the region of the developing fly leg where the wingless (wg) product is made produces a secondary proximal-distal axis (Diaz-Benjumea et al., 1994).
+While the expression patterns of dpp and wg suggested that interactions between dpp-expressing and wg-expressing cells might induce the proximal-distal axis, this was difficult to confirm by analysis of loss-of-function mutations.
+Both dpp and wg have early and essential roles in development and also affect cell proliferation.
+The ability to create a new proximal-distal axis at an ectopic site of contact between wg-expressing and dpp-expressing cells validates the hypothesis of the induction of a new proximal-distal axis, in a way that was not possible using loss-of-function mutations.
+It is clear from such studies that future work will be driven increasingly by powerful transgenic technologies which will allow finer and finer orchestrations of multiple developmental networks in vivo.
+Saccharomyces, Drosophila, and Mus are the only organisms where the techniques to accomplish these types of manipulation are now possible.
+While yeast, fly, worm, zebrafish, pufferfish, Xenopus, chicken and mouse each continue to contribute heavily to solving common problems, they do have limitations in serving as models for each other or for humans.
+Perspectives We believe that the data to which we have drawn attention, provide reasonable indicators of the diversity of information that is likely to be available in the not too distant future.
+We also think that, in terms of experimental challenges, the next period will need to be one of expanded transgenic biology in which: multiple modifications are made within a genome; an increasing number of genes and regulatory sequences are shuttled between different organisms; and natural variation within and between species is more extensively used to understand parts of biological networks.
+Even in their integrated form, the databases have significant limitations.
+They do not hold information on non-linear responses and thresholds, both of which underpin development and each of which can only be analyzed by in vivo experimentation.
+Furthermore, the fundamental issues of comparative morphogenesis (Edelman and Jones, 1995; Bard, 1990; Garcia Bellido, 1994) and comparative brain function (Edelman, 1987; Miklos, 1993a) will depend on a deeper understanding of place-dependence, complexity, and degeneracy in biological systems (Kampis and Csanyi, 1987; Edelman, 1993; Tononi et al., 1994, 1996).
+What will be the major near-term contribution of model organisms to the understanding of human biology, and how will the information from the genome projects help? While the human genome may contain approximately 70,000 genes, these genes will encode the components of perhaps only a few hundred biological processes - for example, amino acid biosynthesis, protein synthesis, protein secretion, cell cycle regulation, signal transduction pathways, and cell-cell and cell-substrate adhesion.
+Of all the invertebrate model organisms whose genomes are currently being sequenced, the gene systems in Drosophila show the highest degree of structural conservation to those of humans (see for examples Sidow and Thomas, 1994; Artavanis-Tsakonas et al. 1995), and it seems reasonable to expect that most of the components of these biological processes, and the way in which they interact with each other, will be conserved between flies and human.
+Perhaps more surprising is the extent to which the developmental and physiological functions of these core processes between fly and human appear to be conserved.
+As we have discussed, the experimental tools exist in the model organisms, but not in humans, for assembling genes into pathways.
+The genome projects in each of the model organisms will greatly facilitate this experimental work and, together with the sequence analysis of human genome, will allow for the transfer of this information to human biology.
+Thus, the principal contribution of the model organisms to human biology over the next 5 years will be the reduction of most of the approximately 70,000 individual components encoded by the human genome into a much smaller number of multicomponent core processes of known biochemical function.
+Knowledge of the precise ways in which each of the evolutionarily conserved core processes are used in humans, and the many ways in which their perturbations can lead to disease, will only come from the study of humans themselves, with some contribution form vertebrate models such as the mouse.
+In the Post-Sequence Era, we may eventually be able to move beyond what evolutionary processes have actually produced and ask what can be produced.
+The gene transfer approach may ultimately be superseded by an even more radical way of tackling development, namely, by making novel combinations of protein domains and regulatory motifs, and building novel gene networks and morphogenetic pathways.
+That is, we may be able not only to discern how organisms were built and how they evolved, but more importantly, estimate the potential for the kinds of organisms that can still be built.
+ACKNOWLEDGEMENTS This work has been supported by the Neurosciences Research Foundation and the Howard Hughes Medical Institute.
+We would also like to thank our many colleagues, especially D. Botstein, C. Coyle-Thompson, K. Crossin, G.M. Edelman, R. Greenspan, I. Herskowitz, F. Jones, M. Levine, and A. Spradling for help in different aspects of this work.
+REFERENCES Antequera, F., and Bird, A. (1993).
+Number of CpG island and genes in human and mouse.
+Proc.
+Natl.
+Acad.
+Sci. USA 90, 11995-11999.
+Artavanis-Tsakonas, S., Matsumo, K., and Fortini, M. E. (1995).
+Notch signaling.
+Science 268, 225-232 Ashburner, M. (1989).
+Drosophila, a laboratory handbook (New York: Cold Spring Harbor Laboratory Press) Bard, J. (1990).
+Morphogenesis: The Cellular and Molecular Processes of Developmental Anatomy (Cambridge: Cambridge University Press).
+Bier, E., Vaessin, H., Shepherd, S., Lee, K., McCall, K., Barbel, S., Ackerman, L., Carretto, R., Uemura, T., Grell, E., Jan, L.Y., and Jan, Y.N. (1989).
+Searching for pattern and mutation in the Drosophila genome with a P-lacZ vector.
+Genes and Development 3, 1273-1287.
+Brand, A.H., and Perrimon, N. (1993).
+Targeted gene expression as a means of altering cell fates and generating dominant phenotypes.
+Development 118, 401-415 Brandon, E.P., Idzerda, R.L., and McKnight, G.S. (1995).
+Targeting the mouse genome: a compendium of knockouts.
+Current Biology 5, 1-27 Brenner, S., Elgar, G., Sandford, R., Macrae, A., Venkatesh, B., and Aparicio, S. (1993).
+Characterization of the pufferfish (Fugu ) genome as a compact model vertebrate genome.
+Nature 366, 265-268 Brenner, S.E., Hubbard, T., Murzin, A., and Chothia, C. (1995).
+Gene duplications in H influenzae.
+Nature 378, 140 Burns, N., Grimwade, B., Ross-Macdonald, P.B., Choi, E-Y., Finberg, K., Roeder, G.S., and Snyder, M. (1994).
+Large-scale analysis of gene expression, protein localization, and gene disruption in Saccharomyces cerevisiae.
+Genes and Development 8, 1087-1105.
+Callahan, C.A., and Thomas, J.B. (1994).
+Tau-b-galactosidase, an axon-targeted fusion protein.
+Proc.
+Natl.
+Acad.
+Sci. USA 91, 5972-5976 Capano, C.P., Gioio, A.E., Giuditta, A., and Kaplan, B.B. (1986).
+Complexity of nuclear and polysomal RNA from squid optic lobe and gill.
+Journal of Neurochemistry 46, 1517-1521 Clark, D.V., Rogalski, T.M., Donati, L.M., and Baillie, D.L. (1988).
+The unc-22 (IV) region of Caenorhabditis elegans: genetic analysis of lethal mutations.
+Genetics 119, 345-353 Collins, F.S. (1995).
+Ahead of schedule and under budget: the genome project passes its fifth birthday.
+Proc.
+Natl.
+Acad.
+Sci. USA 92,10821-10823 Cool, D.E., and Fischer, E.H. (1993).
+Protein tyrosine phosphatases in cell transformation.
+Cell Biology 4, 443-453 Crossin, K.L.(1994).
+Functional role of cytotactin/tenascin in morphogenesis: a modest proposal.
+Perspectives on Developmental Neurobiology 2, 21-32 Datta, S., Stark, K., and Kankel, D.R. (1993).
+Enhancer detector analysis of the extent of genomic involvement in nervous system development in Drosophila melanogaster.
+J. Neurobiology 24, 824-841 Deisseroth, K., Bito, H., and Tsien, R.W. (1996).
+Signaling from synapse to nucleus: postsynaptic CREB phosphorylation during multiple forms of hippocampal synaptic plasticity.
+Neuron 16, 89-101.
+Diaz-Benjumea, F. J., Cohen, B., and Cohen, S. M. (1994).
+Cell interaction between compartments establishes the proximal-distal axis of Drosophila legs.
+Nature 372, 175-179 Dietrich, W.F., Lander, E.S., Smith, J.S., Moser, A.R., Gould, K.A., Luongo, C., Borenstein, N., and Dove, W., (1993).
+Genetic identification of Mom-1, a major modifier locus affecting Min-induced intestinal neoplasia in the mouse.
+Cell 75, 631-639 Dove, W.F. (1987).
+Molecular genetics of Mus musculus: point mutagenesis and millimorgans.
+Genetics 116, 5-8.
+Dujon, B. (1996).
+The yeast genome project: what did we learn? Trends Genet.
+12 Edelman, G.M. (1987).
+Neural Darwinism: The Theory of Neuronal Group Selection (New York: Basic Books) Edelman, G.M. (1988).
+Topobiology: An Introduction to Molecular Embryology (New York: Basic Books) Edelman, G.M. (1993).
+A golden age for adhesion.
+Cell Adhesion and Communication 1, 1-7 Edelman, G.M., and Jones, F.S. (1995).
+Developmental control of N-CAM expression by Hox and Pax gene products.
+Phil.
+Trans.
+R. Soc. Lond.
+B 349, 305-312 Erickson, H.P. (1993).
+Gene knockouts of c-src, transforming growth factor b1, and tenascin suggest superfluous, nonfunctional expression of proteins.
+The Journal of Cell Biology 120, 1079-1081.
+Ferveur, J-F., StÃ¶rtkuhl, K.F., Stocker, R.F., Greenspan, R.J., (1995).
+Genetic feminization of brain structures and changed sexual orientation in male Drosophila.
+Science 267, 902-905.
+Fischer, E.H., (1993).
+Protein phosphorylatin and cellular regulation II (Novel Lecture).
+Angew.
+Chem.
+Int. Ed. Engl. 32, 1130-1137.
+Fleischmann, R.D., Adams, M.D., White, O., Clayton, R.A., Kirkness, E.F., Kerlavage, A.R., Bult, C.J., Tomb, J.-F., Dougherty, B.A., Merrick, J.M., et al. (1995).
+Whole-genome random sequencing and assembly of Haemophilus influenzae Rd. Science 269, 496-512.
+Fortini, M.E., and Rubin, G.M. (1990).
+Analysis of cis-acting requirements of the Rh3 and Rh4 genes reveals a bipartite organization to rhodopsin promoters in Drosophila melanogaster.
+Genes and Development 4, 444-463 Fraser, C.M., Gocayne, J.D., White, O., Adams, M.D., Clayton, R.A., Fleishmann, R.D., Bult, C.J., Kerlavage, A.R., Sutton, G., Kelley, J.M., et al. (1995).
+The minimal gene complement of Mycoplasma genitalium.
+Science 270, 397-403 Friedrich, G., and Soriano, P. (1991).
+Promoter traps in embryonic stem cells: a genetic screen to identify and mutate developmental genes in mice.
+Genes and Development 5, 1513-1523 GarcÃ­a-Bellido, A. (1994).
+How organisms are put together.
+European Review 2, 15-21 Gibson, S., and Somerville, C. (1993).
+Isolating plant genes.
+TIBTECH 11, 306-312 Goodman, C.S. (1996).
+Mechanisms and molecules that control growth cone guidance.
+Annu.
+Rev. Neurosci.
+19, 341-377 Goodman, H.M., Eckers, J.R., and Dean, C. (1995).
+The genome of Arabidopsis thaliana.
+Proc.
+Natl.
+Acad.
+Sci. USA 92, 10831-10835.
+Goodrich, J.A., Cutler, G., and Tjian, R. (1996).
+Contacts in context: promoter specificity and macromolecular interactions in transcription.
+Cell 84, 825-830 Gray, S., Cai, H., Barolo, S., and Levine, M. (1995).
+Transcriptional repression in the Drosophila embryo.
+Phil.
+Trans R. Soc. Lond.
+B 349, 257-262 Greenspan, R.J. (1995).
+Flies, genes, learning and memory.
+Neuron 15, 747-750 Gruneberg, H. (1952).
+The Genetics of the Mouse.
+(The Hague, Netherlands: Martinus Nijhoff) Gu, H., Marth, J.D., Orban, P.C., Mossmann, H., and Rajewsky, K. (1994).
+Deletion of a DNA polymerase b Gene segment in T cells using cell type-specific gene targeting.
+Science 265, 103-106.
+Hartwell, L.H. (1991).
+Twenty-five years of cell cycle genetics.
+Genetics 129, 975-980 Herskowitz, I. (1987).
+Functional inactivation of genes by dominant negative mutations.
+Nature 329, 219-22.
+Hodgkin, J., Plasterk, R.H.A., and Waterston, R.H. (1995).
+The Nematode Caenorhabditis elegans and Its Genome.
+Science 270, 410-414 Holden, C. (1996).
+Genes confirm Archae's uniqueness.
+Science 271, 1061 Holland, P.W.H., Garcia-Fernandez, J., Williams, N.A., and Sidow, A. (1994).
+Gene duplications and the origins of vertebrate development.
+Development 1994 Supplement, 125-133 Howell, A.M., and Rose, A.M. (1990).
+Essential genes in the hDf6 region of chromosome I in Caenorhabditis elegans.
+Genetics 126, 583-592 Hunter, T. (1994).
+1001 protein kinases redux - towards 2000.
+Seminars in Cell Biology 5, 367-376 Hunter, T. (1995).
+Protein Kinases and phosphatases: the yin and yang of protein phosphorylation and signaling.
+Cell 80, 225-236 Jiang, J., and Levine, M. (1993).
+Binding affinities and cooperative interactions with bHLH activators delimit threhold responses to the dorsal gradient morphogen.
+Cell 72, 741-752 John, B. and Miklos, G.L.G. (1988).
+The Eukaryote Genome in Development and Evolution.
+(London: Allen and Unwin) Johnsen, R.C., and Baillie, D.L. (1991).
+Genetic analysis of a major segment [LGV(left)] of the genome of Caenorhabditis elegans.
+Genetics 129, 735-752 Jordan, B.R. (1996).
+Putting ESTs on the map.
+Genome Digest 3, 11 Kamalay, J.C., and Goldberg, R.B. (1980).
+Regulation of structural gene expression in tobacco.
+Cell 19, 935-946 Kampis, G., and CsÃ¡nyi, V. (1987).
+Notes on order and complexity.
+J. theor.
+Biol. 124, 111-121.
+Koonin, E.V., Tatusov, R.L., and Rudd, K.E. (1995).
+Sequence similarity analysis of Escherichia coli proteins: Functional and evolutionary implications.
+Proc.
+Natl.
+Acad.
+Sci. USA 92, 11921-11925.
+Lander, E.S., and Schork, N.J. (1994).
+Genetic dissection of complex traits.
+Science 265, 2037-2048.
+Levy, L.S., and Manning, J.E. (1981).
+Messenger RNA sequence complexity and homology in developmental stages of Drosophila.
+Developmental Biology 85, 141-149 Lewin, B. (1994).
+Genes V. (New York: Oxford University Press).
+Lundin, L.G. (1993).
+Evolution of the vertebrate genome as reflected in paralogous chromosomal regions in man and the house mouse.
+Genomics 16, 1-19 Maleszka, R. (1993).
+Electrophoretic analysis of the nuclear and organellar genomes in the ultra-small alga Cyanidioschyzon merolae.
+Current Genetics 24, 548-550 Maroni, G. (1994).
+The organization of Drosophila genes.
+DNA Sequence4, 347-354 Maroni, G. (1996).
+The organization of eukaryotic genes.
+Evolutionary Biology 29, 1-19).
+Meinke, D.W. (1994).
+Seed development in Arabidopsis thaliana.
+(Cold Spring Harbor, New York: Cold Spring Harbor Laboratory Press).
+253-295 Miklos, G.L.G. (1993a).
+Molecules and Cognition: The latterday lessons of levels, language, and lac.
+Journal of Neurobiology 24, 842-890 Miklos, G.L.G. (1993b).
+Emergence of organizational complexities during metazoan evolution: perspectives from molecular biology, palaeonology and neo-Darwinism.
+Memoirs Australasian Assn.
+Palaeontologists 15, 7-41 Miklos, G.L.G. and Campbell, K.S.W. (1994).
+From protein domains to extinct phyla: reverse-engineering approaches to the evolution of biological complexities.
+In: Early Life on Earth, Nobel Symposium 84, S. Bengtson, ed., Columbia U.P., New York, pp. 501-516 Miklos, G.L.G., Campbell, K.S.W., and Kankel, D.R. (1994).
+The rapid emergence of bio-electronic novelty, neuronal architectures, and organismal performance.
+In: Flexibility and Constraint in Behavioral Systems, R.J. Greenspan and C.P. Kyriacou, eds.
+John Wiley and Sons Ltd., 269-293 Mullins, M.C., Hammerschmidt, M., Haffter, P., and NÃ¼sslein-Volhard, C. (1994).
+Large-scale mutagenesis in the zebrafish: in search of genes controlling development in a vertebrate.
+Current Biology 4, 189-202.
+Mulvihill, J.J. (1995).
+Craniofacial syndromes: no such thing as a single gene disease.
+Nature Genetics 9, 101-103 Nusslein-Volhard, C. (1994).
+Of flies and fishes.
+Science 266, 572-574 Nusslein-Volhard, C., and Weischaus, E. (1980).
+Mutations affecting segment number and polarity in Drosophila.
+Nature 287, 795-801 Oliver, S.G. (1996).
+From DNA sequence to biological function.
+Nature 379, 597-600 Perrimon, N. Engstrom, L., and Mahowald, A.P. (1989).
+Zygotic lethals with specific maternal effect phenotypes in Drosophila melanogaster.
+I. Loci on the X Chromosome.
+Genetics 121, 333-352 Pickett, F.B., and Meeks-Wagner, D.R. (1995).
+Seeing Double: appreciating genetic redundancy.
+The Plant Cell 7, 1347-1356 Ravetch, J.V., Kirsch, I.R., and Leder P. (1980).
+Evolutionary approach to the question of immunoglobulin heavy chain switching: evidence from cloned human and mouse genes.
+Proc.
+Natl.
+Acad.
+Sci. 77, 6734-6738 Rothman, J.E. (1994).
+Mechanisms of intracellular protein transport.
+Nature 372, 55-63 Shubin,N., Carroll, S., and Tabin, C. (1996).
+Fossils, Genes and the Evolution of Limbs Nature, in press Sidow, A. and W.K. Thomas.
+(1994).
+A molecular evolutionary framwork for eukaryotic model organisms.
+Curr.
+Biol. 4: 596-603.
+Spradling, A.C., Stern, D.M., Kiss, I., Roote, J., Laverty, T., and Rubin, G.M. (1995).
+Gene disruptions using P transposable elements: An integral component of the Drosophila genome project.Proc.
+Natl.
+Acad.
+Sci. USA 92, 10824-10830 Struhl, G., and Basler, K. (1993).
+Organizing activity of wingless protein in Drosophila.
+Cell 72, 527-540 Struhl, K. (1996).
+Chromatin structure and RNA polymerase II connection: Implications for transcription.
+Cell 84, 179-182 Thaker, H.M., and Kankel, D.R. (1992).
+Mosaic analysis gives an estimate of the extent of genomic involvement in the visual system in Drosophila melanogaster.
+Genetics 131, 883-894 Thomas, J. H. (1993).
+Thinking about genetic redundancy TIG 9, 395-399 Threadgill, D.W., Dlugosz, A.A., Hansen, L.A., Tennenbaum, T., Lichti, U., Yee, D., LaMantia, C., Mourton, T., Herrup, K., Harris, R.C., Barnard, J.A., Yuspa, S.H., Coffey, R.J., Magnuson, T. (1995).
+Targeted disruption of mouse EGF receptor: effect of genetic background on mutant phenotype.
+Science 269, 230-238 Tononi, G., Sporns, O., and Edelman, G.M. (1994).
+A measure for brain complexity: relating functional segregation and integration in the nervous system.
+Proc.
+Natl.
+Acad.
+Sci. USA 91, 5033-5037.
+Tononi, G., Sporns, O., and Edelman, G.M. (1996).
+A complexity measure for the selective matching of signals by the brain.
+Proc.
+Nat. Acad.
+Sci. USA 93, 3422-3427 van Heyningen, V. (1994).
+One gene - four syndromes.
+Nature 367, 319-320.
+Vassalli, A., Matzuk, M.M., Gardner, H.A.R., Lee, K-F., Jaenisch, R. (1994).
+Activin/inhibin bB subunit gene disruption leads to defects in eyelid development and female reproduction.
+Genes and Development 8, 414-427 Wassarman, D.A., Therrien, M., and Rubin, G.M. (1995).
+The Ras signaling pathway in Drosophila.
+Current Opinion in Genetics and Development 5, 44-50 Waterston, R., and Sulston, J. (1995).
+The genome of Caenorhabditis elegans.
+Proc.
+Natl.
+Acad.
+Sci. USA 92, 10836-10840 Weintraub, H. (1993).
+The MyoD family and myogenesis: redundancy, networks, and thresholds.
+Cell 75, 1241-1244 Xu, T., and Rubin, G.M. (1993).
+Analysis of genetic mosaics in developing and adult Drosophila tissues.
+Development 117, 1223-1237 This page last updated on: 12/2/03
+Please send comments or questions about the web site to bdgp@fruitfly.org

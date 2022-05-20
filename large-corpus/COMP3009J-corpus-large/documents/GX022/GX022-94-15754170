@@ -1,0 +1,49 @@
+[previous chapter] [table of contents]
+Overview
+Chapter 1 Index
+1.
+Architecture 2.
+Project Viewers 3.
+System Requirements
+1.1 Architecture
+The following diagram shows up the Synoptic Display architecture:
+Architecture
+The system consists of four parts: (1) project builder, (2) project viewer, (3) repository of components and projects, and (4) runtime project engine.
+First two parts reside on user's PC, last ones on the server side.
+Project Builder is a console application which is used to create and modify synoptic display projects.
+Actually, this is a special graphical editor, that allows to define a logical flow of data: data sources (such as Accelerator Device), data consumers (for example, visual components for the dynamic data presentation), data handlers (for examples, integrators and comparators), and data pipes.
+The second function of the builder is definition of static visual components, such as immutable lines, geometrical shapes and tests.
+Builder is connected to the server side repositories in order to download the library of components, as well as to save and load projects.
+Besides, projects may be stored in local files.
+Project Viewer is a client side application, that renders graphical data received from the runtime project engine.
+In most cases, this is a web browser.
+See details below.
+Repository of Components and Projects is a server side application, to keep and distribute synoptic display projects among project builders instances and runtime project engine.
+It also keeps a common library of elementary components for the builders.
+Runtime Project Engine is a server side machine, that handles user's requests, downloads appropriate projects from the repository, launches data acquisition jobs and generates graphical data.
+We would like to emphasize some important points related to the proposed architecture: * An open, portable and human readable data format is used to convey and store projects, components and graphical data; * A central server side repository is used to store common component library and projects, that allows to share data among multiple developers; * Projects, stored in the server repository, immediately become available for execution; * In most cases, a standard web browser may be used as a project viewer, and very simple software installation is required.
+1.2 Project Viewers
+Project viewer is used to show data on user's PC.
+In most cases, this is the only part of the Synoptic Display, that must be installed and configured on the client machine.
+There are three options: * The recommended option is to use a standard Internet browser with Scalable Vector Graphics (SVG) support
+.
+SVG allows to see dynamically changed images without visible blinking.
+SVG plug-ins for browsers are provided by Adobe Systems, Inc. and they may be downloaded for free from their site.
+Unfortunately, plug-ins are not available for all types of browsers and all operating systems.
+Recommended configurations are highlighted:
+SVG Availability Microsoft Internet Explorer Netscape 4 Netscape 6 Mozilla Windows available for: Windows 98XP MS IE 4.0+ available for: Windows 98XP Netscape 4.54.78 N/A N/A UNIX N/A N/A available available Mac available for Mac 8.69.1, Mac 10.1 MS IE 5.0+ available for: Mac 8.69.1, Mac 10.1 Netscape 4.54.78 N/A N/A SVG plug-in is available, but Synoptic Display does not work in this configuration; Looks like an unofficial release, may be downloaded from the archive of old versions.
+* If you are not able or do not want to use an SVG viewer, it is possible to see results as JPEG or GIF image on any graphical web browser without additional software.
+The disadvantage is a visible refreshing of image every several seconds with blinking.
+* In the future, a special console SVG viewer will be developed to see dynamic images on every platform without web browser.
+1.3 System Requirements
+Particular system requirements depend on which modules will be used.
+* In every case, a connection to http://www-bd.fnal.gov/synoptic is required.
+* To see graphical data from the executed projects, you will need a graphical web browser with SVG support.
+See table above.
+Adobe SVG plug-ins have their own limitations and requirements.
+* To use Project Builder, you should install on you computer: + Java Development Kit (JDK) ver. 1.4.0 or higher.
++ Java Web Start (JWS) a system for remote software download and installation.
+In some cases, JWS is installed automatically together with JDK.
+[previous chapter] [table of contents]
+Last updated by AP 07-19-2002.
+[Security, Privacy, Legal]

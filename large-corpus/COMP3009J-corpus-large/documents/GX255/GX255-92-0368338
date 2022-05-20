@@ -1,0 +1,386 @@
+Using indep endent comp onent analysis to separate signals in climate data Imola K. Fodor and Chandrika Kamath Lawrence Livermore National Laboratory, 7000 East Avenue, Livermore, CA, USA 94551 ABSTRACT Global temperature series have contributions from different sources, such as volcanic eruptions and El Nino ~ Southern Oscillation variations.
+We investigate independent component analysis as a technique to separate unrelated sources present in such series.
+We first use artificial data, with known independent components, to study the conditions under which ICA can separate the individual sources.
+We then illustrate the method with climate data from the National Centers for Environmental Prediction.
+Keywords: Independent component analysis, climate simulation
+1.
+INTRODUCTION Observed and simulated global temperature series include the effects of many different sources, such as volcano eruptions and El Nino Southern Oscillation (ENSO) variations.
+In order to compare the results of different ~ models to each other, and to the observed data, it is necessary to first remove contributions from sources that are not commonly shared across the models considered.
+Such a separation of sources is also desired in order to assess the effect of human contributions on the global climate.
+Atmospheric scientists currently use parametric models and iterative techniques to remove the effects of volcano eruptions and ENSO variations from global temperature trends.
+1 Drawbacks of the parametric approach include the non-robustness of the results to the estimated values of the parameters, and the possible lack of fit of the data to the model.
+In this paper, we investigate the use of independent component analysis (ICA) as an alternative method for separating independent sources in global temperature series.
+Instead of fitting parametric models, we let the data guide the estimation, and separate automatically the effects of the underlying sources.
+We first assess ICA on simple artificial datasets to establish the conditions under which ICA is feasible in our context, then we study its results on climate data from the National Centers for Environmental Predictions.
+The rest of this paper is organized as follows.
+Section 2 provides a brief summary of independent component analysis, Section 3 presents the results of ICA on artificial data, Section 4 describes the results using climate data, and Section 5 summarizes our findings.
+2.
+INDEPENDENT COMPONENT ANALYSIS This section provides a brief description of ICA.2Â­7 Connections of ICA to classical methods such as principal component analysis (PCA), factor analysis (FA), and pro jection pursuit (PP), are also discussed in the references above.
+Assume that s = (s1 , . . . , sp )T is a p-dimensional, unobservable, non-Gaussian random variable whose statistically independent components are mixed using an unknown linear transformation matrix A kÃ—p via x = As, Further author information: (Send correspondence to I.K.F.) I.K.F.: E-mail: fodor1@llnl.gov, Telephone: 1 925 424 5420, Address: Livermore National Laboratory, P.O. Box 808, L-561, Livermore, CA, C.K.: E-mail: kamath2@llnl.gov, Telephone: 1 925 423 3768, Address: Livermore National Laboratory, P.O. Box 808, L-561, Livermore, CA,
+(1) Center for Applied Scientific Computing, Lawrence USA 94551 Center for Applied Scientific Computing, Lawrence USA 94551
+to produce the observable k -dimensional variable x = (x1 , . . . , xk )T , with k p.
+The goal of ICA is to estimate the underlying independent components s, also referred to as hidden variables or factors, and the mixing matrix A from realizations of x.
+If the dimensions k and p are equal, then the following inverse relation holds s = Wx, where the weight matrix W pÃ—k
+(2) kÃ—p
+is the inverse of the mixing matrix A
+in Eq. (1).
+Statistical independence is a much stronger condition than uncorrelatdness.
+While the latter involves only the second-order statistics, the former depends on all the higher-order statistics.
+Formally, the individual components T of the random variable y = (y1 , . . . , yn ) are mutually uncorrelated, if for i = j, 1 i, j n, we have Cov(yi , yj ) = E{(yi - E(yi ))(yj - E(yj ))} = E(yi yj ) - E(yi )E(yj ) = 0.
+(3)
+In contrast, independence requires that the multivariate probability density function f (y 1 , . . . , yn ) factorizes into the product of the univariate densities fi (yi ), i = 1, . . . , n, as f (y1 , . . . , yn ) = f1 (y1 ) . . . fn (yn ).
+(4)
+Independence always implies uncorrelatedness, but not vice versa in general.
+Only if the distribution f (y 1 , . . . , yn ) is multivariate normal, are the two equivalent.
+For Gaussian distributions, the principal components are independent, and thus ICA has no advantage over PCA.
+In what follows, we will assume that at least one of the hidden components is non-Gaussian.
+Since in most applications it is impossible to derive truly independent sources, ICA methods define approximate measures of independence as ob jective functions (also called contrast, loss, or cost functions), and then search for pro jections of the observations that optimize those measures.
+A common measure of independence is the entropy-based mutual information,8 which, for uncorrelated variables can be expressed as n
+I (y1 , . . . , yn ) = J (y) - where J (y) = H (y is the negentropy of y, y gauss gauss
+J (yi ), i=1
+(5)
+) - H (y),
+(6)
+is a Gaussian random variable with the same covariance as y, and H (y) = - f (y)logf (y)dy (7)
+is the entropy of y.
+For a given covariance matrix, it is well-known that the Gaussian distribution has the maximum entropy.
+Minimizing the mutual information is roughly equivalent to minimizing the entropy, and therefore amounts to searching for components that are far from Gaussian.
+If denotes a standard normal variable with mean zero and variance one, N (0, 1), it can be shown8 that the negentropy can be approximated by 2 J (yi ) [E {G(yi )} - E {G( )}] , (8) where G(.) is a non-quadratic function.
+For the results in this paper, we used the publicly available FastICA algorithm2, 9 with the contrast function G(u) given by G(u) = log cosh(u).
+Once the ob jective function is specified in a computationally tractable form, are estimated using optimization algorithms such as Newton's method, with the orthonormal.
+The sought components yi will be estimates of the independent comp k T yi = wi x = j =1 wij xj , with weights wi = (wi1 , . . . , wik )T , for i = 1, . . . , p.
+The in Eq. (2) is given by WpÃ—k = {wij }i=1,...p;j =1,...,k . the independent components constraint that the terms be onents si , and are of the form corresponding weight matrix
+Â¯ 1.
+X0 = X - X 2.
+kÃ—k kÃ—k
+3.
+R
+= VVT = -1 V
+T
+4.
+Y0 = R X0 , cov(Y0 ) = I
+k pÃ—n
+^ 5.
+Apply the FastICA code to estimate the p independent components S ^ kÃ—p such that Y0 = B S ^ ^^ matrix B ^ 6.
+X0 = R -1
+and the corresponding mixing
+^ Y0 = R
+-1
+^^ BS kÃ—p
+^ ^ Â¯ 7.
+X = X0 + X = R
+-1
+^^ Â¯ ^^ Â¯ ^ B S + X = A S + X, where A
+=R
+-1
+^ B
+Table 1.
+Pseudo-code for estimating the independent components S of the original data X, and for decomposing X in ^ terms of the estimated components S. Quantities with hats involve estimates.
+Throughout this paper, we assume that we have n observations, each being a realization of the random variable x with mean Âµ = E(x) and covariance matrix Cov(X) = E{(x - Âµ)(x - Âµ) T }.
+We denote such an observation matrix by X = {xi,j : 1 i k , 1 j n}.
+In terms of X, and the corresponding S = {si,j : 1 i p, 1 j n}, the ICA model in Eq. (1) becomes X = AS. (9) Â¯ Let XkÃ—1 and kÃ—k denote the sample mean and covariance matrix of the n observations, respectively.
+Table 1 outlines our procedure to estimate independent components.
+Since we would like to express the observations in terms of the estimated independent components, we keep track of the pre-processing transformations in steps 1 through 4, and use their inverses in steps 6 and 7 to map back the estimates to the scale of the original input data.
+Hats above symbols indicate estimated values of the underlying quantities, involving the independent ^ component estimates in step 5 of the algorithm.
+If X denotes the reconstruction of the original data X in ^ pÃ—n and corresponding mixing matrix BkÃ—p in step 5, we can ^ terms of the estimated independent components S ^ decompose X as ^ X = ^^ Â¯ A S+X ^1 s 0 ^ A . . .
+0 S 1
+(10) ^ + A 0 ^2 s . . .
+0 S p
+=
+pÃ—n 2
+^ X
+^ +X
+S
+^ + Â·Â·Â· + X
+Â¯ + X,
+pÃ—n
+^ + Â·Â·Â· + A
+0 0 . . . ^p s
+pÃ—n
+Â¯ +X
+(11)
+(12)
+^ where XSj , defined above, is of size k Ã— n, and it represents the contribution of the j th estimated independent ^ ^ ^ component to X, j = 1, . . . , p.
+The ith row of XSj , denoted by xi,Sj , gives the contribution of the j th estimated ^ independent component to xi , i = 1, . . . , k .
+Equivalently, we can write Eq. (12) as Â¯ ^ ^ ^ x1,S1 + . . .
++ x1,Sp + x1 x1 x2,S1 + . . .
++ x2,Sp + x2 x2 Â¯ ^ ^ ^ ^ .
+(13) = X= . . . . . .
+Â¯ ^ ^ ^ xk,S1 + . . .
++ xk,Sp + xk kÃ—n xk kÃ—n For artificial data, where S and A are known, the decomposition in Eq.( 12) can be compared with the true decomposition X = AS (14)
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+Figure 1.
+Artificial data.
+(a) source S: s1 and s2 ; (b) observation X: x1 and x2 .
+X If x i,S j
+= A S 1
+s1 0 . . .
+0
+pÃ—n 2
++X
+S
++ Â· Â· Â· + X Sp .
++ A
+0 s2 . . .
+0
+pÃ—n
++ Â·Â·Â· + A
+0 0 . . . s p
+pÃ—n
+(15)
+(16)
+denotes the ith row of XSj , i = 1, x1 x2 X= . . .
+. . . , k , j = 1, . . . , p, then, x1,S1 + . . .
++ x2,S1 + . . . + = . . .
+xk,S1 + . . . + xk kÃ—n
+similar to Eq. (13), we have x1,Sp x2,Sp .
+xk,Sp kÃ—n
+(17)
+3.
+RESULTS WITH DATA FROM A SIMPLE ARTIFICIAL MODEL In order to understand the use of ICA in separating climate signals, we first experimented with known signals.
+We considered the simple case of two signals, one a synthetic volcano signal and the other a sinusoid to mimic seasonal variation in the temperature.
+We modeled the volcano signal using the results in, 1 where the effect of a volcano signal on the global temperature is composed of two parts: a linear cooling from the time of eruption terupt to a time tramp , and an exponential recovery thereafter.
+Thus, a volcano signal vt can be written as vt = -Tmax t tramp
+, e - t-tr amp
+t=t , t=t
+er upt r amp
+,...,t
+r amp
+-T
+max
++ 1, . . . , n,
+(18)
+where Tmax is the maximum cooling effect of the volcano, tramp 
+Following,1 the volcano signal s2 used in our study is the sum of two vt terms that model the effects of the El ChicÂ´ and the Pinutabo ma jor volcanic eruptions of the recent on past.
+The values of the parameters are1 shown in Table 2.
+The time period for this data was 264 months, where t = 0 corresponds to January 1979, and t = 263 corresponds to December 2000.
+The volcano eruptions occur at months 39 and 147.
+We chose this particular time period to reflect the climate simulation data we describe in Section 4.
+The sinusoidal signal s1 is simply s1 = sin{(1 : n)/5}, n = 264.
+The two signals are shown in Fig. 1, panel (a).
+Next, using the mixing matrix 1.0 0.4 A= (19) 0.5 0.6 we generated the observations X according to Eq. (9).
+Panel (b) in Fig. 1 shows the two components of X, x1 and x2 .
+Fig. 2 displays the observation data in terms of the generating sources.
+The two solid lines in the
+n Tmax tramp terupt
+El ChicÂ´ on 264 0.32 20 39 30
+Pinutabo 264 0.72 14 147 30
+Table 2.
+Parameters in Eq. (18) for two ma jor volcano eruptions.
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+Figure 2.
+Decomposition of X in terms of the original signal S in Fig. 1.
+(a) x1 = x1,S1 + x x1,S2 (dash-dotted); (b) x2 = x2,S1 + x2,S2 (solid); x2,S1 (dashed); x2,S2 (dash-dotted).
+1,S2
+(solid); x
+1,S1
+(dashed);
+two panels show the x1 contributions of the first In this simple case, x1,S1 x1 and x2 , respectively: panels, the solid vectors x2 = x2,S1 + x2,S2 = 0.5
+^ Fig. 3 displays the estimated independent components S obtained after applying the algorithm in Table 1 to X.
+The shape of the two original sources, s1 and s2 displayed in Fig. 1, is clearly visible.
+However, the scale and the sign of the estimates are arbitrary.
+^ Following the notation in Eq. (13), Fig. 4 presents the decomposition of the estimate X in step 7 of Table 1 ^ ^ in terms of the estimated independent components.
+The two solid lines in the two panels show the x1 and x2 ^ vectors of X, respectively.
+The dashed lines in the two panels represent the contributions of the first estimated ^ ^ ^ ^ component ^1 to x1 and x2 , denoted by x1,S1 and by x2,S1 in Eq. (13), respectively.
+The dash-dotted lines show s Â¯ ^ ^ ^ the contributions of ^2 to x1 and x2 , plus a constant mean correction, respectively: x1,S2 + x1 in the upper panel, s Â¯ ^ and x2,S2 + x2 in the lower panel.
+In both panels, the solid vectors are the sums of the two other vectors.
+Note that in this case, we knew the true sources, so we knew that we had to add the means to the second terms in order 4
+and x2 vectors of X, respectively.
+The dashed lines in the two panels represent the source signal s1 to x1 and x2 , denoted by x1,S1 and by x2,S1 in Eq. (17), respectively.
+= 1.0 Ã— s1 and x2,S1 = 0.5 Ã— s1 .
+The dash-dotted lines show the contributions of s2 to x1,S2 = 0.4 Ã— s2 in the upper panel, and x2,S2 = 0.6 Ã— s2 in the lower panel.
+In both are the sums of the two other vectors: x1 = x1,S1 + x1,S2 = 1.0 Ã— s1 + 0.4 Ã— s2 , and Ã— s1 + 0.6 Ã— s2 .
+3
+2
+1
+0
+-1
+-2
+0
+50
+100
+150
+200
+250
+^ Figure 3.
+Estimated independent components S for the data in Fig. 2.
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+1 0.5 0 -0.5 -1 0 50 100 150 200 250
+^ ^ ^ Figure 4.
+Decomposition of X in terms of the estimated independent components S for the data in Fig. 2.
+(a) x1 = ^ ^ Â¯ ^ ^ Â¯ ^ ^ ^ Â¯ ^ x1,S1 + x1,S2 + x1 (solid); x1,S1 (dashed); x1,S2 + x1 (dash-dotted); (b) x2 = x2,S1 + x2,S2 + x2 (solid); x2,S1 (dashed); Â¯ ^ x2,S2 + x2 (dash-dotted).
+to match the original data.
+In practical situations, however, the method cannot resolve shifts.
+Comparing Fig. 4 to Fig. 2, we note the excellent performance of the ICA method in this simple case: it estimated successfully the observed signal in terms of the underlying independent components.
+We also experimented with artificial data from more realistic models, and investigated the performance of the FastICA algorithm in the presence of noise and dependencies among the sources.
+12 The method was fairly robust to the presence of noise, but it failed when we violated the independence assumption.
+4.
+RESULTS WITH THE CLIMATE DATA Following our initial study on the use of ICA to separate signals generated by a linear mixing of two synthetic sources that resembled climate data, we tried the techniques on real data from a climate simulation.
+4.1.
+Description of the data We conducted this study using the monthly mean temperature reanalysis data 13 from the National Centers for Environmental Prediction (NCEP).
+The data is on a 144 Ã— 73 longitude-by-latitude grid, on 17 vertical pressure levels ranging from 10000 hPa close to the surface of the earth to 10 hPa at the highest elevation.
+It spans 264 months, from January 1979 to December 2000.
+Figure 5 displays the raw temperatures for January 1979 on the 144 Ã— 73 latitude by longitude grid at the 1000 hPa pressure level.
+Since we expected the ENSO and volcano signals to have a strong latitudinal dependence, we performed our analyses on zonally averaged data.
+At a given month and level, we first calculated the 73 zonal means over the 144 longitudes.
+Following standard practices in the atmospheric sciences, 14 we removed the seasonal variation and centered the data as follows.
+For each month, we replaced the values at each of the 73 Ã— 17(= 1241) latitude-by-level grid points by subtracting their corresponding monthly means over the entire 22-year period.
+The resulting time-centered values are referred to as anomalies in the atmospheric sciences literature.
+we weighted the data set appropriately to account for the unequal spatial grid sizes and altitude bands.
+displays the January 1979 anomaly temperatures after the weights have been applied to the timezonally averaged data.
+Finally, we performed ICA on the k = 1241 by n = 264 space-by-time dimension data set XkÃ—n .
+Next, Figure 6 centered anomaly
+4.2.
+ICA applied to the full dimensional climate data Figure 7 shows the first six independent component estimates with the FastICA method applied to the X kÃ—n anomaly data.
+The resulting IC estimates are very localized spatially and are not interpretable scientifically in
+80 60 40
+Latitude (degree)
+20 0 -20 -40 -60 -80 0 50 100 150 200 Longitude (degree) 250 300 350
+240
+250
+260
+270
+280
+290
+300
+310
+Figure 5.
+January 1979 raw temperatures (Kelvin) on the 144 longitudes by 73 latitudes spatial grid for pressure level 1000 hPa.
+1.5 80 1 60 0.5 40 0 20
+Latitude
+-0.5 0 -1 -20 -1.5 -40 -2 -60 -2.5 -80 2 4 6 8 Level 10 12 14 16
+Figure 6.
+January 1979 zonal anomaly temperatures (Kelvin) on the 17 pressure levels by 73 latitudes grid.
+20 50 15 10 5 -50 0 5 10 15 5 10 15 -50 50
+0 50
+20 15 10 5
+-5
+0
+0
+-10
+0
+-15 -50 0 5 10 15
+0 50 15 50 -5 0 10 0 -10 5 -50 0 5 10 15 5 10 15 5 10 15 -50 -15 -50 0 50
+0 -5 -10 -15 -20
+Figure 7.
+Six independent component bases obtained from the full-dimensional anomaly data.
+terms of atmospheric processes.
+The large spikes are in fact artifacts due to over-learning in the ICA estimation.3 Estimating n independent components along with the mixing matrix from only n samples is statistically impossible since there are more parameters to estimate than available observations.
+We do have n samples of the p-dimensional signal, but we do not expect to have n truly independent component sources.
+4.3.
+Principal comp onent analysis as a dimension reduction to ol Instead of working with the full high-dimensional anomaly data, we next explored ICA on reduced dimensional representations of the data.
+Since there are only a limited number of atmospheric processes, before applying ICA we first need to reduce the data to p dimensions, where p is the number of independent components sought.
+We achieved this dimension reduction by using principal component analysis (PCA).
+The PCA technique seeks linear combinations of the data with maximal variance.
+Given the zero-mean zonal anomaly dataset XkÃ—n of dimension of k = 1241 spatial grid points and n = 264 months, let 14 kÃ—k
+=X
+kÃ—n
+X
+nÃ—k
+(20)
+denote the state-space scatter matrix (scaled covariance matrix), where XnÃ—k denotes the transpose of XkÃ—n .
+The eigenvalue decomposition of provides the eigenvector matrix EkÃ—k and the eigenvalue matrix DkÃ—k such that kÃ—k = EkÃ—k DkÃ—k EkÃ—k , (21) where E is orthonormal, (i.e. E E = EE = IkÃ—k ), and D is diagonal, D = diag(d1 , . . . , dk ) with d1 d2 . . . dk .
+To make the eigenvectors unique, we adopt the convention that the first non-zero term in each of the vectors is positive.
+The corresponding state-space principal components are A kÃ—n
+=E
+kÃ—k
+X
+kÃ—n
+.
+(22)
+The pth cumulative sum of the eigenvalues normalized by the total sum of the eigenvalues, defined as (p) = p i=1 k i=1
+d d
+i i
+,
+(23)
+indicates how much of the variation is explained by the first p, p k , components.
+Table 3 shows the percent of variation explained for selected values of p.
+p 1 2 3 4 5 6 7 8 9 10
+(p) 0.2033 0.3527 0.4390 0.5057 0.5660 0.6212 0.6626 0.7006 0.7361 0.7645
+p 22 35 50 79 100 150 200 216 234 1241
+(p) 0.9003 0.9501 0.9738 0.9901 0.9946 0.9986 0.9997 0.9999 1.0000 1.0000
+Table 3.
+Percent of the total variation explained (p) by the first p principal components.
+3 50 2 1 0 -50 -1 -50 50 4 3 2 0 0 1 0 -1 -50 -2 5 10 15 5 10 15 5 10 15 0 0 -2 50 4 2
+2 50 0 0 -2 -50 -4 5 10 15 5 10 15 -50 0 50
+2 50 1 0 -1
+3 2 1 0 0 -1
+-2 -50 -3 5 10 15
+-2 -3
+Figure 8.
+Six independent component bases obtained from the first p=22 eigenvectors of the anomaly data scatter matrix.
+4.4.
+ICA applied to the reduced dimensional climate data The PCA results in Section 4.3 indicate that the first p = 22 PCs explain 90% of the variance.
+In this section, we applied ICA to the anomaly data of reduced dimension, as described by the first p = 22 principal components.
+Since the original anomalies are linear combinations of the PCs, we can easily obtain the IC coefficients corresponding to the original data from the IC coefficients obtained for the PCs.
+Figure 8 shows six of the p resulting independent basis images when ICA is applied to the first p = 22 eigenvectors of .
+Figure 9 shows the six pro jections of the anomaly data XkÃ—n onto the independent components in Figure 8.
+The patterns in the sixth estimated IC basis and corresponding time series suggest characteristics associated with ENSO variations, in particular, the Nino 3.4 index from NCEP.
+The Nino 3.4 index measures the monthly ~ ~ sea surface temperature deviation from its long-term mean averaged over the Nino 3.4 region (5N-5S, 120-170W).
+~ It is a standard index used to monitor ENSO events.
+If its 5-month running average exceeds +0.4 (-0.4) degrees Celsius, it is considered an El Nino (La Nina) event.
+If we consider the time series from the last panel in Figure 9 ~ ~ along with the Nino 3.4 index, the correlation between the two series is 0.5788.
+The two series follow a similar ~ pattern, but they are shifted relative to each other.
+Lagging the IC time series back a few months increases the value of the correlation coefficient as follows: corr(1)=0.6895, corr(2)=0.7410, corr(3)=0.7654, corr(4)=0.7587, then decreases monotonically further.
+Figure 10 presents the IC time series shifted back by three months, along
+2 0 -2 0 2 0 -2 0 2 0 -2 0 2 0 -2 0 2 0 -2 0 5 0 -5 0 50 100 150 200 250 50 100 150 200 250 50 100 150 200 250 50 100 150 200 250 50 100 150 200 250 50 100 150 200 250
+Figure 9.
+6 state space IC time series.
+4
+3
+2
+1
+0
+-1
+-2 state-space IC (scaled) lagged nino3.4 -3 0 50 100 Time 150 200 250
+Figure 10.
+State space IC time series (scaled) with a three month lag, and Nino region 3.4 index.
+Correlation coefficient ~ is 0.76.
+with the Nino region 3.4 index.
+The excellent match between the two series indicates the success of the ICA ~ approach to automatically separate sources in climate data.
+5.
+SUMMARY In this paper, we described our initial results with the use of ICA to automatically separate signals in climate data.
+Our experiments with synthetic data that resembled climate signals indicated that the ICA technique deserved further investigation.
+While a direct application of ICA to the global temperature data proved problematic, a combination of PCA and ICA was more promising.
+The simple ICA model used in combination with PCA for dimension reduction resulted in a slightly superior ENSO signal estimate than PCA alone.
+Our future plans include interpreting the remaining PC and IC estimates in terms of atmospheric processes; determining the sensitivity of the results to the number of components to estimate; incorporating constraints on the shapes of the sought components (for example, volcano eruptions can only decrease the temperature, but not increase it); investigating possible non-linearities in the mixing process; and providing uncertainty estimates for the estimated components.
+ACKNOWLEDGMENTS We thank Dr.Benjamin D. Santer from the Program for Climate Model Diagnostics and Intercomparison at Lawrence Livermore National Laboratory for introducing us to the problem, for providing the climate data, and for his numerous insights and suggestions.
+We would also like to acknowledge the FastICA team at the Laboratory of Information and Computer Science in the Helsinki University of Technology for providing their software in the public domain.
+This work was performed under the auspices of the U.S. Department of Energy by University of California Lawrence Livermore National Laboratory under Contract No.
+W-7405-Eng-48, UCRL-JC-151808.
+This work was partially funded by the SciDAC program in the DOE Office of Advanced Scientific Computing Research.
+REFERENCES 1.
+B. Santer et al., "Accounting for the effects of volcanoes and ENSO in comparisons of modeled and observed temperature trends," Journal of Geophysical Research 106, pp. 28,033Â­28,059, November 27 2001.
+2.
+A. HyvÂ¨ arinen, "Fast and robust fixed-point algorithms for independent component analysis," IEEE Transactions on Neural Networks 10(3), pp. 626Â­634, 1999.
+3.
+A. HyvÂ¨ arinen, J. Karhunen, and E. Oja, Independent Component Analysis, Series on Adaptive and Learning Systems for Signal Processing, Communications, and Control, Wiley, 2001.
+4.
+T.-W. Lee, Independent Component Analysis: Theory and Applications, Kluwer Academic Publishers, 2001.
+5.
+S. Roberts and R. Everson, eds., Independent Component Analysis: Principles and Practice, Cambridge University Press, Cambridge, UK, 2001.
+6.
+M. Girolami, ed., Advances in Independent Component Analysis, Perspectives in Neural Computing, Springer, 2000.
+7.
+J. Friedman, T. Hastie, and R. Tibshirani, Elements of Statistical Learning: Prediction, Inference and Data Mining, Springer, 2001.
+8.
+A. HyvÂ¨ arinen, "Survey on independent component analysis," Neural Computing Surveys 2, pp. 94Â­128, 1999.
+citeseer.nj.nec.com/hyv99survey.html.
+9.
+J. Hurri et al. http://www.cis.hut.fi/pro jects/ica/fastica/.
+10.
+J.-F. Cardoso, "High-order contrasts for independent component analysis," Neural Computation 11(1), pp. 157Â­192, 1999.
+11.
+J.-F. Cardoso. http://www.tsi.enst.fr/cardoso/icacentral/.
+12.
+I. Fodor and C. Kamath, "On the use of independent component analysis to separate meaningful sources in global temperature series," tech. rep., Lawrence Livermore National Laboratory, 2003.
+In preparation.
+13.
+R. Kistler, E. Kalnay, et al., "The NCEP/NCAR 50-year reanalysis," Bul l.
+Am.
+Met.
+Soc. 82, pp. 247Â­267, 2000.
+14.
+R. Preisendorfer, Principal Component Analysis in Meteorology and Oceanography, no. 17 in Developments in Atmospheric Science, Elsevier Science, Amsterdam, 1988.

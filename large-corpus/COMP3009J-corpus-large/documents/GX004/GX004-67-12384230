@@ -1,0 +1,194 @@
+This article appeared in the July/August 1998 issue (vol. 69, No. 4; pp. 299-308) of Seismological Research Letters, a journal published by the Seismological Society of America.
+_________________________________________________________________
+Continuous GPS monitoring of Structural Deformation at Pacoima Dam, California
+Kenneth W. Hudnut and Jeffrey A. Behr
+U. S. Geological Survey and the Southern California Earthquake Center
+INTRODUCTION
+In September 1995, a system of three continuously operating GPS receivers was deployed to monitor the displacements of Pacoima Dam relative to a stable station nearby at Fire Camp 9 (2.5 km away).
+The dam has been monitored in near real-time for over two years through a joint effort of the U. S. Geological Survey (USGS) and the County of Los Angeles, making use of the network infrastructure of the Southern California Integrated GPS Network (SCIGN).
+This study demonstrates the feasibility of effective and timely monitoring of engineered structures using the Global Positioning System (GPS).
+[Fig1_mini.gif]
+In much the same way that strong motion seismic recording instruments have made essential contributions to engineers' understanding of structural response to earthquake shaking, precise measurements of a structure's static displacements can indicate subtle damage that could be of concern for public safety.
+Conventional surveying methods have been used in the past to monitor static displacements of engineered structures and will surely continue to be used for many years.
+For example, the County of Los Angeles still periodically performs conventional surveys (as well as infrequent GPS surveys) at Pacoima Dam to obtain more spatially detailed information than the continuous GPS system provides.
+Conventional surveys, however, require `line of sight' and do not lend themselves as well as does GPS to unattended, continuous field operations (utilizing high sampling rates and integrated network communications).
+While data reduction is less complex for conventional surveying systems than for GPS, robust automation of highly precise GPS analysis is now reasonably routine.
+Conventional surveying instruments are also limited in range and do not offer connection to an absolute reference frame, as does GPS.
+Such limitations were realized following the 1971 San Fernando and 1994 Northridge earthquakes when many survey markers and access catwalks to them at the Pacoima dam site were destroyed by rockfalls and landslides.
+This made it exceedingly difficult to assess how the dam might have moved with respect to surrounding bedrock.
+The continuously operating GPS monitoring system described here will address this problem at Pacoima Dam following future damaging earthquakes
+.
+Monitoring the integrity of engineered structures demands very high precision displacement measurements from a robust system, as close as possible to real-time.
+Continuous data recording from the GPS satellites, using ground-based receivers and robust telemetry, can be used for monitoring the health of engineered structures, and can thereby be useful for the public safety aspects of civil, structural, and earthquake engineering.
+Although the GPS system discussed here is not suitable for measuring displacements during seismic shaking (because we currently sample the GPS signals only once every 30 seconds), it is very well suited to measuring the static displacements of a structure within several hours after an earthquake.
+Since accelerometers cannot now reliably recover static displacements and GPS cannot yet reliably recover strong ground motions, these instruments can be seen as complementary.
+Real-time GPS systems capable of cm-level precision at up to 10 Hz sampling rates presently exist, and we are currently evaluating them (Celebi et al., 1998).
+The pilot study we describe here is one step toward a complete system for very accurately measuring the full dynamic range of an engineered structure's response to a major earthquake.
+Such a system can also be used, of course, to examine a structure's response to other forces such as water loading, thermal effects, and wind, or to gradual changes in material or structural properties through time.
+PACOIMA DAM GPS SYSTEM
+[Fig2_mini.gif]
+Pacoima Dam (Fig. 1) is located in the San Gabriel mountains, about 5 km northeast of Sylmar, California.
+This dam is a 113 meter tall concrete arch structure that was completed in 1928.
+At the time of its construction, it was the tallest arch dam in the USA.
+Pacoima Dam withstood, but was damaged by, very strong (
+Because of their concerns about the stability of this dam, especially its response to potential future earthquakes, the County of Los Angeles, with the technical support of the USGS, began monitoring the dam using continuous GPS.
+At Pacoima Dam, the station DAM1 was placed on the thrust block at the left (south) abutment of the dam, while station DAM2 was placed near the center of the dam's arch (Fig. 2).
+The reference station CMP9 was placed on stable bedrock outside of the steep-walled canyon that the dam spans (Fig. 3).
+At station CMP9, a bedrock knob was graded flat and a reinforced concrete slab was poured on the bedrock for use by LA County as a building foundation, then more recently as a heliport.
+The CMP9 GPS antenna was mounted into that slab and is covered by a hemispherical polycarbonate radome.
+[Fig3_mini.gif]
+The current system at Pacoima Dam uses dual frequency P-code GPS receivers that are commercially available both in the USA and overseas.
+These sample all civilian-accessible GPS observables at a rate of one sample every 30 seconds (although higher sampling rates, up to 2 Hz, are possible with this equipment).
+Data are collected on the receivers' internal memory, then downloaded using high speed (19200-38400 baud) modems over regular phone lines once per day.
+Once the files are retrieved by the USGS-SCIGN operations center, they are immediately moved over the internet to the permanent SCIGN data archive at Scripps Institution of Oceanography (SIO).
+This continuous GPS system at Pacoima Dam is part of SCIGN, and is based on the data retrieval and distribution system originally developed for the Permanent GPS Geodetic Array
+(Bock et al., 1997).
+Starting in January 1996, data from the Pacoima Dam system were analyzed daily at the USGS as a subset of the Southern California network processing.
+These automated analyses were made using the rapidly-derived orbits from SIO and were completed in most cases within 24 hours of the end of the Julian day.
+At that time, day-to-day r.m.s. baseline repeatabilities, extracted directly from the GAMIT solutions, were approximately 1 cm in the horizontal and 2 cm in the vertical (Hudnut, 1996).
+Because the repeatabilities of these rapidly derived time series were poorer than attainable using known processing capabilities and because gaps existed in the time series due to site data-download latency, the entire Pacoima Dam dataset was reprocessed for this study.
+DATA, ANALYSIS METHODS AND RESULTS
+[Fig4_mini.gif] Data
+Daily data files from the three continuous Pacoima Dam stations, plus three nearby SCIGN stations - CHIL, LEEP and ROCK (Fig. 4) - were reprocessed using precise orbits for the time period September 1, 1995 to November 9, 1997.
+Each of the six stations employed an Ashtech Z-12 GPS receiver and choke ring antenna for the duration of the experiment, although a single antenna change was required at the DAM2 site on October 23, 1996 (day 297 of 1996).
+Daily data were recorded at a 30 second sampling interval but processed at 120 second epochs.
+While all stations record data from satellites higher than 10deg. above the antenna's horizon, solutions are generated using only data above 15deg. elevation.
+Because of the steep-walled canyon surrounding Pacoima Creek, the DAM1 and DAM2 sites are not able to consistently track satellites at this elevation but typically receive full 360deg. azimuthal coverage only above ~30deg. elevation.
+While the other four stations (CMP9, CHIL, LEEP, and ROCK) generally provide an average of 4800 double difference observations for each day (at 120 second epochs), the limited sky visibility at Pacoima Dam reduces the available number of double differences to approximately 4000 for DAM1 and DAM2.
+This fact, however, does not appear to have impaired the precision of the daily solutions for those sites.
+Analysis Methods
+The GPS data were analyzed in a two step process using the GAMIT and GLOBK software (King and Bock, 1995; Herring, 1997).
+In our GAMIT implementation, we performed bias-fixing and least-squares adjustments to the six-station network using double-difference combinations of the ionosphere-free linear combination of the L1 and L2 phase observables recorded at each station.
+Satellite ephemeris and radiation pressure parameters, provided by the IGS final precise orbit files, were constrained to 0.01 ppb and 0.01%, respectively.
+All six sites were constrained to within 5 cm in the horizontal and 12 cm in the vertical components' a priori values.
+Thirteen atmospheric delay parameters were estimated for each site-day.
+Using GAMIT, we iteratively repaired biases using wide-lane and then narrow-lane techniques while sites were constrained to the above values.
+We then performed a loosely constrained GAMIT solution (with biases fixed) to be passed as input to GLOBK.
+A 60-day period of simultaneous solutions, using only the 3-station Pacoima Dam network, was attempted using other analysis strategies available in GAMIT.
+Because of the relatively short baselines in this array (at most ~2.5 km) we experimented to see if alternative approaches would improve station position estimates.
+However, in one-third to two-thirds of our attempts to use either L1 or L2 frequencies independently, we obtained statistically poor solutions.
+Therefore, we opted to solely use the ionosphere-free linear combination technique for this study, this method being by far the most robust.
+Solutions utilizing independent L1 and L2 observations should yield better precisions over such short baselines because the differential ionosphere delay is probably negligible at these distances.
+Forming the ionosphere-free combination amplifies the measurement noise inherent in the raw GPS phase data.
+We therefore expect that further development and testing of independent L1 and L2 single-band processing techniques for short baseline applications will result in improved precision (and possibly robustness).
+Parameter estimates and variance-covariance matrices from all of the statistically acceptable, loosely-constrained GAMIT solutions were next processed for individual days in GLOBK, a Kalman filtering network adjustment and data analysis package.
+At this stage, we further constrained coordinates of the four regional stations to within 1 cm in the horizontal and 5 cm in the vertical components.
+Stations DAM1 and DAM2 were then allowed to vary by as much as 1 meter.
+These daily GLOBK solutions consistently had [chi]^2 statistics well below 1.0 (over 98% of these were 0.1 
+[Fig5a_mini.gif] [Fig5b_mini.gif]
+We then examined the time series for each baseline between the three GPS sites of the Pacoima Dam monitoring system.
+Each raw baseline (CMP9-DAM1, CMP9-DAM2, DAM1-DAM2) component was demeaned.
+For baselines involving DAM2, the jump in the time series created by the GPS antenna change was estimated, then corrected.
+Physical reasons for data outliers were researched.
+This led to the exclusion of approximately 10 days' data from the three time series on the basis of abnormally low double-difference observations for DAM1 and DAM2 or of high formal error in the GLOBK baseline estimates.
+The data shown in Figure 5 have had all of these corrections applied.
+Gaps in the time series were filled using an Akima-spline interpolant (for the GPS data curves shown in Figures 6 and 7).
+Results
+Shortly after the near real-time GPS monitoring system at Pacoima Dam became operational, the baseline time series to DAM2 began to indicate downstream (westward) motion of the dam center during the fall and winter, followed by upstream deflection during the spring and summer.
+Confirmation of this main signal is provided by the reprocessed time series for CMP9-DAM2 and DAM1-DAM2 (Figures 5 and 6), which indicate that same dominant signal.
+The reprocessed, repaired and refined time series indicate that DAM2 is undergoing periodic deflection of nearly 20 mm peak-to-peak amplitude with an approximately 1-year period.
+Station DAM1 also appears to be experiencing cyclic displacements of 1-year duration, though of a much lower amplitude (Figure 5, top panel).
+Reprocessing of the data also revealed a smaller amplitude and more sporadic signal structure, most evident on the DAM1-DAM2 baseline, which appears to have a period of approximately 20 to 40 days.
+THERMOELASTIC DEFORMATION
+Signals of annual period such as that observed in the East-West (E-W) motion of DAM2 are quite often the result of seasonal effects, in our case due perhaps to either variations in temperature or variations in the hydraulic load on the dam by the reservoir it impounds.
+Water elevation records are not well correlated, however, to the DAM1-DAM2 displacement data (Figure 6).
+The water elevation records show short-period, step-like variations.
+This is qualitatively quite different than the seasonal and cyclical displacement of the dam.
+Water-level variations are drastic and rapid because Pacoima dam is used primarily for flood control; it does not normally impound runoff water for extended periods of time.
+Hence, there is no systematic annual signal in the water height records (as there might be, for example, in a natural lake).
+[Fig6_mini.gif] In contrast, as shown in the bottom panel of Figure 6 (and in Figure 7), the record of air temperature data recorded at the city of Burbank, located approximately 15 km SSW of the dam, compares well to the trend in the E-W time series.
+Notably, our attempts to extract consistent daily temperature records from Pacoima Dam itself were unsuccessful, necessitating our search for regional data.
+The Burbank record was the most complete of those available, though it unfortunately terminated prior to the end of this study.
+Examination of the power spectrum of each signal, and the cross-spectra and coherency between the two signals, exhibited maximum strength at the lowest frequency estimated.
+We do not yet have a long enough time series to more quantitatively evaluate signals having a period of one year or more.
+In Figure 7 we present a comparison of the DAM1-DAM2 E-W displacement time series versus the daily, mean Burbank air temperature record, both low-pass filtered to a 0.1 cycle per day cutoff frequency.
+Each of these time series was then fit by an arbitrarily selected 7th-order polynomial function.
+We then subtracted each polynomial fit from its corresponding original refined time series, thereby estimating the residual air temperature and displacement with the "annual" signal removed.
+A visual comparison of the two residual time series indicates there may also be a correlation between short-term temperature variations and E-W displacement.
+This is the sporadic, smaller amplitude signal in the DAM1-DAM2 baseline we mentioned above, and the residuals in the bottom panel of Figure 7 seem to indicate that even temperature changes that are much shorter period than one year may cause the dam to deform also.
+[Fig7_mini.gif] We derived a transfer function for the annual signals and found it to be roughly 2deg.F/mm.
+A lag between peaks in the temperature and displacement records of 20-40 days indicates that the thermoelastic effects are not immediate at this scale.
+It appears that the dam slowly equilibrates to the ambient air temperature at long periods while evidently responding more rapidly to the smaller amplitude, shorter-period changes.
+Though we interpret these results as thermoelastic deformation of the dam itself, it should be noted that the dam could instead be responding to regional thermoelastic effects in the bedrock in which the dam is founded.
+As the bedrock warms and cools throughout the year, expansion and contraction would generate motion at the free surface of the canyon walls.
+This would, in turn, place forces on the dam abutments and produce motions in the same sense as the observed annual deformation signal.
+Of course, some combination of this effect with thermoelastic deformation of the dam itself is also possible.
+It appears reasonable to conclude that Pacoima Dam itself is responding primarily to variations in air temperature at both annual and shorter periods.
+Many discontinuities exist in available recordings of the dam's internal, or `core,' temperature (and the other geotechnical instruments operating on this structure).
+Further attempts to differentiate between the suggested deformation sources is therefore not possible now, and this may not be a tractable problem without additional instrumentation.
+We will be installing meteorological equipment ourselves, so we will have better air temperature data in the future.
+It is expected that as more data are accumulated, quantitative analysis can provide a model for the relationship between air (and `core') temperature and dam displacement.
+Such a model should allow us to remove the thermo-elastically generated signal, perhaps in real or near real-time.
+This will allow us to look at finer-scale variations in dam displacement and improve our ability to resolve signals that may be of concern for structural integrity.
+Engineers studying this dam have performed computer simulations of its behavior during earthquake shaking, and the finite element models used for that work could presumably be extended to compute the expected thermo-elastic deformation as well.
+These GPS data should be compared with results of such a physically-based model to evaluate our interpretation of a thermoelastic cause of the observed deformation.
+REAL-TIME STRUCTURAL ASSESSMENT USING GPS
+Near Real-Time at Pacoima Dam
+The following is a brief history of the USGS-SCIGN near real-time GPS system development to date.
+Processing of the GPS data using rapid orbits began in January, 1996 and ended in April, 1997.
+In May, 1997 daily processing for these (and 44 other SCIGN stations) was begun in an improved mode, using the IGS predicted orbits.
+Our current daily, near real-time analysis for monitoring the Pacoima Dam stations, and the rest of the SCIGN network, utilizes network-mode station positioning.
+Network processing is now automatically initiated on UNIX workstations at 0700 UTC and is completed at approximately 0900 UTC.
+All updated results are then posted to our USGS-SCIGN earthquake response web pages (http://pasadena.wr.usgs.gov/scign/Analysis).
+In March, 1998 an enhancement to the processing approach improved the precision of station coordinates by up to a factor of ten.
+This current system approaches (to within a factor of 2) the precisions attained by post-processing with precise orbits.
+Day-to-day r.m.s. repeatability of these rapidly obtained station coordinates is approximately 4-6 mm in the horizontal and 12 mm in the vertical components.
+Such high-precision and rapid estimates of station positions with respect to an absolute reference frame (in this case, ITRF96) provide measurements of site motion that are independent of ties to local or regional points.
+This SCIGN system enables the USGS-SCIGN to provide more rapid estimates of near-field to far-field coseismic displacements of cm-level precision to emergency response agencies and utility managers now than was possible in response to significant earthquakes in the past (e.g., Hudnut et al., 1996).
+Such advances in near real-time, automated GPS network operation and data analysis have made the application of these techniques to structural monitoring possible.
+The Pacoima Dam study has, in turn, continued to motivate us to improve the capabilities of real-time GPS.
+Real-Time Techniques
+The Pacoima Dam system was intended to be robust and to provide the highest accuracy measurements of dam deformation.
+In that light, a time lag of up to several days was not seen as a severe limitation when the system was installed.
+The present system at Pacoima Dam does not operate in real-time because of existing limitations in telemetry and data processing capabilities.
+We are, however, presently investigating real-time processing (e.g., Real Time Kinematic, or RTK) for future use in earthquake response and structure monitoring.
+Other applications might tolerate somewhat lower precision from the GPS monitoring system, yet demand results in real-time.
+Many manufacturers of GPS equipment now offer real-time systems that can make measurements of centimeter-level precision at rates exceeding 1 Hz.
+Such systems promise to provide real-time monitoring of long-period structures, such as tall buildings and long-span suspension bridges, as discussed in Celebi et al. (1998).
+Such systems were experimental when Pacoima Dam was instrumented with GPS in September, 1995 and are still relatively costly to implement today.
+They are less well proven than the dial-up, lower frequency system we have described in this paper.
+A real-time, higher frequency GPS system requires specialized software and radio telemetry links to broadcast GPS corrections from a fixed reference station to a second GPS unit that is in motion, and then return data on that unit's positional variations to an operational center.
+Pushing the highest possible accuracy of GPS as a real-time application and at the same time assuring robust results requires further development.
+The technology exists, but more testing and evaluation, and more pilot studies like the one described here, are needed before high-accuracy, real-time, and higher sampling rate GPS for structural health monitoring will be more reliable, available, and affordable than it is today.
+In the meantime, we feel that systems such as the one we describe here can now be confidently deployed on critical structures where the relatively high current cost may be justified.
+ACKNOWLEDGMENTS
+This project was made possible by the cooperative efforts of Bob Reader, Robert Kroll and Chuck Peer at the County of Los Angeles.
+We also thank Mary Ann Vandervis of LA County for background information and other assistance obtaining records.
+The field system installation and operation has been carried out primarily by Daryl Baisley, John Galetzka and Aris Aspiotes, with the sometimes frequent help of LA County dam operations personnel.
+Nancy King and Hadley Johnson assisted with time series analysis issues.
+We also thank Yehuda Bock, Tom Heaton and Rich Zitola for their encouragement and involvement in the project.
+We benefited greatly from our colleagues at SIO, in SCIGN, and in the IGS for infrastructure support.
+We specifically acknowledge the IGS for providing orbit files and the Southern California Integrated GPS Network and its sponsors, the W. M. Keck Foundation, NASA, NSF, USGS, 
+Mehmet Celebi, Ross Stein, and John Ebel provided helpful reviews.
+The photographs in figures 1 and 2 were taken by John Galetzka.
+REFERENCES
+Bock, Y., S. Wdowinski, P. Fang, J. Zhang, S. Williams, H. Johnson, J. Behr, J. Gengrich, J. Dean, M. van Domselaar, D. Agnew, F. Wyatt, K. Stark, B. Oral, K. Hudnut, R. King, T. Herring, S. Dinardo, W. Young, D. Jackson, and W. Gurtner (1997).
+Southern California permanent GPS geodetic array: continuous measurements of regional crustal deformation between the 1992 Landers and 1994 Northridge earthquakes, J. Geophys.
+Res., 102, B8, pp. 18013-18033.
+Celebi, M., W. Prescott, R. Stein, K. Hudnut, J. Behr and S. Wilson (1998).
+GPS Monitoring of structures: recent advances, submitted to Earthquake Spectra.
+Herring, T. A., GLOBK: Global Kalman Filter VLBI and GPS analysis program, v. 4.1 (1997).
+Mass.
+Inst. of Technol., Cambridge.
+Hudnut, K. W., Z. Shen, M. Murray, S. McClusky, R. King, T. Herring, B. Hager, Y.
+Feng, P. Fang, A. Donnellan, and Y.
+Bock (1996).
+Coseismic displacements of the 1994 Northridge, Calif., earthquake, Bull.
+Seis.
+Soc. Amer.
+(Special Issue), 86, No. 1, Part B, pp. S19-S36.
+Hudnut, K. (1996).
+Continuous GPS monitoring of dam deformation.
+EOS, Trans.
+AGU, 77, No. 46, pg. F139.
+King, R. W. and Y.
+Bock (1995).
+Documentation of the GAMIT GPS analysis software v. 9.4, Mass.
+Inst. of Technology and Scripps Inst. of Oceanography.
+Swanson, A. A. and R. P. Sharma (1979).
+Effects of the 1971 San Fernando earthquake on Pacoima Arch Dam, International Commission of Large Dams, Proceedings; New Delhi, India, pp. 797-824.
+USGS and SCEC Scientists (1994).
+The magnitude 6.7 Northridge, California earthquake of January 17, 1994, Science, 266, pp. 389-397.
+_________________________________________________________________
+Correspondence Addresses: Ken Hudnut - hudnut@usgs.gov Jeff Behr - behr@gps.caltech.edu U. S. Geological Survey 525 South Wilson Ave.
+Pasadena, CA 91106 _________________________________________________________________

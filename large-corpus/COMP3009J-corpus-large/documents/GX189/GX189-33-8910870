@@ -1,0 +1,11 @@
+Full Text Button for patent number 6519363 US 6,519,363 B1 Method and system for automatically segmenting and recognizing handwritten Chinese characters Hui Su, Beijing (China); Donald T. Tang, Beijing (China); and Qian Ying Wang, Beijing (China) Assigned to International Business Machines Corporation, Armonk, N.Y.
+(US) Filed on Jan. 12, 2000, as Appl.
+No. 9/481,157.
+Claims priority of application No. 99100938 A (CN), filed on Jan. 13, 1999.
+Int. Cl.^7G06K 9/34
+U.S. Cl. 382--177 13 Claims
+OG exemplary drawing
+1.
+A method for automatically segmenting and recognizing Chinese character strings continuously written by a user in a handwritten Chinese character processing system, wherein said handwritten Chinese character processing system records Chinese character strings continuously written by a user in strokes and associated timing information thereof, said method comprising the steps of:
+creating a geometry model which describes geometric characteristics of stroke sequences of handwritten Chinese character strings and a language model which describes dependency among Chinese characters or words; determining potential segmentation schemes in the Chinese character strings continuously written by a user based on said associated timing information and said geometry model; recognizing groups of strokes as defined by each of the potential segmentation schemes and computing a probability characterizing the exactness of the recognition result;
+correcting the probability characterizing the exactness of the recognition result by said language model; and selecting the recognition result having the maximum probability value and the corresponding segmentation scheme as the segmentation and recognition result of the Chinese character strings continuously written by a user.

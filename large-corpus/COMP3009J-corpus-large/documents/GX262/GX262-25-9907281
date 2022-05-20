@@ -1,0 +1,1028 @@
+American Community Survey Operations Plan Release 1: March 2003 U.S. Department of Commerce Economics and Statistics Administration U.S. CENSUS BUREAU
+Table of Contents
+Table of Contents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3 Program History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5 Full Implementation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7 ACS Operations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Address List Development and Update . . . . . . . . . . . . . . . . . . . . . . . .
+Project: Community Address Updating System (CAUS) . . . . . . .
+Sample Design and Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Project: Oversampling of Low Mail Response Areas . . . . . . . . .
+Project: Oversampling for Small Population Groups . . . . . . . . .
+Content and Questionnaire Development . . . . . . . . . . . . . . . . . . . . . .
+Residence Rules . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+BLAISE Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Project: Shortening the ACS Questionnaire . . . . . . . . . . . . . . .
+Data Collection and Capture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Mail Phase . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Telephone Questionnaire Assistance . . . . . . . . . . . . . . . . . . . .
+Check-in . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Keying . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Telephone Edit Followup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Computer Assisted Telephone Interviewing . . . . . . . . . . . . . . .
+Computer Assisted Personal Interviewing . . . . . . . . . . . . . . . . .
+Data Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Coding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Edit and Imputation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Tabulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Disclosure Avoidance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Project: Data Review/Automated Review Tool . . . . . . . . . . . . .
+Weighting and Estimation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Project: Revision and Simplification of Weighting Methodology .............................................
+Project: Program of Integrated Estimates . . . . . . . . . . . . . . . . .
+Data Products and Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Public Use Microdata Sample Files . . . . . . . . . . . . . . . . . . . . . . .
+1 .9 .9 10 12 13 14 16 16 18 19 20 20 21 21 22 23 24 25 27 28 28 29 31 32 34 35 36 39 40
+Genealogical Research . . . . . . . . . . . . . . . . .
+Project: Federal Agency Information Program Project: Data Products Report . . . . . . . . . . . .
+Project: Product Redesign . . . . . . . . . . . . . . .
+Project: Analytic Products . . . . . . . . . . . . . . .
+Evaluation and Improvement . . . . . . . . . . . . . . . . . .
+Project: Monitoring Operational Performance Project: Evaluation Studies . . . . . . . . . . . . . .
+Major Tests and New Initiatives . . . . . . . . . . . . . . .
+Project: Testing Voluntary Methods . . . . . . .
+Project: Taking the Survey in Puerto Rico . . .
+Project: Taking the Survey in Group Quarters Project: Implementing a Language Program .
+Project: Implementing a Partnership Program
+........
+.......
+........
+........
+........
+........
+Measures ........
+........
+........
+........
+........
+........
+.......
+. . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+. . . . . . . . . . . . . .
+40 41 42 43 45 47 47 47 50 50 52 52 53 54
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+57 Appendices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+57
+2
+Introduction The American Community Survey Operations Plan (the Plan) identifies and documents the individual components of the American Community Survey (ACS) and describes projects associated with making the transition from a demonstration program to a production survey.
+The Plan is intended to serve as a reference manual, and to assist communication and understanding about the ACS Program within and outside the Census Bureau.
+A glossary of ACS abbreviations and acronyms is attached.
+This document is denominated as "Release 1," as the Census Bureau anticipates re-publishing the Plan periodically to reflect design and operational developments.
+The goals of the ACS are to: Â· Â· Â· Provide federal, state, and local governments an information base for the administration and evaluation of government programs.
+Facilitate improvement of the 2010 Census by allowing the decennial census to focus on counting the population.
+Provide data users with timely demographic, housing, social, and economic statistics updated every year that can be compared across states, communities, and population groups.
+The American Community Survey is a new approach for collecting reliable, timely information needed for critical government functions.
+The ACS was designed to replace the decennial census long form and will collect the detailed demographic, socioeconomic, and housing statistics traditionally collected on the long form.
+Full implementation of the ACS will facilitate improvement of the 2010 Census by allowing the decennial census to focus on counting the population.
+The decennial census long form was historically sent to about 17 percent of households.
+The size of the long form sample was selected to produce reliable estimates for small areas.
+The ACS will also produce reliable estimates for small areas, but data will be collected continuously.
+With full implementation, the ACS sample will include about 3 million addresses nationwide each year.
+The ACS sample will also include 2.5 percent of the Group Quarters Population and about 36,000 addresses in Puerto Rico.
+3
+Although the statistics from any individual year of ACS data collection may not provide reliable estimates for the smallest areas, multi-year averages will produce reliable, useful, and timely statistics to replace the long form.
+When fully implemented, the ACS will provide reliable yearly estimates of demographic, housing, social, and economic characteristics for all states, as well as for all cities, counties, metropolitan areas, and population groups of 65,000 or more people.
+For smaller areas, such as census tracts, three to five years of data will be necessary to accumulate sufficient sample to produce reliable estimates.
+Areas of 20,000 or more people can use data averaged over three years, and areas of less than 20,000 people (such as census tracts, rural areas, small towns, and some American Indian Reservations) will require data averaged over five years.
+These multi-year averages will be updated every year, to give data users measures of change over time, including for small areas and population groups.
+As with the decennial census and all household surveys conducted by the Census Bureau, all response information received from respondents is confidential; only information that meets disclosure protection requirements is publicly released.
+4
+Program History The Census Bureau began developing the American Community Survey in the mid 1990s and has been collecting ACS data in a development program since 1996.
+Data collection activity began at four test sites and expanded in 1999 to 31 ACS test sites in 36 counties.
+Most sites are single county sites, but several sites consist of multiple, contiguous counties.
+The sites were not selected to be representative of the country, but rather to represent different combinations of county population size, difficulty of enumeration, and 19901995 population growth.
+The selection also attempted to balance areas by region of the country, and sought to include areas representing different characteristics of interest, such as racial or ethnic groups, highly seasonal populations, migrant workers, American Indian reservations, improving or worsening economic conditions, and predominant occupation or industry types.
+Additionally, the Census Bureau attempted to select sites with active data users who could participate in evaluating and improving the ACS program.
+The Census Bureau has collected three complete years of data (1999-2001) at the test sites.
+The Census Bureau will use these multiple years of data to compare the ACS to the Census 2000 at the county and smaller geographic levels.
+This comparison with Census 2000 will help develop a better understanding of differences between the ACS and the Census 2000 long form distributions.
+Differences are expected due to methodological differences between the two surveys.
+In addition to the test sites, the Census Bureau has also conducted related national operational tests.
+The Census 2000 Supplementary Survey (C2SS) was conducted as part of Census 2000 in 1,203 counties using the ACS survey design, methods, and questionnaire.
+The C2SS' primary purpose was to demonstrate the operational feasibility of collecting long form data at the same time as, but separate from, a decennial census operation.
+Information from the C2SS, combined with information from the 36 counties contained in the ACS test sites, provided state and national level distributions.
+Two reports have been released to date on the operational feasibility and survey quality of
+5
+the C2SS.1 Four additional reports are in progress that compare single year C2SS data to Census 2000.
+Supplementary Surveys were repeated in 2001 and 2002.
+Multi-year estimates from the Supplementary Surveys are needed to demonstrate the usability, reliability, and stability of ACS estimates over time.
+A report that compares 3year ACS data with the Census 2000 long form will be released in mid 2003.
+"Meeting 21st Century Demographic Data Needs Â­ Implementing the American Community Survey: Demonstrating Operational Feasibility," U.S. Census Bureau, July 2001; "Meeting 21st Century Demographic Data Needs Â­ Implementing the American Community Survey: Demonstrating Survey Quality," U.S. Census Bureau, May 2002.
+1
+6
+Full Implementation The Census Bureau's original plan was to fully implement the ACS in 2003.
+Collection of full production data in the 2003 to 2007 time period would have made 5-year averages available in 2008, four years before the long form sample statistics from the 2010 Census would start to be available.
+Budget restrictions have pushed back full implementation of the mail program to July 2004.
+Under the current plan, population and housing profiles for 2005 will become available in 2006 and every year thereafter for places of 65,000 or more.
+In the following years, estimates will become available for progressively smaller geographic areas.
+Three-year average estimates will be available in 2008, and five-year average estimates will be available in 2010 for the smallest areas such as census tracts, small towns, and rural areas.
+Beginning in 2010, and every year thereafter, the nation will have a replacement for the decennial census long form, a community information resource that shows change over time, even for neighborhoods and rural areas.
+At full production levels, the ACS will sample about 3 million addresses from the Master Address File (MAF) each year.
+It will also sample 2.5 percent of the population living in Group Quarters, which is defined as people not living in housing units.
+Group quarters include such places as nursing homes, prisons, college dormitories, military barracks, juvenile institutions, and emergency and transitional shelters for people experiencing homelessness.
+Additionally, about 36,000 addresses in Puerto Rico will be included in the ACS sample every year.
+The Plan documents key survey components of the ACS and identifies and clarifies key transition projects in preparation for full implementation.
+The Plan's specific objectives are: Â· Â· Â· To document the operational components of the annual ACS survey cycle; To obtain consensus on transition issues; and, To describe essential transition projects for each component.
+The Plan describes the ACS process from beginning to end and describes transition issues, priorities, and projects.
+The Census Bureau will manage the 7
+individual transition projects as part of the larger ACS program, using standard project management procedures and methods.
+Budget limitations have compelled the Census Bureau to be flexible in the ACS planning process, as available resources are not sufficient to fund all desirable projects.
+The Census Bureau has and will continue to prioritize the projects identified in this Plan based on criteria that focus on level of effort and program importance or priority.
+The priority decisions set forth in this document may be revised as more complete funding information becomes available.
+The overall priority of each project was assessed by considering the following criteria: Â· Â· Â· Â· Â· Â· Public interest.
+Whether the public, including the Congress and the GAO, has expressed an interest in having the project undertaken.
+Necessity.
+Whether the ACS can succeed operationally if the project is not undertaken.
+Level of Effort.
+The resources required to complete the project: staff resources, time required, and funding.
+Data Users.
+Whether the project is likely to improve the usefulness of ACS data to those who will use them.
+Inter-relatedness.
+Whether other projects cannot be undertaken unless the project under consideration is completed.
+Improvement.
+Whether the project, if successfully completed, will improve the ACS, either the operation or the resulting data.
+8
+ACS Operations Address List Development and Update The Census Bureau maintains a national Master Address File (MAF) that is used as a sampling frame for the ACS and other Census Bureau demographic surveys.
+The MAF was originally created prior to Census 2000 as the Census Bureau's first permanently-maintained housing unit address list.
+The address list used in the 1990 census was updated prior to Census 2000 with field operations, information from the U.S. Postal Service's Delivery Sequence File (DSF), and addresses supplied by local governments under the Local Update of Census Addresses program.2 The MAF is linked to the Topologically Integrated Geographic Encoding and Referencing (TIGER) files.
+TIGERÂ® is a computer database with a digital representation of all census-required map features and related attributes.
+Geographic identification codes tie states, counties, tracts, and blocks.
+TIGERÂ® provides a resource for the production of maps, entity headers for tabulations, and automated assignment of addresses to a geographic location in a process known as geocoding.
+Keeping the MAF up-to-date from year-to-year, especially in rural areas, is a critical element in the overall success of the ACS. MAF accuracy is a paramount concern, as the MAF plays an important part in the editing, weighting, and data tabulation processes.
+In areas where DSF addresses can be assigned a physical location, such as urban areas with city-style addresses, the MAF is updated with input from the DSF.
+In rural areas with non city-style addresses, this process cannot be used.
+The areas without DSF updating encompass the majority of the Nation's land area and about 15 percent of the population.
+One of the major concerns voiced by legislators, community leaders, and others is that the decennial census and the ACS will not be able to provide reliable data for some small areas of geography such as rural areas and areas without city-style addresses.
+The need for an up-to-date MAF in these areas prompted the Census Bureau to institute a program called the Community Address Updating System, or CAUS.
+2
+13 U.S.C. Â§ 16.
+9
+Project : Community Address Updating System (CAUS) The Census Bureau designed CAUS to address quality concerns relating to areas with high concentrations of non city-style addresses, and to provide a rural counterpart to the update of city-style addresses the MAF will receive from the DSF throughout the decade.
+CAUS will supplement other Census Bureau updating systems for the MAF/TIGER databases by using trained field representatives already working on the ACS and other Census Bureau surveys to conduct listing operations.
+This supplemental work is needed because some areas cannot be updated without a field visit.
+The Census Bureau identifies specific addresses and/or geographic blocks to target field work needed to improve the coverage of MAF/TIGER.
+ACS planners use various methods for identifying where coverage is insufficient.
+In some instances, the Census Bureau will work with community officials to acquire information about new addresses, new streets, and/or areas of significant growth as a source of generating the list of areas where field work will improve the coverage of MAF/TIGER.
+In the course of their regular visits to areas, Field Representatives will verify and locate new addresses and will target areas where growth is not shown in MAF/TIGER.
+The Field Representatives will list addresses, and update streets and street names using a laptop computer and software called the Automated Listing and Mapping Instrument, or ALMI.
+CAUS has three specific objectives: 1.
+2.
+To complete and test field procedures and automated systems, including ALMI, needed to collect MAF/TIGER updates in the field; To improve the address list in the areas where substantial address changes have occurred that have not been added to the MAF/TIGER database through regular update operations; and, To collaborate on the development and refinement of algorithms to efficiently target geographic areas that require address list updating operations.
+3.
+The end goal is highly complex Â­ to develop a system that not only collects updates in the field, but provides sufficiently verified information to allow the MAF to be updated on a continual basis.
+10
+The ongoing MAF/TIGER updating using the Delivery Sequence File, CAUS, and enhancements included in the proposed MAF/TIGER modernization initiative,3 should result in an up-to-date address list for the entire United States.
+3
+Marx.
+"A Vision for the 21st Century MAF/TIGER," October 19, 2000, R. W. 11
+Sample Design and Selection At full implementation, each month the Census Bureau will select a systematic sample of addresses from the most current MAF to use as the ACS sample.
+The ACS sample will be selected to represent each county in the United States.
+No address will receive the ACS questionnaire more than once in any 5-year period.
+To improve the reliability of the estimates for small governmental units such as American Indian Reservations, small counties, and towns, a larger proportion of addresses will be sampled for small governmental units, defined as incorporated areas with less than 1,200 addresses.
+The ACS sample design approximates the Census 2000 long form sample design, including the oversampling of small governmental units.
+In the 1999-2001 period, most of the 31 sites were sampled at an annual rate of 5 percent.
+The exceptions were larger counties that were sampled at lower rates to reduce cost.
+Specifically, Houston, Texas was sampled at 1 percent and the counties of Broward, Florida; Bronx, New York; Lake, Illinois; San Francisco, California; and Franklin, Ohio were sampled at 3 percent.
+In February, 2002, the sampling rate in all counties was reduced to 2.5 percent, except for Houston which remained at 1 percent.
+A two-stage systematic sample was selected in each site.
+The first-stage sample of 17.5 percent was selected and then subsampled to achieve the final desired percentage.
+After attempting to contact households by mail and by telephone, a 1-in-3 sample was selected for a personal followup interview by a field representative.
+Beginning in 2000 and continuing in 2001 and 2002, the Census Bureau implemented Supplementary Surveys as a nationwide test of ACS methods.
+The combined sample size for the Supplementary Surveys and the 31 sites was about 890,000 housing units through 2001, dropping to about 820,000 in 2002.
+Although the Supplementary Surveys used ACS methods, the sample design did not reflect the ACS sample design for full implementation because the Supplementary Surveys were designed to provide characteristic data for states and large entities of 250,000 or more, not to provide information on small areas.
+Beginning with full production, the ACS will sample about 3 million addresses from the MAF each year.
+It will also sample 2.5 percent of the population in Group Quarters.
+The same design will be used in Puerto Rico, sampling about 36,000 addresses from the MAF each year.
+The sample design is similar to the design for the test sites in that it includes all geographic levels.
+One change is that governmental units with less than 200 addresses will be sampled at 12
+10 percent so that in 5 years these units will have a 50 percent sample to be consistent with the decennial long form plan.
+Sample selection occurs on an on-going basis throughout the year.
+The sampled addresses are selected from a MAF extract file, and filtered for mailable addresses.
+The Census Bureau selects the ACS sample at the county level.
+Unmailable addresses, usually those without complete address information, are not included in the mailing, but rather are sent directly to the Computer Assisted Personal Interviewing (CAPI) operation, where they are sampled at a 2-in-3 rate.
+The ACS was initially designed to select proportional samples for all demographic groups.
+However, differential mail response noted in the Supplementary Surveys and test site evaluations have led ACS managers to propose the revision to a sample design.
+Project : Oversampling of Low Mail Response Areas The sample design used thus far selects 1-in-3 nonrespondents after mail and telephone attempts for personal interviews in the CAPI phase.
+While a 1-in-3 sample results in reliable estimates for most tabulations, the Census Bureau has noted differential mail response in the ACS, with certain geographic areas and race and ethnic groups having lower mail response rates.
+A differential in mail response rates raises quality issues relating to the reliability of estimates for the groups having lower response rates.
+This differential led the Census Bureau to investigate ways to reduce the impact of differential response on the quality of the estimates.
+Oversampling was the most promising option considered.
+The objective of the oversampling plan is to reduce the Coefficients of Variation (CVs) for areas that experience low responses rates in the mail and Computer Assisted Telephone Interviewing (CATI) phases of the survey.
+The oversampling plan will develop projections for mail and CATI response rates by census tract, identifying tracts with low mail and CATI response rates for possible oversampling, and tracts with high response rates for possible sample reduction to offset the cost of the higher sampling rates in the low response areas.
+The oversampling plan will revise the ACS sample design as follows:
+13
+Oversampling Plan Combined mail + CATI response rate of ...
+Less than 30% 30% - 40% 40% - 60% Greater than 60% CAPI subsampling rate 1 in 2 2 in 5 1 in 3 1 in 3, with 15% reduction in the initial mailout
+The response rate projections will be based on data from both the Supplementary Surveys and the Census 2000 long form.
+Based on prior research, it is expected that slightly less than 20 percent of all tracts will be oversampled.
+This revision is designed to be cost neutral.
+The Census Bureau expects the reliability of estimates for about 60 percent of census tracts to improve or remain the same; for the remaining 40 percent, reliability will decrease slightly.
+In general, the oversampling design is expected to improve reliability in the intended areas, that is, census tracts with low expected mail and CATI response rates.
+This goal should be achieved without any loss in precision for more populous tabulation areas, such as most counties.
+Project : Oversampling for Small Population Groups Some have expressed concern that the ACS will not provide reliable estimates of geographically dispersed small minority population groups such as Native Hawaiians and other Pacific Islanders, Asians, or American Indians and Alaska Natives living in urban areas.
+The fact is that no sample survey, including the decennial census long form, can provide reliable census-tract statistics for geographically dispersed small population groups.
+This need can only be addressed by either a full census or by the use of statistical models that produce indirect estimates of relatively poor quality.
+The Census Bureau recognizes, however, the need for the ACS to provide estimates for small minority population groups that are at least as reliable as the decennial census long form, including providing reliable estimates for 14
+many metropolitan areas and most states.
+One option that ACS analysts are examining is to oversample identified areas believed to have large concentrations (high percentages) of small minority population groups.
+Oversampling for small minority population groups will be considered after the plan to oversample for low mail response is implemented and evaluated.
+Given the correlation between low mail response and minority populations, oversampling for low mail response may address the issue of providing reliable estimates for small population groups.
+The Census Bureau is committed to producing reliable estimates for small population groups and as the ACS program matures will investigate alternative methods to improve the reliability of all estimates.
+15
+Content and Questionnaire Development The ACS content used thus far has been essentially the same as the long form content used in Census 2000; only minor content changes have been made.
+The Census Bureau has historically conducted a content test several years prior to the decennial census to evaluate the wording of proposed questions.
+To determine the content of the 2003 ACS questionnaire, the Census Bureau and the Office of Management and Budget (OMB) worked with a federal interagency group to determine the agencies' content and data needs.
+The federal agencies' laws and regulations on what information is to be used determined the data to be collected.
+The Census Bureau functioned in its historic role as the data collection expert and determined the best way to obtain the identified information.
+In accordance with past practice, the ACS questionnaire was developed after federal agencies provided the Census Bureau with justifications to support the ACS subjects and classified each into one of three categories Â­ mandatory, required, or programmatic.4 The ACS has collected data only for the mandatory and required categories.
+In the spring of 2002, however, the Census Bureau initiated a step not previously taken for the decennial census process.
+The General Counsel of the Department of Commerce sent a letter to the General Counsels of agencies using decennial census data requesting formal affirmation of the agencies' needs for the ACS data and their classifications as mandatory or required.
+The user agencies affirmed their need for the data and the results of this process were sent to Congress in February, 2003.
+Residence Rules The ACS uses different residence rules than have been used in past decennial censuses.
+Decennial censuses and most current surveys use the usual residence concept.
+The usual residence concept requires that respondents have only one place as their usual residence Â­ most often the place where they Mandatory means that a federal law explicitly calls for the use of decennial census or ACS data.
+Required means that a federal law or implementing regulation explicitly requires the use of data and the decennial census or the ACS is the historical source, or that data are needed for case law requirements imposed by the federal courts.
+Programmatic means that the data are needed for program planning, implementation, or evaluation, and there is no explicit requirement for the use of the data.
+4
+16
+spend the most time.
+The usual residence rule does not count people who are staying somewhere other than their usual residence as occupants of that place.
+For example, people who spend their winters in Florida and the rest of the year in Vermont Â­ "snowbirds"Â­ have in the past been enumerated in the census as residents of Vermont, not Florida.
+Another example is college students living in dormitories.
+The census counts college students living in dormitories where they go to school, as members of the group quarters population; they are not counted at their parents' home.
+The ACS, in contrast, uses the concept of current residence.
+The current residence concept is uniquely suited to the ACS, because the ACS continuously collects information from independent monthly samples throughout every month of every year.
+The current residence concept recognizes that people can live more than one place over the course of a year, and that population estimates for some areas may be noticeably affected by these people.
+Seasonal areas can experience important increases in their population over the year, increases that are not measured when only usual residents are recognized.
+Since the ACS is designed to produce a continuous measure of the characteristics of states, counties, and places every year, a new set of residency rules was needed for seasonal and migratory individuals.
+The ACS current residence concept uses the Two Month Rule.
+Under the Two Month Rule, anyone who is living for more than two months in a survey unit when the unit is contacted (either by mail, telephone, or personal visit) is considered to be a current resident of that unit.5 There are several corollaries to this rule that cover people who are away for two months or less (they are current residents) and people who have no place that they stay for more than two months (also current residents).
+In general, people who are away for more than two months are not considered current residents.
+Housing units in which no one is a current resident are considered to be vacant.
+Using the same examples as above, the ACS considers people who spend their winters in Florida and the rest of the year in Vermont, to be current residents of Florida if they are staying for more than two months at the time they are surveyed.
+Their Vermont unit, if sampled during this time, would be considered vacant.
+If they are sampled during the summer while in Vermont, they are considered Vermont residents and their Florida unit is considered vacant.
+College students are treated similarly.
+If they are away at school at the time their parent's home is included in the ACS sample, the students are The two months may have already passed, or the person may plan to remain, so that the total time in the unit will exceed two months.
+5
+17
+not considered current residents of their parent's home.
+But if they are living at home for more than two months Â­ say, during summer break Â­ they are considered current residents of their parent's home, not of the college area.
+The Two Month Rule determines the current residence for everyone in housing units except for three groups: Â­ Children Away at School.
+Children below college age away at boarding schools or summer camps are considered residents of their parents' home.
+Children in Joint Custody.
+Children who live under joint custody agreements and move often between the residences of their parents are considered to be current residents of the sample unit where they are staying when the contact is made.
+Commuter Workers.
+People who stay in a residence close to their work and return regularly to another residence, often weekend trips to a family, are considered residents of the family residence, not the work residence.
+Â­
+Â­
+The differences in the residence rules between the ACS and Census 2000 will most likely be minimal for most of the population.
+However, for certain segments of the population the usual and current concepts result in different residence decisions.
+Appreciable differences may occur in areas where large numbers of people spend several months of the year Â­ but less than six months Â­ because the hyper-seasonal population will be reflected in ACS estimates, but not in long form estimates.
+BLAISE Software Until recently the Census Bureau collected CAPI responses for the ACS on a laptop using an outdated DOS-based software called CASES.
+The Census Bureau converted the software to BLAISE, a commercial software designed for automated survey instruments.
+The Census Bureau is in the process of converting to BLAISE for all surveys, not just the ACS. BLAISE has modernized the conduct of the survey, and improved functionality.
+This project is critical to improving production processes and may additionally reduce nonsampling error.
+18
+The Census Bureau decided to schedule the ACS for conversion to BLAISE by January 2003 because that date was originally scheduled as the commencement of a large ramp-up to full implementation.
+Converting to BLAISE prior to ramp-up minimized interviewer retraining.
+Project : Shortening the ACS Questionnaire There is an inherent tension between maintaining questionnaire continuity and allowing the content of the ACS to be flexible to meet changing federal information needs.
+Maintaining consistency allows calculation of meaningful 3- and 5-year averages that are not affected by changes in questionnaire content.
+Additionally, cost efficiency argues in favor of consistency, so that no new developmental costs are incurred.
+Developmental costs include research to test new questions, and the adaptation of questionnaire check-in and data entry systems.
+However, some Members of the Congress and the public criticized the Census 2000 long form as too burdensome and intrusive, criticism that is now directed at the ACS.
+To address this concern, the Census Bureau has identified several options for a new and more stringent content review to permit shortening of the ACS questionnaire.
+All options considered have several common considerations.
+First, the Census Bureau does not have the programmatic expertise in-house to conduct a major content review.
+Extensive involvement and cooperation from the Office of Management and Budget (OMB) and federal agencies will be required.
+Second, the Census Bureau can facilitate the content review process and provide statistical advice, but ultimately federal agencies must provide the justification for including questions.
+For example, substantive content changes may require changes to the laws or regulations of more than one agency.
+Third, revisions to the ACS questionnaire must be tested, which will require significant Census Bureau resources.
+Finally, the effects of changing content will ripple across all operations of the ACS program.
+Data products will have to be revised, field tests planned and conducted, questionnaires and automated instruments changed, interviewers retrained, and processing systems revamped.
+The Census Bureau will consult with the Office of Management and Budget and other federal agencies before publicly announcing its decision on this issue.
+19
+Data Collection and Capture The Census Bureau collects ACS data in continuous, 3-month cycles using a combination of mailout/mailback, Computer Assisted Telephone Interviewing (CATI), and Computer Assisted Personal Interviewing (CAPI) data collection modes.
+Optimal use of these three modes of data collection results in costefficient, high-quality statistics.
+Respondents are provided a postage-paid and addressed envelope to mail their ACS questionnaires to the National Processing Center (NPC) in Jeffersonville, Indiana for processing.
+At the NPC, the questionnaires are checked-in, opened, reviewed for correspondence,6 and sent for keying of responses.
+After the forms are keyed, they proceed to an automated edit follow-up.
+Households that do not respond by mail are eligible for the CATI and CAPI phases.
+Mail Phase The first phase of the ACS, is the mailout/mailback phase.
+During this phase, NPC staff send out a prenotice letter, the initial mailing package (which includes the ACS questionnaire, an instruction booklet, and other materials), and a reminder card.
+A replacement mailing package with a second questionnaire is mailed about three weeks after the first mailing to those who did not respond.7 Currently only English language questionnaires and instruction guides are available, but future plans call for development of a Spanish language package.
+Samples of housing unit addresses are drawn from the MAF.
+Only complete addresses are eligible for mailing, that is addresses with either a house number, street name, and ZIP Code, or a complete rural route, box number, and ZIP Code.
+Post office boxes and other rural style addresses are considered incomplete.
+Some respondents will include correspondence with questions, objections, or comments.
+The Census Bureau responds to these letters.
+6
+The use of a targeted replacement questionnaire package is an improvement over Census 2000.
+The deadlines imposed by the decennial requirement to provide the President with a population count by December 31 precluded sending replacement questionnaires in Census 2000.
+7
+20
+The NPC is responsible for assembling the mailing packages, an almost continual process.
+Headquarters staff regularly provides the NPC with a label file which provides the addresses that are used for the completed mailing packages.
+Mailing packages are assembled by machines, and the U.S. Postal Service picks up the packages for delivery to respondents.
+Telephone Questionnaire Assistance Each mail questionnaire displays a toll-free number that households are encouraged to call if they have questions about the survey, or if they wish to provide their responses by phone.
+This assistance is called Telephone Questionnaire Assistance (TQA).
+Trained TQA interviewers answer general questions about the survey, including questions about content.
+If the respondent indicates a desire to answer by telephone, the interviewer conducts the interview, filling out a paper questionnaire, which he or she then sends to check-in as if it were a mail return.
+TQA is conducted by trained interviewers at the NPC.
+The cover of the ACS questionnaire contains a statement in Spanish directing those uncomfortable with the English language document to call TQA to speak with a Spanish-speaking interviewer.
+Spanish-speaking TQA staff answer these calls and either assist the respondent to complete the English form or collect the data on the telephone in Spanish.
+Check-in The check-in operation registers two types of returns: questionnaires returned by mail and questionnaires completed in TQA.
+Mail is processed on a first-in, first-out basis and is normally checked in and opened on the day it is received.
+All mailed questionnaires contain a unique bar code identifier.
+Check-in is accomplished either by scanning the questionnaire with an electronic wand to pick up its bar code identifier, or by keying in the numeric identifier.
+Trays of ACS questionnaires are received from the mail receipt area, while TQA questionnaires come directly from the TQA unit.
+NPC staff open envelopes, separating questionnaires that contain correspondence.
+NPC staff send appropriate correspondence to headquarters and check in the completed questionnaires with the other returned questionnaires.
+As NPC staff check in the questionnaires, they prepare batches of 50 questionnaires for data capture and assign each batch a unique number.
+Staff determine whether a returned questionnaire is considered blank, 21
+meaning that the return does not contain at least minimal information for one person, or a respondent phone number.
+Blank responses are treated as nonresponses, making the case eligible for a second mailing, CATI, or CAPI.
+Only questionnaires enclosed in return envelopes are checked in through mail return check-in; questionnaires returned in the original outgoing envelopes are considered "Undeliverable As Addressed" (UAA).
+UAAs are returned by the U.S. Postal Service if the address is considered undeliverable.
+UAAs are annotated with the date received, and placed in a labeled tray for subsequent UAA check-in.
+The Census Bureau accepts mailed questionnaires for approximately three months from the first mailing date.
+Mail questionnaires are not accepted after the cut off date for that sample.
+Keying After check-in, responses from the mail return questionnaires are data captured by keying.
+Questionnaires must be keyed in a timely manner to support later processing activities, therefore the production goal is to have questionnaires keyed within three weeks of receipt.
+A keyer receives work assignments in batches of 50 questionnaires.
+To minimize keying errors, NPC staff manage a detailed quality assurance process.
+A new keyer goes through three stages of qualification: training, pre-qualification, and qualification.
+In the training stage, the keyer's work is 100 percent verified by another keyer doing the same batch independently.
+If substantial errors are found, the individual is retrained.
+The pre-qualification stage still requires 100 percent verification, and detected errors are provided to the keyer immediately.
+For fully qualified keyers, only a sample of completed work is verified.
+For all three stages, keyers who are consistently unable to maintain quality levels are removed from the project and subject to administrative action.
+The quality assurance process has successfully maintained total error below the specified level, a 1.5 percent field error rate.
+NPC keyers must maintain an error rate of 0.80 percent or less in order to retain their keying position.
+In most instances keyers have error rates much lower than the required 0.80 percent.
+22
+The Census Bureau has recently revised its check-in and keying software to reflect the deletion and modification of questions in the 2003 questionnaire.
+There was no clean break between processing of the 2002 and 2003 questionnaires, so the questionnaires from each year have to be batched separately so that they can be directed to the appropriate keying software.
+Telephone Edit Followup The Census Bureau reviews and follows up on the mailback data it has collected and keyed in a phase called Telephone Edit Followup.
+In Telephone Edit Followup, the keyed response records are subjected to a computerized coverage and content edit to identify missing or inconsistent responses.
+A record will fail and require Telephone Edit Followup if an insufficient number of questions were answered, or the questionnaire has missing or inconsistent information on the total count of people.
+Telephone Edit Followup takes place at the NPC after headquarters staff run a program against the keyed data to determine whether each questionnaire passes coverage and content checks.
+Questionnaires that fail these checks, and for which there is at least one telephone number go to Telephone Edit Followup.
+Telephone Edit Followup provides a critical review of questionnaires returned by mail.
+Approximately one-third of all mail returns fail one or more of the edits and require followup.
+The Telephone Edit Followup operation is an improvement over the Census 2000 long form procedure, which did not have the time or resources for this step.
+This type of followup reduces nonsampling errors, thus improving data quality.
+The Telephone Edit Followup process was automated in 1999.
+Prior to that time, NPC processors manually reviewed and edited the response records, a time-consuming process with no automated quality control.
+In the new process, a computer algorithm reviews the captured responses for coverage and content failures identified by subject-matter experts.
+Most questionnaires fail edit because essential questions are missing responses.
+Common reasons why a question may not have been answered are: Â· Â· The respondent thought the question did not apply to the person about whom questions were being asked; The respondent misinterpreted a skip instruction;
+23
+Â· Â· Â·
+The respondent did not understand what was being asked; The respondent understood the question but did not know the answer; or The respondent refused to provide the answer.
+Telephone Edit Followup also obtains more information for large households, that is households with six or more people.
+The ACS questionnaire has space only for five people per household, so follow-up is required when the questionnaire indicates that more than five people live in the household.
+During Telephone Edit Followup, all missing answers are approached as ones that the respondent can and will provide.
+The telephone staff is cross-trained in Telephone Questionnaire Assistance so that they can offer callers guidance.
+With the telephone clerk to help in interpreting the question and its purpose, respondents are often persuaded to answer questions or clarify responses.
+When the respondent cannot provide the answer to a question, the telephone clerk will enter a "Don't Know" in the answer area.
+Similarly, when a respondent refuses to provide the answer to a question, an entry will indicate "Refused."
+Telephone Edit Followup is conducted on a flow basis.
+A maximum of seven attempts to contact the nonresponding household is allowed for each case.
+For cases without a correct respondent- provided telephone number, the Telephone Edit Followup unit will use alternative sources to attempt to locate a working telephone number.
+The response records for questionnaires that pass Telephone Edit Followup go directly to the Data Capture File.
+Computer Assisted Telephone Interviewing About six weeks after the first questionnaire is mailed, interviewers begin Computer Assisted Telephone Interviewing (CATI).
+During this phase, interviewers contact housing units from which a mail response has not been received, and for which telephone numbers have been obtained.
+Once CATI interviewers verify that they have reached the correct address, they try to complete the interview.
+Telephone numbers obtained from commercial vendors are used to conduct the CATI interviews.
+Most of the telephoning is done in the evenings and on weekends.
+CATI is conducted from three call
+24
+center locations: the NPC in Jeffersonville, Indiana, and telephone centers in Tuscon, Arizona, and Hagerstown, Maryland.
+The CATI operation runs for approximately 25 days.
+If a mail return questionnaire is received during the CATI phase before telephone contact has been made, the case is removed from CATI and the mail response is captured and keyed.
+If the respondent refuses a CATI interview, a refusal conversion specialist calls again and makes one more attempt to convert the refusal.
+The CATI operation benefits from several quality assurance programs.
+The CATI software prevents common errors, such as out-of-range responses or skipped questions.
+Census Bureau Call Center supervisory staff monitor interviewer work to check for other errors, such as keying a different answer from what the respondent provided, or failing to follow procedures for asking questions or probing respondents for answers to questions.
+The Census Bureau has found its monitoring to be effective in controlling telephone interviewer errors.
+The CATI operation is subject to stringent quality assurance.
+Full-time call center staff are carefully trained and provided with periodic training updates.
+New interviewers receive standard CATI training, and a workshop to specifically train them on how to handle refusals.
+New interviewers are monitored regularly and even qualified interviewers are monitored periodically to make sure they continue conducting interviews in a satisfactory manner.
+Spanish speaking CATI interviewers are available.
+Computer Assisted Personal Interviewing Both the CATI and CAPI operations use the same data collection instrument, with only minor changes to account for modal differences.
+At the conclusion of the CATI operation, the Census Bureau selects a sub-sample of remaining uninterviewed addresses for Computer Assisted Personal Interviewing (CAPI).
+The CAPI sample contains addresses selected at two different rates: one in three addresses without a mail or CATI interview, and two in three of the unmailable addresses.
+The CAPI sample is stratified by geography and type of address.
+CAPI runs approximately four weeks, during which Census Bureau Field Representatives conduct personal interviews.
+Throughout the CAPI operation, the CAPI control file is updated to remove addresses from the field workload 25
+for which a late mail return was received, so that respondent burden and duplication of effort are minimized.
+Field representatives visit CAPI addresses and verify their existence (or declare them nonexistent), determine their occupancy status, and conduct interviews.
+Field representatives use laptop computers loaded with the BLAISE software to collect the survey data .
+Initial contacts are made in person, but interviewers may telephone respondents to collect additional information.
+Information is collected for both occupied and vacant housing units.
+Information for occupied units must be obtained from a household member.
+Interviews of proxy respondents (such as neighbors) to gather information about occupied units are not accepted.
+Collecting household information only from household members is an improvement over the decennial census, which must allow for the possibility of proxy responses due the extremely tight time deadlines and workload constraints.
+As with CATI, built-in checks and edits in the CAPI software limit the introduction of certain types of errors.
+A formal quality control reinterview program is also built into the CAPI operation.
+This program serves as a deterrent to performance deficiency, including falsification of responses.
+The work of field interviewers is sampled and the respondent is contacted to determine if there is any evidence of falsification or other substandard performance.
+In addition, during the reinterview, the household roster is verified to measure the accuracy of the roster information.
+The Census Bureau attempts to employ Spanish language field interviewers in areas with large Spanish-speaking populations.
+Additionally, the Regional Offices have a list of translators available to help secure answers from respondents who require language assistance for languages other than English and Spanish.
+In addition, current survey interviewers are highly competent and will often be able to use an English-speaking individual in the household to help complete the interview.
+26
+Data Processing Data processing refers to the steps that must be taken to change the captured respondent information into more complete and useful statistics, including coding, editing, and tabulation.
+The Control File is integral to data processing, as it provides a single database of all units in the sample, including households that respond by mail, TQA, CATI, and CAPI.
+The Control File manages, controls, and tracks the flow of an individual case through all the operations.
+It tracks the overall progress of the ACS, provides input into various operational phases, and controls flow across months.
+The following flowchart depicts the collection, capture and processing of information in the ACS:
+Figure 1: ACS Data Collection, Capture, and Processing
+1
+Control 
+Sample Selection
+3
+CATI Followup (Month 2)
+Processing, Editing 
+CAPI Followup (Month 3)
+Data Product Development
+NOTE: Numbers represent the general flow of primary operations over a given three month period.
+27
+Data Capture Files
+Mail Out 
+2
+Keying 
+Coding The ACS form, like the decennial long form, contains several questions that ask respondents to write in their responses.
+These written-in responses must be coded for tabulation.
+The current ACS questionnaire contains the following write-in fields which must be coded: Race, Origin, Place of Birth, Ancestry, Migration, Language, Place of Work, and Industry and Occupation.
+In the coding phase, fields with write-in values are coded to a prescribed list of valid values.
+Coding takes place both at headquarters and the NPC.
+Coding operations are subject to quality assurance processes to ensure that coding is consistent and accurate.
+The various questions are coded in slightly different ways: Â· Â· Â· Geocoding is accomplished in an automated first pass at headquarters, with residual cases coded clerically at the NPC.
+Questions dealing with Industry and Occupation are coded clerically at the NPC.
+All other coding is accomplished at headquarters.
+The first pass is automated, and residual coding accomplished clerically.
+Edit and Imputation Edit and imputation rules are last resort data processing methods designed to ensure that the final data are as consistent and complete as possible.
+Application of edit and imputation rules maintains data quality when complete responses cannot be obtained, or it is not feasible to obtain responses within a survey's budget.
+Subject-matter experts develop these rules and processing staff run the edits.
+Edit and allocation rules are used to account for missing, incomplete and contradictory responses, responses that would otherwise distort the survey results.
+Application of these rules in the ACS does not affect the estimated population totals, as the rules are used only to supply missing or inconsistent answers about the household's characteristics, not its existence.
+Responses for missing or inconsistent answers are provided from several possible sources.
+The edit may supply a response for a missing item based on 28
+other related information on the form (for example, sex may be determined from first name, or marital status from relationship).
+Imputation techniques are used to supply missing responses from data reported by other housing units.
+For example, if a given housing unit did not provide ages for the individuals living in the housing unit, but supplied all other information, age could be imputed using data from other housing units or people with like characteristics.
+This practice is preferable to going to the expense of making additional contact with the household and bothering respondents for just one piece of information.
+Imputation is often conducted with a hot-deck allocation, which uses responses from other housing units or people with similar characteristics in the same survey.
+The programs look at the housing and population variables according to a predetermined hierarchy.
+They examine the data for inconsistencies and missing values where data should be present.
+In each case where a problem is detected, consistent, pre-established edit rules govern its solution.
+Each time the ACS questionnaire is revised, however slightly, the edit and imputation rules must be revised to account for the change.
+As discussed earlier, the 2003 ACS questionnaire is slightly different from the 1998-2002 questionnaire; the Census Bureau has therefore recently revised the edit and imputation rules.
+Tabulation Tabulation refers to aggregating the weighted data and displaying these aggregations in formats useful to data users.
+Up until now, ACS summary files have been essentially the same as those produced from the decennial census long form.
+Like the decennial long-form products, ACS products are designed to meet the legislative, legal, and programmatic needs of the federal government, as well as the needs of state and local governments, businesses, nonprofit organizations, and individuals.
+Currently, during the ACS development phase, ACS data products have been tabulated and available for numerous geographic levels.
+The Census Bureau will be able to produce even more tabulation levels once the survey is fully implemented.
+The following table reflects tabulations that have been available during the development phase, and additional levels of tabulation that we plan to make available upon full implementation.
+29
+Currently Available Tabulations Nation States Counties County subdivision (MCD) Place - County Place (Incorporated Places and Census Designated Places) Metropolitan Statistical Area Congressional Districts
+Anticipated AdditionalTabulations Census Tracts Voting Districts American Indian Reservations School Districts State Legislative Districts PUMAs (Census 2000-defined areas of 100,000 or more) ZIP Code Areas Urbanized Areas Rural Areas
+Detailed summary tabulations will continue to form the basis for ACS data products.
+Detailed summary tabulations for many characteristics will be available for single- and multi-year statistics for 11 racial/Hispanic origin groups.8 During the development phase of the ACS the Census Bureau has published narrative, tabular and change profiles.
+This practice will continue.
+Tabular Profiles provide distributions for estimates of selected characteristics for each geographic area and some derived measures.
+Tabular Profiles are presented for general demographic characteristics, as well as social, economic and housing characteristics.
+The profiles include the survey estimate and the 90percent confidence interval.
+Narrative Profiles are plain-language descriptions with representational graphs to complement the standard tabular profiles.
+These easy-to-read profiles are useful to general-purpose users.
+They summarize information on a wide array of subjects in words, rather than These 11 groups are White alone, Black or African American alone, American Indian and Alaska Native alone, Asian alone, Native Hawaiian and Other Pacific Islander alone, some other race alone, two or more races alone, two races including some other race, two races excluding some other race, and three or more races, Hispanic or Latino, and White alone, not Hispanic or Latino.
+8
+30
+numbers.
+Newspaper reporters, city administrators, and grant applicants, for example, can quickly obtain an overview of their area and information on many key topics important to their community.
+Simple charts and graphs illustrate changes in communities.
+Change Profiles show the same characteristics as the Tabular Profiles as year-to-year changes, along with related percentage distributions, differences over the time period, margins of error for the differences, and whether the differences are statistically significant.
+Disclosure Avoidance The Census Act prohibits the release of individually identifiable data.9 The Census Bureau uses statistical methods during the tabulation phase and prior to data release, to ensure respondent confidentiality.
+Three primary statistical methods of disclosure avoidance are employed: swapping, categorizing variables, and topcoding.
+Swapping refers to literally swapping one household for another.
+When a household has individuals with rare characteristics (such as the only minority household in a block group), the Census Bureau may swap the entire household with another similar household in a different tabulation area.
+As swapped housing units are not identified, data users will never be able to identify a household with certainty.
+Categorizing variables refers to collapsing categories within a table to avoid small cell sizes.
+For example, a table might have one column for Asians and Native Hawiian or Other Pacific Islanders, rather than having separate columns for each.
+Topcoding refers to combining individuals with rare characteristics together.
+For example, individuals with incomes over $100,000 might be individually identifiable.
+The Census Bureau might code a category for individuals with incomes above $100,000 so that the category would include more people.
+Finally, the Census Bureau has used data filtering to ensure that published ACS estimates in the demonstration phase reflect a certain level of statistical reliability while meeting data user needs.
+For example, a data quality filter might require that a weighted table universe must be greater than a certain number, e.g., a table designed to show the total number of individuals in a
+"Neither the Secretary, nor any other officer or employee of the Department of Commerce ... may ... make any publication whereby the data furnished by any particular establishment or individual under this title can be identified ..." 13 U.S.C. Â§ 9(a).
+9
+31
+county by age and educational attainment could only be produced for counties in which the weighted table universe is above a certain threshold.
+In addition, a data quality filter might require a minimum cell size, e.g., an average of 2 weighted cases per table cell.
+The Census Bureau has used data filtering rules during the demonstration phase of the ACS and will review these rules when national level production data becomes available.
+The Census Bureau has identified a project dealing with data processing, the Automated Review Tool.
+Project : Data Review/Automated Review Tool Prior to their release, ACS data are reviewed by subject matter experts to detect potential problems with the data.
+No matter how many quality assurance steps are built into the data collection and processing processes, errors can still surface.
+The data review phase is the last chance for Census Bureau experts to look for issues such as improperly coded tabulations, missing data, and obviously incorrect data.
+Data review minimizes errors, so that the public has access to high quality, reliable statistics.
+The Census Bureau is in the process of developing an Automated Review Tool, or ART, as part of the overall ACS data review process, to allow analysts to review data more efficiently.
+Unlike the decennial census long form statistics, which have to be reviewed only once a decade, ACS statistics have to be reviewed on an on-going basis throughout the decade.
+Reviewing such a massive volume of information presents a severe resource challenge.
+Incorporating ART into the review process will help answer that challenge.
+ART is a web-based computer application that will help analysts compare notyet-released ACS results with results from prior years to look for statistical trends.
+ART uses set parameters to detect and flag potential problems, thereby providing subject matter managers with the tools to quickly assess whether estimates or geographic areas have problems.
+Additionally, ART should help managers and analysts to identify quickly whether estimates or geographic areas exhibit extraordinary changes from one year to the next.
+A prototype version of ART was used to review differences between the C2SS tabular profiles and the 2000 Census sample-based profile reports.
+The prototype ART also was used during the summer and fall of 2002 to analyze differences between the C2SS and SS01 profile estimates.
+The Census Bureau plans to use ART for data review of the 2002-based data products starting in spring 2003.
+Analysts are still refining ART, adding additional features and 32
+functionality.
+The Census Bureau plans to use ART for data review of the 2002-based data products starting in spring 2003.
+33
+Weighting and Estimation ACS data, like all survey data, must be weighted to produce reliable and usable estimates about the population.
+ACS data are weighted to reflect the sample design, to adjust for the effects of nonresponse, and to correct for survey undercoverage.
+The first weighting adjustment accounts for differences in selection probability resulting from the sample design.
+For example, each unit sampled at a rate of 1 in 40, gets a weight of 40.
+In oversampled small governmental units where the sample rate is 1 in 10, each unit gets a weight of 10.
+When units that have not responded by mail or CATI are subsampled for CAPI at a rate of 1 in 3, their weight is multiplied by 3.
+A second weighting adjustment is for unit nonresponse, that is when a household identified for interview does not respond, or so little data are obtained that they cannot be used to produce estimates.
+In the ACS, a higher weight is given to interviewed units in a given tract and month to account for noninterviews in that tract and month.
+For example, if only 9-out-of-10 of the designated units are interviewed in a tract in a specific month, a nonresponse adjustment of 10/9 is used to increase the weight of the interviewed units when they are included in the estimates.
+A final weight is applied to ensure that the survey results are corrected for survey undercoverage or overcoverage.
+This final weighting adjustment helps to ensure that estimates of the characteristics being collected (e.g., age, race, sex) are comparable to the standard -- the decennial census or the intercensal estimates that are based on the decennial census.
+This final adjustment is called "weighting to population control totals" and also compensates for some of the errors not corrected by the previous weighting adjustments.
+Once the final weights are applied, the statistics are generated, including proportions, means, medians, and ratios.
+Estimates of sampling error or variances are computed for each estimate and confidence intervals are provided.
+Sampling error refers to the variability that occurs by chance because a sample Â­ rather than all units in a population Â­ is surveyed.
+In general, the larger the sample, the smaller the sampling error.
+Anything that has the effect of reducing sample size, increases sampling error.
+A measure of sampling error is the variance or standard error.
+A related, but different statistic, the Coefficient of Variation or CV, quantifies the relationship 34
+between the size of the error and the size of the estimate.
+The smaller the CV, the more precise the estimate.
+The Census Bureau has identified two projects to improve ACS weighting and estimation.
+The first is a project to revise and simplify the weighting methodology.
+This project will include examining whether an interim adjustment can be made to the ACS estimates to account for a difference in residence rules between it and the decennial census and revising weighting to deal with the need to achieve agreement between the estimates of occupied housing units, households, and householders at all geographic levels .
+The second major project is to improve the quality of the intercensal population estimates to which the ACS is controlled.
+Project : Revision and Simplification of Weighting Methodology The objectives of this project are to revise and simplify the weighting methodology, and to identify an interim adjustment for areas with highly seasonal populations.
+The current weighting methodology was designed in 1995 and is composed of a series of 13 adjustments.
+Several sub-projects are included in the revision and simplification effort First, the Census Bureau is concerned that the current weighting methodology may be more complex than required.
+The Census Bureau plans to run a series of experiments, individually eliminating each step in the process to determine the effect its elimination has on the weighting and estimation results.
+This experimentation should result in a streamlined process by removing or combining adjustment steps.
+Second, areas with a high proportion of seasonal residents are problematic for both the census and the ACS.
+The ACS and the decennial census use different residence rules and these differences raise weighting issues.
+The intercensal estimates need to be adjusted to account for the different residence rules in order to function as consistent population controls for the ACS.
+A major area of research in the Program of Integrated Estimates project discussed below is to address these residence rule differences.
+However, in the interim, the weighting and estimation staff will examine whether some type of more immediate adjustment can be identified to reduce the effects of the differences for areas with large seasonal populations.
+Third, the Census Bureau is researching how best to achieve agreement between the ACS estimates of occupied housing units, households, and 35
+householders at all geographic levels.10 The ACS is controlled to independent housing unit estimates.11 The estimates of occupied housing units, households, and householders must agree at all geographic levels.
+This agreement is not currently being achieved and the ACS's weighting methodology is producing inconsistent estimates of households and householders.
+Finding a solution to this problem will take extensive longterm investigation and experimentation.
+The project to revise and simplify the weighting methodology began in early 2003.
+Preliminary papers documenting revisions may be available by the summer of 2004 and research will continue for several years.
+Project : Program of Integrated Estimates The ACS estimates are weighted to a population benchmark, either the most recent decennial census results or the most recent intercensal estimates.
+The Intercensal Population Estimates Program develops and disseminates annual estimates of the total population and the distribution by age, sex, race, and Hispanic origin for the Nation, state, counties and functioning governmental
+A housing unit is a single-family house, townhouse, mobile home or trailer, apartment, group of rooms, or single room that is occupied as a separate living quarters or, if vacant, is intended for occupancy as a separate living quarters.
+A household consists of all people who live in the same housing unit, including related family members and the unrelated people, such as lodgers, foster children, wards, or employees.
+A householder is the reference individual living in a household, the one listed on line one.
+Other household members are defined by their relationship to the householder, e.g, wife or son.
+The count of occupied housing units should be same as the count of households and the count of householders.
+10
+This issue is being addressed not only for the ACS, but for all current surveys that produce estimates of housing characteristics: the American Housing Survey - National, the American Housing Survey - Metropolitan Sample, the Housing Vacancy Survey, and the New York City Housing and Vacancy Survey.
+11
+36
+units.12 The accuracy of the intercensal estimates is therefore highly important to overall ACS accuracy.
+The Census Bureau has developed the Program for Integrated Estimates (PIE) to research and introduce enhancements to the intercensal estimates.
+The PIE program will integrate information from Census 2000, more current ACS distributions of population characteristics, and administrative records to produce improved population and housing unit estimates for all areas, including small areas.
+Through 2001, the relationship between the ACS and the Intercensal Population Estimates Program was one-way.
+The intercensal population estimates for counties by age, sex, race and Hispanic origin were used as controls for ACS data products.
+Preliminary results from the ACS testing program were weighted to be consistent with the population estimates by age, sex, race, and Hispanic origin for counties.
+Some information from the ACS was used to inform the estimates of temporary migrants in 2000 and assumptions about the level of international migration in 2002.
+Subsequent estimates will be more fully informed with information from the ACS.
+A fully implemented ACS will improve the intercensal population estimates by providing annual distributions of population characteristics for every county and many sub-county levels.
+Complete information of this type is not currently available at sub-county levels.
+We expect that the ACS distributions can be combined with other data currently in use to improve estimates of the components of annual change that are essential to producing the intercensal population estimates.
+ACS data are particularly important to the PIE for the following topics: International migration.
+Many of the techniques developed during the demographic analysis of Census 2000 (to estimate emigration, temporary migration, and the residual foreign-born population for the 1990 to 2000 decade) can be applied to data about the foreign born from consecutive years of the ACS to estimate annual flows of these components.
+This program is mandated by 13 U.S.C. Â§ 181, which requires the production of "current data on total population and population characteristics."
+12
+37
+Internal migration .
+The estimates of internal migration at the state and/or county level from the ACS can be integrated with those currently derived from IRS tax returns to adjust for restricting the current universe to tax filers.
+Fertility differentials.
+The data on births in the last twelve months from the ACS is a unique source of multiple race data on the same population of potential mothers and newborns.
+Housing characteristics .
+ACS distributions of local area vacancy rates and household characteristics can be incorporated into statistical models that use distributions of housing unit characteristics to better estimate subcounty populations.
+Additionally, information from the address updating processes associated with the ACS can inform the independent estimates of the number of housing units.
+Seasonal residence .
+The residency requirements for a respondent to be included at the current address differ between the ACS and Census 2000.
+Data from the seasonal residence questions in the ACS can be used to estimate and incorporate the impact of differences in the residency requirements into the county and sub-county estimates used as ACS controls.
+Racial characteristics The information on racial distributions of the population developed prior to the population weighting can provide an outside check on the overall results of the population estimates process.
+When the ACS is fully implemented, data from its sample of 3 million addresses a year has great potential to improve the population estimates program.
+Over the next five years, staff will carry out a comprehensive research and production program to integrate data from Census 2000, administrative records, and the ACS to produce more accurate and reliable population estimates for the nation, states, counties, and all governmental units.
+38
+Data Products and Users Billions of dollars are distributed by federal agencies among states, tribal governments, and population groups based on their social and economic profiles.
+In the past, the statistics for funding formulas and tasks, such as the location of services and program planning, evaluation, and improvement, have come in large part from the long form portion of the decennial census.
+We expect ACS data products to supplement the long form data products from Census 2000, continuing to provide high quality, updated statistics every year for comparisons of the demographic, social, economic, and housing characteristics of areas and population groups.
+The ACS statistics will also show the direction and level of change over time, and relative differences among areas and population groups.
+ACS data products will continue to meet the traditional needs of those who used the decennial census long form statistics and will provide statistics that are more current than the "one point in time" statistics available from the decennial long form, an especially important advantage toward the end of the decade.
+The vast majority of the Census Bureau's data products are prepared and released publicly, for all to use.
+In accordance with federal directives, however, the Census Bureau also prepares special tabulations on a fee basis.
+Users pay for the cost of producing special tabulations that meet the Census Bureau's requirements for protecting confidentiality.
+13
+The Census Bureau has long provided education and training in the use of its data.
+General training is conducted by the Census Bureau's Marketing Services and Customer Liaison Offices, as well as regional office Partnership and Data Services staff.
+Additionally, State Data Centers and Census Information Centers have leading roles in this educational effort.
+The training takes place at Census Bureau headquarters, in Suitland, Maryland; at conferences, workshops, and similar events in which the Census Bureau participates throughout the nation; in Regional Census Offices; in Congressional offices; on American Indian Reservations; and on site at a variety of organizations and agencies in the public and private sector.
+In addition to general training in the use of its data products, the Census Bureau provides training on specific topics, such as the Economic Census and use of the TIGER/LineÂ® files, through offices of the divisions responsible for the design and operations of these programs.
+13
+OMB Circular A-130.
+39
+The Census Bureau has produced a variety of informational media, including pamphlets, fact sheets, and brochures, to explain and educate the public about its data.
+In addition, the Census Bureau uses electronic media, such as CDROMs, and on-line teaching resources available on its web site.
+Because of the many new ways the ACS statistics can be used, and because of the methodological differences from the decennial long form, the Census Bureau recognizes its need to develop a specialized program to work with data users, particularly federal data users, to help them use the ACS data to its fullest potential.
+Public Use Microdata Sample Files The Census Bureau produces Public Use Microdata Sample (PUMS) files displaying population and housing characteristics from the decennial census long form.
+The PUMS data files meet the Census Bureau's requirements to protect respondent confidentiality.
+PUMS files have provided data users with the flexibility to prepare customized tabulations for detailed research and analysis.
+PUMS data from Census 2000 was produced for PUMAs, Public Use Microdata Areas, areas of 100,000 or more people.
+Representatives of the Governor for each state (usually the State Data Center) defined the PUMAs in consultation with the Census Bureau.
+Forty eight states, the District of Columbia, and Puerto Rico participated in the PUMA delineation program.
+Respondent confidentiality has always been a concern with PUMS files, and the PUMS data undergo a rigorous disclosure avoidance process prior to public release to ensure that individual household information cannot be ascertained.
+The files are extensively edited for disclosure avoidance, and only geographic areas of 100,000 or more people are identified on the file.
+The Census Bureau plans to produce yearly ACS PUMS files.
+Genealogical Research Since the 1950s, the Census Bureau's practice has been to hold decennial census data for 72 years after the date it was collected.
+This practice was instituted to protect the privacy of individuals who responded to the census, while allowing researchers, especially genealogists, to investigate their family histories.
+The ACS has determined that it, as the successor to the decennial census long form, will similarly hold its data for 72 years prior to releasing it to the public.
+40
+Project : Federal Agency Information Program The ACS was developed in consultation with federal agency data users and in response to their need for more current information.
+Nonetheless, the switch from long form data to ACS data raises some programmatic issues for many agencies.
+Accordingly, the Census Bureau is planning to launch a new program to comprehensively address the needs of federal agencies as they make the transition to using ACS data.
+The Census Bureau began a communication and outreach plan in the mid1990s with the goal of providing information on the continuous measurement concept and a basic understanding of how a continuous measurement program differed from a once-a-decade long-form data collection effort.
+The federal agency component of the plan had as its goal informing federal agency program managers and subject matter and technical experts about the differences in continuous measurement and decennial census long-form data collection in terms of the sample design, survey methods, operations, and data products.
+In all cases, federal agencies were encouraged to discuss with Census Bureau staff how their programs would be affected as a result of continuous measurement, and to communicate their concerns or questions.
+Federal agencies responded to information about the ACS in a variety of ways.
+Some demonstrated an early readiness to consider the detailed methodological and design aspects of the continuous measurement plan, and its implications for their agency.
+The Department of Housing and Urban Development produced a comprehensive report that provides a detailed analysis of the opportunities, resource effects, and research needs of the ACS on HUD programs.14 During the spring of 2003, the Census Bureau will initiate plans for the ACS Federal Agency Information Program by inviting cabinet departments to identify representatives of their agencies to participate in the program.
+In addition, the Census Bureau will announce the program at a meeting of the OMB Interagency Committee for the American Community Survey, and invite federal agencies to participate in a kick-off conference for the program.
+ORC Macro, "The American Community Survey: Challenges and Opportunities for HUD."
+Prepared under contract for the Department of Housing and Urban Development, September 2002.
+14
+41
+The objectives of the program are to: Â· Â· Identify the transition issues that affect the use of ACS estimates; Provide technical assistance, including statistics, information, or other resources as necessary and as funding is available, to assist federal agencies in using the ACS statistics appropriately; and, Assist federal agencies in identifying how they might use ACS data to their fullest potential.
+Â·
+Transition issues that will be addressed by the program include: Â· Â· Â· Â· Â· Â· Allocation Formulas; Program Eligibility Considerations; Program Parameters, Design, and Operations; Monitoring, Oversight, and Enforcement; Emerging Policy Needs and Assessments; and Research, Planning, and Evaluation.
+The Census Bureau will produce a series of reports to describe progress on the ACS Federal Agency Information Program.
+Copies of the reports will be provided to federal agencies, Members of Congress, the OMB, the GAO, and other interested agencies and groups, as appropriate.
+The Census Bureau welcomes the opportunity to meet with federal agencies in the future, and to develop new ways to work with such agencies in an educational partnership on the ACS.
+Suggestions for alternative ways to accomplish the transition process, aside from those presented in this report, are welcome.
+Project : Data Products Report As the preeminent collector of data, through the decennial census, the economic census, and the demographic and household surveys its conducts, the Census Bureau has had a leading in role in providing statistics to federal, state, local, and tribal government planners, policy makers, and program managers.
+Census data are used to identify national, state, and local needs, to track demographic, housing, and economic trends, and to determine what population groups and geographic areas will receive funding.
+The statistics the Census Bureau produces are used to develop official measures of key 42
+indicators of the nation's well-being.
+Additionally, these data are used in algorithms or formulae that are the basis for funding or evaluating the effectiveness of programs that have goals ranging from fostering economic development to preserving the nation's natural resources.
+The majority of the Census Bureau's statistical and geographic products and services are made available to the general public through the American Factfinder, the Census Bureau's electronic data dissemination vehicle, printed reports, or on the Census Bureau's web site.
+They are designed to inform a general public having minimal levels of understanding and background in census programs.
+The data tabulations, map products, geographic files, and other resources that the Census Bureau provides are designed to meet general research and information needs that a local journalist, community librarian, university academician, or urban planner might have for information on some social, economic, or demographic characteristic or cartographic boundaries for some geographic area at particular point in time.
+In recognition of the fact that the ACS program is new and presents unique challenges, the Census Bureau is preparing a report on plans for data and information products for the first year of full implementation.
+This report will describe important improvements data users can expect from a fully implemented ACS.
+It should help answer questions that federal agencies and other data users have asked the Census Bureau about what products will be available from the American Community Survey.
+Project : Product Redesign The Census Bureau has formed an interdivisional team to analyze existing ACS data products and develop recommendations for how to improve them.
+The team will address issues that are common to all data products, such as confidentiality and release patterns.
+Additionally, the team will form workgroups to analyze current products or processes, and come up with recommendations for development, ultimately coming up with concrete plans and schedules for the upcoming year.
+The Census Bureau will solicit input from the data user community as it considers how to re-engineer its data products.
+Some possible ways this might occur are through a Federal Register notice, or a web-based survey launched from the ACS web page.
+43
+The team will examine base tables, derived products, and automated thematic reports.
+Base Tables.
+The basic characteristics, or base tables are the foundation upon which derived products are built.
+For the 1999 through 2002 collection years, the base tables were designed to be comparable with Census 2000 tables.
+This similarity permits comparison of the ACS statistics and the Census 2000 long form statistics.
+While the Census Bureau will continue to maintain some level of comparability with long form data products, in the post 2002 years the need for exact match tables becomes less important.
+The more current nature of the ACS data allows the Census Bureau to design new data products that ensure that data users are given the broadest range of useful data.
+Accordingly, the existing package of base tables will be reviewed by subjectmatter analysts, and data users will be consulted, to answer questions such as the following: Â· How to best maintain a balance between a sufficiently rich body of information and the ability to produce and maintain this information on an annual basis.
+Does the 2001 package of base tables constitute good content? Is anything critical missing? Is there an adequate balance of tables across subject areas? Can tables be consolidated? What collapsing and filtering rules should be applied?
+Â· Â· Â· Â·
+Derived Products.
+Derived Products are high-level tables and reports built from the base tables.
+Derived products are broadly useful to a wide variety of data users.
+They fall into three categories: tabular profiles, narrative profiles, and ranking tables and charts.
+These derived products are generally used to present the data in a form more useful to the public than the tables themselves.
+The goal is to determine the best set of derived products for the ACS.
+Derived products will be analyzed to answer questions such as the following: Â· How will the products be released, on what schedule?
+44
+Â· Â· Â·
+Should the tabular and narrative profiles be combined into a single product? How do we handle change in the products? Should we develop other products?
+Automated Thematic Reports.
+The Census Bureau does not now produce Automated Thematic Reports, that is, standard reports automatically generated on pre-established themes and formats.
+An example of an automated thematic report would be a yearly report on educational attainment by state.
+The ACS presents an ideal opportunity to explore the feasibility of automated thematic reports, because ACS data are produced each year.
+The goal is to set a format for thematic reports that can eventually be produced in an automated fashion.
+The thematic reports will focus on topics of wide interest for researchers and policymakers.
+Automating the tables will enable users to produce reports for subgeographic areas, derived from the national-level report.
+The goal is to expand ACS output at a pace and level that current resources can support.
+Two Automated Thematic Reports are currently under development: "Conditions of Children," and "Skills and Abilities of the Population."
+The team will consider issues such as: Â· Â· Â· Â· What should a thematic report look like? How many reports will there be and what topics should be coverred? How frequently should the reports appear? How will automation function, from a user perspective?
+Project : Analytic Products The Census Bureau has a long tradition of publishing comprehensive analytic reports on topics as diverse as experimental poverty measures, child support for custodial mothers and fathers, health insurance, maternity leave and employment patterns, and computer use.
+Because the ACS is still in the development phase, the Census Bureau has not yet published any reports 45
+specifically derived from ACS data.
+Once the ACS program moves to full implementation, however, the Census Bureau will examine the ACS data to develop a list of topics and a schedule for future analytic reports.
+46
+Evaluation and Improvement An integral part of any census or survey is a robust research and evaluation program.
+Census 2000, for example, was supported by an evaluation program that includes over 90 evaluations of nearly every program component.
+The primary purpose for any evaluation program is to understand what worked well and what did not so that this information can be incorporated into planning for the future.
+An evaluation program is essential for the ACS because it is an ongoing survey.
+As results become available, modifications can be made to the survey in response to the evaluations.
+The Census Bureau can continually improve the ACS design by modifying it in response to the evaluation and improvement program.
+Significant research and evaluation of the ACS has already taken place.
+Attached is a bibliography of research materials relating to the ACS.
+To ensure the ongoing monitoring of performance and incorporation of improvements, the Census Bureau has identified two transition projects relating to evaluation and improvement.
+Project : Monitoring Operational Performance Measures The Census Bureau plans to develop a regular system to define and document ACS operational performance data, such as mail, telephone and personal visit follow-up response rates; edit follow-up completion rates; and the like.
+The plan is to develop a regular system to produce these measures and report them on the ACS website.
+Detailed analysis of these operational data will allow survey designers to better understand where the survey may not be working as effectively as it could.
+These analyses may help pinpoint geographic areas and population groups for which we need to refine or develop new methods.
+Ongoing operational analysis also provides important information on workloads, progress, schedules, and costs.
+This project includes ongoing analysis and review of results as well as documentation of findings.
+A prototype system for monitoring operational performance measures should be in place by summer 2003.
+Project : Evaluation Studies
+47
+The Census Bureau has developed a research and evaluation program to answer key questions about the ACS.
+Work conducted to date, as well as ongoing research and research plans, are currently organized under four topics: Â· Â· Â· Â· Feasibility and cost Survey quality and performance measures Data products and data user issues, and Survey design and methodology (including research on small area estimates of population, housing, and characteristics)
+Two reports have been produced thus far, and five more should be published in 2003.
+The two published reports are: "Demonstrating Operational Feasibility," July, 2001.
+This report focused on the feasibility of expanding the ACS from 31 sites to a national sample (C2SS) with projections for expansion to a fully-implemented survey, concluding that it was entirely feasible.
+"Demonstrating Survey Quality," May 2002.
+This report evaluated overall survey quality, focusing on timeliness and accuracy.
+It discussed sampling and nonsampling error (nonresponse, coverage, and measurement) and the implications of these errors on the reliability of the ACS estimates.
+The report referenced research on survey response rates, item imputation rates, completeness ratios (a measure of coverage and nonresponse error), and sampling error and concluded that the ACS will have the quality to replace the long form.
+Additional reports are planned to evaluate the ACS data and compare it with the long form data produced by Census 2000.
+Five specific reports are planned for 2003 release.
+A series of four reports comparing the C2SS singleyear statistics with the decennial census long form sample statistics will be prepared, dealing with basic demographic characteristics, social characteristics, economic characteristics, and housing characteristics.
+Additionally, a report will be prepared comparing 3-year (1999-2001) ACS statistics from the 31 test sites to the decennial census long form statistics.
+A followup operational feasibility report will also be prepared to ensure that operational performance has not declined, and that problems identified in the 48
+first report have been addressed.
+Additionally, after single-year averages have been produced for the 31 sites, a comparison report will document the results.
+49
+Major Tests and New Initiatives When full funding is provided, ACS managers and designers are ready to move the survey to full implementation.
+During the demonstration phase, the survey has generally not included either the Group Quarters population or Puerto Rico.
+Additionally, the survey has thus far implemented only a basic program for people who speak a language other than English, and no formal partnership program.
+Finally, the survey has not been supported by a formal cost model to help ensure accurate budget formulation and execution.
+These initiatives are recognized as crucial components of the ACS and are planned as part of the full production program.
+One additional new initiative, testing voluntary methods, arose as a request from Members of Congress.15 Project : Testing Voluntary Methods The ACS is designed to replace the mandatory decennial census long form.
+For this reason, since its inception, it has been conducted as a mandatory survey.16 Members of Congress have requested that a test be conducted as soon as possible to assess the effects of a voluntary ACS on mail response rates and associated follow-up costs.
+The Census Bureau agreed and designed a test to provide this information and to assess the impact of a voluntary survey on data quality.
+Beginning March 1, 2003, the Census Bureau will conduct the Supplementary Survey (including the 31 sites as a voluntary survey.
+Voluntary materials and methods will be used for all phases of data collection, including telephone assistance, telephone edit followup, and telephone and personal visit nonresponse followup.
+The overall objective of the test is to identify the effect of changing the survey from a mandatory one to a voluntary one on response rates, quality, and cost.
+A small control panel will receive materials by mail that retain the mandatory wording.
+September 18, 2002 letter from House Committee on Government Reform Subcommittee Chairman Weldon and Vice Chairman Miller to Subcommittee Chairman Wolf, House Commerce, State, and Justice Appropriations.
+15
+GAO letter report B-289862, , April 4, 2002, "Legal Authority for American Community Survey."
+16
+50
+The Voluntary Test was designed to obtain information on the following questions: Â· Â· What are the effects of voluntary materials on mail response? Are there differential effects on mail response rates in areas with traditionally low mail response rates or by socioeconomic or demographic characteristics, including race and ethnicity? Does the change to voluntary collection have an effect on telephone and personal visit followup response rates? Did the overall survey response rates drop (relative to previous years) when the survey was voluntary? What effect did the change to voluntary collection have on data completeness? Did the change to voluntary collection have a differential effect (by race and ethnicity) on item completeness? What are the changes in followup workload and projected costs for a voluntary ACS and how do they compare to the projections for a mandatory ACS?
+Â· Â· Â·
+Â·
+The sample for the months of March and April, 2003 will be the initial focus of this test.
+Primary comparisons of mail, telephone, personal visit, and overall survey response rates will be made to the 2001 and 2002 ACS Supplementary Survey results for the same months.
+Interview distributions will be produced to assess the proportion of interviews collected by mail, telephone, and personal visit.
+These distributions will be produced by race, ethnicity, and other demographic characteristics.
+Item nonresponse rates will allow us to assess if less complete data are being obtained.
+Results will be compared with previous years.
+Workload and cost projections will also be compared with existing projections which are based on 2001 and 2002 experiences.
+Alternative mail treatments will be evaluated, including a small sample of mandatory treatments, to serve as a control and allow us to produce additional comparisons of the effects of different mandatory and voluntary materials on mail response rates.
+This test will include four mail treatments.
+Two treatments use mandatory materials - one with the letters and other materials that have been used in the past several years, and the other with letters and materials that were recently 51
+designed to be more user-friendly and to improve mail response.
+Both of these treatments use envelopes with a mandatory message on the front ("Your Response is Required by Law").
+Two voluntary treatments are also included both are based on the redesigned letters and materials.
+One includes the standard approach used by the Census Bureau to inform respondents that a survey is voluntary.
+The other is a more direct approach.
+Both voluntary treatments will use a new envelope that replaces the mandatory message with an appeals message.
+Preliminary results will be provided to Congress in August 2003.
+Project : Taking the Survey in Puerto Rico The Census Bureau recognizes the importance of collecting accurate and current information for Puerto Rico.
+The ACS was designed to replace the decennial census long form, which collects data in Puerto Rico as well as the 50 states and the District of Columbia.
+Puerto Rico has compelling data needs and will benefit from ACS data.
+Severe budget constraints have limited testing of the ACS in Puerto Rico.
+Under the current plan, data collection via mail will begin in Puerto Rico, along with the rest of the country, in July, 2004.
+Puerto Rico presents some data collection challenges, in part because of the unique address format used in Puerto Rico and the large number of noncitystyle addresses.
+Additionally, the Census Bureau has limited experience using mailout procedures in Puerto Rico.
+The ACS development program has conducted some testing in Puerto Rico Â­ specifically a test in 2001 to assess the feasibility of using the mail as a means of data collection in Puerto Rico.
+The results of this test indicate additional challenges and the potential for added cost stemming from lower-than-average mail response rates.
+The Census Bureau has entered into a contract to update and improve the address information in the MAF for Puerto Rico.
+Project : Taking the Survey in Group Quarters The ACS was designed to replace the decennial census long form, which collects data from both housing units and the group quarters (GQ) population.
+People not living in housing units are classified by the Census Bureau as living in group quarters, places such places as nursing homes, prisons, college dormitories, military barracks, juvenile institutions, and emergency and transitional shelters for people experiencing homelessness.
+Group Quarters constitute roughly 2.8 percent of the population, an increase of almost 1.1 52
+million people since 1990.
+Data collection at Group Quarters presents several challenges, including an address list that has traditionally been updated only once a decade, unique populations, the use of administrative records, and the need for revised questionnaires.
+ACS staff will coordinate its GQ development activities with the decennial staff to ensure consistency of definitions and procedures.
+The ACS staff collected GQ data at the 36 sites in 1999 and 2001; no data were collected in 2000 to avoid confusion with the decennial census, and no data were collected in 2002 - 2003 for budgetary reasons.
+The 1999 and 2001 data collection efforts in the test sites revealed that the ACS could successfully collect GQ data of equal or superior quality to the decennial long form and other current surveys.
+Additionally, these tests allowed the Census Bureau to evaluate its cost structure and procedures for GQ data collection, which should facilitate expansion to full production levels.
+The ACS will use the Census 2000 Special Places file for the GQ sampling frame.
+This frame has not been updated since the census.
+Prior to sampling, GQ will be stratified by size into two sampling strata, those with a Census 2000 count of 15 or fewer people and those with more than 15.
+As with the non-GQ population, the sampling operation will be controlled at the county level.
+Training of field representatives on collecting data from the GQ population will begin in October 2004, so that full GQ production can commence in January 2005.
+Project : Implementing a Language Program The decennial census long form has a language program that includes a mail request for a questionnaire in one of five languages other than English, and a promotion and outreach program in languages other than English.
+The Census Bureau would also like to develop an ACS language program.
+Funding differences between the decennial census and the ACS, as well as the ACS's well-trained professional interviewers, mean that the ACS language program cannot and need not match the scope of the decennial census program.
+A Census Bureau working group will begin to develop a language program in Fiscal Year 2003, and testing will be planned for Fiscal Year 2005.
+The ACS has already conducted some research to understand how current ACS methods work with non-English speakers.
+Key methods are in place and a Spanish version of the CATI/CAPI instrument has been available since 1997.
+Additionally, the Census Bureau relies on bilingual field representatives.
+53
+Details of the ACS language program have not yet been determined, but if adequate funding is available, the program will likely include: Â· Determining how the ACS currently collects interviews from linguistically isolated households and households speaking languages other than English.
+Assessing the quality of ACS data for linguistically isolated households, and comparing the quality of the ACS data from these households with the data collected in Census 2000.
+Improving existing methods, including: translations, instruments, training, and assistance programs.
+Developing and testing a telephone response option in Spanish with the potential to expand to additional languages.
+Developing and testing a mail response option in Spanish.
+Â·
+Â· Â· Â·
+The Census Bureau is currently examining different approaches for efficiently phasing in the highest priority activities and will work with its advisory committees on these issues.
+Project : Implementing a Partnership Program Census 2000 was successful in part due to its comprehensive and original partnership program which involved state, local, and tribal governments, as well as community groups, in promoting Census 2000.
+Similarly, ACS planners recognize that they cannot accomplish ACS goals alone.
+The Census Bureau is currently examining options for a partnership program when funding permits.
+Possibilities include: Â· Partnerships with state and local governments.
+Governments know their local conditions and circumstances better than the Census Bureau.
+They can help correct our maps and address list.
+They can alert field representatives of problems and advise of opportunities to publicize the ACS.
+Partnerships with American Indian and Alaska Native Areas.
+American Indian and Alaska Native areas will be an important part of a fully implemented ACS.
+The Census Bureau hopes to seek input from tribal 54
+Â·
+officials, and representatives of national and regional organizations that reflect their interests, to develop an outreach program and procedures and operations that are appropriate for ACS data collection.
+As the ACS will collect data used in a wide range of programs affecting American Indians and Alaska Natives, it is important to ensure that ACS operations produce high response rates for these populations.
+Â· Partnerships with community groups.
+Community groups know their constituents better than the Census Bureau.
+These groups can provide an early alert about the best ways to communicate with their constituents to ensure they are included.
+55
+Â·
+Partnerships with our advisory groups and expert panels.
+Advisory groups and expert panels can help the Census Bureau strive for continual improvement as the ACS matures.
+They can help keep ACS planners attuned to changing needs and data collection methods.
+Partnerships with the Congress and our oversight entities.
+The Congress and oversight entities can help the Census Bureau ensure that it is being responsive to the public, to our federal data program managers and data users, and to our oversight groups.
+Â·
+The details of the partnership program, however, have not yet been worked out and are highly dependent on funding levels.
+The Census Bureau has not had a census-like partnership program for any of its other household surveys and a ACS partnership program would not be similar in scope to the partnership effort in the decennial census.
+In future years, the Census Bureau will continue to assess its ACS partnership needs and design a program for full implementation that is consistent with needs and funding levels.
+56
+Conclusion The American Community Survey is intended as a new approach to collecting reliable, timely information needed for critical government functions.
+The ACS is designed to replace the decennial census long form and will collect the detailed demographic, socioeconomic, and housing statistics traditionally collected on the long form.
+Full implementation of the ACS should facilitate improvement of the 2010 Census by allowing the decennial census to focus on counting the population.
+Appendices 1.
+2.
+Glossary of ACS Abbreviations and Acronyms ACS Bibliography
+57
+Glossary of ACS Abbreviations and Acronyms ACF (Address Control File) The residential address list used to label questionnaires, control mail response check-in, and determine the nonresponse followup workload.
+(American Community Survey) The survey designed to replace the decennial census long form.
+(American FactFinder) A generalized electronic system for access and dissemination of Census Bureau data.
+The system is available through the Internet and offers prepackaged data products and the ability to build custom products.
+The system serves as the vehicle for accessing and disseminating data from Census 2000 and the ACS.
+The AFF was formerly known as the Data Access and Dissemination System (DADS).
+(Automated Listing and Mapping Instrument) Software on the laptop computers used by Field Representatives.
+ALMI is used to conduct address listing assignments.
+It helps locate cases, provides access to electronic maps and allows browsing of a static version of the MAF.
+(Automated Review Tool) ART is a web-based computer application designed to help subject matter analysts compare ACS results with results from prior years to look for statistical trends.
+ART is currently under development.
+(Census 2000 Supplementary Survey) The C2SS was conducted as part of Census 2000 in 1,239 counties (including the test sites) using the ACS survey design, methods, and questionnaire.
+The C2SS's primary purpose was to demonstrate the operational feasibility of collecting long form data at the same time as, but separate from, a decennial census operation.
+(Computer Assisted Personal Interviewing) A method of data collection using a laptop computer in which the questions to be asked are displayed on the computer screen and responses are entered directly into the computer.
+ACS AFF
+ALMI
+ART
+C2SS
+CAPI
+Appendix 1
+1
+CATI
+(Computer Assisted Telephone Interviewing) A method of data collection using telephone interviews in which the questions to be asked are displayed on a computer screen and responses are entered directly into the computer.
+(Community Address Updating System) A program designed to address MAF quality concerns relating to areas with high concentrations of non city-style addresses, and to provide a rural counterpart to the update of city-style addresses the MAF will receive from the DSF throughout the decade.
+In the course of their regular visits, Field Representatives will verify and locate new addresses and will target areas where growth is not shown in MAF/TIGER.
+The Field Representatives will list addresses, and update streets and street names using a laptop computer and the ALMI software.
+(Coefficient of Variation) A measure of relative sampling error.
+The ratio of the standard error (square root of the variance) to the value being estimated, usually expressed in terms of a percentage.
+Generally, the lower the CV, the higher the reliability of the estimate relative to its size.
+(Delivery Sequence File) A computerized file containing all delivery point addresses serviced by the U.S. Postal Service.
+The U.S. Postal Service updates the DSF continuously as its letter carriers identify addresses for new delivery points or changes in the status of existing addresses.
+(Group Quarters) A place where people live that is not a housing unit.
+The Census Bureau classifies all people not living in housing units as living in group quarters.
+There are two types of group quarters: institutional (for example, correctional facilities, nursing homes, and mental hospitals) and noninstitutional (for example, college dormitories, ships, hotels, motels, group homes, and shelters).
+(Master Address File) A computer file of addresses.
+The MAF was originally created prior to Census 2000 as the Census Bureau's first permanently-maintained housing unit address list.
+(Minor Civil Division) A primary government and/or administrative subdivision of a county, such as a township, precinct, or magisterial district.
+CAUS
+CV
+DSF
+GQ
+MAF
+MCD
+Appendix 1
+2
+NPC NRFU
+(National Processing Center) The Census Bureau's permanent data processing facility in Jeffersonville, Indiana.
+(Nonresponse Followup) The operation in which field representatives visit or telephone addresses from which no questionnaire was returned by mail.
+(Public Use Microdata Area) Areas of 100,000 or more people that were defined for Census 2000 for the Public Use Microdata Files (PUMS).
+Representatives of the Governor for each state (usually the State Data Center) defined the PUMAs in consultation with the Census Bureau.
+(Public Use Microdata Sample) Computerized files containing a small sample of individual long form census records showing the population and housing characteristics of the people included on those forms.
+PUMS files undergo a rigorous disclosure avoidance process prior to public release to ensure that individual household information cannot be ascertained.
+(2001 and 2002 Supplementary Surveys) Nationwide tests of ACS methods begun in 2000 with the C2SS and continuing in 2001 and 2002.
+Although the Supplementary Surveys used ACS methods, the sample design did not reflect the ACS sample design for full implementation because the Supplementary Surveys were designed to provide characteristic data for states and large entities of 250,000 or more, not to provide information on small areas.
+(Topologically Integrated Geographic Encoding and Referencing) A computer database that contains a digital representation of all census-required map features (streets, roads, rivers, railroads, lakes, and so forth), the related attributes for each, and the geographic identification codes for all entities used by the Census Bureau to tabulate data for the United States, Puerto Rico, and Island areas.
+The TIGERÂ® database records the interrelationships among these features, attributes, and geographic codes and provides for a resource for the production of maps, entity headers for tabulations, and automated assignment of addresses to a geographic location in a process known as "geocoding."
+PUMA
+PUMS
+SS01 SS02
+TIGER
+Appendix 1
+3
+TQA
+(Telephone Questionnaire Assistance) The operation in which trained interviewers answer general questions about the ACS, including questions about content.
+If the respondent indicates a desire to answer by telephone, the interviewer conducts the interview.
+TQA is conducted out of the NPC. (Undeliverable As Addressed) Any questionnaire that is returned to the Census Bureau without being opened is considered UAA. UAAs are annotated with the date received, and placed in a labeled tray for subsequent check-in and appropriate followup.
+UAA
+Appendix 1
+4
+ACS Bibliography Albright, K., "Effect of Housing Unit Controls on Survey Estimates".
+Presented at the Joint Statistical Meetings, August 2002.
+Alexander, C. H. "A Discussion of the Quality of Estimates From the American Community Survey For Small Population Groups".
+Draft presented at the Census Advisory Committee Meetings, September 2002.
+Alexander, C.H.
+"Still Rolling: Leslie Kish's `Rolling Samples' and the American Community Survey."
+Invited paper session at Statistics Canada's Symposium 2001.
+To appear in proceedings and be submitted to Survey Methodology.
+Alexander, C.H. "Integrating the American Community Survey and the Intercensal Demographic Estimates Program".
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 295-300 (2000).
+Alexander, C.H.
+"A Rolling Sample Survey for Yearly and Decennial Uses."
+Presented at a contributed session on combining populations, organized by Leslie Kish at the meetings of the International Statistical Institute, in Helsinki, Finland (1999).
+Alexander, C.H.
+"Recent Developments in the American Community Survey".
+Invited Session in Proceedings of the American Statistical Association Survey Research Methods Section, pp. 92-100 (1998).
+Alexander, C.H.
+"The American Community Survey: Design Issues and Initial Test Results."
+Invited paper presented at Statistics Canada Symposium 1997.
+Proceedings of Symposium, `97: New Directions in Surveys and Censuses", pp. 187-192 (1997) Alexander, C.H. "Impact of Multi-year Averaging of Data from the American Community Survey."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 644-649 (1996).
+Alexander, C.H. "Continuous Measurement and the Statistical System."
+Presented at the 1995 Annual Labor Market Conference in Nashville, Tennessee (1995).
+Appendix 2
+1
+Alexander, D.H. and Wetrogan, S.I. "Small Area Estimation with Continuous Measurement.
+What We Have and What We Want."
+Proceedings of the 1994 Census Bureau Annual Research Conference, pp. 359-380 (1994).
+Alexander, C.H. "Prototype Continuous Measurement System for the U.S. Census of Population and Housing."
+Presented at the 1994 Annual Meetings of the Population Association of America in Miami, Florida (1994).
+Alexander, C.H.
+"A Continuous Measurement Alternative for the U.S. Census."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 486-491 (1993).
+Bennett, C. and D. Griffin.
+"Race and Hispanic Origin Data: A Comparison of Results from the Census 2000 Supplementary Survey and Census 2000".
+Presented at the Joint Statistical Meetings, August 2002.
+Chand, N. and Alexander, C.H. "Multi-year Averages from a Rolling Sample Survey."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 301-306 (2000).
+Chand, N. and Alexander, C.H. "Small Area Estimation with Administrative Records and Continuous Measurement."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 870-875 (1996).
+Chand, N. and Alexander, C.H. "Indirect Estimation of Rates and Proportions for Small Areas with Continuous Measurement."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 549-554 (1995).
+Griffin, D. "Measuring Survey Nonresponse by Race and Ethnicity.".
+Presented at the American Association for Public Opinion Research Conference, May 2002 and at the Joint Statistical Meetings, August 2002.
+Griffin, D. and D. Raglin, "How are Linguistically Isolated Households Interviewed in the American Community Survey?" Presented at the Race and Ethnic Advisory Committee Meetings, April 2002.
+Leslie, T., D. Raglin, and L. Schwede.
+"Understanding the Effects of Interviewer Behavior on the Collection of Race Data."
+Presented at the American Association for Public Opinion Research Conference, May 2002.
+Leslie, T, Starsinic, M., and Tersine, A., "Evaluating the Feasibility of Conducting Mailout and Mailback Operations in Puerto Rico in 2003."
+April 2002.
+Appendix 2
+2
+Love, S., Dalzell, D. and Alexander, C.H. "Constructing a Major Study: Operational Plans and Issues for Continuous Measurement."
+Proceedings of the American Statistical Association Survey Research Methods Section, pp. 584-589 (1995).
+Malec, D., "Unit Level Models for Small Area Estimation: Application to Census Adjustment of Small Areas and Small Area Estimation for the ACS."
+Presented at the 2001 Fall Meetings of the Professional Associations Advisory Committee.
+ORC Macro, "The American Community Survey: Challenges and Opportunities for HUD."
+Prepared under contract for the Department of Housing and Urban Development, September 2002.
+Raglin, D. and T. Leslie.
+"How Consistent is Race Reporting Between the Census and the Census 2000 Supplementary Survey?" Presented at the Joint Statistical Meetings, August 2002.
+Salvo, J. and Lobo, A., "The American Community Survey: Quality of Responses by Mode of Data Collection in the Bronx Test Site."
+Presented at the Joint Statistical Meetings, August 2002.
+Schwede, L., Leslie, T., and Griffin, D., "Interviewer's Reported Behaviors in Collecting Race and Hispanic Origin Data."
+Presented at the Joint Statistical Meetings, August 2002.
+Starsinic, M., and Albright, K., "Coverage and Completeness in the Census 2000 Supplementary Survey."
+Presented at the Joint Statistical Meetings, August 2002.
+Tersine, A., and Asiala, M., "Alternative Oversampling Options For Low Mail Response Areas In The American Community Survey."
+Presented at the Joint Statistical Meetings, August 2002.
+U. S. Bureau of the Census, "Meeting 21st Century Demographic Data Needs Implementing the American Community Survey: Demonstrating Operational Feasibility."
+July 2001.
+U. S. Bureau of the Census.
+"Meeting 21st Century Demographic Data Needs Implementing the American Community Survey: Demonstrating Survey Quality."
+May 2002.
+Appendix 2
+3

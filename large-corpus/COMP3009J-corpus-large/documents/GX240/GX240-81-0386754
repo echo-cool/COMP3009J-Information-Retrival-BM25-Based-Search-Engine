@@ -1,0 +1,498 @@
+USA Mathematical Talent Search PROBLEMS / SOLUTIONS / COMMENTS Round 1 - Year 12 - Academic Year 2000-2001 Gene A. Berg, Editor 1/1/12.
+Determine the smallest five-digit positive integer N such that 2N is also a five-digit integer and all ten digits from 0 to 9 are found in N and 2N.
+Solution 1 by Alex Lang (8/WI): First step: Assign variables to the digits.
+N is assigned the variables ABCDE and 2N is assigned the variables FGHIJ.
+Second step: Solve for N and 2N.
+A cannot equal 0 since N would then be considered a 4 digit number and to satisfy the conditions N needs to be a 5 digit number.
+The next smallest number that A could equal is 1.
+Therefore, A will be assumed equal to 1 until all possible solutions with A = 1 have been proved false.
+F = 2 since 2A =2(1)=2.
+B will be assumed equal to 3 since that is the smallest number not already used.
+C will be assumed equal to 4.
+Then G = 6 since 2B = 2(3) = 6.
+D will be assumed to equal 5.
+H = 9 since 2C + carry over from 2D = 2(4)+1=9.
+But, if E = 8, 2(D) + carry over = 2(5) + 1 = 11, so I = 1.
+That is a contradiction because A also equals 1 and each number is supposed to be used once.
+Also, if E =0,2E would also equal 0, and another contradiction would occur.
+Therefore, D 5 .
+D will then be assumed equal to 7.
+That is because G already equals 6, therefore 7 is the next smallest number.
+Then H = 9 since 2C + carryover = 2(4) + 1 = 9.
+Then E would have to equal 8 because if E = 0 then 2E would also equal 0 and a contradiction would arise.
+But, if E = 8 then 2E = 2(8) = 16 and therefore J = 6, another contradiction occurs since G already equals 6.
+Therefore, D 7 .
+D will then be assumed to equal 8.
+Then H = 9 since 2C + carry over = 2(4) + 1 = 9.
+E will then be assumed to equal 5.
+Then 2E = 2(5) = 10, but J would only equal the last digit which is 0, I would then equal 2D + carry over = 2(8) + 1 = 17, so I = 7.
+That solution satisfies the specified conditions.
+Therefore, N = 13,485 and 2N = 26,970.
+Solution 2 by Valerie Lee (10/NY): N is comprised of digits ABCDE, while 2N is FGHIJ.
+1.
+Let A = 1.
+2.
+If A is 1, then B 2 because F would equal 2, and B 2 because if C 
+Let B = 3.
+C 0-3, so let C = 4.
+3.
+Thus far we have 134 DE Â· 2 = 26 [ 8, 9 ] IJ .
+4.
+a) D 0-4, so let D = 5, so we would have 1345 E Â· 2 = 269 [ 0, 1 ] J and there would be no way to conclude J = 7 or 8, so D 5 . b) Let D = 6, so 1346 E Â· 2 = 269 [ 2, 3 ]
+c) Let D d) Let let Answer: N
+D = 7, so 1347 E Â· 2 = 269 [ 4, 5 ] J , but there is no answer for E so that J =0or8,so 7.
+D =8,so 1348 E Â· 2 = 269 [ 6, 7 ] J .
+Now E = 0 or 5.
+E = 0 gives contradiction.
+So E = 5.
+1348 5 Â· 2 = 269 70 .
+This uses all ten digits.
+= 13485.
+Solution 3 by Paul Wrayno (11/NC): Let N = ABCDE, 2N = FGHIJ.
+To be smallest, ideally A =1,and F =2, B =3, G = 6, if it is possible to create N and 2N with these values, because they are the absolute least values for the first two digits.
+The lowest remaining digit is 4, so ideally C = 4, causing H = 9 because the remaining digits guarantee a carry from the 2 Â· D .
+This leaves 0, 5, 7, and 8.
+Since 0 can only be achieved by 2 Â· 5 without a carry, E = 5 and J = 0.
+8 Â· 2 + 1 = 17 , which fits the other four digits, so D = 8 and J = 7.
+This is the only (N, 2N) pair that has the ideal first three digits, so N = 13485 is the smallest.
+Answer: N = 13485.
+Editor's Comment: We are indebted to Dr. BÃ©la Bajnok of Gettysburg College for posing this problem and for his continuing assistance with USAMTS.
+Dr. Bajnok claims the next smallest solutions (after 13485) are 13548, 13845, and 14538.
+He notes they all use the same five digits.
+2 24
+2/1/12.
+It was recently shown that 2 its of this number.
++ 1 is not a prime number.
+Find the four rightmost dig-
+Solution 1 by Christopher Lyons (12/CA): This problem is equivalent to asking, "What is the + 1 is divided by 10,000?" Since we are only concerned with the remainremainder when 2 der, I chose to use the mathematical tool that is all about remainders: the congruence.
+My strategy in attacking this problem is to use the rules of congruences to build up from 2 2 2 1
+2
+24
+= 4 4 ( mod 10,000 ) to 2
+2
+24
+= 7536 ( mod 10,000 ) , and to add 1 to get
+2
+24
++ 1 = 7537 ( mod 10,000 ) .
+2 1
+We start by evaluating the congruence of 2 modulo 10,000.
+In fact, throughout the description of this problem, all congruences will be modulo 10,000.
+2 = 4 4 ( mod 10,000 ) Since we can multiply congruences just like equations, we will multiply this congruence by itself.
+But first we must show an identity that will be useful for the rest of the problem: 2 2 n 2 1
+2
+n
+Ã—2 2
+2
+n
+=2
+n n (2 + 2 )
+=2
+n 2(2 )
+=2
+2
+n
++1
+n
+Thus, when we multiply 2
+by 2
+, we get 2
+2
+n
++1
+.
+For example 2
+2
+6
+Ã—2
+2
+6
+=2
+2
+7
+.
+We can
+apply this identity repeatedly with congruences to get all the way from 2 out the first few steps: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+2
+1
+to 2
+2
+24
+.
+Let us write
+=2 2
+2
+1
+Ã—2
+2
+1
+= 4 Ã— 4 = 16
+= 16 3
+=2 3
+2
+2
+Ã—2
+2
+2
+= 16 Ã— 16 = 256
+= 256 4
+=2 4 5
+2
+3
+Ã—2
+2
+3
+= 256 Ã— 256 = 65536 5536 ( mod 10,000 )
+5536 =2 2 4
+Ã—2
+2
+4
+= 65536 Ã— 65536 = 30647296 7296
+5
+7296 2 6
+We continue this process, obtaining the congruences of 2 , 2 , ..., 2 .
+The following is a table of all these congruences.
+(I used an eight-digit hand held calculator to find these values, since this was the easiest way for me.)
+2 4 2 2 2 2 2 2 2 2 2 2 1
+2
+7
+2
+24
+2 2
+2
+9
+4096 7216 656 336 2896 6816 7856 6736
+2
+2
+17
+3696 416 3056 9136 6496 8016 6256 7536
+16 256
+2
+10
+2 2 2 2 2 2 2
+2
+18
+2
+3
+2 2 2 2 2 2
+2
+11
+2
+19
+2
+4
+5536 7296 1616 1456 9936
+2
+12
+2
+20
+2
+5
+2
+13
+2
+21
+2
+6
+2
+14
+2
+22
+2
+7
+2
+15
+2
+23
+2
+8
+2
+16
+2
+24
+Now that we have obtained this last congruence, we may add it to another congruence to produce
+the desired result: 2 2 24
++ 1 7536 + 1 7537 ( mod 10,000 ) .
+This final congruence is equivalent to writing 2 + 1 = 10000 Ã— K + 7537 where K is some positive integer (a large one, probably!).
+Looking at the right side of this equation, we see that the multiple of 10,000 will have (at least) four trailing zeros.
+When we add the multiple and its four trailing zeros to 7537, we get a number whose four rightmost digits are 7537.
+The four rightmost digits of 2 2 24
+2
+24
++ 1 are 7537.
+Solution 2 by Aleksandr Kivenson (10/NY): To begin, it is necessary to declare that to obtain the four rightmost digits of a product, only the four rightmost digits of the factors need to be multiplied (for example, to get the four rightmost digits of the product of 12,345 and 67,890, all you have to do is multiply 2,345 by 7,890 and take the four rightmost terms of the result).
+Since my approach to this problem is to use known large numbers and multiply their four rightmost digits to get the answer, I will use this method.
+Since when you multiply numbers which have the same base but different powers you add the powers (for example 2 Ã— 2 = 2 ), it would be easy to find numbers whose rightmost four digits I should multiply by looking for large numbers expressed as powers of 2, finding the ones whose powers add up to 2 , and then multiplying the rightmost 4 digits of these numbers to get the rightmost four digits of 2 2 24 24 2 3 2+3
+.
+Conveniently, such a list of known powers of two exists in the form of Mersenne prime numbers.
+These are a special type of prime numbers that are expressed as 2 Â­ 1 .
+Many such prime numbers are known and I used a web page http://www.isthe.com/chongo/tech/math/prime/mersenne.html to find numerical values for these primes.
+I chose the powers of 2 whose powers added up to the exponent 2 = 16777216 .
+I ignored the -1 because when I chose the powers I would use I obtained the last four digits of their numerical value, added one to each, and then multiplied them out to get the last four digits of 2 follows: 2 24 24 x
+.
+The powers which I used and their numerical value are as
+: Power of 2 2 2 2 12
+Last four digits of that power 4096 8128 8128 1472 8672 8448 8448 5712 1152 1152 1152 1152 1152 Last four digits of above values: 7,536
+607 607 19937 44497 216091 216091
+2 2
+2 2 2 2 2 2 2 2
+1398269 2976221 2976221 2976221 2976221 2976221
+Sums of powers: 16,777,216
+From multiplying the last four digits of the numerical value of each power, I obtained a number whose last four digits were 7,536.
+This means the last four digits of 2 24
+2
+2
+24
+are 7,536.
+Therefore, the last four digits of 2
++ 1 are 7,537.
+Solution 3 by Zhihao Liu (11/IL): Answer: 7537 Proof: [See the Editor's Comment below for a quick review of some of these terms and concepts.]
+Note that 2 24
+( 2 ) ( 64 ) 144 Ã— 64 = 9216 216 ( mod 500 ) .
+By Euler's Theorem,
+92
+2 2
+2
+24
+2 ( mod 5 ) , if 2 x
+x
+4
+24
+x ( mod ( 5 ) ) .
+4
+Since ( 625 ) = 500 , Euler's Theorem says 2 24
+2
+24
+2 ( mod 625 ), if 2 27 8 24
+24
+x ( mod 500 ) .
+It follows that 2 4 22 2
+2
+216
+( mod 625 ) .
+By doubling
+for a while we find 2 2 216
+= 134217728 228 ( mod 625 ) , and so 4 5
+228 ( 228 ) 109 ( 109 ) 6 36 ( mod 625 ) .
+Since 24 and 54 are relatively
+prime, by the Chinese Remainder Theorem there is a unique n, 0 n 
+Note that n = 7536 satisfies both of these congruences, and 2 2 24
+n ( mod 10000 ) .
+Therefore the last four digits of 2
+2
+24
++ 1 are 7537.
+Solution 4 by Jacob Licht (11/CT): , Euler's Theorem states: If (am) = 1 , then a 4 3 24 (m)
+1 ( mod m ) .
+If a = 2 and m = 625, Z
+( 625 ) = ( 5 ) = 5 ( 5 Â­ 1 ) = 500 .
+By the Division Algorithm q, r 2 24 24
+= 500 q + r and 0 r 
+[ Read: By the Division Algorithm there exist q and r, ele= 500 q + r and 0 r 
+] Since = ( 2 ) 2 ( 24 ) 16 216 ( mod 500 ) .
+So r = 216, and q 216 10 2 4 2
+ments of the integers Z, such that 2 2 2 10 2 24
+= 1024 24 ( mod 500 ) , =2 2 2 2 2 216 2 500 q + 216
+2
+= (2 2 2 2
+500 q 216
+)2
+(1) 2
+2
+216
+( mod 625 ) .
+Note that 28 = 256, so
+16 32 64 128
+= 256 = 65536 536 ( mod 625 ) = 536 421 ( mod 625 ) = 421 366 ( mod 625 ) = 366 206 ( mod 625 ) .
+128 + 64 + 16 + 8 2
+So, 2
+=2
+( 206 ) ( 366 ) ( 536 ) ( 256 ) 36 ( mod 625 ) .
+4 2 24 2 24
+Thus 2 36 ( mod 635 ) , and since 2 = 16 divides 2 so 2 0 ( mod 16 ) .
+We also have that 625 1 ( mod 16 ) and 36 4 ( mod 16 ) , so 12 ( 625 ) + 36 0 ( mod 16 ) .
+Now by the Chinese Remainder Theorem 2 2 24
+24
+12 ( 625 ) + 36 7536 ( mod 10000 ) .
+2 24
+So the four rightmost digits of 2
++ 1 are 7537.
+Editor's Comment: In what he described as "the deepest computation in history whose result was a simple yes/no answer," Richard Crandall of the Center for Advanced Computation at Reed College, together with Ernest Myer, formerly of Case Western Reserve University, and Jason Pap+ 1 , is adopoulos of the University of Maryland, have verified that the 24th Fermat number, 2 not a prime number.
+For more information about the 24th Fermat number, visit the web site 2 24
+www.perfsci.com/.
+This problem was created by Gene Berg of NSA.
+The solutions to these problems give us an opportunity to briefly introduce Euler's function ( m ) , Euler's generalization of Fermat's Theorem, and the Chinese Remainder Theroem.
+Our goal is to introduce some of the notation and terminology of this subject to young mathematicians seeing this for the first time, and possibly help them understand the proofs.
+For more details see (a) An Introduction to the Theory of Numbers by G. H. Hardy and E. M. Wright, published by Clarendon Press, or (b) The Art of Problem Solving, Volumes 1 and 2, by Richard Rusczyk and Sandor Lehoczky, published by Greater Testing Concepts, P.O. Box 5014, New York, NY 101855014.
+For a brief discussion of Congruences, Fermat's Theorem, and the Extended Euclidean Algorithm (EEA) for finding Greatest Common Divisors see the Solutions to Problem 1/2/11 from Year 11 of the USAMTS.
+Definition (Euler's function ( m ) ): For an integer m, let ( m ) denote the number of positive integers less than m and relatively prime to m. For example, consider m = 20: there are eight positive integers less than 20 which are relatively prime to 20, namely 1, 3, 7, 9, 11, 13, 17, and 19, so ( 20 ) = 8 .
+Since m = 17 is prime, all sixteen positive integers less than 17 are prime to 17, k k 1 and ( 17 ) = 16 .
+If p is prime, then ( p ) = p 1 Â­ -- .
+If m and n are relatively prime inte p
+gers, then ( mn ) = ( m ) ( n ) .
+For example: 1 ( 20 ) = ( 4 Ã— 5 ) = ( 4 ) Ã— ( 5 ) = 4 1 Â­ -- Ã— [ 4 ] = 8 2 Theorem (Euler's generalization of Fermat's Theorem): If a and m are integers with Greatest Common Divisor GCD(a, m) = 1, then a (m)
+1 ( mod m ) .
+For example, if a is any integer relatively prime to 20 [i.e. a { 1, 3, 7, 9, 11, 13, 17, 19 } ], then a 1 ( mod 20 ) .
+Chinese Remainder Theroem: If m 1, m 2, ..., m k are positive integers that are pairwise relatively prime [ that is, GCD( mi,mj) = 1 for 1 i 
+[A similar theorem applies to polynomials.]
+As an example, find an integer c with 0 c 
+c 6 ( mod 11 ) , and c 8 ( mod 13 ) .
+Solution: We do this in three steps, solving for the first two equations, then for the first three equations, and finally for all four equations.
+In each step we use the Extended Euclidean Algorithm (EEA) (for examples of this algorithm in use, see the Solution to Problem 2/1/11 of Year 11).
+Step 1.
+Find x satisfying x 2 ( mod 3 ) a 1 ( mod m 1 ) and x 4 ( mod 7 ) a 2 ( mod m 2 ) .
+GCD(m1, m2) = 1 so by the EEA there are integers f1 and f2 so that 1 f 1 m 1 + f 2 m 2 f 1 3 + f 2 7 .
+The EEA finds f 1
+= 5 and f
+2
+= Â­ 2 .
+Now choose
+x = a 1 + ( a 2 Â­ a 1 ) f 1 m 1 = 2 + ( 4 Â­ 2 ) 5 3 = 32 .
+Observe x satisfies the requirements of step 1.
+Step 2.
+Find y satisfying y 2 ( mod 3 ) a 1 ( mod m 1 ) , y 4 ( mod 7 ) a 2 ( mod m 2 ) , and y 6 ( mod 11 ) a 3 ( mod m 3 ) .
+GCD(m1m2, m3) = 1 so by the EEA there are integers g1 and g so that 1 g 1 m 1 m 2 + g 2 m 3 g 1 21 + g 2 11 ( Â­ 1 ) 21 + 2 11 .
+Now choose y = a 1 + ( a 2 Â­ a 1 ) f 1 m 1 + ( a 3 Â­ x ) g 1 m 1 m 2 = 32 + ( 6 Â­ 32 ) ( Â­ 1 ) ( 3 ) ( 7 ) = 578 . where x = a1 + ( a2 Â­ a1 ) f 1 m1 .
+Observe y = 578 satisfies step 2.
+Step 3.
+Find c satisfying c 2 ( mod 3 ) a 1 ( mod m 1 ) , c 4 ( mod 7 ) a 2 ( mod m 2 ) , c 6 ( mod 11 ) a 3 ( mod m 3 ) and c 8 ( mod 13 ) .
+GCD(m1m2m3, m4) = 1 so by the EEA there are integers h1 and h2 so that 1 h 1 m 1 m 2 m 3 + h 2 m 4 h 1 3 7 11 + h 2 13 4 231 + ( Â­ 71 ) 13 .
+Now choose z = a1 + ( a2 Â­ a1 ) f 1 m1 + ( a3 Â­ x ) g1 m1 m2 + ( a4 Â­ y ) h1 m1 m2 m = y + ( a4 Â­ y ) h1 m1 m2 m3 . where x = a 1 + ( a 2 Â­ a 1 ) f 1 m 1 and y = a 1 + ( a 2 Â­ a 1 ) f 1 m 1 + ( a 3 Â­ x ) g 1 m 1 m 2 .
+Observe z = 578 + ( 8 Â­ 578 ) 4 3 7 11 = Â­ 526680 , and reduced to c = 2426 z ( mod 3003 ) satisfies step 3 and the original requirement.
+3
+2
+3/1/12.
+Determine the integers a, b, c, d, and e for which ( x + ax + b ) ( x + cx + dx + e ) = x Â­ 9 x Â­ 27 .
+Solution 1 by Christopher Church (10/KY): This problem essentially asks us to factor x Â­ 9 x Â­ 27 into a quadratic and a cubic polynomial.
+Theoretically, a TI-89 graphing calculator 5 2 3 2 5
+could factor this polynomial.
+I, however, do not have access to the TI-89.
+However, I did use the TI-85 to calculate the roots of the polynomial.
+My calculator returned the five values shown here: 2.1541, 4229 Â± 1.9998 i, Â­ 1.5 Â± 0.8660 i 3 3 The last one, based on my knowledge of the quadratic formula, was Â­ -- Â± -- i .
+This I could 2 2 transfer into a polynomial of degree two.
+The result, using the fact that x equals the values above, is x + 3 x + 3 .
+Using long division of polynomials, I found that ( x + 3 x + 3 ) ( x Â­ 3 x + 6 x Â­ 9 ) = x Â­ 9 x Â­ 27 .
+Thus the integers that the problem asked for are found here.
+They are a = 3 , b = 3 , c = Â­ 3 , d = 6 , and e = Â­ 9 .
+2 3 2 5 2
+Solution 2 by Laura Pruitt (11/MA): Multiply out the left side of the equation to get x + ( a + c ) x + ( a c + b + d ) x + ( ad + bc + e ) x + ( ae + bd ) x + b e = x Â­ 9 x Â­ 27 Comparing coefficients in this new equation, it is easy to find equations relating the variables a, b, c, d, and e: a+c = 0 1.
+ac + b + d = 0 2.
+ad + bc + e = 0 3.
+ae + bd = Â­ 9 4.
+be = Â­ 27 5.
+Initial observations on these equations: (i) Simple substitutions: a = Â­ c , or c = Â­ a , b = Â­ 27 / e or e = Â­ 27 / b . (ii) Since all variables are integers, there are only eight possibilities for (be) : (1,Â­ 27), (Â­ 1,27), (27,Â­ 1), (Â­ 27,1), (3,Â­ 9), (Â­ 3,9), (9,Â­ 3), (Â­ 9,3) . , This leaves us with three equations (2, 3, and 4) and one variable (d) that we have not used yet.
+Substitute Â­ c for a and solve 2, 3, and 4 for d in terms of a, b, c, and e: 2.
+3.
+4.
+Â­ c + b + d = 0 -
+Therefore c Â­ b = ( bc + e ) / c = ( ce Â­ 9 ) / b .
+In pairs, solve for c in terms of b and e: Comb. 1 (use 2 and 3) Comb. 2 (use 2 and 4) c Â­ b = ( bc + e ) / c c Â­ 2 bc Â­ e = 0 3 2
+Comb. 3 (use 3 and 4) ( bc + e ) / c = ( ce Â­ 9 ) / b ec Â­ ( b + 9 ) c Â­ be = 0 2 2 2
+c Â­ b = ( ce Â­ 9 ) / b bc Â­ ec + ( 9 Â­ b ) = 0 [e Â± e Â­ 4b(9 Â­ b )] c = -----------------------------------------------------2b 2 2 2
+2
+discard: cubic
+b + 9 Â± ( b + 9 ) + 4 be c = ---------------------------------------------------------------------2e
+2
+2
+2
+2
+In order for c to be an integer, which it must be, the discriminant must be a perfect square.
+Test the eight possible solutions for (be) : , For Comb. 2: (be) {(9,Â­ 3), (3,Â­ 9)} , For Comb. 3: (be) = (3,Â­ 9) , Check (be) = (3,Â­ 9) in the full quadratics from Comb. 2 and Comb. 3.
+It checks. , If (be) = (3,Â­ 9) , then c { 0, Â­ 3 } (the answers to the quadratics), but looking at equation 3 , when solved for d ( d = ( b c + e ) / c ), we see that c 0 since division by 0 is undefined.
+Therefore c = Â­ 3 and a = Â­ c = 3 .
+It is now simple to solve for d; simply substitute the values of a, b, c, and e into any of the original equations containing d to yield d = 6 .
+Solution: ( a, b, c, d, e ) = ( 3, 3, Â­ 3, 6, Â­ 9 ) The desired factorization is ( x + 3 x + 3 ) ( x Â­ 3 x + 6 x Â­ 9 ) = x Â­ 9 x Â­ 27 .
+2 3 2 5
+Solution 3 by Sarah Emerson (12/WA): Expand the equation to obtain: x + ( a + c ) x + ( a c + b + d ) x + ( ad + bc + e ) x + ( ae + bd ) x + b e = x Â­ 9 x Â­ 27 Therefore (1) a + c = 0 (2a) d + a c + b = 0 (3a) e + a d + b c = 0 (4) ae + bd = Â­ 9 (5) be = Â­ 27 c = Â­a dÂ­a +b = 0 e + ad Â­ ba = 0 2 5 4 3 2 5
+To solve, try all possible values of b and e, plugging the values into the other equations to determine if they work.
+a does not exist.
+(4) Â­ 27 a + d = Â­ 9 b=1 d = Â­ 9 Â­ 27 a e = Â­ 27 (3) Â­ 27 + ad Â­ a = 0 Â­ 27 + a ( Â­ 9 Â­ 27 a ) Â­ a = 0 Â­ 27 Â­ 9 a Â­ 27 a Â­ a = 0 Â­ 27 a Â­ 10 a Â­ 27 = 0 10 Â± 100 Â­ 4 ( Â­ 27 ) ( Â­ 27 ) a = -------------------------------------------------------------2 ( Â­ 27 ) b=3 e = Â­9 (4) Â­ 9 a + 3 d = Â­ 9 (3) Â­ 9 + ad Â­ 3 a = 0 d = Â­ 3 + 3a Â­ 9 Â­ 3a + 3a Â­ 3a = 0 a Â­ 2a Â­ 3 = 0 (a Â­ 3)(a + 1) = 0 a = 3 or a = Â­ 1 2 2 2 2
+a=3 b=3 c = Â­3 d=6 e = Â­9 it works! Solution.
+Editor's Comment: We thank our Problem Editor, Dr. George Berzsenyi, for this problem.
+It stems from a recent article, "The Factorization of x Â± p x Â­ k and Fibonacci Numbers," published in the November 1999 issue of the Fibonacci Quarterly.
+A sequence of real numbers s 0, s 1, s 2, ... has the property that s i s j = s i + 12 5 2
+4/1/12.
+i+ j
++s
+iÂ­ j
+for
+all nonnegative integers i and j with i j , s i = s s0 
+for all nonnegative integers i, and
+Find the three numbers s0, s1, and s2.
+Solution 1 by Jennifer Dawson (11/AK): Answer: s 0 = 2 , s 1 = 3 , and s 2 = 1 .
+Solution: s1 s0 = s1 + s1 = 2 s1 s0 = 2 s1 s1 = s2 + s 2 1 0 2
+s2 = s Â­ s0 = s1 Â­ 2 s2 s1 = s3 + s 1
+[ s1 Â­ 2 ] s1 = s3 + s s3 = s1 Â­ 3 s 3 1
+2
+1
+s3 s3 = s6 + s 3 2
+0
+[ s1 Â­ 3 s1 ] = s6 + 2 s1 Â­ 6 s1 + 9 s1 = s6 + 2 s6 = s1 Â­ 6 s1 + 9 s1 Â­ 2 s6 s6 = s 
++ s0 = s0 + s0 = 4 2 2
+[ s1 Â­ 6 s1 + 9 s1 Â­ 2 ] = 4 s 1 { Â­ 3, 3, Â­ 2, 2, Â­ 1, 1, 0 } Since s1 must be strictly between 0 and 2, all but 1 and Second, try s 1 = So, s 0 = 2 , s 1 = 3.
+3 are eliminated.
+s1 1 .
+First, try s 1 = 1 . s 1 s 1 = s 2 + s 0 yields s 2 = Â­ 1 , a contradiction.
+So
+s 1 s 1 = s 2 + s 0 yields 3 = s 2 + 2 or s 2 = 1 .
+It works!
+3 , and s 2 = 1 .
+Editor's Comment: Once again, we are most grateful to Dr. Erin Schram of NSA for this intriguing problem.
+An indirect, but interesting solution begins with the observation that 1 1 cos cos = -- cos ( + ) + -- cos ( Â­ ) and modeling the sequence as s i = 2 cos ( i ) for 2 2 some .
+5/1/12.
+In the octahedron shown on the right, the base and top faces are equilateral triangles with sides measuring 9 and 5 units, and the lateral edges are all of length 6 units.
+Determine the height of the octahedron; i.e., the distance between the base and the top face.
+6 Solution 1 by Anna Maltseva (12/MI): By symmetry, the top face is parallel to the base, and the line connecting the centers of the triangles of the top face and the base is perpendicular to both the top face and the base.
+5 5 6 5 6 6 6 6
+9
+9
+9
+A B O1
+The top view of the octahedron looks like the figure at left.
+Let O1 denote the center of the top face, O2 denote the center of the base, A denote a vertex of the top face, and B denote the midpoint of the corresponding side of the base.
+Imagine dropping a line from A perpendicular to the base and let K denote the point where it intersects the plane of the base.
+Then triangle ABK will be a right triangle and AK will be the height of the octahedron.
+So AB = AK + BK = AK + ( O 2 B Â­ O 1 A ) 2 2 2 2 2
+6 = AB + ( 4.5 ) so AB = 15.75 .
+A A 4.5 -----3 O2 2.5 5 -----3
+2
+2
+2
+2
+4.5 Therefore,
+B 30 Â° 2 4.5 5 2 15.75 = AK + ------ Â­ ------ .
+3 3 2 63 1 ----- Â­ ----- = AK 4 12
+AK =
+188 -------- = 12
+47 141 ----- = ------------ .
+3 3
+Solution 2 by Alexander Power (11/IA): Let the equilateral triangle with side 5 have vertices A, B, and C, and let the equilateral triangle with side 9 have vertices D, E, and F, with sides of the octahedron AD, BD, BE, CE, CF, AF.
+Then, the height of the octahedron is the same as the height of tetrahedron ABCD and the same as the height of tetrahedron CDEF.
+We know the length of all the sides except CD.
+A formula for the volume of a tetrahedron ABCD is 0 1 T -------- , where T is the determinant of the 5 Ã— 5 matrix 288 1 0 2 2
+1 2
+1 2 2
+1 2 2 2
+AB AC AD 0 2 2
+1 AB
+BC BD 0 2
+1 AC BC 2
+CD 0
+1 AD BD CD Plugging in values of the two tetrahedra, we get
+01 1 1 1 1 0 25 25 36 4 2 T 1 = det 1 25 0 25 36 = Â­ 50 x + 4850 x Â­ 6050 1 25 25 0 x 1 36 36 x and 01 1 1 1 1 0 81 81 36 4 2 T 2 = det 1 81 0 81 36 = Â­ 162 x + 24786 x Â­ 328050 1 81 81 0 x 2 2 2 2
+0
+1 36 36 x 0 as the determinants of the two tetrahedra, with T1 as the determinant of tetrahedron ABCD and T2 the determinant of CDEF.
+Since the tetrahedra have the same height, their volumes are proportional to the areas of their bases (by Cavalieri's Principle).
+The areas of their bases are proportional to a square of a side.
+Thus T2 T1 81 -------- = 25 -------- .
+288 288 25 This means that T 2 ----- 81 2
+= T 1 .
+Thus
+25 4 2 4 2 ( Â­ 50 x + 4850 x Â­ 6050 ) = ( Â­ 162 x + 24786 x Â­ 328050 ) ----- 81 or
+Â­ 2800 4 22400 2 -------------- x + -------------- x + 25200 = 0 81 9 and x2 is 81 or -9, but -9 is extraneous.
+This means that CD = 9 .
+Thus, T2 is 0 1 T2 = 1 1 1 1 0 81 81 36 1 81 0 81 36 1 81 81 0 81 1 36 36 = 616734 81 0
+27 81 3 and the volume of tetrahedron CDEF is ----- 47 .
+Since the base has area ------------ , the height is 4 4 47 ----- 3.958 .
+3
+Editor's Comment: Dr. Berzsenyi based this problem on a recent article in Mathematics Magazine (vol. 72, no. 4, pp.277-286).

@@ -1,0 +1,96 @@
+Source 
+This system does not ordinarily collect data on SAR incidents where there is no Coast Guard involvement (i.e., conducted solely by state and local governments).
+An updated system, SARMIS II, will be in use beginning with fiscal year 2000 data.
+The data includes specific information about most aspects of a SAR incident including: the means of notification, nature of the incident, location, method of locating the subject in need of assistance, cause of the incident, descriptive information of distressed craft, and results of rescue efforts in lives and property saved, lost, or assisted.
+The data also includes specific information about the actual response by Coast Guard and other rescue resources including: the assisting resource type, distance to the scene of the incident, weather encountered, actual assistance rendered and mission performance.
+Finally, the data includes dates/times of significant SAR incident events.
+All Coast Guard units which perform SAR report in SARMIS.
+Units involved in SAR operations primarily include: * Area, Section, District, Activity, and Group Offices (primarily command/control/coordination) * Cutters * Air Stations * Boat Stations * Coast Guard Auxiliary Facilities (radio, boat 
+When resources from other federal, state, local and volunteer agencies participate in a SAR operation coordinated by the Coast Guard, one of the above listed Coast Guard units records the data for their participation.
+Data Collection
+Pre Fiscal Year 2000 (SARMIS)
+Methods - The Search And Rescue Management Information Manual, COMDTINST M5230.10A provides the guidance for data entry directly via the SARMIS software on Coast Guard standard computer systems.
+Data is compiled by individual units and entered into SARMIS.
+SARMIS consist of three basic parts: * The SARMIS Data Entry Sub-system (SARMIS/DES) creates SAR Assistance Reports and stores the data at the unit which responded to a request for assistance.
+* The SARMIS District Sub-system (SARMIS/DSS) software runs at each district and area office to collect district or area data, store it on a database, create reports, check the data for errors, and prepare the data for transmission to the Headquarters' database.
+* The last part of the system is the Headquarters' database which resides on the Transportation Computer Center (TCC) Amdahl mainframe computer.
+This database includes all Coast Guard SAR data.
+Schedule - Data is compiled on a fiscal year basis.
+Reporting units must have data entered for database completion within three months of the end of that fiscal year.
+Historically, the three month data entry has not been universally achieved.
+The entry of data by operational units is sometimes delayed by operational commitments.
+Also, database errors and a prolonged error correction procedure complicated by a three-tier data system often delays completion.
+Response Rate - Completion of the database only occurs when the servicewide entry arrives at 98% of all cases, with no individual district below 97% entry of all their cases.
+Fiscal Year 2000 on (SARMIS II)
+Methods - The Search and Rescue Management Information System (SARMIS) is a web based (INTRANET) application for both data entry and retrieval.
+Entry is made via unit located Coast Guard standard workstation and the Coast Guard Intranet.
+Entry guidance is contained in online documentation.
+The data is entered in a Oracle database on a server located at the Coast Guard Operations Systems Center in West Virginia.
+Schedule - Data is compiled on a fiscal year basis.
+Reporting units will be required to complete data entry for each case no later then seven days following the closure of the case or suspension of Coast Guard active searching.
+System start date of October 1, 1999.
+Grace period for reporting requirement for first six months as personnel entering data become familiar and proficient with the system.
+Response Rate - To be determined; will not be less then previous system requirement.
+Sampling Errors
+Not applicable since all SAR cases are subject to reporting requirements.
+Non-Sampling Errors
+Non-Entry Error -
+(SARMIS) Cases are sequentially numbered.
+Missing numbers indicate missing case information and show up in error report.
+Entry of missing cases is made at unit level.
+(SARMIS II) Cases entered are assigned a machine generated sequential number.
+If a unit conducts a single unit case (only unit involved) and does not enter the data, local review of case logs will indicate missed cases.
+Multi-unit cases have internal checks to determine if all units involved have entered data (or had data entered for them).
+If missing, unit responsible enters missing data.
+Duplicate Entry Error -
+(SARMIS) Cases are assigned unique sequential numbers.
+System will reject duplicates and require re-entry with new numbers.
+Units responsible re-enter data with new case numbers.
+Individual data points for lives and property data may be entered by multiple units involved in response to a single SAR incident, in some cases these data points may be duplicate as each unit accounts for their contribution in assisting lives and /or property.
+The magnitude of this possible error is reduced (not entirely eliminated) through policy regarding the claiming of lives and property assistance.
+(SARMIS II) Cases are assigned machine generated case numbers.
+The SAR Mission Coordinator (SMC) is responsible for entry of primary case information.
+Either SMC or units may enter participating unit specific sortie data which is entered under the appropriate case number.
+Case numbers are recorded on unit paper files to permit rapid location of data associated with that particular SAR effort.
+Individual unit contribution to SAR incidents with multiple unit response are accounted for separately for key lives and property data elements, eliminating duplicate entry errors.
+Missing Data Error - (SARMIS 
+As all data fields do not apply to all types of cases, business rules also provide cross checks based on specific criterion for various types of cases.
+The business rules in SARMIS II are more sophisticated and provide stricter control on critical data.
+On indication of an error, missing data must be supplied by entering unit.
+Response/Measurement Error - (SARMIS 
+Accurate data entry is a positive incentive for commands as it reflects positively on the command.
+SARMIS is not used to evaluate the performance of units, but is used to evaluate resource needs for units.
+Coding/Recording Error -
+(SARMIS) Selection of inappropriate codes is possible.
+Codes and descriptions are provided, however, data entry personnel may not always check codes against descriptive lists, relying on memory for appropriate codes, creating the possibility of entering an incorrect code.
+In addition, business rules do not cover all possible entry combinations to identify errors.
+Also, for data items not checked by business rules, data entry personnel may skip an entry in favor of a default value.
+These errors are indicated only when extraction of data shows what intuitively are "off" values.
+For the most critical data items with clear business rules, coding/recording errors are few.
+(SARMIS II) The new system uses a window based intranet application with selection of data via either entered values, check boxes, or pull down selection lists.
+The use of plain language descriptions eliminates a majority of common coding errors (selecting incorrect code).
+Additional business rules also eliminate the selection of data not appropriate given other entered data, and clearly identifies required data.
+Non-coverage Error - (SARMIS 
+SARMIS II improves on the original data collection through elimination of data items found to be of little or no use and adding data items for emerging needs.
+SARMIS II, due to its design, also permits rapid and easy changes to data items to be gathered.
+For the critical measurement data of Coast Guard goals, all data is included in both SARMIS and SARMIS II.
+Generic Statement - Errors may be introduced into the system through data entry personnel inattention or deliberate shortcutting data entry.
+These errors are reduced through system business rules which automatically protect the entry of critical data, through command oversight and training of data entry personnel, and through review of completed database output.
+The data associated with Coast Guard personnel and property goals is better protected and remains some of the more accurate data available through the system.
+SARMIS II will significantly enhance the accuracy of collected data.
+Nonsampling errors will not have a significant impact on the primary lives and property measurement use of SARMIS (and SARMIS II in the future) data.
+No efforts have been made to quantify the level of nonsampling error.
+Verification and Validation
+(SARMIS) Verification and validation occurs at several levels in the reporting and collection process.
+With the three tiered entry and processing system, business rules verify the completeness of the database.
+Standard end of year data reports are reviewed for anomalies in data, if deemed significant are investigated and corrected.
+Data queries for specific information either verify the data or discover errors.
+Timeliness is monitored at each level.
+With the only deadline being the end of the year, no real oversight occurs until the time to close out the database.
+(SARMIS II) Verification and validation is carried out periodically as data is viewed by various command levels.
+The timeliness aspect of a near real-time database lends itself to periodic checks for current level of SAR activity and progress in relation to goals and standards.
+For mutli-unit SAR cases, the SAR Mission Coordinator (SMC) is responsible for accurate data entry by all units involved.
+Each level of command structure (from unit to headquarters) has a wide variety of automatic reports available as part of the system allowing rapid review of data entered up to viewing date.
+The Coast Guard does not currently have structured or automated systems in place to guarantee data accuracy.
+Verification and validation is done at various levels of the organization, employing various formal and informal reviews, as well as the business rules embedded in the database software systems.
+These reviews and business rules are designed to correct errors and ensure that the data is generally usable for Coast Guard purposes.

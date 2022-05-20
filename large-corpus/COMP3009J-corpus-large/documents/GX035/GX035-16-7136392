@@ -1,0 +1,264 @@
+HMMERPFAM [ Program Manual | User's Guide | Data Files | Databases ] Table of Contents FUNCTION DESCRIPTION EXAMPLE OUTPUT INTERPRETING OUTPUT INPUT FILES RELATED PROGRAMS RESTRICTIONS ALGORITHM CONSIDERATIONS COMMAND-LINE SUMMARY ACKNOWLEDGEMENT LOCAL DATA FILES PARAMETER REFERENCE __________________________________________________________________ FUNCTION [ Top | Next ]
+DESCRIPTION
+[ Previous | Top | Next ]
+HmmerPfam provides a Wisconsin Package interface to the hmmpfam program of Dr. Sean Eddy's HMMER package.
+It allows you to access most of hmmpfam's parameters from the Wisconsin Package command line.
+HmmerPfam searches a database of profile hidden Markov models using one or more sequences as queries and displays the alignments between the profile HMM and matching domains in the sequence.
+EXAMPLE
+[ Previous | Top | Next ]
+Here is a session using HmmerPfam to search the Pfam ("Protein families") profile HMM database to find matches to domains in the Ygbyad protein sequence from the PIR database:
+% hmmerpfam
+HMMERPFAM with what query sequence ? PIR:ygbyad
+Begin (* 1 *) ? End (* 1392 *) ?
+Search for query in what HMM database (* Pfam.hmmdb *) ?
+What should the output file be called (* hmmerpfam.hmmerpfam *)?
+Creating temp file for input to hmmpfam.
+Calling hmmpfam to perform analysis ...
+hmmpfam - search a single seq against HMM database HMMER 2.1.1 (Dec 1998) Copyright (C) 1992-1998 Washington University School of Medicine HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - HMM file: /databases/hmm/Pfam.hmmdb Sequence file: PIR:ygbyad - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%
+OUTPUT
+[ Previous | Top | Next ]
+Here is part of the output file:
+Query: YGBYAD from: 1 to: 1392 L-aminoadipate-semialdehyde dehydrogenase (EC 1.2.1.31) - yeast (Saccharomyces c
+Scores for sequence family classification (score includes all domains): Model Description Score E-value N -------- ----------- ----- ------- --- AMP-binding AMP-binding enzyme 271.0 1.6e-77 1 pp-binding Phosphopantetheine attachment site 83.9 1.4e-21 1 adh_short short chain dehydrogenase -77.6 1.8 1 3Beta_HSD 3-beta hydroxysteroid dehydrogenase/isome -182.2 0.15 1 Epimerase NAD dependent epimerase/dehydratase famil -204.8 3.7 1
+Parsed for domains: Model Domain seq-f seq-t hmm-f hmm-t score E-value -------- ------- ----- ----- ----- ----- ----- ------- AMP-binding 1/1 271 729 ..
+1 450 [] 271.0 1.6e-77 pp-binding 1/1 850 916 ..
+1 68 [] 83.9 1.4e-21 adh_short 1/1 971 1182 ..
+1 203 [] -77.6 1.8 Epimerase 1/1 973 1279 ..
+1 359 [] -204.8 3.7 3Beta_HSD 1/1 962 13
+1 425 [] -182.2 0.15
+Alignments of top-scoring domains: AMP-binding: domain 1 of 1, from 271 to 729: score 271.0, E = 1.6e-77 *-
+///////////////////////////////////////////////////////////////////
+iDdQVKiRGyRIELGEIEaaLrllqhpgvkeAvV
+pp-binding: domain 1 of 1, from 850 to 916: score 83.9, E = 1.4e-21 *-
+velpdtdlfehpTiraLaeyl
+//////////////////////////////////////////////////////////////////////////
+3Beta_HSD: domain 1 of 1, from 962 to 1346: score -182.2, E = 0.15 *-
+////////////////////////////////////////////////////////////////////
+EarakTieWiqele
+//
+INTERPRETING OUTPUT
+[ Previous | Top | Next ]
+Lists of Scores
+HmmerPfam first lists the profile HMMs that had the best matches with the query sequence, ranked by E-value.
+The raw scores are expressed as bit values.
+If the profile HMM matched more than one place in the sequence, the score for each matching domain contributes to the total score.
+The number of sequence domains that matched the profile HMM are displayed in the rightmost column of this list.
+Next HmmerPfam lists the top-scoring domains, with their raw scores and E-values.
+They are ordered by their position in the sequence, not by their scores.
+HmmerPfam displays the begin and end coordinates for the matching domains in the sequence under the seq-f ("sequence-from") and seq-t ("sequence-to") headings.
+It also lists the begin and end coordinates of the matching portion of the profile HMM (under the headings hmm-f and hmm-t).
+After each set of begin and end coordinates is a two-character code that tells you if the alignment is local or global with respect to the sequence and to the profile HMM.
+In general, a left bracket ([) means the alignment started at the beginning of the sequence or profile HMM, a right bracket (]), means the alignment ended at the end of the sequence or profile HMM, and a period means that the alignment started or ended in the middle of the sequence or profile HMM.
+For example, in the following line from a HmmerPfam output:
+AMP-binding 1/1 271 729 ..
+1 450 [] 271.0 1.6e-77
+the sequence coordinates for the match are 271-729 and the two periods following 729 means that the matching region was within the sequence and did not extend to either end.
+The profile HMM coordinates are 1-450 and the two brackets following 450 means that the match spanned the entire length of the profile HMM.
+If more than one sequence domain matched the same profile HMM, there will be a separate line for each domain.
+The domains are numbered: for example, if a single domain matched the query, the entry is labeled 1/1; if the domain is the second of three that matched, it is labeled 2/3.
+The Alignments
+The next section of the output displays the alignments between the profile HMM consensus sequence and the best-scoring domains.
+These are displayed somewhat differently than most GCG alignments.
+The top line is the "consensus" sequence of the profile HMM.
+The residues shown are the highest probability residues at each position according to the model.
+(There is no attempt to use an ambiguous symbol to denote a position that can contain more than one type of residue, so it isn't a consensus in the commonly used sense of the word.)
+A residue is printed as a capital letter if it is highly conserved, otherwise it is printed in lowercase.
+For protein models, highly conserved amino acids are defined to be those that have a probability greater than 0.5; for nucleic acid models, highly conserved nucleotides are those with a probability greater than 0.9.
+If the sequence contains positions not present in the model, periods are inserted into the profile HMM consensus sequence to denote the gap.
+The center line of the alignment is a representation of the quality of the alignment.
+A letter appears at positions where the sequence and the profile HMM consensus are identical.
+The letter will be upper- or lowercase in accordance with the case of the profile HMM consensus.
+If the residues at that position are not identical but have a positive score, a plus sign is displayed, and the relationship is considered to be "conservative" according to the HMM's view of this particular position in the model (not to be confused with the usual definition of conservative changes).
+If the score is not positive, a space appears.
+The third line of the alignment shows the sequence itself.
+In this line, gaps are indicated with hyphens rather than periods.
+INPUT FILES
+[ Previous | Top | Next ]
+HmmerPfam requires as one of its inputs a single or multiple sequence specification.
+You can specify multiple sequences in a number of ways: by using a list file, for example @project.list; by using an MSF or RSF file, for example project.msf{*}; or by using a sequence specification with an asterisk (*) wildcard, for example GenEMBL:*.
+The function of HmmerPfam depends on whether your input sequence(s) are protein or nucleotide.
+Programs determine the type of a sequence by the presence of either Type: N or Type: P on the last line of the text heading just above the sequence.
+If your sequence(s) are not the correct type, turn to Appendix VI for information on how to change or set the type of a sequence.
+The other input to HmmerPfam is a profile HMM database.
+You can create HMM databases by concatenating profile HMM files or you can use existing HMM databases.
+Profile HMM databases supplied with the Wisconsin Package are Pfam and PfamFrag.
+They each contain profile HMMs for a large number of protein families.
+The profile HMMs in these databases were made from the same sequence alignments, but with different parameters: the profile HMMs in Pfam are built to perform global alignments with respect to the model, while the profile HMMs in PfamFrag are designed to perform local alignments with respect to the model.
+RELATED PROGRAMS
+[ Previous | Top | Next ]
+PileUp creates a multiple sequence alignment from a group of related sequences.
+LineUp is a multiple sequence editor used to create multiple sequence alignments.
+Pretty displays multiple sequence alignments.
+ProfileMake makes a profile from a multiple sequence alignment.
+ProfileSearch uses the profile to search a database for sequences with similarity to the group of aligned sequences.
+ProfileSegments displays optimal alignments between each sequence in the ProfileSearch output list and the group of aligned sequences (represented by the profile consensus).
+ProfileGap makes optimal alignments between one or more sequences and a group of aligned sequences represented as a profile.
+ProfileScan finds structural and sequence motifs in protein sequences, using predetermined parameters to determine significance.
+HmmerBuild makes a profile hidden Markov model from a multiple sequence alignment.
+HmmerAlign aligns one or more sequences to a profile HMM. HmmerPfam searches a database of profile HMMs with a sequence query in order to identify known domains within the sequence.
+HmmerSearch uses a profile HMM as a query to search a sequence database for sequences similar to the original aligned sequences.
+HmmerCalibrate calibrates a hidden Markov model so that database searches using it as a query will be more sensitive.
+HmmerIndex creates a binary GSI ("generic sequence index") for a database of profile HMMs.
+HmmerFetch retrieves a profile hidden Markov model by name from an indexed database of profile HMMs.
+HmmerEmit randomly generates sequences that match a profile HMM. HmmerConvert converts between different profile HMM file formats and from profile HMM to GCG profile file format.
+MEME finds conserved motifs in a group of unaligned sequences and saves these motifs as a set of profiles.
+You can search a database of sequences with these profiles using the MotifSearch program.
+RESTRICTIONS
+[ Previous | Top | Next ]
+All of the profile HMMs in the database must have been created from the same sequence type (all protein or all nucleic acid) and the query sequence(s) must also be of that type.
+Unlike other HMMER programs, HmmerPfam can't reliably determine the sequence type because of the order in which it accesses data.
+It assumes protein data unless you use the -DNA
+parameter.
+ALGORITHM
+[ Previous | Top | Next ]
+See the Profile HMM Analysis Essay for an introduction to profile hidden Markov models and the terminology associated with them.
+Aligning a Sequence and a Profile HMM
+Aligning a sequence to a profile HMM is analogous to aligning two sequences to each other.
+A pairwise sequence alignment associates a residue in one sequence with a residue in the other.
+An alignment between a sequence and a profile HMM associates a residue in the sequence with a match or insert state in the model.
+In both processes, many possible alignments exist, so a method must be devised to score them.
+Pairwise sequence alignments are scored based on the values in a scoring matrix; sequence-to-HMM alignments are scored based on the probability parameters of the model.
+Aligning two sequences can be viewed as finding the best path through the surface of comparison; aligning a sequence to a profile HMM can be viewed as finding a path through the model that generates the sequence.
+For both types of alignments, the path is found using dynamic programming methods: in the case of pairwise sequence alignments, these include the Smith-Waterman and Needleman-Wunsch-Sellers algorithms; in the HMMER programs, the available algorithms are the Viterbi algorithm and the forward algorithm.
+When aligning a sequence to a profile HMM, there is usually more than one path through the model that can generate the sequence.
+The Viterbi algorithm examines all paths through the model that can generate the sequence, chooses the single most probable path, and reports its score.
+The forward algorithm is similar, except that it adds the probabilities for all paths that can generate the sequence and reports this score.
+The Viterbi algorithm is used by default.
+While some researchers maintain that the forward algorithm is more sensitive than the Viterbi algorithm for detecting remote sequence homologs, Sean Eddy's experiments with HMMER have not confirmed this.
+Significance of Scores
+In addition to the score, an E-value (or expectation) is reported to give you an idea of the significance of the score.
+Basically, an E-value is the number of hits expected to score X or higher purely by chance when searching a sequence database of a given size.
+If you are using calibrated profile HMMs, E-values of 0.1 or smaller represent significant hits.
+The E-value is computed by multiplying the size of the database by the probability of a random sequence getting a score X when aligned with the profile HMM.
+When using a profile HMM query to search a sequence database (HmmerSearch), the database size is normally set to the actual number of sequences in the database.
+When using a sequence query to search a database of profile HMMs (HmmerPfam), the database size is arbitrarily set to 59021, the size of release 34 of the SWISS-PROT database.
+In either type of search, you can assign a different number by means of the -EVS
+eqnum parameter.
+This is useful if you want to compare E-values for separate searches of databases of differing sizes.
+To get an accurate estimate of the probability of the alignment score for a profile HMM and a random sequence, the profile HMM should be calibrated with HmmerCalibrate before performing the search, otherwise a less accurate probability is estimated using an analytic upper bound calculation.
+(The search will also be faster if a calibrated profile HMM is used.)
+See the HmmerCalibrate program documentation for more detailed information on how the E-values are computed.
+CONSIDERATIONS
+[ Previous | Top | Next ]
+The search is faster and more likely to identify remote homologs if the profile HMM database has been calibrated with HmmerCalibrate.
+Increasing Program Speed Using Multithreading
+This program is multithreaded.
+It has the potential to run faster on a machine equipped with multiple processors because different parts of the analysis can be run in parallel on different processors.
+By default, the program assumes you have one processor, so the analysis is performed using one thread.
+You can use -PROC
+essors to increase the number of threads up to the number of physical processors on the computer.
+Under ideal conditions, the increase in speed is roughly linear with the number of processors used.
+But conditions are rarely ideal.
+If your computer is heavily used, competition for the processors can reduce the program's performance.
+In such an environment, try to run multithreaded programs during times when the load on the system is light.
+As the number of threads increases, the amount of memory required increases substantially.
+You may need to ask your system administrator to increase the memory quota for your account if you want to use more than two threads.
+Never use -PROC
+essors to set the number of threads higher than the number of physical processors that the machine has -- it does not increase program performance, but instead uses up a lot of memory needlessly and makes it harder for other users on the system to get processor time.
+Ask your system administrator how many processors your computer has if you aren't sure.
+COMMAND-LINE SUMMARY
+[ Previous | Top | Next ]
+All parameters for this program may be added to the command line.
+Use -CHE
+ck to view the summary below and to specify parameters before the program executes.
+In the summary below, the capitalized letters in the parameter names are the letters that you must type in order to use the parameter.
+Square brackets ([ and ]) enclose parameter values that are optional.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Minimal Syntax: % hmmerpfam [-INfile1=]PIR:Ygbyad [-INfile2=]
+Prompted Parameters:
+-BEGin1=1 -END1=100 sets the range of interest for each sequence
+[-OUTfile=]ygbyad.hmmerpfam names the output file
+Local Data Files: None
+Optional Parameters: -PROCessors=2 sets the maximum number of threads that the program will use to 2 -RSF[=hmmerpfam.rsf] saves the best scoring profile HMMs as features in an RSF file -DNA insists that the sequence(s) are nucleic acid -LIMit=50 displays alignments for the 50 best scoring domains -EVCutoff=10.0 sets the E-value cutoff for the sequence list to 10.0 -DOMEVCutoff=2.0 sets the E-value cutoff for the domain list to 2.0 -EVSeqnum=100000 calculates the E-values as if the database had contained 100,000 sequences -BSCUtoff=-300 sets the bit score cutoff for the sequence list to -300 -DOMBSCutoff=10 sets the bit score cutoff for the domain list to 10 -FORWard uses the Forward algorithm instead of the Viterbi algorithm to determine the sequence scores -NULL2 doesn't use the post hoc second null model -XNU filters target protein sequences with XNU to remove tandem repeats -NOMONitor doesn't display information about analysis parameters used -BATch submits program to the batch queue
+ACKNOWLEDGEMENT
+[ Previous | Top | Next ]
+The programs comprising the HMMER package are designed and implemented by Dr. Sean Eddy of the Washington University School of Medicine, St. Louis, Missouri.
+The Wisconsin Package front-end programs were written by Christiane van Schlun in collaboration with Dr. Eddy.
+Pfam - A database of protein domain family alignments and HMMs Copyright (C) 1996-2000 The Pfam Consortium.
+LOCAL DATA FILES
+[ Previous | Top | Next ]
+None.
+PARAMETER REFERENCE
+[ Previous | Top | Next ]
+You can set the parameters listed below from the command line.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Following some of the parameters described below is a short expression in parentheses.
+These are the names of the corresponding parameters used in the native HMMER package.
+Some of the GCG parameters are identical to the original HMMER parameters, others have been changed to fit GCG's conventions.
+-BEGin=1
+sets the beginning position for each query sequence to 1.
+When beginning positions are specified for individual sequences in a list file, HmmerPfam ignores the value of -BEG
+in.
+-END=100
+sets the ending position for each sequence to 100.
+When ending positions are specified for individual sequences in a list file, HmmerPfam ignores the value of -END
+.
+-PROCessors=2 (--cpu 2)
+tells the program to use 2 threads for the database search on a multiprocessor computer.
+The default is 1.
+-RSF=hmmerpfam.rsf
+writes an RSF (rich sequence format) file containing the input sequences annotated with features generated from the results of HmmerPfam.
+This RSF file is suitable for input to other Wisconsin Package programs that support RSF files.
+In particular, you can use SeqLab to view this features annotation graphically.
+If you don't specify a file name with this parameter, then the program creates one using hmmerpfam for the file basename and .rsf for the extension.
+For more information on RSF files, see "Using Rich Sequence Format (RSF) Files" in Chapter 2 of the User's Guide.
+Or, see "Rich Sequence Format (RSF) Files" in Appendix C of the SeqLab Guide.
+-DNA (-n)
+informs HmmerPfam that the sequences and models are nucleic acid instead of protein.
+(Unlike other HMMER programs, HmmerPfam can't reliably determine the sequence type because of the order in which it accesses data.)
+-LIMit=50 (-A 50)
+displays alignments for the 50 best scoring domains.
+If -LIM
+it is set to zero, no alignments are displayed.
+-EVCutoff=10.0 (-E 10.0)
+sets the maximum E-value to be displayed in the list of best profile HMMs to 10.0.
+The default is 10.0 and it must be a positive real number.
+-DOMEVCutoff=2.0 (--domE 2.0)
+sets the maximum E-value to be displayed in the list of best domains to 2.0.
+This can be set to any positive real number permitted by your machine.
+By default,all domains in the sequences that passed the first threshold (-EVC
+utoff) will be reported in the second list, so that the number of domains reported in the list of best profile HMMs is consistent with the number that appear in the list of best sequence domains.
+-EVSeqnum=100000 (-Z 100000)
+calculates the E-value scores as if the search set had contained 100,000 sequences.
+The default is arbitrarily set to 59021, the size of release 34 of the SWISS-PROT database.
+-BSCUtoff=-300 (-T -300)
+sets the lowest bit score to be displayed in the list of best profile HMMs to -300.
+This can be set to any real number permitted by your machine.
+By default the number of hits displayed is controlled by the E-value and not by the bit score.
+-DOMBSCutoff=10 (--domT 10)
+sets the lowest bit score to be displayed in the list of best domains to 10.
+The value can be any real number.
+By default all domains in the sequences that passed the first (best profile HMMs list) threshold will be reported in the list of best domains, so that the number of domains reported in the list of best sequences is consistent with the number that appear in the list of best domains.
+Only one domain in a sequence is controlled by this parameter.
+The second and subsequent domains in a sequence have a defacto bit score threshold of 0 because of the details of how HMMER works.
+HMMER requires at least one pass through the main model per sequence; to do more than one pass (more than one domain) the multidomain alignment must have a better score than the single domain alignment, and hence the extra domains must contribute a positive score.
+-FORWard (--forward)
+uses the forward algorithm instead of the Viterbi algorithm to determine the scores in the list of best profile HMMs.
+(Domain scores are always determined by the Viterbi algorithm.)
+-NULL2 (--null2)
+turns the post hoc second null model off.
+By default each alignment is rescored by a post-processing step that takes into account possible biased composition in either the profile HMM or the query sequence.
+This is almost essential in database searches, especially when the profile HMM is a local alignment model.
+There is a very small chance that this post processing might remove real matches, and in these cases -NULL2
+may improve sensitivity at the expense of reducing specificity by letting through hits whose scores are based partially on biased composition.
+-XNU (--xnu)
+filters target protein sequences with XNU to remove statistically significant tandem repeats.
+It has no effect on nucleic acid sequences, In trial experiments, -XNU
+appears to perform less well than the default post hoc null2 model.
+-NOMONitor
+suppresses the display of the program's progress on the screen.
+-BATch
+submits the program to the batch queue for processing after prompting you for all required user inputs.
+All output files are written to your current directory, unless you direct the ouput to another directory when you specify the output file.
+Printed: January 9, 2002 13:45 (1162) __________________________________________________________________
+[ Program Manual | User's Guide | Data Files | Databases ] __________________________________________________________________
+Technical Support: support-us@accelrys.com or support-eu@accelrys.com
+Copyright (c) 1982-2002 Accelrys Inc.
+A subsidiary of Pharmacopeia, Inc.
+All rights reserved.
+Licenses and Trademarks Wisconsin Package is a trademark and GCG and the GCG logo are registered trademarks of Accelrys Inc.
+All other product names mentioned in this documentation may be trademarks, and if so, are trademarks or registered trademarks of their respective holders and are used in this documentation for identification purposes only.
+Accelrys Inc.
+www.accelrys.com/bio

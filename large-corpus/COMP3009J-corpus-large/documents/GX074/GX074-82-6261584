@@ -1,0 +1,828 @@
+Parallel Computation of Ribosomal RNA Phylogenetic Trees For submission to DOE OBER Microbial Genome Program RFP on Dec. 14, 2000.
+This version, Thursday, Dec. 7, 2000, 10:12 PM PST
+Principal Investigators: * Frank Olken (LBNL) * Craig Stewart (Indiana Univ) * Gary Olsen (UIUC) * Manfred Zorn (LBNL) * Sylvia J. Spengler (LBNL) ______________________________________________________________
+Status / Open Issues - remove from final draft
+* Still missing - intro section by Zorn, data section by Cole, history of fastDNAml from Olsen * 12/7/00 9:45 PM + added Michael Brown's text on SCFG + added my text on parallelization of SCFG + added IU text on proposed work, including my edits.
+Viz stuff still to be added.
++ added discussion of consortium structure * 12/7/00 1:17 PM + Added computing facilities sections from IU and LBNL. + received mini-c.v.'s from Olsen, Stewart, Hart, Berry, Spengler and Zorn.
+Still missing Olken, Cole, and Brown.
+* 12/6/00 5:30 PM + added history of fastDNAml parallelization by Craig Stewart + added lots of stuff from last year + added text on software engineering, target platforms + added text on why use MLE tree construction + added text on proposed improvements to fastDNAml + added bibliography from Stewart - applications of IU parallel fastDNAml + added bibliography from last year * We nee short bio sketches (1 paragraph) from everyone - unless you are happy with my feeble efforts to plagiarize your web pages.
+* We need budget info from Olsen and Stewart.
+* We will work in HTML until at least Friday morning - Deborah Haynes will convert to MS Word and do final formatting.
+* Send text fragments as either plain ASCII or HTML.
+* Send short c.v.'s as Word files (preferable) or ASCII (Deborah will format).
+* Narrative length must be less than 25 pages This does not include various appendices, FWP cover page, proposal cover page, support letters, EH+S waivers, etc.
+* Schedule Goals: + Fragments of text arrive on Wed. and Thur.
++ Budget drafts on Wed. and Thur.
++ C.V.'s by Friday morning + LBNL assembles complete draft by of proposal by Friday 2:30 PM PST (hopefully 2:00 PM) including budgets and c.v.'s .
+Early closing on Friday is to accommodate east coast authors, and Olken's planned early departure on Friday.
++ revisions over weekend + Another complete draft Mon. by COB + Final propsal sent Fedex Tues.
+COB Rationale for schedule - proposal is due 12/14/00, want to allow one extra day for Fedex due to avoid winter weather delays.
+* Where do we put discussion of staffing and responsibilities ??? _______________________________________________________________
+FWP Cover + Budget Pages
+Note that these summary budget pages are in DOE FWP style, more detailed budgets and justification come later in proposal.
+_______________________________________________________________
+Cover Page
+Title of proposed project Parallel Computation of Ribosomal RNA Phylogenetic Trees SC Program announcement title Microbial Genome Program Name of laboratory Lawrence Berkeley National Laboratory Name of principal investigator (PI) Frank Olken Position title of PI Staff Scientist Mailing address of PI Lawrence Berkeley National Laboratory Mailstop 50B-3238 1 Cyclotron Road Berkeley, CA 94720 Telephone of PI 510-486-5891 Fax number of PI 510-486-4004 Electronic mail address of PI olken@lbl.gov Name of official signing for laboratory* Horst D. Simon Title of official Division Director of NERSC Fax number of official 510-486-4300 Telephone of official 510-486-7377 Electronic mail address of official HDSimon@lbl.gov Requested funding for each year; total request ??? Use of human subjects in proposed project: No Use of vertebrate animals in proposed project: No Signature of PI, date of signature 12/12/00 Signature of official, date of signature* 12/12/00
+* This signature certifies that the facilities and personnel are available as described the proposal should the proposal be funded.
+_______________________________________________________________
+Table of Contents
+* I. Abstract * II.
+Narrative * III.
+Literature Cited * IV.
+Budget and Budget Explanation * V.
+Other support of investigators * VI. Biographical Sketches * VIII.Description of facilities and resources * IX. Appendices _______________________________________________________________
+I. Abstract
+[ DOE FWP abstracts must be less than 200 words.
+This abstract barely fits, hence if you want to add to, must propose compensating cuts.]
+We propose to develop parallel programs for the computation of multiple sequence alignments (MSA) and phylogenetic trees.
+The parallel tree code will be based on the maximum likelihood estimation code called fastDNAml by Gary Olsen.
+The parallel MSA code will be based on the Stochastic Context Free Grammar (SCFG) code of Michael Brown, which models the stem and loop secondary structure of RNA molecules.
+The MSAs are input to the tree codes.
+We will apply these codes to the computation of MSAs and phylogenetic trees from ribosomal RNA sequence data (9K prokaryotic 16S sequences and 5K eukaryotic) 18S sequences) from the Ribosomal RNA Database Project at Michigan State University.
+Most of these sequences are from microbial organisms.
+The MLE trees will be compared with trees constructed with neighbor joining algorithms.
+The parallel codes will be made available for use at other institutions.
+The immediate benefit of the project will be improved phylogenetic component trees for the "Tree of Life". rRNA phylogenetic trees of microbial organisms have application to understanding history of evolutionary, microbial population characterization at bioremediation sites, classification of biological warfare agents, biodiversity population characterizations.
+Similar DNA-based phylogenies are useful for epidemiology of pathogens.
+II.
+Narrative
+Background and Significance
+Goals * To develop parallel MLE phylogenetic tree codes * To develop parallel SCFG codes for MSA * To compute revised MSAs and phylogenetic trees for RDP data * To compare revised MSAs and MLE phylogenetic trees for RDP data with existing MSAs and NNJ trees
+Why compute phylogenetic trees?
+The most important scientific reason for computing phylogenetic trees is the understand the evolutionary history of life on earth.
+Phylogenetic trees can also be used as a tool to characterize microbial populations, e.g., for bioremediation site characterization, and for understanding the carbon cycle.
+Phylogenetic trees (typically of DNA sequences not rRNA) have also been used for a variety of epidemiological studies of pathogens to help understand the evolution of spread of pathogens, examples include anthrax and HIV.
+Why use ribosomal RNA for the phylogeny?
+Ribosomal RNA molecules are essential for all living organisms.
+Thus rRNA is ubiquitous among all living organisms.
+Also, rRNA molecules evolve slowly, because they are essential to all life, hence rRNA is suitable for studying deep phylogeny - the early evolutionary history of life.
+If one wanted to study mammals, or a particular pathogen such as HIV, other more rapidly changing gene sequences would be more appropriate.
+rRNA (typically 16S or 18S) has been the molecule of choice for deep phylogeny studies for more than a decade, see for example [citations ....]
+[Could use more text and citations here from MSU, Olsen, ...]
+Why use Maximum Likelihood Estimation of trees?
+There are 3 major methods used to compute evolutionary trees from DNA/RNA sequence data: * Neighbor Joining (NJ) methods are the simplest and cheapest method(s) of computing phylogenetic trees.
+Neighbor Joining (sometimes called Nearest Neighbor Joining) methods use a similarity measure among the various sequences, typically the edit distance (weighted sum of the number insertions, deletions, and subsititutions to transform one sequence to another).
+NJ joins together first the two most similar (closest) sequences and replaces this with the consensus sequence, then continues joining together additional sequences, in order of similarity, either as pairs, or added to tree fragments already constructed.
+NJ is relatively cheap to compute.
+It does not require discrete character states (such as protein, DNA or RNA nucleotide sequence elements), but can be used with chemical similarity measures, lengths of jawbones, etc.
+Given sufficient data, and straightforward evolutionary history, NJ can produce acceptable trees.
+However, in general, NJ trees have lower quality than maximum parsimony or MLE trees.
+* Maximum Parsimony (MP) trees are those which minimize the total number of character state changes (e.g., changes in individual nucleotides in an RNA sequence) from the root to the leaves of a phylogenetic tree.
+Such trees are more expensive to compute than NJ trees, but are often of better quality.
+MP trees tend to work well when there are relatively few changes in each nucleotide position, especially few reversions (changes back to the original nucleotide value).
+* Maximum Likelihood Estimator (MLE) approaches to the estimation of phylogenetic trees are based on explicit probabilistic models of the evolution of DNA or RNA sequences.
+MLE selects that tree which maximizes the likelihood of a tree under a particular probabilistic model of sequence evolution.
+The explicit probability model used for MLE tree computation facilitates estimates of tree reliability.
+MLE of phylogenetic trees is typcially more accurate than NJ, or MP, especially if the frequency of sequences is high and there are many reversions back to the original value of sequence positions.
+MLE is particularly useful when the data (per taxa) is limited (e.g., studying individual genes).
+Unfortunately, MLE tree computations are much more compute intensive (often by orders of magnitude).
+Hence, only in the last decade have MLE algorithms begun to be adopted for phylogenetic tree computations.
+Protein sequence-based MLE phylogenetic tree computations is still in its infancy for performance reasons.
+Advantages of MLE tree construction codes include:
+* MLE generates consistent tree estimates as the number of characters increases (assuming a correctly specified model).
+* MLE makes efficient use of the sequence data.
+This is an issue due to the limited length of sequences we have.
+* MLE permits uneven branch lengths (nonconstant clocks).
+* MLE can be adapted to deal with uneven mutation rates across branches (same as 3), and across sequence sites.
+(See below.)
+* MLE can readily cope with character reversals found in our data (i.e., arising from long evolutionary depth of trees).
+* MLE provides estimates of the goodness of tree (i.e., their likelihood of giving rise to the data, which provides a uniform standard for comparing trees (and models).
+* MLE can be adapted to deal with non-independent site evolution (see below).
+The goals of this project is to expand the feasibility of MLE phylogenetic tree computations, by providing better parallel implementations, and by using state-fo-the-art parallel computers to apply such codes to recomputing the Tree of Life a deep large scale phylogeny of many organisms.
+Why use fastDNAML?
+The most obvious reason to use the fastDNAml code is our familiarity with and access to the source code and the cooperation of the developer, Gary Olsen, with our efforts to parallelize and otherwise enhance the code.
+We also know how that the code can be successfuly parallelized.
+Gary Olsen is also happy to have code distributed freely.
+Indiana University staff (and other groups at Argonne, LANL, etc.) have previously parallelized earlier versions of the code.
+(This is discussed in more detail below.)
+FastDNAml has also been widely distributed and used in the phylogeny community.
+FastDNAml is faster that DNAml, from which it was derived.
+FastDNAml 1.2.2 permits site specific mutation rates.
+The web site http://newfish.mbl.edu/Course/Software/ provides links to a number of the most important codes for computing phylogenetic trees (not just maximum likelihood methods).
+Some of the major alternatives to fastDNAml include: * PAUP - This code has been developed by Dave Swofford.
+It has been copyrighted and is now distributed commercially in object form (only) by Sinnaeur Associates.
+Hence we have no access to the source code.
+Even if we did gain access to the source code, it is unlikely we would be permitted to redistribute the code.,.
+* PAML (Phylogenetic Analysis by Maximum Likelihood) - To quote the author Ziheng Yang from his web page http://abacus.gene.ucl.ac.uk/software/paml.html dated October 2000:
+PAML is not good for tree making.
+There are a few options for heuristic tree search, but they do not work well except for small data sets of only a few species.
+If you hope to use PAML to compare trees from relatively large data sets, one possibility is to get a collection of candidate trees and then compare them using more sophisticated models implemented in PAML.
+* DNAML and DNAMLK These codes were developed by Joe Felsentein.
+Note that fastDNAml is derived from version 3.3.
+of DNAML.
+FastDNAml is generally faster than DNAML.
+DNAML now permits "k" classes of sites, each class with a separate mutation rate parameter.
+DNAML infers which which class each site is.
+In contrast fastDNAml estimates separate mutation rates for each nucleotide site.
+Why use SCFGs?
+The estimation of phylogenetic trees from a set of sequences is usually done in two steps: 1) computation of a multiple alignment for the set of sequences and 2) computation of the phylogenetic tree based on this multiple alignment.
+The computations for the multiple alignment and the phylogenetic tree are intimately tied.
+The quality of the multiple alignment directly affects the quality of the inferred phylogenetic tree [Morrison and Ellis, 1997, Feng and Doolittle, 1987].
+While the estimation of both the phylogenetic tree and the multiple alignment simultaneously can be formulated with a appropriate mathematical model [Durbin et al., 1998, Knudsen and Hein, 1999], this estimation turns out to be very hard.
+A more feasible alternative is to adopt the two stage process of multiple alignment construction followed by phylogenetic tree estimation.
+We propose to explore the use of stochastic context-free grammars (SCFGs) in the construction of high-quality multiple alignments of ribosomal RNA for use in phylogenetic tree estimations.
+Previous attempts at aligning ribosomal RNA have relied on both automated methods and human hand fine-tuning.
+Indeed, recent papers have lamented that a fully automated, accurate alignment of ribosomal RNA sequences remains a diffcult problem [O'Brien et al., 1998].
+Some of the diffculties stem from the fact that ribosomal RNAs are large, a fact that also makes them good sources of information for phylogenetic inference.
+Another more fundamental diffculty arises because ribosomal RNAs form complex secondary structures created by basepair formation.
+A correct alignment of rRNA must not only take into account primary sequence conservation but also information present in the secondary structure.
+Because most automated sequence alignment programs are unable to account for secondary structure, this poses a fundamental problem that has largely been solved by hand-tuning the alignment to make sure it agrees with the secondary structure.
+This is not feasible for large numbers of sequences present in the databases.
+Stochastic context-free grammars solve the problem of aligning most secondary structure by forming a probabilistic model similar to hidden Markov models that takes into account both primary and secondary structure information.
+The method has been shown to produce multiple alignments of small subunit ribosomal RNA that are highly accurate and are of higher quality than those produced by other methods such as ClustalW and hidden Markov models [Brown, 2000, Brown, 1999].
+Stochastic context-free grammars are an extension of hidden Markov models and have their basis in formal language theory and probability.
+SCFGs can be used to model secondary structure interactions of biological molecules.
+Like HMMs, SCFGs are probabilistic generative models.
+SCFGs use a grammar to generate a string by applying a series of string rewrite rules or productions.
+The sequence of productions used can be interpreted as representing different biological structures such as basepairs.
+See Figure 1 for an illustration of an SCFG grammar applied to RNA structure.
+SCFGs can be thought of as models that capture the information in a multiple alignment in which certain columns are considered to be basepaired and therefore have an informative joint distribution.
+SCFGs can be used to align new sequences of rRNA including prediction of all basepairs, bulges, and loop regions of a new sequence of SSU rRNA, discriminate between rRNA and non-rRNA, and create multiple alignments of rRNA [Sakakibara et al., 1994, Eddy and Durbin, 1994].
+Computational resources are an important consideration when applying SCFG modeling to large RNA molecules.
+SCFG algorithm running times are known to be O(M L3) and space requirements are O(M L2) where M is the number of nonterminals and L is the length of the string.
+For small subunit ribosomal RNA, computing the alignment of one sequence requires approximately 16 billion dynamic programming table entries, a fact that makes the computation infeasible for most of today's computers.
+The RNACAD SCFG system that we propose to use, employs a system of constraints to reduce this search space while still maintaining a high level of quality [Brown, 2000, Brown, 1999].
+The RNACAD constraint system is based on hidden Markov model posterior decode probabilities as computed by the SAM hidden Markov modeling package [Karchin and Hughey, 1998, Hughey and Krogh, 1996].
+Other SCFG packages such as Sean Eddy's COVE system (http://www.genetics.wustl.edu/eddy/software) do not use constraints and suffer computationally when faced with large RNA molecules.
+Brown's RNACAD SCFG system
+The current RNACAD SCFG system for RNA modeling is available at http://www.cse.ucsc.edu/~mpbrown/rnacad.
+This system provides an end-to-end system for RNA modeling and has been used for small subunit ribosomal RNA modeling.
+The entire system is composed of a number of C++ programs and Perl scripts with the computationally intensive parsing algorithms coded in C++.
+A necessary component when using the system with large RNA molecules is the computation of hidden Markov model posterior decode probabilities, a capability currently provided by the SAM hidden Markov modeling package at UCSC.
+Hidden Markov modeling is effcient and at this time does not present a bottleneck in the computation.
+The data flow pathway for computing multiple alignments consists of two main steps: 1) estimation of SCFG and 2) parsing sequences given the estimated SCFG.
+Estimation of the SCFG starts with a training set of sequences, a rough alignment of the sequences, and a consensus secondary structure.
+From this data, parses are computed for every sequence in the training set.
+These parses are then used to update parameters of the SCFG.
+Several iterations of training can be done in an expectation maximization framework to get to the final estimated SCFG.
+A typical SCFG for small subunit ribosomal RNA contains approximately 50,000 parameters.
+a.
+Productions
+P = f S0 ! S1; S7 ! G S8;
+S1 ! C S2 G; S8 ! G; S2 ! A S3 U; S9 ! A S10 U; S3 ! S4 S9; S10 ! G S11 C; S4 ! U S5 A; S11 ! A S12 U; S5 ! C S6 G; S12 ! U S13; S6 ! A S7; S13 ! C g
+b. Derivation
+S0 ) S1 ) CS2G ) CAS3UG
+) CAS4S9UG ) CAUS5AS9UG ) CAUCS6GAS9UG ) CAUCAS7GAS9UG ) CAUCAGS8GAS9UG ) CAUCAG GGAS9UG ) CAUCAGGGAAS10UUG ) CAUCAGGGAAGS11CUUG ) CAUCAGGGAAGAS12UCUUG ) CAUCAGG GAAGAUS13UCUUG ) CAUCAGGGAAGAUCUCUUG:
+c. Parse tree
+(file treePicSmall.ps)
+d. Secondary Structure
+(file foldedRnaSmall.ps)
+Figure 1: A simple context-free grammar which may be used to derive a set of RNA molecules including the specific example illustrated here, CAUCAGGGAAGAUCUCUUG. a.
+A set of productions P which generates RNA sequences with a certain restricted structure.
+S0 (start symbol), S1; : : : ; S13 are nonterminals; A, U, G and C are terminals representing the four nucleotides. b. Application of the productions P could generate the given sequence by the derivation indicated.
+For example, if the production S1 ! CS2G is selected, the string CS2G replaces S1 and the derivation step is written S1 ) CS2G. c.
+The derivation in b may be arranged in a tree structure called a parse or derivation tree. d.
+The physical secondary structure of the RNA sequence is a reflection of the parse tree (or syntactic structure).
+Note that new secondary structure is not inferred by the system.
+Estimating secondary structure from raw sequences is a hard problem that usually involves computing some measure of joint information such as mutual information between multiple alignment columns and using this measure to infer basepairing interactions.
+This system does not do secondary structure inference and simply requires that a consensus structure be given.
+While not optimal, this system still allows high quality multiple alignments to be generated as evidenced by the system-constructed alignments of several bacterial and archaea sequences given the consensus secondary structure of E.coli.
+Current research is being done to allow the inference of new secondary structure in a SCFG modeling framework [cite mpsb DARPA grant].
+After estimation of the SCFG, new multiple alignments are generated in a three step process.
+First, a hidden Markov model approximation of the SCFG is used to effciently identify SCFG constraints.
+These constraints are required to effciently run the SCFG.
+The running time and memory usage of the SCFG parse varies with the constraints generated in this process.
+Sequences that are highly diverged from the average sequence represented by the SCFG will generate only low information constraints and will cause the SCFG parse to take more memory and time than those sequences that are close to the average sequence.
+Second, the sequences are parsed using the SCFG and the constraints.
+Because the constraints directly relate the required memory for the parse, they can be used to load balance parsing many sequences on many nodes by separating the computationally intensive parses from the simpler ones.
+Third, the resulting parses are collected and a multiple alignment is produced using a simple algorithm.
+Any sequences parsed under a given SCFG can be multiply aligned.
+Why use SCFG (Stochastic Context Free Grammar) for multiple sequence alignment (MSA)?
+a.
+MSAs respect secondary structure b. better quality MSA c. reduce hand tweaking of MSAs
+Why use M. Brown's SCFG code?
+because Sean Eddy's codes does not include constraints to reduce computational complexity for large problems.
+The Data --------
+From MSU RDP project 16S rRNA sequences (9K = 100 x 100) from prokaryotes (ready now) 18S rRNA sequences (5K = 100 x 100) from eukaryotes (ready in early 2001) [Jim Cole writes this section]
+History of FastdnaML --------------------
+Based on dnaML from Joe Felsenstein version ?? circa ??
+Preliminary Studies
+History of Parallelization of fastDNAml
+FastDNAml was initially based on version 3.3 of Felsenstein's dnaml program [Olsen et. al 1994].
+FastDNAml incorporates a number of enhancements to Felsenstein's program to speed the estimation of phylogenetic tress.
+One of these advancements was the addition of the code to parallelize the optimization of individual trees.
+The basic structure of fastDNAml lends itself quite well to parallelization: at each step in the tree-building process, the addition of a taxon to the tree involves first determining the topology of every new tree that can be created by adding a this new taxa, and then optimizing and evaluating the likelihood value for each of these trees.
+A 'foreman' program can generate a dispatch each of the trees that must be evaluated, but the tree evaluation can easily be handled in parallel.
+The initial parallelization done by Olsen et al. used the P4 libraries [http://www-fp.mcs.anl.gov/~lusk/p4/index.html]. fastDNAml is ideal for parallelization: each tree is analyzed many times as the order of addition of taxa is rancomized; for each run there are thousands of trees to be analyzed; and while the analysis and optimization of each tree is computationally intensive, the only information that is returned from subprocesses to the main program is a tree and a likelihood value.
+Gary Olsen was a postdoctoral research associate at Indiana University, and as a result biologists at IU have long been interested in use of fastDNAml.Don Berry ported the P4-library version (fastDNAml version 1.0.6) to run on IU's 96-processor Intel Paragon architecture in 1993.
+This code was use in support of many research projects and publications until 1997.
+In Spring 1997, fastDNAml 1.0.6 was converted to PVM at Indiana Univ. and ported to IBM AIX and SGI IRIX systems.
+Indiana University and the University of Chicago Electronic Visualization Laboratory sponsored a display called iGrid at the SuperComputing98 conference (http://www.sc98.org).
+Indiana University demonstrated a geographically distributed version of the PVM-based fastDNAml code at this conference.
+IU collaborated with the National University of Singapore and Australia National University for this demonstration, running this code on up to 33 processors spread around the Pacific Ocean on three continents.
+Will Fischer [IU] studied phylogenetic placement of Mycrosporidia; Meena Sakharkar [NUS]
+In addition, IU's Advanced Visualization Laboratory has developed a visualization tool for monitoring the process of trees as taxa are added, and for comparing the results of multiple randomizations of order of addition of taxa to the trees.
+Much of IU's early work with fsatDNAml is described in Stewart et al. [http://www.cas.ibm.com/archives/1999/workshop_report/bio.html]
+The geographically-distributed version of fastDNAml includes a number of enhancements to earlier parallel versions, including a vastly simplified code structure [with the program subdivided into two components - foreman and worker - as opposed to the four subcomponents of the earlier versions].
+In addition, the geographically-distributable version of fastDNAml included mechanisms for fault tolerance, permitting the program to proceed with almost no interruption if a single processor failed, or if a network problem make an entire system either unreachable or reachable only so slowly that its use slowed, rather than speeded up, the overall calculations.
+In Spring 1999, fastDNAml was converted to MPI, and also ported to Linux.
+This version has been run on Linux clusters at IU and New Mexico, as well as on IU's IBM SP.
+The MPI version of fastDNAml 1.0.6 is now available for download from http://www.indiana.edu/~rac/hpc/fastDNAml/index.html, under the terms of the GNU General Public License.
+A good summary of the parallel program flow is available online in tutorial notes from SuperComputing 2000 [http://cbcg.lbl.gov/].
+Research Design and Methods
+Overview of Computations
+* Phase I - winter calendar 2001
+* Get SMSAs from MSU * Compute trees via parallel fastDNAml at LBNL * Compare MLE trees to NNJ trees computed as MSU
+Phase II - spring/summer 2001 * Get sequences from MSU * Compute MSAs with parallel SCFG at LBNL * Compare SCFG MSAs to MSU MSAs * Compute trees via parallel fastDNAml at LBNL * Compare MLE trees to NNJ trees computed as MSU
+Overview of Code Development, Testing
+Indiana University is currently parallelizing fastDNAml 1.2.2, which is the current publicly available version of fastDNAMl.
+Version 1.2.2 contains several important enhancements over 1.0.6 notably: rescaling of the likelihood computation to to prevent underflow problems, and site specific mutation rates.
+The parallel version of fastDNAml version 1.2.2 will consolidate all of the advances IU has made to date: simplified and improved parallel program structure; fault tolerance for geographical distribution; and the availability to specify the program library of choice (PVM or MPI).
+This will become a framework for future parallelization work with fastDNAml.
+Gary Olsen is currently revising fastDNAml and anticipates the release of Version 1.3 in early 2001.
+This revision includes code clean up and improvements in modularization of the code.
+We anticipate that fastDNAml version 1.3 will be the base version to which all of the enhancements described below in this proposal will be added.
+The proposed parallelization work with fastDNAml version 1.3 will include enhancements to parallelization at several levels.
+One aspect of the parallelization of the code will happen at the most coarse possible level.
+At present one can run multiple replicates (randomizations of the order of the entry order of taxa) serially using a script written by Gary Olsen.
+Such replication may be used either to search through multiple local optima of the likelihood function, or for the purpose of estimating the reliability of of the tree.
+We propose to raise the level of parallelization so that the main 'foreman' program will manage multiple randomizations simultaneously.
+This embarrassingly parallel but essential aspect of fastDNAml execution will permit it to scale to thousands of processors simulaneously.
+At the same time, we will adopt a mixed programming model to achieve more fine-grained parallelization to the optimization of each tree.
+For parallel computers such as the IBM SP or clusters of multiprocessor workstations, we will use MPI to dispatch a specific tree topology to an individual SMP node, where branch length optimization to maximize the likelihood for that topology will be performed, returning the topology, branch lengths, and likelihood.
+OPENMP directives will be used to achieve fine grained parallelism within each SMP node/workstation as described below.
+OpenMP directives are a mechanism to permit fine grained parallelism (via multithreading) on shared memory multiprocessors.
+They are well suited to unrolling and splitting DO loops among several processors which share the same memory space.
+The new models of the IBM SP begin deployed at IU, LBNL and elsewhere are just such machines, with many nodes, each comprised of 8 or 16 processors sharing 4 or 8 GB of main memory.
+We plan to parallelize the branch length optimization of an individual tree topolgy and calculation of its likelihood values.
+Because the sequences are fairly long (e.g., 3500 bases (including null padding) for aligned 16S sequences), it should be efficient to split up the DO loops which compute the sequences for internal nodes in the phylogenetic tree and the accompanying likelihood values.
+The most important advantage of this approach will to increase the maximum size of the tree (i.e., number of taxa) and/or the sequence length that can be optimized since the entire memory of an SMP node (comprised of 8 or 16 processors) can be devoted to a single tree.
+By increasing the degree of parallelism for a given problem, we can also reduce the clock-time (if not cpu time) for a given sized problem.
+Many of the enhancements (such as the use of OPENMP) listed above will be targeted at large supercomputers, such as the IBM SP machines at IU and NERSC.
+However, there are two other machine configurations which we believe are viable computing environments.
+Both involve large collections of workstations or PCs.
+We plan to create versions of the code which will run on either: * LINUX-based clusters of PCs.
+Both NERSC and IU have such clusters and they are increasingly commonplace at many universities and biotech firms.
+* idle workstations (or PCs) Systems such as CONDOR, developed by Myron Livny at Univ. of Wisconsin, permit idle workstations or PCs (e.g., in the evening across a University or Laboratory campus, or across the country) to be enlisted in those parallel computations with suitable structures, i.e., low communication and input/output requirements).
+FastDNAml falls into this category.
+Other improvements to fastDNAml
+Improved Search Heuristics
+We plan to improve the heuristics used to trim the search space of topologies.
+When fastDNAml adds a new sequence to a tree, all tree branches (edges) are examined to find the optimal insertion point.
+In a large tree, a sampling of branches could be used to guide a divide-and-conquer approach.
+A paired sites test (Kishino and Hasegawa, 1989) could be used to quantitatively reject insertion of branches into entire regions of the tree.
+Other improvements in speed could result from limiting searches for better topologies to those parts of the tree that have been recently perturbed, e.g., by the addition of a new sequence.
+Finally, storing information about the stability of branches in the tree could be used to minimize reconsideration of the most certain parts.
+We plan to develop a mechanism to stop very quickly when a tree being optimized clearly is not competitive with others as a candidate for being a 'best tree' during the process of tree building.
+This way little time will be wasted on trees that are clearly pathological.
+[In an analysis of vertebrates, for example, there should come a point at which it is obvious that no tree that involves adding an amphibian into a clade filled with bony fishes.]
+[Editor's note (Olken): unclear how we propos to do this ????]
+Ensembles of best trees Rather than keeping the best single tree at each step, the best "k" trees (where "k" is a user-specified parameter) will be kept, and the next taxa will be added in all possible positions to each of these n trees.
+Then the best n of the resulting trees will be kept, etc.
+Coalescing base-paired nucleotides
+The current fastDNAml code assumes each nucleotide position in the RNA sequence evolves independently.
+This is a commonplace assumption among MLE phylogenetic tree codes.
+However, we know that RNA forms stem and loop secondary structures in which the stems contain base-paired nucleotides, which co-evolve.
+The co-evolvution of the base-paired nulceotides arises from the fact that several mispaired nucleotides would cause the stem structure to unravel, disturbing the 3D structure of the rRNA and eventually its functionality.
+We propose to combine pairs of base-paired nucleotides into individual characters with larger alphabet (i.e., 16 possible states vs. 4 states for a single nucleotide).
+A corresponding larger (16 x 16) transition matrix (vs. 4 x 4 transition matrix for a single nucleotide position) is also required.
+We believe that this should produce substantially more accurate likelihood computations.
+However, the larger transition matrix implies that the resulting computations will be substantially longer, in spite of the reducing the number of characters by almost half.
+Improved Branch Length Optimization
+We also plan to accelerate branch length optimization.
+Two places to look for improvement are finding faster ways to get initial branch length estimates and focusing the optimization efforts in the vicinity of recent perturbations.
+Missing Data
+Two facets of missing sequence data need to be considered.
+First, present MLE phylogenetic tree programs add sequences either in a user-defined order or in a completely random order.
+R. Overbeek and G. Olsen (personal communication) have found that in the construction of large trees, adding the most complete (most informative) sequences early is very important.
+This finding will be incorporated into the code.
+Second, we will carefully examine alternative treatments of the missing data in the likelihood model.
+There is not apt to be much benefit here, so this will be considered in year 3.
+Other Misspecification Errors
+To reduce errors due to misspecification of the statistical evolutionary models we will take the following steps: * fastDNAml already supports the use of branch dependent mutation rates (it is implicit in allowing a nonconstant clock).
+DNArates (a program written by G. Olsen) can compute position dependent mutation rates from a MSA and a phylogenetic tree.
+Such variable rates can then be used to recompute the tree.
+We envision use of this code in an outer loop, repeatedly calling fastDNAml with the proposed site dependent mutation rates.
+This model is limited in that it assumes mutation rates vary as scale factors (modeling evolution as the product of the site-specific rate and the branch length).
+Our experiences suggest that two to three iterations are sufficient to reach the limits of this model (also, the rate estimates from a stratified sample of sequences provide a very good estimate of the rates for the full data set). * fastDNAml allows variable weighting of positions in computing the likelihood function (e.g., to account for covariation).
+We expect to use information from the MSA and secondary structure estimation to provide reduced weighting of paired sequence positions.
+We also envision exploring more explicit incorporation of site covariance for sites secondary structure base-pairing stems, by collapsing paired sites into a single character over a large state space (e.g., Tillier and Collins, 1998).
+(See discussion above.)
+* We will explore the modeling of insertions and deletions by an additional state at a sequence position (a gap is currently treated as missing data, which can make sequences too similar).
+Extension to Protein Sequences
+At present fastDNAml can handle RNA or DNA sequences, but not protein sequences.
+We plan to extend fastDNAml to handle protein sequences.
+Protein sequences have a 20 letter (amino acid) alphabet (state space) and the associated transition matrix for state transitions is 20 x 20.
+These transition matrices must be exponentiated (the branch length is part of the exponent) and the result multiplied by the probability vector for each nucleotide position to generate the probability vector for next higher internal tree node.
+This must be done for each The larger transition matrix is used in calculating the probability distributions for internal nodes of the tree and likelihood values.
+These computations are require much more computing than those based on the 4 x 4 transition matrices the computational requirements of the program, and considerable time will be spend optimizing the worker process to handle this computational problem.
+Phylogenetic Tree Comparison
+The ability to develop large phylogenetic trees has increased the difficulty in discerning differences between different trees.
+Trees may be defined over identical or overlapping datasets, they may differ by topology or branch length or node labels.
+Wang, Zhang, Jeong, and Shasha (see citations in Literature Cited for these authors) have developed algorithms for an approximate tree matching, akin to approximate string matching.
+They minimize the edit distance between labelled, rooted (or unrooted) trees.
+Edit operations include subtree insertion, deletion, or substitution.
+We are also interested in "rotation" operations which correspond to reordering temporally proximate branchings (e.g., radiative speciation).
+DasGupta et al. (1997) have discussed such transformations.
+One unanswered question concerns the appropriate choice of parameters.
+A number of related problems (and hence algorithms) exist which vary by whether nodes are unlabelled, labelled, or leaf-only labelled (our case), by whether siblings are ordered (not for our case), and by whether trees are rooted (typical for most tree matching algorithms, often false for phylogenetic trees).
+Rootedness is the equivalent of "directed" vs. "nondirected" trees.
+In addition, constraints on the fan-out of nodes affect the computational complexity.
+As a result, most phylogenetic trees are computed as binary trees.
+A related question concerns the identification of common subtrees (a.k.a. consensus trees or maximum agreement subtrees (MAST)) among two or more phylogenetic trees.
+Fu, Kannan, Warnow, and Farach (see citations in See Literature Cited) have investigated this question.
+We plan to investigate the use of existing tree comparison methods and of consensus tree algorithms in the second year, and parallelization of such algorithms in the third year.
+SCFG
+Note that SCFG must be given the secondary structure.
+Discussion of current implementation
+16S rRNA sequences
+sequences are typically 1600 base long alignment is typically 3500 bases long
+Parameters to specify grammar
+50K parameters 30K bytes (??? less than one byte / parameter ????)
+SCFG Parallelization Strategy
+It is relatively straightforward to recode the RNACAD SCFG algorithm to exploit coarse grained parallelism by parallelizing at the sequence level.
+Each sequence would be assigned (via MPI) to a different processor for computation.
+CPU time scales linearly in the number of sequences.
+More fine grained parallelization (within individual sequences) would be difficult to implement.
+However, there are problems with this simple approach which arise from the great variability of run times and storage usage required for parsing individual sequences.
+Each parse of a sequence requires 4 minutes to 6 hours.
+Parses also vary in the amount of memory required ranging from 100 KB (or less) to 1 GB. Poorly constrained sequences require both more cpu time and more memory.
+Since each SMP node in an IBM SP typically has only 500MB per processor, it is possible that memory contention could effectively idle many of the processors.
+M. Brown's experiments indicated that it required 20 hours to parse 200 sequences twice = 20 seq parses/hr on DEC Alpha with a 500 MHz clock.
+In that experiment Brown parsed each sequence twice, but for good quality parsing, we anticipate we will require 7 iterations (parse, then parameter estimation) for each sequence.
+This implies 3 sequences/hr (parsing + est.) per processor.
+We envision parsing (and aligning) some 15K sequences from MSU RDP project (10K 16S and 5K 18S).
+There are two major limitations of current code which we will need to address.
+* It requires full (complete) sequences.
+* It requires farily homogeneous sequences.
+In order ot address the full sequence limitation, we will initially on use full sequence data from MSU.
+Later we will align new sequences to consensus sequence, extract subset of general HMM model / SCFG grammar, use the partial model for parsing, and MSA construction.
+The Homogeneous sequence limitation will require that we initially restrict ourselves to relatively homogeneous sequence problems.
+It is the subject of ongoing research by M. Brown, whose results we will employ when they become available.
+Bin packing Workload Assignment As noted above the SCFG codes uses secondary structure based constraints to delimit search space.
+Weak constraints imply: * Long CPU time (4 min to 6 hr / parse) * Large memory requirements (up to 1 GB)
+The clear implication is that naive workload assignment will likely lead to por workload balancing across processors, Possible memory contention in SMP nodes.
+We plan to address this problem by using bin packing based workload assignment of sequences to SMP nodes based on cpu time and memory requirements estimated from the results of the HMM computations.
+We do not require perfect bin packing workload assignments, we expect that relatively simple heuristic bin packing should suffice.
+It is of some note that the required bin packing is 2 dimensional (memory x cpu time).
+Visualization
+Deployment Targets
+Our primary targets for deployment of the parallel SCFG and fastDNAml codes will be the IBM SP machines at LBNL and Indiana University.
+The machines run variants of IBM's AIX operating system (a variety of Unix).
+We plan to use the native IBM C (for fastDNAml) and CC compilers and libraries.
+fastDNAml has traditionally been run on various Unix and Linux machines, and SCFG on Unix on a DEC Alpha.
+We plan to preserve the capability to run on Linux clusters and Sun Solaris Unix, using GNU C/C++ and Sun C/C++ compilers respectively.
+Software Engineering Issues
+fastDNAml and SCFG have been largely single developer codes.
+We envision that 3 groups (UIUC, IU, and LBNL) may be working simultaneously on these codes.
+We plan to use CVS to manage the various code versions of both fastDNAml.
+Present thinking is that to have the fastDNAml CVS repository at IU and the SCFG CVS repository at LBNL.
+We are thinking of using some sort of conditional compilation to manage the various target versions (serial, parallel, Solaris, Linux, AIX).
+We are considering the possible use of imake (used for X-Window systems) or CMT (used in the high energy physics community) in combination with CVS to manage the multiple platform code builds.
+Relationship to Other Projects
+[need Jim Cole to rewrite relationship to RDP]
+The Ribosomal Database Project at MSU has been collected thousands of rRNA sequences and assembling them in multiple sequence alignments using .....
+These MSAs have been segmented and used as inputs to Nearest Neighbor Joining codes to construct phylogenetic trees.....
+The NNJ codes have been used because MSU lacks the computing resources (human and electronic) to perform the more accurate MLE tree construction.
+The work proposed here will permit the construction of better quality phylogenetic trees by the RDP project.
+....
+[need Michael Brown to write something on relationship to RDP]
+Structure of the Consortium
+Some of the programming and computing may be moved between IU and LBNL depending on the availability of staff and computing resources.
+IU will handle most of the parallelization of fastDNAml and visualization work.
+UIUC and LBNL (and perhaps IU) will work on enhancements to the core (serial) fastDNAml code.
+LBNL will also develop the parallel version of the SCFG code.
+LBNL will be responsible for the bulk of the computing of the MSU data.
+MSU will supply data and evaluate the results of the SCFG MSAs and the new phylogenetic trees.
+UIUC will also supply some test cases and evaluation.
+LBNL, IU, and UIUC will each receive separate funding from DOE OBER - budgets are attached.
+MSU RDP project already has funding from DOE et al.
+M. Brown is funded by DARPA.
+* Indiana Univ
+* MPI Version of fastDNAml 1.2.2 * MPI Version of fastDNAml 1.3 * MPI and OPENMP Version of fastDNAml 1.3 * Linux cluster, and workstation farm versions of fastDNAml
+LBNL * MPI Version of SCFG 1.0 * Load-balancing version of SCFG 1.0 * (with UIUC) fastDNAml with combined characters * (with UIUC) fastDNAml with improved heuristics * tree comparison codes * Computation of datasets from MSU.
+* Overall project management, and coordination
+UIUC * fastDNAml Version 1.3 * Various other enhancements to fastDNAml serial version (with LBNL) * assist in providing test cases and evaluating resulting MSAs and trees
+Role of MSU
+* Supply data - sequences and MSAs * (with UIUC) evaluate MLE trees (cf with NNJ trees) * (with UIUC) evaluate SCFG MSAs (cf with existing MSU MSAs)
+Deliverables
+* FY 2001
+* MPI Parallel Version of fastDNAml 1.2.2 * MPI Parallel Version of fastDNAml 1.3 * MPI + OPENMP Parallel Version of fastDNAml 1.3 * MPI Parallel Version of SCFG MSA Code * MLE Trees of 16S rRNA from MSU * MLE Trees of 18S rRNA from MSU * Comparison of MLE and NNJ rRNA Trees
+FY 2002 * MPI+OPENMP Version of fastDNAml with Combined Base Pair Characters * First Tree Comparison Codes
+FY 2003 * MPI and OPENMP version of fastDNAml for protein sequences * Parallel Tree Comparison Codes * MPI Parallel Version of SCFG 2.0 (heterogeneous sequences)
+III.
+Literature Cited
+[Bibliography goes here.]
+(Citation style will [Authors, Year], Use letter suffix if multiple papers in one year.
+)
+Amann, R. I., W. Ludwig, K. H. Schleifer.
+1995.
+Phylogenetic identification and in situ detection of individual microbial cells without cultivation.
+Microbiol.
+Rev. 59(1):143-69.
+Brown, M. 1999.
+Ribosomal RNA alignments using stochastic context free grammars.
+DOE Human Genome Program Contractor-Grantee Workshop VII.
+Abstract 119.
+DasGupta, B., X.
+He, T. Jiang, M. Li, J. Tromp, and L. Zhang.
+1997.
+On distances between phylogenetic trees, p. 427-436.
+In Proceedings of the Eighth Annual ACM-SIAM Symposium on Discrete Algorithms, New Orleans, LA, USA, 5-7 Jan. 1997.
+Association for Computing Machinery, New York, NY.
+Farach, M., and M. Thorup.
+1997.
+Sparse dynamic programming for evolutionary-tree comparison.
+SIAM J. Comput.
+26(1):210-30.
+Fu, J. J. 1996.
+Approximate pattern matching in directed graphs, p. 373-383.
+In Combinatorial Pattern Matching.
+7th Annual Symposium, CPM 96.
+Proceedings, Laguna Beach, CA, USA, 10-12 June 1996.
+Springer-Verlag, Berlin, Germany.
+Gupta, R. S. 1998.
+What are archaebacteria: life's third domain or monoderm prokaryotes related to Gram-positive bacteria? A new proposal for the classification of prokaryotic organisms.
+Mol. Microbiol.
+29:695-707.
+Guschin, D. Y., B. K. Mobarry, D. Proudnikov, D. A. Stahl, B. E. Rittmann, and A. D. Mirzabekov.
+1997.
+Oligonucleotide microchips as genosensors for determinative and environmental studies in microbiology.
+Appl.
+Environ.
+Microbiol.
+63(6):2397-2402.
+Halldorsson, M. M., and K. Tanaka.
+1996.
+Approximation and special cases of common subtrees and editing distance, p. 75-84.
+In T. Asano, Y.
+Igarashi, H. Nagamochi, S. Miyano and S. Suri (ed.), Algorithms and Computation.
+7th International Symposium, ISAAC `96 Proceedings, Osaka, Japan, 16-18 Dec. 1996.
+Springer-Verlag, Berlin, Germany.
+Hugenholtz, P., B. M. Goebel, and N. R. Pace.
+1998.
+Impact of culture-independent studies on the emerging phylogenetic view of bacterial diversity.
+J. Bacteriol.
+180(18):4765-4774.
+Jiang, T., L. Wang and K. Zhang.
+1995.
+Alignment of trees - an alternative to tree edit.
+Theoretical Computer Sciences 143(1):137-148.
+Kannan, S., T. Warnow and S. Yooseph.
+1995.
+Computing the local consensus of trees, p. 68-77.
+In Proceedings of the Sixth Annual ACM-SIAM Symposium on Discrete Algorithms.
+Association for Computing Machinery, New York, NY.
+Kishino, H., and M. Hasegawa.
+1989.
+Evaluation of the maximum likelihood estimate of the evolutionary tree topologies from DNA sequence data, and the branching order of Hominoidea.
+J. Mol. Evol. 29:170-179.
+Larsen, N., G. J. Olsen, B. L. Maidak, M. J. McCaughey, R. Overbeek, T. J. Macke, T. L. Marsh, and C. R. Woese.
+1993.
+The ribosomal database project.
+Nucleic Acids Res. 21:3021-3023.
+Maidak, B. L., G. J. Olsen, N. Larsen, R. Overbeek, M. J. McCaughey, and C. R. Woese.
+1996.
+The Ribosomal Database Project (RDP).
+Nucleic Acids Res. 24: 82-85.
+Maidak, B. L., G. J. Olsen, N. Larsen, R. Overbeek, M. J. McCaughey, and C. R. Woese.
+1997.
+The RDP (Ribosomal Database Project).
+Nucleic Acids Res. 25(1): 109-110.
+Maidak, B. L., J. R. Cole, C. T. Parker, Jr., G. M. Garrity, N. Larsen, B. Li, T. G. Lilburn, M. J. McCaughey, G. J. Olsen, R. Overbeek, S. Pramanik, T. M. Schmidt, J. M. Tiedje, and C. R. Woese.
+1999.
+A new version of the RDP (Ribosomal Database Project).
+Nucleic Acids Res. 27(1):171-173.
+Maidak, B. L., N. Larsen, M. J. McCaughey, R. Overbeek, G. J. Olsen, K. Fogel, J. Blandy, and C. R. Woese.
+1994.
+The ribosomal database project.
+Nucleic Acids Res. 22: 3485-3487.
+NABIR, Natural and Accelerated Bioremediation Research: http://www.lbl.gov/NABIR/ O'Brien, E., C. Notredame and D. Higgins.
+1998.
+Optimization of ribosomal RNA profile alignments.
+Bioinformatics 14:332-341.
+Olsen, G. J., H. Matsuda, R. Hagstrom, and R. Overbeek.
+1994.
+fastDNAml: A tool for construction of phylogenetic trees of DNA sequences using maximum likelihood.
+CABIOS 10:41-48.
+Olsen, G. J. and Woese, C. R.
+A brief note concerning archaebacterial phylogeny, Can J Microbiol.
+35: 119-23, 1989.
+Olsen, G. J. and Woese, C. R. Ribosomal RNA: a key to phylogeny, Faseb J. 7: 113-23, 1993.
+Olsen, G. J. Earliest phylogenetic branchings: comparing rRNA-based evolutionary trees inferred with various techniques, Cold Spring Harb Symp Quant Biol. 52: 825-37, 1987.
+Olsen, G. J., Lane, D. J., Giovannoni, S. J., Pace, N. R., and Stahl, D. A. Microbial ecology and evolution: a ribosomal RNA approach, Annu Rev Microbiol.
+40: 337-65, 1986.
+Olsen, G. J., N. Larsen, and C. R. Woese.
+1991a.
+The ribosomal RNA database project.
+Nucleic Acids Res. 19:2017-2021.
+Olsen, G. J., R. Overbeek, N. Larsen, and C. R. Woese.
+1991b.
+The ribosomal database project: Updated description.
+Nucleic Acids Res. 19:4817-4817.
+Olsen, G. J., R. Overbeek, N. Larsen, T. L. Marsh, M. J. McCaughey, M. A. Maciukenas, W.-M. Kuan, T. J. Macke, Y.
+Xing, and C. R. Woese.
+1992.
+The ribosomal database project.
+Nucleic Acids Res. 20:2199-2200.
+Pace, N. R. 1997.
+A molecular view of microbial diversity and the biosphere.
+Science 276(5313):734-740.
+Phillips, C., and T. J. Warnow.
+1996.
+The asymmetric median tree-a new model for building consensus trees, p. 234-252.
+In Combinatorial Pattern Matching.
+7th Annual Symposium, CPM 96.
+Proceedings, Laguna Beach, CA, USA, 10-12 June 1996.
+Springer-Verlag, Berlin, Germany.
+Sakakibara, Y., M. Brown, R. Hughey, I. S. Mian, S. Sjolander, R. C. Underwood, and D. Haussler.
+1994.
+Stochastic context-free grammars for tRNA modeling.
+Nucleic Acids Res. 22:5112-5120.
+Shasha, D., J.T.L. Wang, K. Zhang, and F. Y.
+Shih.
+1994.
+Exact and approximate algorithms for unordered tree matching.
+IEEE Transactions on Systems, Man and Cybernetics 24:668-678.
+Tillier, E. R., and R.A. Collins.
+1998.
+High apparent rate of simultaneous compensatory base-pair substitutions in ribosomal RNA.
+Genetics 148:1993-2002.
+Wang, J. T., K. Zhang, K. Jeong, and D. Shasha.
+1994.
+A system for approximate tree matching.
+IEEE Transactions on Knowledge and Data Engineering 6(4):559-571.
+Wang, J., K. Zhang, K. Jeong, and D. Shasha.
+1991.
+A tool for tree pattern matching.
+In Proc. the 3rd Intl.
+Conf. on Tools for Artificial Intelligence.
+Woese, C. R. 1998a.
+A manifesto for microbial genomics.
+Curr.
+Biol. 8(22):R781-R783.
+Woese, C. R. 1998b.
+The universal ancestor.
+Proc.
+Natl.
+Acad.
+Sci. USA 95(12):6854-6859.
+Woese, C.R., O. Kandler, and M. L. Wheelis.
+1990.
+Towards a natural system of organisms: proposal for the domains Archaea, Bacteria, and Eucarya.
+Proc.
+Natl.
+Acad.
+Sci. USA 87(12):4576-4579.
+Zhang, K. 1993.
+A new editing based distance between unordered labeled trees, p. 254-265.
+In Proc.
+Combinatorial Pattern Matching.
+Springer-Verlag, Berlin, Germany.
+Zhang, K. 1995.
+Algorithms for the constrained editing distance between ordered labeled trees and related problems.
+Pattern Recognition 28(3):463-474.
+Zhang, K. 1996.
+A constrained edit distance between unordered labeled trees.
+Algorithmica 15(3):205-222.
+Zhang, K. 1996.
+Efficient parallel algorithms for tree editing problems, p. 361-372.
+In Proc.
+Combinatorial Pattern Matching.
+Springer-Verlag, Berlin, Germany.
+Zhang, K., and T. Jiang.
+1994.
+Some MAX SNP-hard results concerning unordered labeled trees.
+Information Processing Letters 49(5):249-254.
+Zhang, K., D. Shasha and J. T. L. Wang 1994.
+Approximate tree matching in the presence of variable length don't cares.
+J. Algorithms 16(1):33-66.
+Zhang, K., D. Shasha and J. T. L. Wang.
+1992.
+Fast serial and parallel algorithms for approximate tree matching with VLDC's, p. 151-161.
+In Proc.
+Combinatorial Pattern Matching.
+Springer-Verlag, Berlin, Germany.
+Zhang, K., J. T. L. Wang and D. Shasha.
+1995.
+On the editing distance between undirected acyclic graphs and related problems, p. 395-407.
+In Proc.
+Combinatorial Pattern Matching.
+Springer-Verlag, Berlin, Germany.
+Zhang, K., R. Statman and D. Shasha.
+1992.
+On the editing distance between unordered labeled trees.
+Information Processing Letters 42(3):133-139.
+The following citations are papers used cited by Michael Brown's discussion of RNACAD SCFG.
+[Brown, 1999] Brown, M. P. (1999).
+RNA Modeling Using Stochastic Context Free Grammars.
+PhD thesis, University of California, Santa Cruz.
+[Brown, 2000] Brown, M. P. (2000).
+Small subunit ribosomal rna modeling using stochastic context-free grammars.
+In ISMB 2000, pages
+[Durbin et al., 1998] Durbin, R., Eddy, S., Krogh, A., and Mitchison, G. (1998).
+Biological sequence analysis : probabalistic models of proteins and nucleic acids.
+Cambridge University Press.
+[Eddy and Durbin, 1994] Eddy, S. R. and Durbin, R. (1994).
+RNA sequence analysis using covariance models.
+Nucleic Acids Research, 22:2079-2088.
+[Feng and Doolittle, 1987] Feng, D. F. and Doolittle, R. F. (1987).
+Progressive sequence alignment as a prerequisite to correct phylogenetic trees.
+Journal of Molecular Evolution, 25:351-360.
+[Hughey and Krogh, 1996] Hughey, R. and Krogh, A. (1996).
+Hidden Markov models for sequence analysis: Extension and analysis of the basic method.
+12(2):95-107.
+Information on obtaining SAM is available at http://www.cse.ucsc.edu/research/compbio/sam.html.
+[Karchin and Hughey, 1998] Karchin, R. and Hughey, R. (1998).
+Weighting hidden Markov models for maximum discrimination.
+Bioinformatics, 14(9):772- 782.
+[Knudsen and Hein, 1999] Knudsen, B. and Hein, J. (1999).
+Rna secondary structure prediction using stochastic context-free grammars and evolutionary history.
+Bioinformatics, 15(6):446-454.
+[Morrison and Ellis, 1997] Morrison, D. and Ellis, J. (1997).
+Effects of nucleotide sequence alignment of phylogeny estimation.
+Mol. Biol.
+Evol., 14(4):428-441.
+[O'Brien et al., 1998] O'Brien, E., Notredame, C., and Higgins, D. (1998).
+Optimization of ribosomal rna profile alignments.
+Bioinformatics, 14(4):332-341.
+[Sakakibara et al., 1994] Sakakibara, Y., Brown, M., Hughey, R., Mian, I. S., Sj-olander, K., Underwood, R. C., and Haussler, D. (1994).
+Stochastic contextfree grammars for tRNA modeling.
+Nucleic Acids Research, 22:5112-5120.
+The following citations are papers which used the IU parallelization of fastDNAmml.
+Nugent, J. M. and J. D. Palmer.
+1991.
+RNA-mediated transfer of the gene coxII from the mitochondrion to the nucleus during flowering plant evolution.
+Cell 66:473-481.
+Gantt, J. S., S. L. Baldauf, P. J. Calie, N. F. Weeden and J.D. Palmer.
+1991.
+Transfer of rpl22 to the nucleus greatly preceded its loss from the chloroplast and involved the gain of an intron.
+EMBO J. 10:3073-3078.
+Palmer, J. D. and Logsdon, J. M. Jr. 1991.
+The recent origins of introns.
+Curr.
+Opin.
+Genet.
+Devel.1:470-477.
+Wolfe, K. H., Morden, C. W., and Palmer, J. D. 1992.
+Function and evolution of a minimal plastid genome from a nonphotosynthetic parasitic plant.
+Proc.
+Natl.
+Acad.
+Sci. USA 89:10648-10652.
+Palmer, J. D. 1993.
+A genetic rainbow of plastids.
+Nature 364:762-763.
+Baldauf, S. L. and Palmer, J. D. 1993.
+Animals and fungi are each other's closest relatives: Congruent evidence from multiple proteins.
+Proc.
+Natl.
+Acad.
+Sci. USA 90:11558-11562.
+Logsdon, J. M. Jr. and Palmer, J. D. 1994.
+Origin of introns-early or late? Nature 369:526.
+Logsdon, J. M., Jr., Tyshenko, M. G., Dixon, C., D-Jafari, J., Walker, V. K., and Palmer, J. D. 1995.
+Seven newly discovered intron positions in the triose-phosphate isomerase gene: Evidence for the introns-late theory.
+Proc.
+Natl.
+Acad.
+Sci. USA 92:8507-8511.
+Delwiche, C. F., Kuhsel, M., and Palmer, J. D. 1995.
+Phylogenetic analysis of tufA sequences indicates a cyanobacterial origin of all plastids.
+Mol. Phylogen.
+Evol. 4:110-128.
+Baldauf, S. L., Palmer, J. D., and Doolittle, W. F. 1996.
+The root of the universal tree and the origin of eukaryotes based on elongation factor phylogeny.
+Proc.
+Natl.
+Acad.
+Sci. USA 93:7749-7754.
+Delwiche, C. F. and Palmer, J. D. 1996.
+Rampant horizontal transfer and duplication of rubisco genes in eubacteria and plastids.
+Mol. Biol.
+Evo. 13:873-882.
+Palmer, J. D. and Delwiche, C. F. 1996.
+Second-hand chloroplasts and the case of the disappearing nucleus.
+Proc.
+Natl.
+Acad.
+Sci. USA 93:7432-7435.
+Palmer, J.D. 1997.
+Organelle genomes: going, going, gone! Science 275:790-791.
+Kohler, S., Delwiche, C.F., Denny, P.W., Tilney, L.G., Webster, P., Wilson, R.J.M., Palmer, J.D., and Roos, D.S. 1997.
+A plastid of probably green algal origin in apicomplexan parasites.
+Science 275:1485-1489.
+Palmer, J.D. 1997.
+The mitochondrion that time forgot.
+Nature 387:454-455.
+J. Xiong, W. M. Fischer, K. Inoue, M. Nakahara and C. E. Bauer (2000).
+Molecular evidence for the early evolution of photosynthesis.
+Science 289(5485):1724-30.
+IV.
+Budget and Budget Explanation
+We need detailed NSF style budget pages here.
+Along with budget justification.
+Try for one page budget at each institution, one page budget justification for each institution.
+* Summary Budget Page * LBNL Budget Page * IU Budget Page * UIUC Budget Page
+No budgets for M. Brown or MSU.
+Note we also need budget pages in DOE FWP format to go at beginning of proposal to comply with DOE regulations.
+Note that we envision that LBNL, IU, and UIUC will each be separately funded by DOE OBER - there is no subcontract structure here.
+V.
+Other Support of Investigators
+[We will brief descriptions of other extant and pending support here.
+]
+Frank Olken is currently supported by LBNL LDRD funds (internal R+D) to work on file migration, and LBNL NERSC overhead to work half-time for 6 months on startup of parallel phylogenetic tree computations.
+File migration work will be shifted to other staff to accommodate phylogenetic tree work.
+Manfred Zorn is currently supported ....
+Sylvia J. Spengler is currently supported by NSF .... and DOE OBER .....
+Craig Stewart is currently supported by ....
+Don Berry is currently supported by ....
+Michigan State University collaborators are currently supported by DOE OBER Grant xxxxx on Ribosomal RNA Database Project .....
+VI. Biographical Sketches
+We have included sketches of PI's, senior staff, and key collaborators.
+* Frank Olken is a computer scientist in the NERSC Dvision at Lawrence Berkeley National Laboratory, where he has worked for 23 years.
+He holds a Ph.D. in Computer Science from UC Berkeley.
+He has worked in the the Real Time Systems Group at LBNL, the data management group (on statistical data management), the Human Genome Center (1989 to 1993) (data management and computatonal biology), in remote monitoring of buildings (CORBA, etc.), on various metadata and XML standards efforts (e.g., W3C XML Schema WG).
+He is currently working in the data management group on file migration policies, and for the Computational Biology and Computational Genomics Group on phylogenetic tree computations.
+He has taught data management at the graduate level at UC Berkeley, CS Dept. and has served on numerous Program Committees in database management conferences.
+He is a member of ACM, IEEE, American Chemical Society and International Society for Computational Biology.
+His web page is: http://www.lbl.gov/~olken * Craig Stewart is Director, Research and Academic Computing University Information Technology Services, Indiana University in Bloomington, IN.
+Responsible for administration of research and academic computing areas that focus on computation and software applications, including research computing systems, high performance computing, support for Unix workstation, and statistical and mathematical computing.
+Stewart is also responsible for support of research computing at IUPUI and the other regional campuses of IU.
+He is a member of USENIX/SAGE, IEEE Computer Society, and American Society of Mammalogists.
+His web page is: http://www.indiana.edu/~rac/stewart.html * Gary J. Olsen is Associate Professor of Microbiology at University of Illinois, Urbana Champagne, Ill.
+He has a Ph.D. in Biophysics from Univ. of Colarado Health Sciences Center.
+He works on the functions, evolutionary histories and structures of genes and proteins in Archaea.
+His research focuses on gene expression in Archaea, and its relation to corresponding systems in Eucarya and Bacteria.
+His approach is a combination of experimental work and comparative analyses of genomes and proteins.
+Current emphasis is on the machineries of DNA repair, RNA synthesis and protein synthesis.
+His web page is: http://www.life.uiuc.edu/micro/olsen.html * Manfred Zorn he is co-group leader for the Computational Biology and Computational Genomics Group with NERSC.
+Manfred Zorn received his M.Sc. in Chemistry in 1986 and his D.Sc. in Chemistry/Biochemistry in 1989 from the University of Vienna, Austria.
+His interest in Computer Science was sparked at the Mathematics Department of the Austrian Research Center Seibersdorf.
+Building a bioinformatics application framework during his graduate years started a mission to bring computational tools and technology to biologists.
+Six weeks before the Loma Prieta earthquake in 1989, he joined the Genome Informatics group at the LBNL Human Genome Center.
+At present he leads the Bioinformatics group working on user interface frameworks, large scale annotation of genomic sequences, integration of biological information, and definition of object standards for life sciences.
+His group also supports biology groups in their day-to-day bioinformatics needs.
+His home page is at: http://www.lbl.gov/~zorn [broken link] * Sylvia J. Spengler is presently a detailee at NSF, where she is the Director of Biological Database Program.
+At LBNL she is co-group leader for the Computational Biology and Computational Genomics Group with NERSC.
+She was formerly Deputy Director of the LBNL Human Genome Center from 1989 to 1994 (?).
+......
+* Don Berry is a programmer at Indiana University in Bloomington, IN. .....
+He has worked on parallelization of .....
+* Michael Brown is a computer scientist at HNC, Inc. in San Diego, CA.
+He holds a Ph.D. in Computer Science from UC Santa Cruz where worked on SCFG under Prof. David Haussler, .....
+His web page is: http://www.cse.ucsc.edu/~mpbrown/ * Jim Cole
+VII.
+Description of Facilities and Resources
+NERSC (at LBNL)
+Leading-edge computing platforms and services make NERSC the foremost resource for large-scale computation within DOE.
+At NERSC, we define high performance in practical, not theoretical, terms.
+High performance to us means providing the most productive and reliable computing, storage, and networking systems, while consistently offering our clients timely services, innovative assistance, and convenient training.
+As new machines are added to support aggressive science-of-scale projects, our systems experts carefully analyze performance and work with manufacturers to ensure that the equipment meets the high performance needs of NERSC clients.
+We've even developed a new benchmark test to assess Effective System Performance.
+An IBM RS/6000 SP, a Cray T3E, and a Cray PVP cluster make up the heart of NERSC's computer hardware capability.
+The newest addition to the NERSC facility, installed in June 1999, is a 512-processor IBM RS/6000 SP system, with a peak performance of 410 gigaflop/s, 256 gigabytes of memory, and 10 terabytes of disk storage.
+Phase 2 of the IBM installation, scheduled for no later than December 2000, will upgrade the system to 152 16-CPU POWER3+ SMP nodes (2,048 compute processors) with a peak performance greater than 3 teraflop/s.
+NERSC has named its newest supercomputer "gseaborg" in honor of the late Nobel laureate Dr. Glenn Seaborg, longtime associate director of Berkeley Lab.
+NERSC's current top performer is a 696-processor Cray T3E-900 (named "mcurie"), an MPP system with a peak speed of 575 gigaflop/s, 256 megabytes of memory per processor, and 1.5 terabytes of disk storage.
+We also have a parallel vector processing (PVP) cluster consisting of three Cray SV1s (franklin, seymour, and bhaskara) and a Cray J90se (killeen), with a total of 96 vector processors in the cluster, 4 gigawords of memory, and a peak performance of 83 gigaflop/s.
+Additional capabilities are provided by two special-purpose servers: a Sun UltraSPARC-II for numerical and statistical processing, and a Silicon Graphics Onyx 2 for scientific visualization from remote locations.
+NERSC recently increased its mass storage capacity to 600 terabytes and upgraded the storage servers to IBM SP2s.
+The old storage systems, UniTree and CFS, were replaced with HPSS (High Performance Storage System).
+Developed by a consortium of industrial, university, and government organizations -- including NERSC -- HPSS is a scalable parallel software system designed to move very large data objects between high performance computers, workstation clusters, and storage libraries at speeds many times faster than is possible with previous software systems.
+NERSC's research in data-intensive computing is grounded in our operation of a major production facility, the PDSF (Parallel Distributed Systems Facility).
+The PDSF is a networked distributed computing environment -- a cluster of workstations -- used by six large-scale high energy and nuclear physics investigations for detector simulation, data analysis, and software development.
+The PDSF includes 104 processors in 67 nodes for computing, and eight disk vaults with file servers for storage.
+Our research into cluster architectures, the PC Cluster Project, is focused on two systems, on which we are developing the software infrastructure needed to use commodity hardware for high performance computing: * the 36-node PC Cluster Project Testbed, which is available to NERSC users for trial use * the 12-node Alpha "Babel" cluster, which is being used for Modular Virtual Interface Architecture (M-VIA) development and Berkeley Lab collaborations.
+Access to NERSC from anywhere in the U.S. or the world is available through ESnet, which provides OC-12 bandwidth to NERSC and Argonne National Laboratory, T3 bandwidth on major backbone links, and T1 links over much of the rest of its coverage area.
+NERSC's computer and storage systems have moved from Berkeley Lab's main site to a new building in Oakland.
+Indiana University
+Indiana University's primary research computing facilities consist of three supercomputers, a massive data storage service, and exceptional networks.
+The supercomputers are an IBM SP, a SUN Enterprise 10000, and a Beowulf cluster.
+The SP currently consists of three frames, containing one 2-cpu 332MHz PowerPC [Silver] thin node, one 2-cpu 375MHz Power3+ wide node, 29 4-cpu 375MHz Power3+ thin [Winterhawk2]
+Each node on the Research SP runs its own copy of IBM's flavor of Unix, AIX.
+All nodes are interconnected with the SP high-speed crossbar switch; it supports both IP protocol and the proprietary US (user space) protocol developed by IBM.
+Two externally connected specialized routers allow the SP switch network to connect to other SP switches, 10/100Mb ethernet, Gigabit ethernet, FDDI, HIPPI and ATM networks.
+The Sun E10000's 64 400MHz processors and 64GB of memory are divided into two logical domains: a 4-cpu, 4GB domain named Lunar for interactive logins, program development, compiling, debugging, and testing, and a 60-cpu, 60GB domain named Solar for running production jobs in batch mode.
+All interprocessor communication and memory access is handled via a high-speed crossbar centerplane called the Gigaplane-XB Interconnect.
+The Parallel PC Cluster consists of 32 dual 933-MHz Pentium III processor nodes [on order, to replace the current 32 dual 400-MHz Pentium II processor nodes]
+The massive data storage service is a distributed storage service offered by Indiana University to faculty, staff, and graduate students who need large scale archival or near line data storage arranged in large files, for their research projects.
+The MDSS at IU is delivered using the High Performance Storage System (HPSS).
+A hierarchical storage management system by design, HPSS makes transparent (to the user) use of a hierarchy of storage media to provide massive data capacity.
+At Indiana University, this hierarchy includes a one terabyte disk cache back-ended by a number of high performance tape libraries which provide a total uncompressed data storage capacity of nearly 175 terabytes.
+Linked by fast networks, these systems are part of a national and international array of supercomputers, forming a bridge for collaboration between Indiana University researchers and their colleagues at other institutions around the world.
+A charter member of the Internet2 partnership, Indiana University is the home of the Abilene NOC, and is the lead institution in TransPAC, an initiative to establish a high-bandwidth connection between the Asia-Pacific Advanced Network Consortium and the NSF's vBNS research network.
+A multi-fiber, dedicated optical fiber network connecting IU Bloomington, IUPUI, and Purdue West Lafayette to the Internet2 core node in Indianapolis is currently under construction [completion expected July 2001].
+VIII.
+Appendices
+I. NEPA Requirements
+[Deborah Haynes will supply this page for Olken's signature.]
+M. Environmental, Safety and Health Considerations
+No EH+S issues, except for possibility of repetitive stress injuries by programming staff.
+LBNL staff have taken ergonomics classes, will have workstation enviroment reviewed and possibly upgraded for ergonomics.
+N. Human and Animal Subjects Review
+Human Subjects - no present plans to use human sequences.
+Animal Subjects - we will not be using live animals - only sequences from existing DB and publications [Deborah Haynes will prepare forms for Olken to sign.
+]
+Letters of support and collaboration
+* Letter from MSU signed by Jim Tiedje or Jim Cole.
++ MSU will supply sequence data, MSAs, and NNJ trees for 16S and 18S sequences + MSU will assist in experimental design of test problems.
++ MSU review LBNL generated MSAs and trees and compare to MSU MSAs and MSU NNJ trees.
++ Jim Cole (?) will be liaison * Letter from Michael Brown + Will provide code + Will authorize parallelization + Will provide occasional advice + Will provide results of DARPA project, including code, when available.
+[Letters of support and collaboration should be sent via fax to Frank Olken / Deborah Haynes 510-486-4004.]
+C.V.'s
+[We need mini-C.V.'s (?) from each PI senior staff.]
+Send in Word format (preferred) or plain ASCII.
+Can probably deal with simple HTML also.
+Send to olken@lbl.gov and also dlhaynes@lbl.gov

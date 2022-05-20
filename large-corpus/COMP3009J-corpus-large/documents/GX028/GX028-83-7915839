@@ -1,0 +1,115 @@
+Centers for Disease Control and Prevention Centers for Disease Control and Prevention Centers for Disease Control and Prevention CDC Home Search CDC CDC Health Topics A-Z Office of Genomics and Disease Prevention Office of Genomics and Disease Prevention National Center for Environmental Health Genomics and Cancer Prevention Case Study Answers and Bibliography Answer 1 C to T Answer 2 The protein c-myc binds to the DNA in intron 1 and activates, or increases, transcription of ODC.
+C-myc is a proto-oncogene, meaning that it can function as an oncogene or cancer-promoting gene when it is highly active in cells.
+The action of the c-myc protein is opposed, or antagonized, by the MadI protein.
+MadI is in turn activated by the protein product of the APC gene.
+Answer 3
+When APC is functioning normally, MadI acts to oppose c-myc, and this shuts off the ODC gene.
+The ODC enzyme is involved in production of polyamines, including putrescine, spermidine, and spermine.
+The ODC enzyme converts ornithine to putrescine, the key first step in polyamine synthesis.
+Polyamines are found in all bacteria and most animal cells.
+They perform a variety of functions, mainly serving as growth factors, and help to stabilize membranes in growing cells.
+The important point to remember is that polyamines are growth promoting.
+That is why in Scheme 1 on page 7859, when polyamines are reduced, tumorigenesis is reduced: when there are less growth promoting influences, there is less stimulus for carcinogenesis.
+Answer 4
+When APC is mutated or missing (due to deletion), there is extra c-myc protein around and no MadI to oppose it.
+Thus, there will be increased ODC activity, increased polyamines, and increased tumorigenesis.
+The authors reference papers showing that this occurs in mice, and it is likely that a similar situation occurs in humans.
+Answer 5
+The ODC A allele is more responsive to MadI than the G allele.
+Thus, there will be less polyamines produced in cells with the A allele than in cells with the G allele.
+Answer 6
+The authors hypothesize that having one or more copies of the ODC intron 1 A allele will reduce the risk of colon polyps, since there will be less polyamines present and less stimulus for cell growth in the colon.
+Answer 7
+Aspirin stimulates catabolism, or breakdown, of polyamines.
+Polyamine levels drop, so there is less stimulus for cell growth in the colon.
+Answer 8
+The authors hypothesize that the association between ODC genotype and risk of colon polyps will be "modified by aspirin use" (p. 7860).
+Answer 9
+The authors genotyped 27 (4%) of the 688 samples twice.
+A more standard protocol is to repeat genotyping on a random 10% of all study samples.
+Answer 10
+Using odds ratios calculated from logistic regression models.
+The largest group (G/G) is used as the reference group, and odds ratios are calculated for A/A versus G/G and G/A versus G/G.
+Answer 11
+The joint effects of aspirin use and ODC genotype were estimated using individuals with no aspirin use and homozygous for the G allele (G/G) as a common referent group.
+In this manner, one can estimate the effects of aspirin use alone, A/A genotype alone, and the combination of aspirin use and A/A genotype.
+Answer 12
+Using the information in Table 1, the distributions of ODC genotypes in the total cohort are as follows:
+Observed ODC genotypes N
+G/G 382 G/A 264 A/A 42 Total 688
+To calculate departures from Hardy-Weinberg equilibrium, we first calculate allele frequencies:
+G allele frequency = 2 (382) + 1 (264) / 2 (688) = 0.75 A allele frequency = 2 (42) + 1 (264) / 2 (688) = 0.25
+Allele frequencies are calculated as the number of chromosomes with a specific allele / total number chromosomes.
+Next, determine the estimated distribution of genotypes based upon allele frequencies: The expected values are based upon the Hardy Weinberg equilibrium (HWE) proportions.
+Assuming "random mating," no "genetic drift," no "new mutations,"no "selection" and no "admixture" within a population, two alleles at a locus should occur in combinations (genotypes) that roughly approximate Hardy-Weinberg Equilibrium (HWE).
+Let p = frequency of one allele q = frequency of the other allele where p and q are two alternative alleles at a single locus.
+If HWE is present, then: p^2 = frequency of p/p homozygotes 2pq = frequency of p/q heterozygotes q^2 = frequency of q/q homozygotes
+These calculations assume that NO ERRORS have occurred in the genotyping assay.
+In our laboratory, we use HWE calculations as a check on the validity of our laboratory assays.
+This is because we know that for most loci, HWE conditions hold among the controls (unaffected persons) within our study population.
+Expected ODC genotypes G/G (0.75) (0.75) x 688 = 387 G/A 2 (0.75)(0.25) x 688 = 258 A/A (0.25) (0.25) x 688 = 43
+Calculate a chi-square test statistic, which is the sum of (Obs - Expected)^2 :
+Expected
+(382-387)^ 2 + (264-258)^ 2 + (42-43)^ 2 387 258 43 = 0.23
+The degrees of freedom is the number of alleles minus 1 (2-1) = 1.
+On a chi square table, the p-value corresponding to a chi square statistic of 0.23 with df = 1: P= 0.75.
+Answer 13
+A high p-value is what you want for the Hardy Weinberg test in this situation.
+If the p value is high, this means that if you randomly selected study participants from a population in Hardy Weinberg equilibrium and genotyped them, and did this an infinite number of times, there is high (in this case 75%) probability that the difference you found (or a greater difference) between the observed and expected genotype distributions would occur simply by chance.
+Thus, if we assume a threshold of 0.05 for our type one error rate, there are no statistically significant departures from Hardy Weinberg equilibrium for the intron 1 ODC genotypes in this study population.
+The study population is in HWE for the ODC intron 1 locus.
+The result is reassuring, given our concern that only 47% of participants gave blood for genotyping: it is unlikely, given the HWE test results, that ODC genotype was related to obtaining blood samples.
+Answer 14
+When we are conducting a genotyping assay in the laboratory, the observed genotype frequencies should correspond to the expected genotype frequencies, as calculated on the basis of observed allele frequencies.
+If this sounds strange, as if you are using the data to check on itself, you are right! We are!
+Think of it this way.
+Your assay took a bunch of DNA and detected alleles on a bunch of chromosomes.
+If you took these results, and put all the alleles in a big pile, disregarding whom they came from, and then sorted the alleles into piles based upon an equilibrium distribution, how close would the equilibrium distribution approximate what you found in your original population?
+If the observed and expected genotype distributions differ, this could be due to:
+(a) Population dynamics (genetic drift, selection, new mutations, etc.) leading to a population that is not in Hardy Weinberg equilibrium.
+(b) Failure to observe HWE could also be due to failure to draw a random (unbiased) sample of individuals from a population that is in HWE (selection bias).
+Note: a population sample could exhibit HWE for one or more genetic markers and still be non-representative for one or more environmental factors.
+(c) A problem in your laboratory assay.
+The most common sources of laboratory error are mixing up samples, sample contamination, or a faulty genotyping procedure (e.g., mistakenly genotyping a pseudo-gene, improper design of primers, probes or other reagents).
+There are several published examples where genotyping errors have lead to failure to achieve HWE.
+Note: Not every population, or every population sample, will be in Hardy-Weinberg for every genetic marker.
+Human populations are in flux, so one or more of the conditions in (a) may apply.
+However, one should always try to minimize the chances of the other two possibilities, (b) and (c).
+Achieving good response rates for participant enrollment and blood collection are helpful in avoiding (b).
+Including positive controls (DNA samples of known genotypes) and repeating some portion of samples using a more rigorous "gold standard" laboratory method are helpful in avoiding (c).
+For example, the Taqman based methods used in this paper could be checked against a PCR-based restriction-fragment length polymorphism analysis using the PstI restriction enzyme.
+Answer 15
+The effects of ODC genotype and aspirin use are greater than multiplicative.
+The OR for aspirin alone (among participants with G/G genotype) was 0.83 (95% CI 0.51-1.34).
+The OR for ODC A/A genotype alone (in non-aspirin users) was 0.68 (95% CI 0.30-1.51).
+The combined effect of aspirin use and ODC A/A genotype was strongly inverse, OR = 0.10 (0.02-0.66).
+Note that this estimate is fairly imprecise, due the small number of participants with A/A genotype (n = 42).
+The joint OR (0.10) is more strongly inverse than one would have expected based upon simply multiplying the two independent effects together (0.83 * 0.68 = 0.56).
+The observation that 0.10 is much lower than 0.56 is evidence of gene-environment interaction.
+When two factors operate at separate steps in a common multi-step pathway, the joint effects are expected to be greater than multiplicative.
+Since we know that ODC is involved in polyamine synthesis, observing interactions between the ODC polymorphism and aspirin use provides evidence that the protective effect of aspirin use may also be via polyamines.
+Answer 16
+The authors point to the biologic plausibility of the findings.
+ODC is involved in the first step of polyamine synthesis, and aspirin is involved in catabolism, the breakdown on polyamines: both exposures are affecting a common metabolic pathway.
+Thus, it makes sense that that ODC genotype and aspirin use would act together to lower polyamine levels and thereby lower the risk of polyp recurrence.
+Answer 17
+The main importance of these findings lies in the insight they provide into the biology of polyp formation: ODC genotype helps implicate specific biologic processes, namely the synthesis of polyamines, in the generation of colon polyps.
+This is in turn helps us to better understand the preventive effects of aspirin and may help find other drugs or dietary interventions that interfere with polyamine synthesis.
+Answer 18
+No, there was a weak inverse association of aspirin use in persons with the ODC G/G genotype.
+Answer 19
+In this study, 98% of persons were G/G or G/A genotype, so not much would be gained in screening programs by focusing on carriers of the G allele.
+Furthermore, the risk of polyp recurrence in those with A/A genotype in this study of persons with previous polyps was high enough (36%) that one would not want to deprive A/A homozygotes of screening.
+Answer 20
+The authors describe a variety of additional laboratory studies that could be done to better understand the effects of the ODC genotype and interactions with aspirin and other non-steroidal anti-inflammatory drugs.
+It would be interesting to genotype participants in a randomized trial of aspirin use for the ODC polymorphism.
+In such a trial, aspirin use would be controlled and dose/duration carefully monitored, thereby increasing the strength of evidence.
+It would be interesting to examine the association of ODC genotype, and joint effects with aspirin use, using colorectal cancer as the outcome, as well as other cancers (e.g. breast cancer) for which aspirin has shown protective effects.
+ODC genotype might be helpful in sorting out why some studies and some study populations show protective effects of aspirin and cancer while others do not.
+Bibliography
+Martinez E, et al.
+Pronounced reduction in adenoma recurrence associated with aspirin use and a polymorphism in the ornithine decarboxylase gene.
+Proc Natl Acad Sci 100: 7859-64 (2003).
+PubMed abstract
+home | back to overview
+last updated August 14, 2003

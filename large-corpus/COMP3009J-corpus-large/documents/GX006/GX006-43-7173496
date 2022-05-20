@@ -1,0 +1,431 @@
+Decennial Census and Transportation Planning: Planning for Large Metropolitan Areas by Charles L. Purvis, Metropolitan Transportation Commission, Oakland, California _________________________________________________________________
+Back to MTC Census DataMart _________________________________________________________________
+This resource paper was prepared for the Transportation Research Board Conference "Decennial Census Data for Transportation Planning" held in Irvine, California, March 13-16, 1994.
+The final version of this paper appears in the formal conference proceedings: Decennial Census Data for Transportation Planning: Conference Proceedings 4, National Academy Press, Washington, D.C., 1995, pp. 55-67.
+The full proceedings are available from the Transportation Research Board at: http://www.nas.edu/trb/about/publicat.html.
+_________________________________________________________________
+Hyperlinks to Paper Contents:
+REVIEW OF LITERATURE OVERVIEW GETTING THE DATA OUT: DISSEMINATING THE 1990 CENSUS USE OF CENSUS DATA IN METROPOLITAN TRANSPORTATION PLANNING * Trend Analysis * Travel Demand Model Estimation, Calibration and Validation * Land Use Allocation Model Estimation, Calibration, and Validation * Census Data and Estimating Small Area Employment Data * Census Data and Household Travel Surveys * Transit Market Analysis * Miscellaneous Transportation Planning Applications * Non-Transportation Planning Applications of the Journey-to-Work Data
+CONCLUSIONS REFERENCES _________________________________________________________________
+The purpose of this resource paper is to describe the use and application of decennial census data for transportation planning purposes in large metropolitan areas in the United States.
+In particular, use of the 1980 Census Urban Transportation Planning Package (UTPP) and the 1990 Census Transportation Planning Package (CTPP) will be discussed.
+Large metropolitan areas are defined as regions with populations of one million or greater.
+Though this conference makes a distinction between large metropolitan and small-to-medium-sized metropolitan areas, the uses and applications of census data can be quite similar.
+While transportation problems such as pollution and traffic congestion are typically an order of magnitude more severe in the larger metropolitan areas, this may or may not lead to more immediate and sophisticated uses of census data.
+The prime distinctions between large versus small-to-medium-sized metropolitan areas are probably staffing levels and staff proficiency in managing large data sets such as the 1990 Census.
+REVIEW OF LITERATURE OVERVIEW: USE AND APPLICATION OF CENSUS DATA IN TRANSPORTATION PLANNING
+The use of decennial census data in transportation planning has been covered extensively in the transportation research literature.
+The reader should specifically review three Special Reports issued by the Transportation Research Board covering census/transportation conferences held in 1970 in Washington, D.C. (1); the 1973 Albuquerque, New Mexico conference (2); and the 1984 Orlando, Florida conference (3).
+Also useful is the collection of articles in Transportation Research Record 981, published in 1984 (4).
+The reader also can refer to the FHWA publication entitled Transportation Planners' Guide to Using the 1980 Census (5) and Case Studies - Applying the Urban Transportation Planning Package (UTPP) in Transportation Modeling (6).
+An ITE informational report entitled Use of Census Data in Transportation Planning includes sections on how census data has been used in transportation analysis (7).
+These reports provide a general overview of the use of 1970 and 1980 Census data in transportation planning.
+The 1973 Albuquerque and the 1984 Orlando conferences were an integral component of the U.S. Bureau of the Census' formal and informal efforts to determine the census content for the 1980 and 1990 Decennial Censuses.
+Details on the Census Bureau's content determination efforts are described in a series of Content Determination Reports, including a report on place-of-work and journey-to-work issues (8).
+This 1994 Irvine, California conference will be an important element of the content determination process for the Year 2000 Decennial Census.
+Complementary to the literature on the use of census data in transportation planning are several reference works on census trend data, the most popular being Pisarski's Commuting in America report published by the Eno Foundation (9); the 1986 FHWA report: Journey-to-Work Trends (10); and a new report by FHWA: Journey-to-Work Trends in the United States and its Major Metropolitan Areas: 1960-1990 (11).
+Also of interest is a 1992 report by Pisarski analyzing results of the 1990 Census (using Summary Tape File 3A data) and the 1990 Nationwide Personal Transportation Study (NPTS)(12).
+GETTING THE DATA OUT: DISSEMINATING THE 1990 CENSUS
+Processing and disseminating the 1990 Census data was (and still is) a mammoth operation.
+For the 1990 Census, the Bureau of the Census collected data from 92 million households in the United States at a cost of approximately $25 per housing unit, for a total cost of $2.6 billion (13,14).
+Approximately one-in-six, or 15 million households, were given a census "long form" to fill out.
+Given the amount of data and the complexity of the data processing operations, the Census Bureau has staged the release of new census data on an almost continuous basis since 1990.
+This staged release of census products has aided metropolitan transportation planners by effectively distributing the workload over a period of years.
+Census data products are like a giant jigsaw puzzle with new pieces added over time until the "picture" is finally complete.
+Had the opposite been true,with census data dumped all at once on eager clients, the rush to get the "big picture" probably would have thwarted efforts to carefully review results at a greater level of detail.
+One of the findings from the 1984 Orlando conference was the desire to have "staged" releases of census journey-to-work data.
+Many metropolitan transportation planners had to wait until 1983 or 1984 data to get basic data on 1980 Census county-to-county commute patterns.
+The 1984 conference said "Get us county-to-county data as soon as possible; get us the zone-to-zone, or tract-to-tract data after that."
+In response to these concerns and other data user comments, the Census Bureau, the U.S. Department of Transportation and some volunteer transportation professionals devised a "split" package scheme for disseminating 1990 Census journey-to-work results - the Census Transportation Planning Package/Statewide Element (CTPP/SE), containing place-to-place and county-to-county commuter flow data as well as place-of-residence and place-of-work tables; and the Census Transportation Planning Package/Urban Element (CTPP/UE), containing zone-to-zone or tract-to-tract data (and zone-of-residence and zone-of-work tables).
+In addition to the CTPP/SE and the CTPP/UE packages, the Bureau of the Census developed a new product, the Summary Tape File S-5, which included 1990 Census county-to-county commuter flows (without stratification by means of transportation.)
+Other standard census products were an important component of metropolitan planning organizations' census analysis plans.
+These products included the 100 percent count data in the "redistricting" tape and Summary Tape File 1A, as well as the sample data in the Summary Tape File 3A and the Public Use Microdata Sample (PUMS).
+By law, the Bureau of the Census must provide total population counts by state to the President of the United States for purposes of apportionment of the House of Representatives by December 31 of each census year.
+In January 1991, the Census Bureau released place, county and state total population counts as part of its' Thank You America count program.
+This was followed in March 1991 with the release of the Public Law 94-171 tape.
+The PL94-171 "redistricting" tape provided block-level population characteristics by race and ethnicity and for persons of voting age (18+).
+Within months, the rest of the 100 percent count items included in the 1990 Census were released in the Summary Tape File 1A (STF1A) data sets.
+The most significant release of census data in 1992 was the first "long form," or sample data, included in the much awaited Summary Tape File 3A (STF3A).
+The STF3A tape file included small area (block-group) data on all sample "long form" data: means of transportation to work, commute vehicle occupancy, average commute time, intracounty versus intercounty commuting, household vehicle availability, household income, and number of employed residents.
+The release of STF3A was a benchmark for census analysts, a cause for celebration as well as a call for consternation.
+Carpool shares went down with respect to 1980 Census values.
+Drive-alone shares went up.
+Transit and walk shares declined.
+The share of workers working at home increased dramatically.
+Metropolitan transportation planners were turned into "spin doctors" overnight trying to explain the 1980 to 1990 trends only a matter of hours after receiving the data themselves.
+The savvy transportation planner quickly assembled trend data and came up with logical answers for the inevitable question: what do the numbers mean? It was the Census Bureau's job to disseminate the data files to the local clients, the metropolitan planning organizations.
+It was the MPO's duty to analyze the data in terms of trends, highlights and missed and met expectations, and to articulate the reasons why these trends were occurring.
+Census data could then be readily digested by the public, the policymakers and the media.
+In December 1992, the Census Bureau released Summary Tape File S-5.
+This popular data file included all county-to-county worker flow data for the entire United States.
+No data on means of transportation was provided, but the basic county-to-county commute "puzzle" was filled in with STF S-5.
+The CTPP/SE packages soon followed in spring of 1993.
+By the fall of 1993 and early 1994, the CTPP/UE packages were streaming into metropolitan planning organizations.
+The major disadvantage of a March 1994 conference on the decennial census and transportation planning is the all too brief time that metropolitan and state transportation planners have had to analyze the Census Transportation Planning Package/Urban Element.
+Certain metropolitan areas may have received their CTPP/Urban Element packages as early as October 1993.
+Other major metropolitan areas still may not have their Urban Element package.
+Most likely less than half of the approximately 300 urban element packages are available now.
+On the other hand, all states and metropolitan areas have had nearly a year to review results from the Census Transportation Planning Package/Statewide Element.
+Despite the prematurity of this March 1994 conference, the immediate concern is to consider the Census Bureau's tight deadlines for determining content for the Year 2000 Census.
+This process, scheduled from 1993 to 1996, will culminate in a national content test in 1996, with the final Year 2000 Census questions to be transmitted to Congress in 1997.
+Usefulness of data tabulations in the CTPP/SE and the CTPP/UE, as well as specifications for year 2000 journey-to-work tabulations, may wait until CTPP data users have had sufficient time to fully explore and analyze these new 1990 data sets.
+Recommendations for Year 2000 Census content cannot wait.
+USE OF CENSUS DATA IN METROPOLITAN TRANSPORTATION PLANNING
+The following sections discuss various uses and applications of census data in metropolitan transportation planning, including: trend analysis; travel demand model estimation, calibration, and validation; demographic and land use allocation model estimation, calibration, and validation; census data and estimating small area employment data; census data and household travel surveys; transit market analysis; miscellaneous transportation planning applications; and non-transportation planning applications of the journey-to-work data.
+Trend Analysis
+The most common application of census data is for trend analysis.
+How have things changed and why have they changed? How have growth rates changed over the decades? What are the emergent trends? Trend analyses afford an excellent opportunity for detailed cross-sectional and cross-temporal review of the socio-demographic conditions within and between metropolitan areas.
+In contrast to trend analysis are the "area profile" analyses, in which all census data for a geographic area are included in a series of printed tables.
+These "area profiles" are an extremely popular way of disseminating census data, especially STF1A and STF3A data.
+Census analysts as part of the state data center (SDC) and regional data center (RDC) programs use commonly available software packages such as SAS or other database software for preparing these tabulations.
+Federal Highway Administration staff, working with MPO staffs, are currently preparing program code to create "area profile" reports using data from the CTPP parts A, B, 1 and 2.
+An important element of trend analysis is understanding the changes in census content over the decades.
+Common questions, such as "What is the average commute trip duration for residents in your region in 1970" or "What was the drive alone share in 1960 and 1970" or "How many ferry commuters resided in your region in 1980," can only be answered with "the data does not exist because census takers did not ask the same question in earlier censuses."
+A useful addition to any trend analysis report is a brief recap of census content changes over the analysis period.
+Examples of trend analysis reports includes publications by the metropolitan planning organizations in Chicago, the San Francisco Bay Area, Philadelphia, San Diego and Seattle.
+These reports are the best source for understanding "within" region changes in commute patterns and socio-economic characteristics.
+In contrast, the Journey-to-Work Trends report published by the FHWA provides the best information on "between" region trend comparisons.
+The Chicago Area Transportation Study (CATS) publishes a monthly, two-color, six-page newsletter, Transportation Facts, which includes census trend information and other results from its household travel surveys.
+CATS also recently published a report containing profiles for all Illinois counties on transportation-related data from the STF3A and CTPP/SE (15).
+The San Francisco Bay Area's Metropolitan Transportation Commission (MTC) has produced a series of working papers describing county, place and "superdistrict" results based on the STF1A (16), STF3A (17), STF S-5 (18,19), the CTPP/SE (20) and the CTPP/UE (21).
+Trend analyses include county-to-county commuters from 1960 to 1990; change in total population since 1860; change in households since 1940; and change in household vehicle availability since 1960.
+In addition, the MTC has released an "electronic publication" (computer file on floppy diskette) which includes place-to-place workers, by detailed means of transportation, comparing 1980 UTPP and 1990 CTPP/SE commuter flows (22).
+In order to maximize the use and understanding of census data, MTC provides copies of census working papers to Bay Area public and private libraries, as well as to interested public, professionals, and policymakers.
+The Delaware Valley Regional Planning Commission (DVRPC) in the Philadelphia region has published a report documenting county-to-county commuter flows, by means of transportation, comparing the 1970, 1980 and 1990 journey-to-work (23).
+The report includes useful "desire line" maps showing changes in commuting patterns - within the Pennsylvania suburbs, within the New Jersey suburbs, commuting to Philadelphia, "reverse" commuting from Philadelphia and inter-regional commuting.
+The San Diego Association of Governments (SANDAG) produces a multi-color bi-monthly newsletter, SANDAG INFO, which contains a number of multi-color graphics as well as tabular results.
+The Puget Sound Regional Council (PSRC) in the Seattle region publishes a monthly data newsletter entitled Puget Sound Trends.
+The PSRC, as the regional data center for the Seattle region, also provides "area profile" reports in hard copy and computer format, and maps showing census tracts, census blocks and zip codes.
+The aforementioned reports and products are just a sampling of the ways in which census data is processed and disseminated by metropolitan planning organizations in the United States.
+These tabular and graphic reports are excellent means to provide information to the clients and partners of the MPO.
+(The parallel "poster session" or "applications show and tell" session scheduled for Monday evening hopefully will reveal other innovative and creative ways of analyzing, displaying and disseminating census data.)
+Travel Demand Model Estimation, Calibration and Validation
+One of the most common uses of census journey-to-work data is in the field of travel demand forecasting.
+The census not only serves the purpose of providing base-year benchmark socio-demographic information for use as input into standard travel demand model simulations, but the journey-to-work commuter flow matrices can be adapted by the transportation planner into an "observed" work trip table for aggregate validation of work trip distribution and mode choice models.
+The following working definitions are provided for the terms estimation, calibration and validation.
+Also discussed are the terms aggregate and disaggregate.
+These are offered as "working definitions" rather than as accepted fact, given their various and conflicting usage in the profession.
+Estimation is the process of determining model coefficients and constants using statistical software packages.
+Logit models, cross-classification models and regression models are estimated.
+Calibration is the process of adjusting model coefficients and constants using manual (or mechanical) procedures.
+The friction factors and k-factors in gravity models are calibrated.
+The modal constants in regression and logit models are also calibrated (adjusted) to match "observed" choices.
+Oftentimes the terms calibration and estimation are used interchangeably, generally leading to confusion in communication between a group of two or more transportation planning professionals.
+The term validation refers to the process of comparing model simulated choices to "observed" choices.
+Validation is typically a stage in the model development process whereas calibration is the actual activity to achieve a "validated" model.
+"Observed" choice databases are independent estimates of socio-demographic or travel behavior characteristics.
+"Observed" databases include, for example, census data, traffic counts, transit on-board surveys and household travel surveys.
+Aggregate refers to survey or census records tabulated or analyzed at any level greater than the original level of data collection, e.g., 1990 Census block level data is aggregate data as well as place or county-level data.
+Most 1990 Census products, including the STF1A, STF3A and the CTPP/SE and CTPP/UE, are aggregate data.
+Disaggregate refers to survey or census records maintained at the original level of data collection, e.g., the household level or the person level.
+Household travel surveys collected and maintained by MPOs and state DOTs are disaggregate data sets.
+The census Public Use Microdata Sample (PUMS) is a disaggregate data set of individual census household and person records, even though the geographic identification is suppressed at the fine level of geography (less than 100,000 population groupings).
+This last point about the CTPP/UE being an aggregate data set and the PUMS being a disaggregate data set may be confusing, given the very small geographic areas associated with the CTPP/UE in contrast to the very large geographic areas associated with the PUMS.
+This is a critical distinction given that disaggregate choice models cannot be estimated using the CTPP/UE since the analyst does not have information on each household's or worker's characteristics and choices.
+Disaggregate choice models can, on the other hand, be estimated from PUMS data given that the analyst does have full information on each household's and worker's characteristics and choices (though not any detailed geographic characteristics).
+Can models be estimated using the CTPP/UE data sets? Yes, aggregate gravity models can be calibrated using zone-to-zone "observed" trip tables.
+Yes, aggregate mode choice models ("diversion curve" models) can be calibrated using the same "observed" trip tables.
+Should travel demand models be estimated using the CTPP/UE data sets? Aggregate models should be avoided when the analyst can develop disaggregate models instead.
+(The reader should refer to transportation planning textbooks to hear the arguments for and against disaggregate and aggregate demand models.)
+On the other hand, since all gravity models are aggregate models, it is quite appropriate to use the CTPP/UE as a fallback data set to calibrate an aggregate, home-based work person trip distribution model.
+Demographic and auto ownership models, other than land use models, can be estimated and/or validated using census data.
+Examples of demographic models include: * household income distribution models, * distribution of householdsnby number of workers in household model, * distribution of households by number of persons in household model, and * distribution of households by number of vehicles available model.
+Pearson (24) describes the estimation of aggregate household by household size and households by vehicle available models using the 1980 UTPP.
+Purvis (25) discusses the estimation of disaggregate household by workers in household and households by vehicles available models using the 1990 Census Public Use Microdata Sample.
+These two papers demonstrate the viability of using census data in estimating disaggregate and aggregate demographic and auto ownership models for use in regional travel demand forecasting systems.
+Part 1 of the CTPP/UE contains numerous zone-of-residence cross-tabulations that will be invaluable for aggregate validation of demographic and auto ownership models.
+For example, Table 1-13 includes a cross-tabulation of workers in households (six categories) by persons in households (five categories) by zone or tract of residence (26).
+If the transportation planner carries a household size segmentation through his or her travel model set, this Table 1-13 provides excellent "observed" data on workers in households by household size for validation at a zone, superzone, district, superdistrict, county and regional scale.
+(In fact, the CTPP/UE is the only source of small area census data that includes the distribution of households by workers in households.
+The STF3A file only has total employed residents by small area of residence, not differentiating between workers-in-households versus workers-in-group quarters units.)
+A commonly used market segmentation in travel demand model systems is households by household size and vehicles available.
+Table 1-17 is the only small area census source for data on distribution of households by household size by vehicles available.
+The analyst may use this table for the estimation of aggregate models for splitting households by household size and/or vehicle availability level; or he/she may use this cross-tabulation for the aggregate validation of these demographic models.
+Trip generation models cannot be estimated using census data due to the total lack of information on trip frequency per household or per worker.
+On the other hand, the census workers-at-work data can be adjusted and factored to create "observed" home-based work person trip tables by means of transportation.
+Work trip generation and trip distribution models can then be calibrated to match, or closely approximate, the observed work trip travel patterns.
+The 1980 and 1990 Census asked persons in the "long form" to indicate "At what location did this person work [most of] last week" and "How did this person usually get to work last week."
+If the person was an employed resident but was absent from work the last week of March 1980 or March 1990 due to sickness, vacation, labor dispute, etc., then that worker would not have provided information on his/her usual means of commuting or usual place of work.
+This is referred to as "weekly absenteeism."
+Any information on "within week" variation in commute behavior, such as daily absenteeism or commuting one day a week via transit or carpooling, or commuting from home-to-work in one mode (say, casual carpool) and commuting from work-to-home in yet another mode (say, public transit), would not be accounted for in census journey-to-work data.
+No census information is available on "moonlighting" - increasing the number of jobs held by an employed resident.
+The census is not an origin-destination survey.
+The census does not ask "From whose home did this person usually leave for work LAST WEEK?" This is the "travelling salesman" phenomenon in which the person could be away from his/her real home on business and view a hotel or motel as a "home" during the census period.
+This is a cause for amusing and illogical commuter flows, e.g., persons reporting walk commutes from San Francisco to Los Angeles, or subway commuters "living" in Honolulu and "working" in New York City.
+Typically a metropolitan area will a have a small fraction of workers making absurdly distant commutes.
+The recommendation is to laugh them off and put them aside - there will always be unusual outliers in census (and survey) data sets that cannot be treated seriously in transportation planning analysis.
+Metropolitan transportation planners have developed several techniques for factoring journey-to-work commuter matrices into observed home-based work trips.
+Mann describes procedures used for the Washington, D.C., metropolitan area to convert the 1980 UTPP commuter matrices to observed work trip tables (27).
+These Washington, D.C. procedures were implemented in the Puget Sound region as described by Deardorf and Schneider (28).
+Kollo and Purvis describe the use of the San Francisco Bay Area 1981 household travel survey in computing work trip rates per commuter to convert journey-to-work matrices to observed home-based work trips (29,30).
+Walker discusses the Philadelphia region procedures for conversion of 1980 UTPP commuter matrices in reference (31).
+The above referenced 1980 UTPP adjustment procedures for the Washington, D.C., Seattle, San Francisco and Philadelphia regions are based on a traditional definition of home-based work "person" trips which includes mechanized modes (drive alone, carpool, transit passenger) but excludes non-mechanized modes (walk, bicycle, other).
+The resulting home-based work trip rates range from 1.57 person trips per commuter in the Bay Area, to 1.78 person trips per commuter in Philadelphia, and range from factors of 1.54 to convert drive alone commuters and 2.15 to convert carpool commuters into observed home-based work carpool trips for the Washington metropolitan area.
+Probably the most legitimate technique to convert the 1990 CTPP/UE commuter matrices into observed home-based work trips is using work-trips-per-worker trip rates collected as part of regional household travel surveys.
+Several metropolitan areas in the United States conducted household travel surveys in the 1989 to 1991 time period, including, Los Angeles, San Francisco, Sacramento, Chicago, Boston, Minneapolis, Atlanta and San Antonio.
+Perhaps even data from the Nationwide Personal Transportation Survey (NPTS) could be used for estimating work-trip frequency per-worker trip rates for metropolitan areas without current travel survey information.
+Multi-day household travel surveys would be an ideal source of information for adjusting and factoring census journey-to-work commuter flows.
+The Bay Area MTC, for example, collected multiple weekday travel diaries from nearly 1,500 households in the spring and fall of 1990.
+This type of data set could be used for analyzing daily versus weekly absenteeism patterns, work trip mode switching during the week, and the different travel modes used in the trips from home-to-work as well as from work-to-home.
+The calibration and aggregate validation of home-based work-trip attraction models may be more problematic given potential differences in independent estimates of total employment as compared to the CTPP/UE workers at zone-of-work.
+The CTPP workers at zone-of-work, derived from Parts 2 and 3, excludes the "weekly absentees" and "moonlighting."
+Weekly absenteeism (only by area-of-residence) can be estimated from the STF3A or the CTPP/UE Part 1 tables.
+Moonlighting rates can be estimated from local sources, such as household travel surveys, or from national sources, such as the Current Population Survey (CPS) conducted by the Bureau of Labor Statistics and the Bureau of the Census.
+Other errors in the census workers-at-work data will include standard sampling error, geocoding errors, allocation errors, and the use of "default" or "workers at-large" zones for communities or counties with incomplete address coverage in the Census TIGER files.
+Ideally, the "default" or "workers-at-large" zone should be no more than one to two percent of the region's commuters.
+The CTPP/UE data is not equivalent to total employment.
+Ideally, the CTPP/UE workers at work should be 90 to 95 percent of the regional agency's independent estimates of total employment, i.e., total jobs in the region.
+The recent study by the Delaware Valley Regional Planning Commission (23) used a 2.2 percent weekly absenteeism rate (derived from the 1990 Census) and the national multiple jobholding rate of 6.2 percent of employed residents holding multiple jobs (derived from the Current Population Survey).
+DVRPC used the national moonlighting rates by industry sector, ranging from 4.7 percent for construction workers to 9.3 percent for those working in governments.
+(DVRPC also used other factors to bring the CTPP more in line with independent estimates derived from Dun and Bradstreet, and municipal tax records.)
+Trip distribution models can be calibrated using the adjusted and factored "observed" home-based work person trip tables and network levels-of-service files.
+This means calibrating the standard "friction factors" used in aggregate gravity models using either highway travel times or some combined impedance data.
+Socio-economic adjustment factors, or "k-factors" in transportation planning jargon, could also be used to adjust county-to-county, or district-to-district model-simulated home-based work person trip flows to match or approximate the "observed" trip patterns.
+The Seattle (28) and Philadelphia (31) reports provide more in-depth coverage on the use of the 1980 UTPP in work-trip distribution model calibration.
+Work-trip mode choice models cannot be estimated from census data.
+On the other hand, existing work-trip mode choice models (estimated from disaggregate household travel survey data) can be calibrated and validated to match or approximate CTPP-derived "observed" home-based work trips by means of transportation.
+The modal constants in the model utility functions can be adjusted (calibrated) upwards or downwards to change the base-year model simulation.
+These modal constants are typically calibrated on a county-to-county or district-to-district basis.
+Travel assignment models can use census journey-to-work travel time data as an element of the traffic assignment process.
+Walker describes the use of travel time data from the 1980 UTPP in analyzing New Jersey counties in the DVRPC region (32).
+Walker's research is very germane in light of current federal regulations on the Clean Air Act Amendments which relate to the use of "actual" or "observed" data in calibrating travel models for use in developing mobile source emissions budgets.
+The census journey-to-work data set can be an excellent source of data for the calibration and adjustment of speeds and travel times from traffic assignments.
+To summarize this section, metropolitan transportation planners have demonstrated the utility of census data in the estimation, calibration and validation of regional travel demand model systems.
+One essential use of census data is for benchmark, base-year socio-economic small area data used as input into travel model simulations.
+Analysts have used census data in statistically estimating and validating demographic and auto ownership models, work-trip generation and work-trip attraction models, work-trip distribution models, work-trip mode choice models, and for validating the highway speed simulations in traffic assignments.
+The 1990 Census journey-to-work data included in the CTPP is not a substitute for a comprehensive household travel survey.
+While the census contains invaluable socio-demographic data that are imperative for use in travel demand model systems, it does not have any information on work or non-work trip frequency, on non-work trip distribution, or on non-work mode choice patterns.
+Transportation planners must not approach the CTPP data as the sole source of data to develop and maintain adequate travel demand models.
+This may sound obvious to the majority of metropolitan transportation planners in the United States, but sometimes the obvious needs to be said.
+The CTPP is a useful, independent, secondary data set to augment the disaggregate household data sets that a successful metropolitan planning organization needs to collect for the development of state-of-the-art or state-of-the-practice travel demand model systems.
+Land Use Allocation Model Estimation, Calibration, and Validation
+Land use allocation models are used in metropolitan planning organizations in the United States and elsewhere for distributing regional forecasts of employment and workers to districts (zones) within the metropolitan area.
+Examples of these models are the DRAM/EMPAL system of models used in several metropolitan areas in the United States; the POLIS model, used in the San Francisco Bay Area; and the MEPLAN model system, applied in various Canadian, European and African metropolitan environments (33,34).
+The written record on the use of U.S. Census journey-to-work data for calibrating and validating urban location models is weak, though efforts are afoot to incorporate 1990 CTPP/UE commuter flow data as it becomes available.
+Twenty years after Lee's Requiem for Large-Scale Models appeared in the Journal of the American Institute of Planners, the American urban model building scene was somewhat reinvigorated by a federal clean air act lawsuit in San Francisco and new federal air quality conformity regulations that "encourage" the use of formal land use allocation models in regions with serious, severe, or extreme air quality non-attainment status, though these models are "not specifically required" (35).
+As such, metropolitan planning organizations are actively reassessing their land use model systems in order to meet the rules and requirements of the 1990 federal Clean Air Act Amendments and the Intermodal Surface Transportation Efficiency Act of 1991.
+Future work on building and applying urban location models is challenged by the increasing share of multiworker households and their household location patterns; the increasing share of "footloose" industries and their commercial and industrial location patterns; the increasing share of workers working at home and the whole issue of telecommuting; the confounding issues of local zoning controls and NIMBYism (not in my backyard) in determining the location of housing and jobs; and the increasing importance of community attributes (housing prices, crime, schools, shopping) in determining a household's location choices.
+Given these challenges, can we accurately simulate the metropolitan system? The CTPP data can function as a validation data set for urban location models, but it cannot be substituted for a theoretically complete, consistent and practical system of urban location models.
+Census Data and Estimating Small Area Employment Data
+As previously stated, the CTPP workers-at-work data is not equivalent to total employment or jobs.
+The CTPP workers-at-work "universe" excludes workers absent from work during the "census reference week" and does not account for second, or "moonlighting" jobs held by employed persons.
+However, after taking these two characteristics into account, the CTPP can be a fairly good data source for small area employment data.
+Many metropolitan planning organizations utilize employment record data from state employment security departments or employment development departments.
+These are employment security files that states must submit to the federal Department of Labor and include data on employment and unemployment statistics.
+There are problems, however, with state employment security files: They are oftentimes difficult to acquire and require careful negotiations with state agencies that may not be too cooperative in sharing this information; and they only include covered wage and salary jobs, and typically exclude family and self-employed workers.
+Other metropolitan planning organizations may conduct employer censuses as part of trip reduction programs or ridesharing databases.
+These programs will probably exclude small employers of less than, say, 50 or 100 employees.
+The best situation is to have two independent sources of employment: the CTPP adjusted for weekly absenteeism and moonlighting, and employment security records adjusted for family and self-employed workers.
+Unfortunately the numbers may be pitted against each other with in some cases the CTPP having the "right" number of jobs and in other cases the employment records having the "right" number of jobs - or neither estimate is correct! The job of the employment data analyst is to creatively adjust and reconcile the two competing estimates of small area employment.
+Census Data and Household Travel Surveys
+Small area census data is critical for use in the weighting and expansion of household travel surveys.
+Weighting and expansion of survey data is needed to adjust for non-response biases and geographic biases that will occur as part of any household travel surveying effort.
+For surveys conducted in the 1989 to 1991 time period, 1990 Census data can be used directly in weighting and expanding household surveys.
+For surveys conducted mid-decade the analyst must carefully adjust the census to account for changes in the number of households and household composition.
+The analyst may even choose to reweight household survey conducted in the mid-1980s by interpolating 1980 and 1990 Census data values.
+Survey analysts for the 1990 San Francisco Bay Area and the 1991 Los Angeles household travel surveys used similar, complex weighting schemes.
+The Bay Area analysts used the 1990 Census STF3A data to weight the survey by superdistrict of residence (34) by household size (1, 2, 3, 4, 5+) by vehicle availability (0, 1, 2, 3+) by tenure (owner, renter) (36).
+The Los Angeles analysts also used the 1990 Census STF3A data, expanding the survey by regional statistical area (49) by household size (1, 2, 3, 4, 5+) by vehicle availability (0, 1, 2+) by structure type (single family, multi-family) (37).
+Further "validation" of the sample expansion scheme is done by comparing the expanded survey to other census variables such as workers per household, tenure, structure type, sex, age, ethnicity, etc.
+A Chicago study also used 1990 Census data in weighting and expanding regional household travel surveys with an increased emphasis on correct expansion for low response neighborhoods within larger weighting districts (38).
+Transit Market Analysis
+This use of census data in transit market analysis is discussed in the resource paper by Cervero.
+The role of the metropolitan planning organization, it should be noted, is to provide the CTPP to the transit operator partners within a region; host training sessions on use of census data, particularly the CTPP, in transit service analysis; and generally help the transit operator meet their analysis requirements.
+Of special note are the Title VI Federal Transit Administration requirements related to low-income, auto-free, and minority populations within the transit operator service area.
+Miscellaneous Transportation Planning Applications
+Miscellaneous transportation planning applications of the census, including the 1980 UTPP and the 1990 CTPP, (excluding transit planning and travel demand forecasting use), include: * use of census data for background and "settings" chapters in long-range regional transportation plans; * use of journey-to-work commuter flow data in analyzing regional ridesharing programs; * use of commuter flow data in apportioning toll bridge revenues according to residential location of bridge commuters; and, * use of mobility limitation (disability) data in apportioning discretionary state dollars for paratransit programs.
+Other transportation applications will crop up as the data is disseminated to potential data users, and applied in ways we just cannot imagine.
+Non-Transportation Planning Applications of the Journey-to-Work Data
+This section discusses the non-transportation planning applications of the 1980 UTPP and the 1990 CTPP data.
+Other innovative and clever applications of this data will appear as potential users and clients are made aware of the availability and content of the 1990 CTPP.
+The article by Hammel (39) provides a good introduction to the non-transportation planning applications of the 1980 UTPP.
+Census journey-to-work data provides detailed information on commuter flows and daytime population which can be critical in disaster preparedness and disaster response planning.
+Census journey-to-work data was useful in disaster response planning efforts after the October 17, 1989 Loma Prieta Earthquake in Northern California and the January 17, 1994 Northridge Earthquake in Southern California.
+The reader should refer to Fulton (40) for a description of estimating daytime population using data from the census journey-to-work.
+City planning applications of the Census Transportation Planning Package are numerous, including using the CTPP data in support of revision of general plan circulation, bicycle, housing, land use, seismic safety, and public safety elements; in understanding labor force characteristics of city resident workers; in understanding the characteristics of workers working within the community; and in local employment development programs.
+The information may be of interest to local policymakers who want to know "Who is commuting to my city and where do they live?", "Who commutes through our city?" and "Where do our city residents work?"
+The journey-to-work data can be used by residential real estate developers to understand the commuteshed for residents of particular neighborhoods or communities.
+By knowing the current commuteshed of an area a developer can then market a product to workers working within that commuteshed.
+For example, a developer may use the information to determine the newspaper in which to advertise.
+The journey-to-work data can be used by commercial real estate market analysts to determine optimal sites for locating or relocating a firm, based on minimizing employee's commute times, or based on the characteristics of the labor force currently working within, say, 30 minutes of a particular site.
+Another example is U.S. military base planners who use journey-to-work data to understand commutesheds around existing or proposed military bases and the STF3A data on housing prices within that commuteshed to determine site suitability.
+The journey-to-work data can be used by radio stations to ascertain how many commuters are in private vehicles during any hour of the day.
+The journey-to-work data can be used in Federal Transit Administration-sponsored reverse commuting demonstration programs to understand the current magnitude of inner city resident workers commuting to jobs in the suburbs.
+The American Public Transit Association (APTA) has been actively involved in reverse commuting demonstration programs, publishing a report entitled Access to Opportunity (41) and sponsoring a session on this topic at the October, 1993 APTA annual meeting in New Orleans.
+The Urban Institute in Washington, D.C. and other organizations have also been involved in reverse commuting demonstration programs in the country, including Philadelphia, Baltimore, Milwaukee, Chicago, St. Louis, and Nashville (42-44).
+CONCLUSIONS
+This paper provides a discussion on the staged release of 1990 Census data and the use of census data in large metropolitan planning organizations in the United States.
+The various transportation and non-transportation uses and applications are discussed.
+One conclusion is that the decennial census is a major source of primary, small area socio-demographic information that is critical for metropolitan transportation planning activities.
+The census cannot provide the necessary disaggregate travel behavior information needed by metropolitan transportation planners.
+The census is not a substitute for a well-conducted household travel survey, but the census does provide critical data needed to adjust household travel surveys and to adjust independent estimates of small area employment.
+Census journey-to-work data is appropriate for use as an independent, secondary data source for the calibration and validation of regional work-trip generation, distribution and mode choice models.
+Where do we want to be in 10 years, at the next conference on decennial census data and transportation planning? Can we anticipate the inevitable changes in technology and society, and can we anticipate our data needs in the year 2004? Will the oil wells run dry and will we all be commuting over a virtual reality network? Will there be new "means of transportation" that should be included in the Year 2000 Census? Will we have traffic and travel behavior monitoring systems in place that will render the census obsolete? It may be too obvious that we cannot answer these questions in three days, let alone the next three years, but a conscious attempt by metropolitan transportation planners is needed to anticipate the travel demands of society after the year 2000.
+How can the Year 2000 Decennial Census be improved to anticipate these demands? _________________________________________________________________
+REFERENCES
+1. Use of Census Data in Urban Transportation Planning.
+Special Report 121, TRB, National Research Council, Washington, D.C., 1971.
+2.
+Census Data and Urban Transportation Planning.
+Special Report 145, TRB, National Research Council, Washington, D.C., 1974.
+3.
+Proceedings of the National Conference on Decennial Census Data for Transportation Planning, Special Report 206, TRB, National Research Council, Washington, D.C., 1985.
+4.
+Census Data and Urban Transportation Planning in the 1980s, Transportation Research Record 981, TRB, National Research Council, Washington, D.C., 1984.
+5.
+Arthur B. Sosslau.
+Transportation Planners Guide to Using the 1980 Census.
+Federal Highway Administration, Department of Transportation, January 1983.
+6.
+Arthur B. Sosslau and Michael Clarke.
+Case Studies - Applying the Urban Transportation Planning Package (UTPP) In Transportation Modeling.
+Federal Highway Administration, Department of Transportation, January 1984.
+7. Use of Census Data in Transportation Planning.
+ITE Publication No.
+IR-011B.
+Institute of Transportation Engineers, Washington, D.C., 1987.
+8.
+Content Determination Reports: Place of Work and Journey to Work: 1990 Census of Population and Housing.
+Report 1990 CDR-4.
+Bureau of the Census, Department of Commerce, October 1989.
+9.
+Alan E. Pisarski.
+Commuting in America: A National Report on Commuting Patterns and Trends.
+Eno Foundation for Transportation, Inc., Westport, Connecticut, 1987.
+10.
+Dwight Briggs, Alan Pisarski and James McDonnell.
+Journey-to-Work Trends Based on 1960, 1970 and 1980 Decennial Censuses.
+Federal Highway Administration, Department of Transportation, July 1986.
+11.
+Michael A. Rossetti and Barbara S. Eversole.
+Journey-to-Work Trends in the United States and its Major Metropolitan Areas, 1960-1990.
+Federal Highway Administration, Department of Transportation, November 1993.
+12.
+Alan E. Pisarski.
+New Perspectives in Commuting: Based on Early Data from the 1990 Decennial Census and the 1990 Nationwide Personal Transportation Study.
+Federal Highway Administration, Department of Transportation, July 1992.
+13.
+Decennial Census: 1990 Results Show Need for Fundamental Reform.
+Report GAO/GGD-92-94.
+General Accounting Office, June 1992.
+14.
+Planning the Decennial Census: Interim Report.
+Committee on National Statistics, Commission on Behavioral and Social Sciences and Education, National Research Council, Washington, D.C., 1993.
+15.
+Erik P. Berman, Ed J. Christopher, William H. Ma, Jay J. Nam and Matthew J. Rogus.
+1990 Census Transportation Factors for Residents of Illinois by County.
+Chicago Area Transportation Study, Chicago, Illinois, October 1993.
+16.
+Charles L. Purvis.
+Bay Area Population Characteristics: 1990 Census: Working Paper #1.
+Metropolitan Transportation Commission, Oakland, California, April 1992.
+17.
+Charles L. Purvis.
+Bay Area Travel and Mobility Characteristics: 1990 Census: Working Paper #2.
+Metropolitan Transportation Commission, Oakland, California, August 1992.
+18.
+County-to-County Commute Patterns in the San Francisco Bay Area: 1990 Census: Working Paper #3.
+Metropolitan Transportation Commission, Oakland, California, December 1992.
+19.
+San Francisco Bay Area Interregional County-to-County Commute Patterns: 1990 Census: Working Paper #4.
+Metropolitan Transportation Commission, Oakland, California, January 1993.
+20.
+Charles L. Purvis.
+The Journey-to-Work in the San Francisco Bay Area: 1990 Census: Census Transportation Planning Package (Statewide Element) Working Paper #5.
+Metropolitan Transportation Commission, Oakland, California, April 1993.
+21.
+Charles L. Purvis.
+Detailed Commute Characteristics in the San Francisco Bay Area: Census Transportation Planning Package (Urban Element) Working Paper #7.
+Metropolitan Transportation Commission, Oakland, California, March 1994.
+22.
+Bay Area Place to Place Journey to Work Characteristics: 1980 - 1990: Electronic Publication Documentation.
+Metropolitan Transportation Commission, Oakland, California, April 1993.
+23.
+Journey-to-Work Trends in the Delaware Valley Region, 1970 - 1990.
+Delaware Valley Regional Planning Commission, Philadelphia, Pennsylvania, June 1993.
+24.
+David F. Pearson.
+Disaggregating zonal households by Size, Income and Auto Ownership.
+Paper presented at the Third National Conference on Transportation Planning Methods Applications, Dallas, Texas, April 1991.
+25.
+Charles L. Purvis.
+Using the 1990 Census Public Use Microdata Sample (PUMS) to Estimate Demographic and Auto Ownership Models.
+Paper presented at the 73rd Annual Meeting of the Transportation Research Board, Washington, D.C., January 1994.
+26.
+1990 Census Transportation Planning Package: Urban Element - Parts 1, 2, and 3: Technical Documentation for Summary Tape.
+Journey-to-Work and Migration Statistics Branch, Population Division, Bureau of the Census, Department of Commerce, September 1993.
+27.
+William W. Mann.
+Converting Census Journey-to-Work Data to MPO Trip Data.
+In ITE Journal.
+February 1984.
+28.
+Raymond G. Deardorf and Jerry B. Schneider.
+A Comparison of Census Journey-to-Work and Model-Generated Transportation Data in the Puget Sound Region.
+In Transportation Research Record 1090, TRB, National Research Council, Washington, D.C., 1986, pp. 43-51.
+29.
+Hanna P.H. Kollo and Charles L. Purvis.
+Regional Travel Forecasting Model System for the San Francisco Bay Area.
+In Transportation Research Record 1220, TRB, National Research Council, Washington, D.C., 1989, pp. 58-65.
+30.
+Development of "Observed" Home-Based Work Person Trip Tables from 1980 Census Urban Transportation Planning Package Data: Assorted Staff Memos (1984-1985).
+Metropolitan Transportation Commission, Oakland, California, 1985.
+31.
+W. Thomas Walker.
+Testing and Adjusting Regional Travel Simulation Models with 1980 Census Data.
+In Transportation Quarterly, Vol. 42, No. 1, January 1988, pp. 63-88.
+32.
+W. Thomas Walker.
+Method to Synthesize a Full Matrix of Interdistrict Highway Travel Times from Census Journey-to-Work Data.
+In Transportation Research Record 1236,TRB, National Research Council, Washington, D.C., 1989, pp. 50-58.
+33.
+Michael Batty.
+A Chronicle of Scientific Planning: The Anglo-American Modeling Experience.
+In Journal of the American Planning Association,Vol.
+60, No. 1, Winter 1994, pp. 7-16.
+34.
+Michael Wegener.
+Operational Urban Models: State of the Art.
+In Journal of the American Planning Association, Vol. 60, No. 1, Winter 1994, pp. 17-29.
+35.
+Criteria and Procedures for Determining Conformity to State or Federal Implementation Plans of Transportation Plans, Programs, and Projects Funded or Approved Under Title 23 U.S.C. or the Federal Transit Act.
+40 CFR Parts 51 and 93.
+Environmental Protection Agency, 1993, Ã¯Â¿Â½ 51.452(b)(1)(viii).
+36.
+Charles L. Purvis.
+Sample Weighting and Expansion: Working Paper #2: 1990 MTC Travel Survey.
+Metropolitan Transportation Commission, Oakland, California, June 1993.
+37.
+Applied Management and Planning Group.
+1991 Southern California Origin-Destination Survey: Summary Findings.
+Southern California Association of Governments, Los Angeles, California, February 1993.
+38.
+Jing Li, Ashish Sen, Siim Soot and Ed Christopher.
+Factoring Household Travel Surveys.
+Paper presented at the 72nd Annual Meeting of the Transportation Research Board, Washington, D.C., January 1993.
+39.
+Lawrence V. Hammel.
+Nontransportation Uses of the Urban Transportation Planning Package.
+In Special Report 206, TRB, National Research Council, Washington, D.C.,1985, pp. 74-79.
+40.
+Philip N. Fulton.
+Estimating the Daytime Population with the Urban Transportation Planning Package.
+In Transportation Research Record 981, TRB, National Research Council, Washington, D.C., 1984, pp. 25-27.
+41.
+Access to Opportunity: A Study of Reverse Commuting Programs.
+American Public Transit Association, Washington, D.C., September 1993.
+42.
+Mark Alan Hughes and Julie E. Sternberg.
+The New Metropolitan Reality: Where the Rubber Meets the Road in Antipoverty Policy.
+The Urban Institute, Washington, D.C., December 1992.
+43.
+Planning Practice: Turnabout is Fair Play.
+In Planning, December 1993, pp. 17-22.
+44.
+Penelope Lemov.
+The Impossible Commute.
+In Governing, June 1993, pp. 32-35.
+_________________________________________________________________
+Back to MTC Census DataMart _________________________________________________________________
+Converted to HTML by the author, December 14, 1998.
+Last Reviewed: 21-Oct-99.

@@ -1,0 +1,90 @@
+Metropolitan Transportation Management Center A CASE STUDY Boston Central Artery/Tunnel Integrated Project Control System Responding to Incidents Rapidly and Effectively October 1999 Foreword Dear Reader, We have scanned the country and brought together the collective wisdom and expertise of transportation professionals implementing Intelligent Transportation Systems (ITS) projects across the United States.
+This information will prove helpful as you set out to plan, design, and deploy ITS in your communities.
+This document is one in a series of products designed to help you provide ITS solutions that meet your local and regional transportation needs.
+We have developed a variety of formats to communicate with people at various levels within your organization and among your community stakeholders: Ã¯Â¿Â½ Benefits Brochures let experienced community leaders explain in their own words how specific ITS technologies have benefited their areas; Cross-Cutting Studies examine various ITS approaches that can be taken to meet your community's goals; Case Studies provide in-depth coverage of specific approaches taken in real-life communities across the United States; and Implementation Guides serve as "how to" manuals to assist your project staff in the technical details of implementing ITS.
+Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ ITS has matured to the point that you don't have to go it alone.
+We have gained experience and are committed to providing our state and local partners with the knowledge they need to lead their communities into the next century.
+The inside back cover contains details on the documents in this series, as well as sources to obtain additional information.
+We hope you find these documents useful tools for making important transportation infrastructure decisions.
+Christine M. Johnson Program Manager, Operations Director, ITS Joint Program Office Federal Highway Administration Edward L. Thomas Associate Administrator for Research, Demonstration and Innovation Federal Transit Administration NOTICE The United States Government does not endorse products or manufacturers.
+Trademarks or manufacturers' names appear herein only because they are considered essential to the objective of this document.
+The following case study provides a snapshot of the Boston Central Artery/Tunnel Integration Project Control System (IPCS) operations control center.
+It follows the outline provided in the companion document, Metropolitan Transportation Management Center Concepts of Operation --A Cross Cutting Study, which describes operations and management successful practices and lessons learned from eight transportation management centers in the United States and Canada.
+This case study reflects information gathered from interviews and observations at the IPCS operations control center.
+The authors appreciate the cooperation and support of the Massachusetts Highway Department, the Massachusetts Turnpike Authority, and their partners in the development of this document.
+Preface Background Design and Implementation Operations Maintenance 2 3 5 7 Contents 1 Background
+The Integrated Project Control System (IPCS) is an integrated traffic management and system control and data acquisition application for Boston`s 7.5-mile Central Artery/Tunnel.
+The project, locally refered to as "The Big Dig," will cost $73 million to implement both the operations and backup control centers and the first 1.5 centerline miles of system.
+The system features a high density of field equipment, and double or triple redundancy in many elements.
+The traffic management components of the IPCS also support travel through the heart of Boston and to and from Logan Airport.
+The objectives of the Integrated Project Control System are to: Ã¯Â¿Â½ Ã¯Â¿Â½ Monitor security, traffic, and systems status Respond to incidents, nonstandard needs, or equipment failures rapidly and effectively.
+2 Design and Implementation General system design parameters for Integrated Project Control System are the following: Ã¯Â¿Â½
+The Integrated Project Control System operations control center is located in a new $20 million building at the entrance to the Ted Williams Tunnel.
+Features of the the 40-foot by 60-foot control room include: Two rows of five operator positions each Video wall display with eighteen 90-inch diagonal rear projection units plus 54, 21-inch video monitors.
+Each operator has a dual, 19-inch monitor, single workstation and six 13-inch video monitors A backup operations control center with four operator positions and 70 monitors is located nearby.
+All critical functions of the operations control center can be performed from the backup operations control center.
+Both are connected to the system's dual counter-rotating ring fiber optic network.
+With its unique location and mission, the Boston IPCS demonstrates the benefits of a transportation management center that integrates downtown, airport, and seaport facilities.Ã¯Â¿Â½ The computer software is an adaptation of a commercial system control and data acquisition package, running on a DEC Alpha 450 MHz processor with the VAX/VMS operating system.
+The primary processor fails over to a fully redundant secondary processor at the operations control center, and then to a tertiary processor at the backup operations control center.
+Operator workstations are Pentium class personal computers running the Windows NT operating system.
+3 Design and Implementation IPCS ensures operational readiness under frequently changing road conditions by using desktop rehearsal and new or altered procedure simulations.
+The system features include the following list: Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Loop detector stations at 200 feet in every lane More than 500 closed-circuit television cameras providing fully redundant camera coverage of the entire road area 120+ variable message signs on the freeway and surrounding arterials Lane control signals Highway advisory radio Full AM/FM rebroadcast in tunnels Motorist callboxes Full cellular phone coverage within the tunnels Flashing beacons Variable speed limit Detection of vehicles overheight for the tunnel.
+Method of Implementation Ã¯Â¿Â½ The initial Integrated Project Control System concepts were developed by Massachusetts Highway Department in two concept reports.
+The recommendations set forth in these reports were followed when creating the preliminary design.
+These were included in the Environmental Impact Statement, making the implementation of these design recommendations a formal agency commitment.
+Final plans, specifications, and estimates were developed by a consultant, and a construction contract was awarded through a two-step procurement process for the first phase of the system.
+Six months of initial system testing was performed at the vendor's California facility by vendor personnel, witnessed by Massachusetts Highway Department and its consultants.
+Three additional months of testing was performed after a significant processor upgrade.
+The backup operations control center can be used for testing system modifications before they are brought online at the operations control center.
+The Integrated Project Control System developer provided initial training to operations personnel.
+Refresher training is provided periodically, including updated training in new system functionality or for new operational methods.
+Training resources include system manuals, operations and maintenance manuals, and standard operations procedures.
+The system objective is to have an operators response manual available online and in print.
+Testing Ã¯Â¿Â½ Operations Readiness Testing Training Ã¯Â¿Â½ Ã¯Â¿Â½ Documentation 4 Ã¯Â¿Â½ Operations Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ MassPike is the operations and maintenance contractor to Massachusetts Highway Department, the system owner.
+New personnel must pass qualification tests in specific skills areas for each level.
+The Integrated Project Control System features one of the more extensively automated operations systems in the United States.
+Cameras will be triggered to display violation-of-speed/occupancy thresholds; otherwise video monitors are blank.
+Congestion and suspected incidents are automatically alarmed at operator workstations.
+Operators can bring any image to any monitor.
+The system map will display the entire road network or 1,000-foot roadway segments.
+Every system device is represented on the map by an icon that can be used both to determine device status and to control the device.
+Systems operations are 24 hours a day and 7 days a week, with a total staff of nine operators and a supervisor (two operators on each shift).
+Shift overlap is 30 minutes.
+Shift-change procedures include use of a "pass-down log" that documents shift activities that will affect the next shift, a shift change log of items checked at the beginning of each shift, and a "closeout log" that determines which problems have been resolved.
+Workload and Performance Ã¯Â¿Â½ Ã¯Â¿Â½ The Central Artery/Tunnel maintains its own response units that respond to any need within 3 minutes from detection to arrival at an incident scene.
+Direct radio link to the nearby state patrol is maintained on the operator console.
+"Hot Line" telephone links to 17 partner agencies, including law enforcement, are supported.
+Weekly meetings are held with core partner agencies.
+There are plans to eventually implement the Massachusetts Highway Department's Boston regional TMC in a room adjacent to the operations control center.
+Integrated Project Control System provides video and traffic information to partner agencies for their own use.
+A local information service provider is currently seeking an interface to Integrated Project Control System information and video for dissemination.
+Coordination Ã¯Â¿Â½ Ã¯Â¿Â½ 5 Operations Ã¯Â¿Â½ Transit integration with the Integrated Project Control System Interim Operations Center is not extensive.
+Current information exchange is focused on telephone calls between the Massachusetts Bay Transit Authority and the Interim Operations Center when major incidents are detected.
+Massachusetts Bay Transit Authority is presently implementing automatic vehicle location, which would allow its vehicles to function as traffic probes, and has expressed an interest in access to Integrated Project Control System video.
+Discussions of future activity have included the possibility of moving Massachusetts Bay Transit Authority bus dispatch into the regional transportation management center which will adjoin the Integrated Project Control System Operations Control Center.
+Massachusetts Bay Transit Authority is also working with the City of Boston on an upgrade to its traffic signal controllers which will provide access to congestion information at each signalized intersection.
+Conflict Resolution Ã¯Â¿Â½ Decision authority is from operator to operations supervisor to partner agencies.
+The operations supervisor is available by pager and cellular telephone when not on duty.
+Nonstandard Operations Ã¯Â¿Â½ For planning and operations in special and emergency conditions, Massachusetts Port Authority and the Central Artery/Tunnel have war rooms.
+Integrated Project Control System will have an individual assigned for special event and weather emergency planning.
+Operators are involved in special events planning.
+Before a special event occurs, Integrated Project Control System suggests planned procedures to relevant agencies.
+There is a formal review of data on previous special events, including lessons learned.
+Given the significant number of area road closures due to construction, Integrated Project Control System meets weekly with Central Artery/Tunnel program team, other area agencies, utilities, and contractors.
+Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ 6 Maintenance Ã¯Â¿Â½ Integrated Project Control System performs automatic monitoring and reporting of the status of all equipment.
+Device status is indicated by the color of the device icon on the system map.
+Operations has a direct line to maintenance.
+Because portions of the system and field equipment are available only to Integrated Project Control System on a "beneficial use" basis (i.e., not formally accepted; still under the responsibility of the contractor), operations may also contact the contractor.
+Fault Detection and Correction Ã¯Â¿Â½ The configuration management database is maintained in the maintenance management system.
+The implementation contractor provided the configuration baseline.
+Configuration Management Ã¯Â¿Â½ Spares, tools, and test equipment will initially be supplied by the implementation contractor.
+MassPike will also maintain spares.
+Both will be located at a central location.
+An online maintenance management system will be used, including online maintenance manuals.
+Logistics Ã¯Â¿Â½ MassPike is the maintenance contractor to Massachusetts Highway Department.
+Under its 18-month obligation, the installation contractor provides system updates, preventive maintenance, repairs, and training during this period.
+At the completion of the 18-month support period, Massachusetts Highway Department and MassPike plan to contract for maintenance using a multi-year renewable contract.
+Massachusetts Highway Department and MassPike are considering a combined operations and maintenance contract.
+Maintenance Due to the life-critical nature of tunnel traffic incidents, the IPCS implemented rapid incident response programs and highly reliable systems.
+7 For further information, contact: Federal Highway Administration Resource Centers Eastern Resource Center 10 S. Howard Street, Suite 4000 HRA-EA Baltimore, MD 21201 Telephone 410-962-0093 Southern Resource Center 61 Forsyth Street, SW Suite 17T26 HRA-SO Atlanta, GA 30303-3104 Telephone 404-562-3570 Midwestern Resource Center 19900 Governors Highway Suite 301 HRA-MW Olympia Fields, IL 60461-1021 Telephone 708-283-3510 Western Resource Center 201 Mission Street Suite 2100 HRA-WE San Francisco, CA 94105 Telephone 415-744-3102 Federal Transit Administration Regional Offices Region 1 Volpe National Transportation Systems Center Kendall Square 55 Broadway, Suite 920 Cambridge, MA 02142-1093 Telephone 617-494-2055 Region 2 1 Bolling Green Room 429 New York, NY 10004 Telephone 212-668-2170 Region 3 1760 Market Street, Suite 500 Philadelphia, PA 19103-4124 Telephone 215-656-7100 Region 4 Atlanta Federal Center 61 Forsyth Street, SW Suite 17T50 Atlanta, GA 30303-3104 Telephone 404-562-3500 Region 5 200 West Adams Street 24th Floor, Suite 2410 Chicago, IL 60606-5232 Telephone 312-353-2789 Region 6 819 Taylor Street Room 8A36 Fort Worth, TX 76102 Telephone 817-978-0550 Region 7 6301 Rockhill Road, Suite 303 Kansas City, MO 64131-1117 Telephone 816-523-0204 Region 8 Columbine Place 216 16th Street, Suite 650 Denver, CO 80202-5120 Telephone 303-844-3242 Region 9 201 Mission Street, Suite 2210 San Francisco, CA 94105-1831 Telephone 415-744-3133 Region 10 Jackson Federal Building 915 Second Avenue, Suite 3142 Seattle, WA 98174-1002 Telephone 206-220-7954 THIS D OCUMENT IS SSUES ADDRESS ITS I ONE IN A SERIES OF PRODUCTS THAT PERTINENT TO A VARIETY OF AUDIENCES AKERS ELECTED AND APPOINTED OFFICIALS Ã¯Â¿Â½ SENIOR DECISION M TRANSPORTATION MANAGERS Ã¯Â¿Â½ TECHNICAL EXPERTS Representing: Ã¯Â¿Â½ CITIES Ã¯Â¿Â½ COUNTIES Ã¯Â¿Â½ TRANSIT PROPERTIES Ã¯Â¿Â½ TOLL AUTHORITIES EMERGENCY SERVICE PROVIDERS Ã¯Â¿Â½ METROPOLITAN PLANNING ORGANIZATIONS ADDITIONAL TRANSPORTATION STAKEHOLDERS TATES S Products Available in This Series: - Benefits Brochures quote how ITS technologies have benefited specific areas present current data from related ITS applications - Technical Reports include results from various Field Operation Tests. assist project staff in the technical details of implementing ITS - Cross Cutting Studies - Case Studies - Implementation Guides provide in-depth coverage of ITS applications in specific projects.
+ITS Topics Addressed in This Series: Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ COMMERCIAL VEHICLE OPERATIONS EMERGENCY SERVICES ENABLING TECHNOLOGIES EMISSIONS MANAGEMENT FREEWAY AND ARTERIAL MANAGEMENT Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ Ã¯Â¿Â½ PLANNING AND INTEGRATION REAL-TIME TRAVELER INFORMATION TRANSIT, TOLL, AND RAIL MANAGEMENT WEATHER INFORMATION FOR TRAVELERS AND MAINTENANCE FOR A CURRENT LISTING OF AVAILABLE DOCUMENTS, PLEASE VISIT OUR WEB SITE AT: www.its.dot.gov ITS WEB R ITS Joint Program Office: ESOURCES http://www.its.dot.gov ITS Cooperative Deployment Network (ICDN): http://www.nawgits.com/jpo/icdn.html ITS Electronic Document Library (EDL): http://www.its.fhwa.dot.gov/cyberdocs/welcome.htm ITS Professional Capacity Building Program Catalogue: http://www.its.dot.gov/pcb/98catalg.htm Federal Transit Administration: http://www.fta.dot.gov I NTELLIGENT T RANSPORTATION SYSTEMS U.S. Department of Transportation 400 7th Street, SW Washington, DC 20590 Federal Highway Administration Room 3416, HOIT-01 Phone: (202) 366-0722 Facsimile: (202) 493-2027 Federal Transit Administration Room 9402,TRI-10 Phone: (202) 366-4991 Facsimile: (202) 366-3765 FHWA-OP-99-003 FTA-TRI-11-99-16

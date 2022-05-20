@@ -1,0 +1,977 @@
+Go to the first, previous, next, last section, table of contents.
+__________________________________________________________________
+libplot, a Function Library
+Programming with libplot: An overview
+GNU libplot is a free function library for drawing two-dimensional vector graphics.
+It can produce smooth, double-buffered animations for the X Window System, and can export files in many graphics file formats.
+It is `device-independent' in the sense that its API (application programming interface) is to a large extent independent of the display type or output format.
+There are bindings for C, C++, and other languages.
+The C binding, which is the most frequently used, is also called libplot, and the C++ binding, when it needs to be distinguished, is called libplotter.
+In this section we use libplot to refer to the library itself, irrespective of binding.
+The graphical objects that libplot can draw include paths, circles and ellipses, points, markers, and `adjusted labels' (justified text strings).
+A path is a sequence of line segments, circular arcs, elliptic arcs, quadratic Bezier curves, and/or cubic Bezier curves.
+Paths may be open or closed.
+User-specified filling of paths, circles, and ellipses is supported (fill rule and fill color, as well as pen color, may be specified).
+There is support for maintaining a Postscript-style stack of graphics contexts, i.e., a stack of drawing attribute sets.
+Path-related attributes include line thickness, line type, cap type, and join type, and text-related attributes include font name, font size, and text angle.
+The fundamental abstraction provided by libplot is that of a Plotter.
+A Plotter is an object with an interface for the drawing of vector graphics which is similar to the interface provided by a traditional pen plotter.
+There are many types of Plotter, which differ in the output format they produce.
+Any number of Plotters, of the same or different types, may exist simultaneously in an application.
+The drawing operations supported by Plotters of different types are identical, in agreement with the principle of device independence.
+So a graphics application that is linked with libplot may easily be written so as to produce output in any or all of the supported output formats.
+The following are the currently supported types of Plotter.
+* X Plotters.
+An X Plotter, when opened, pops up a window on an X Window System display and draws graphics in it.
+The window will be `spun off' when the Plotter is closed; if it is subsequently reopened, a new window will be popped up.
+A spun-off window will remain on the screen but will vanish if you type `q' or click your mouse in it.
+Future releases may permit X Plotters, when reopened, to reuse an existing window.
+* X Drawable Plotters.
+An X Drawable Plotter draws graphics in one or two specified drawables associated with an X Window System display.
+A `drawable' is either a window or a pixmap.
+The drawables must be passed to the Plotter as parameters.
+(See section Device driver parameters.)
+* PNM Plotters.
+A PNM Plotter produces a single page of output in "portable anymap" format, and directs it to a file or other specified output stream.
+There are three types of portable anymap: PBM (portable bitmap, for monochrome graphics), PGM (portable graymap), and PPM (portable pixmap, for colored graphics).
+The output file will be in whichever of these three formats is most appropriate.
+The file may be viewed or edited with many applications, such as the free image display application xv. * GIF Plotters.
+A GIF Plotter produces a single page of output in a pseudo-GIF format.
+Unlike true GIF format, the pseudo-GIF format does not use LZW compression: it uses run-length encoding instead.
+So it does not transgress the Unisys patent that restricts the use of LZW compression.
+However, the output file may be viewed or edited with any application that understands GIF format, such as xv.
+The creation of animated pseudo-GIFs is supported.
+* Illustrator Plotters.
+An Illustrator Plotter produces a single page of output in the format used by Adobe Illustrator, and directs it to a file or other specified output stream.
+The file may be edited with Adobe Illustrator (version 5, and more recent versions), or other applications.
+* Postscript Plotters.
+A Postscript Plotter produces Postscript output and directs it to a file or other specified output stream.
+If only a single page of graphics is drawn on the Plotter then its output is in EPS (encapsulated Postscript) format, so it may be included in another document.
+It may also be edited with the idraw drawing editor.
+* Fig Plotters.
+A Fig Plotter produces a single page of output in Fig format and directs it to a file or other specified output stream.
+The output may be edited with the xfig drawing editor.
+The xfig editor will export drawings in various other formats for inclusion in documents.
+* PCL Plotters.
+A PCL Plotter produces output in PCL 5 format and directs it to a file or other specified output stream.
+PCL 5 is a powerful version of Hewlett--Packard's Printer Control Language, which supports vector graphics.
+The output may be sent to a PCL 5 device such as a LaserJet printer or high-end inkjet.
+* HP-GL Plotters.
+An HP-GL Plotter produces output in the Hewlett--Packard Graphics Language (by default, in HP-GL/2), and directs it to a file or other specified output stream.
+The output may be imported into another application, or sent to a plotter.
+* Tektronix Plotters.
+A Tektronix Plotter produces output in Tektronix 4014 format and directs it to a file or other specified output stream.
+The output may be displayed on any Tektronix 4014 emulator.
+Such an emulator is built into xterm, the X Window System terminal emulation program.
+The MS-DOS version of kermit also includes such an emulator.
+* Metafile Plotters.
+A Metafile Plotter produces output in GNU graphics metafile format and directs it to a file or other specified output stream.
+This format is an extended version of the `plot(5)' format found on some other operating systems.
+(See section The Graphics Metafile Format.)
+It may be translated to other formats by an invocation of GNU plot.
+(See section The plot Program.)
+A distinction among these types of Plotter is that all except X and X Drawable Plotters write graphics to a file or other output stream.
+An X Plotter pops up its own windows, and an X Drawable Plotter draws graphics in one or two X drawables.
+Another distinction is that the first four types of Plotter (X, X Drawable, PNM, and GIF) produce bitmap output, while the remaining types produce output in a vector graphics format.
+In bitmap output the structure of the graphical objects is lost, but in a vector format it is retained.
+An additional distinction is that X, X Drawable, Tektronix and Metafile Plotters are real-time.
+This means that they draw graphics or write to an output stream as the drawing operations are invoked on them.
+The remaining types of Plotter are not real-time, since their output streams can only be emitted after all functions have been called.
+For PNM and GIF Plotters, this is because the bitmap must be constructed before it is written out.
+For Illustrator and Postscript Plotters, it is because a `bounding box' line must be placed at the head of the output file.
+For a Fig Plotter, it is because color definitions must be placed at the head of the output file.
+The most important operations supported by any Plotter are openpl and closepl, which open and close it.
+Graphics may be drawn, and drawing attributes set, only within an openpl...closepl pair.
+The graphics produced within each openpl...closepl pair constitute a `page'.
+In principle, any Plotter may be opened and closed arbitrarily many times.
+An X Plotter displays each page in a separate X window, and Postscript, PCL, and HP-GL Plotters render each page as a separate physical page.
+X Drawable Plotters and Tektronix Plotters manipulate a single drawable or display, on which pages are displayed in succession.
+Plotters that do not draw in real time (PNM, GIF, Illustrator, Postscript, Fig, PCL, and HP-GL Plotters) may wait until their existence comes to an end (i.e., until they are deleted) before outputting their pages of graphics.
+In the current release of libplot, Postscript Plotters delay outputting graphics in this way, but PCL and HP-GL Plotters output each page of graphics individually, i.e., when closepl is invoked.
+PNM, GIF, Illustrator and Fig Plotters are similar, but output only the first page.
+That is because PNM, GIF, Illustrator and Fig formats support only a single page of graphics.
+There are several other basic operations which any Plotter supports.
+The `graphics display' drawn in by a Plotter is a square or rectangular region on a display device.
+But when using any Plotter to draw graphics, a user will specify the coordinates of graphical objects in device-independent `user coordinates', rather than in device coordinates.
+A Plotter relates the user coordinate system to the device coordinate system by performing an affine transformation, which must be specified by the user.
+Immediately after invoking openpl to open a Plotter, an application should invoke the space operation to initialize this transformation.
+This invocation specifies the rectangular region (in user coordinates) that will be mapped by the Plotter to the graphics display.
+The affine transformation may be updated at any later time by invoking space again, or by invoking fconcat.
+The fconcat operation will `concatenate' (i.e., compose) the current affine transformation with any specified affine transformation.
+This sort of concatenation is a capability familiar from, e.g., Postscript.
+Each Plotter maintains a Postscript-style stack of graphics contexts.
+This makes possible the rapid, efficient drawing of complicated pages of graphics.
+A graphics context includes the current affine transformation from the user coordinate system to the device coordinate system.
+It also includes such modal drawing attributes as graphics cursor position, linemode, line thickness, pen and fill colors, and the font used for drawing text.
+The state of any uncompleted path (if any) is included as well, since paths may be drawn incrementally, one portion (line segment or arc) at a time.
+The current graphics context is pushed onto the stack by calling savestate, and popped off by calling restorestate.
+To permit vector graphics animation, any page of graphics may be split into `frames'.
+A frame is ended, and a new frame is begun, by invoking the erase operation.
+On a Plotter that does real-time plotting (i.e., an X, X Drawable, Tektronix, or Metafile Plotter), this erases all plotted objects from the graphics display, allowing a new frame to be drawn.
+Displaying a sequence of frames in succession creates the illusion of smooth animation.
+On most Plotters that do not do real-time plotting (i.e., PNM, Illustrator, Postscript, Fig, PCL, or HP-GL Plotters), invoking erase deletes all plotted objects from an internal buffer.
+For this reason, most Plotters that do not do real-time plotting will display only the final frame of any multiframe page.
+GIF Plotters are in a class by themselves.
+Even though they do not do real time plotting, a GIF Plotter can produce multi-image output, i.e., an animated pseudo-GIF file, from a multiframe page.
+As noted above, the pseudo-GIF file produced by a GIF Plotter will contain only the first page of graphics.
+But if this page consists of multiple frames, then each invocation of erase, after the first, will be treated by default as a separator between successive images.
+C Programming with libplot
+The C application programming interface
+libplot has bindings for several programming languages.
+Regardless of which language binding is used, the concepts behind libplot (Plotters, and a fixed set of operations that can be applied to any Plotter) remain the same.
+However, the ways in which Plotters are manipulated (created, selected for use, and deleted) may differ between bindings.
+This section discusses the C binding.
+If you are writing an application in C that will use libplot to draw vector graphics, the first thing you need to know is how, in the C binding, Plotters are manipulated.
+There are four special functions for this, which you can invoke: newpl, selectpl, deletepl, and the parameter-setting function parampl.
+Actually, you would usually invoke them under the names pl_newpl, pl_selectpl, pl_deletepl, and pl_parampl.
+That is because in the C binding, the names of all functions begin with "pl_" unless the header file plotcompat.h is included.
+See section C compiling and linking.
+The pl_newpl function will create a Plotter of specified type.
+Its first argument may be "X", "Xdrawable", "pnm", "gif", "ai", "ps", "fig", "pcl", "hpgl", "tek", or "meta".
+It returns a nonnegative integer (a "handle") that may be used to refer to the Plotter.
+Before using a Plotter that you have created (i.e., before invoking any of the libplot operations on it), you must select the Plotter for use by calling pl_selectpl.
+Only one Plotter may be selected at a time, but by calling pl_selectpl you may switch from Plotter to Plotter at any time, even when the selected Plotter is open.
+A Plotter that is not currently selected can be deleted, and its storage freed, by calling pl_deletepl.
+Strictly speaking, you do not need to call pl_newpl, pl_selectpl, or pl_deletepl in order to draw graphics.
+That is because at startup, a single Metafile Plotter that writes to standard output (with handle `0') is automatically created and selected.
+The presence of this default Plotter is for compatibility with pre-GNU versions of libplot.
+Of course, you may not wish to obtain output in metafile format, and you may not wish to write to standard output.
+You should get into the habit of calling pl_deletepl whenever you are finished using a Plotter.
+In general, Plotters that do not plot graphics in real time (Postscript Plotters in particular) write out graphics only when the plot is finished, and pl_deletepl is called.
+The following table summarizes the action of the four functions in the C binding that are used for Plotter manipulation.
+int pl_newpl (const char *type, FILE *infile, FILE *outfile, FILE *errfile); pl_newpl creates a Plotter of type type, where type may be "X", "Xdrawable", "pnm", "gif", "ai", "ps", "fig", "pcl", "hpgl", "tek", or "meta".
+The Plotter will have input stream infile, output stream outfile, and error stream errfile.
+Any or all of these three may be NULL.
+Currently, all Plotters are write-only, so infile is ignored.
+X Plotters and X Drawable Plotters write graphics to an X Window System display rather than to an output stream, so if type is "X" or "Xdrawable" then outfile is ignored as well.
+Error messages (if any) are written to the stream errfile, unless errfile is NULL.
+The return value from newpl is a `handle': a nonnegative integer by which the newly created Plotter is referred to.
+A negative return value indicates the Plotter could not be created.
+int pl_selectpl (int handle); pl_selectpl selects a Plotter, referred to by its handle, for use.
+If any of the basic libplot operations is subsequently invoked, it will be applied to the selected Plotter.
+Only one Plotter may be selected at a time.
+At startup, a single Metafile Plotter that writes to standard output (with handle `0') is automatically created and selected.
+The handle of the previously selected Plotter is returned.
+A negative return value indicates the specified Plotter does not exist or could not be selected.
+int pl_deletepl (int handle); pl_deletepl deletes a Plotter, referred to by its handle.
+The Plotter must not be selected at the time it is deleted.
+A negative return value indicates the Plotter could not be deleted. int pl_parampl (const char *parameter, void *value); pl_parampl sets the value of the device driver parameter parameter to value.
+Device driver parameters specify Plotter options.
+The parameter values in effect at the time any Plotter is created are copied into it.
+For most parameters, value should be a char *, i.e., a string.
+Unrecognized parameters are ignored.
+For a list of the recognized parameters and their meaning, see section Device driver parameters.
+Up to now we have not discussed the fourth function, pl_parampl.
+Even though the Plotter interface is largely Plotter-independent, it is useful to be able to specify certain aspects of a Plotter's behavior at the time it is created.
+Plotter behavior is captured by a manageable number of parameters, which we call device driver parameters.
+A value for any parameter can be specified by calling pl_parampl.
+This function does not operate on any particular Plotter: it belongs to the C binding as a whole.
+The parameter values used by any Plotter are constant over the lifetime of the Plotter, and are those that were in effect when the Plotter was created.
+Actually, a slightly more sophisticated rule applies.
+If at Plotter creation time a parameter is set, the value specified by the most recent call to pl_parampl will be the value used by the Plotter.
+If at Plotter creation time a parameter is not set, its default value will be used, unless the parameter is string-valued and there is an environment variable of the same name, in which case the value of that environment variable will be used.
+This rule increases run-time flexibility: an application programmer may allow non-critical driver parameters to be specified by the user via environment variables.
+Once set, a parameter may be unset by the programmer by calling pl_parampl with a value argument of NULL.
+This further increases flexibility.
+C compiling and linking
+The source code for a graphics application written in C, if it is to use libplot, must contain the lines #include 
+The header file plot.h is distributed with libplot, and should have been installed on your system where your C compiler will find it.
+It contains prototypes for each of the functions in libplot, and some miscellaneous definitions.
+In current releases of libplot, the names of all functions begin with the prefix "pl_".
+For example, the openpl operation is invoked on a Plotter by calling the function pl_openpl.
+If you wish, you may maintain backward compatibility by also including the header file plotcompat.h.
+This header file redefines openpl as pl_openpl, and similarly for the other libplot functions.
+To link your application with libplot, you would use the appropriate `-l' option(s) on the command line when compiling it.
+You would use -lplot -lXaw -lXmu -lXt -lXext -lX11 -lm
+or, in recent releases of the X Window System, -lplot -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 -lm
+(Alternatively, you may need to use `-lplot -lXm -lXt -lXext -lX11 -lm', `-lplot -lXm -lXt -lXext -lX11 -lm -lc -lgen', or `-lplot -lXm -lXt -lXext -lX11 -lm -lc -lPW', on systems that provide Motif widgets instead of Athena widgets.
+In recent releases of the X Window System, you would insert `-lSM -lICE'.
+Recent releases of Motif require `-lXp' as well.)
+On some platforms, the directories in which libplot or the other libraries are stored must be specified on the command line.
+For example, the options `-lXaw -lXmu -lXt -lSM -lICE -lXext -lX11', which specify X Window System libraries, may need to be preceded by an option like `-L/usr/X11/lib'.
+On most systems libplot is installed as a DLL (dynamically linked library, or `shared' library).
+This means that the linking with your application will take place at run time rather than compile time.
+The environment variable LD_LIBRARY_PATH lists the directories which will be searched for DLL's at run time.
+For your application to be executable, this environment variable should include the directory in which libplot is stored.
+Sample drawings in C
+The following is a sample application, written in C, that invokes libplot operations to draw vector graphics.
+It draws an intricate and beautiful path (Bill Gosper's "C" curve, discussed as Item #135 in HAKMEM, MIT Artificial Intelligence Laboratory Memo #239, 1972).
+As the numeric constant MAXORDER (here equal to 12) is increased, the path will take on the shape of a curly letter "C", which is the envelope of a myriad of epicyclic octagons. #include 
+void draw_c_curve (double dx, double dy, int order) { if (order 
+int main () { int handle;
+/* set a Plotter parameter */ pl_parampl ("PAGESIZE", "letter");
+/* create a Postscript Plotter that writes to standard output */ if ((handle = pl_newpl ("ps", stdin, stdout, stderr)) 
+if (pl_openpl () 
+pl_selectpl (0); /* select default Plotter */ if (pl_deletepl (handle) 
+As you can see, this application begins by calling the pl_newpl function to create a Postscript Plotter.
+The Postscript Plotter will produce output for a US letter-sized page, though any other standard page size, e.g., "a4", could be substituted.
+This would be arranged by altering the call to pl_parampl.
+The PAGESIZE parameter is one of several Plotter parameters that an application programmer may set by calling pl_parampl.
+For a complete list, see section Device driver parameters.
+After the Plotter is created, the application selects it for use, opens it, and draws the "C" curve recursively.
+The drawing of the curve is accomplished by calling the pl_fmove function to position the Plotter's graphics cursor, and then calling draw_c_curve.
+This subroutine repeatedly calls pl_fcontrel.
+The pl_fcontrel function continues a path by adding a line segment to it.
+The endpoint of each line segment is specified in relative coordinates, i.e., as an offset from the previous cursor position.
+After the "C" curve is drawn, the Plotter is closed.
+A Postscript file is written to standard output when pl_deletepl is called to delete the Plotter.
+Specifying "pnm", "gif", "ai", "fig", "pcl", "hpgl", "tek", or "meta" as the first argument in the call to pl_newpl, instead of "ps", would yield a Plotter that would write graphics to standard output in the specified format, instead of Postscript.
+The PAGESIZE parameter is relevant to the "ai", "fig", "pcl", and "hpgl" output formats, but is ignored for the others.
+Specifying "meta" as the Plotter type may be useful if you wish to avoid recompilation for different output devices.
+Graphics metafile output may be piped to the plot utility and converted to any other supported output format, or displayed in an X window.
+See section The plot Program.
+If "X" were specified as the first argument of pl_newpl, the curve would be drawn in a popped-up X window, and the output stream argument would be ignored.
+Which X Window System display the window would pop up on would be determined by the DISPLAY parameter, or if that parameter were not set, by the DISPLAY environment variable.
+The size of the X window would be determined by the BITMAPSIZE parameter, or if that parameter were not set, by the BITMAPSIZE environment variable.
+The default value is "570x570".
+For the "pnm" and "gif" Plotter types, the interpretation of BITMAPSIZE is similar.
+You could also specify "Xdrawable" as the Plotter type.
+For you to make this work, you would need to know a bit about X Window System programming.
+You would need to create at least one X drawable (i.e., window or a pixmap), and by invoking the pl_parampl function before newpl is called, set it as the value of the parameter XDRAWABLE_DRAWABLE1 or XDRAWABLE_DRAWABLE2.
+For the parameters that affect X Drawable Plotters, see section Device driver parameters.
+The following is another sample application, written in C, that invokes libplot operations to draw vector graphics.
+It draws a spiral consisting of elliptically boxed text strings, each of which reads "GNU libplot!".
+This figure will be sent to standard output in Postscript format.
+#include 
+void draw_boxed_string (char *s, double size, double angle) { double true_size, width;
+pl_ftextangle (angle); /* text inclination angle (degrees) */ true_size = pl_ffontsize (size); /* choose font size */ width = pl_flabelwidth (s); /* compute width of text string */ pl_fellipserel (0.0, 0.0, /* draw surrounding ellipse */ EXPAND * 0.5 * width, EXPAND * 0.5 * true_size, angle); pl_alabel ('c', 'c', s); /* draw centered text string */ }
+int main() { int handle, i;
+/* set a Plotter parameter */ pl_parampl ("PAGESIZE", "letter");
+/* create a Postscript Plotter that writes to standard output */ if ((handle = pl_newpl ("ps", stdin, stdout, stderr)) 
+if (pl_openpl () 
+for (i = 80; i 
+theta = 0.5 * (double)i; /* theta is in radians */ radius = SIZE / pow (theta, 0.35); /* this yields a spiral */ pl_fmove (radius * cos (theta), radius * sin (theta)); draw_boxed_string ("GNU libplot!", 0.04 * radius, (180.0 * theta / M_PI) - 90.0); }
+if (pl_closepl () 
+This example shows what is involved in plotting a text string or text strings.
+First, the desired font must be retrieved.
+A font is fully specified by calling pl_fontname, pl_fontsize, and pl_textangle, or their floating point counterparts pl_ffontname, pl_ffontsize, and pl_ftextangle.
+Since these three functions may be called in any order, each of them returns the size of the font that it selects, as a convenience to the programmer.
+This may differ slightly from the size specified in the most recent call to pl_fontsize or pl_ffontsize, since many Plotters have only a limited repertory of fonts.
+The above example plots each text string in the "NewCenturySchlbk-Roman" font, which is available on Postscript Plotters.
+See section Available text fonts.
+If you replace "ps" by "X" in the call to pl_newpl, an X Plotter rather than a Postscript Plotter will be used, and the spiral will be drawn in a popped-up X window.
+If your X display does not support the "NewCenturySchlbk-Roman" font, you may substitute any other scalable font, such as the widely available "utopia-medium-r-normal".
+For the format of font names, see section Available text fonts for the X Window System.
+If the X Plotter is unable to retrieve the font you specify, it will first attempt to use a default scalable font ("Helvetica"), and if that fails, use a default Hershey vector font ("HersheySerif") instead.
+Hershey fonts are constructed from line segments, so each built-in Hershey font is available on all types of Plotter.
+If you are using an older (pre-X11R6) X Window System display, you will find that retrieving a scalable font is a time-consuming operation.
+The above example may run slowly on some older X displays, since a new font must be retrieved before each text string is drawn.
+That is because each text string has a different angle of inclination.
+It is possible to retrieve individual characters from an X11R6 display, rather than retrieving an entire rasterized font.
+If this feature is available, the X Plotter will automatically take advantage of it to save time.
+Animated GIFs in C
+Using libplot to create pseudo-GIF files, including animated pseudo-GIFs, is straightforward.
+A GIF Plotter is a Plotter like any other, and it supports the same drawing operations.
+However, it has two special properties.
+(1) It can draw only a single page of graphics, i.e., only the graphics contained in the first openpl...closepl appear in the output file.
+In this, it resembles other Plotters that do not plot in real time.
+(2) Within this page, each invocation of erase is normally treated as the beginning of a new image in the output file.
+There is an exception to this: the first invocation of erase begins a new image only if something has already been drawn.
+The reason for the exception is that many programmers who use libplot are in the habit of invoking erase immediately after a Plotter is opened.
+This is not a bad habit, since a few types of Plotter (e.g., X Drawable and Tektronix Plotters) are `persistent' in the sense that previously drawn graphics remain visible.
+The following program creates a simple animated pseudo-GIF, 150 pixels wide and 100 pixels high.
+#include 
+int main() { int i, handle;
+/* set Plotter parameters */ pl_parampl ("BITMAPSIZE", "150x100"); pl_parampl ("BG_COLOR", "orange"); pl_parampl ("TRANSPARENT_COLOR", "orange"); pl_parampl ("GIF_ITERATIONS", "100"); pl_parampl ("GIF_DELAY", "5");
+/* create a GIF Plotter with the specified parameters */ handle = pl_newpl ("gif", stdin, stdout, stderr); pl_selectpl (handle); /* select the Plotter for use */
+pl_openpl(); /* begin page of graphics */ pl_space (0, 0, 149, 99); /* specify user coordinate system */
+pl_pencolorname ("red"); /* objects will be drawn in red */ pl_linewidth (5); /* set the line thickness */ pl_filltype (1); /* objects will be filled */ pl_fillcolorname ("black"); /* set the fill color */
+for (i = 0; i 
+pl_closepl (); /* end page of graphics */ pl_selectpl (0); /* select default Plotter */ pl_deletepl (handle); /* delete Plotter we used */ return 0; }
+The animated pseudo-GIF will be written to standard output.
+It will consist of twelve images, showing the counterclockwise rotation of a black-filled red ellipse through 180 degrees.
+The pseudo-GIF will be `looped' (see below), so the ellipse will rotate repeatedly.
+The parameters of the ellipse are expressed in terms of user coordinates, not pixel coordinates.
+But the call to pl_space defines user and pixel coordinates to be effectively the same.
+User coordinates are chosen so that the lower left corner is (0,0) and the upper right corner is (149,99).
+Since this agrees with the image size, individual pixels may be addressed in terms of integer user coordinates.
+For example, pl_point(149,99) would set the pixel in the upper right hand corner of the image to the current pen color.
+Besides BITMAPSIZE and BG_COLOR, there are several important GIF Plotter parameters that may be set with the pl_parampl function.
+The TRANSPARENT_COLOR parameter may be set to the name of a color.
+Pixels in a pseudo-GIF that have that color will be treated as transparent by most software.
+This is usually used to create a transparent background.
+In the example above, the background color is specified as orange, but the transparent color is also specified as orange.
+So the background will not actually be displayed.
+The GIF_ITERATIONS parameter, if set, specifies the number of times that a multi-frame pseudo-GIF should be looped.
+The GIF_DELAY parameter specifies the number of hundredths of a seconds that should elapse between successive images.
+The INTERLACE parameter is sometimes useful.
+If it is set to "yes", the pseudo-GIF will be interlaced.
+This is of greatest value for single-frame GIFs.
+For full details on Plotter parameters, see section Device driver parameters.
+X Window System animations in C
+You may use libplot to produce vector graphics animations on any Plotter that does real-time plotting (i.e., an X, X Drawable, Tektronix, or Metafile Plotter).
+By definition, the `frames' in any page of graphics are separated by invocations of erase.
+So the graphics display will be cleared after each frame.
+If successive frames differ only slightly, a smooth animation will result.
+The following is a sample application, written in C, that produces an animation for the X Window System.
+It displays a `drifting eye'.
+As the eye drifts across a popped-up window from left to right, it slowly rotates.
+After the eye has drifted across twice, the window will vanish.
+#include 
+int main () { int handle, i = 0, j;
+/* set Plotter parameters */ pl_parampl ("BITMAPSIZE", "300x150"); pl_parampl ("VANISH_ON_DELETE", "yes"); pl_parampl ("USE_DOUBLE_BUFFERING", "yes");
+/* create an X Plotter with the specified parameters */ if ((handle = pl_newpl ("X", stdin, stdout, stderr)) 
+if (pl_openpl () 
+pl_selectpl (0); /* select default Plotter */ if (pl_deletepl (handle) 
+As you can see, this application begins by calling pl_parampl several times to set device driver parameters, and then calls pl_newpl to create an X Plotter.
+The X Plotter window will have size 300x150 pixels.
+This window will vanish when the Plotter is deleted.
+If the VANISH_ON_DELETE parameter were not set to "yes", the window would remain on the screen until removed by the user (by typing `q' in it, or by clicking with a mouse).
+Setting the parameter USE_DOUBLE_BUFFERING to "yes" requests that double buffering be used.
+This is very important if you wish to produce a smooth animation, with no jerkiness.
+Normally, an X Plotter draws graphics into a window in real time, and erases the window when pl_erase is called.
+But if double buffering is used, each frame of graphics is written into an off-screen buffer, and is copied into the window, pixel by pixel, when pl_erase is called or the Plotter is closed.
+This is a bit counterintuitive, but is exactly what is needed for smooth animation.
+After the Plotter is created, it is selected for use and opened.
+When pl_openpl is called, the window pops up, and the animation begins.
+In the body of the for loop there is a call to pl_erase, and also a sequence of libplot operations that draws the eye.
+The pen color and fill color are changed twice with each passage through the loop.
+You may wish to experiment with the animation parameters to produce the best effects on your video hardware.
+The locations of the objects that are plotted in the animation are expressed in terms of user coordinates, not pixel coordinates.
+But the call to pl_space defines user and pixel coordinates to be effectively the same.
+User coordinates are chosen so that the lower left corner is (0,0) and the upper right corner is (299,149).
+Since this agrees with the window size, individual pixels may be addressed in terms of integer user coordinates.
+For example, pl_point(299,149) would set the pixel in the upper right hand corner of the window to the current pen color.
+The following is another sample animation, this time of a rotating letter `A'. #include 
+int main() { int handle, angle = 0;
+/* set Plotter parameters */ pl_parampl ("BITMAPSIZE", "300x300"); pl_parampl ("BG_COLOR", "blue"); /* background color for window */ pl_parampl ("USE_DOUBLE_BUFFERING", "yes");
+/* create an X Plotter with the specified parameters */ handle = pl_newpl ("X", stdin, stdout, stderr); pl_selectpl (handle);
+/* open X Plotter, initialize coordinates, pen, and font */ pl_openpl (); pl_fspace (0.0, 0.0, 1.0, 1.0); /* use normalized coordinates */ pl_pencolorname ("white"); pl_ffontsize (1.0); pl_fontname ("NewCenturySchlbk-Roman");
+pl_fmove (.50,.50); /* move to center */ while (1) /* loop endlessly */ { pl_erase (); pl_textangle (angle++); /* set new rotation angle */ pl_alabel ('c', 'c', "A"); /* draw a centered `A' */ } pl_closepl(); /* close Plotter */
+pl_selectpl (0); /* select default Plotter */ pl_deletepl (handle); /* delete Plotter we used */ return 0; }
+This animation serves as a good test of the capabilities of an X Window System display.
+On a modern X11R6 display, animation will be smooth and fast.
+That is because X11R6 displays can rasterize individual characters from a font without rasterizing the entire font.
+If your X display does not support the "NewCenturySchlbk-Roman" font, you may substitute any other scalable font, such as the widely available "utopia-medium-r-normal".
+For the format of font names, see section Available text fonts for the X Window System.
+If the X Plotter is unable to retrieve the font you specify, it will first attempt to use a default scalable font ("Helvetica").
+If that too fails, it will use a default Hershey vector font ("HersheySerif") instead.
+Animations that use Hershey fonts are normally faster than ones that use Postscript fonts or other X Window System fonts, since the Hershey fonts are constructed from line segments.
+Rasterizing line segments can be done rapidly.
+But if you use a scalable font such as "NewCenturySchlbk-Roman" or "utopia-medium-r-normal", you will notice that the rotation speeds up after the letter `A' has rotated through 360 degrees.
+That is because the `A' at angles past 360 degrees has already been rasterized.
+Advanced X Window System programming
+Applications that run under the X Window System are normally built using Xt, the X Toolkit.
+In Xt, an application is constructed from `widgets' such as text entry fields, buttons, sliders, drawing areas, etc.
+When the application starts up, each widget is configured to respond appropriately to `events', which include key presses and mouse clicks.
+After the widgets are configured, control is transferred to the Xt event loop.
+GNU libplot can be used within the Xt event loop to draw vector graphics.
+For this, it would use one or more X Drawable Plotters.
+An X Drawable Plotter is a Plotter that can plot into an off-screen pixmap or an on-screen window, such as a window associated with a widget.
+The following sample application shows how an X Drawable Plotter would be used.
+The application draws a `C' curve, as defined in a previous section, in a popped-up window.
+The usual Xt command-line options may be used: the window background color is specified with the `-bg' option, the window geometry with `-geometry', etc.
+The curve is initially drawn in red, but clicking once with the mouse will redraw it in green.
+A second mouse click will redraw it in red, and so forth.
+The application will terminate when `q' is typed.
+#include 
+int green = 0; /* draw in green, not red? */
+#define MAXORDER 12 void draw_c_curve (double dx, double dy, int order) { if (order 
+void Redraw (Widget w, XEvent *ev, String *params, Cardinal *n_params) { /* draw C curve */ pl_erase (); pl_pencolorname (green ? "green" : "red"); pl_fmove (600.0, 300.0); draw_c_curve (0.0, 400.0, 0); pl_endpath (); }
+void Toggle (Widget w, XEvent *ev, String *params, Cardinal *n_params) { green = (green ? 0 : 1); Redraw (w, ev, params, n_params); }
+void Quit (Widget w, XEvent *ev, String *params, Cardinal *n_params) { exit (0); }
+/* mapping of events to actions */ static const String translations = "
+/* mapping of actions to subroutines */ static XtActionsRec actions[] = { {"redraw", Redraw}, {"toggle", Toggle}, {"quit", Quit}, };
+/* default parameters for widgets */ static String default_resources[] = { "Example*geometry: 250x250", (String)NULL };
+int main (int argc, char *argv[]) { Arg wargs[10]
+/* take background color from command line */ for (i = 0; i 
+/* create toplevel shell widget */ shell = XtAppInitialize (
+/* set default widget parameters (including window size) */ XtAppSetFallbackResources (app_con, default_resources);
+/* map actions to subroutines */ XtAppAddActions (app_con, actions, XtNumber (actions));
+/* create canvas widget as child of shell widget; realize both */ XtSetArg(wargs[0], XtNargc, argc); XtSetArg(wargs[1]
+/* for the canvas widget, map events to actions */ XtSetArg (wargs[0], XtNtranslations, XtParseTranslationTable (translations)); XtSetValues (canvas, wargs, (Cardinal)1);
+/* initialize GNU libplot */ display = XtDisplay (canvas); pl_parampl ("XDRAWABLE_DISPLAY", display); window = XtWindow (canvas); pl_parampl ("XDRAWABLE_DRAWABLE1", 
+/* transfer control to X Toolkit event loop (doesn't return) */ XtAppMainLoop (app_con);
+return 1; }
+Even if you are not familiar with X Window System programming, the structure of this application should be clear.
+It defines three callbacks: Redraw, Toggle, and Quit.
+They are invoked respectively in response to (1) a window expose event or mouse click, (2) a mouse click, and (3) a typed `q'.
+The first drawing of the `C' curve (in red) takes place because the window receives an initial expose event.
+This example could be extended to take window resizing into account.
+Actually, X Drawable Plotters are usually used to draw vector graphics in off-screen pixmaps rather than on-screen windows.
+Pixmaps, unlike windows, are never resized.
+C++ Programming with libplotter
+The Plotter class
+The C++ binding for libplot is provided by a class library, named libplotter.
+This library implements a Plotter class, of which all Plotters are instances.
+Actually, a Plotter would normally be an instance of an appropriate derived class, determined by the Plotter's output format.
+Derived classes currently include XPlotter, XDrawablePlotter, PNMPlotter, GIFPlotter, AIPlotter, PSPlotter, FigPlotter, PCLPlotter, HPGLPlotter, TekPlotter, and MetaPlotter.
+The names should be self-explanatory.
+The operations that may be applied to any Plotter (e.g., the openpl operation, which begins a page of graphics) are implemented as public function members of the Plotter class.
+At the time a Plotter is created, its input, output, and error streams must be specified.
+(The first is ignored, since at present, all Plotters are write-only.)
+The streams may be specified either as iostreams or as FILE pointers.
+That is, the two constructors Plotter(istream
+are provided for the base Plotter class, and similarly for each of its derived classes.
+So, for example, both PSPlotter plotter(cin, cout, cerr);
+and PSPlotter plotter(stdin, stdout, stderr);
+are possible declarations of a Postscript Plotter that writes to standard output.
+In the iostream case, an ostream with a null stream buffer may be specified as the output stream and/or the error stream, to request that no output take place.
+In the FILE pointer case, specifying a null FILE pointer would accomplish the same thing.
+Instances of the XPlotter and XDrawablePlotter classes always ignore the output stream argument, since they write graphics to an X Display rather than to a stream.
+The parameter-setting function parampl, which plays an important role in all bindings of libplot, is implemented in libplotter as a static function member of the Plotter class.
+The following is a formal description.
+int Plotter::parampl (const char *parameter, void *value); Plotter::parampl sets the value of the device driver parameter parameter to value.
+Device driver parameters specify Plotter options.
+The parameter values in effect at the time any Plotter is created are copied into it.
+For most parameters, value should be a char *, i.e., a string.
+Unrecognized parameters are ignored.
+For a list of the recognized parameters and their meaning, see section Device driver parameters.
+Just as in the C binding, Plotter::parampl gives the programmer fine control over the parameters of subsequently created Plotters.
+The parameter values used by any Plotter are constant over the lifetime of the Plotter, and are those that were set when the Plotter was created.
+If at Plotter creation time a parameter is not set, its default value will be used, unless the parameter is string-valued and there is an environment variable of the same name, in which case the value of that environment variable will be used.
+Once set, a parameter may be unset by the programmer by calling Plotter::parampl with a value argument of NULL.
+This further increases flexibility.
+C++ compiling and linking
+The source code for a graphics application written in C++, if it is to use libplotter, must contain the line #include 
+The header file plotter.h is distributed with libplotter, and should have been installed on your system where your C++ compiler will find it.
+It declares the Plotter class and its derived class, and also contains some miscellaneous definitions.
+It includes the header files 
+To link your application with libplotter, you would use the appropriate `-l' option(s) on the command line when compiling it.
+You would use -lplotter -lXaw -lXmu -lXt -lXext -lX11 -lm
+or, in recent releases of the X Window System, -lplotter -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 -lm
+(Alternatively, you may need to use `-lplotter -lXm -lXt -lXext -lX11 -lm', `-lplotter -lXm -lXt -lXext -lX11 -lm -lc -lgen', or `-lplotter -lXm -lXt -lXext -lX11 -lm -lc -lPW', on systems that provide Motif widgets instead of Athena widgets.
+In recent releases of the X Window System, you would insert `-lSM -lICE'.
+Recent releases of Motif require `-lXp' as well.)
+On some platforms, the directories in which libplotter or the other libraries are stored must be specified on the command line.
+For example, the options `-lXaw -lXmu -lXt -lSM -lICE -lXext -lX11', which specify X Window System libraries, may need to be preceded by an option like `-L/usr/X11/lib'.
+On most systems libplotter is installed as a DLL (dynamically linked library, or `shared' library).
+This means that the linking with your application will take place at run time rather than compile time.
+The environment variable LD_LIBRARY_PATH lists the directories which will be searched for DLL's at run time.
+For your application to be executable, this environment variable should include the directory in which libplotter is stored.
+Sample drawings in C++
+In a previous section, there are several sample C programs that show how to draw vector graphics using libplot's C binding.
+See section Sample drawings in C.
+In this section, we give a modified version of one of the C programs, showing how libplot's C++ binding, i.e., libplotter, can be used similarly.
+The following C++ program draws an intricate and beautiful path (Bill Gosper's "C" curve). #include 
+void draw_c_curve (Plotter
+int main () { // set a Plotter parameter Plotter::parampl ("PAGESIZE", "letter");
+PSPlotter plotter(cin, cout, cerr); // declare Plotter if (plotter.openpl () 
+plotter.fspace (0.0, 0.0, 1000.0, 1000.0); // specify user coor system plotter.flinewidth (0.25); // line thickness in user coordinates plotter.pencolorname ("red"); // path will be drawn in red plotter.erase (); // erase Plotter's graphics display plotter.fmove (600.0, 300.0); // position the graphics cursor draw_c_curve (plotter, 0.0, 400.0, 0); if (plotter.closepl () 
+The above is a straightforward translation of the corresponding C program.
+Here, plotter is declared as an instance of the PSPlotter class, which will write Postscript graphics to the output stream cout.
+The graphics are drawn by invoking member functions.
+This object-oriented approach to drawing graphics is probably more natural than the approach used by the C binding.
+With libplotter, the use of multiple Plotters in an application becomes very easy.
+No switching between Plotters is required: the graphics operations can be immediately invoked on any existing Plotter.
+The functions in libplot: A detailed listing
+In the current release of GNU libplot, any Plotter supports 92 distinct operations.
+A language binding for libplot necessarily includes 92 functions that correspond to these operations.
+In the C binding, these 92 functions belong to the C API (application programming interface).
+In the C++ binding, they are implemented as public member functions of the Plotter class.
+A language binding may also include functions for creating, selecting, and deleting Plotters.
+For example, the C binding includes the additional functions pl_newpl, pl_selectpl, and pl_deletepl.
+See section The C application programming interface.
+In the C binding, the names of all functions should be preceded by "pl_" unless the header file plotcompat.h is included.
+See section C compiling and linking.
+The 92 functions that operate on a specified Plotter are divided into the four sets tabulated below.
+1.
+Setup functions: functions that open, initialize, or close the Plotter.
+2.
+Functions that cause the Plotter to draw objects.
+3.
+Functions that set or affect the Plotter's drawing attributes.
+4.
+Functions affecting the affine map used by the Plotter to transform user coordinates to device coordinates.
+Many functions come in two versions: integer and double precision floating point.
+Internally, libplot uses double precision floating point.
+The integer versions are provided for backward compatibility.
+If there are two versions of a function, the name of the floating point version begins with the letter `f'.
+Many functions come in both absolute and relative versions, also.
+The latter use relative coordinates (i.e., coordinates relative to the current position of the graphics cursor), and their names end in `rel'.
+Currently, only a few of the 92 functions have meaningful return values.
+Setup functions
+The following are the "setup functions" in libplot.
+They are the basic functions that open, initialize, or close an already-created Plotter.
+They are listed in the approximate order in which they would be called.
+In the C binding, the names of all functions should be preceded by "pl_", unless the header file plotcompat.h is included.
+See section C compiling and linking.
+In the C++ binding, these are member functions of the Plotter class and its subclasses. int openpl (); openpl opens a Plotter, i.e., begins a page of graphics.
+This resets the Plotter's drawing attributes to their default values.
+A negative return value indicates the Plotter could not be opened.
+Currently, an X Plotter pops up a new window on an X Window System display for each page of graphics, i.e., with each invocation of openpl.
+Future releases may support window re-use. int bgcolor (int red, int green, int blue); bgcolor sets the background color for the Plotter's graphics display, using a 48-bit RGB color model.
+The arguments red, green and blue specify the red, green and blue intensities of the background color.
+Each is an integer in the range 0x0000...0xffff, i.e., 0...65535.
+The choice (0, 0, 0) signifies black, and the choice (65535, 65535, 65535) signifies white.
+bgcolor affects only Plotters that produce bitmaps, i.e., X Plotters, X Drawable Plotters, PNM Plotters, and GIF Plotters.
+Its effect is simple: the next time the erase operation is invoked on such a Plotter, its display will be filled with the specified color.
+int bgcolorname (const char *name); bgcolorname sets the background color for the the graphics display to be name.
+For information on what color names are recognized, see section Specifying Colors by Name.
+Unrecognized colors are interpreted as "white". bgcolorname affects only Plotters that produce bitmaps, i.e., X Plotters, X Drawable Plotters, PNM Plotters, and GIF Plotters.
+Its effect is simple: the next time the erase operation is invoked on such a Plotter, its display will be filled with the specified color.
+int erase (); erase begins the next frame of a multiframe page, by clearing all previously plotted objects from the graphics display, and filling it with the background color (if any).
+It is frequently useful to invoke erase at the beginning of each page, i.e., immediately after invoking openpl.
+That is because some Plotters are persistent, in the sense that objects drawn within an openpl...closepl pair remain on the graphics display even after a new page is begun by a subsequent invocation of openpl.
+Currently, only X Drawable Plotters and Tektronix Plotters are persistent.
+Future releases may support optional persistence for X Plotters also.
+On X Plotters and X Drawable Plotters the effects of invoking erase will be altogether different if the device driver parameter USE_DOUBLE_BUFFERING is set to "yes".
+In this case, objects will be written to an off-screen buffer rather than to the graphics display, and invoking erase will (1) copy the contents of this buffer to the display, and (2) erase the buffer by filling it with the background color.
+This `double buffering' feature facilitates smooth animation.
+See section Device driver parameters.
+int space (int x0, int y0, int x1, int y1); int fspace (double x0, double y0, double x1, double y1); space and fspace take two pairs of arguments, specifying the positions of the lower left corner and upper right corner of the graphics display, in user coordinates.
+In other words, calling space or fspace sets the affine transformation from user coordinates to device coordinates.
+One of these operations must be performed at the beginning of each page of graphics, i.e., immediately after openpl is invoked.
+int space2 (int x0, int y0, int x1, int y1, int x2, int y2); int fspace2 (double x0, double y0, double x1, double y1, double x2, double y2); space2 and fspace2 are extended versions of space and fspace, and may be used instead.
+Their arguments are the three defining vertices of an `affine window' (a drawing parallelogram), in user coordinates.
+The specified vertices are the lower left, the lower right, and the upper left.
+This window will be mapped affinely onto the graphics display.
+int havecap (const char *s); havecap tests whether or not a Plotter, which need not be open, has a specified capability.
+The return value is 0, 1, or 2, signifying no/yes/maybe.
+For unrecognized capabilities the return value is zero.
+Recognized capabilities include "WIDE_LINES" (i.e., the ability to draw lines with a non-default thickness), "DASH_ARRAY" (the ability to draw in arbitrary dashing styles, as requested by the linedash function), "SETTABLE_BACKGROUND" (the ability to set the color of the background), and "SOLID_FILL".
+The "HERSHEY_FONTS", "PS_FONTS", "PCL_FONTS", and "STICK_FONTS" capabilities indicate whether or not fonts of a particular class are supported.
+See section Available text fonts.
+All Plotters except Tektronix Plotters have the "SOLID_FILL" capability, meaning they can fill paths with solid color.
+Each such Plotter has at least one of the "EVEN_ODD_FILL" and "NONZERO_WINDING_NUMBER_FILL" capabilities.
+These indicate the supported rules for determining the `inside' of a path.
+The `maybe' value is returned for most capabilities by Metafile Plotters, which do no drawing themselves.
+The output of a Metafile Plotter must be translated to another format, or displayed, by invoking plot. int flushpl (); flushpl flushes (i.e., pushes onward) all plotting commands to the display device.
+This is useful only if the currently selected Plotter does real-time plotting, since it may be used to ensure that all previously plotted objects have been sent to the display and are visible to the user.
+It has no effect on Plotters that do not do real-time plotting.
+int closepl (); closepl closes a Plotter, i.e., ends a page of graphics.
+A negative return value indicates the Plotter could not be closed.
+In the present release of libplot, some Plotters output pages in real time, i.e., with each invocation of closepl.
+This is true of PCL and HP-GL Plotters, for example.
+Similarly, Plotters that normally output only a single page (PNM, GIF, Illustrator, and Fig Plotters) do so immediately after that page is ended.
+However, Postscript Plotters do not output their page(s) of graphics until they are deleted.
+Object-drawing functions
+The following are the "drawing functions" in libplot.
+When invoked on a Plotter, these functions cause it to draw objects (paths, circles, ellipses, points, markers, and text strings) on the associated graphics display.
+A path is a sequence of line segments, arc segments (either circular or elliptic), and/or Bezier curve segments (either quadratic or cubic).
+Paths are drawn incrementally, one segment at a time.
+In the C binding, the names of all functions should be preceded by "pl_", unless the header file plotcompat.h is included.
+See section C compiling and linking.
+In the C++ binding, these are member functions of the Plotter class and its subclasses. int alabel (int horiz_justify, int vert_justify, const char *s); alabel takes three arguments horiz_justify, vert_justify, and s, which specify an `adjusted label,' i.e., a justified text string.
+The path under construction (if any) is ended, and the string s is drawn according to the specified justifications.
+If horiz_justify is equal to `l', `c', or `r', then the string will be drawn with left, center or right justification, relative to the current graphics cursor position.
+If vert_justify is equal to `b', `x', `c', or `t', then the bottom, baseline, center or top of the string will be placed even with the current graphics cursor position.
+The graphics cursor is moved to the right end of the string if left justification is specified, and to the left end if right justification is specified.
+The string may contain escape sequences of various sorts (see section Text string format and escape sequences), though it should not contain line feeds or carriage returns.
+In fact it should include only printable characters, from the byte ranges 0x20...0x7e and 0xa0...0xff.
+The string may be plotted at a nonzero angle, if textangle has been called.
+int arc (int xc, int yc, int x0, int y0, int x1, int y1); int farc (double xc, double yc, double x0, double y0, double x1, double y1); int arcrel (int xc, int yc, int x0, int y0, int x1, int y1); int farcrel (double xc, double yc, double x0, double y0, double x1, double y1); arc and farc take six arguments specifying the beginning (x0, y0), end (x1, y1), and center (xc, yc) of a circular arc.
+If the graphics cursor is at (x0, y0) and a path is under construction, then the arc is added to the path.
+Otherwise the current path (if any) is ended, and the arc begins a new path.
+In all cases the graphics cursor is moved to (x1, y1).
+The direction of the arc (clockwise or counterclockwise) is determined by the convention that the arc, centered at (xc, yc), sweep through an angle of at most 180 degrees.
+If the three points appear to be collinear, the direction is taken to be counterclockwise.
+If (xc, yc) is not equidistant from (x0, y0) and (x1, y1) as it should be, it is corrected by being moved to the closest point on the perpendicular bisector of the line segment joining (x0, y0) and (x1, y1). arcrel and farcrel are similar to arc and farc, but use cursor-relative coordinates.
+int bezier2 (int x0, int y0, int x1, int y1, int x2, int y2); int fbezier2 (double x0, double y0, double x1, double y1, double x2, double y2); int bezier2rel (int x0, int y0, int x1, int y1, int x2, int y2); int fbezier2rel (double x0, double y0, double x1, double y1, double x2, double y2); bezier2 and fbezier2 take six arguments specifying the beginning p0=(x0, y0) and end p2=(x2, y2) of a quadratic Bezier curve, and its intermediate control point p1=(x1, y1).
+If the graphics cursor is at p0 and a path is under construction, then the curve is added to the path.
+Otherwise the current path (if any) is ended, and the curve begins a new path.
+In all cases the graphics cursor is moved to p2.
+bezier2rel and fbezier2rel are similar to bezier2 and fbezier2, but use cursor-relative coordinates.
+The quadratic Bezier curve is tangent at p0 to the line segment joining p0 to p1, and is tangent at p2 to the line segment joining p1 to p2.
+So it fits snugly into a triangle with vertices p0, p1, and p2.
+When using a PCL Plotter to draw Bezier curves on a LaserJet III, you should set the parameter PCL_BEZIERS to "no".
+That is because the LaserJet III, which was Hewlett--Packard's first PCL 5 printer, does not recognize the Bezier instructions supported by later PCL 5 printers.
+See section Device driver parameters.
+int bezier3 (int x0, int y0, int x1, int y1, int x2, int y2, int x3, int y3); int fbezier3 (double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3); int bezier3rel (int x0, int y0, int x1, int y1, int x2, int y2, int x3, int y3); int fbezier3rel (double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3); bezier3 and fbezier3 take eight arguments specifying the beginning p0=(x0, y0) and end p3=(x3, y3) of a cubic Bezier curve, and its intermediate control points p1=(x1, y1) and p2=(x2, y2).
+If the graphics cursor is at p0 and a path is under construction, then the curve is added to the path.
+Otherwise the current path (if any) is ended, and the curve begins a new path.
+In all cases the graphics cursor is moved to p3.
+bezier3rel and fbezier3rel are similar to bezier3 and fbezier3, but use cursor-relative coordinates.
+The cubic Bezier curve is tangent at p0 to the line segment joining p0 to p1, and is tangent at p3 to the line segment joining p2 to p3.
+So it fits snugly into a quadrangle with vertices p0, p1, p2, and p3.
+When using a PCL Plotter to draw Bezier curves on a LaserJet III, you should set the parameter PCL_BEZIERS to "no".
+That is because the LaserJet III, which was Hewlett--Packard's first PCL 5 printer, does not recognize the Bezier instructions supported by later PCL 5 printers.
+See section Device driver parameters.
+int box (int x1, int y1, int x2, int y2); int fbox (double x1, double y1, double x2, double y2); int boxrel (int x1, int y1, int x2, int y2); int fboxrel (double x1, double y1, double x2, double y2); box and fbox take four arguments specifying the lower left corner (x1, y1) and upper right corner (x2, y2) of a `box', or rectangle.
+The path under construction (if any) is ended, and the box is drawn as a new path.
+This path is also ended, and the graphics cursor is moved to the midpoint of the box. boxrel and fboxrel are similar to box and fbox, but use cursor-relative coordinates.
+int circle (int xc, int yc, int r); int fcircle (double xc, double yc, double r); int circlerel (int xc, int yc, int r); int fcirclerel (double xc, double yc, double r); circle and fcircle take three arguments specifying the center (xc, yc) and radius (r) of a circle.
+The path under construction (if any) is ended, and the circle is drawn.
+The graphics cursor is moved to (xc, yc). circlerel and fcirclerel are similar to circle and fcircle, but use cursor-relative coordinates for xc and yc. int cont (int x, int y); int fcont (double x, double y); int contrel (int x, int y); int fcontrel (double x, double y); cont and fcont take two arguments specifying the coordinates (x, y) of a point.
+If a path is under construction, the line segment from the current graphics cursor position to the point (x, y) is added to it.
+Otherwise the line segment begins a new path.
+In all cases the graphics cursor is moved to (x, y). contrel and fcontrel are similar to cont and fcont, but use cursor-relative coordinates.
+int ellarc (int xc, int yc, int x0, int y0, int x1, int y1); int fellarc (double xc, double yc, double x0, double y0, double x1, double y1); int ellarcrel (int xc, int yc, int x0, int y0, int x1, int y1); int fellarcrel (double xc, double yc, double x0, double y0, double x1, double y1); ellarc and fellarc take six arguments specifying the three points pc=(xc,yc), p0=(x0,y0), and p1=(x1,y1) that define a so-called quarter ellipse.
+This is an elliptic arc from p0 to p1 with center pc.
+If the graphics cursor is at point p0 and a path is under construction, the quarter-ellipse is added to it.
+Otherwise the path under construction (if any) is ended, and the quarter-ellipse begins a new path.
+In all cases the graphics cursor is moved to p1.
+The quarter-ellipse is an affinely transformed version of a quarter circle.
+It is drawn so as to have control points p0, p1, and p0+p1-pc.
+This means that it is tangent at p0 to the line segment joining p0 to p0+p1-pc, and is tangent at p1 to the line segment joining p1 to p0+p1-pc.
+So it fits snugly into a triangle with these three control points as vertices.
+Notice that the third control point is the reflection of pc through the line joining p0 and p1. ellarcrel and fellarcrel are similar to ellarc and fellarc, but use cursor-relative coordinates.
+int ellipse (int xc, int yc, int rx, int ry, int angle); int fellipse (double xc, double yc, double rx, double ry, double angle); int ellipserel (int xc, int yc, int rx, int ry, int angle); int fellipserel (double xc, double yc, double rx, double ry, double angle); ellipse and fellipse take five arguments specifying the center (xc, yc) of an ellipse, the lengths of its semiaxes (rx and ry), and the inclination of the first semiaxis in the counterclockwise direction from the x axis in the user coordinate system.
+The path under construction (if any) is ended, and the ellipse is drawn.
+The graphics cursor is moved to (xc, yc). ellipserel and fellipserel are similar to ellipse and fellipse, but use cursor-relative coordinates.
+int endpath (); endpath terminates the path under construction, if any.
+A path is constructed by one or more successive calls to cont, line, arc, ellarc, bezier2, bezier3, and/or their floating-point counterparts.
+The path will also be terminated if any non-path object is drawn, if any path-related drawing attribute is set, or if move or fmove is invoked to set the cursor position.
+So endpath is almost redundant.
+However, if a Plotter plots objects in real time, calling endpath will ensure that a constructed path is drawn on the graphics display without delay.
+int label (const char *s); label takes a single string argument s and draws the text contained in s at the current graphics cursor position.
+The text is left justified, and the graphics cursor is moved to the right end of the string.
+This function is provided for backward compatibility; the function call label(s) is equivalent to alabel(`l',`x',s). int labelwidth (const char *s); double flabelwidth (const char *s); labelwidth and flabelwidth compute and return the width of a string in the current font, in the user coordinate system.
+The string is not plotted.
+int line (int x1, int y1, int x2, int y2); int fline (double x1, double y1, double x2, double y2); int linerel (int x1, int y1, int x2, int y2); int flinerel (double x1, double y1, double x2, double y2); line and fline take four arguments specifying the start point (x1, y1) and end point (x2, y2) of a line segment.
+If the graphics cursor is at (x1, y1) and a path is under construction, the line segment is added to it.
+Otherwise the path under construction (if any) is ended, and the line segment begins a new path.
+In all cases the graphics cursor is moved to (x2, y2). linerel and flinerel are similar to line and fline, but use cursor-relative coordinates.
+int marker (int x, int y, int type, int size); int fmarker (double x, double y, int type, double size); int markerrel (int x, int y, int type, int size); int fmarkerrel (double x, double y, int type, double size); marker and fmarker take four arguments specifying the location (x,y) of a marker symbol, its type, and its size in user coordinates.
+The path under construction (if any) is ended, and the marker symbol is plotted.
+The graphics cursor is moved to (x,y). markerrel and fmarkerrel are similar to marker and fmarker, but use cursor-relative coordinates for the position (x,y).
+Marker symbol types 0 through 31 are taken from a standard set, and marker symbol types 32 and above are interpreted as the index of a character in the current text font.
+See section Available marker symbols.
+int point (int x, int y); int fpoint (double x, double y); int pointrel (int x, int y); int fpointrel (double x, double y); point and fpoint take two arguments specifying the coordinates (x, y) of a point.
+The path under construction (if any) is ended, and the point is plotted.
+(Plotters that produce bitmaps draw points as single pixels.
+Other Plotters draw them as small solid circles, usually the smallest that can be plotted.)
+The graphics cursor is moved to (x, y). pointrel and fpointrel are similar to point and fpoint, but use cursor-relative coordinates.
+Attribute-setting functions
+The following are the "attribute functions" in libplot.
+When invoked on a Plotter, these functions set its drawing attributes, or save them or restore them.
+Path-related attributes include graphics cursor position, pen color, fill color, fill rule, line thickness, line style, cap style, join style, and miter limit.
+Text-related attributes include pen color, font name, font size, and text angle.
+Setting any path-related drawing attribute automatically terminates the path under construction (if any), as if the endpath operation had been invoked.
+In the C binding, the names of all functions should be preceded by "pl_", unless the header file plotcompat.h is included.
+See section C compiling and linking.
+In the C++ binding, these are member functions of the Plotter class and its subclasses. int capmod (const char *s); capmod sets the cap mode (i.e., cap style) for all paths subsequently drawn on the graphics display.
+Recognized styles are "butt" (the default), "round", and "projecting".
+The three styles are visibly distinct only if the line thickness is fairly large.
+Butt caps do not extend beyond the end of the path.
+The other two kinds do, however.
+Round caps are filled semicircles, and projecting caps are filled rectangular regions that extend a distance equal to half the line width beyond the end of the path.
+PCL and HP-GL Plotters support a fourth cap mode, "triangular".
+Plotters other than PCL and HP-GL Plotters treat "triangular" as equivalent to "round".
+This function has no effect on Tektronix Plotters.
+Also, it has no effect on HP-GL Plotters if the parameter HPGL_VERSION is set to a value less than "2" (the default).
+See section Device driver parameters.
+int color (int red, int green, int blue); color is a convenience function.
+Calling color is equivalent to calling both pencolor and fillcolor, to set both the the pen color and fill color of all objects subsequently drawn on the graphics display.
+Note that the physical fill color depends also on the fill fraction, which is specified by calling filltype. int colorname (const char *name); colorname is a convenience function.
+Calling colorname is equivalent to calling both pencolorname and fillcolorname, to set both the the pen color and fill color of all objects subsequently drawn on the graphics display.
+Note that the physical fill color depends also on the fill fraction, which is specified by calling filltype. int fillcolor (int red, int green, int blue); fillcolor sets the fill color of all objects subsequently drawn on the graphics display, using a 48-bit RGB color model.
+The arguments red, green and blue specify the red, green and blue intensities of the fill color.
+Each is an integer in the range 0x0000...0xffff, i.e., 0...65535.
+The choice (0, 0, 0) signifies black, and the choice (65535, 65535, 65535) signifies white.
+Note that the physical fill color depends also on the fill fraction, which is specified by calling filltype. int fillcolorname (const char *name); fillcolorname sets the fill color of all objects subsequently drawn on the graphics display to be name.
+For information on what color names are recognized, see section Specifying Colors by Name.
+Unrecognized colors are interpreted as "black".
+Note that the physical fill color depends also on the fill fraction, which is specified by calling filltype. int fillmod (const char *s); fillmod sets the fill mode, i.e., fill rule, for all objects subsequently drawn on the graphics display.
+The fill rule affects only filled, self-intersecting paths: it determines which points are `inside'.
+Two rules are supported: "even-odd" (the default for all Plotters), and "nonzero-winding".
+For the distinction, see the Postscript Language Reference Manual.
+"alternate" is an alias for "even-odd" and "winding" is an alias for "nonzero-winding".
+Fig Plotters do not support the "nonzero-winding" fill rule, because xfig itself does not support it.
+Also, HPGL Plotters do not support it if HPGL_VERSION is set to a value less than "2" (the default).
+See section Device driver parameters.
+The LaserJet III, which was Hewlett--Packard's first PCL 5 printer, did not support the nonzero-winding fill rule.
+However, all later PCL 5 printers from Hewlett--Packard support it. int filltype (int level); filltype sets the fill fraction for all subsequently drawn objects.
+A value of 0 for level indicates that objects should be unfilled, or transparent.
+This is the default.
+A value in the range 0x0001...0xffff, i.e., 1...65535, indicates that objects should be filled.
+A value of 1 signifies 100% filling (the fill color will simply be the color specified by calling fillcolor or fillcolorname).
+If level=0xffff, the fill color will be white.
+Values between 0x0001 and 0xffff are interpreted as specifying a desaturation, or gray level.
+For example, 0x8000 specifies 50% filling (the fill color will be intermediate between the color specified by calling fillcolor or fillcolorname, and white).
+Tektronix Plotters do not support filling, and HP-GL Plotters support filling of arbitrary paths only if the parameter HPGL_VERSION is equal to "1.5" or "2" (the default).
+(If the version is "1" then only circles and rectangles aligned with the coordinate axes may be filled.)
+Opaque filling, including white filling, is supported only if the parameter HPGL_VERSION is "2" and the parameter HPGL_OPAQUE_MODE is "yes" (the default).
+See section Device driver parameters.
+int fmiterlimit (double limit); fmiterlimit sets the miter limit for all paths subsequently drawn on the graphics display.
+The miter limit controls the treatment of corners, if the join mode is set to "miter" (the default).
+At a join point of a path, the `miter length' is defined to be the distance between the inner corner and the outer corner.
+The miter limit is the maximum value that will be tolerated for the miter length divided by the line thickness.
+If this value is exceeded, the miter will be cut off: the "bevel" join mode will be used instead.
+Examples of typical values for limit are 10.43 (the default, which cuts off miters if the join angle is less than 11 degrees), 2.0 (the same, for 60 degrees), and 1.414 (the same, for 90 degrees).
+In general, the miter limit is the cosecant of one-half the minimum angle for mitered joins.
+The minimum meaningful value for limit is 1.0, which converts all mitered joins to beveled joins, irrespective of join angle.
+Specifying a value less than 1.0 resets the limit to the default.
+This function has no effect on X Drawable Plotters or X Plotters, since the X Window System miter limit, which is also 10.43, cannot be altered.
+It also has no effect on Tektronix Plotters or Fig Plotters, or on HP-GL Plotters if the parameter HPGL_VERSION is set to a value less than "2" (the default).
+See section Device driver parameters.
+int fontname (const char *font_name); double ffontname (const char *font_name); fontname and ffontname take a single case-insensitive string argument, font_name, specifying the name of the font to be used for all text strings subsequently drawn on the graphics display.
+(The font for plotting strings is fully specified by calling fontname, fontsize, and textangle.)
+The size of the font in user coordinates is returned.
+The default font name depends on the type of Plotter.
+It is "Helvetica" for all Plotters except PNM, GIF, HP-GL, Tektronix and Metafile Plotters, for which it is "HersheySerif".
+If the argument font_name is NULL or the empty string, or the font is not available, the default font name will be used.
+Which fonts are available also depends on the type of Plotter; for a list of all available fonts, see section Available text fonts. int fontsize (int size); double ffontsize (double size); fontsize and ffontsize take a single argument, interpreted as the size, in the user coordinate system, of the font to be used for all text strings subsequently drawn on the graphics display.
+(The font for plotting strings is fully specified by calling fontname, fontsize, and textangle.)
+The size of the font in user coordinates is returned.
+A negative value for size sets the size to the default, which depends on the type of Plotter.
+Typically, the default font size is 1/50 times the size (i.e., minimum dimension) of the display.
+int joinmod (const char *s); joinmod sets the join mode (i.e., join style) for all paths subsequently drawn on the graphics display.
+Recognized styles are "miter" (the default), "round", and "bevel".
+The three styles are visibly distinct only if the line thickness is fairly large.
+Mitered joins are sharp, rounded joins are round, and beveled joins are squared off.
+However, unusually sharp joins are never mitered: instead, they are beveled.
+The angle at which beveling replaces mitering may be specified by calling fmiterlimit.
+PCL and HP-GL Plotters support a fourth join mode, "triangular".
+Plotters other than PCL and HP-GL Plotters treat "triangular" as equivalent to "round".
+This function has no effect on Tektronix Plotters.
+Also, it has no effect on HP-GL Plotters if the parameter HPGL_VERSION is set to a value less than "2" (the default).
+See section Device driver parameters.
+int linedash (int n, const int *dashes, int offset); int flinedash (int n, const double *dashes, double offset); linedash and flinedash set the line style for all paths, circles, and ellipses subsequently drawn on the graphics display.
+They provide much finer control of dash patterns than the linemod function (see below) provides.
+dashes should be an array of length n. Its elements, which should be positive, are interpreted as distances in the user coordinate system.
+Along any path, circle, or ellipse, the elements dashes[0]...dashes[n-1]
+When the end of the array is reached, the reading of the array wraps around to the beginning.
+If the array is empty, i.e., n equals zero, there is no dashing: the drawn line is solid.
+The offset argument specifies the `phase' of the dash pattern relative to the start of the path.
+It is interpreted as the distance into the dash pattern at which the dashing should begin.
+For example, if offset equals zero then the path will begin with a dash, of length dashes[0] in user space.
+If offset equals dashes[0] then the path will begin with a gap of length dashes[1]
+offset is allowed to be negative.
+Not all Plotters fully support linedash and flinedash.
+HP-GL and PCL Plotters cannot dash with a nonzero offset, and in the dash patterns used by X and X Drawable Plotters, each dash and each gap has a maximum length of 255 pixels. linedash and flinedash have no effect on Tektronix and Fig Plotters, and they have no effect on HP-GL Plotters for which the parameter HPGL_VERSION is less than "2" (the default; see section Device driver parameters).
+Warning: If the map from the user coordinate system to the device coordinate system is not uniform, each dash in a dashed path should ideally be drawn on the graphics display with a length that depends on its direction.
+But currently, only Postscript Plotters do this.
+Other Plotters always draw any specified dash with the same length, irrespective of its direction.
+The length that is used is the minimum length, in the device coordinate system, that can correspond to the specified dash length in the user coordinate system.
+int linemod (const char *s); linemod sets the line style for all paths, circles, and ellipses subsequently drawn on the graphics display.
+The supported line styles are "solid", "dotted", "dotdashed", "shortdashed", "longdashed", "dotdotdashed", "dotdotdotdashed", and "disconnected".
+The first seven correspond to the following dash patterns: "solid" -------------------------------- "dotted" - - - - - - - - "dotdashed" ---- - ---- - ---- - "shortdashed" ---- ---- ---- ---- "longdashed" ------- ------- ------- "dotdotdashed" ---- - - ---- - - "dotdotdotdashed" ---- - - - ---- - - -
+In the preceding patterns, each hyphen stands for one line thickness.
+This is the case for sufficiently thick lines, at least.
+So for sufficiently thick lines, the distance over which a dash pattern repeats is scaled proportionately to the line thickness.
+The "disconnected" line style is special.
+A "disconnected" path is rendered as a set of filled circles, each of which has diameter equal to the nominal line thickness.
+One of these circles is centered on each of the juncture points of the path (i.e., the endpoints of the line segments or arcs from which it is constructed).
+Circles and ellipses with "disconnected" line style are invisible.
+Disconnected paths, circles, and ellipses are not filled.
+All line styles are supported by all Plotters, with the following exceptions.
+HP-GL Plotters do not support the "dotdotdotdashed" style unless the parameter HPGL_VERSION is set to "2" (the default).
+Tektronix Plotters do not support the "dotdotdotdashed" style, and do not support the "dotdotdashed" style unless the parameter TERM is set to "kermit".
+See section Device driver parameters.
+int linewidth (int size); int flinewidth (double size); linewidth and flinewidth set the thickness, in the user coordinate system, of all paths, circles, and ellipses subsequently drawn on the graphics display.
+A negative value resets the thickness to the default.
+The default thickness depends on the type of Plotter.
+For most Plotters, it is 1/850 times the size (i.e., minimum dimension) of the display.
+But for Plotters that produce bitmaps, i.e., X Plotters, X Drawable Plotters, PNM Plotters, and GIF Plotters, it is zero.
+By convention, a zero-thickness line is the thinnest line that can be drawn.
+However, the drawing editors idraw and xfig treat zero-thickness lines as invisible.
+So when producing editable graphics with a Postscript or Fig Plotter, using a zero line thickness may not be desirable.
+Tektronix Plotters do not support drawing with other than a default thickness, and HP-GL Plotters do not support doing so if the parameter HPGL_VERSION is set to a value less than "2" (the default; see section Device driver parameters).
+Warning: If the map from the user coordinate system to the device coordinate system is not uniform, each line segment in a polygonal path should ideally be drawn on the graphics display with a thickness that depends on its direction.
+But currently, only Postscript Plotters do this.
+Other Plotters draw all line segments in a path with the same thickness.
+The thickness that is used is the minimum thickness, in the device coordinate system, that can correspond to the thickness of the path in the user coordinate system.
+int move (int x, int y); int fmove (double x, double y); int moverel (int x, int y); int fmoverel (double x, double y); move and fmove take two arguments specifying the coordinates (x, y) of a point to which the graphics cursor should be moved.
+The path under construction (if any) is ended, and the graphics cursor is moved to (x, y).
+This is equivalent to lifting the pen on a plotter and moving it to a new position, without drawing any line.
+moverel and fmoverel are similar to move and fmove, but use cursor-relative coordinates.
+int pencolor (int red, int green, int blue); pencolor sets the pen color of all objects subsequently drawn on the graphics display, using a 48-bit RGB color model.
+The arguments red, green and blue specify the red, green and blue intensities of the pen color.
+Each is an integer in the range 0x0000...0xffff, i.e., 0...65535.
+The choice (0, 0, 0) signifies black, and the choice (65535, 65535, 65535) signifies white.
+HP-GL Plotters support drawing with a white pen only if the value of the parameter HPGL_VERSION is "2" (the default), and the value of the parameter HPGL_OPAQUE_MODE is "yes" (the default).
+See section Device driver parameters.
+int pencolorname (const char *name); pencolorname sets the pen color of all objects subsequently drawn on the graphics display to be name.
+For information on what color names are recognized, see section Specifying Colors by Name.
+Unrecognized colors are interpreted as "black".
+HP-GL Plotters support drawing with a white pen only if the value of the parameter HPGL_VERSION is "2" (the default) and the value of the parameter HPGL_OPAQUE_MODE is "yes" (the default).
+See section Device driver parameters.
+int restorestate (); restorestate pops the current graphics context off the stack of drawing states.
+The graphics context consists largely of libplot's drawing attributes, which are set by the attribute functions documented in this section.
+So popping off the graphics context restores the drawing attributes to values they previously had.
+A path under construction is regarded as part of the graphics context.
+For this reason, calling restorestate automatically calls endpath to terminate the path under construction, if any.
+All graphics contexts on the stack are popped off when closepl is called, as if restorestate had been called repeatedly.
+int savestate (); savestate pushes the current graphics context onto the stack of drawing states.
+The graphics context consists largely of libplot's drawing attributes, which are set by the attribute functions documented in this section.
+A path under construction, if any, is regarded as part of the graphics context.
+That is because paths may be drawn incrementally, one line segment or arc at a time.
+When a graphics context is returned to, the path under construction may be continued.
+int textangle (int angle); double ftextangle (double angle); textangle and ftextangle take one argument, which specifies the angle in degrees counterclockwise from the x (horizontal) axis in the user coordinate system, for text strings subsequently drawn on the graphics display.
+The default angle is zero.
+(The font for plotting strings is fully specified by calling fontname, fontsize, and textangle.)
+The size of the font for plotting strings, in user coordinates, is returned.
+Mapping functions
+The following are the "mapping functions" in libplot.
+When invoked on a Plotter, these functions affect the affine transformation it employs for mapping from the user coordinate system to the device coordinate system.
+They may be viewed as performing transformations of the user coordinate system.
+Their names resemble those of the corresponding functions in the Postscript language.
+For information on how to use them to draw graphics efficiently, consult any good book on Postscript programming, or the Postscript Language Reference Manual.
+In the C binding, the names of all functions should be preceded by "pl_", unless the header file plotcompat.h is included.
+See section C compiling and linking.
+In the C++ binding, these are member functions of the Plotter class and its subclasses. int fconcat (double m0, double m1, double m2, double m3, double tx, double ty); Apply a Postscript-style transformation matrix, i.e., affine map, to the user coordinate system.
+That is, apply the linear transformation defined by the two-by-two matrix [m0 m1 m2 m3] to the user coordinate system, and also translate by tx units in the x direction and ty units in the y direction, relative to the former user coordinate system.
+The following three functions (frotate, fscale, ftranslate) are convenience functions that are special cases of fconcat. int frotate (double theta); Rotate the user coordinate system axes about their origin by theta degrees, with respect to their former orientation.
+The position of the user coordinate origin and the size of the x and y units remain unchanged.
+int fscale (double sx, double sy); Make the x and y units in the user coordinate system be the size of sx and sy units in the former user coordinate system.
+The position of the user coordinate origin and the orientation of the coordinate axes are unchanged.
+int ftranslate (double tx, double ty); Move the origin of the user coordinate system by tx units in the x direction and ty units in the y direction, relative to the former user coordinate system.
+The size of the x and y units and the orientation of the coordinate axes are unchanged.
+Device driver parameters
+In designing the libplot library, every effort was made to make the Plotter interface independent of the type of Plotter.
+To the extent that device dependence exists, it is captured by a manageable number of device driver parameters.
+In the C binding, a value for any parameter may be specified by calling the pl_parampl function.
+The pl_parampl function does not operate on any particular Plotter: it belongs to the C binding as a whole.
+The parameter values used by any Plotter are constant over the lifetime of the Plotter, and are those that were in effect when the Plotter was created.
+Each driver parameter has a value that is allowed to be a generic pointer (a void *).
+For most parameters, this value should be a string (a char *). pl_parampl may be called any number of times.
+A parameter may be unset by calling pl_parampl with a value argument of NULL.
+If at Plotter creation time a parameter is not set, its default value will be used, unless the parameter is string-valued and there is an environment variable of the same name, in which case the value of that environment variable will be used.
+This rule increases run-time flexibility: an application programmer may allow non-critical driver parameters to be specified by the user via environment variables.
+In the C++ binding, the function Plotter::parampl is the analogue of pl_parampl.
+It is a static member of the Plotter class and its subclasses.
+Like pl_parampl, it does not act on any particular Plotter: rather, it sets the parameters of subsequently created Plotters.
+The following are the currently recognized parameters (unrecognized ones are ignored).
+The most important ones are DISPLAY, which affects X Plotters, BITMAPSIZE, which affects X Plotters, PNM Plotters, and GIF Plotters, and PAGESIZE, which affects Illustrator, Postscript, Fig, and HP-GL Plotters.
+These three parameters are listed first and the others alphabetically.
+Many of the parameters, such as the several whose names begin with "HPGL", affect only a single type of Plotter.
+DISPLAY (Default NULL.)
+The X Window System display on which the graphics display will be popped up, as an X window.
+This is relevant only to X Plotters.
+BITMAPSIZE (Default "570x570".)
+The size of the graphics display in terms of pixels.
+This is relevant only to X Plotters, PNM Plotters, and GIF Plotters.
+For X Plotters, the value of this parameter will automatically, if it is not set, be taken from the X resource Xplot.geometry.
+This is for backward compatibility.
+PAGESIZE (Default "letter".)
+The size of the page on which the graphics display will be positioned.
+This is relevant only to Illustrator, Postscript, Fig, PCL, and HP-GL Plotters. "letter" means an 8.5in by 11in page.
+Any ISO page size in the range "a0"..."a4" or ANSI page size in the range "a"..."e" may be specified ("letter" is an alias for "a" and "tabloid" is an alias for "b"). "legal", "ledger", and "b5" are recognized page sizes also.
+For Illustrator and Postscript Plotters, the graphics display will be a square region centered on the specified page and occupying its full width, with allowance being made for margins.
+For Fig Plotters, the graphics display will be a square region of the same size, positioned in the upper left corner of an xfig display.
+For PCL and HP-GL Plotters, the graphics display will be a square region of the same size, but may be positioned differently.
+For PCL Plotters, fine control over its positioning on the page may be accomplished by setting the PCL_XOFFSET and PCL_YOFFSET parameters.
+For HP-GL Plotters, HPGL_XOFFSET and HPGL_YOFFSET are used similarly.
+BG_COLOR (Default "white".)
+The initial background color of the graphics display, when drawing each page of graphics.
+This is relevant to X Plotters, PNM Plotters, GIF Plotters, and X Drawable Plotters (for the last, the background color shows up only if erase is invoked).
+The background color may be changed at any later time by invoking the bgcolor (or bgcolorname) and erase operations.
+An unrecognized color name sets the background color to the default.
+For information on what names are recognized, see section Specifying Colors by Name.
+GIF_ANIMATION (Default "yes".)
+Relevant only to GIF Plotters. "yes" means that the erase operation will have special semantics: with the exception of its first invocation, it will act as a separator between successive images in the written-out pseudo-GIF file.
+"no" means that erase should act as it does on other Plotters that do not write graphics in real time, i.e., it should erase the image under construction by filling it with the background color.
+If "no" is specified, the pseudo-GIF file will contain only a single image.
+GIF_DELAY (Default "0".)
+Relevant only to GIF Plotters.
+The delay, in hundredths of a second, after each image in a written-out animated pseudo-GIF file.
+The value should be an integer in the range "0"..."65535".
+GIF_ITERATIONS (Default "0".)
+Relevant only to GIF Plotters.
+The number of times that an animated pseudo-GIF file should be `looped'.
+The value should be an integer in the range "0"..."65535".
+HPGL_ASSIGN_COLORS (Default "no".)
+Relevant only to HP-GL Plotters, and only if the value of HPGL_VERSION is "2". "no" means to draw with a fixed set of pens, specified by setting the HPGL_PENS parameter.
+"yes" means that pen colors will not restricted to the palette specified in HPGL_PENS: colors will be assigned to "logical pens" in the range #1...#31, as needed.
+Other than color LaserJet printers and DesignJet plotters, not many HP-GL/2 devices allow the assignment of colors to logical pens.
+So this parameter should be used with caution.
+HPGL_OPAQUE_MODE (Default "yes".)
+Relevant only to HP-GL Plotters, and only if the value of HPGL_VERSION is "2". "yes" means that the HP-GL/2 output device should be switched into opaque mode, rather than transparent mode.
+This allows objects to be filled with opaque white and other opaque colors.
+It also allows the drawing of visible white lines, which by convention are drawn with pen #0.
+Not all HP-GL/2 devices support opaque mode or the use of pen #0 to draw visible white lines.
+In particular, HP-GL/2 pen plotters do not.
+Some older HP-GL/2 devices reportedly malfunction if asked to switch into opaque mode.
+If the output of an HP-GL Plotter is to be sent to such a device, a "no" value is recommended.
+HPGL_PENS (Default "1=black:2=red:3=green:4=yellow:5=blue:6=magenta:7=cyan" if the value of HPGL_VERSION is "1.5" or "2" and "1=black" if the value of HPGL_VERSION is "1".
+Relevant only to HP-GL Plotters.
+The set of available pens; the format should be self-explanatory.
+The color for any pen in the range #1...#31 may be specified.
+For information on what color names are recognized, see section Specifying Colors by Name.
+Pen #1 must always be present, though it need not be black.
+Any other pen in the range #1...#31 may be omitted.
+HPGL_ROTATE (Default "0".)
+Relevant only to HP-GL Plotters.
+The angle, in degrees, by which the graphics display should be rotated on the page relative to the default orientation.
+Recognized values are "0", "90", "180", and "270"; "no" and "yes" are equivalent to "0" and "90" respectively.
+This parameter is provided to facilitate switching between portrait and landscape orientations.
+For HP-GL devices this is frequently a concern, since some HP-GL devices ("plotters") draw with a default landscape orientation, and others ("printers") draw with a default portrait orientation.
+"180" and "270" are supported only if HPGL_VERSION is "2".
+HPGL_VERSION (Default "2".)
+Relevant only to HP-GL Plotters.
+"1" means that the output should be generic HP-GL, "1.5" means that the output should be suitable for the HP7550A graphics plotter and the HP758x, HP7595A and HP7596A drafting plotters (HP-GL with some HP-GL/2 extensions), and "2" means that the output should be modern HP-GL/2.
+If the version is less than "2" then the only available fonts will be vector fonts, and all paths will be drawn with a default thickness, so that invoking capmod, joinmod, and fmiterlimit will have no effect.
+Also, the `nonzero winding number rule' will not be supported when filling paths, so invoking fillmod will have no effect.
+Additionally, if the version is "1" then the filling of arbitrary paths will not be supported (circles and rectangles aligned with the coordinate axes may be filled, however).
+HPGL_XOFFSET, HPGL_YOFFSET (Defaults "0.0cm" and "0.0cm".)
+Relevant only to HP-GL Plotters.
+Adjustments, in the x and y directions, of the position of the graphics display on the page.
+They may be specified in centimeters, millimeters, or inches.
+For example, an offset could be specified as "2cm" or "1.2in".
+INTERLACE (Default "no".)
+Relevant only to GIF Plotters.
+If the value is "yes", the pseudo-GIF output file will be interlaced.
+That means that it will be displayed in an interlaced (nonlinear) way by many applications.
+MAX_LINE_LENGTH (Default "500".)
+The maximum number of points that a path may contain, before it is flushed to the display device.
+If this flushing occurs, the path will be split into two or more sub-paths, though the splitting should not be noticeable.
+Splitting will not be performed if the path is filled.
+This parameter is relevant to all Plotters except Tektronix and Metafile Plotters.
+The reason for splitting long paths is that some display devices (e.g., old Postscript printers and HP-GL pen plotters) have limited buffer sizes.
+It is not relevant to Tektronix or Metafile Plotters, since they draw paths in real time and have no buffer limitations.
+META_PORTABLE (Default "no".)
+Relevant only to Metafile Plotters. "yes" means that the output should be in a portable (human-readable) version of the metafile format, rather than the default (binary) version.
+See section The Graphics Metafile Format.
+PCL_ASSIGN_COLORS (Default "no".)
+Relevant only to PCL Plotters. "no" means to draw with a fixed set of pens. "yes" means that pen colors will not restricted to this palette: colors will be assigned to "logical pens", as needed.
+Other than color LaserJet printers, not many PCL 5 devices allow the assignment of colors to logical pens.
+So this parameter should be used with caution.
+PCL_BEZIERS (Default "yes".)
+Relevant only to PCL Plotters. "yes" means that when drawing Bezier curves, the special `Bezier instructions' will be used.
+"no" means that these instructions will not be used.
+Instead, each Bezier curve will be approximated and drawn as a polygonal line.
+Other than the LaserJet III, which was Hewlett--Packard's first PCL 5 printer, all Hewlett--Packard's PCL 5 printers support the Bezier instructions.
+PCL_ROTATE (Default "0".)
+Relevant only to PCL Plotters.
+The angle, in degrees, by which the graphics display should be rotated on the page relative to the default orientation.
+Recognized values are "0", "90", "180", and "270"; "no" and "yes" are equivalent to "0" and "90" respectively.
+This parameter is provided to facilitate switching between portrait and landscape orientations.
+For PCL 5 devices this is frequently a concern, since some PCL 5 devices ("plotters") draw with a default landscape orientation, and others ("printers") draw with a default portrait orientation.
+PCL_XOFFSET, PCL_YOFFSET (Defaults "0.0cm" and "0.0cm".)
+Relevant only to PCL Plotters.
+Adjustments, in the x and y directions, of the position of the graphics display on the page.
+They may be specified in centimeters, millimeters, or inches.
+For example, an offset could be specified as "2cm" or "1.2in".
+PNM_PORTABLE (Default "no".)
+Relevant only to PNM Plotters. "yes" means that the output should be in a portable (human-readable) version of PBM/PGM/PPM format, rather than the default (binary) version.
+`Portable' is something of a misnomer, since binary PBM/PGM/PPM files are also portable, in the sense that they are machine-independent.
+TERM (Default NULL.)
+Relevant only to Tektronix Plotters.
+If the value is "xterm", "xterms", or "kterm", it is taken as a sign that the current application is running in an X Window System VT100 terminal emulator: an xterm.
+Before drawing graphics, a Tektronix Plotter will emit an escape sequence that causes the terminal emulator's auxiliary Tektronix window, which is normally hidden, to pop up.
+After the graphics are drawn, an escape sequence that returns control to the original VT100 window will be emitted.
+The Tektronix window will remain on the screen.
+If the value is "kermit", "ansi.sys", "ansissys", "ansi.sysk", or "ansisysk", it is taken as a sign that the current application is running in the VT100 terminal emulator provided by the MS-DOS version of kermit.
+Before drawing graphics, a Tektronix Plotter will emit an escape sequence that switches the terminal emulator to Tektronix mode.
+Also, some of the Tektronix control codes emitted by the Plotter will be kermit-specific.
+There will be a limited amount of color support, which is not normally the case (the 16 ansi.sys colors will be supported).
+The "dotdotdashed" line style will be supported, which is also not normally the case.
+After drawing graphics, the Plotter will emit an escape sequence that returns the emulator to VT100 mode.
+The key sequence `ALT minus' may be employed manually within kermit to switch between the two modes.
+TRANSPARENT_COLOR (Default "none".)
+Relevant only to GIF Plotters.
+If the value is a recognized color name, that color, if it appears in the pseudo-GIF output file, will be treated as transparent by most applications that display GIF files.
+For information on what names are recognized, see section Specifying Colors by Name.
+If TRANSPARENT_COLOR is set and an animated pseudo-GIF file is produced, the `restore to background' disposal method will be used for each image in the file.
+Otherwise, the `unspecified' disposal method will be used.
+USE_DOUBLE_BUFFERING (Default "no".)
+Relevant only to X Plotters and X Drawable Plotters.
+If the value is "yes", a double buffering scheme will be used when drawing graphics.
+Each frame of graphics, within a openpl...closepl pair, will be written to an off-screen buffer rather than to the Plotter's display.
+When erase is invoked to end a frame, or when closepl is invoked, the contents of the off-screen buffer will be copied to the Plotter's display, pixel by pixel.
+If successive frames differ only slightly, this will create the illusion of smooth animation.
+Some X displays provide special hardware support for double buffering.
+If this support is available, the X Plotter will detect its presence, and will draw graphics using the appropriate extension to the X11 protocol (either DBE or MBX).
+In this case the animation will be significantly faster; on high-end graphics hardware, at least.
+VANISH_ON_DELETE (Default "no".)
+Relevant only to X Plotters.
+If the value is "yes", when a Plotter is deleted, the window or windows that it has popped up will vanish.
+Otherwise, each such window will remain on the screen until it is removed by the user (by typing `q' in it, or by clicking with a mouse).
+XDRAWABLE_COLORMAP (Default NULL.)
+Relevant only to X Drawable Plotters.
+If the value is non-NULL, it should be a Colormap *, a pointer to a colormap from which colors should be allocated.
+NULL indicates that the colormap to be used should be the default colormap of the default screen of the X display.
+XDRAWABLE_DISPLAY (Default NULL.)
+Relevant only to X Drawable Plotters.
+The value should be a Display *, a pointer to the X display with which the drawable(s) to be drawn in are associated.
+XDRAWABLE_DRAWABLE1 XDRAWABLE_DRAWABLE2 (Default NULL.)
+Relevant only to X Drawable Plotters.
+If set, the value of each of these parameters should be a Drawable *, a pointer to a drawable to be drawn in.
+A `drawable' is either a window or a pixmap.
+At the time an X Drawable Plotter is created, at least one of the two parameters must be set.
+X Drawable Plotters support simultaneous drawing in two drawables because it is often useful to be able to draw graphics simultaneously in both an X window and its background pixmap.
+If two drawables are specified, they must have the same dimensions and depth, and be associated with the same screen of the X display.
+@ifnottex The following appendices contain miscellaneous information on the GNU plotting utilities.
+__________________________________________________________________
+Go to the first, previous, next, last section, table of contents.

@@ -1,0 +1,71 @@
+[ltpnav.gif] decorative picture of space events Aeronautics Home Page Virtual Visits (Video Conferencing, Virtual Tours, Webcasts, plus more.)
+Math and Science Resources Teachers Resources Internet Access Research Archive Link to Learning Technologies Project (LTP) Homepage Math 
+Introduction
+Fermi's Piano Tuner Problem
+How Old is Old?
+If the Terrestrial Poles were to Melt...
+Sunlight Exerts Pressure
+Falling Eastward
+What if an Asteroid Hit the Earth
+Using a Jeep to Estimate the Energy in Gasoline
+How do Police Radars really work?
+How "Fast" is the Speed of Light?
+How Long is a Light Year?
+How Big is a Trillion?
+"Seeing" the Earth, Moon, and Sun to Scale
+Of Stars and Drops of Water
+If I Were to Build a Model of the Cosmos...
+A Number Trick
+Designing a High Altitude Balloon
+Pressure in the Vicinity of a Lunar Astronaut Space Suit due to Outgassing of Coolant Water
+Calendar Calculations
+Telling Time by the Stars - Sidereal Time
+Fields, an Heuristic Approach
+The Irrationality of [two.GIF]
+The Irrationality of [three.GIF]
+The Number (i)^i
+Estimating the Temperature of a Flat Plate in Low Earth Orbit
+Proving that (p)^1/n is Irrational when p is a Prime and n
+The Transcendentality of [pi.GIF]
+Ideal Gases under Constant Volume, Constant Pressure, Constant Temperature and Adiabatic Conditions
+Maxwell's Equations: The Vector and Scalar Potentials
+A Possible Scalar Term Describing Energy Density in the Gravitational Field
+A Proposed Relativistic, Thermodynamic Four-Vector
+Motivational Argument for the Expression-e^ix=cosx+isinx Another Motivational Argument for the Expression-e^ix=cosx+isinx Calculating the Energy from Sunlight over a 12 hour period Calculating the Energy from Sunlight over actual full day Perfect Numbers-A Case Study Gravitation Inside a Uniform Hollow Sphere Further note on Gravitation Inside a Uniform Hollow Sphere Pythagorean Triples Black Holes and Point Set Topology Additional Notes on Black Holes and Point Set Topology Field Equations and Equations of Motion (General Relativity) The observer in modern physics A Note on the Centrifugal and Coriolis Accelerations as Pseudo Accelerations - PDF File On Expansion of the Universe - PDF File
+Perfect Numbers - A Case Study
+Perfect numbers are those numbers that equal the sum of all their divisors including 1 and excluding the number itself.
+Most numbers do not fit this description.
+At the heart of every perfect number is a Mersenne prime.
+All of the other divisors are either powers of 2 or powers of 2 times the Mersenne prime.
+Let's examine the number 496 - one of the known perfect numbers.
+In order to demonstrate that 496 is a perfect number, we must show that
+496 = (the sum of all its divisors including 1 and excluding 496)
+We might just start by dividing and working out the divisors the long way.
+Or, we might begin by noting that, in the notation that includes a Mersenne prime,
+496 = 24 (2^5 - 1) = 2^4 x 31.
+From this expression, we may easily obtain the divisors of 496, namely:
+1, 2, 2^2, 2^3, 2^4, 31, (2Ã—31), (2^2Ã—31), (2^3Ã—31), and (2^4Ã—31).
+The sum of all the divisors excluding 496 is then
+1 + 2 + 2^2 + 2^3 + 2^4 + 31Ã— (1 + 2 + 2^2+ 2^3)
+In order to break this mess down a bit, let us examine the partial sum
+u = 1 + 2 + 2^2 + 2^3 + 2^4
+If we multiply by 2 (i.e., 2u = 2 + 2^2 + 2^3 + 2^4 + 2^5) then subtract, we find
+u = 2u - u = 2^5 - 1 = 31
+Thus, the sum of the divisors becomes
+= 31 + 31(2^4 - 1) = 2^4Ã—31 = 496
+as we were to show.
+To show that any perfect number may be broken down in this way, we let
+n[P] = 2^c(2^c+1 - 1)
+be a perfect number with (2c+1 -1) being the embedded Mersenne prime.
+Then the divisors of n[P] are
+1, 2, 2^2, ... , 2^c, 2^c+1 - 1, 2(2^c+1 - 1), ..., 2^c(2^c+1 - 1)
+The sum of all the divisors excluding np is then
+1 + 2 + 2^2 + ... + 2^c + (2^c+1 - 1) (1 + 2 + ... + 2^c-1)
+Again, we examine the partial sum:
+u = 1 + 2 + 2^2 + ... + 2^c.
+We multiply by 2 (i.e., 2u = 2 + 2^2 + ... + 2^c + 2^c+1) then subtract:
+u = 2u - u = 2^c+1 - 1
+The sum of the divisors becomes:
+= (2^c+1 - 1) + (2^c+1 - 1)(2^c - 1) = 2^c(2^c+1 - 1)
+as we were to show.
+Please send suggestions/corrections to: Web Related: David.Mazza@grc.nasa.gov Technology Related: Joseph.C.Kolecki@grc.nasa.gov Responsible NASA Official: Theresa.M.Scott (Acting)

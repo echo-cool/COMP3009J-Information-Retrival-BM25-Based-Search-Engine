@@ -1,0 +1,183 @@
+HMMERALIGN [ Program Manual | User's Guide | Data Files | Databases ] Table of Contents FUNCTION DESCRIPTION EXAMPLE OUTPUT INPUT FILES RELATED PROGRAMS RESTRICTIONS ALGORITHM COMMAND-LINE SUMMARY ACKNOWLEDGEMENT LOCAL DATA FILES PARAMETER REFERENCE __________________________________________________________________ FUNCTION [ Top | Next ]
+DESCRIPTION
+[ Previous | Top | Next ]
+HmmerAlign provides a Wisconsin Package interface to the hmmalign program of Dr. Sean Eddy's HMMER package.
+It allows you to access most of hmmalign's parameters from the Wisconsin Package command line or from the its graphical interfaces.
+HmmerAlign aligns one or more sequences to a profile HMM.
+It can be used as a very efficient way to align a large number of sequences.
+First align a small number of representative sequences with PileUp.
+Then create a profile HMM from this small alignment with HmmerBuild.
+(The profile does not need to be calibrated.)
+HmmerAlign uses this profile HMM as a "seed" alignment, to which any number of additional sequences can be quickly aligned.
+Aligning a large number of sequences this way is a lot more time efficient, than using PileUp to create the entire alignment.
+EXAMPLE
+[ Previous | Top | Next ]
+Here is a session using HmmerAlign to align three 75kd peptide sequences from Chlamydia trachomatis with the profile hidden Markov model created from 75kd heat shock and heat shock cognate peptide sequences in the HmmerBuild example session.
+% hmmeralign
+HMMERALIGN which profile HMM ? hsp70.hmm_g
+to which group of sequences ? @75kd.list
+What should the output file be called (* 75kd.msf *)?
+Creating temp file for input to hmmalign.
+Calling hmmalign to perform analysis ...
+hmmalign - align sequences to an HMM profile HMMER 2.1.1 (Dec 1998) Copyright (C) 1992-1998 Washington University School of Medicine HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - HMM file: hsp70.hmm_g Sequence file: /usr/users/share/smith/@75kd.list - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%
+OUTPUT
+[ Previous | Top | Next ]
+Here is the output file:
+!!AA_MULTIPLE_ALIGNMENT 1.0 Author: HMMER 2.1.1 75kd.msf MSF: 691 Type: P July 10, 2000 14:10 Check: 2734 ..
+Name: A40158 Len: 691 Check: 199 Weight: 1.00 Name: S10435 Len: 691 Check: 199 Weight: 1.00 Name: S16159 Len: 691 Check: 2336 Weight: 1.00
+//
+1 50 A40158 msekRKSNKI IGIDLGTTNS CVSVMEGGQP KVIASSEGTR TTPSIVAFKG S10435 msekRKSNKI IGIDLGTTNS CVSVMEGGQP KVIASSEGTR TTPSIVAFKG S16159 msehKKSSKI IGIDLGTTNS CVSVMEGGQA KVITSSEGTR TTPSIVAFKG
+51 100 A40158 GETLVGIPAK RQAVTNPEKT LASTKRFIGR KFS..EVESE IKTVPYKVAP S10435 GETLVGIPAK RQAVTNPEKT LASTKRFIGR KFS..EVESE IKTVPYKVAP S16159 NEKLVGIPAK RQAVTNPEKT LGSTKRFIGR KYS..EVASE IQTVPYTVTS
+101 150 A40158 NSKGDAVFDV ....EQKLYT PEEIGAQILM KMKETAEAYL GETVTEAVIT S10435 NSKGDAVFDV ....EQKLYT PEEIGAQILM KMKETAEAYL GETVTEAVIT S16159 GSKGDAVFEV ....DGKQYT PEEIGAQILM KMKETAEAYL GETVTEAVIT
+151 200 A40158 VPAYFNDSQR ASTKDAGRIA GLDVKRIIPE PTAAALAYGI DK....EGDK S10435 VPAYFNDSQR ASTKDAGRIA GLDVKRIIPE PTAAALAYGI DK....EGDK S16159 VPAYFNDSQR ASTKDAGRIA GLDVKRIIPE PTAAALAYGI DK....VGDK
+201 250 A40158 KIAVFDLGGG TFDISILEIG .DGVFEVLST NGDTHLGGDD FDGVIINWML S10435 KIAVFDLGGG TFDISILEIG .DGVFEVLST NGDTHLGGDD FDGVIINWML S16159 KIAVFDLGGG TFDISILEIG .DGVFEVLST NGDTLLGGDD FDEVIIKWMI
+251 300 A40158 DEFK.KQEGI DLSKDNMALQ RLKDAAEKAK IELSGVSSTE INQPFITIDA S10435 DEFK.KQEGI DLSKDNMALQ RLKDAAEKAK IELSGVSSTE INQPFITIDA S16159 EEFK.KQEGI DLSKDNMALQ RLKDAAEKAK IELSGVSSTE INQPFITMDA
+301 350 A40158 NGPKHLALTL TRAQFEHLAS SLIERTKQPC AQALKDAKLS ASDIDDVLLV S10435 NGPKHLALTL TRAQFEHLAS SLIERTKQPC AQALKDAKLS ASDIDDVLLV S16159 QGPKHLALTL TRAQFEKLAA SLIERTKSPC IKALSDAKLS AKDIDDVLLV
+351 400 A40158 GGMSRMPAVQ AVVKEIF.GK EPNKGVNPDE VVAIGAAIQG GVLGGE....
+S10435 GGMSRMPAVQ AVVKEIF.GK EPNKGVNPDE VVAIGAAIQG GVLGGE....
+S16159 GGMSRMPAVQ ETVKELF.GK EPNKGVNPDE VVAIGAAIQG GVLGGE....
+401 450 A40158 .VKDVLLLDV IPLSLGIETL GGVMTPLVER NTTIPTQKKQ IFSTAADNQP S10435 .VKDVLLLDV IPLSLGIETL GGVMTPLVER NTTIPTQKKQ IFSTAADNQP S16159 .VKDVLLLDV IPLSLGIETL GGVMTTLVER NTTIPTQKKQ IFSTAADNQP
+451 500 A40158 AVTIVVLQGE RPMAKDNKEI GRFDLTDIPP APRGHPQIEV TFDIDANGIL S10435 AVTIVVLQGE RPMAKDNKEI GRFDLTDIPP APRGHPQIEV TFDIDANGIL S16159 AVTIVVLQGE RPMAKDNKEI GRFDLTDIPP APRGHPQIEV SFDIDANGIF
+501 550 A40158 HVSAKDAASG REQKIRIEAS SG.LKEDEIQ QMIRDAELHK EEDKQRKEAS S10435 HVSAKDAASG REQKIRIEAS SG.LKEDEIQ QMIRDAELHK EEDKQRKEAS S16159 HVSAKDVASG KEQKIRIEAS SG.LQEDEIQ RMVRDAEINK EEDKKRREAS
+551 600 A40158 DVKNEADGMI FRAEKAVKD. .YHDKIPAEL VKEIEEHIEK VRQAIK...E S10435 DVKNEADGMI FRAEKAVKD. .YHDKIPAEL VKEIEEHIEK VRQAIK...E S16159 DAKNEADSMI FRAEKAIKD. .YKEQIPETL VKEIEERIEN VRNALKDD..
+601 650 A40158 DASTTAIKAA SDELSTRMQK IG.EAMQAQS ASAAAS.SAA NAQGG..PNI S10435 DASTTAIKAA SDELSTRMQK IG.EAMQAQS ASAAAS.SAA NAQGG..PNI S16159 .APIEKIKEV TEDLSKHMQK IG.ESMQ.SQ SASAAAsSAA NAKGG..PNI
+651 691 A40158 NSEDLKKHSF STRPPAG..G SASSTDNIED ADveivdkpe .
+S10435 NSEDLKKHSF STRPPAG..G SASSTDNIED ADveivdkpe .
+S16159 NTEDLKKHSF STK...PPSN NGSSEDHIEE ADveiidndd k
+In the output, uppercase letters represent residues that align to a consensus position in the original alignment (corresponding to a match state in the model).
+Lowercase letters are used to represent inserted residues.
+Periods represent gaps.
+INPUT FILES
+[ Previous | Top | Next ]
+HmmerAlign takes a profile HMM as one of its inputs.
+You can create a profile HMM from a sequence alignment with the HmmerBuild program.
+You can also obtain a profile HMM of a known protein family from the Pfam database using HmmerFetch.
+HmmerAlign's other input is a valid GCG sequence specification -- either a single sequence or a multiple file specification.
+If the multiple file specification represents a sequence alignment (such as an MSF file), HmmerAlign ignores the existing alignment unless you use the -HEURISTIC
+alignment parameter or you use the -MAPAlignment parameter with the aligned sequences from which the profile HMM was built.
+You can specify multiple sequences in a number of ways: by using a list file, for example @project.list; by using an MSF or RSF file, for example project.msf{*}; or by using a sequence specification with an asterisk (*) wildcard, for example GenEMBL:*.
+The function of HmmerAlign depends on whether your input sequence(s) are protein or nucleotide.
+Programs determine the type of a sequence by the presence of either Type: N or Type: P on the last line of the text heading just above the sequence.
+If your sequence(s) are not the correct type, turn to Appendix VI for information on how to change or set the type of a sequence.
+RELATED PROGRAMS
+[ Previous | Top | Next ]
+PileUp creates a multiple sequence alignment from a group of related sequences.
+LineUp is a multiple sequence editor used to create multiple sequence alignments.
+Pretty displays multiple sequence alignments.
+ProfileMake makes a profile from a multiple sequence alignment.
+ProfileSearch uses the profile to search a database for sequences with similarity to the group of aligned sequences.
+ProfileSegments displays optimal alignments between each sequence in the ProfileSearch output list and the group of aligned sequences (represented by the profile consensus).
+ProfileGap makes optimal alignments between one or more sequences and a group of aligned sequences represented as a profile.
+ProfileScan finds structural and sequence motifs in protein sequences, using predetermined parameters to determine significance.
+HmmerBuild makes a profile hidden Markov model from a multiple sequence alignment.
+HmmerAlign aligns one or more sequences to a profile HMM. HmmerPfam searches a database of profile HMMs with a sequence query in order to identify known domains within the sequence.
+HmmerSearch uses a profile HMM as a query to search a sequence database for sequences similar to the original aligned sequences.
+HmmerCalibrate calibrates a hidden Markov model so that database searches using it as a query will be more sensitive.
+HmmerIndex creates a binary GSI ("generic sequence index") for a database of profile HMMs.
+HmmerFetch retrieves a profile hidden Markov model by name from an indexed database of profile HMMs.
+HmmerEmit randomly generates sequences that match a profile HMM. HmmerConvert converts between different profile HMM file formats and from profile HMM to GCG profile file format.
+MEME finds conserved motifs in a group of unaligned sequences and saves these motifs as a set of profiles.
+You can search a database of sequences with these profiles using the MotifSearch program.
+RESTRICTIONS
+[ Previous | Top | Next ]
+The MSF file format can accomodate a maximum of 500 sequences.
+If the final alignment will contain more than 500 sequences, use the -RSF
+parameter to output the results in RSF format.
+ALGORITHM
+[ Previous | Top | Next ]
+See the Profile HMM Analysis Essay for an introduction to profile hidden Markov models and the terminology associated with them.
+HmmerAlign uses the Viterbi algorithm to align each sequence to the profile HMM.
+This is a dynamic programming algorithm that determines which residues in the sequence correspond to match states in the model (consensus columns in the original alignment).
+Residues in the sequence that do not correspond to match states in the model are displayed as insertions in the alignment.
+If the sequence is missing a residue where the model specifies a match state, a gap character is put into the alignment.
+The alignment is built recursively by finding optimal subalignments of each new sequence to the profile HMM until part of the sequence or the entire sequence is optimally aligned to the entire profile HMM.
+If the profile HMM is set to allow local alignments, the final alignment can start at any match state in the model and stop at any subsequent match state.
+For more information on how the Viterbi algorithm is used with profile HMMs, see section 5.4, "Searching with profile HMMs," in Chapter 5 of Biological Sequence Analysis by Richard Durbin, et al.
+(Cambridge University Press, 1998).
+By default, the input sequences are displayed aligned to each other, based on their alignments to the same profile HMM.
+To display the input sequences aligned to the original alignment (from which the profile HMM was built), use the -MAPA
+lignment parameter.
+If you would like to align the input sequences to some other alignment (not the one that was used to build the profile HMM) using the profile HMM as a seed, use the -HEURISTICaligment parameter.
+For more information, see Eddy, et al.
+(Curr.
+Opin.
+Struct.
+Biol., 6; 361-365 (1996)) and the Eddy lab website at http://hmmer.wustl.edu/.
+COMMAND-LINE SUMMARY
+[ Previous | Top | Next ]
+All parameters for this program may be added to the command line.
+Use -CHE
+ck to view the summary below and to specify parameters before the program executes.
+In the summary below, the capitalized letters in the parameter names are the letters that you must type in order to use the parameter.
+Square brackets ([ and ]) enclose parameter values that are optional.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Minimal Syntax: % hmmeralign [-INfile1=]hsp70.hmm_g [-INfile2=]
+Prompted Parameters:
+[-OUTfile=]75kd.msf names the output file
+Local Data Files: None
+Optional Parameters:
+-BEGin1=1 -END1=100 sets the range of interest for each sequence -MATch includes in the alignment only those residues that align to consensus positions -MAPAlignment=a.msf{*} reads an alignment from a.msf and aligns it as a single object to the HMM using a "map" kept in the HMM. -MAPBegin=1 sets the beginning coordinate for the alignment -MAPEnd=100 sets the ending coordinate for the alignment -HEURISTICalignment=a.msf{*} reads an alignment from a.msf and aligns it as a single object to the HHM using a heuristic programming procedure -RSF saves the output file in RSF format -NOMONitor suppresses the screen trace of program progress
+ACKNOWLEDGEMENT
+[ Previous | Top | Next ]
+The programs comprising the HMMER package are designed and implemented by Dr. Sean Eddy of the Washington University School of Medicine, St. Louis, Missouri.
+The Wisconsin Package front-end programs were written by Christiane van Schlun in collaboration with Dr. Eddy.
+Pfam - A database of protein domain family alignments and HMMs Copyright (C) 1996-2000 The Pfam Consortium.
+LOCAL DATA FILES
+[ Previous | Top | Next ]
+None.
+PARAMETER REFERENCE
+[ Previous | Top | Next ]
+You can set the parameters listed below from the command line.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Following some of the parameters described below is a short expression in parentheses.
+These are the names of the corresponding parameters used in the native HMMER package.
+Some of the GCG parameters are identical to the original HMMER parameters, others have been changed to fit GCG's conventions.
+-BEGin=1
+sets the beginning position for all sequences.
+When beginning positions are specified for individual sequences in a list file, HmmerAlign ignores the -BEG
+in parameter.
+-END=100
+sets the ending position for all sequences.
+When ending positions are specified for individual sequences in a list file, HmmerAlign ignores the -END
+parameter.
+-MATch (-m)
+includes in the alignment only those symbols that align to match states in the profile HMM (consensus positions in the original alignment).
+Inserted symbols will not be shown.
+Instead, one or more consecutive insert symbols are replaced with a single '*'.
+-MAPAlignment=a.msf{*} (--mapali a.msf)
+aligns the profile HMM onto an existing alignment, which must be the alignment from which the profile HMM was built.
+The profile HMM is "mapped" onto this alignment, allowing you to view the model in the context of the original aligned sequences.
+Because the map is stored with the profile HMM, this procedure is quite fast, and the results are consistent with the way the profile HMM was constructed.
+-MAPBegin=1
+sets the beginning position for all sequences in the alignment file.
+When beginning positions are specified for individual sequences in a list file, HmmerAlign ignores the -MAPB
+egin parameter.
+-MAPEnd=100
+sets the ending position for all sequences in the alignment file.
+When ending positions are specified for individual sequences in a list file, HmmerAlign ignores the -MAPE
+nd parameter.
+-HEURISTICalignment=a.msf{*} (--withali a.msf)
+with this option the program does not only align the input sequences to the profile HMM.
+It also, using a heuristic (nonoptimal) dynamic programming procedure, compares the profile HMM to the fixed alignment specified with this parameter in order to find the best location for the merging of the two alignments.
+Finally it displays the results as one alignment.
+The aligned input sequences and the fixed alignment have both been compared to the profile HMM but not to each other.
+This may be slow and is not guaranteed to produce results that are completely consistent with the way the profile HMM was constructed.
+Unlike the -MAPA
+lignment parameter, -HEURISTICalignment can be used for any alignment, not just the one from which the model was built.
+-RSF
+saves the output file in RSF format instead of the default MSF format.
+This is necessary if the final alignment will contain more than the 500 sequence maximum imposed by the MSF format.
+-NOMONitor
+suppresses the display of the program's progress on the screen.
+Printed: January 9, 2002 13:45 (1162) __________________________________________________________________
+[ Program Manual | User's Guide | Data Files | Databases ] __________________________________________________________________
+Technical Support: support-us@accelrys.com or support-eu@accelrys.com
+Copyright (c) 1982-2002 Accelrys Inc.
+A subsidiary of Pharmacopeia, Inc.
+All rights reserved.
+Licenses and Trademarks Wisconsin Package is a trademark and GCG and the GCG logo are registered trademarks of Accelrys Inc.
+All other product names mentioned in this documentation may be trademarks, and if so, are trademarks or registered trademarks of their respective holders and are used in this documentation for identification purposes only.
+Accelrys Inc.
+www.accelrys.com/bio

@@ -1,0 +1,270 @@
+HMMERSEARCH [ Program Manual | User's Guide | Data Files | Databases ] Table of Contents FUNCTION DESCRIPTION EXAMPLE OUTPUT INTERPRETING OUTPUT INPUT FILES RELATED PROGRAMS RESTRICTIONS ALGORITHM CONSIDERATIONS COMMAND-LINE SUM
+Profile HMMs can be created using HmmerBuild.
+DESCRIPTION
+[ Previous | Top | Next ]
+HmmerSearch provides a Wisconsin Package interface to the hmmsearch program of Dr. Sean Eddy's HMMER package.
+It allows you to access most of hmmsearch's parameters from the Wisconsin Package command line.
+HmmerSearch uses a profile hidden Markov model, which represents a group of aligned sequences, as a query to search a sequence database for related sequences.
+The alignments of the profile HMM to the best-scoring sequences are displayed in the output.
+EXAMPLE
+[ Previous | Top | Next ]
+Here is a session using HmmerSearch to search the PIR protein sequence database with a profile HMM generated from a group of aligned 70kd heat shock and heat shock cognate protein sequences.
+The profile HMM was created in the example session from the HmmerBuild program and calibrated in the example session from HmmerCalibrate.
+% hmmersearch
+HMMERSEARCH using what profile HMM as the query ? hsp70.hmm_g
+Search for query in what sequence(s) ? PIR1:*
+What should the output file be called (* hmmersearch.hmmersearch *)?
+Creating temp file for input to hmmsearch.
+Calling hmmsearch to perform analysis ...
+hmmsearch - search a sequence database with a profile HMM HMMER 2.1.1 (Dec 1998) Copyright (C) 1992-1998 Washington University School of Medicine HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - HMM file: /package/share/10.2/gcghelp/docdata/hsp70.hmm_g [hsp70] Sequence database: PIR1:* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1 Sequences 105 aa searched PIR1:CCHU 101 Sequences 10,897 aa searched PIR1:S00034 201 Sequences 28,069 aa searched PIR1:CCBO11 301 Sequences 56,257 aa searched PIR1:S25953 401 Sequences 73,034 aa searched PIR1:S47288 501 Sequences 118,925 aa searched PIR1:A31854
+////////////////////////////////////////////////////////////////
+20,201 Sequences 7,921,432 aa searched PIR1:S58884 20,301 Sequences 7,971,437 aa searched PIR1:S69204 20,401 Sequences 8,008,087 aa searched PIR1:S69334
+%
+OUTPUT
+[ Previous | Top | Next ]
+Here is part of the output file:
+!!SEQUENCE_LIST 1.0
+Query HMM: hsp70|| [HMM has been calibrated; E-values are empirical estimates]
+Scores for complete sequences (score includes all domains): Sequence Description Score E-value N -------- ----------- ----- ------- --- HHXL70 dnaK-type molecular chaperone - African claw 1723.6 0 1 HHUM7B dnaK-type molecular chaperone - lettuce down 1691.0 0 1 HHKW7A dnaK-type molecular chaperone hsp70A - Caeno 1687.1 0 1
+////////////////////////////////////////////////////////////////////////////
+S21801 myosin heavy chain, neuronal [similarity] - -404.3 8.4 1 GNNYEB genome polyprotein - encephalomyocarditis vi -406.2 9.9 1 [no more scores below E threshold]
+Parsed for domains: Sequence -------- Domain seq-f seq-t hmm-f hmm-t score E-value ------- ----- ----- ----- ----- ----- ------- ..
+PIR1:HHXL70 Begin:2 End:647 !! 1/1 2 647 .]
+1 677 [] 1723.6 0 PIR1:HHUM7B Begin:4 End:675 !! 1/1 4 675 .]
+1 677 [] 1691.0 0 PIR1:HHKW7A Begin:1 End:640 !! 1/1 1 640 []
+/////////////////////////////////////////////////////////
+PIR1:S21801 Begin:497 End:1032 !! 1/1 497 1032 ..
+1 677 [] -404.3 8.4 PIR1:GNNYEB Begin:1049 End:1615 !! 1/1 1049 1615 ..
+1 677 [] -406.2 9.9 \\End of List
+Alignments of top-scoring domains: HHXL70: domain 1 of 1, from 2 to 647: score 1723.6, E = 0 *-
+ERLIGdaAKnQvAmNPqNTVFDaKRLIGRkFnDpeVQsDmkhwPFkvisk ERLIGdaAKnQvAmNPqNTVFDaKRLIGRkFnDp+VQ D+khwPF+v+s HHXL70 49 ERLIGDAAKNQVAMNPQNTVFDAKRLIGRKFNDPVVQCDLKHWPFQVVS- 97
+//////////////////////////////////////////////////////////////////
+elgmpggapggmqgapkggsssGptiEeVD
+//////////////////////////////////////////////////////////////////
+Histogram of all scores: score obs exp (one = represents 2 sequences) ----- --- ---
+///////////////////////////////////////////////////////////////////////////////
+-465 50 135|========================= * -464 50 125|========================= * -463 57 115|============================= * -462 50 106|========================= * -461 54 97|=========================== * -460 44 90|====================== * -459 49 82|========================= * -458 39 76|==================== * -457 44 70|====================== * -456 51 64|========================== * -455 40 59|==================== * -454 50 54|========================= * -453 29 49|=============== * -452 39 45|==================== * -451 37 42|=================== * -450 31 38|================ * -449 39 35|=================*== -448 30 32|===============* -447 28 29|==============* -446 29 27|=============*= -445 28 25|============*= -444 34 22|==========*====== -443 26 21|==========*== -442 24 19|=========*== -441 24 17|========*=== -440 20 16|=======*== -439 21 14|======*==== -438 27 13|======*======= -437 15 12|=====*== -436 12 11|=====* -435 14 10|====*== -434 9 9|====* -433 11 8|===*== -432 12 8|===*== -431 6 7|===* -430 2 6|= * -429 6 6|==* -428 6 5|==* -427 3 5|==* -426 3 4|=* -425 6 4|=*= -424 5 3|=*= -423 1 3|=* -422 4 3|=* -421 3 3|=* -420 2 2|* -419 0 2|* -418 3 2|*= -417 0 2|* -416 1 1|* -415 2 1|* 
+% Statistical details of theoretical EVD fit: mu = -492.8923 lambda = 0.0880 chi-sq statistic = 13046.1133 P(chi-square) = 0
+Total sequences searched: 20405
+Whole sequence top hits: tophits_s report: Total hits: 29 Satisfying E cutoff: 13 Total memory: 19K
+Domain top hits: tophits_s report: Total hits: 29 Satisfying E cutoff: 29 Total memory: 82K
+INTERPRETING OUTPUT
+[ Previous | Top | Next ]
+Sequence and Domain Scores
+The first section of the output is the list of best sequences.
+HmmerSearch lists the sequences with the best E-values based on all domains in each sequence that matched the profile HMM.
+The raw scores are expressed as bit values.
+If the profile HMM matched more than one place in the sequence, the scores for each matching domain contribute to the total score.
+The number of domains that matched the query HMM are displayed in the rightmost column of this list.
+By default, every sequence with an E-value less than 10.0 is listed in this output.
+The second section of the output is the list of best domains.
+It is formatted as a GCG list file, so that the HmmerSearch output can be used as input for any GCG program that accepts list files.
+HmmerSearch lists the top-scoring domains along with their raw scores and E-values.
+It displays their begin and end coordinates under the seq-f ("sequence-from") and seq-t ("sequence-to") headings.
+It also lists the begin and end coordinates of the matching portion of the profile HMM (under the headings hmm-f and hmm-t).
+After each set of begin and end coordinates is a two-character code that tells you if the alignment is local or global with respect to the sequence and to the profile HMM.
+In general, a left bracket ([) means the alignment started at the beginning of the sequence or profile HMM, a right bracket (]), means the alignment ended at the end of the sequence or profile HMM, and a period means that the alignment started or ended in the middle of the sequence or profile HMM.
+For example, in the following line from a HmmerSearch output,
+!! 1/1 1 492 [] 345 889 .]
+1175.5 0
+the sequence coordinates for the alignment are 1-492, and the [] code following 492 means that the alignment was global with respect to the sequence -- it started at the beginning of the sequence and continued to the end of the sequence.
+The profile HMM coordinates are 345-889, and the .] code after 889 means that the alignment was local with respect to the profile HMM -- it started somewhere after the beginning of the profile HMM and continued to its end.
+If a sequence has more than one domain that matched the profile HMM, its name may occur more than once in this list.
+The number of the domain is noted: for example, if a single domain matched the query, the entry is labeled 1/1; if the domain is the second of three that matched, it is labeled 2/3.
+By default, for every sequence with an E-value less than 10.0, every domain it contains that has a non-zero raw score is listed.
+The Alignments
+The next section of the output displays the alignments between the profile HMM consensus sequence and the best-scoring domains.
+These are displayed somewhat differently than most GCG alignments.
+The top line is the "consensus" sequence of the profile HMM.
+The residues shown are the highest probability residues at each position according to the model.
+(There is no attempt to use an ambiguous symbol to denote a position that can contain more than one type of residue, so it isn't a consensus in the commonly used sense of the word.)
+A residue is printed as a capital letter if it is highly conserved, otherwise it is printed in lowercase.
+For protein models, highly conserved amino acids are defined to be those that have a probability greater than 0.5; for nucleic acid models, highly conserved nucleotides are those with a probability greater than 0.9.
+If the sequence contains positions not present in the model, periods are inserted into the profile HMM consensus sequence to denote the gap.
+The center line of the alignment is a representation of the quality of the alignment.
+A letter appears at positions where the sequence and the profile HMM consensus are identical.
+The letter will be upper- or lowercase in accordance with the case of the profile HMM consensus.
+If the residues at that position are not identical but have a positive score, a plus sign is displayed, and the relationship is considered to be "conservative" according to the HMM's view of this particular position in the model (not to be confused with the usual definition of conservative changes).
+If the score is not positive, a space appears.
+The third line of the alignment shows the sequence itself.
+In this line, gaps are indicated with hyphens rather than periods.
+The Histogram and Statistical Information
+Following the alignments is the histogram of sequence scores, based on the overall score for each sequence (not the scores for individual domains).
+Each row displays the data for one raw score: how many of the sequences had that score (obs), how many were expected to have that score (exp), and a bar whose length is proportional to the number of sequences with that score.
+Equal signs (=) are used to represent the observed number of scores, while an asterisk (*) is placed at the position corresponding to the expected number of scores.
+Beneath the histogram is statistical information about the search: the parameters for the extreme value distribution of scores, the number of sequences searched, the number of sequences and domains that satisfied the E-value cutoff, etc.
+INPUT FILES
+[ Previous | Top | Next ]
+HmmerSearch requires as one of its inputs a profile HMM file.
+You can create profile HMM files from a set of aligned sequences using the HmmerBuild program.
+The other input to HmmerSearch is a sequence database or a multiple sequence specification.
+The sequences must be of the same type as the sequences that were used to create the profile HMM.
+You can specify multiple sequences in a number of ways: by using a list file, for example @project.list; by using an MSF or RSF file, for example project.msf{*}; or by using a sequence specification with an asterisk (*) wildcard, for example GenEMBL:*.
+The function of HmmerSearch depends on whether your input sequence(s) are protein or nucleotide.
+Programs determine the type of a sequence by the presence of either Type: N or Type: P on the last line of the text heading just above the sequence.
+If your sequence(s) are not the correct type, turn to Appendix VI for information on how to change or set the type of a sequence.
+RELATED PROGRAMS
+[ Previous | Top | Next ]
+PileUp creates a multiple sequence alignment from a group of related sequences.
+LineUp is a multiple sequence editor used to create multiple sequence alignments.
+Pretty displays multiple sequence alignments.
+ProfileMake makes a profile from a multiple sequence alignment.
+ProfileSearch uses the profile to search a database for sequences with similarity to the group of aligned sequences.
+ProfileSegments displays optimal alignments between each sequence in the ProfileSearch output list and the group of aligned sequences (represented by the profile consensus).
+ProfileGap makes optimal alignments between one or more sequences and a group of aligned sequences represented as a profile.
+ProfileScan finds structural and sequence motifs in protein sequences, using predetermined parameters to determine significance.
+HmmerBuild makes a profile hidden Markov model from a multiple sequence alignment.
+HmmerAlign aligns one or more sequences to a profile HMM. HmmerPfam searches a database of profile HMMs with a sequence query in order to identify known domains within the sequence.
+HmmerSearch uses a profile HMM as a query to search a sequence database for sequences similar to the original aligned sequences.
+HmmerCalibrate calibrates a hidden Markov model so that database searches using it as a query will be more sensitive.
+HmmerIndex creates a binary GSI ("generic sequence index") for a database of profile HMMs.
+HmmerFetch retrieves a profile hidden Markov model by name from an indexed database of profile HMMs.
+HmmerEmit randomly generates sequences that match a profile HMM. HmmerConvert converts between different profile HMM file formats and from profile HMM to GCG profile file format.
+MEME finds conserved motifs in a group of unaligned sequences and saves these motifs as a set of profiles.
+You can search a database of sequences with these profiles using the MotifSearch program.
+RESTRICTIONS
+[ Previous | Top | Next ]
+The sequences in the search set must be of the same type as the sequences that were used to create the profile HMM.
+ALGORITHM
+[ Previous | Top | Next ]
+See the Profile HMM Analysis Essay for an introduction to profile hidden Markov models and the terminology associated with them.
+Aligning a Sequence and a Profile HMM
+Aligning a sequence to a profile HMM is analogous to aligning two sequences to each other.
+A pairwise sequence alignment associates a residue in one sequence with a residue in the other.
+An alignment between a sequence and a profile HMM associates a residue in the sequence with a match or insert state in the model.
+In both processes, many possible alignments exist, so a method must be devised to score them.
+Pairwise sequence alignments are scored based on the values in a scoring matrix; sequence-to-HMM alignments are scored based on the probability parameters of the model.
+Aligning two sequences can be viewed as finding the best path through the surface of comparison; aligning a sequence to a profile HMM can be viewed as finding a path through the model that generates the sequence.
+For both types of alignments, the path is found using dynamic programming methods: in the case of pairwise sequence alignments, these include the Smith-Waterman and Needleman-Wunsch-Sellers algorithms; in the HMMER programs, the available algorithms are the Viterbi algorithm and the forward algorithm.
+When aligning a sequence to a profile HMM, there is usually more than one path through the model that can generate the sequence.
+The Viterbi algorithm examines all paths through the model that can generate the sequence, chooses the single most probable path, and reports its score.
+The forward algorithm is similar, except that it adds the probabilities for all paths that can generate the sequence and reports this score.
+The Viterbi algorithm is used by default.
+While some researchers maintain that the forward algorithm is more sensitive than the Viterbi algorithm for detecting remote sequence homologs, Sean Eddy's experiments with HMMER have not confirmed this.
+Significance of Scores
+In addition to the score, an E-value (or expectation) is reported to give you an idea of the significance of the score.
+Basically, an E-value is the number of hits expected to score X or higher purely by chance when searching a sequence database of a given size.
+If you are using calibrated profile HMMs, E-values of 0.1 or smaller represent significant hits.
+The E-value is computed by multiplying the size of the database by the probability of a random sequence getting a score X when aligned with the profile HMM.
+When using a profile HMM query to search a sequence database (HmmerSearch), the database size is normally set to the actual number of sequences in the database.
+When using a sequence query to search a database of profile HMMs (HmmerPfam), the database size is arbitrarily set to 59021, the size of release 34 of the SWISS-PROT database.
+In either type of search, you can assign a different number by means of the -EVS
+eqnum parameter.
+This is useful if you want to compare E-values for separate searches of databases of differing sizes.
+To get an accurate estimate of the probability of the alignment score for a profile HMM and a random sequence, the profile HMM should be calibrated with HmmerCalibrate before performing the search, otherwise a less accurate probability is estimated using an analytic upper bound calculation.
+(The search will also be faster if a calibrated profile HMM is used.)
+See the HmmerCalibrate program documentation for more detailed information on how the E-values are computed.
+CONSIDERATIONS
+[ Previous | Top | Next ]
+The search is faster and more likely to find remote homologs if the profile HMM has been calibrated with HmmerCalibrate.
+If you supply more than one query profile HMM as input (by giving a profile HMM database as query input), HmmerSearch will only use the first profile HMM in the profile HMM database for its search.
+Increasing Program Speed Using Multithreading
+This program is multithreaded.
+It has the potential to run faster on a machine equipped with multiple processors because different parts of the analysis can be run in parallel on different processors.
+By default, the program assumes you have one processor, so the analysis is performed using one thread.
+You can use -PROC
+essors to increase the number of threads up to the number of physical processors on the computer.
+Under ideal conditions, the increase in speed is roughly linear with the number of processors used.
+But conditions are rarely ideal.
+If your computer is heavily used, competition for the processors can reduce the program's performance.
+In such an environment, try to run multithreaded programs during times when the load on the system is light.
+As the number of threads increases, the amount of memory required increases substantially.
+You may need to ask your system administrator to increase the memory quota for your account if you want to use more than two threads.
+Never use -PROC
+essors to set the number of threads higher than the number of physical processors that the machine has -- it does not increase program performance, but instead uses up a lot of memory needlessly and makes it harder for other users on the system to get processor time.
+Ask your system administrator how many processors your computer has if you aren't sure.
+COMMAND-LINE SUMMARY
+[ Previous | Top | Next ]
+All parameters for this program may be added to the command line.
+Use -CHE
+ck to view the summary below and to specify parameters before the program executes.
+In the summary below, the capitalized letters in the parameter names are the letters that you must type in order to use the parameter.
+Square brackets ([ and ]) enclose parameter values that are optional.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Minimal Syntax: % hmmersearch [-INfile1=]hsp70.hmm_g [-INfile2=]
+Prompted Parameters:
+[-OUTfile=]hmmersearch.hmmersearch names the output file
+Local Data Files: None
+Optional Parameters:
+-PROCessors=2 sets the maximum number of threads that the program will use to 2 -LIMit=10 displays alignments for only the 10 best scoring domains -EVCutoff=10.0 sets the E-value cutoff for the list of best sequences to 10.0 -DOMEVCutoff=2.0 sets the E-value cutoff for the list of best domains to 2.0 -EVSeqnum=100000 calculates the E-values as if the database had contained 100,000 sequences -BSCUtoff=-300 sets the bit score cutoff for the list of best sequences to -300 -DOMBSCutoff=10 sets the bit score cutoff for the list of best domains to 10 -FORWard uses the Forward algorithm instead of the Viterbi algorithm to determine the sequence scores -NULL2 doesn't use the post hoc second null model -XNU filters target protein sequences with XNU to remove tandem repeats -NOFRAgments uses whole sequences section as the list file instead of the best domain section -NOMONitor doesn't display information about analysis parameters used -BATch submits program to the batch queue
+ACKNOWLEDGEMENT
+[ Previous | Top | Next ]
+The programs comprising the HMMER package are designed and implemented by Dr. Sean Eddy of the Washington University School of Medicine, St. Louis, Missouri.
+The Wisconsin Package front-end programs were written by Christiane van Schlun in collaboration with Dr. Eddy.
+LOCAL DATA FILES
+[ Previous | Top | Next ]
+None.
+PARAMETER REFERENCE
+[ Previous | Top | Next ]
+You can set the parameters listed below from the command line.
+For more information, see "Using Program Parameters" in Chapter 3, Using Programs in the User's Guide.
+Following some of the parameters described below is a short expression in parentheses.
+These are the names of the corresponding parameters used in the native HMMER package.
+Some of the GCG parameters are identical to the original HMMER parameters, others have been changed to fit GCG's conventions.
+-MONitor=100
+updates the program monitor on your screen every time 100 sequences are processed.
+If the program is run on the batch queue, this moniter is written to the log file.
+If your terminal is connected to a slow modem, the monitor can slow program execution.
+You can suppress it with -NOMON
+itor.
+-PROCessors=2 (--cpu 2)
+tells the program to use 2 threads for the database search on a multiprocessor computer.
+The default is 1.
+-LIMit=10 (-A 10)
+displays alignments for only the top 10 best scoring domains.
+If -LIM
+it is set to zero, no alignments are displayed.
+-EVCutoff=10.0 (-E 10.0)
+sets the maximum E-value to be displayed in the list of best sequences to 10.0.
+The default is 10.0 and it must be a positive real number.
+-DOMEVCutoff=2.0 (--domE 2.0)
+sets the maximum E-value to be displayed in the list of best domains to 2.0.
+This can be set to any positive real number permitted by your machine.
+By default,all domains in the sequences that passed the first threshold (-EVC
+utoff) will be reported in the second list, so that the number of domains reported in the list of best sequences is consistent with the number that appear in the list of best domains.
+-EVSeqnum=100000 (-Z 100000)
+calculates the E-value scores as if the search set had contained 100,000 sequences.
+The default is the actual number of sequences in the search set.
+-BSCUtoff=-300 (-T -300)
+sets the lowest bit score to be displayed in the list of best sequences to -300.
+This can be set to any real number permitted by your machine.
+By default the number of hits displayed is controlled by the E-value and not by the bit score.
+-DOMBSCutoff=10 (--domT 10)
+sets the lowest bit score to be displayed in the list of best domains to 10.
+The value can be any real number.
+By default all domains in the sequences that passed the first (best sequences list) threshold will be reported in the list of best domains, so that the number of domains reported in the list of best sequences is consistent with the number that appear in the list of best domains.
+Only one domain in a sequence is controlled by this parameter.
+The second and subsequent domains in a sequence have a defacto bit score threshold of 0 because of the details of how HMMER works.
+HMMER requires at least one pass through the main model per sequence; to do more than one pass (more than one domain) the multidomain alignment must have a better score than the single domain alignment, and hence the extra domains must contribute a positive score.
+-FORWard (--forward)
+uses the forward algorithm instead of the Viterbi algorithm to determine the overall sequence scores.
+(Domain scores are always determined by the Viterbi algorithm.)
+-NULL2 (--null2)
+turns the post hoc second null model off.
+By default each alignment is rescored by a post-processing step that takes into account possible biased composition in either the profile HMM or the target sequence.
+This is almost essential in database searches, especially when the profile HMM is a local alignment model.
+There is a very small chance that this post processing might remove real matches, and in these cases -NULL
+2 may improve sensitivity at the expense of reducing specificity by letting through hits whose scores are based partially on biased composition.
+-XNU (--xnu)
+filters target protein sequences with XNU to remove statistically significant tandem repeats.
+It has no effect on nucleic acid sequences, In trial experiments, -XNU
+appears to perform less well than the default post hoc null2 model.
+-NOFRAgments
+uses the whole sequence section of the output as the list file instead of the best domains section.
+-NOMONitor
+suppresses the display of the program's progress on the screen.
+-BATch
+submits the program to the batch queue for processing after prompting you for all required user inputs.
+All output files are written to your current directory, unless you direct the ouput to another directory when you specify the output file.
+Printed: January 9, 2002 13:45 (1162) __________________________________________________________________
+[ Program Manual | User's Guide | Data Files | Databases ] __________________________________________________________________
+Technical Support: support-us@accelrys.com or support-eu@accelrys.com
+Copyright (c) 1982-2002 Accelrys Inc.
+A subsidiary of Pharmacopeia, Inc.
+All rights reserved.
+Licenses and Trademarks Wisconsin Package is a trademark and GCG and the GCG logo are registered trademarks of Accelrys Inc.
+All other product names mentioned in this documentation may be trademarks, and if so, are trademarks or registered trademarks of their respective holders and are used in this documentation for identification purposes only.
+Accelrys Inc.
+www.accelrys.com/bio

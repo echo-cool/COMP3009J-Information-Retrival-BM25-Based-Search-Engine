@@ -1,0 +1,180 @@
+Re: Last Call for TCP Congestion Control I-D From: Vern Paxson (vern@ee.lbl.gov) Date: Tue Nov 10 1998 - 13:28:03 EST * Next message: Kevin M. Lahey: "Re: Last Call for TCP Congestion Control I-D" * Previous message: Vern Paxson: "Last Call for TCP Congestion Control I-D" * In reply to: Vern Paxson: "Last Call for TCP Congestion Control I-D" * Next in thread: Kevin M. Lahey: "Re: Last Call for TCP Congestion Control I-D" * Messages sorted by: [ date ] [ thread ]
+--- draft-ietf-tcpimpl-cong-control-00.txt Mon Aug 10 09:50:28 1998 +++ draft-ietf-tcpimpl-cong-control-01.txt Tue Nov 10 09:46:25 1998 @@ -1,11 +1,10 @@ - -TCP Implementation Working Group W. Stevens -INTERNET DRAFT Consultant -File: draft-ietf-tcpimpl-cong-control-00.txt M. Allman - NASA Lewis/Sterling Software - V. Paxson +TCP Implementation Working Group M. Allman +INTERNET DRAFT NASA Lewis/Sterling Software +File: draft-ietf-tcpimpl-cong-control-01.txt V. Paxson LB NL - August, 1998 + W. Stevens + Consultant + November, 1998
+TCP Congestion Control @@ -55,9 +54,9 @@ implementation of these algorithms.
+-Expires: February, 1999 [Page 1] +Expires: June, 1999 [Page 1]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
+This document is organized as follows.
+Section 2 provides various definitions which will be used throughout the paper.
+Section 3 @@ -106,18 +105,21 @@ The restart window is the size of the congestion window after a TCP restarts transmission after an idle period.
++ FLIGHT SIZE: + The amount of data the has been sent but not yet acknowledged.
++ 3 Congestion Control Algorithms
+This section defines the four congestion control algorithms: slow start, congestion avoidance, fast retransmit and fast recovery, - developed in [Jac88] and [Jac90]
+In some situations it may be - beneficial for a TCP sender to be more conservative than the - algorithms allow, however a TCP MUST NOT be more aggressive than the
+-Expires: February, 1999 [Page 2] +Expires: June, 1999 [Page 2]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
++ developed in [Jac88] and [Jac90]
+In some situations it may be + beneficial for a TCP sender to be more conservative than the + algorithms allow, however a TCP MUST NOT be more aggressive than the following algorithms allow (that is, MUST NOT send data when the value of cwnd computed by the following algorithms would not allow the data to be sent).
+@@ -170,13 +172,13 @@ algorithm is used when cwnd 
+When cwnd and ssthresh are equal the sender may use either slow start or congestion avoidance.
+- During slow start, a TCP increments cwnd by at most MSS bytes for - each ACK received that acknowledges new data.
+Slow start ends when - -Expires: February, 1999 [Page 3] +Expires: June, 1999 [Page 3]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
++ + During slow start, a TCP increments cwnd by at most MSS bytes for + each ACK received that acknowledges new data.
+Slow start ends when cwnd exceeds ssthresh (or, optionally, when it reaches it, as noted above); or when cwnd reaches rwnd; or when congestion is observed.
+@@ -188,7 +190,8 @@
+cwnd += MSS*MSS/cwnd (2)
+- This provides an acceptable approximation to the underlying + This adjustment is executed on every incoming non-duplicate ACK.
++ Equation (2) provides an acceptable approximation to the underlying principle of increasing cwnd by 1 full-sized segment per RTT.
+(Note that for a connection in which the receiver acknowledges every data segment, (2) proves slightly more aggressive than 1 segment per RTT, @@ -223,19 +226,22 @@ timer, the value of ssthresh MUST be set to no more than the value given in equation 3:
+- ssthresh = max (min (cwnd, rwnd) / 2, 2*MSS) (3) + ssthresh = max (FlightSize / 2, 2*MSS) (3)
+- Implementation Note: an easy mistake to make is to forget the inner - min() operation and simply use cwnd, which in some implementations - may incidentally increase well beyond rwnd.
++ As discussed above, FlightSize is the amount of outstanding data in + the network.
+- Furthermore, upon a timeout cwnd MUST be set to no more than the - loss window, LW, which equals 1 full-sized segment (regardless of - -Expires: February, 1999 [Page 4] +Expires: June, 1999 [Page 4]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
++ + Implementation Note: an easy mistake to make is to simply use cwnd, + rather than FlightSize, which in some implementations may + incidentally increase well beyond rwnd.
++ + Furthermore, upon a timeout cwnd MUST be set to no more than the + loss window, LW, which equals 1 full-sized segment (regardless of the value of IW).
+Therefore, after retransmitting the dropped segment the TCP sender uses the slow start algorithm to increase the window from 1 full-sized segment to the new value of ssthresh, at @@ -252,31 +258,43 @@ First, they can be caused by dropped segments.
+In this case, all segments after the dropped segment will trigger duplicate ACKs.
+Second, duplicate ACKs can be caused by the re-ordering of data - segments by the network (not a rare event along some network paths).
+- Finally, duplicate ACKs can be caused by replication of ACK or data - segments by the network.
++ segments by the network (not a rare event along some network paths + [Pax97]).
+Finally, duplicate ACKs can be caused by replication of + ACK or data segments by the network.
+In addition, a TCP receiver + SHOULD send an immediate ACK when the incoming segment fills in all + or part of a gap in the sequence space.
+This will generate more + timely information for a sender recovering from a loss through a + retransmission timeout, a fast retransmit, or an experimental loss + recovery algorithm, such as NewReno [FH98].
+The TCP sender SHOULD use the "fast retransmit" algorithm to detect and repair loss, based on incoming duplicate ACKs.
+The fast - retransmit algorithm uses the arrival of 3 duplicate ACKs (i.e., 4 - identical ACKs) as an indication that a segment has been lost.
+- After receiving 3 duplicate ACKs, TCP performs a retransmission of - what appears to be the missing segment, without waiting for the - retransmission timer to expire.
++ retransmit algorithm uses the arrival of 3 duplicate ACKs (4 + identical ACKs without the arrival of any other intervening packets) + as an indication that a segment has been lost.
+After receiving 3 + duplicate ACKs, TCP performs a retransmission of what appears to be + the missing segment, without waiting for the retransmission timer to + expire.
+After the fast retransmit sends what appears to be the missing segment, the "fast recovery" algorithm governs the transmission of new data until a non-duplicate ACK arrives.
+The reason for not performing slow start is that the receipt of the duplicate ACKs not - only tells the TCP that a segment has been lost, but also that - segments are leaving the network.
+In other words, since the - receiver can only generate a duplicate ACK when a segment has - arrived, that segment has left the network and is in the receiver's - buffer, so we know it is no longer consuming network resources.
+- Furthermore, since the ACK "clock" [Jac88] is preserved, the TCP - sender can continue to transmit new segments (although transmission - must continue using a reduced cwnd). + only indicates that a segment has been lost, but also that segments + are most likely leaving the network (although a massive segment + duplication by the network can invalidate this conclusion).
+In + other words, since the receiver can only generate a duplicate ACK + when a segment has arrived, that segment has left the network and is + in the receiver's buffer, so we know it is no longer consuming + network resources.
+Furthermore, since the ACK "clock" [Jac88] is + preserved, the TCP sender can continue to transmit new segments + (although transmission must continue using a reduced cwnd).
++Expires: June, 1999 [Page 5] + +draft-ietf-tcpimpl-cong-control-01.txt November 1998 + + The fast retransmit and fast recovery algorithms are usually implemented together as follows.
+@@ -290,11 +308,6 @@
+3.
+For each additional duplicate ACK received, increment cwnd by MSS.
+This artificially inflates the congestion window in order - -Expires: February, 1999 [Page 5] - -draft-ietf-tcpimpl-cong-control-00.txt August 1998 - to reflect the additional segment that has left the network.
+4.
+Transmit a segment, if allowed by the new value of cwnd and the @@ -310,30 +323,13 @@ out-of-order delivery of data segments at the receiver).
+Additionally, this ACK should acknowledge all the intermediate segments sent between the lost segment and the receipt of the - first duplicate ACK, if none of these were lost.
+- - Implementing fast retransmit/fast recovery in this manner can lead - to a phenomenon which allows the fast retransmit algorithm to repair - multiple dropped segments from a single window of data [Flo94].
+- However, in doing so, the size of cwnd is also reduced multiple - times, which reduces performance.
+The following steps MAY be taken - to reduce the impact of successive fast retransmits on performance.
++ third duplicate ACK, if none of these were lost.
+- A. After the third duplicate ACK is received follow step 1 above, - but also record the highest sequence number transmitted - (send_high).
++ Note: This algorithm is known to generally not recover very + efficiently from multiple losses in a single flight of packets.
+One + proposed set of modifications to it to address this problem can be + found in [FH98].
+- B. Instead of reducing cwnd to ssthresh upon receipt of the first - non-duplicate ACK received (step 5), the sender should wait - until an ACK covering send_high is received.
+In addition, each - duplicate ACK received should continue to artificially inflate - cwnd by 1 MSS. - - C.
+A non-duplicate ACK that does not cover send_high, followed by 3 - duplicate ACKs should not reduce ssthresh or cwnd but SHOULD - trigger a retransmission.
+A non-duplicate ACK that does not - cover send_high SHOULD NOT cause any adjustment in cwnd. - 4 Additional Considerations
+4.1 Re-starting Idle Connections @@ -349,14 +345,14 @@
+[Jac88] recommends that a TCP use slow start to restart transmission after a relatively long idle period.
+Slow start serves to restart - -Expires: February, 1999 [Page 6] - -draft-ietf-tcpimpl-cong-control-00.txt August 1998 - the ACK clock, just as it does at the beginning of a transfer.
+This mechanism has been widely deployed in the following manner.
+When TCP has not received a segment for more than one retransmission + +Expires: June, 1999 [Page 6] + +draft-ietf-tcpimpl-cong-control-01.txt November 1998 + timeout, cwnd is reduced to the value of the restart window (RW) before transmission begins.
+@@ -379,43 +375,82 @@ beginning transmission if the TCP has not sent data in an interval exceeding the retransmission timeout.
+-4.2 Acknowledgment Mechanisms +4.2 Generating Acknowledgments
+The delayed ACK algorithm specified in [Bra89] SHOULD be used by a TCP receiver.
+When used, a TCP receiver MUST NOT excessively delay - acknowledgments.
+Specifically, an ACK MUST be generated for every - second full-sized segment.
+(This "MUST" is listed in [Bra89] in one - place as a SHOULD and another as a MUST; here we unambiguously state - it is a MUST.)
+Furthermore, an ACK SHOULD be generated for every - second segment regardless of size.
+Finally, an ACK MUST NOT be - delayed for more than 500 ms waiting on a second full-sized segment - to arrive.
+Out-of-order data segments SHOULD be acknowledged - immediately, in order to trigger the fast retransmit algorithm. + acknowledgments.
+Specifically, an ACK SHOULD be generated for at + least every second full-sized segment, and MUST be generated within + 500 ms of the arrival of the first unacknowledged packet.
+- A TCP receiver MUST NOT generate more than one ACK for every - incoming segment.
++ The requirement that an ACK "SHOULD" be generated for at least every + second full-sized segment is listed in [Bra89] in one place as a + SHOULD and another as a MUST.
+Here we unambiguously state it is a + SHOULD.
+We also emphasize that this is a "strong" SHOULD, meaning + that an implementor should indeed only deviate from this requirement + after careful consideration of the implications.
+See the discussion + of "Stretch ACK violation" in [PAD+98] and the references therein + for a discussion of the possible performance problems with + generating ACKs less frequently than every second full-sized + segment.
+- TCP implementations that implement the selective acknowledgment - (SACK) option [MMFR96] are able to determine which segments have not - arrived at the receiver.
+Consequently, they can retransmit the lost - segments more quickly than TCPs without SACKs.
+This allows a TCP - sender to repair multiple losses in roughly one RTT after detecting - loss [FF96,MM96a,MM96b].
+While no specific SACK-based recovery - algorithm has yet been standardized, any SACK-based algorithm should - follow the general principles embodied by the above algorithms.
+- First, as soon as loss is detected, ssthresh should be decreased per - equation (3).
+Second, in the RTT following loss detection, the - number of segments sent should be no more than half the number - transmitted in the previous RTT (i.e., before loss occurred).
+- Third, after the recovery period is finished, cwnd should be set to + In some cases, the sender and receiver may not agree on what what + constitutes a full-sized segment.
+An implementation is deemed to + comply with this requirement if it sends at least one acknowledgment + every time it receives 2*MSS bytes of new data from the sender, + where MSS is the Maximum Segment Size specified by the receiver to + the sender (or the default value of 536 bytes, per [Bra89], if the + receiver does not specify an MSS option during connection + establishment).
+Finally, we repeat that an ACK MUST NOT be delayed + for more than 500 ms waiting on a second full-sized segment to + arrive.
+Out-of-order data segments SHOULD be acknowledged + immediately, in order to accelerate loss recovery.
+To trigger the + fast retransmit algorithm, the receiver SHOULD send an immediate + duplicate ACK when it receives a data segment above a gap in the
+-Expires: February, 1999 [Page 7] +Expires: June, 1999 [Page 7]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
+- the reduced value of ssthresh.
+The SACK-based algorithms outlined - in [FF96,MM96a,MM96b] adhere to these guidelines.
++ sequence space.
+To provide feedback to senders recovering from + losses, the receiver SHOULD send an immediate ACK when it receives a + data segment that fills in all or part of a gap in the sequence + space.
++ A TCP receiver MUST NOT generate more than one ACK for every + incoming segment, other than to update the offered window as the + receiving application consumes new data.
++ +4.4 Loss Recovery Mechanisms + + A number of loss recovery algorithms that augment fast retransmit + and fast recovery have been suggested by TCP researchers.
+While + some of these algorithms are based on the TCP selective + acknowledgment (SACK) option [MMFR96], such as [FF96,MM96a,MM96b]
+The non-SACK + algorithms use ``partial acknowledgments'' (ACKs which cover new + data, but not all the data outstanding when loss was detected) to + trigger retransmissions.
+While this document does not standardize + any of the specific algorithms that may improve fast retransmit/fast + recovery, these enhanced algorithms are implicitly allowed, as long + as they follow the general principles of the basic four algorithms + outlined above.
++ + Therefore, when the first loss in a window of data is detected, + ssthresh MUST be set to no more than the value given by equation + (3).
+Second, until all lost segments in the window of data in + question are repaired, the number of segments transmitted in each + RTT MUST be no more than half the number of outstanding segments + when the loss was detected.
+Finally, after all loss in the given + window of segments has been successfully retransmitted, cwnd MUST be + set to no more than ssthresh and congestion avoidance MUST be used + to further increase cwnd.
+Loss in two successive windows of data, + or the loss of a retransmission, should be taken as two indications + of congestion and, therefore, cwnd (and ssthresh) MUST be lowered + twice in this case.
+The algorithms outlined in + [Hoe96,FF96,MM96a,MM6b] follow the principles of the basic four + congestion control algorithms outlined in this document.
++ 5.
+Security Considerations
+This document requires a TCP to diminish its sending rate in the @@ -431,6 +466,11 @@ The Internet to a considerable degree relies on the correct implementation of these algorithms in order to preserve network stability and avoid congestion collapse.
+An attacker could cause + +Expires: June, 1999 [Page 8] + +draft-ietf-tcpimpl-cong-control-01.txt November 1998 + TCP endpoints to respond more aggressively in the face of congestion by forging excessive duplicate acknowledgments or excessive acknowledgments for new data.
+Conceivably, such an attack could @@ -448,16 +488,13 @@ (Addison-Wesley, 1995).
+This material is used with the permission of Addison-Wesley.
+- Sally Floyd devised the algorithm presented in section 3.3 for - avoiding multiple cwnd cutbacks in the presence of multiple packets - lost from the same flight.
+Craig Partridge and Joe Touch + Neal Cardwell, Sally Floyd, Craig Partridge and Joe Touch contributed a number of helpful suggestions.
+- + References
+[AFP98] M. Allman, S. Floyd, C. Partridge, Increasing TCP's Initial - Window Size, Internet-Draft draft-floyd-incr-init-win-03.txt.
+- May, 1998.
+(Work in progress).
++ Window Size, September 1998.
+RFC 2414.
+[Bra89] B. Braden, ed., "Requirements for Internet Hosts -- Communication Layers," RFC 1122, Oct. 1989.
+@@ -465,27 +502,34 @@ [Bra97] S. Bradner, "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997.
+- - + [FF96] K. Fall, S. Floyd.
+Simulation-based Comparisons of Tahoe, + Reno and SACK TCP.
+Computer Communication Review, July 1996.
++ ftp://ftp.ee.lbl.gov/papers/sacks.ps.Z.
+-Expires: February, 1999 [Page 8] - -draft-ietf-tcpimpl-cong-control-00.txt August 1998 + [FH98]
+The NewReno Modification to TCP's + Fast Recovery Algorithm.
+Internet-Draft + draft-ietf-tcpimpl-newreno-00.txt, November 1998.
+(Work in + progress).
+- [FF96] Kevin Fall and Sally Floyd.
+Simulation-based Comparisons of - Tahoe, Reno and SACK TCP.
+Computer Communication Review, July - 1996.
+ftp://ftp.ee.lbl.gov/papers/sacks.ps.Z.
+- [Flo94] S. Floyd, TCP and Successive Fast Retransmits.
+Technical report, October 1994.
+- ftp://ftp.ee.lbl.gov/papers/fastretrans.ps.
+- - [HTH98] Amy Hughes, Joe Touch, John Heidemann.
+Internet-Draft + ftp://ftp.ee.lbl.gov/papers/fastretrans.ps.
++ + [Hoe96] J. Hoe, Improving the Start-up Behavior of a Congestion + Control Scheme for TCP.
+In ACM SIGCOMM, August 1996.
++ + [HTH98] A. Hughes, J. Touch, J. Heidemann.
+Issues in TCP Slow-Start + Restart After Idle.
+Internet-Draft draft-ietf-tcpimpl-restart-00.txt, March 1998.
+(Work in progress).
+[Jac88] V. Jacobson, "Congestion Avoidance and Control," Computer Communication Review, vol. 18, no. 4, pp. 314-329, Aug. 1988.
++ +Expires: June, 1999 [Page 9] + +draft-ietf-tcpimpl-cong-control-01.txt November 1998 + ftp://ftp.ee.lbl.gov/papers/congavoid.ps.Z.
+[Jac90] V. Jacobson, "Modified TCP Congestion Avoidance Algorithm," @@ -504,11 +548,14 @@ [MMFR96]
+- [PAD+98] V. Paxson, M. Allman, S. Dawson, J. Griner, I. Heavens, - K. Lahey, J. Semke, B. Volz.
+Internet-Draft - draft-ietf-tcpimpl-prob-04.txt, August 1998.
+(Work in + [PAD+98] V. Paxson, M. Allman, S. Dawson, W. Fenner, J. Griner, + I. Heavens, K. Lahey, J. Semke, B. Volz.
+Internet-Draft + draft-ietf-tcpimpl-prob-05.txt, October 1998.
+(Work in progress).
++ [Pax97] V. Paxson, "End-to-End Internet Packet Dynamics," + Proceedings of SIGCOMM '97, Cannes, France, Sep. 1997.
++ [Pos81] J. Postel, Transmission Control Protocol, September 1981.
+RFC 793.
+@@ -527,19 +574,23 @@
+-Expires: February, 1999 [Page 9] + + + + + + + + + + + +Expires: June, 1999 [Page 10]
+-draft-ietf-tcpimpl-cong-control-00.txt August 1998 +draft-ietf-tcpimpl-cong-control-01.txt November 1998
+Author's Address:
+- W. Richard Stevens - 1202 E. Paseo del Zorro - Tucson, AZ 85718 - 520-297-9416 - rstevens@kohala.com - http://www.kohala.com/~rstevens - Mark Allman NASA Lewis Research Center/Sterling Software 21000 Brookpark Rd. MS 54-2 @@ -556,6 +607,12 @@ 510-486-7504 vern@ee.lbl.gov
++ W. Richard Stevens + 1202 E. Paseo del Zorro + Tucson, AZ 85718 + 520-297-9416 + rstevens@kohala.com + http://www.kohala.com/~rstevens
+@@ -586,5 +643,6 @@
+-Expires: February, 1999 [Page 10] + +Expires: June, 1999 [Page 11]
+* Next message: Kevin M. Lahey: "Re: Last Call for TCP Congestion Control I-D" * Previous message: Vern Paxson: "Last Call for TCP Congestion Control I-D" * In reply to: Vern Paxson: "Last Call for TCP Congestion Control I-D" * Next in thread: Kevin M. Lahey: "Re: Last Call for TCP Congestion Control I-D" * Messages sorted by: [ date ] [ thread ]
+This archive was generated by hypermail 2b29 : Tue Sep 19 2000 - 11:53:10 EDT

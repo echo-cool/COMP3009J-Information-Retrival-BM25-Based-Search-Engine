@@ -1,0 +1,92 @@
+THIS OPINION WAS NOT WRITTEN FOR PUBLICATION The opinion in support of the decision being entered today (1) was not written for publication in a law journal and (2) is not binding precedent of the Board.
+Paper No. 19 UNITED STATES PATENT AND TRADEMARK OFFICE __________ BEFORE THE BOARD OF PATENT APPEALS AND INTERFERENCES __________ Ex parte TETSUNOSUKE FUJISAKI, WILLIAM D. MODLIN, KOTTAPPURAM M. MOHIUDDIN, and HIROYASU TAKAHASHI __________ Appeal No. 95-4730 Application 08/061,495 __________ ON BRIEF __________ Before KRASS, JERRY SMITH, and BARRETT, Administrative Patent Judges.
+KRASS, Administrative Patent Judge.
+DECISION ON APPEAL 1
+1
+Application for patent filed May 12, 1993 1
+Appeal No. 95-4730 Application No. 08/061,495 This is a decision on appeal from the final rejection of claims 1 through 20, constituting all the claims in the application.
+The invention is directed to a system for and method of handwriting recognition.
+More particularly, both dynamic and
+static (the static being obtained by processing the dynamic) handwriting information are obtained and these two types of information are employed to obtain recognition results which are then merged from both to obtain a most probable recognized character.
+Representative independent claim 1 is reproduced as follows: 1.
+A handwriting recognition system, comprising: handwriting transducer means, responsive to a handwriting input from a user, for outputting corresponding time ordered stroke information; first means, having an input handwriting transducer means, for comprised of at least one probable corresponding time ordered stroke represent; coupled to determining character information an output of said a first list that the is intended to
+means, having an input coupled to said output of said handwriting transducer means, for converting the corresponding time ordered stroke information to static stroke information; second means, having an input coupled to an output of said converting means, for determining at least one second 2
+Appeal No. 95-4730 Application No. 08/061,495 list comprised of at least one probable character that the static stroke information represents; and means, having a first input coupled to an output of said first determining means and a second input coupled to an output of said second determining means, for merging said first list and said at least one second list to provide a third list comprised of at least one most probable character that the corresponding time ordered stroke information is intended to represent.
+The examiner relies on the following references: Tyburski et al.
+(Tyburski) Holt Fujisaki Guyon et al.
+(Guyon) Claims 1 through 20 stand rejected under 35 U.S.C. Â§ 103.
+As evidence of obviousness, the examiner cites Fujisaki, Holt and Tyburski with regard to claims 1 through 3, 5 through 9, 11 through 14 and 17 through 20, adding Guyon to this combination with regard to claims 4, 10, 15 and 16.
+Reference is made to the briefs and answer for the respective positions of appellants and the examiner.
+OPINION We reverse.
+3 Re. 31,692 4,837,842 5,029,223 5,105,468 Jul. Oct. 2, 1984 Jun. 6, 1989
+2, 1991
+Apr. 14, 1992
+Appeal No. 95-4730 Application No. 08/061,495 The examiner offers Fujisaki to show a handwriting transducer responsive to a handwriting input for outputting time ordered stroke information and establishing a first list of at least one probable character that the time ordered stroke information is intended to represent.
+The examiner
+then offers Holt as disclosing a character recognition system which forms static representations of on-line handwritten input in order to extract characteristic data. appellants.
+However, the examiner recognizes that even though Fujisaki and Holt are evidence of individually forming, respectively, time ordered stroke information (dynamic) and static representations of handwritten input, the instant claims also require a merging of the two lists provided by these systems.
+Therefore, the examiner relies on Tyburski as This much is not disputed by
+a linking reference, ostensibly for the proposition that "it has long been recognized in the art of character recognition that the combination of complementary recognition algorithms can achieve improved accuracy results" [answer-page 4].
+4
+Appeal No. 95-4730 Application No. 08/061,495 To the extent that the examiner is relying on, and taking official notice of, common knowledge in the art that "the combination of complementary recognition algorithms can achieve improved accuracy results," we cannot agree absent any evidence showing what the examiner alleges to be well known.
+Assertions of technical facts in areas of esoteric technology, such as the handwriting recognition technology before us, must always be supported by citation to some reference work recognized as standard in the pertinent art and the appellant given the opportunity to challenge the correctness of the assertion or the notoriety or repute of the cited reference.
+In re Ahlert, 424 F.2d 1088, 1091, 165 USPQ 418, 420 (CCPA 1970).
+The only evidence proffered by the examiner as proof of the alleged common knowledge in the art is the Tyburski reference.
+Thus, the question is whether or not Tyburski
+does, indeed, teach that "the combination of complementary recognition algorithms can achieve improved accuracy results."
+After review of the Tyburski reference, we find that it does disclose the use of two disparate types of character recognition, one being magnetic, the other being optical.
+5 If
+Appeal No. 95-4730 Application No. 08/061,495 the magnetic reader fails to recognize a character while the optical reader does recognize the character, than the character is identified as that corresponding to the character recognized by the optical reader.
+Conversely, where the
+magnetic reader recognizes a character while the optical reader fails to do so, the character is identified as that corresponding to the character recognized by the magnetic reader.
+In the situation where both readers provide signals
+indicative of different characters, either one or the other is chosen, depending on parameters of the system, or, alternatively, a reject signal is generated.
+Thus, it appears
+that Tyburski chooses one or the other or neither, but does not choose in accordance with some combination or "merging" of the data, in the sense of appellants' disclosed merging wherein the lists generated by the time ordered information and the static information are physically merged into a third list which is then used to choose the most likely character.
+The examiner does make a cogent argument [answer-page 9] that since a list, as claimed, need only contain one character, a final selection of one character based on two derived characters would meet the claim requirement.
+6
+Appeal No. 95-4730 Application No. 08/061,495 Accordingly, one might argue that Tyburski is "merging" a first and second list to provide a third list by choosing either the result of the magnetic reader or the result of the optical reader and finally selecting one of those results.
+course, one might also argue that there is no "merging," as disclosed and claimed by appellants, in Tyburski because Tyburski chooses one, or no, result of two distinct character input devices and never physically combines these results in any manner.
+In any event, we do not reach the question of Of
+whether Tyburski, in fact, teaches "merging," as broadly claimed, because we find other claim limitations which are not disclosed or suggested by the applied references.
+First, the two types of character recognition systems, besides being two distinct systems, detect the same static characteristics of printed characters.
+Therefore, since both
+the magnetic and optical character recognition devices of Tyburski function as static character recognition devices, there is no suggestion in Tyburski of combining lists comprised of both static stroke information and dynamic, or time ordered stroke information.
+Thus, the question arises as
+to why the skilled artisan would have employed such a teaching 7
+Appeal No. 95-4730 Application No. 08/061,495 in Tyburski to then combine the time ordered system of Fujisaki with the static information system of Holt in any manner.
+We find no suggestion to do so.
+Tyburski does not
+disclose a combination of
+"complementary recognition
+algorithms," if the examiner means by this that there are disclosed in Tyburski both time ordered and static information relative to character recognition.
+static information.
+Tyburski discloses only
+Therefore, there is no teaching or
+suggestion by Tyburski that "complementary recognition algorithms can achieve improved accuracy results," as contended by the examiner.
+Further, each of the instant independent claims requires the static stroke information to be derived from the time ordered stroke information.
+As depicted in instant Figure 1a,
+for example, the feature vector representing the time ordered stroke information is input to box 16.
+Simultaneously
+therewith, the time ordered stroke information is input to replicator 18 and into converter 20 wherein the time ordered stroke information is converted to static stroke information.
+The time ordered stroke information and the static stroke information are then processed in parallel to arrive at two 8
+Appeal No. 95-4730 Application No. 08/061,495 candidate lists which are then merged at 24 to result in a final recognition result.
+There is nothing in the applied references which, in any way, suggests deriving the static stroke information from the time ordered stroke information and the examiner has never addressed this issue in the answer.
+Accordingly, the examiner
+has not established the requisite prima facie case of obviousness required for a proper rejection under 35 U.S.C. Â§ 103.
+The Guyon reference was applied against dependent claims 4, 10, 15 and 16 for a showing of neural networks for performing character recognition.
+However, Guyon does not
+provide for any of the deficiencies noted supra with regard to the other three applied references as applied against the independent claims.
+Accordingly, we will not sustain the
+rejection of any of the claims under 35 U.S.C. Â§ 103.
+The decision of the examiner rejecting claims 1 through 20 under 35 U.S.C. Â§ 103 is reversed.
+9
+Appeal No. 95-4730 Application No. 08/061,495 REVERSED
+Errol A. Krass Administrative Patent Judge
+PATENT
+Jerry Smith Administrative Patent Judge
+) ) ) ) ) ) BOARD OF ) ) ) ) ) ) APPEALS AND INTERFERENCES
+Lee E. Barrett Administrative Patent Judge
+10
+Appeal No. 95-4730 Application No. 08/061,495 Harry F. Smith Perman 
+11

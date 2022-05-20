@@ -1,0 +1,47 @@
+PREV UP NEXT GNU Emacs Lisp Reference Manual 36.2: Customizing the Holidays Emacs knows about holidays defined by entries on one of several lists.
+You can customize these lists of holidays to your own needs, adding or deleting holidays.
+The lists of holidays that Emacs uses are for general holidays (general-holidays), local holidays (local-holidays), Christian holidays (christian-holidays), Hebrew (Jewish) holidays (hebrew-holidays), Islamic (Moslem) holidays (islamic-holidays), and other holidays (other-holidays).
+The general holidays are, by default, holidays common throughout the United States.
+To eliminate these holidays, set general-holidays to nil.
+There are no default local holidays (but sites may supply some).
+You can set the variable local-holidays to any list of holidays, as described below.
+By default, Emacs does not include all the holidays of the religions that it knows, only those commonly found in secular calendars.
+For a more extensive collection of religious holidays, you can set any (or all) of the variables all-christian-calendar-holidays, all-hebrew-calendar-holidays, or all-islamic-calendar-holidays to t.
+If you want to eliminate the religious holidays, set any or all of the corresponding variables christian-holidays, hebrew-holidays, and islamic-holidays to nil.
+You can set the variable other-holidays to any list of holidays.
+This list, normally empty, is intended for individual use.
+Each of the lists (general-holidays, local-holidays, christian-holidays, hebrew-holidays, islamic-holidays, and other-holidays) is a list of holiday forms, each holiday form describing a holiday (or sometimes a list of holidays).
+Here is a table of the possible kinds of holiday form.
+Day numbers and month numbers count starting from 1, but ``dayname'' numbers count Sunday as 0.
+The element string is always the name of the holiday, as a string.
+(holiday-fixed month day string) A fixed date on the Gregorian calendar.
+(holiday-float month dayname k string) The kth dayname in month on the Gregorian calendar (dayname=0 for Sunday, and so on); negative k means count back from the end of the month.
+(holiday-hebrew month day string) A fixed date on the Hebrew calendar.
+(holiday-islamic month day string) A fixed date on the Islamic calendar.
+(holiday-julian month day string) A fixed date on the Julian calendar.
+(holiday-sexp sexp string) A date calculated by the Lisp expression sexp.
+The expression should use the variable year to compute and return the date of a holiday, or nil if the holiday doesn't happen this year.
+The value of sexp must represent the date as a list of the form (month day year).
+(if condition holiday-form) A holiday that happens only if condition is true.
+(function [args]) A list of dates calculated by the function function, called with arguments args.
+For example, suppose you want to add Bastille Day, celebrated in France on July 14.
+You can do this as follows:
+(setq other-holidays '((holiday-fixed 7 14 "Bastille Day")))
+The holiday form (holiday-fixed 7 14 "Bastille Day") specifies the fourteenth day of the seventh month (July).
+Many holidays occur on a specific day of the week, at a specific time of month.
+Here is a holiday form describing Hurricane Supplication Day, celebrated in the Virgin Islands on the fourth Monday in August:
+(holiday-float 8 1 4 "Hurricane Supplication Day")
+Here the 8 specifies August, the 1 specifies Monday (Sunday is 0, Tuesday is 2, and so on), and the 4 specifies the fourth occurrence in the month (1 specifies the first occurrence, 2 the second occurrence, -1 the last occurrence, -2 the second-to-last occurrence, and so on).
+You can specify holidays that occur on fixed days of the Hebrew, Islamic, and Julian calendars too.
+For example,
+(setq other-holidays '((holiday-hebrew 10 2 "Last day of Hanukkah") (holiday-islamic 3 12 "Mohammed's Birthday") (holiday-julian 4 2 "Jefferson's Birthday")))
+adds the last day of Hanukkah (since the Hebrew months are numbered with 1 starting from Nisan), the Islamic feast celebrating Mohammed's birthday (since the Islamic months are numbered from 1 starting with Muharram), and Thomas Jefferson's birthday, which is 2 April 1743 on the Julian calendar.
+To include a holiday conditionally, use either Emacs Lisp's if or the holiday-sexp form.
+For example, American presidential elections occur on the first Tuesday after the first Monday in November of years divisible by 4:
+(holiday-sexp (if (= 0 (% year 4)) (calendar-gregorian-from-absolute (1+ (calendar-dayname-on-or-before 1 (+ 6 (calendar-absolute-from-gregorian (list 11 1 year)))))) "US Presidential Election"))
+or
+(if (= 0 (% displayed-year 4)) (fixed 11 (extract-calendar-day (calendar-gregorian-from-absolute (1+ (calendar-dayname-on-or-before 1 (+ 6 (calendar-absolute-from-gregorian (list 11 1 displayed-year))))))) "US Presidential Election"))
+Some holidays just don't fit into any of these forms because special calculations are involved in their determination.
+In such cases you must write a Lisp function to do the calculation.
+To include eclipses, for example, add (eclipses) to other-holidays and write an Emacs Lisp function eclipses that returns a (possibly empty) list of the relevant Gregorian dates among the range visible in the calendar window, with descriptive strings, like this:
+(((6 27 1991) "Lunar Eclipse") ((7 11 1991) "Solar Eclipse") ... )

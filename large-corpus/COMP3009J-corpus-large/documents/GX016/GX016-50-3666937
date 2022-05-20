@@ -1,0 +1,127 @@
+SED navigation bar Dataplot Vol 1 Auxillary Chapter _________________________________________________________________ SVG Name: SVG Type: Output Device Command Purpose: Create SVG (Scalable Vector Graphics) format graphics files.
+Description: The ability to generate graphics for web based applications is increasingly important.
+The three most common formats for web applications are:
+1.
+GIF 2.
+JPEG 3.
+PNG (Portable Network Graphics)
+Note that these are all bit mapped formats.
+SVG (Scalable Vector Graphics) is an emerging graphics format for web applications.
+SVG is an XML (extensible markup language) based format.
+Note that XML is a meta markup language, that is it is a langauge for defining languages.
+SVG is one specific implementation of an XML language.
+This is analogous to HTML being a specific implementation of a SGML (Standard Generalized Markup Language) language.
+SVG is expected to develop into an important format over the next several years.
+SVG is a relatively new standard (as of 3/2002) and not all browsers will support it.
+Adobe provides a freely downloadable plugin for Netscape and Internet Explorer on the PC and Mac OSX.
+Search for the "SVG Viewer" on the Adobe web site (http://www.adobe.com).
+Also, there are several SVG viewers/browsers (e.g., XSMILES) under development.
+Support for SVG graphics in web pages should grow rapidly in the next few years.
+SVG is a vector based rather than a bitmap based protocol.
+Also, SVG is an ASCII file that contains a textual description of the graph.
+One of the primary advantages of this approach is that web graphics can be easily edited much the way the HTML files can be edited.
+This can make the maintenance of the graphics on a web site easier.
+In addition to web applications, it is expected that SVG will be supported by many graphics editing programs (e.g., Photoshop, Corel Draw).
+Syntax 1: SVG This form designates device 1 as an SVG graphics device, which results in the SVG output being written to the screen.
+This syntax is not partiucularly useful since the SVG needs to be saved in a file so that an external SVG viewer can read it.
+Syntax 2: DEVICE 
+Examples: DEVICE 2 SVG DEVICE 3 SVG
+Note: For SVG, it is often desirable to put each plot in a separate file with a unique name.
+This can be accomplished with a sequence of commands like the following:
+SET IPL1NA PLOT1.SVG DEVICE 2 SVG generate first plot DEVICE 2 CLOSE SET IPL1NA PLOT2.SVG DEVICE 2 SVG generate second plot DEVICE 2 CLOSE
+The SET IPL1NA command specifies the name of the file.
+Note that this name is currently converted to upper case.
+This command should come before the DEVICE 2 SVG command.
+Note: The default image size is 600 pixels by 450 pixels.
+You can change the default size of the image by using the DEVICE ...
+PICTURE POINTS command.
+For example,
+SET IPL1NA PLOT1.SVG DEVICE 2 SVG DEVICE 2 PICTURE POINTS 300 300 generate first plot DEVICE 2 CLOSE
+Note: Style sheets allow easier maintenance/editing by specifying default attributes in an external style sheet file.
+The default Dataplot style sheet is "dataplot.css" and it is stored in the Dataplot "HELP" sub-directory.
+Currently, Dataplot supports the following class for the background (this only sets the color, not the size):
+rect.background
+Currently, Dataplot supports the following classes for lines:
+polyline.narrow-solid polyline.medium-solid polyline.wide-solid polyline.extrawide-solid polyline.narrow-dotted polyline.medium-dotted polyline.wide-dotted polyline.extrawide-dotted polyline.narrow-dash polyline.medium-dash polyline.wide-dash polyline.extrawide-dash polyline.narrow-dash2 polyline.medium-dash2 polyline.wide-dash2 polyline.extrawide-dash2 polyline.narrow-dash3 polyline.medium-dash3 polyline.wide-dash3 polyline.extrawide-dash3 polyline.narrow-dash4 polyline.medium-dash4 polyline.wide-dash4 polyline.extrawide-dash4 polyline.narrow-dash5 polyline.medium-dash5 polyline.wide-dash5 polyline.extrawide-dash5
+Currently, Dataplot supports the following classes for text:
+text.left-horizontal text.center-horizontal text.right-horizontal
+Currently, no classes are supported for region fills.
+As we develop more experience with SVG graphics, we may expand the supported classes.
+When using external style sheets, you modify the attributes of the clases.
+However, you do not edit which classes are available (Dataplot generates the SVG file based on the above classes.
+Dataplot will check the value of certain attributes (color for lines, color and size for text) when generating the SVG file.
+If these are not the default values, then a local "style" option will be added for that element to override the value in the style sheet.
+To make your own style sheets, simply copy the default file "dataplot.css" to a new file name and then edit that file.
+Use the SET SVG STYLE SHEET NAME command (see below) to specify the location of the style sheet you wish to use (this should be the location of the style sheet relative to the location of the SVG file on your web pages).
+Note: The following SET commands apply to the SVG output.
+* SET SVG COORDINATE SYSTEM 
+Currently, only pixel units are supported.
+The PERCENT option is reserved for possible future implementation.
+* SET SVG FONT NAME 
+Generic names (i.e., supported on all SVG viewers) are: serif, sans-serif, and monospace.
+Specific font names (e.g., arial) depend on what fonts are installed on your local system.
+Currently, only the generic fonts are supported.
+For specific fonts, use style sheets and set the name in the style sheet.
+The default is sans-serif.
+* SET SVG FONT WEIGHT 
+The default is bold.
+* SET SVG FONT STYLE 
+The default is normal.
+* SET SVG CAP STYLE 
+The default is butt.
+* SET SVG JOIN STYLE 
+The default is miter.
+* SET SVG HARDWARE FILL SWITCH 
+You can also specify that an "evenodd" rule be used.
+In general, using hardware region fill will have better performance.
+However, hardware fills can occassionally have unpredictable results.
+In this case, you can have Dataplot perform region fills in software by specifing SOFTWARE.
+* SET SVG STYLE SHEET 
+In general, style sheets are most beneficial when multiple graphics are being used on a web site.
+SVG supports both external style sheets (i.e., stored in a separate file) or internal to the SVG file.
+Currently, Dataplot only supports external style sheets.
+The INTERNAL switch is reserved for possible future implementation.
+There is also an EXTERNAL USE and an EXTERNAL CREATE option.
+This is reserved for future use, but it currently has no effect.
+* SET SVG STYLE SHEET NAME 
+The default name is "dataplot.css".
+* SET SVG FOREGROUND COLOR 
+If a line or text color does not match this foreground color, then Dataplot inserts a "style" option that overrides the style sheet value.
+Note that the default color is set independently in the style sheet file.
+So you may need to edit the style sheet as well.
+Note: Each "page" is assigned an ID using the "" element.
+You can add your own translate, scale, and rotate options to the SVG file to transform the full plot (this is an element of the "Scalable" part of Scalable Vector Graphics).
+Note: Currently, Dataplot generates static plots in SVG format.
+SVG supports advanced capabilities such as animation, gradients, and Javascript scripting.
+Support for at least some of these capabilities may be added in future implementations.
+However, you can edit the SVG file (either via an ASCII text editor or a graphics editing program) to add such capabilities.
+Default: None
+Synonyms: None
+Device Notes:
+1.
+HARDWARE TEXT - The SVG device currently supports hardware characters.
+Available fonts may depend on what fonts you have supported on your system.
+2.
+COLOR - SVG supports the full range of 88 colors supported by Dataplot.
+3.
+HARDWARE FILL - Solid area fills are done in hardware.
+You can override this to generate them in software.
+4.
+DASH PATTERNS - The following dash patterns are available: DASH - 3 pixels on, 3 pixels off; DOT - 1 pixel on, 1 pixels off; DASH2 - 9 pixels on, 5 pixels off DASH3 - 5 pixels on, 3 pixels off, 9 pixel on, 2 pixel off; DASH4 - 9 pixels on, 3 pixels off, 5 pixel on, 9 pixel off, 3 pixel on, 5 pixel off; DASH5 - 5 pixels on, 2 pixels off; If you want to modify these patterns, it is recommended that you use external style sheets.
+5.
+LINE WIDTH - Thick lines are generated in hardware.
+6.
+GRAPHICS INPUT - The CROSS-HAIR command is not supported for this device.
+7.
+The CHARACTER PIXEL option is supported on this device.
+Related Commands:
+GD PNG/JPEG = Direct graphical output to a file in PNG/JPEG format.
+POSTSCRIPT = Direct graphical output to a Postscript device.
+HPGL = Direct graphical output to an HPGL device.
+DEVICE = Specify certain actions for the graphics output.
+Applications: Web Applications, Graphics Import Into Graphics Editing Programs
+Reference: "SVG Essentials", David Eisenberg, O'Reilly, 2002.
+"Designing SVG Web Graphics", Andrew Watt, New Riders, 2002.
+Implementation Date: 2002/3
+Program: SET IPL1NA PLOT1.SVG DEVICE 2 SVG DEVICE 2 PICTURE POINTS 400 300 TITLE SAMPLE SVG PLOT PLOT X**2 FOR X = 1 1 9 DEVICE 2 CLOSE SET IPL1NA PLOT2.SVG DEVICE 2 SVG DEVICE 2 PICTURE POINTS 500 400 TITLE SECOND SAMPLE SVG PLOT PLOT X**3 FOR X = 1 1 9 DEVICE 2 CLOSE
+Date created: 3/27/2002 Last updated: 4/4/2003 Please email comments on this WWW page to alan.heckert@nist.gov.

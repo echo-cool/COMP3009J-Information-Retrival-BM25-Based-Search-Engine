@@ -1,0 +1,206 @@
+Bioelectric Control of a 757 Class High Fidelity Aircraft Simulation CHARLES JORGENSEN+, KEVIN WHEELER+, SLAWOMIR STEPNIEWSKI* + Computational Sciences Division NASA Ames Research Center *Recom Technology Corporation ABSTRACT This paper presents results of a recent experiment in fine grain Electromyographic (EMG) signal recognition.
+We demonstrate bioelectric flight control of 757 class simulation aircraft landing at San Francisco International Airport.
+The physical instrumentality of a pilot control stick is not used.
+A pilot closes a fist in empty air and performs control movements which are captured by a dry electrode array on the arm, analyzed and routed through a flight director permitting full pilot outer loop control of the simulation.
+A Vision Dome immersive display is used to create a VR world for the aircraft body mechanics and flight changes to pilot movements.
+Inner loop surfaces and differential aircraft thrust is controlled using a hybrid neural network architecture that combines a damage adaptive controller (Jorgensen 1998, Totah 1998) with a propulsion only based control system (Bull 
+Thus the 757 aircraft is not only being flown bioelectrically at the pilot level but also demonstrates damage adaptive neural network control permitting adaptation to severe changes in the physical flight characteristics of the aircraft at the inner loop level.
+To compensate for accident scenarios, the aircraft uses remaining control surface authority and differential thrust from the engines.
+To the best of our knowledge this is the first time real time bioelectric fine-grained control, differential thrust based control, and neural network damage adaptive control have been integrated into a single flight demonstration.
+The paper describes the EMG pattern recognition system and the bioelectric pattern recognition methodology.
+KEYWORDS: Bioelectric interfaces, Hidden Markov Models, neural network control, human machine interfaces, aircraft safety, integrated control INTRODUCTION In 1997, the Neuro-Engineering laboratory at NASA Ames Research Center began an advanced concepts research program entitled the Extension of the Human Senses Initiative (EHS).
+EHS is an effort intended to produce next generation machine and software interface technologies.
+This includes electromyographic (EMG) and electroencephalographic (EEG) ) human communication tools as well as haptic feedback and direct sensory interface approaches used for enhancing human software integration in complex task environments.
+In 1998, EHS demonstrated broad gesture EMG pattern recognition using a moving average / Hidden Markov Model (HMM) method that acquired data from wet electrodes placed on the upper and lower forearm (see Figures 1 
+Eight sensory channels were 1
+recorded and filtered in the 30 to 300 Hz. frequency range using a modified Octopus recorder and WinEMG, a new signal acquisition software package written for this effort by the third author.
+Signals were segmented into features based on collections of gesture exemplars from which statistical frequency distributions were developed using HMMs.
+The outputs from the models were directed to a virtual reality display (see Figure 1 and Picture set 1).
+Over the following months the technique was refined to increase precision for fine grain movement detection and to reduce error rates and associated gesture confusion.
+Preprocessing Feature Selection Pattern Recognition Discrete Gestures Hidden Markov Model
+Raw EMG Signals
+STFT
+Filter
+Wavelets
+Blind Signal Sep.
+Parametric Model Neural Network
+AR/MA
+Figure 1, EMG pattern analysis In 1998, after promising results for recognition of basic hand movements such as pointing or making a fist, we began experimentation with increased gesture complexity.
+In particular we were interested in determining if our EMG recognition methods would be capable of identifying more fine grained control movements in real time and with a sufficient degree of accuracy to perform a non trivial software control task.
+We chose as a test case landing a 757 class aircraft simulation (Pisanich, Heers, 
+See Picture 1a.
+Picture 1.
+ACFS, mini-ACFS flight control panel, EMG Flight Control Initial results on the mini-ACFS, a smaller portable model of the ACFS, proved promising so an integrated demonstration linking outer loop human bioelectric control with inner loop neural network damage adaptive control was proposed.
+In this scenario,
+2
+three technologies were merged.
+Bioelectric pilotage using signals recorded from arm and wrist muscles, neural network damage adaptive flight control reported to this conference last year (Jorgensen 1998) and propulsion only controller developed by Bull et. al. (1995).
+Details of our integration of neural network damage adaptive and propulsion based control at the inner loop level will be discussed in a future paper.
+The remainder of this paper considers the procedures used to bioelectrically control the mini-ACFS and initial results.
+In the following sections we consider the characteristics of the EMG patterns, how they were measured and filtered, how they were classified, and finally the performance when integrated into a flight controller.
+METHODOLOGY Figure 1 shows the steps used to record, extract and sense flight control gestures.
+The Bioelectric signals passed through three steps to be interpreted as gestures: preprocessing, feature vector formation, and gesture recognition.
+The pre-processing stages consist of electrode placement and filtering (Stepniewski 1999).
+The remaining two steps, forming feature vectors and recognizing gestures, have many potential implementations.
+Typical features used for signals includes moving averages of absolute values, neural network weights, Auto-Regression (AR) and mel-cepstrum coefficients, principal components, weighted factors, measures of slope and acceleration of transform coefficients, Short-Time Fourier Transforms (STFT), and wavelet decompositions.
+Pattern recognition models that might be used to perform pattern recognition include simple threshold indicators, neural networks, linear separators, or HMMs.
+A continuous variation of the latter was the approach used for the present paper.
+Electrode Placement Proper electrode placement depends upon the set of gestures to be used and individual differences in physiology.
+There are many possible ways to select electrode placement for an EMG gesture recognition task.
+One method we first used was to place a fine regular grid of electrodes over the entire forearm, record, and analyze the EMG signals resulting from gestures.
+There were problems with this approach.
+First the number of required electrodes would need to number 48 in the very least.
+Hardware is required capable of sampling 48 channels at 2000 Hz simultaneously.
+This approach had the drawback that the samples only pertained to recorded gestures and were not in general applicable to more complex gestures, or even gestures of a longer or shorter duration.
+Considerable time was spent performing tests to determine the sensitivity of electrode misplacement from original positions used during training.
+The tests were conducted both for normal everyday misalignment which resulted in spatial dislocations of 1 - 3 millimeters, and for larger displacements of 1 - 2 centimeters.
+Several factors resulted in great variability across people in the recorded EMG signals.
+Among the major ones observed were that the electrodes needed to be placed so that nearly the same point on the muscle is used for every participant.
+Tissue between active muscles and the measuring electrodes act as a low pass filter to EMG signals so low power densities may actually cause crosstalk from adjacent muscle tissues.
+Greater fat distribution in the skin affected electrode movement over the muscle and caused signal attenuation.
+Signal thresholds needed to be dynamically compensated because of variations in levels caused by external chemical effects such as caffeine, biorhythms (Farry et.al 1996), and performance stress.
+Fatigue caused gradual shifts in power to lower frequencies during sustained forceful contractions.
+Gesture selection for our experiments emphasized virtual stick control.
+In our case the gestures were vectored hand and wrist rotations.
+Signal acquisition from the electrodes used an Octopus recorder and a specialized signal processing software package developed at Ames called WinEMG designed to display and band pass filter the raw
+3
+electrode information from the Octopus recording unit.
+This was followed by signal preprocessing to segment the signals into the feature space and finally a pattern recognition model for training and linking to the mini-ACFS simulator and Vision Dome graphic display.
+The Octopus recorder allowed for at most 8 electrode pairs to be used simultaneously.
+An assumption made for convenience was that the electrodes could be placed in either one or two circular bands around the arm such as our custom made dry electrode band in Figure 2.
+EMG training signals were recorded using four pairs of wet electrodes and a ground placed between the wrist and elbow.
+Five distinct stick gestures were made while data was recorded: left, right, up, down, and rest.
+Figure 2: EMG arm band and typical gestures A pilot stick gesture consists normally of hand/wrist movement, no upper arm activity is currently incorporated.
+It is a trivial extension to include upper arm movements in the system as well as partial positions if so desired but this would not be a normal pilot flight behavior.
+We did need to account for position and rates.
+This was accomplished by having two kinds of movements a "twist stick and hold" during which a control rate increased continuously for large changes and "bump 
+In this way normal pilot stick torque changes were captured.
+Figure 3: Three sources of EMG signal contamination Signal Preprocessing and Filtering Surface EMG signals which originate during contraction of major skeletal muscles are relatively strong in comparison to other biological signals such as EEG or EOG.
+This makes the construction of a human-computer interface based on EMG signals feasible not only in carefully controlled laboratory environments but also in real-world conditions.
+To achieve a desired reliability of the recording instrumentation, it is important to understand the nature of EMG signals as well as major sources of noise and external interference.
+4
+Maintenance of the same electrical contact conditions of both electrodes is essential or common mode components that should be removed by a differential measurement will contaminate recorded signals.
+An external, inductive interference can be easily introduced thorough loops formed by electrode leads.
+To avoid this type of contamination, the leads have to be twisted or shielded and kept as short as possible.
+Shielded cables have a naturally higher capacitance that may actually introduce more noise.
+To reduce external influence active shielding can be utilized which adjusts shield voltage to the average potential of the signal being transmitted by the inner conductor.
+In practice, this type of protection prevents various interference sources, even spurious spikes that may occur by touching electrode cables.
+It is desirable to amplify EMG signals as close to the skin as possible.
+Miniature analog EMG preamplifiers are typically built around an instrumentation amplifier IC, followed by an analog conditioning scheme that involves both low and high pass filtering.
+The high pass filter (0-10 Hz) removes unbalanced components of half-cell potentials and movement artifacts of the cables, i.e., spurious changes in the signal due to movements of the leads and slipping during gesticulation or motion.
+Low pass filtering limits the spectral characteristic of the EMG signal to the known bandwidth so the signal can be sampled at the required rate.
+The human skin has a strong attenuating (filtering) effect that can be modeled by a first order, low pass filter.
+Due to these phenomena, the surface EMG spectrum above 1 kHz is flat and carries negligible amounts of information.
+A typical EMG spectrum is shown in Figure 3.
+Figure 4a shows that the main EMG activity is localized in low frequencies, mostly
+Figure 4 Typical EMG spectrum 
+The maximum EMG activity overlaps with ubiquitous indoor 50/60 Hz interference from electro-magnetic radiation of power lines.
+The common mode rejection ratio or CMRR characterizes system ability to reject common mode voltages at lower frequencies.
+A good quality EMG measurement system, such as the one used in our experiments, should have a CMRR greater than 110 dB.
+Although this parameter alone does not represent all interference rejection, nevertheless, it reflects a system potential to obtain accurate measurements.
+High frequency components (above 1 kHz) were eliminated by a 4th order Bessel antialiasing filter.To further improve signal quality, the digitized signals were oversampled (6 kHz sampling rate) by a 16 bit resolution computer data acquisition card.
+This signal
+Figure 5abc Joystick Raw Pilot EMG Signals, multiple instantiations, Histograms in HMM space 5
+was then digitally filtered using 32-tap FIR filter and downsampled to 2 kHz sampling rate.
+Signal Segmentation Data was collected by having a test subject repeat each gesture repeatedly throughout a time interval of approximately 5 minutes, resulting in a file of 600,000 samples per channel for 8 channels when collected at 2000 Hz.
+This resulted in approximately 100 instantiations of each gesture per file.
+The subject was given a visual cue on the computer screen as to when to make the gesture and an averaged signal was presented on the screen.
+The raw EMG data for one stick gesture is depicted in Figure 5b This data was segmented into individual gesture instantiations and then transformed into a feature space to make training of HMMs possible.
+Our first approach was to use a HMM to represent the feature space and feed the classifier.
+The data segmentation process is the method used to convert each of the long (5 minutes) files into single gesture files of approximately 1 to 3 seconds in duration.
+The segmentation process is only used in creating files for training and is not part of the on line recognition process.
+Segmentation was performed by centering peak activation regions within the middle of a segment for each instantiation with respect to a minimum energy criteria.
+After this automated process was completed, the segments were inspected visually and incorrect segmentations were discarded In order to take advantage of moving averages of the signals, overlapping windows of 128 samples, overlapping by either 96 or 112 samples, were used to calculate the moving average of the absolute value of the signals.
+These smoothed signals were then used as the input feature space to the HMM's.
+Multiple instantiations of the features which used windows of size 128 samples with 96 sample overlap are depicted in Figure 5b for the joystick `up' gesture.
+The data Figure 5a is a raw EMG signal.
+The next surface plots are the moving averages which are the feature coefficients of a set of raw signals for a single channel for multiple gesture instantiations The high areas were where the EMG signal was most active for that channel.
+Signals within the preprocessed activity boundaries were considered to be locally stationary and therefore methods such as a traditional autoregression could be used to create feature vectors for the gestures.
+This allows the pattern classifiers to automatically classify hand gestures in real-time.
+It also permits more natural human gestures of the type shown in Figure 2 to be used as direct commands to computers.
+Pattern Recognition An HMM (Rabiner) was used to calculate the probability that a discretely sampled time-series is a member of a set of previously classified series used in creating the model.
+The assumption is that a time-series can be modeled as a chain of events.
+The series is modeled using a random variable.
+This variable can be in one of several "hidden" states.
+The states are known as hidden because they are only a mathematical practicality and not inherent in the physical process.
+As the series progresses through time, the event of the random variable changing from being in one state to another is calculated.
+Once the finite time-series has completed, the probability of observing the sequence of events can be found.
+HMM's assume that the time-series is stationary.
+A time-series created by sampling EMG signals is inherently non-stationary.
+In this work we wanted to minimize computations performed in creating feature vectors and so we used moving averages of the absolute value of small overlapping windows as mentioned above.
+HMM training was performed offline.
+In our current research our actual feature
+6
+vector space is much more elaborate to directly compensate for signal non-stationarity by using a time-frequency decomposition.
+Continuous HMMs were used in this study.
+The moving average feature vectors which contain continuous values by nature, were used directly.
+Since the HMMs were used to model EMG based gestures, we made the assumption that the models were left-to-right ergodic.
+This meant that a model always started in the initial state, and always ended in the final state, and once the model transitioned from a state, it could not return back to that state.
+The models were initialized with uniformly partitioned states.
+Histograms of the data within these states are shown in Figure 5c.
+The HMMs were initialized with a Kmeans clustering algorithm.
+Training of the HMMs was done using the Baum-Welch algorithm as described in Rabiner.
+Gesture recall used the Viterbi algorithm.
+For the joystick example with the left, right, up, down and rest gestures, 5 different models were used simultaneously, one for each gesture.
+The gesture recognized was the model with the highest sequence observation probability.
+As long as this value was greater than some minimum it was considered a valid signal, otherwise no gesture was recognized.
+The on-line version of the pilot stick controller involved several heuristics to avoid determination of when gestures were initiated and terminated.
+During real-time operation the time based windows used to form the feature vector slide through time.
+The models were trained on segments which always had the active gesture region in the middle windows.
+Thus, the feature vector at the beginning of the gesture and at the end of the gesture could be incorrectly classified.
+This would cause spurious gesture recognition.
+To compensate for this the following heuristic was incorporated: a gesture had to be recognized several times consecutively to be classified as representing a valid identification.
+RESULTS The real-time pattern recognition system was used to recognize and apply gestures to produce pitch and bank rate commands to the mini-ACFS.
+Three interconnected computer systems operated during the simulation passing messages via network sockets.
+An Intel Pentium II based PC ran the HMM software which performed the on-line gesture recognition and was connected to the Octopus sampling hardware.
+When a gesture was recognized, a discrete symbol representing the gesture was transmitted as a TCP/IP packet to a Silicon Graphics O2 workstation which ran the mini-ACFS.
+This simulator was used to send signals to a transport aircraft model similar to the Boeing 757.
+The computer then transmitted via Ethernet, coordinate information to a Silicon Graphics Onyx REII which displayed a simultaneous three dimensional rendering of the aircraft as it approached San Francisco International airport.
+The aircraft was flown by watching the flight director instruments and performing virtual joystick gestures to give both pitch and bank rate commands.
+The longer any gesture was held the greater the pitch or bank rate increased.
+Other types of aircraft were also flown including hypersonic waverider body concepts but those results are not presented here.
+Our first demonstration used the simulation with an auto-pilot interface.
+The goal was to use gestures to give both bank and pitch commands to the auto-pilot.
+Several public demonstrations of successful landings have been given throughout this study.
+Our second demonstration substituted direct rate control bypassing the autopilot and was capable of performing repeated successful landings with direct rate control.
+Our final demonstration utilized the damage adaptive capability of the inner loop neural and propulsion based controllers.
+(Jorgensen 1998, Totah 1996) The bioelectrically wired pilot took the aircraft into landing scenarios with a cascading series of accidents, first locking rudder control surfaces and then progressing to full hydraulic failure where flight control required only the use of differential throttle actuation.
+In each case, successful landings were
+7
+demonstrated bioelectrically for autopilot, non autopilot, damaged, and propulsion only control.
+DISCUSSION This paper has considered three biologically inspired methods of performing inner and outer loop control for a complex human/software task.
+The central focus of this work was on the integration of an outer loop bioelectric interface to a complex aircraft flight simulation in which aircraft are highly damage adaptive at the inner loop level through use of neural network learning mechanisms.
+The results show that fine grain EMG signal analysis permits real time interactive control with the simulation at a level of fidelity adequate to land a 757 class aircraft through the use of a virtual stick.
+During real-time demonstrations, the gestures were recognized very reliably with exception only when either an electrode became detached, or when an electrode was not placed in the correct position to begin with.
+Typically in a half hour period of using the virtual joystick and dry electrodes to fly, the right and up gestures were recognized 100% of the time, the down and left gestures were recognized 95% of the time.
+The left gesture is confused for either the down or up gestures 5% of the time.
+Note that currently the electrodes are positioned by eye and thus are not in the ideal placement which accounts for most of the error.The implications of this work are that a new class of human software interfaces may be enabled by the removal of traditional hardware instrumentality's such as joy sticks or mice. in place of traditional interface devices.
+Dry electrode sensor arrays located on the wrist or forearm would be used as generic signal recognizers, recording EMG signals and interpreting them for control of software or hardware devices.
+More advanced concepts demonstrating the validity of this conjecture are currently being pursued.
+REFERENCES: 1.
+Farry, K. Walter, I. and Baraniuk R. "Myoelectric Teleoperation of a Complex Robotic Hand" IEEE Transactions of Robotics and Automation Vol. 12, No. 5, October 1996.
+2 Hogan, N.
+"A review of the methods of processing EMG for use as a proportional control signal", Biomedical Engineering pp. 81-86, March 1976.
+3 .
+Jorgensen, C. "Feedback Linearized Aircraft Control Using Dynamic Cell Structures", World Automation Congress ISSCI-050.1, 1999 Anchorage Alaska.
+4.
+Kim, B.S.: "Nonlinear Flight Control Using Neural Networks," Ph.D.
+Thesis, Georgia Institute of Technology, School of Aerospace Engineering, 1993.
+5.
+Kwon, J. Min, H. and Hong S. "Hybrid hidden Markov model-neural network system for EMG signal recognition" Proceedings of the 18th Int. Conf. of the IEEE Eng. in Medicine and Biology Society.
+`Bridging the Disciplines for Biomedicine', Vol. 4, pp. 1468-9, Oct. 3, Nov 1996 Amsterdam, Netherlands.
+6.
+Parker, P. et. al.
+"Signal processing for the multistate myoelectric channel," Proc.
+IEEE, vol. 65, N0.
+5 pp. 662-674.
+7 .
+Pisanich G.M., Heers S.T., and Kaneshige J.
+"A laboratory Glass-Cockpit Flight Simulator for Automation and Communication Research" in Human Automation Interaction Mouloua, and Koonce ed. Laurence Erlbaum Associates 1997.
+8.
+Rabiner, Lawrence, R., "A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition", Proceedings of the IEEE, Vol. 77, No. 2, February, 1989, pp. 257-285.
+9.
+Stepniewski, S. "Precision multichannel EMG Preamplifier with built in antialiasing filters ,"Internal White Paper, Ames Neuro Enginering Laboratory, Oct 1999.
+10.
+Totah, J.: "Simulation of a Neural Based Flight Controller," AIAA conference paper 96-3503, 1996.
+8

@@ -1,0 +1,116 @@
+THIS OPINION WAS NOT WRITTEN FOR PUBLICATION The opinion in support of the decision being entered today (1) was not written for publication in a law journal and (2) is not binding precedent of the Board.
+Paper No. 31 UNITED STATES PATENT AND TRADEMARK OFFICE _____________ BEFORE THE BOARD OF PATENT APPEALS AND INTERFERENCES _____________ Ex parte ERNEST H. BEERNINK _____________ Appeal No. 96-1435 Application 08/265,497 ______________ ON BRIEF _______________ Before KRASS, MARTIN and JERRY SMITH, Administrative Patent Judges.
+JERRY SMITH, Administrative Patent Judge.
+Application for patent filed June 23, 1994.
+According to the appellant, this application is a continuation of Application 08/068,443, filed May 27, 1993; which is a continuation-in-part of Application 07/889,216, filed May 27, 1992 and a continuation-in-part of Application 08/001,123, filed January 5, 1993.
+1 1
+1
+Appeal No. 96-1435 Application 08/265,497
+DECISION ON APPEAL This is a decision on the appeal under 35 U.S.C. Â§ 134 from the examiner's final rejection of claims 1-10, 13-25 and 29-34, which constitute all the claims pending in the application.
+An amendment adding claims 35-40 after final
+rejection was filed on February 24, 1995 but was denied entry by the examiner.
+The disclosed invention pertains to a method and apparatus for recognizing handwritten entries on a display screen of a computer system.
+More specifically, the invention
+normalizes strokes entered onto the display screen by rotating each stroke about its own center or by adjusting the aspect ratio of a bounding box surrounding the stroke before any comparisons of the entered stroke are made against a stored database.
+This form of normalization is said to permit the
+recognition of handwritten information entered in any angular direction.
+Representative claim 1 is reproduced as follows: 1.
+A method for recognizing handwritten entries on a display screen of a computer system, the computer system also having a processor and memory, the method comprising the steps of: 2
+Appeal No. 96-1435 Application 08/265,497
+receiving a handwritten stroke written on the screen of said computer system, said stroke being received in a form that can be manipulated by said processor; stroke; determining a start point and a stop point of said
+normalizing said stroke with said processor by rotating said stroke about a stroke center until at least one of said start point or said stop point aligns with a predefined axis, thereby obtaining a normalized stroke; matching said normalized stroke against a template of character parts stored in memory to create one or more associated character part interpretations; using said processor to group said normalized stroke, if possible, with one or more normalized strokes that were matched in a like fashion to create a character part group; and using said processor to recognize a higher level object from said character part group utilizing the angles between the strokes of the character part group and using said character part interpretations.
+The examiner relies on the following references: Crane et al.
+(Crane) Sklarew 1990) 4,718,102 5,157,737 Jan. 05, 1988 Oct. 20, 1992 (filed May 14,
+Claims 1-10, 13-25 and 29-34 stand rejected under 35 U.S.C. Â§ 103.
+As evidence of obviousness the examiner offers
+Sklarew in view of Crane.
+3
+Appeal No. 96-1435 Application 08/265,497
+Rather than repeat the arguments of appellant or the examiner, we make reference to the briefs and the answer for the respective details thereof.
+OPINION We have carefully considered the subject matter on appeal, the rejection advanced by the examiner and the evidence of obviousness relied upon by the examiner as support for the rejection.
+We have, likewise, reviewed and taken into
+consideration, in reaching our decision, the appellant's arguments set forth in the briefs along with the examiner's rationale in support of the rejection and arguments in rebuttal set forth in the examiner's answer.
+It is our view, after consideration of the record before us, that the evidence relied upon and the level of skill in the particular art would not have suggested to one of ordinary skill in the art the obviousness of the invention as set forth in claims 1-10, 13-25 and 29-34.
+reverse.
+Appellant has indicated that for purposes of this appeal the claims will stand or fall together in the following four groups: Group I has claims 1-6 and 19-25; Group II has 4 Accordingly, we
+Appeal No. 96-1435 Application 08/265,497
+claims 7-10 and 13-18; Group III has claims 29-34; and Group IV has claims 10, 21 and 29 [brief, page 4].
+Consistent with
+this indication appellant has made no separate arguments with respect to any of the claims within each group.
+Accordingly,
+all the claims within each group will stand or fall together.
+Note In re King, 801 F.2d 1324, 1325, 231 USPQ 136, 137 (Fed.
+Cir. 1986); In re Sernaker, 702 F.2d 989, 991, 217 USPQ 1, 3 (Fed.
+Cir. 1983).
+Therefore, we will only consider the
+rejection against claims 1, 7 and 29 as representative of all the claims on appeal (claim 29 is representative of both Groups III and IV).
+In rejecting claims under 35 U.S.C. Â§ 103, it is incumbent upon the examiner to establish a factual basis to support the legal conclusion of obviousness.
+See In re Fine, In
+837 F.2d 1071, 1073, 5 USPQ2d 1596, 1598 (Fed.
+Cir. 1988). so doing, the examiner is expected to make the factual
+determinations set forth in Graham v. John Deere Co., 383 U.S. 1, 17, 148 USPQ 459, 467 (1966), and to provide a reason why one having ordinary skill in the pertinent art would have been led to modify the prior art or to combine prior art references to arrive at the claimed invention.
+5 Such reason must stem
+Appeal No. 96-1435 Application 08/265,497
+from some teaching, suggestion or implication in the prior art as a whole or knowledge generally available to one having ordinary skill in the art.
+Uniroyal Inc. v. Rudkin-Wiley
+Corp., 837 F.2d 1044, 1051, 5 USPQ2d 1434, 1438 (Fed.
+Cir.), cert. denied, 488 U.S. 825 (1988); Ashland Oil, Inc. v. Delta Resins 
+Cir. 1985), cert. denied, 475 U.S. 1017 (1986); ACS Hospital Systems, Inc. v. Montefiore Hospital, 732 F.2d 1572, 1577, 221 USPQ 929, 933 (Fed.
+Cir. 1984).
+These showings by
+the examiner are an essential part of complying with the burden of presenting a prima facie case of obviousness.
+Note
+In re Oetiker, 977 F.2d 1443, 1445, 24 USPQ2d 1443, 1444 (Fed.
+Cir. 1992).
+With respect to each of the independent claims in this application, the examiner has made an effort to read these claims on the disclosure of Sklarew.
+The examiner observes
+that Sklarew teaches all the elements of these claims except for the specifics of normalizing the stroke data by rotating the stoke as claimed [answer, pages 4-6].
+The examiner
+asserts that Crane teaches a pattern recognition device in which normalization is achieved by rotation of the stroke.
+6
+Appeal No. 96-1435 Application 08/265,497
+The examiner concludes that it would have been obvious to the artisan to provide Crane's step of rotating the handwritten strokes in the normalization step to Sklarew's pattern recognition device [Id. at pages 6-7].
+With respect to representative claim 1, appellant argues that the collective teachings of Sklarew and Crane do not suggest the normalizing step as specifically recited in claim 1 [brief, pages 8-14].
+We agree with appellant for We have reviewed the applied
+essentially the reasons argued.
+prior art including the specific sections cited by the examiner and agree with appellant that there is no suggestion in the applied prior art that an entered stroke should be rotated before matching against a template of character parts.
+Normalization of entered strokes for size and speed does not suggest normalization by rotating the stroke in the manner recited in claim 1.
+Likewise, the mere recognition of the
+slope of a drawn stroke does not amount to a rotation of the stroke before matching occurs.
+The examiner's reliance on the
+positioning of a character using the centroid in Sklarew cannot reasonably be said to suggest that a stroke should be
+7
+Appeal No. 96-1435 Application 08/265,497
+rotated as recited in claim 1.
+Therefore, we do not sustain
+the rejection of claims 1-6 and 19-25.
+With respect to representative claim 7, appellant argues that there is no suggestion in the teachings of Sklarew and Crane
+to rotate a stroke about a stroke center until at least one of the start point or stop point aligns with a vertical axis [brief, pages 14-15].
+The examiner asserts that Sklarew meets In our view, the rejection of
+the vertical axis limitation.
+claim 7 fails for the same reasons we considered in the rejection of claim 1.
+The examiner's reading of the applied
+prior art simply is not supported by those documents.
+Therefore, we do not sustain the rejection of claims 7-10 and 13-18.
+With respect to representative claim 29, appellant argues that there is no suggestion in the teachings of Sklarew and Crane to rotate a stroke until the line between two of the stroke's most widely spaced points, one of which represents one of the stroke's endpoints, aligns with a predefined axis as recited in claim 29 [brief, page 16].
+8 The examiner asserts
+Appeal No. 96-1435 Application 08/265,497
+that Sklarew and Crane accomplish this result [answer, pages 15-17].
+Again, it is our view that the examiner has
+misconstrued the applied prior art, and we agree with the arguments presented by appellant.
+Therefore, we do not
+sustain the rejection of claims 29-34.
+In summary, we have not sustained the examiner's rejection of any of the appealed claims under 35 U.S.C. Â§ 103.
+Therefore, the decision of the examiner rejecting claims 1-10, 13-25 and 29-34 is reversed.
+REVERSED
+9
+Appeal No. 96-1435 Application 08/265,497
+ERROL A. KRASS Administrative Patent Judge
+)
+JOHN C. MARTIN Administrative Patent Judge
+JERRY SMITH Administrative Patent Judge
+) ) ) ) ) BOARD OF PATENT ) ) APPEALS AND ) ) INTERFERENCES ) ) )
+sd
+Jeffrey K. HICKMAN 
+Weaver BEYER 61059 CA 94306
+10

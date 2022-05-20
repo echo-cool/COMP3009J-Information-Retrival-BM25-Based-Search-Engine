@@ -1,0 +1,2234 @@
+Program Analysis Methodology Office of Transportation Technologies Quality Metrics - Final Report - 2002 May 9, 2001 Prepared by: OTT Analytic Team http://www.ott.doe.gov/facts.html Science Communications Planning Prepared for: Office of Transportation Technologies U.S. Department of Energy Washington, D.C.
+Table of Contents Section Page No.
+List of Exhibits.............................................................................................................................. iv Executive Summary .....................................................................................................................
+1 1.0 Introduction .......................................................................................................................
+9 1.1 Purpose and Scope ..................................................................................................
+9 1.2 Background -The EE/RE Quality Metrics Review Process ..................................
+10 1.3 Background - The Office of Transportation Technologies (OTT) ........................
+12 1.4 Report Structure/Organization ..............................................................................
+14 Technical Analysis Overview .........................................................................................
+2.1 Background ...........................................................................................................
+2.2 Vehicle/Technology/Fuel Baseline Assumptions..................................................
+2.3 Vehicle Attributes .................................................................................................
+2.3.1 Light Vehicle Attributes ............................................................................
+2.3.2 Heavy Vehicle Attributes ..........................................................................
+2.4 Summary of Modeling Assumptions and Structures .............................................
+2.4.1 VSCC Model .............................................................................................
+2.4.2 IMPACTT Model ......................................................................................
+2.4.3 GREET Model...........................................................................................
+2.4.4 HVMP Model ............................................................................................
+2.4.5 ESM Model ...............................................................................................
+2.4.6 Other Calculations .....................................................................................
+Vehicle Choice Analysis ..................................................................................................
+3.1 Light Vehicles .......................................................................................................
+3.2 Heavy Vehicles......................................................................................................
+3.3 Stand-Alone Technologies ....................................................................................
+3.3.1 Sensitivity Study-No Advanced Diesel .....................................................
+3.3.2 Sensitivity Study-Fuel Price/Technology Cost Impacts ............................
+16 16 16 17 17 20 21 23 23 23 24 24 24 25 25 34 44 49 49
+2.0
+3.0
+OTT Program Analysis Methodology Quality Metrics 2002
+ii
+May 9, 2001 Final Report
+4.0
+Benefits Estimates ...........................................................................................................51 4.1 Petroleum and Other Energy Benefits Analysis ....................................................
+51 4.1.1 Biomass .....................................................................................................
+51 4.1.2 Fuel Choice for Flex-Fuel Vehicles ..........................................................
+52 4.1.3 Estimates of the Value of Reducing Imported Oil ....................................
+53 4.1.4 Petroleum Reduction Estimates ................................................................
+56 4.2 Economic and Environmental Benefits Analysis Results .....................................
+59 4.2.1 Economic Benefits Estimates ....................................................................
+59 4.2.2 Vehicle Infrastructure Capital Requirements ............................................
+61 4.2.3 Greenhouse Gases, Regulated Emissions, and Energy Use in Transportation (GREET) Model ...............................................................
+64 4.2.4 Cost of Various Pollutants ........................................................................
+66 4.2.5 Aggregate Environmental and Economic Benefits Estimates ...................
+64
+5.0 Accomplishments and Future Plans ..................................................................................
+66 5.1 Accomplishments ......................................................................................
+66 5.2 Future Plans ...............................................................................................
+66 6.0 References ............................................................................................................................
+69 7.0 Supporting Information......................................................................................................
+72 7.1 Glossary .................................................................................................................
+72 7.2 Energy Conversion Factors Used ..........................................................................
+73 Appendices A.
+Quality Metrics 2002 Results
+OTT Program Analysis Methodology Quality Metrics 2002
+iii
+May 9, 2001 Final Report
+List of Exhibits Exhibit E1.
+OTT Program Structure and QM Planning Units ........................................................
+2 Exhibit E2.
+Vehicle/Technology Analysis Matrix ..........................................................................
+3 Exhibit E3.
+OTT Impacts Assessment Process ...............................................................................
+4 Exhibit E4.
+Conventional Vehicle Characteristics Â­ Large Cars (1996) .........................................
+5 Exhibit E5.
+Market Penetration Summary ......................................................................................
+5 Exhibit E6.
+QM 2002 Summary......................................................................................................
+6 Exhibit E7.
+Transportation Petroleum Use Projection ....................................................................
+7 Exhibit E8.
+Carbon Emissions Reductions .....................................................................................
+8 Exhibit 1-1.
+Relationship Between Quality Metrics and OTT Program .......................................
+13 Exhibit 2-1.
+Conventional Baseline Vehicle Characteristics (1999).............................................
+16 Exhibit 2-2.
+Technology Characteristics - Large Car (1999) ........................................................
+18 Exhibit 2-3.
+Technology Characteristics - Small Car (1999) ........................................................
+18 Exhibit 2-4.
+Technology Characteristics - Sport Utility Vehicle (1999).......................................
+19 Exhibit 2-5.
+Technology Characteristics Â­ Minivan (1999) ..........................................................
+19 Exhibit 2-6.
+Technology Characteristics - Pickup Trucks and Large Vans (1999) .......................
+20 Exhibit 2-7.
+QM Modeling Process...............................................................................................
+22 Exhibit 3-1.
+Fuel Economy Ratio ..................................................................................................
+27 Exhibit 3-2.
+Cost Ratio ..................................................................................................................
+28 Exhibit 3-3.
+Relative Range Ratio.................................................................................................
+28 Exhibit 3-4.
+Relative Maintenance ................................................................................................
+29 Exhibit 3-5.
+Market Penetration of Alternative Light Vehicles Sales and Stocks ........................
+30 Exhibit 3-6.
+Market Penetration of Alternative Light Vehicles-Sales ..........................................
+30 Exhibit 3-7.
+Market Penetration of Small Car Technologies ........................................................
+31 Exhibit 3-8.
+Market Penetration of Large Car Technologies ........................................................
+31 Exhibit 3-9.
+Market Penetration of Minivan Technologies...........................................................
+32 Exhibit 3-10.
+Market Penetration of Sport Utility Vehicle Technologies .....................................
+32 Exhibit 3-11.
+Market Penetration of Pickup 
+33 Exhibit 3-12.
+Alternative Light Vehicle Sales and Stocks, 2010 ..................................................
+33 Exhibit 3-13.
+Alternative Light Vehicle Sales and Stocks, 2020 ..................................................
+34 Exhibit 3-14.
+Alternative Light Vehicle Sales and Stocks, 2030 ..................................................
+34 Exhibit 3-15.
+Heavy Vehicle Characteristics ................................................................................
+35 Exhibit 3-16.
+Heavy Vehicle Market Characteristics ...................................................................
+35 Exhibit 3-17.
+Heavy Vehicle Payback Periods..............................................................................
+35
+OTT Program Analysis Methodology Quality Metrics 2002
+iv
+May 9, 2001 Final Report
+Exhibit 3-18.
+Medium Vehicle Travel Distribution Â­ Central Refueling .....................................
+37 Exhibit 3-19.
+Medium Vehicle Travel Distribution Â­ Non-Central Refueling .............................
+38 Exhibit 3-20.
+Type 1 Heavy Vehicle Travel Distribution Â­ Central Refueling .............................
+39 Exhibit 3-21.
+Type 1 Heavy Travel Distribution Â­ Non-Central Refueling ..................................
+39 Exhibit 3-22.
+Type 2 Heavy Vehicle Travel Distribution Â­ Central Refueling .............................
+40 Exhibit 3-23.
+Type 2 Heavy Vehicle Travel Distribution Â­ Non-Central Refueling ....................
+41 Exhibit 3-24.
+Type 3 Heavy Vehicle Travel Distribution Â­ Central Refueling .............................
+42 Exhibit 3-25.
+Type 3 Heavy Vehicle Distribution Â­ Non-Central Refueling ................................
+42 Exhibit 3-26.
+Incremental Costs and Fuel Economy Improv. for Heavy Vehicles ($1996)..........
+43 Exhibit 3-27.
+Heavy Vehicle Market Penetration Results ............................................................
+44 Exhibit 3-28.
+Stand-Alone Technologies and Combinations Examined.......................................
+44 Exhibit 3-29.
+Comp. of Stand-Alone Technology Savings with QM Savings: HEVs ..................
+45 Exhibit 3-30.
+Comp. of Stand-Alone Technology Savings with QM Savings: Fuel Cells.
+..........
+46 Exhibit 3-31.
+Comp. of Stand-Alone Technology Savings with QM Savings: SIDI ....................
+46 Exhibit 3-32.
+Comp. of Stand-Alone Technology Savings with QM Savings: Advanced Diesel 47 Exhibit 3-33.
+Comp. of Stand-Alone Technology Savings with QM Savings: Elect Vehicle ......
+47 Exhibit 3-34.
+Comp. of Stand-Alone Technology Savings with QM Savings: Material Tech. ....
+48 Exhibit 3-35.
+Comp. of Stand-Alone Technology Savings with QM Savings: All-OTT .............
+48 Exhibit 3-36.
+Comp. of QM (Combined) Savings with Adv.
+Diesel Option Removed................
+49 Exhibit 3-37.
+Comparison of Reference QM Savings with Fuel Price/Alternative Technology Cost Sensitivity Study Results ......................................................................................................
+50 Exhibit 4-1.
+Biomass Fuel Use......................................................................................................
+52 Exhibit 4-2.
+Alternative Fuel Market Share as a Function of Fuel Availability and Fuel Price ... 53 Exhibit 4-3.
+Value of Reducing Imported Oil ...............................................................................
+55 Exhibit 4-4.
+Energy Displaced ......................................................................................................
+57 Exhibit 4-5.
+ZEV and EPACT Oil Reductions .............................................................................
+58 Exhibit 4-6.
+Transportation Petroleum Use Projection .................................................................
+58 Exhibit 4-7.
+Employment Impacts by Sector of Economy (Jobs) .................................................
+60 Exhibit 4-8.
+Employment Impacts by Technology (Jobs) .............................................................
+60 Exhibit 4-9.
+GDP Increase.............................................................................................................
+61 Exhibit 4-10.
+Capital Infrastructure Costs.....................................................................................
+63 Exhibit 4-11.
+Aggregate Capital Expenditures..............................................................................
+64 Exhibit 4-12.
+Carbon Coefficients ................................................................................................
+65
+OTT Program Analysis Methodology Quality Metrics 2002
+v
+May 9, 2001 Final Report
+Exhibit 4-13.
+Range of Costs to Control CO2 Emissions..............................................................
+67 Exhibit 4-14.
+Carbon Emissions Reductions ................................................................................
+68
+OTT Program Analysis Methodology Quality Metrics 2002
+vi
+May 9, 2001 Final Report
+Foreword/Acknowledgement The Analytic Support Team for the Office of Transportation Technologies, which prep report, consists of : Phil Patterson of the Office of Transportation Technologies at Department of Energy, John Maples of TRANCON, Inc. (subcontractor to Oak Ridge Laboratory), Jim Moore of TA Engineering, Inc. (subcontractor to Argonne Laboratory), and Alicia Birky of the National Renewable Energy Laboratory.
+ared this the U.S. National National
+In addition to the analytic team, this report reflects the efforts of many program staff persons and researchers of the U.S. Department of Energy, the national scientific research laboratories, and related contractors.
+The efforts of these individuals are also acknowledged.
+William J. Shadis of TA Engineering provided supporting analyses, contributing authorship, editing and layout of the Final Report.
+Other unnamed individuals and organizations assisted this project in a range of capacities.
+OTT Program Analysis Methodology Quality Metrics 2002
+-i-
+May 9, 2001 Final Report
+Executive Summary "Quality Metrics" is the term used to describe the analytical process for measuring and estimating future energy, environmental and economic benefits of US DOE Office of Energy Efficiency and Renewable Energy programs.
+This report focuses on the projected benefits of the forty-one (41) programs currently supported through the Office Of Transportation Technologies (OTT) under EE/RE.
+For analytical purposes, these various benefits are subdivided in terms of Planning Units which are related to the OTT program structure.
+The scope of this report encompasses light vehicles including passenger automobiles and class 1 
+The range of light vehicle technologies investigated include flex-fuel (ethanol/gasoline blends) electric, hybrid electric, fuel cell, advanced diesel, natural gas-fueled, and stratified charge direct-injection.
+The hybrid category is further split between two versions, one with twice the fuel economy of conventional vehicles (2X) and the other with three times the fuel economy (3X).
+The fuel cell category is further subdivided between gasoline-fueled and hydrogen-fueled versions.
+A future distribution of light vehicle sizes, applications, and performance levels is calculated based on current vehicle stocks and trends, and consumer preferences.
+The heavy vehicle technologies investigated include hybrid, natural gas-fueled and advanced diesel.
+The effects of advanced materials technologies across all vehicle types are also analyzed.
+Analysis results quantify various national benefits including energy and petroleum consumption reductions, carbon emission reductions, criteria pollutant emissions reductions, and the associated economic impacts on the Gross Domestic Product (GDP) and jobs.
+Benefit/cost analyses of the various technologies are also included.
+The time focus of the analysis is from the present to the year 2030.
+The programs currently conducted by OTT Offices are shown on the left side of Exhibit E-1.
+OTT is composed of four line-offices managing many separate programs.
+For Quality Metrics, OTT activities are aggregated into planning units based on specific program activities that are shown in the right side of Exhibit E-1.
+Exhibit E-2 summarizes the specific vehicle technologies and alternative fuel that are evaluated under Quality Metrics.
+Five light vehicle categories and four heavy vehicle categories are considered.
+Each technology-vehicle category/type is analyzed separately as to when and how quickly the new technology can enter the market and its effects on energy use, the environment and the economy.
+The estimated total effect of the OTT programs is then simply the sum of the individual effects.
+A variety of analytical models are used to calculate the various projected OTT Program benefits.
+Various analytical tools and models are used to develop the results produced in this report.
+Outputs from some of these models become inputs to some of the others.
+The relationships of the various models are shown in Exhibit E-3.
+OTT Program Analysis Methodology Quality Metrics 2002
+-1-
+May 9, 2001 Final Report
+Exhibit E-1.
+OTT Program Structure and QM Planning Units
+OTT Offices and Programs Office of Fuels Development (OFD) Office of Advanced Automotive Technologies (OAAT) Advanced Battery Readiness Ad Hoc Working Group Alternative Fuels Research and Development Carat Program
+OTT Functions 
+Office of Heavy Vehicle Technologies (OHVT)
+Office of Technology Utilization (OTU)
+Biodiesel Program
+Advanced Petroleum- AFV Incentive Based Fuel Program Program Alternative Fuel Truck Application Program Atmospheric Reactions Program Diesel Emissions Control-Sulfur Effects Fuel and Engine Technologies Program Heavy Duty Engine Development Program Heavy Vehicle Emissions Reduction Technologies Program Heavy Vehicle Emissions Testing Program Heavy Vehicle Program Alternative Fuels Data Center
+Blends
+Hybrid Systems R
+Propulsion System Materials Light Vehicle Materials-Household EV Light Vehicle Materials-Hybrid Vehicle Light Vehicle Materials-Fuel Cell Vehicle
+Household CNG
+Biofuels Program
+Flex-Fuel
+Fuel Cell R
+EPACT Fleet
+Ethanol Conversion Program Feedstock Development Program Regional Biomass Program
+Clean Cities Program
+Dedicated Conventional
+CIDI Program
+Credits Program
+Fuel Cell
+Electric Vehicle Program
+EPACT Fleet Leadersip Programs Federal Alternative Fuels USER Program Federal Fleet Alternative Fuel Vehicle Program Field Operations Program Infrastructure Working Group Local Government and Private FleetsRegulation and Compliance Pilot Program State and Alternative Provider FleetsRegulation and Compliance State and Local Incentives Program
+Fuel Cell Program Fuels Research and Development Program GATE Program
+HEV Program
+PNGV
+Transit Bus Program
+US Advanced Battery Consortium
+Cool Car Program
+OTT Program Analysis Methodology Quality Metrics 2002
+-2-
+May 9, 2001 Final Report
+Exhibit E-2.
+Vehicle/Technology Analysis Matrix Light Vehicles Technnologies Advanced Diesel Hybrid-2X Hybrid-3X Fuel Cell-Gasoline Fuel Cell-Hydrogen SIDI (Advanced SI) Electric (battery) Natural Gas Ethanol (flex fuel) Small Cars Large Cars Sport Utility Vehicles Minivans Pickup Trucks 
+Heavy Vehicles Class 7 
+For each technology-vehicle category/type "intersection" Determine: -Introduction year, -Introduction and growth rate "S curves" -Petroleum/Fuel/Emissions/GHG effects projected through yr. 2030 -Employment/GDP effects projects through yr. 2030
+= not included
+An example of the various technologies applied to one of the light vehicle categories (large cars) is shown in Exhibit E-4.
+Note that the advanced technology attributes are normalized and presented as ratios to the conventional vehicle baseline attributes.
+These attributes form the basis for the inputs to the VSCC Model.
+A key output of the VSCC model is market penetrations of the technologies.
+The projected market penetration of the combined light vehicle technologies is shown in Exhibit E-5.
+Note that these technologies must not only compete with the conventional light vehicles they replace but also with each other.
+A separate sensitivity study was also conducted in which each light vehicle technology was analyzed separately against conventional light vehicles in order to measure their maximum market penetration potential.
+Based on the assumed vehicle technology attributes and the projected market penetrations, the energy and petroleum savings, energy cost savings and carbon emissions reductions attributable to each of the OTT Planning Units were calculated over the analysis period.
+This comprises the main element of the Quality Metrics reporting requirements and is shown individually and totaled in Exhibit E-6.
+OTT Program Analysis Methodology Quality Metrics 2002
+-3-
+October 18, 2001 Final Report
+Exhibit E-3.
+OTT Impact Assessment Process
+Inputs: ---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity ---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity
+VSCC Model Calculates: : Fuel Availability 
+ESM Calculates: : - GDP Effects - Jobs impacts
+Sales, Stocks, Vintaging 
+---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity
+HVMP Model Calculates Market Penetration for: - 8 market classes with central/non-central refueling - 11 VMT categories
+Other Calculations - Green House Gas Reductions - Energy Cost Reductions - Total Incremental Vehicle Cost - Capital Investment Requirements
+Key: - VSCC-Vehicle Size/Consumer Choice Model - HVMP-Heavy Vehicle Market Penetration Model - ESM- Employment Spreadsheet Model
+OTT Program Analysis Methodology Quality Metrics 2002
+-4-
+October 18, 2001 Final Report
+Exhibit E-4.
+Conventional Vehicle Characteristics Â­ Large Cars (1999) Vehicle Technology Status Year Vehicle Cost ($000) 26.69 27.13 Fuel Relative Economy Range (mpg) (miles) 26.76 28.37 325 325 Maintenance Cost ($/yr) 450 450 Top Trunk Acceleration (0Speed Space 30 MPH-sec) (MPH) (relative) 1.000 1.000 7.0 7.0 131.9 131.9
+Conventional (1)
+2000 2030
+Technology Ratios Advanced Diesel Flex Alcohol
+Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X)
+Initial-2001 2030 Initial-2000 2030 Initial-2007 2030 Initial-2005 2030 Initial-2004 2030 Initial-2003 2030 Initial-2009 2030 Initial-2005 2030 Initial-2005 2030
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+07 04 00 00 40 30 30 20 04 03 06 03 78 49 25 10 30 20
+0 9 0 0 0 0 0 0 6 0 9 5 8 5 0 0 0 0
+1.
+1.
+1.
+1.
+2.
+3.
+2.
+3.
+1.
+1.
+1.
+1.
+4.
+4.
+1.
+2.
+2.
+3.
+35 35 00 00 20 00 00 00 25 25 00 00 00 00 50 00 00 00
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+200 200 000 000 000 000 000 000 000 000 660 750 360 360 200 200 200 200
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+00 00 00 00 05 05 05 05 00 00 90 90 60 60 05 05 05 05
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+0.
+0.
+0.
+0.
+0.
+0.
+0.
+0.
+000 000 000 000 800 800 800 800 000 000 750 850 500 800 950 950 950 950
+1.1 1.1 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0 0 1 1 0 0 0 0 1 1 1 1 0 0 0 0 0 0
+.80 .80 .00 .00 .72 .72 .72 .72 .00 .00 .00 .00 .53 .53 .72 .72 .72 .72
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+(1) Technology ratio = Value of parameter for the technology/Value for the conventional vehicle in the same year.
+Exhibit E-5.
+Market Penetration Summary 90%
+80%
+70% Percent of Total Light Vehicle Sales
+60%
+50%
+40%
+30%
+Gasoline Fuel Cell Hydrogen Fuel Cell Hybrid-3X Hybrid-2X Electric CNG SIDI Alcohol Flex Adv anced Diesel (CIDI)
+20%
+10%
+0% 2024 2000 2002 200 2006 2008 2012 2014 20 20 2018 2020 2022 2026 2028 2030 10 16 4
+Year
+OTT Program Analysis Methodology Quality Metrics 2002
+-5-
+October 18, 2001 Final Report
+Exhibit E-6.
+QM 2002 Summary
+Primary Energy Displaced (quads) PLANNING UNIT Vehicle Technologies R
+Primary Oil Displaced (quads) 2000 0.002 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.000 0.001 0.001 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.071 0.000 0.071 0.000 0.000 0.000 0.000 0.000 0.073 2005 0.161 0.041 0.000 0.084 0.027 0.054 0.003 0.019 0.000 0.019 0.017 0.001 0.016 0.000 0.000 0.001 0.000 0.001 0.000 0.001 0.000 0.185 0.000 0.185 0.017 0.016 0.001 0.000 0.000 0.364 2010 0.813 0.184 0.006 0.520 0.203 0.224 0.093 0.041 0.000 0.041 0.061 0.005 0.057 0.000 0.000 0.006 0.000 0.006 0.000 0.005 0.001 0.228 0.035 0.194 0.169 0.161 0.009 0.000 0.000 1.216 2015 1.927 0.549 0.063 1.090 0.444 0.405 0.242 0.093 0.033 0.060 0.130 0.013 0.117 0.000 0.000 0.026 0.000 0.026 0.003 0.016 0.007 0.366 0.170 0.196 0.338 0.293 0.045 0.000 0.000 2.657 2020 2.964 1.073 0.072 1.444 0.591 0.499 0.354 0.167 0.095 0.072 0.208 0.022 0.185 0.000 0.000 0.048 0.000 0.048 0.009 0.031 0.008 0.500 0.301 0.199 0.508 0.462 0.046 0.000 0.000 4.020 2025 4.185 1.643 0.537 1.512 0.616 0.498 0.398 0.228 0.144 0.083 0.266 0.030 0.235 0.000 0.000 0.121 0.000 0.121 0.014 0.048 0.059 0.575 0.372 0.202 0.677 0.638 0.039 0.000 0.000 5.557 2030 5.013 2.099 0.885 1.475 0.592 0.477 0.406 0.269 0.175 0.094 0.284 0.037 0.247 0.000 0.000 0.175 0.000 0.175 0.017 0.061 0.097 0.590 0.385 0.205 0.846 0.810 0.036 0.000 0.000 6.624
+Note: 1) Advanced Materials - metrics shown for Light Vehicle Materials are derived from percentages of total metrics estimated for Electric, Hybrid and Fuel Cell vehicles Electric: 8.8% of total Hybrid: 2.8% of total Fuel Cell 9.9% of total 2) EPAct/ZEV Mandate EVs are not included in Materials Technologies Planning Unit 3) Calculations use high heating values
+OTT Program Analysis Methodology Quality Metrics 2002
+-6-
+October 18, 2001 Final Report
+The projected effect of the OTT program on U.S. transportation system energy use is shown in Exhibit E7.
+The petroleum "Gap" is defined here as the difference between transportation energy use and domestic petroleum production.
+In the baseline case, note that the gap approaches 12 million barrels per day by Year 2020.
+The OTT program impact is projected to reduce this shortfall by nearly 1.5 million barrels per day, or about twelve percent (12%).
+About two thirds of this reduction is in the form of efficiency improvements.
+The remaining third is obtained via substitution of non-petroleum energy sources.
+Exhibit E-7: Transportation Petroleum Use Projection 20 18 16 M i lli on B a r r e ls pe r D a y 14 12 10 8 6 4 2 0 1 970 19 80 19 90 20 00 20 10 202 0 N e t Im p o r ts Th e G a p D o m e s ti c P r od uc ti on E ffi cie n cy S u b s ti tu ti o n T r ans po r tati o n O i l U s e
+OTT Program Analysis Methodology Quality Metrics 2002
+-7-
+May 9, 2001 Final Report
+A summary of program carbon benefits Exhibit E-8.
+The combined OTT Program (All four program activities) result in a annual carbon equivalent reduction of 115 million metric tons by year 2030, which is about 14 percent of the total carbon equivalent produced in the baseline transportation scenario.
+Exhibit E-8: Carbon Emissions Reductions Carbon Reductions Million Metric Tons Equivalent
+Technology Year 2005
+(MMTCE) Year 2010 Year 2020 Year 2030
+Vehicle Technologies R
+Electric Vehicle R
+Heavy Vehicle Systems R
+Materials Technologies Propulsion System Materials Light Vehicle Materials Electric Vehicle Hybrid Vehicle Fuel Cell Vehicle
+Technology Deployment Household CNG EPAct Fleet
+Fuels Development Blends and Extenders Flex-Fuel Dedicated Conventional Fuel Cell
+2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+.67 .80 .00 .53 .51 .97 .05 .00 .00 .00 .33 .02 .31 .00 .00 .02 .00 .02 .00 .02 .00 .80 .00 .79 .31 .30 .00 .00 .00
+8 3 0 9 6 1 3 6 0 6 1 0 0 0 0 3 0 3 0 3 0 0 0 9 9 9 9 0 0
+14.584 3.573 0.123 9.614 3.934 4.016 1.663 0.053 0.003 0.050 1.220 0.093 1.128 0.000 0.000 0.118 0.000 0.118 0.000 0.104 0.014 1.009 0.173 0.836 3.186 3.025 0.161 0.000 0.000 18.896 628.5 3.01%
+57.038 20.822 3.875 26.796 11.470 8.966 6.360 1.398 1.181 0.217 4.146 0.447 3.698 0.000 0.000 1.146 0.000 1.146 0.114 0.606 0.426 2.349 1.487 0.862 9.557 8.695 0.861 0.000 0.000 70.089 730.8 9.59%
+93.000 40.744 15.245 27.379 11.499 8.580 7.300 3.968 2.141 1.826 5.664 0.744 4.920 0.000 0.000 3.068 0.000 3.068 0.207 1.187 1.675 2.786 1.902 0.884 15.928 15.249 0.678 0.000 0.000 114.782 849.8 13.51%
+Total Baseline (AEO 00 - Transportation) Percent Reduction
+3.820 573.1 0.67%
+OTT Program Analysis Methodology Quality Metrics 2002
+-8-
+May 9, 2001 Final Report
+1.0 1.1
+Introduction Purpose and Scope
+The purpose of this report is to describe the methodology and results obtained from a continuing DOE Office of Transportation Technologies (OTT) activity to estimate future effects of OTT projects on national energy use, petroleum consumption, criteria emissions, greenhouse gas emissions, and various measures of national income and employment.
+Assumptions are made about the future costs and characteristics of alternative vehicles and fuels.
+Computer models that take into account the value that vehicle buyers place on various vehicle characteristics are used to estimate the market penetration of new vehicle technologies.
+A different set of assumptions would yield results that are different from what is presented here.
+Analysis results quantify benefits including energy and petroleum reductions, carbon equivalent greenhouse gas emissions, criteria pollutant emissions reductions, and the associated economic impacts on the Gross Domestic Product (GDP) and jobs.
+Life-cycle cost analyses also are in progress to define advanced technology economic performance compared to conventional technology estimates.
+The scope of this report addresses light vehicles including passenger automobiles, class 1 
+The time focus of the analysis is from current conditions projected through the year 2030.
+All energy savings start from baseline projections of transportation sector energy use obtained from the "Annual Energy Outlook," issued annually by the US Department of Energy, Energy Information Administration (Ref. 1).
+This analysis is based on conventional vehicle fuel economy and purchase price as designated for the "Large Car" in the AEO Annual Energy Outlook, although the other characteristics of the large car and of the other vehicle types have been generated from other sources The range of light vehicle technologies investigated includes battery electric, hybrid, fuel cell, advanced diesel (CIDI), natural gas-fueled, and stratified charge direct-injection (SIDI) prime movers.
+Both conventional automotive fuels (gasoline and diesel fuel) and unconventional fuels (bio-derived fuels, natural gas and hydrogen) are investigated.
+A representative distribution of light vehicle sizes, applications, and performance levels is postulated based on current and projected vehicle stocks and trends.
+The heavy vehicle technologies investigated include hybrid, natural gas-fueled and advanced diesel power plants.
+All of these light and heavy vehicle technologies are projected to become mature and grow significantly over the next two decades.
+This report meets two programmatic purposes.
+First, it constitutes the OTT final documentation for the Quality Metrics 2002 (QM 2002) analytical process of the DOE Office of Energy Efficiency and Renewable Energy (EE/RE).
+Quality Metrics has been an active annual DOE EE/RE-wide analysis and review procedure since 1995.
+QM seeks to monitor and measure the impacts of all DOE EE/RE programs and to summarize their overall national effects.
+The Quality Metrics process is described in more detail in Section 1.2 below.
+Second, this report serves as an internal OTT program management tool.
+This report was initially developed to meet the reporting requirements set forth in the EPACT 2021 Report to OTT Program Analysis Methodology Quality Metrics 2002 -9May 9, 2001 Final Report
+Congress in 1992 and has been since updated annually for internal reporting and management purposes (Ref. 2).
+This dual purpose led OTT to the development of the analysis methodology, OTT Impacts Assessment, described in Section 1.3 below.
+The report updates also reflect annual changes in the DOE/EIA Annual Energy Outlook and in OTT program structure, goals and milestones (Ref. 1).
+Each publication includes projections for the budget year identified in the report title.
+This specific issue is named QM 2002 because the impacts and benefits are consistent with the FY 2002 budget report to Congress.
+1.2 Background-The EE/RE Quality Metrics Review Process
+"Quality Metrics" evaluations are conducted annually in the U.S. DOE Office of Energy Efficiency and Renewable Energy to assess and project the energy and environmental benefits of EE/RE programs.
+The Quality Metrics program of EE/RE and the preparation of the EPACT 2021 report to Congress led to the development of an impacts assessment methodology for the Office of Transportation Technologies (OTT), which is continually improved and updated.
+Within OTT, the QM methodology is applied to four major functions.
+Each function relates to an element of the transportation system associated with one or more of the technologies addressed by the OTT organizational structure.
+Each major function is further subdivided into Planning Units that are separately analyzed.
+An element may be a separate technology or a separate transportation sector or both.
+The total energy savings and emissions reductions attributable to OTT programs is equal to the sum of the savings from each of these separate elements.
+Planning Units are similar, but not identical to the OTT program structure.
+The OTT Quality Metrics Functions and Planning Units are listed and described below: 1.
+Technology Deployment: This area includes OTT projects that involve moving new technologies into the public and private sectors.
+These include: EPAct Fleet Mandates and penetration of CNG vehicles in the household market.
+2.
+Fuels Development: This area involves the development of transportation system technologies to make use of some of the more promising fuels that may substitute for gasoline in the future.
+These currently include biomass-based ethanol used in flexiblefuel vehicles and utilized in fuel blends.
+3.
+Vehicle Technologies R
+Currently, this includes Light Vehicles (cars and Class 1 and 2 trucks) and Heavy Vehicle Technologies (Classes 3-6, 7 
+- 10 May 9, 2001 Final Report
+OTT Program Analysis Methodology Quality Metrics 2002
+Â·
+Hybrid Vehicle R
+The hybrid vehicles analyzed are assumed to be grid-independent (no net electric grid consumption).
+Light Vehicle Engine R
+Electric Battery Vehicle R
+Heavy Vehicle Technologies.
+Â·
+Â· Â·
+4.
+Materials Technologies: This area deals with more fundamental issues concerning the use of advanced materials in light and heavy vehicles.
+Some of these (such as ceramics) promise higher engine efficiencies while others reduce structural weight and hence increase fuel economy.
+The planning units include the following project areas: Â· Â· Light Vehicle Materials for electric, hybrid, and fuel cell vehicles, and Heavy Vehicle Materials.
+It is assumed that the electric, hybrid, and fuel cell vehicle technologies will require the use of light weight materials to achieve program goals for fuel efficiency.
+Prior Quality Metrics (QM 2001) analyses and results are described in Reference 3.
+The Analytic Team has continued to improve the modeling process with improved market penetration modeling.
+For QM 2002, the number and designation of light vehicle classes was maintained at five (5) as shown below: 1.
+Small Cars (all other EPA size classes; 
+Large Cars (EPA size classes Large and Midsize; 110 ft3 of passenger and luggage volume and larger, e.g., Dodge Stratus and larger).
+The Large Car designation used here shares common fuel economy and cost assumptions with the conventional vehicle AEO Large Car designation.
+3.
+Minivans 4.
+Sport Utility Vehicles and; 5.
+Pickup trucks and large vans.
+It is the intent of this analysis that these vehicle classes be utilized as building blocks to produce a reasonable simulation of the current and projected light vehicle fleet in the U.S. over the next three decades.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 11 -
+May 9, 2001 Final Report
+1.3
+Background-The Office of Transportation Technologies (OTT)
+The OTT seeks to develop and promote advanced highway transportation vehicles, systems and alternative fuel use technologies that lead to reduced imported oil, lower regulated emissions and reduced emission of atmospheric gases that may add to the greenhouse effect.
+To these ends, OTT develops partnerships with elements of the domestic transportation industry and private and public research and development organizations.
+The analytic impacts methodology is referred to as "OTT Impacts Assessment."
+The scope of the OTT Impacts Assessment contains analyses that supplement those required by QM.
+These include: Â· Comprehensive end-use criteria and carbon pollutant reductions (QM requires carbon as a CO2 equivalent, hydrocarbon, CO, and NOx reduction benefits only); - OTT Impacts consider the fuel cycle carbon savings (QM benefits are limited to the end-use, fuel economy benefits); Â· Â· Â· Gross Domestic Product/Jobs (in the QM process, macroeconomic effects are determined by others); Cost analyses, including the capital/infrastructure estimates, and oil security cost valuations; and The determination of benefit to cost ratios for the target technologies.
+All OTT functions and projects are subdivided among four (4) functions: Â· Â· Fuels Development strives to increase the use of biologically-derived fuels in highway vehicle applications.
+Advanced Vehicle Technologies develops advanced technologies for automobiles and other light vehicles including electric and hybrid technologies, advanced heat engines, alternative fuels utilization, and advanced high strength/lightweight materials.
+The office also works on technologies applied to heavy duty trucks and buses, and other large highway vehicles.
+Materials Technologies explore the potential for petroleum conservation through the development and application of materials technologies that enable propulsion systems with high energy efficiency, and vehicle structures that reduce weight.
+Technology Utilization works to develop and promote user acceptance of advanced transportation technologies and alternative fuels within the U.S. highway vehicle transportation sector.
+Â·
+Â·
+The relationship between the various OTT Program Elements and the Quality Metrics Planning Units is shown in Exhibit 1-1 below.
+OTT Program Analysis Methodology Quality Metrics 2002 - 12 May 9, 2001 Final Report
+Exhibit 1-1: Relationship Between Quality Metrics Planning Units and OTT Program Activities Quality Metrics Planning Unit Technology Deployment Household CNG EPAct Fleet Related OTT Program Activities Technology Utilization Clean Cities Testing and Evaluation Energy Policy Act Replacement Fuels Program Advanced Vehicle Competitions Fuels Development Biofuels a) Ethanol Production b) Biodiesel Production c) Feedstock Production d) Regional Biomass Energy Program Advanced Vehicle Technologies Light Vehicles - Hybrid Systems R
+Fuels Development Blends and Extenders Flex Fuel Dedicated Conventional Fuel Cell Vehicle Technologies R
+Heavy Vehicle Class Class Class Rail
+Systems R
+Materials Technologies
+OTT Program Analysis Methodology Quality Metrics 2002
+- 13 -
+May 9, 2001 Final Report
+The Quality Metrics and OTT Impacts Assessment are conducted using the Reference Case projections of the Energy Information Administration to define the world energy market characteristics, U.S. energy consumption by economic sector and energy prices.
+The reader is referred to Publication DOE/EIA-0383 (2000), "Annual Energy Outlook 2000, With Projections to 2020."
+(Ref. 1) The current version of this report is available at the following website address: http://www.eia.doe.gov/oiaf/aeo/index.html.
+A number of scenarios are formulated and analyzed in executing the OTT Impacts methodology.
+Such impacts estimates are needed to accompany each annual budget submission, with final estimates prepared at the end of each calendar year.
+Readers are also referred to a recent report another related OTT analytic initiative: Birky, et al, "Future U.S. Highway Energy Use: A Fifty Year Perspective DRAFT", February 22, 2001.
+This report evaluates the potential effects on petroleum demand by 2050 of six alternative scenarios involving various combinations of energy conserving and alternative fuels technology.
+OTT also continues to evaluate consumer attitudes toward transportation alternatives, and alternative fuels program strategy options.
+A description of the Office of Transportation Technology as well as the results of many DOE OTT analytical efforts are also available on the Internet at http://www.ott.doe.gov/facts.html 1.4 Report Structure/Organization
+This report consists of seven principal sections.
+An overview of the technical analysis process is described in Section 2.
+The various analytical models used in the analysis are also summarized here.
+Section 3 contains a description of the vehicle choice analysis simulation tools and results.
+As noted above, the QM 2001 analytical scope includes heavy as well as light vehicles.
+Section 4 discusses the analysis results in terms of energy and petroleum reductions, environmental and economic benefits, and also includes a benefit/cost analysis of OTT programs.
+Accomplishments and future plans are discussed in Section 5.
+References and supporting information including a glossary of technical terms and acronyms as well as energy unit conversion factors follow in Sections 6 and 7, respectively.
+Where available, website addresses for references are included.
+Detailed results of the Quality Metrics analyses are presented in Appendix A. Results contained in this Appendix include: Â· Â· Â· Â· Â· QM 2002 benefits summary by Planning Unit (Tables A-1 
+OTT Program Analysis Methodology Quality Metrics 2002
+- 14 -
+May 9, 2001 Final Report
+Â· Â· Â· Â·
+Emissions impacts Â­ carbon, NOx, CO, and HC reductions in both physical units and dollars (Tables A-21 to A-28), Cost effects Â­ vehicle purchase, aggregate consumer investment, and corporate expenditures (Tables A-29 to A-32), Light Vehicle Fuel Economy Projections (Table A-33) and, Medium and Heavy Truck Results (Tables A-34 to A-42).
+OTT Program Analysis Methodology Quality Metrics 2002
+- 15 -
+May 9, 2001 Final Report
+2.0 2.1
+Technical Analysis Overview Background
+The analysis process involves the following four activities: 1) Definition of vehicle characteristics for advanced technologies; 2) Market penetration analysis estimated by vehicle size class; 3) Energy savings, petroleum displacement, environmental and economic benefits quantification via motive source and vehicle efficiency improvements and alternative fuel use; and 4) Development of summary documentation.
+The time frame for the study spans the present to 2030.
+2.2 Vehicle/Technology/Fuel Baseline Assumptions
+The fuel and vehicle characteristics can be considered in three categories: fuel attributes, light vehicle attributes and heavy vehicle attributes.
+These attributes are defined by program staff and are subjected to external peer review.
+All of these vehicle attributes are tracked since they have been identified as pertinent variables in people's vehicle purchase decisions.
+The light and heavy attributes for conventional vehicles used in this analysis are presented in Exhibit 2-1.
+Note that there are five classes of light vehicles and two "class groupings" of heavy vehicles with three market segments of class 7 
+Heavy vehicle costs are in the form of incremental costs and are discussed in Section 3.2.
+Exhibit 2-1: Conventional Baseline Vehicle Characteristics (1999) Vehicle Category Light Vehicles Large Car Small Car Sport Utility Vehicle Minivan Pickup Truch 
+Market Segement
+Fuel Acceleration Economy (0-30 MPH1 seconds (MPG) 25.
+30.
+18.
+25.
+20.
+9 1 1 0 5 6.0 7.0 7.0 7.0 7.0 -
+Top Speed (MPH)
+Vehicle Cost ($)
+All All All All All All Type 1 Type 2 Type 3
+131.9 121.1 108.3 108.3 122.0 -
+$26, $24, $27, $23, $19,
+000 290 880 630 800
+7.9 4.5 6.1 7.7
+See Sect. 3.2 See Sect. 3.2 See Sect. 3.2 See Sect. 3.2
+Gasoline Eguivalent-yr 2000 technology
+OTT Program Analysis Methodology Quality Metrics 2002
+- 16 -
+May 9, 2001 Final Report
+2.3 Vehicle Attributes 2.3.1 Light Vehicle Attributes The five classes of light vehicles areas follows: Â· Â· Â· Â· Â· Small Car Large Car Minivan Sport Utility Vehicle Pickup Truck/Large Van
+The various technology options considered are as follows: Light Vehicles: Â· Â· Â· Â· Â· Â· Â· Advanced Diesel-Compression Ignition/Direct Injection (CIDI-Diesel) Electric (battery) Flex-Fuel (gasoline/alcohol) Hybrid-Electric (battery/gasoline-2x and 3x versions(1 Fuel Cell (gasoline and hydrogen) Natural Gas-Fueled Stratified Charge Direct-Injection (SIDI) )
+(1) Two HEV light vehicles are postulated, one with twice the fuel economy of conventional autos and the other with three times the fuel economy.
+These constant ratios are maintained over time.
+The vehicle attributes summaries for the five light vehicle classes are indicated in Exhibits 2-2 through 2-6.
+Conventional vehicle attributes are projected to change with time.
+For example, purchase price is expected to escalate in real terms (See Appendix Table A-29).
+Flex alcohol vehicles also are considered in the analysis, but these vehicles are assumed to have the same attributes as the conventional vehicles.
+The reference year for conventional vehicles attributes is 1996.
+Fuel economy values are assumed to be "Combined Cycle" values (fifty-five percent (55%) City Cycle and forty-five percent (45%) Highway Cycle per EPA emissions certification test data).
+OTT Program Analysis Methodology Quality Metrics 2002
+- 17 -
+May 9, 2001 Final Report
+Exhibit 2-2: Technology Characteristics - Large Car (1999) Vehicle Technology Status Year Vehicle Cost ($000) 26.69 27.13 Relative Fuel Economy Range (miles) (mpg) 26.76 28.37 325 325 Maintenance Cost ($/yr) 450 450 Trunk Top Acceleration (0Space Speed 30 MPH-sec) (relative) (MPH) 1.000 1.000 7.0 7.0 131.9 131.9
+Conventional (1)
+2000 2030
+Technology Ratios Advanced Diesel Flex Alcohol
+Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X)
+Initial-2001 2030 Initial-2000 2030 Initial-2007 2030 Initial-2005 2030 Initial-2004 2030 Initial-2003 2030 Initial-2009 2030 Initial-2005 2030 Initial-2005 2030
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+.0 .0 .0 .0 .4 .3 .3 .2 .0 .0 .0 .0 .7 .4 .2 .1 .3 .2
+70 49 00 00 00 00 00 00 46 30 69 35 88 95 50 00 00 00
+1.3 1.3 1.0 1.0 2.2 3.0 2.0 3.0 1.2 1.2 1.0 1.0 4.0 4.0 1.5 2.0 2.0 3.0
+50 50 00 00 00 00 00 00 50 50 00 00 00 00 00 00 00 00
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+20 20 00 00 00 00 00 00 00 00 66 75 36 36 20 20 20 20
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1
+.0 .0 .0 .0 .0 .0 .0 .0 .0 .0 .9 .9 .6 .6 .0 .0 .0 .0
+00 00 00 00 50 50 50 50 00 00 00 00 00 00 50 50 50 50
+1.0 1.0 1.0 1.0 0.8 0.8 0.8 0.8 1.0 1.0 0.7 0.8 0.5 0.8 0.9 0.9 0.9 0.9
+00 00 00 00 00 00 00 00 00 00 50 50 00 00 50 50 50 50
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+10 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0.
+0.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+0.
+0.
+80 80 00 00 72 72 72 72 00 00 00 00 53 53 72 72 72 72
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+(1) Technology ratio = Value of parameter for the technology/Value for the conventional vehicle in the same year.
+Exhibit 2-3: Technology Characteristics - Small Car (1999) Vehicle Technology Conventional Status Year 2000 2030 Technology Ratios(1) Advanced Diesel Flex Alcohol Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X) Initial-2001 2030 Initial 2030 Initial-2016 2030 Initial-2015 2030 Initial-2001 2030 Initial-2007 2030 Initial-2010 2030 Initial-2000 2030 Initial-2005 2030 1.064 1.045 1.300 1.193 1.250 1.154 1.046 1.020 1.075 1.075 1.900 1.349 1.250 1.077 1.250 1.154 1.350 1.350 2.200 3.000 2.200 3.000 1.250 1.250 1.000 1.000 4.000 4.000 1.600 2.000 2.000 3.000 1.200 1.200 1.000 1.000 1.000 1.000 1.000 1.000 0.660 0.660 0.190 0.320 1.000 1.000 1.000 1.000 1.000 1.000 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.900 0.900 1.000 1.000 0.750 0.750 0.600 0.600 0.900 0.950 0.900 0.950 1.100 1.100 1.100 1.100 1.100 1.100 1.000 1.000 1.000 1.000 1.000 1.000 1.100 1.100 1.100 1.100 0.850 0.850 0.900 0.900 0.900 0.900 1.000 1.000 1.000 1.000 0.600 0.600 0.640 0.900 0.640 0.900 Vehicle Cost ($000) 24.96 25.75 Relative Fuel Economy Range (mpg) (miles) 31.28 32.28 372 372 Maintenance Cost ($/yr) 400 400 Trunk Space (relative) 1 1 Acceleration (0-30 MPH-sec) 7.0 7.0 Top Speed (MPH) 121.1 121.1
+(1) Technology ratio = Value of parameter for the technology/Value for the conventional vehicle in the same year.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 18 -
+May 9, 2001 Final Report
+Exhibit 2-4: Technology Characteristics Â­ Sport Utility Vehicle (1999) Vehicle Technology Conventional Status Year Initial-2000 2030 Technology Ratios Advanced Diesel Flex Alcohol Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X) (1)
+Vehicle Cost ($000) 28.13 28.69
+Relative Fuel Economy Range (mpg) (miles) 18.58 20.28 300 300
+Maintenance Cost ($/yr) 450 450
+Trunk Top Acceleration (0Space Speed 30 MPH-sec) (relative) (MPH) 1 1 7.0 7.0 108.3 108.3
+Initial-2001 2030 Initial-2002 2030 Initial-2012 2030 Initial-2013 2030 Initial-2004 2030 Initial-2005 2030 Initial-2010 2030 Initial-2005 2030 Initial-2013 2030
+1.08 1.07 1.00 1.00 1.35 1.25 1.25 1.20 1.05 1.03 1.05 1.05 1.50 1.40 1.25 1.10 1.25 1.20
+1.45 1.45 1.00 1.00 2.13 2.50 1.98 2.50 1.25 1.25 1.00 1.00 4.00 4.00 1.38 1.75 1.75 2.50
+1.20 1.20 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 0.75 0.75 0.43 0.58 1.00 1.00 1.00 1.00
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+00 00 00 00 05 05 05 05 00 00 90 90 60 60 06 05 06 05
+1.00 1.00 1.00 1.00 0.80 0.80 0.80 0.80 1.00 1.00 0.75 0.75 1.00 1.00 1.00 1.00 1.00 1.00
+1.10 1.10 1.00 1.00 1.10 1.10 1.10 1.10 1.00 1.00 1.00 1.00 1.00 1.00 1.10 1.10 1.10 1.10
+1.00 1.00 1.00 1.00 0.66 0.66 0.66 0.66 1.00 1.00 1.00 1.00 0.66 0.66 0.75 0.75 0.75 0.75
+(1) Technology ratio = Value of parameter for the technologh/Value for the conventional vehicle in the same year.
+Exhibit 2-5: Technology Characteristics - Minivan (1999) Vehicle Technology Conventional Status Year 2000 2030 Technology Ratios Advanced Diesel Flex Alcohol Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X) (1)
+Vehicle Cost ($000) 24.38 24.88
+Fuel Relative Economy Range (mpg) (miles) 25.49 26.84 350 372
+Maintenance Cost ($/yr) 450 450
+Trunk Space (relative) 1 1
+Acceleration (0-30 MPH-sec) 7.0 7.0
+Top Speed (MPH) 108.3 108.3
+Initial-2001 2030 Initial-2000 2030 Initial-2014 2030 Initial-2014 2030 Initial-2004 2030 Initial2005 2030 Initial-2008 2030 Initial-2007 2030 Initial-2014 2030
+1.074 1.069 1.000 1.000 1.339 1.250 1.243 1.200 1.046 1.029 1.050 1.050 1.788 1.492 1.200 1.100 1.243 1.200
+1.
+1.
+1.
+1.
+2.
+2.
+1.
+2.
+1.
+1.
+1.
+1.
+4.
+4.
+1.
+1.
+1.
+2.
+45 45 00 00 13 50 98 50 25 25 00 00 00 00 56 75 98 50
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1
+.2 .2 .0 .0 .0 .0 .0 .0 .0 .0 .7 .7 .2 .4 .0 .0 .0 .0
+00 00 00 00 00 00 00 00 00 00 50 50 80 00 00 00 00 00
+1.000 1.000 1.000 1.000 1.100 1.100 1.100 1.100 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050
+1.000 1.000 1.000 1.000 0.800 0.800 0.800 0.800 1.000 1.000 0.800 0.800 1.000 1.000 1.000 1.000 1.000 1.000
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+.100 .100 .000 .000 .100 .100 .100 .100 .000 .000 .000 .000 .000 .000 .100 .100 .100 .100
+0.800 0.800 1.000 1.000 0.660 0.660 0.660 0.660 1.000 1.000 1.000 1.000 0.660 0.660 0.750 0.750 0.750 0.750
+(1) Technology ratio = Value of parameter for the technologh/Value for the conventional vehicle in the same year.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 19 -
+May 9, 2001 Final Report
+Exhibit 2-6: Technology Characteristics Â­ Pickup Trucks and Large Vans (1999) Vehicle Technology Conventional Status Year 2000 2030 Technology Ratios Advanced Diesel Flex Alcohol Fuel Cell-Hydrogen Fuel Cell-Gasoline SIDI CNG Dedicated Electric Hybrid (2X) Hybrid (3X) (1)
+Vehicle Cost ($000) 19.71 19.96
+Fuel Relative Economy Range (mpg) (miles) 20.79 22.58 350 350
+Maintenance Cost ($/yr) 500 500
+Trunk Top Acceleration (0Space Speed 30 MPH-sec) (relative) (MPH) 1 1 7.0 7.0 122 122
+Initial-2002 2030 Initial-2001 2030 Initial-2016 2030 Initial-2016 2030 Initial-2004 2030 Initial-2003 2030 Initial-2007 2030 Initial-2008 2030 Initial-2016 2030
+1.072 1.069 1.000 1.000 1.300 1.250 1.220 1.200 1.047 1.029 1.108 1.107 1.900 1.493 1.188 1.100 1.220 1.200
+1.350 1.350 1.000 1.000 2.275 2.500 1.975 2.500 1.250 1.250 1.000 1.000 2.500 2.500 1.375 1.750 1.975 2.500
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+1.
+1.
+200 200 000 000 800 800 800 800 000 000 750 900 220 200 000 000 000 000
+1.000 1.000 1.000 1.000 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050
+1.
+1.
+1.
+1.
+0.
+0.
+0.
+0.
+1.
+1.
+0.
+0.
+1.
+1.
+1.
+1.
+1.
+1.
+000 000 000 000 800 800 800 800 000 000 750 750 000 000 000 000 000 000
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+. . . . . . . . . . . . . . . . . .
+100 100 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+1.000 1.000 1.000 1.000 0.760 0.760 0.760 0.760 1.000 1.000 1.000 1.000 0.580 0.580 0.840 0.840 0.840 0.840
+(1) Technology ratio = Value of parameter for the technologh/Value for the conventional vehicle in the same year.
+The exhibits show year of technology introduction (Initial) and final values in year 2030.
+Timing of technology maturity varies due to the complexity of the technologies and is determined by OTT Program Manager input as well as goals set forth by the offices.
+Changes in attributes can be assumed to occur non-linearly during the analysis period; e.g. significant improvements may occur shortly after introduction with lesser changes occurring in later years.
+In some cases, the technology may be assumed to be commercially mature from the time when it is introduced into the vehicle class.
+Years of introduction vary among the car and truck size classes to account for market growth and development.
+As Exhibits 2-2 through 2-6 indicate, in some cases, technology characteristics also vary among the size classes both for conventional gasoline and alternative technologies.
+2.3.2 Heavy Vehicle Attributes The six heavy vehicle classes (3-8) are divided into two groups (see below) and three market segments that differ from each other with respect to end use, average fuel economy and average annual miles traveled.
+Â· Â· Â· Class 3-6 Trucks (10,000 Â­ 26,000 lbs. gross vehicle weight (GVW)) Class 7
+Three market segments of Class 7 
+OTT Program Analysis Methodology Quality Metrics 2002
+Â· Â·
+Type 2 Â­ platform, livestock, auto transport, oil-field, grain, and tank; Type 3 Â­ refrigerated van, drop frame van, open top van, and basic enclosed van.
+Heavy Vehicle Technologies: Â· Â· Â· Advanced Diesel Engine CNG Fueled Hybrid-Electric
+This is discussed in more detail in Section 3.2 Â­ Heavy Vehicles.
+2.4 Summary of Modeling Assumptions and Structures
+The modeling process is illustrated in Exhibit 2-7.
+The vehicle attributes for the advanced technologies are input into the vehicle choice model and emissions models.
+The light vehicle choice model then estimates market penetration by size class.
+The emissions model estimates tailpipe and upstream emissions on a grams per mile basis for each technology.
+For light vehicles, the market penetrations and emissions rates are then input into a model that is based on the Integrated Market Penetration and Anticipated Cost of Transportation Technologies, or IMPACTT, the vehicle stock/energy/emission model.
+Finally, energy and vehicle stock information is input into the economic model to estimate GDP and jobs impacts.
+The heavy vehicle choice model estimates market penetration by market class.
+For heavy vehicles, the market penetrations are used to calculate benefits, then energy and vehicle stock information is input into the economic model to estimate GDP and jobs impacts.
+All models shown in Exhibit 2-7 operate in Microsoft Excel format.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 21 -
+May 9, 2001 Final Report
+OTT Program Analysis Methodology Quality Metrics 2002 - 22 May 9, 2001 Final Report
+Inputs: ---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity ---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity
+VSCC Model Calculates: : Fuel Availability 
+ESM Calculates: : - GDP Effects - Jobs impacts
+Exhibit 2-7: QM Modeling Process
+Sales, Stocks, Vintaging 
+---------------------------------------------------Fuel Attributes: Price/Gallon of Gasoline Equivalent - Gasoline - Diesel - Ethanol - CNG - Electricity
+HVMP Model Calculates Market Penetration for: - 8 market classes with central/non-central refueling - 11 VMT categories
+Other Calculations - Green House Gas Reductions - Energy Cost Reductions - Total Incremental Vehicle Cost - Capital Investment Requirements
+Key: - VSCC-Vehicle Size/Consumer Choice Model - HVMP-Heavy Vehicle Market Penetration Model - ESM- Employment Spreadsheet Model
+2.4.1
+VSCC Model
+Vehicle Size/Consumer Choice Model The VSCC Model is an excel-based spreadsheet m penetration of light vehicles with new technologies based of those technologies such as cost, fuel economy, range, calculates alternative fuel consumption and incremental technology vehicles.
+Inputs: The model, as now operated, has a universe of five (5) light vehicle types/sizes: large car, small car, sport utility vehicle, minivan and pickup truck/large van.
+It also has seven (7) technology groupings: conventional (gasoline-fueled, spark ignition), CIDI, electric, hybrid-electric, fuel cell, natural gas fueled (spark ignition), and SIDI.
+More technologies could be added.
+The choice among technologies is made by a logit model that has influence coefficients determined in a national survey (Ref. 4).
+The model includes influence coefficients for purchase price, range, maintenance cost, 0-30 mph acceleration time, top speed, luggage space, fuel cost ($/mi), whether home refueling is available, whether multiple fuels are available, whether or not the vehicle can use gasoline and the gasoline range.
+In addition, fuel-specific factors and alternative fuel availability are also part of the evaluation process.
+A more detailed discussion of the VSCC Model can be found in Section 3.1 2.4.2 IMPACTT Model odel that predicts the future market on the measured or estimated attributes and maintenance cost.
+The model also costs borne by purchasers of advanced
+Integrated Market Penetration and Anticipated Cost of Transportation Technologies The IMPACTT model is a spreadsheet model developed by Marianne Mintz of ANL that calculates the effects of advanced-technology vehicles and market penetration on baseline fuel use and emissions.
+For QM analysis purposes, it has been modified to accept the market penetration data output from the VSCC model and determine the vehicle stock and miles traveled as a function of time for each technology.
+In addition, it calculates fuel use and emissions reduction effects using EPA Mobil 5A and GREET Models.
+A more detailed discussion of the IMPACTT Model can be found in Section 4.1.1.
+2.4.3 GREET Model Â­ Version 1.5
+Greenhouse Gases, Regulated Emissions, and Energy in Transportation Model GREET is an analytical tool developed by Michael Wang of ANL for estimating criteria and greenhouse gas emissions.
+It calculates total fuel cycle emissions from feedstock extraction through final combustion.
+It includes both light and heavy vehicles.
+It has the capability of analyzing up to sixteen (16) fuel cycles and twelve (12) vehicle technology/fuel combinations.
+A OTT Program Analysis Methodology Quality Metrics 2002 - 23 May 9, 2001 Final Report
+more detailed discussion of the GREET Model can be found in Section 4.2.4.
+2.4.4 HVMP Model
+The Heavy Vehicle Market Penetration Model serves the same purpose as the VSCC model except that it applies to potential market impacts of new technologies in the medium and heavy truck transportation sectors.
+This sector is subdivided into two categories with classes 7 
+Historical market penetration data for energy conservation technologies were used to calibrate the model.
+Cost effectiveness of the energy conservation investment is considered a prime determinant in its introduction and growth rate.
+A more detailed discussion of the HVMP Model can be found in Section 3.2.
+2.4.5 ESM Model
+The Economic Spreadsheet Model developed by NREL calculates the employment effects of the OTT programs by industry sector for each OTT technology.
+A more detailed discussion of the ESM Model can be found in Section 4.2.1.
+2.4.6 Other Calculations
+As required, off-line market penetration and benefits analysis is required.
+Examples are ZEVs and alternative fuel vehicles commercialized under EPAct "Fleet" provisions.
+In addition to all of the above models and calculations, results from the IMPACTT model are used to calculate infrastructure incremental capital requirements for the vehicle manufacturing industry and energy cost reductions from OTT technologies.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 24 -
+May 9, 2001 Final Report
+3.0
+Vehicle Choice Analysis
+Vehicle choice analysis is used to develop market penetration estimates of advanced technology and alternative fuel vehicles.
+These market penetration estimates provide the basis for estimating the future energy, environmental, and economic benefits associated with OTT programs.
+Models to estimate consumer behavior have been developed are described below, as well as the market penetration results.
+3.1 Light Vehicles
+Vehicle Size/Consumer Choice Model The VSCC model was developed to define the successful introduction of technologies in light vehicles by vehicle size class.
+This modeling exercise acknowledges that the introduction of advanced technologies is a gradual one.
+The VSCC model is a discrete choice, multi-attribute logit model designed to simulate the household market for alternative-fuel light vehicles.
+Light vehicle fleet purchase decisions are assumed to be similar to the household market.
+Subsequent analyses will account for any observed differences between household and fleet preferences in the future when such survey data become available.
+The model forecasts, through the year 2030, the future sales of conventional and alternatively fueled light vehicles by size class, technology and fuel type.
+Market penetration estimates are based on consumer derived utilities related to vehicle attributes that are associated with the different alternative fuels and advanced propulsion technologies.
+As such, the model is "household" based.
+Other market sectors are considered in various "off-line" calculations.
+The vehicle demand function used in this model is based on the utility-maximization theory in which the consumer demand for alternative vehicles is defined as a function of the attributes of these vehicles and the fuels they use.
+The total utility of each light vehicle technology and fuel makeup is determined by the sum of the attribute utilities of that vehicle for each size class.
+The size class market share penetration estimates for the different technologies are a function of each technology's total utility compared to the total utility of other vehicles and technologies in that size class.
+The technology's total utility is calculated by summing attribute input values that have been multiplied by their corresponding coefficient The attributes of conventional and alternative vehicle technologies were defined for five vehicle classes: Â· Â· Â· Â· Â· small car large car minivan sport utility vehicle pickup and large van.
+Technologies considered include: OTT Program Analysis Methodology Quality Metrics 2002 - 25 May 9, 2001 Final Report
+Â·
+Conventional -- spark ignition, gasoline.
+This baseline technology is assumed to improve slightly through technological innovation and weight reductions to yield a fuel economy improvement of about 7.2% by yr. 2030 compared to yr. 2000.
+Advanced Diesel-compression-ignition, direct-injection (CIDI) Â­ which offers at least a thirty-five percent (35%) fuel economy improvement with the same tailpipe emissions as conventional gasoline vehicles of the same year.
+This emissions performance assumption is significant, given historical experience that diesel engines pollute more than comparable gasoline-fueled, spark ignition engines.
+Hybrid-Electric Â­ grid-independent, parallel or series configuration, using gasoline.
+Fuel cell Â­ proton exchange membrane, fueled with gasoline, ethanol or hydrogen.
+Currently, gasoline and hydrogen fuel cell vehicles are modeled.
+Additional fuel cell fueling options (e.g. methanol) are under consideration for investigation during the next analysis year.
+Natural gas Â­ spark ignition-powered vehicle, similar to Conventional, but fueled with natural gas (CNG Dedicated).
+SIDI Â­ spark ignited vehicle with gasoline injected directly into the combustion chamber.
+This technology also is referred to as spark-ignition direct injection.
+Electric Vehicles Flex-fuel vehicles which run on a wide mixture range of gasoline and ethanol.
+Â·
+Â· Â·
+Â· Â· Â· Â·
+It was assumed that all technologies apply to all vehicle classes.
+LPG and methanol were not considered in this analysis because: 1) OTT conducts minimal R
+As a result, replacing imported petroleum with imported LPG or methanol would not help the U.S. balance of trade.
+Note that the values presented are intended to project the relative effects of the only.
+Therefore, other market effects outside of OTT's purview (conventional light vehicles, methanol fuel, other fuels, etc.) are not factored-in.
+Therefore, the should not be used in external comparisons; only the relative change numbers are OTT programs diesel-powered totalized values valid.
+Of principal concern to the analysis is the alternative vehicle fuel economy, cost, relative range and maintenance cost in comparison to conventional vehicles.
+Fuel economy ratio assumptions are indicated in Exhibit 3-1.
+For this year, two fuel cell fueling options are considered; gasoline
+OTT Program Analysis Methodology Quality Metrics 2002
+- 26 -
+May 9, 2001 Final Report
+Exhibit 3-1: Fuel Economy Ratio SPORT UT ILIT Y VEHICLE 1.45 1.45 1.00 1.00 1.84 2.50 1.75 2.50 1.25 1.25 1.00 1.00 4.00 4.00 1.38 2.50 1.75 2.50 PICKUP 
+T ECHNOLOGY ADVANCED DIESEL FLEX ALCOHOL FUEL CELL-Hydrogen FUEL CELL-Gasoline SIDI CNG DEDICAT ED ELECT RIC HYBRID-2X HYBRID-3X
+ST AT US Initial Final Initial Final Initial Final Initial Final Initial Final Initial Final Initial Final Initial Final Initial Final
+SMALL CAR LARGE CAR 1.35 1.35 n/a n/a 2.20 3.00 2.00 3.00 1.25 1.25 1.00 1.00 4.00 4.00 1.52 2.00 2.00 3.00 1.35 1.35 1.00 1.00 2.20 3.00 2.00 3.00 1.25 1.25 1.00 1.00 4.00 4.00 1.25 2.00 2.00 3.00
+MINIVAN 1.45 1.45 1.00 1.00 2.08 2.50 1.93 2.50 1.25 1.25 1.00 1.00 4.00 4.00 1.47 1.75 1.93 2.50
+and hydrogen.
+The baseline Large Car gasoline-fueled fuel cell vehicle exhibits an initial fuel economy ratio of 2.0 increasing to 3.0 at the end of the analysis period.
+For the hydrogen option, these same values are 2.2 and 3.0 reflecting a higher initial fuel economy due to the absence of the gasoline reforming step.
+The cost ratios are shown in Exhibit 3-2.
+Exhibit 3-3 shows the comparison of relative ranges.
+Exhibit 3-4 shows the comparison of relative maintenance.
+As indicated in Exhibit 3-1, the electric, CIDI, hybrid-electric, and fuel cell vehicles have significantly better fuel economies than conventional vehicles.
+All technology fuel economy ratios are applicable to the point of use, including electric vehicles, which reflect comparisons at the plug and the fuel tanks.
+The cost comparison indicates that the non-conventional vehicle technologies are consistently more expensive than conventional with SIDI being the least expensive.
+When comparing ranges, electric and natural gas-fueled vehicles are found to have significant range penalties.
+CIDI vehicles however, have a range benefit, due in part to the higher volumetric energy content of diesel fuel compared with gasoline.
+Maintenance costs differ substantially from conventional vehicles with ratios ranging from 0.6 to 1.10.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 27 -
+May 9, 2001 Final Report
+Exhibit 3-2: Cost Ratio TECHNOLOGY STATUS SMALL CAR LARGE CAR MINIVAN SPORT UTILITY VEHICLE 1.082 1.069 1.000 1.000 1.350 1.250 1.250 1.200 1.053 1.030 1.050 1.049 1.500 1.400 1.250 1.100 1.250 1.200 PICKUP 
+ADVANCED DIESEL FLEX ALCOHOL FUEL CELL-HYDROGEN FUEL CELL-GASOLINE
+INITIAL FINAL INITIAL FINAL INITIAL FINAL INITIAL FINAL
+1.064 1.045 1.300 1.193 1.250 1.154 1.046 1.020 1.075 1.075 1.900 1.349 1.250 1.077 1.250 1.154
+1.070 1.049 1.000 1.000 1.400 1.300 1.300 1.200 1.045 1.030 1.069 1.035 1.788 1.495 1.250 1.100 1.300 1.200
+1.074 1.069 1.000 1.000 1.339 1.250 1.243 1.200 1.046 1.029 1.050 1.050 1.788 1.492 1.200 1.100 1.243 1.200
+1.072 1.069 1.000 1.000 1.300 1.250 1.220 1.200 1.047 1.029 1.108 1.107 1.900 1.493 1.188 1.100 1.220 1.200
+SIDI
+INITIAL FINAL
+CNG DEDICATED ELECTRIC HYBRID-2X HYBRID-3X
+INITIAL FINAL INITIAL FINAL INITIAL FINAL INITIAL FINAL
+Exhibit 3-3: Relative Range Ratio T ECHNOLOGY ST AT US SMALL CAR LARGE CAR MINIVAN SPORT UT ILIT Y VEHICLE 1.200 1.200 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.750 0.750 0.430 0.580 1.000 1.000 1.000 1.000 PICKUP 
+ADVANCED DIESEL FLEX ALCOHOL FUEL CELL-HYDROGEN FUEL CELL-GASOLINE SIDI CNG DEDICAT ED ELECT RIC HYBRID-2X HYBRID-3X
+INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL
+1.200 1.200 1.000 1.000 1.000 1.000 1.000 1.000 0.660 0.660 0.190 0.320 1.000 1.000 1.000 1.000
+1.200 1.200 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.660 0.750 0.360 0.360 1.200 1.200 1.200 1.200
+1.200 1.200 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.750 0.750 0.280 0.400 1.000 1.000 1.000 1.000
+OTT Program Analysis Methodology Quality Metrics 2002
+- 28 -
+May 9, 2001 Final Report
+Exhibit 3-4: Relative Maintenance SPORT UT ILIT Y VEHICLE 1.000 1.000 1.000 1.000 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.600 0.600 1.060 1.050 1.060 1.050 PICKUP 
+T ECHNOLOGY
+ST AT US
+SMALL CAR LARGE CAR MINIVAN
+ADVANCED DIESEL FLEX ALCOHOL FUEL CELL-HYDROGEN FUEL CELL-GASOLINE SIDI CNG DEDICAT ED ELECT RIC HYBRID-2X HYBRID-3X
+INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL INIT IAL FINAL
+1.000 1.000 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050
+1.000 1.000 1.000 1.000 1.050 1.050 1.050 1.050 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050
+1.000 1.000 1.000 1.000 1.100 1.100 1.100 1.100 1.000 1.000 0.900 0.900 0.600 0.600 1.050 1.050 1.050 1.050
+The overall light vehicle sales penetration forecast is a weighted average of the sales penetration estimates provided by the VSCC Model by size class.
+Exhibit 3-5 details the sales and stocks of advanced light vehicle technologies in years 2010, 2020, and 2030.
+The analyses show that at aggressive market penetration rates, advanced technologies will comprise more than half (62.2%) of light vehicle sales by 2010.
+In fact, advanced vehicle technologies reach seventy five percent (75.2%) aggregate market penetration in 2020 although stock of advanced vehicles in 2020 is just over fifty five percent (55.2%) as shown in Exhibit 3-5.
+By 2030, the alternative light vehicle sales are projected to constitute 82.9% of sales and 74.1% of stocks.
+(See Appendix A, Table A8).
+Exhibit 3-6 is a graph developed from the same sales data in Exhibit 3-5.
+Exhibits 3-7 through 3-11 are graphical representations of the market penetration of each vehicle class.
+In 2010, Advanced Diesel vehicles comprise the largest percentage (35%) of alternative small cars (Exhibit 3-7).
+This share is reduced to twenty eight percent (28%) by 2030.
+Hybrids with 2X fuel economy and SIDI reach nineteen percent (19%) and twenty one percent (21%), respectively, in 2010, with 2X-Hybrids reducing slightly by 2030 to 18%, being partly supplanted by 3X hybrids.
+SIDI loses a more considerable market share to 14% over the same period.
+As shown in Exhibit 3-8, the scenario for alternative large car penetration indicates that hybrid cars reach ten percent (10%) in 2010, and SIDI is at seventeen percent (17%) in 2010.
+As shown in Exhibit 3-9, Advanced Diesel is the best performer in the minivan class, reaching more than thiry percent (30%) market share by 2030.
+OTT Program Analysis Methodology Quality Metrics 2002 - 29 May 9, 2001 Final Report
+Exhibit 3-5: Market Penetration of Alternative Light Vehicles-Sales and Stocks YEAR 2010 SALES STOCKS % % 21.4% 8.2% 19.6% 1.5% 0.0% 9.6% 0.9% 0.0% 0.9% 62.2% 6.4% 3.8% 5.5% 0.2% 0.0% 2.8% 0.1% 0.1% 0.0% 18.8% YEAR 2020 SALES STOCKS % % 18.5% 4.9% 16.6% 2.2% 1.9% 18.4% 5.9% 0.9% 5.9% 75.2% 16.3% 5.7% 15.3% 1.5% 0.8% 11.7% 1.8% 1.8% 0.2% 55.2% YEAR 2030 SALES STOCKS % % 18.6% 4.7% 16.4% 2.2% 2.0% 20.0% 8.3% 2.5% 8.3% 82.9% 17.9% 4.6% 16.6% 2.1% 1.8% 17.7% 5.9% 5.9% 1.5% 74.1%
+TECHNOLOGY Advanced Diesel Flex Alcohol SIDI CNG Electric Hybrid-2X Hybrid-3X GasolineFuel Cell Hydrogen Fuel Cell TOTAL
+Exhibit 3-6: Market Penetration of Alternative Light Vehicles-Sales 90%
+80%
+70% Percent of Total Light Vehicle Sales
+60%
+50%
+40%
+30%
+Gasoline Fuel Cell Hydrogen Fuel Cell Hybrid-3X Hybrid-2X Electric CNG SIDI Alcohol Flex Adv anced Diesel (CIDI)
+20%
+10%
+0% 6 6 2024 6 2022 2028 2014 2004 2000 2002 2008 2010 2012 2018 2020 200 201 2030 202
+Year
+OTT Program Analysis Methodology Quality Metrics 2002
+- 30 -
+May 9, 2001 Final Report
+Exhibit 3-7: Market Penetration of Small Car Technologies 40%
+35%
+30%
+25% Sales-% 2010 20% 2020 2030 15%
+10%
+5%
+0% Flex Alcohol SIDI Advanced Diesel Fuel Cell Hydrogen Fuel Cell Gasoline Vehicle Type CNG Dedicated Electric Hybrid (2X) Hybrid (3X)
+Exhibit 3-8: Market Penetration of Large Car Technologies
+30%
+25%
+20%
+Sales, %
+2010 15% 2020 2030
+10%
+5%
+0% Flex Alcohol SIDI Advanced Diesel Fuel Cell Hydrogen Fuel Cell Gasoline Vehicle Type CNG Dedicated Electric Hybrid (2X) Hybrid (3X)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 31 -
+May 9, 2001 Final Report
+Exhibit 3-9: Market Penetration of Minivan Technologies
+Exhibit 3-10 shows that sport utility buyers are highly receptive to 2X Hybrid, SIDI and Advanced Diesel technologies, which perform well from 2010 through 2030.
+Flex alcohol and hybrids also show lower but still significant market potential.
+Advanced Diesel and SIDI tend to dominate the pickup and large van market in 2010 with Advanced Diesel fading from importance in 2020 and later due to the rapidly growing popularity of the 2X Hybrid as indicated in Exhibit 3-11.
+Pickup and large van SIDI holds prominence at about 20% market share through the entire analysis period, fading only slightly.
+Exhibit 3-10: Market Penetration of Sport Utility Vehicle Technologies 25%
+20%
+15% Sales, % 2010 2020 2030 10%
+5%
+0% Flex Alcohol SIDI Advanced Diesel Fuel Cell Hydrogen Fuel Cell Gasoline Vehicle Type CNG Dedicated Electric Hybrid (2X) Hybrid (3X)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 32 -
+May 9, 2001 Final Report
+Exhibit 3-11: Market Penetration of Pickup 
+20%
+15% Sales, % 2010 2020 2030 10%
+5%
+0% Flex Alcohol SIDI Advanced Diesel Fuel Cell Hydrogen Fuel Cell Gasoline Electric Hybrid (2X) Hybrid (3X)
+Vehicle Type
+Exhibit 3-12 shows the penetration for the combined five vehicle classes for the year 2010.
+Exhibits 3-13 and 3-14 show the same for the years 2020 and 2030.
+Cumulative vehicle "stocks" for each technology also are indicated.
+Note that sales are a percent of overall sales for that year, whereas stocks are a percent of the overall vehicle fleet in that year.
+In a growth market, sales shares tend to be greater than stock shares.
+This is reflected in the exhibits where the sales/stock ratio is significant greater than 1.0 for 2010 (Exhibit 3-12) but much closer to parity in 2020 and 2030 (Exhibits 3-13 
+Exhibit 3-12: Alternative Light Vehicle Sales and Stocks, 2010 25%
+20%
+15% Percentage Sales Stocks 10%
+5%
+0% Advanced Alcohol Flex Diesel (CIDI) SIDI CNG Electric Vehicle Type Hybrid-2X Hybrid-3X Hydrogen Fuel Cell Gasoline Fuel Cell
+Exhibit 3-13: Alternative Light Vehicle Sales and Stocks, 2020 OTT Program Analysis Methodology Quality Metrics 2002 - 33 May 9, 2001 Final Report
+25%
+20%
+15% Percentage Sales Stocks 10%
+5%
+0% Advanced Alcohol Flex Diesel (CIDI) SIDI CNG Electric Vehicle Type Hybrid-2X Hybrid-3X Hydrogen Fuel Cell Gasoline Fuel Cell
+Exhibit 3-14: Alternative Light Vehicle Sales and Stocks, 2030 25.00%
+20.00%
+15.00% Percentage Sales Stocks 10.00%
+5.00%
+0.00% Advanced Alcohol Flex Diesel (CIDI) SIDI CNG Electric Vehicle Type Hybrid-2X Hybrid-3X Hydrogen Fuel Cell Gasoline Fuel Cell
+3.2
+Heavy Vehicles
+The Heavy Vehicle Market Penetration Model (HVMP) was developed to estimate the potential market impacts of new technologies on the medium and heavy truck market as follows.
+Â· Â· Medium - Classes 3 through 6 and, Heavy - Classes 7 and 8 are further subdivided by end-use characteristics:
+- Type 1 Â­ multi-stop, step van, beverage, utility, winch, crane, wrecker, logging, pipe, garbage collection, dump, and concrete delivery; - Type 2 Â­ platform, livestock, auto transport, oil-field, grain, and tank; OTT Program Analysis Methodology Quality Metrics 2002 - 34 -
+May 9, 2001 Final Report
+- Type 3 Â­ refrigerated van, drop frame van, open top van, and basic enclosed van.
+The HVMP was configured using the 1997 Vehicle Inventory and Use Survey (Ref. 6).
+Data were examined for all vehicles in use and vehicles two years old or less.
+The HVMP model utilizes the data constructed from the two years old or less data base.
+The heavy vehicle market was analyzed to develop market segments with similar operation and use patterns.
+Refueling and travel characteristics were specifically addressed by vehicle body type and major use classification for the two market segments.
+Heavy vehicle characteristics are summarized in Exhibit 3-15.
+In the medium truck market segment (Classes 3 through 6), all vehicle types, with the exception of auto transport, on average travel about 20,000 miles per year.
+Heavy trucks, depending on type, travel an average of 40,000 miles to 92,000 miles per year.
+One of the more interesting findings was the significant difference in fuel economy among the vehicle types with Type 3 heavy vehicles exhibiting an average fuel economy nearly twice as high as Type 1 heavy vehicles (8.90 vs 4.55 MPG).
+Exhibit 3-15: Heavy Vehicle Characteristics
+Vehicle Type Class 3-6 Class 7
+Average Annual Miles(1) 20,126 40,043 74,066 92,434
+Fuel Economy (MPG) 8.90 4.55 6.16 8.90
+Percent Centrally Refueled(1) 40.1% 59.8% 41.0% 42.0%
+In the HVMP model, the truck classes are further segmented according to refueling location (i.e. central or multiple locations).
+As shown in Exhibit 3-15, all vehicle segments have central refueling occurring at least forty percent (40.1%) of the time.
+As vehicles age, central refueling declines.
+This may be explained by the transition from larger fleet operations to small independent owner operators as centrally refueled vehicles age.
+Overall market characteristics for vehicle stock, travel, and fuel use were also examined using the VIUS data (Exhibit 3-16).
+The data revealed that although medium trucks account for almost forty-one percent (40.51%) of the combined medium and heavy vehicle stock, they account for just over sixteen percent (16.25%) of vehicle miles traveled and fourteen percent (14.09%) of fuel use.
+As expected, the data show that Class 7
+It is also important to note that Type 3 vehicles show the greatest utilization, accounting for fifty percent (50.4%) of all fuel use and
+OTT Program Analysis Methodology Quality Metrics 2002
+- 35 -
+May 9, 2001 Final Report
+fifty-eight percent (58.13%) of all travel in the heavy vehicle market, while accounting for only thirty-five percent (35.45%) of the stock.
+In addition to the market characterization, historical market penetration data was obtained from VIUS surveys for energy conserving technologies including radial tires, aerodynamic devices, and fan clutches.
+This data was utilized in the calibration of the rate of efficiency technology adoption in the model.
+(Ref. 6).
+Exhibit 3-16: Heavy Vehicle Market Characteristics Vehicle Type Class 3-6 Class 7
+Percent of Total Percent of Total Percent of Total Vehicle Stock VMT Fuel Use 40.
+59.
+10.
+13.
+35.
+51% 49% 60% 44% 45% 16.25% 83.75% 7.69% 17.93% 58.13% 14.
+85.
+13.
+22.
+50.
+09% 91% 04% 47% 40%
+The HVMP model estimates market penetration based on cost effectiveness of the new technology.
+Cost effectiveness is measured as the incremental cost of the new technology less the discounted expected energy savings of that technology over a specified time period.
+Exhibit 3-17 shows the payback distribution assumed in the HVMP model.
+This payback distribution was generated using data taken from a survey of 224 motor carriers conducted by the American Trucking Association.
+(Ref. 7) Exhibit 3-17: Heavy Vehicle Payback Periods Number of Years 1 2 3 4 Percent of Motor Carriers 16.4% 61.7% 15.5% 6 .4 %
+The new technology cost and the expected efficiency improvements are exogenous inputs.
+Energy savings are calculated using the following data and assumptions: Â· Â· Â· Â· Â· Â· Annual vehicle miles traveled; Fuel efficiency (mpg) without new technology (Ref. 6); Fuel efficiency (mpg) with new technology; Projected fuel price Â­ diesel, ethanol, and CNG (Ref. 8); Incremental cost of new technology over time (economies of scale); Discount rate; and - 36 May 9, 2001 Final Report
+OTT Program Analysis Methodology Quality Metrics 2002
+Â·
+Payback period.
+Eleven travel distance categories for medium trucks and twenty-one (21) for heavy trucks are represented in the model.
+These categories were determined using travel distributions developed with the VIUS data by ORNL (Ref. 9).
+Graphs of the actual data are shown for each market segment, with central refueling and not-central refueling shown separately.
+All results have been reduced to eleven distance categories for presentation.
+As Exhibits 3-18 and 3-19 show, the majority of medium trucks travel less than 40,000 miles per year, with about sixty percent (59.9%) in the non-centrally refueled portion.
+Note that the percentages on the central and non-central refueling exhibits must be added to characterize 100% of the vehicle market.
+Exhibit 3-18: Medium Vehicle Travel Distribution Â­ Central Refueling 40%
+35%
+30%
+25%
+20%
+18.23%
+15%
+14.25%
+10%
+5%
+3.45%
+2.51% 0.35%
+1.29% 0.00% 0.00% 0.00% 0.00% 0.00%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9
+120139.9
+140159.9
+160179.9
+180199.9
+200+
+Miles (1000's)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 37 -
+May 9, 2001 Final Report
+Exhibit 3-19: Medium Vehicle Travel Distribution Â­ Non-Central Refueling 40%
+35%
+33.71%
+30%
+25%
+20%
+18.64%
+15%
+10% 5.60%
+5% 0.86% 0.24% 0.87% 0.00% 0.00% 0.00% 0.00% 0.00%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9
+120139.9
+140159.9
+160179.9
+180199.9
+200+
+Miles (1000's)
+As shown in Exhibits 3-20 and 3-21, Type 1 vehicles exhibit travel patterns similar to that of medium vehicles.
+More than seventy-five percent (75%) of such vehicles travel less than 60,000 miles per year.
+There are fewer non-centrally refueled vehicles in the Type 1 market segment, but both segments have very similar travel characteristics.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 38 -
+May 9, 2001 Final Report
+Exhibit 3-20: Type 1 Heavy Vehicle Travel Distribution Â­ Central Refueling 25% 23.04%
+20%
+15%
+14.18%
+10.56%
+10%
+5.70%
+5% 3.40% 2.48% 0.40%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9
+0.00%
+0.00%
+0.00%
+0.00%
+140159.9
+160179.9
+180199.9
+200+
+Miles (1000's)
+Exhibit 3-21: Type 1 Heavy Vehicle Travel Distribution Â­ Non-Central Refueling 25%
+20%
+15% 12.94%
+10%
+8.55% 7.16%
+5%
+4.44% 3.63% 2.65% 0.34% 0.53%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9 140159.9
+0.00%
+0.00%
+0.00%
+160179.9
+180199.9
+200+
+Miles (1000's)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 39 -
+May 9, 2001 Final Report
+As shown in Exhibits 3-22 and 3-23, the Type 2 vehicle travel distribution shows travel peaks at both the upper and middle ranges.
+Further analysis may reveal that some vehicle types in this segment may fit better in the Type 1 or Type 3 segment.
+As expected, travel in this market segment increases significantly for both the central and non-centrally fueled vehicles.
+Exhibit 3-22: Type 2 Heavy Vehicle Travel Distribution Â­ Central Refueling 25%
+20%
+15%
+10% 7.20% 6.57% 6.90% 5.03% 5.36% 3.03% 1.65% 0.44%
+5%
+4.47%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9 140159.9 160179.9
+0.00%
+0.37%
+180199.9
+200+
+Miles (1000's)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 40 -
+May 9, 2001 Final Report
+Exhibit 3-23: Type 2 Heavy Vehicle Travel Distribution Â­ Non-Central Refueling 25%
+20%
+15% 12.93%
+10% 6.84% 7.11% 5.65% 5.53% 7.49%
+9.72%
+5% 2.90%
+0.41%
+0.26%
+0.13%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9 140159.9 160179.9 180199.9 200+
+Miles (1000's)
+As shown in Exhibits 3-24 and 3-25, type 3 vehicles display the greatest of annual travel of all heavy vehicle classes.
+Centrally refueled vehicles travel less per year than non-centrally refueled vehicles.
+In the non-centrally refueled vehicle segment, the majority of travel occurs from 100,000 to 140,000 miles per year.
+In the central refueling segment, the majority of travel occurs below 140,000 miles per year.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 41 -
+May 9, 2001 Final Report
+Exhibit 3-24: Type 3 Heavy Vehicle Travel Distribution Â­ Central Refueling 25%
+20%
+15%
+10% 6.55% 5.47% 5.33% 5.64% 5.58% 7.19%
+5% 1.50% 1.56%
+1.29%
+0.86%
+0.98%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9 140159.9 160179.9 180199.9 200+
+Miles (1000's)
+Exhibit 3-25: Type 3 Heavy Vehicle Travel Distribution Â­ Non-Central Refueling 25%
+20%
+15%
+13.60%
+10% 7.22% 5.96%
+9.04%
+5% 2.82%
+4.55%
+5.16% 3.97% 2.34% 1.18% 2.19%
+0% 0-19.9 20-39.9 40-59.9 60-79.9 80-99.9 100119.9 120139.9 140159.9 160179.9 180199.9 200+
+Miles (1000's)
+OTT Program Analysis Methodology Quality Metrics 2002
+- 42 -
+May 9, 2001 Final Report
+Technologies considered in QM 2002 include natural gas engines, advanced diesel engines that are highly efficient and emit low levels of pollution in all classes and market segments, and hybrid drive trains in the medium class.
+The incremental vehicle costs and fuel economy ratios of the advanced heavy vehicle technologies are indicated in Exhibit 3-26.
+The table implicitly indicates the assumption that as a new technology is introduced into the market place and sales shares increase, costs are reduced.
+Exhibit 3-26: Incremental Costs and Fuel Economy Improvements for Heavy Vehicle Technologies ($1996) 2000 Class 7
+t
+4000 1.22 9000 0.75
+3500 1.22 9000 0.75
+3000 1.22 9000 0.75
+2000 1.22 6500 0.75
+2000 1.22 6500 0.75
+t
+t
+6000 1.4 15000 1.35 9000 0.75
+3800 1.4 10000 1.4 6000 0.75
+2000 1.4 9000 1.4 4000 0.75
+2000 1.4 7000 1.4 4000 0.75
+2000 1.4 7000 1.4 4000 0.75
+t
+t
+Exhibit 3-27 illustrates market penetration forecasts for heavy vehicles.
+For the assumptions utilized, the natural gas truck characteristics are not economically competitive except in the year 2000 in Class 7 and 8 trucks.
+Advanced diesel technology has the best penetration in Type 3 trucks, which also have the greatest utilization level in terms of miles driven per year.
+Penetration in Type 2 trucks is also significant.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 43 -
+May 9, 2001 Final Report
+Exhibit 3-27: Heavy Vehicle Market Penetration Results(1
+)
+Technology Class Class Class Class Class Class Class Class 3-6 Hybrid 3-6 Natural 7
+2005 19.0% 0.0% 6.7% 0.0% 12.9% 0.0% 8.8% 0.0%
+2010 11.3% 0.0% 14.1% 0.0% 28.4% 0.0% 20.8% 0.0%
+2020 15.8% 0.0% 25.8% 0.0% 51.4% 0.0% 44.6% 0.0%
+2030 18.3% 0.0% 24.1% 0.0% 49.4% 0.0% 41.3% 0.0%
+(1)All values are percent of new vehicle sales
+3.3 Stand-Alone Technologies Implicit in the market penetration analysis for light vehicles to this point is the assumption that all of the advanced vehicle technologies being investigated will enter the market and compete not only with conventional light vehicles but also with each other.
+This reduces the potential sales and resulting vehicle stocks of any one of the advanced vehicle technologies investigated.
+In an effort to gauge the effects of this inter-technology competition, the VSCC model was rerun for five separate technologies and three sub-combinations of technologies, as described below in Exhibit 2-28.
+Exhibit 3-28: Stand-Alone Technologies and Combinations Examined Hydeogen Fuel Cell Gasoline Fuel Cell Advanced Diesel Exhibit Number Planning Unit Flex Alcohol Technology Description CNG Dedicated
+Hybrid 2X
+3-29 3-30 3-31 3-32 3-33 3-34 3-35 3-36
+Hybrid Fuel Cell SIDI Advanced Diesel Electric Vehicle All Technologies All Technologies No Advanced Diesel
+Vehicle Technologies " " " " All-OTT Vehicle Technologies " " " "
+Material Technologies
+Stand-alone runs for the Flex Fuel and CNG technologies were not executed since limited fuel availability would prevent their widespread use.
+As expected, this added restriction greatly increases the potential energy and petroleum savings, fuel costs and carbon reductions ascribed to each of the technologies and sub-combinations.
+The five separate technologies are shown in Exhibits 3-29 through 3-33.
+The primary energy displaced, primary oil displaced, energy cost savings, and carbon reductions of each of the OTT technologies and for each of the applicable OTT Planning Units taken separately are compared with the same estimated when all technologies are allowed to freely compete with each other.
+OTT Program Analysis Methodology Quality Metrics 2002 - 44 May 9, 2001 Final Report
+Hybrid 3X
+Electric
+SIDI
+The savings presented for the Materials Technology Planning Unit combine all technologies.
+The values presented in Exhibit 3-29 through 3-33 are for light vehicles only (light trucks 
+The savings for the Materials Technology Planning Unit are combined and shown in Exhibit 334.
+These values do not include heavy vehicles.
+The grand total savings for all technologies over all planning units are presented in Exhibit 3-35 and include all light and heavy vehicles.
+It is noted that the heavy vehicle parameter values are constant across all stand-alone scenarios presented.
+Note that there is a substantial increase in the potential market penetration of any given technology when it is assumed to be competing only with the conventional technology.
+For instance, in Year 2030, the primary energy savings attributable to stand-alone HEVs are about 2.4 times higher than when HEV's are forced to naturally compete with all of the other seven technologies considered The total savings for all planning units for each technology stand-alone are compared with the total QM 2002 savings when all technologies are permitted to compete with each other is shown in Exhibit 3-35 for Year 2030 estimates.
+The total savings of the combined technologies is greater than any of the individual stand-alone savings with one exception: Hybrid Vehicles.
+The HEV technology would end up saving more energy, petroleum and carbon if it were the only available new technology.
+Exhibit 3-29.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Vehicle Technologies R
+Technology: Hybrid Electric Vehicles Year Variable 2005 2010 2020 2030 Combined Com bined Com bined Combined Stand-Alone Stand-Alone Stand-Alone (1) Stand-Alone Estimate Estimate Estim ate Estimate (2) Estimate Estimate Estim ate Estimate (QM002) (QM002) (QM002) (QM002) 0.041 0.096 0.184 0.416 1.073 2.382 2.099 5.029
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.041
+0.096
+0.184
+0.416
+1.073
+2.382
+2.099
+5.029
+0.427
+0.994
+1.905
+4.306
+11.049
+46.228
+21.831
+97.612
+0.803
+1.868
+3.573
+8.075
+20.822
+40.152
+40.744
+97.612
+(1) The v alue attributed to the giv en v ehicle technology as reduced by the m arket com petition of all of the other technologies.
+(2) The v alue attributed to the giv en v ehicle technology when no other technologies are present.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 45 -
+May 9, 2001 Final Report
+Exhibit 3-30.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Vehicle Technologies R
+Technology: Fuel Cells Year Variable 2005 2010 2020 2030 Combined Com bined Com bined Combined Stand-Alone Stand-Alone Stand-Alone (1) Stand-Alone Estimate Estimate Estim ate Estimate (2) Estimate Estimate Estim ate Estimate (QM002) (QM002) (QM002) (QM002) 0.000 0.000 0.006 0.032 0.058 1.005 0.794 3.994
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.000
+0.000
+0.006
+0.032
+0.072
+1.047
+0.885
+4.283
+0.000
+0.000
+0.064
+0.324
+1.655
+9.104
+5.587
+33.051
+0.000
+0.000
+0.123
+0.297
+3.875
+9.940
+15.245
+41.774
+(1) The v alue attributed to the giv en v ehicle technology as reduced by the m arket com petition of all of the other technologies.
+(2) The v alue attributed to the giv en v ehicle technology when no other technologies are present.
+Exhibit 3-31.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Vehicle Technologies R
+Technology: SIDI Year Variable 2005 2010 2020 2030 Combined Com bined Com bined Combined Stand-Alone Stand-Alone Stand-Alone (1) Stand-Alone Estimate Estimate Estim ate Estimate (2) Estimate Estimate Estim ate Estimate (QM002) (QM002) (QM002) (QM002) 0.027 0.057 0.203 0.421 0.591 1.265 0.592 1.571
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.027
+0.057
+0.203
+0.421
+0.591
+1.265
+0.592
+1.571
+0.274
+0.584
+2.098
+4.362
+6.087
+13.034
+6.161
+16.338
+0.516
+1.098
+3.934
+0.421
+11.470
+24.562
+11.499
+30.492
+(1) The v alue attributed to the giv en v ehicle technology as reduced by the m arket com petition of all of the other technologies.
+(2) The v alue attributed to the giv en v ehicle technology when no other technologies are present.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 46 -
+May 9, 2001 Final Report
+Exhibit 3-32.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Vehicle Technologies R
+Technology: Advanced Diesel (Cars 
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.057
+0.115
+0.317
+0.608
+0.853
+1.745
+0.896
+2.219
+0.826
+1.318
+4.450
+7.876
+11.791
+23.176
+12.253
+29.560
+1.023
+1.722
+5.680
+10.217
+15.326
+30.278
+15.880
+40.030
+(1) The v alue attributed to the giv en v ehicle technology as reduced by the m arket com petition of all of the other technologies.
+(2) The v alue attributed to the giv en v ehicle technology when no other technologies are present.
+Exhibit 3-33.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Vehicle Technologies R
+Technology: Electric Vehicle Year Variable 2005 2010 2020 2030 Combined Combined Com bined Com bined Stand-Alone Stand-Alone Stand-Alone (1) Stand-Alone Estim ate Estimate Estimate Estimate (2) Estim ate Estimate Estimate Estimate (QM002) (QM002) (QM002) (QM002) 0.008 0.017 0.027 0.058 0.103 0.315 0.166 0.567
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.019
+0.030
+0.041
+0.100
+0.167
+0.511
+0.269
+0.916
+-0.066
+-0.003
+-0.084
+0.277
+0.657
+2.944
+1.244
+5.653
+0.006
+0.131
+0.053
+0.772
+1.398
+5.675
+3.968
+11.913
+(1) The v alue attributed to the giv en v ehicle technology as reduced by the m arket com petition of all of the other technologies.
+(2) The v alue attributed to the giv en v ehicle technology when no other technologies are present.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 47 -
+May 9, 2001 Final Report
+Exhibit 3-34.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: Material Technologies
+Technology: All Variable 2005 2010
+(2)
+Year 2020 2030 Combined Combined Com bined Com bined Stand-Alone Stand-Alone Stand-Alone (1) Stand-Alone Estim ate Estimate Estimate Estimate (2) Estim ate Estimate Estimate Estimate (QM002) (QM002) (QM002) (QM002) 0.001 0.003 0.006 0.018 0.043 0.192 0.159 0.582
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+0.001
+0.004
+0.006
+0.021
+0.048
+0.213
+0.175
+0.644
+0.012
+0.035
+0.063
+0.191
+0.565
+1.850
+1.364
+5.146
+0.023
+0.066
+0.118
+0.363
+1.146
+3.732
+3.068
+11.250
+(1) Includes all technologies in competition with each other.
+(2) Includes the sum of the following stand-alone technologies: Fuel Cells, Hybrid Electric, Electric, Adv anced Diesel and SIDI
+Exhibit 3-35.
+Comparison of Stand-Alone Technology Savings with QM (Combined Technology) Savings: Planning Unit: All OTT
+Technology: All Variable Year 2030 Comparisons Stand-Alone T echnologies (not additive) Advanced Diesel 3.254 3.553 SIDI 2.701 3.000 Electric Vehicle 1.746 2.329 Fuel Cell Vehicle 5.416 6.036 HybridElectric Vehicle 6.399 6.698
+Total QM 2002 5.823 4.729
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+32.464
+19.297
+9.097
+38.120
+57.758
+52.425
+62.506
+54.794
+35.362
+106.895
+126.576
+114.782
+OTT Program Analysis Methodology Quality Metrics 2002
+- 48 -
+May 9, 2001 Final Report
+3.3.1
+Sensitivity Study: No Advanced Combustion Technology Vehicles
+In an effort to gauge the relative importance of the Advanced Combustion Technology planning unit (SIDI and Advanced Diesel), the Combined case was rerun with the SIDI and CIDI technologies removed.
+The results of this analysis are shown in Exhibit 3-36 below.
+Exhibit 3-36.
+Comparison of QM (Combined) Savings Compared to Savings with Advanced Combustion Technologies (SIDI 
+2010 Combined Estimate (QM002) 0.973 Advanced Diesel Removed 0.679
+2020 Combined Estimate (QM002) 3.436 Advanced Diesel Removed 3.063
+2030 Combined Estimate (QM002) 5.823 Advanced Diesel Removed 6.103
+Advanced Diesel Removed 0.140
+Primery Energy (quads) Primery Oil Displaced (quads) Energy Cost Savings (1999$) Carbon Reductions (mmtons)
+0.168
+0.364
+0.336
+1.216
+0.948
+4.020
+3.899
+6.624
+7.267
+0.147
+1.406
+0.551
+5.236
+1.866
+26.520
+2.578
+52.244
+0.331
+3.362
+1.220
+13.777
+4.146
+62.014
+5.664
+122.442
+(1) The value attributed to the all vehicle technologies combined in competition with each other.
+(2) The value attributed to the all vehicle technologies combined except advanced diesel.
+Note that the lack of an advanced combustion technologies option results in a small reduction in the energy and oil savings during the early years when this option initially becomes available.
+However, in the later years, the savings without the advanced combustion technologies is greater as the higher technology vehicles (3X hybrid and hydrogen fuel cell vehicles) replace what would have been lower-efficiency SI and CI power plants.
+Energy cost savings and carbon reductions are drastically increased in the out years due to the removal of the SI/CI option.
+3.3.2 Sensitivity Study: Fuel Price/Technology Cost Changes
+Recent increases in fossil fuel prices have created interest in gauging the effects of possible future increases in gasoline and diesel retail prices on the introduction rates of the selected slate of alternate technologies and their projected effects on petroleum and energy savings, energy cost savings and carbon savings.
+In the first study, it was assumed that the prices of gasoline and diesel fuel double over the baseline (AEO) assumptions.
+In the second study, the incremental costs of the alternative technologies were halved.
+The results of these forced changes in input assumptions are shown in Exhibit 3-37.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 49 -
+May 9, 2001 Final Report
+Exhibit 3-37.
+Comparison of Reference QM Savings with Fuel Price/Alternative Technology Cost Sensitivity Study Results Year 2030 Comparisons Price Sensitivity Studies Gasoline and Diesel Fuel Prices Doubled 6.02 7.02 138 119 Alternative Technology Incremental Costs Halved 5.99 6.81 54.9 118
+Variable
+Total QM 2002 5.82 4.73 52.4 115
+Primary Energy (quads) Primary Oil Displaced (quads) Energy Cost Savings (Billion 1999$) Carbon Reductions (mmtons)
+In the case of the doubling of petroleum prices, note that energy savings are not affected substantially but that primary oil savings are substantially affected, as more alternative vehicles use non-petroleum fuels.
+The energy cost savings is also greatly enhanced, although the carbon reduction potential is about the same.
+In the case of a halving of the advanced technology incremental cost, the only substantial effect is an increase in petroleum displacement as more non-petroleum vehicles come on-line.
+Otherwise, the effects of such a seemingly substantial change are rather subdued.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 50 -
+May 9, 2001 Final Report
+4.0
+Benefits Estimates
+The results of this analysis are presented here and in the appendices.
+The benefits estimation methodology and assumptions are described, including: petroleum and energy benefits, economic and environmental benefits, and a benefit/cost analysis.
+The Quality Metrics results are presented in their entirety in Appendix A. 4.1 Petroleum and Other Energy Benefits Analysis
+Annual petroleum displacement and emission reductions are calculated by projecting the miles traveled by each model year's conventional vehicles, their petroleum use, and their emissions; and then subtracting from this the projections for comparable projections for advanced technology vehicles.
+The methodology takes into account vehicle stocks and usage characteristics based on work by Mintz (Ref 10) and Greene and Rathi (Ref. 11) 4.1.1 Biomass Fuels below occur plant,
+Ethanol fuel use estimates are based on supply projections provided by the Office of Development (Ref. 12).
+The cellulosic ethanol goals for FY2000 and beyond are indicated in Exhibit 4-1.
+All values are in million gallons per year.
+Initial production is expected to at two plants.
+The Masada Resources' plant is assumed to start up in 2001 and a second BCI/Jennings in 2002.
+Subsequent plants expected to start ethanol production are: Â· Â· Â· Â· Â· Arkenol in 2003; Gridley/BCI's (2 plants) in 2004;
+Quincy Library Group's softwoods plant and corn fiber add-ons to corn ethanol plants in 2005; Masada's and BCI's new plants in 2006; Corn fiber, stover, and softwoods plants in 2007.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 51 -
+May 9, 2001 Final Report
+Exhibit 4-1: Biofuels Use ITEM Direct Biomass Ethanol Use (million gallons per year) Blends (million gallons per year) Program Supply Goal (million gallons) Fuel Availability Assumption E-85 2000 2010 2020 2030
+0.6 0 0 0%
+101.1 1,899 2,000 1.0%
+540.8 5,459 6,000 1.0%
+425.9 9574 10000 5.80%
+Alternative fuel demand is estimated as the amount of fuel required by dedicated fuel vehicles plus fuel demanded by multifuel and flex-fuel vehicles.
+Alternative fuel choice for multifuel and flex-fuel vehicles is estimated using consumer derived utility values associated with the attributes of the fuel.
+The fuel attributes include: Â· Â· Â· Fuel price in dollars per gallon of gasoline equivalent (125,000 BTU-HHV); Fuel availability (percent of stations offering the fuel); and Vehicle range associated with the use of that fuel.
+Exhibit 4-1 shows the amount of fuel demanded by flex-fuel vehicles and the use of fuel blends.
+The exhibit summarizes a detailed year-by-year estimate of biofuel demand for each technology which is presented in Appendix A. Fuel demand is constrained to match supply as indicated in the Exhibit.
+Ethanol is used in fuel blends in order to meet EPA requirements such as Reformulated Gasoline (RFG) and winter oxygenation, or to reduce petroleum consumption even in regions of the U.S. that need no RFG or oxygenated fuel.
+4.1.2 Fuel Choice for Flex-Fuel Vehicles
+Alternative fuel consumer utility values are compared to values for conventional fuels, when fuel choice estimations are made.
+Exhibit 4-2 shows the market share that an alternative fuel will achieve given a specified price and availability relative to gasoline.
+This graph illustrates the relationship between fuel availability and fuel price.
+For example, at fifty percent (50%) availability and a zero cost increment, the alternative fuel should be chosen forty-five percent (45%) of the time (Point A).
+If the price increment is decreased twenty percent (20%), it is estimated the alternative fuel will be chosen nearly 90% of the time (Point B).
+Whereas, if fuel availability is increased to seventy percent (70%) only marginal increases in alternative fuel selection occur (to 49% at Point C).
+The calculations for this graph assume no range penalty for using the alternative fuel.
+OTT Program Analysis Methodology Quality Metrics 2002 - 52 May 9, 2001 Final Report
+Exhibit 4-2: Alternative Fuel Market Share as a Function of Fuel Availability and Fuel Price (Ref. 13) 90% 80% 70% 60% 50% 40% 30% 20% 10% 0% 1% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+B Â·
+Fuel Price Delta -20% -10% -5% 0% 10% 20%
+Market Share, %
+Â· A
+Â· C
+Fuel Availability Points A, B, and C are explained in text
+4.1.3 Estimates of the Value of Reducing Imported Oil Many researchers have developed estimates of the magnitude and cause of cost premiums associated with importing oil.
+The oil import premium exists because the market price of oil does not cover the societal cost incurred by importing.
+In order to calculate the value of an alternative to imported oil, one must add the market price of oil to the import premium.
+The "categories" of the oil import premiums, the rationale for including an oil import premium, and the range of estimates for the value of the oil import premium are explained in this section.
+Definitions of the Components of an Imported Oil Premium Externalities associated with imported oil can be defined as follows: demand costs ("market power" or monopsony effects, plus indirect effects such as inflation and balance of payments), disruption costs (economic losses due to price spikes), direct military costs (expenditures to maintain a military presence in oil producing regions), and environmental costs (costs due to oil spills and other environmental problems associated with importing oil).
+The demand and disruption costs are the most commonly used measure of an oil import premium (Ref. 14).
+Demand costs can be broken into a direct and indirect component.
+The direct component is known as the "market power" or monopsony effects.
+Monopsony costs occur when the increase in the demand for imported oil causes world oil prices to rise, thus increasing the costs of all imports, not just the incremental demand.
+Not only is the added cost borne by the demander responsible for the increase, but by all importers equally.
+The market power premium can be OTT Program Analysis Methodology Quality Metrics 2002 - 53 May 9, 2001 Final Report
+illustrated by a simple example.
+Suppose the U.S. were importing 5.5 million barrels of oil a day at a price of $30 per barrel.
+Then the daily import bill would be $165 million.
+If increasing imports to 6.0 million barrels per day causes prices to rise to $31 per barrel, the daily import bill becomes $186 million.
+In this situation, the importing country bears an additional cost of $21 million per day in order to import an additional 0.5 million barrels per day.
+The cost to the economy is $42 per additional barrel of oil imported.
+Since the individual oil importers initially pay only $30 per barrel, the remainder -- $12 per barrel -- is a cost not borne by those who decide to import more oil.
+In this case, the market power premium is $12 per barrel.
+Indirect costs are the macroeconomic costs of importing oil such as inflation impacts, lowering the level of savings, and terms of trade impacts.
+Imported oil bills increase the current account deficit in the U.S. balance of trade, leading to an excess supply of U.S. dollars in the foreign exchange market and thus lowering the buying power of U.S. consumers.
+Higher imported oil costs can lead to "structural" inflation that leads to adverse macroeconomic conditions.
+Disruption or "security" costs can also be broken into direct and indirect components.
+The direct component is similar to the above direct component because it is the monopsony affect that occurs when prices increase due to a disruption.
+The indirect, or macroeconomic, component of disruption costs are associated with the depressed aggregate demand caused by the disruption and the accompanying higher inflation and unemployment.
+The demand and disruption costs are traditional components of the calculation of an oil import premium.
+Somewhat untraditional and harder to quantify, additional components of the oil import premium are direct military expenditures and environmental costs.
+The military expenditures are some fraction of the costs to the U.S. to maintain a military presence in the Middle East to ensure continued access to oil.
+The environmental costs are less straightforward - they primarily include the costs of oil spills and emissions from oil combustion.
+At this time, we have no estimates of the environmental costs.
+There are a variety of estimates of military costs based on the amount of military resources dedicated to the Persian Gulf region.
+Oak Ridge National Laboratory recently conducted a literature review and assessment of military costs to assure the supply of oil imports to the U.S.
+The total estimated cost of defending the Middle East Oil supplies is estimated to be about $32 billion per year in Reference 15.
+This is a difficult value to estimate, since it must be calculated based on allocations of costs to meet various needs.
+In this respect there is no "real" military cost other than that which is allocated and all allocation schemes are highly subjective.
+The range of estimates reviewed by Reference 15 is about a factor of ten.
+The military cost of Middle East oil is borne by all and it is therefore reasonable to assign this cost to all petroleum consumed in the country whether from domestic, OPEC, non-OPEC or Middle East sources.
+Since the total U.S. petroleum demand is about thirty-nine (39) Quads or about 6.7 billion barrels per year, the "effective" cost of the military support of the Middle East allocated over all petroleum is about $4.78 per barrel.
+For purposes of this analysis, a benchmark "military cost" charge of $5.00 per barrel (about eleven (11) cents per gallon of gasoline) has been assumed.
+OTT Program Analysis Methodology Quality Metrics 2002 - 54 May 9, 2001 Final Report
+Range of Estimates of Imported Oil Premium Exhibit 4-3 identifies a range of estimates of an oil import premium (the market price of oil plus the oil import premium equals the value of reducing oil imports).
+They range from $1 to $225 depending on what is included in the estimate, the price of oil, and other assumptions.
+These values do not indicate whether or not the price of imported oil has an impact on its premium.
+Exhibit 4-3: Value of Reducing Imported Oil ($1996 per bbl) Value, 1996$ Source Stobaugh and Yergin (1979) Stobaugh and Yergin (1980) Lemon (1979) Lemon (1980) Nordhaus (1980) Plummer (1981) Hogan (1981) EMF 6 (1981) Low High Low High Low High Low High Low Totals Avg High $46 $12 $25 $0 $58 $225 $17 $8 $7 $19 $38 $63 $12 Based on 9 different models $33 $12 $61 $225 Low High Low High Demand Costs $32 $121 $62 $225 $63 $104 $0 $45 $12 $12 $7 $25 $18 $32 $6 $38 Disruption Costs Total Costs $32 $121 $62 $225 $70 $129 $18 $77 $18 $50 Notes
+Impacts of Imported Oil The economic literature suggests that there are indirect economic costs and economic security costs associated with imported oil at prices influenced by a cartel.
+These costs are not captured in the gross domestic product (GDP) estimates from the economic models that are used in our analysis.
+Therefore, these costs need to be subtracted from any GDP estimate.
+Several types of costs are not captured in the standard economic valuations.
+These are: Â· Â· Demand costs that are caused by the oil price increases that will occur when U.S. demand increases.
+This will have an effect on GDP.
+Disruption costs which reflect the expected economic costs of sudden shifts in oil price or availability due to possible political unrest in the Mid-East.
+Also, unpredictable oil costs
+OTT Program Analysis Methodology Quality Metrics 2002
+- 55 -
+May 9, 2001 Final Report
+tend to suppress innovations that might otherwise have been implemented, thereby reducing petroleum consumption.
+Â· Other costs which include the military costs of protecting Mid-East oil supplies and environmental costs associated with foreign oil production and transport.
+The suggested cost associated with the use of imported oil, based on a subjective evaluation of the alternative estimates (Exhibit 4-3), and placing greater weight on estimates since 1990, is a nominal $5/barrel ($1996).
+This cost is in addition to the military cost of $5/barrel discussed previously.
+4.1.4 Petroleum Reduction Estimates
+Exhibit 4-4 shows the energy and oil that will be displaced as a result of the OTT programs discussed in this report.
+It can be seen that the total oil displacement that will occur in the year 2030 is about 3.1 million barrels per day; about 16% of the projected total transporation energy use.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 56 -
+May 9, 2001 Final Report
+Exhibit 4-4: Energy Displaced Primary Energy Displaced Primary Oil Displaced MMPDOE Year 2030 Year 2005 Year 2010 Year 2020 Year 2030
+Technology Year 2005
+MMPDOE Year 2010 Year 2020
+Vehicle Technologies R
+0.071 0.020 0.000 0.040 0.013 0.026 0.001 0.004 0.000 0.004 0.008 0.000 0.007 0.000 0.000 0.001 0.000 0.001 0.000 0.001 0.000 0.000 0.000 0.000 0.008 0.008 0.000 0.000 0.000 0.080 14.17 0.56%
+0.377 0.087 0.003 0.245 0.096 0.106 0.044 0.013 0.000 0.013 0.029 0.002 0.027 0.000 0.000 0.003 0.000 0.003 0.000 0.003 0.000 0.000 0.000 0.000 0.080 0.076 0.004 0.000 0.000 0.460 15.54 2.96%
+1.363 0.507 0.027 0.682 0.279 0.236 0.167 0.049 0.028 0.021 0.098 0.011 0.088 0.000 0.000 0.020 0.000 0.020 0.003 0.015 0.003 0.000 0.000 0.000 0.240 0.218 0.022 0.000 0.000 1.623 18.06 8.99%
+2.276 0.992 0.375 0.697 0.280 0.225 0.192 0.078 0.051 0.027 0.134 0.018 0.117 0.000 0.000 0.075 0.000 0.075 0.005 0.029 0.041 0.000 0.000 0.000 0.400 0.383 0.017 0.000 0.000 2.751 20.83 13.21%
+0.076 0.020 0.000 0.040 0.013 0.026 0.001 0.009 0.000 0.009 0.008 0.000 0.007 0.000 0.000 0.001 0.000 0.001 0.000 0.001 0.000 0.088 0.000 0.087 0.008 0.008 0.000 0.000 0.000 0.172 13.73 1.25%
+0.384 0.087 0.003 0.245 0.096 0.106 0.044 0.020 0.000 0.019 0.029 0.002 0.027 0.000 0.000 0.003 0.000 0.003 0.000 0.003 0.000 0.108 0.017 0.091 0.080 0.076 0.004 0.000 0.000 0.575 14.99 3.83%
+1.400 0.507 0.034 0.682 0.279 0.236 0.167 0.079 0.045 0.034 0.098 0.011 0.088 0.000 0.000 0.023 0.000 0.023 0.004 0.015 0.004 0.236 0.142 0.094 0.240 0.218 0.022 0.000 0.000 1.899 17.37 10.93%
+2.368 0.992 0.418 0.697 0.280 0.225 0.192 0.127 0.083 0.044 0.134 0.018 0.117 0.000 0.000 0.083 0.000 0.083 0.008 0.029 0.046 0.279 0.182 0.097 0.400 0.383 0.017 0.000 0.000 3.129 19.99 15.66%
+Electric Vehicle R
+Heavy Vehicle Systems R
+Materials Technologies Propulsion System Materials Light Vehicle Materials Electric Vehicle Hybrid Vehicle Fuel Cell Vehicle
+Technology Deployment Household CNG EPAct Fleet
+Fuels Development Blends and Extenders Flex-Fuel Dedicated Conventional Fuel Cell
+Total Baseline (AEO 00 -Transportation) Percent Reduction
+The energy use effects of current zero emission vehicle (ZEV) mandates and EPACT requirements are indicated in Exhibit 4-5.
+Exhibit 4-6 shows that the OTT programs will have the effect of decreasing the rise in oil use by transportation.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 57 -
+May 9, 2001 Final Report
+Exhibit 4-5: ZEV and EPACT Oil Reductions
+Program
+2005
+2010
+2015
+2020
+2030
+ZEV Mandates (trillion BTU equivalent) EPACT (thousand barrels/day) Total (thousand barrels/day)
+17.30 2.05 19.35
+39.64 1.50 41.14
+58.68 1.51 60.19
+70.45 1.59 72.04
+92.36 1.74 94.10
+Exhibit 4-6: Transportation Petroleum Use Projection 20 18 16 Mi ll i on Ba rre ls pe r Da y 14 12 10 8 6 4 2 0 1970 1980 1990 2000 2010 2020 N et Im po rts The Ga p Dom e s tic Production Efficie ncy Subs titution Trans porta tion Oil Us e
+OTT Program Analysis Methodology Quality Metrics 2002
+- 58 -
+May 9, 2001 Final Report
+4.2
+Economic and Environmental Benefits Analysis Results
+In this section, economic and environmental benefits analyses are presented.
+The scope of the OTT Impacts Assessments contains analyses that supplement those required by QM.
+These include total fuel cycle criteria and carbon pollutant reductions, while QM requires direct carbon, hydrocarbon, CO, and NOx reduction benefits only.
+The Economic Spreadsheet Model (ESM), a spreadsheet model that estimates employment impacts of OTT's programs, is described first.
+The next section describes the methodology for estimating vehicle infrastructure capital requirements.
+The Greenhouse Gases, Regulated Emissions, and Energy Use in Transportation (GREET) Model, an analytic tool for evaluating emissions of criteria pollutants and greenhouse gases also is summarized.
+The next section concerns criteria pollutant emissions reduction values.
+Finally, estimating reductions in carbon emissions from the commercial utilization of OTT-sponsored technologies is discussed.
+4.2.1 Economic Benefit Estimates
+The ESM is a spreadsheet model that estimates employment impacts of OTT's programs.
+The spreadsheet takes economic impacts from the Quality Metrics process and applies them to economic multipliers, developed with Department of Commerce data, to estimate employment impacts of OTT technologies.
+Key inputs to the model are: 1) incremental vehicle cost of OTT technologies (if any); 2) money spent on alternative fuels associated with OTT's technologies; and 3) money saved from decreased spending on gasoline or diesel.
+Exhibit 4-8 shows a summary of job impacts by sector of the economy.
+The multipliers used to provide these numbers are industry specific at an aggregate level.
+The multipliers are derived from the Regional Input-Output Modeling System (RIMS II) developed by the Bureau of Economic Analysis (BEA), U.S. Department of Commerce.
+They are based on an aggregate U.S. industry structure and updated with 1995 regional data.
+A detailed analysis of how the multipliers were calculated can be obtained from Reference 32.
+The multipliers are used to calculate net jobs and GDP by multiplying them with the spending quantities associated with the advanced technologies.
+Expenditures considered are: Â· Â· Â· Â· spending on vehicles; decreased spending on oil; fuel cost savings; and increased spending on alternative fuels.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 59-
+May 9, 2001 Final Report
+Exhibit 4-7 shows that the mining industry loses jobs while most other industries gain jobs.
+Advanced transportation technologies create jobs, in large part, because they induce spending in areas with larger multipliers than areas where spending would have occurred.
+The mining industry loses jobs because the reduced spending on oil affects the mining industry more than other industries.
+Job impacts attributable to the individual technologies fostered by OTT are indicated in Exhibit 4-8.
+Exhibit 4-7: Employment Impacts by Sector of Economy (Jobs) Jobs by Industry Farm, forestry, and fishery products Mining Construction Durable goods Nondurable goods Transportation and public utilities Wholesale trade Retail trade Finance, insurance, 
+Exhibit 4-8: Employment Impacts by Technology (Jobs) Jobs by 'Technology Alternative Fuel Vehicles Biofuels Electric Vehicle R
+The increase in GDP is shown in Exhibit 4-9.
+Like the increase in jobs, the increase in GDP was calculated by applying the multipliers discussed above and in Appendix C. While the impact on GDP appears to be large, compared to the baseline, it represents an effect of less than one percent (1%).
+OTT Program Analysis Methodology Quality Metrics 2002
+- 60-
+May 9, 2001 Final Report
+Exhibit 4-9: GDP Increase (Millions of Dollars) GDP Totals (millions $1998-net) Techology Alternative Fuel Vehicles Biofuels Electric Vehicle R
+4.2.2
+Vehicle Infrastructure Capital Requirements
+This section describes the methodology for estimating vehicle infrastructure capital requirements.
+The basic methodology, rationale for production volume cost estimates, and capital constraints of auto manufacturers are addressed.
+A rough estimate of capital investment necessary to produce advanced light vehicles was made.
+The methodology consists of three (3) steps: 1.
+2.
+3.
+Estimate vehicles sold per technology by year; Estimate production facility costs on a volume basis by technology; Apply the production facility cost factor to vehicle sales that exceed the sales in the previous year for each technology.
+Step 1 is based on the vehicle choice model results--the vehicle choice model provides sales estimates by technology per year.
+Step 2 is from empirical data and is discussed in more detail below.
+Step 3 is a simple way to estimate the incremental costs.
+In general, it is anticipated that a minimum of 300,000 vehicle sales per year are required in order for the production of an advanced technology or alternative fuel vehicle to be sustained.
+Production Facility Costs To estimate production facility costs, some recent estimates to develop new car lines were reviewed.
+Examples used include (Refs. 16-22): Â· Â· Saturn production plant costs of $4.5 billion to produce 500,000 vehicles per year.
+Ford Contour costs to retool nine assembly plants for new model costing $6 billion to produce 700,000 per year.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 61-
+May 9, 2001 Final Report
+Â·
+Various estimates of engine and transmission plants indicating costs of about $300 million to build facilities with production outputs of 100,000 engines/transmissions per year.
+A Congressional Research Service report estimating changeover costs (for producing more efficient vehicles and engine) of $1.5 billion to $3.0 billion per car line (250,000 to 300,000 vehicles per year).
+Â·
+Based on the above information, the following production infrastructure costs by type of vehicle were estimated: Â· CIDI and SIDI: $300 million per 100,000 vehicles.
+This cost is based primarily on cost to build a new engine plant.
+It is assumed that these technologies would be options for an existing production line.
+CNG Vehicles: $700 million per 100,000 vehicles.
+This cost is based on engine costs plus supporting fuel systems costs such as different on-board tanks and fuel supply systems.
+It is assumed that CNG vehicles would be adapted from existing car lines.
+Electric, hybrid, and fuel cell vehicles: $2 billion per 100,000 vehicles.
+This cost is based on new assembly plant, engine, battery, motor, and supporting technology plant costs.
+It is assumed that these vehicles would be totally new car lines.
+Â·
+Â·
+Exhibit 4-10 shows capital infrastructure costs associated with producing advanced automotive technologies.
+It shows that expenditures are greatest in 2010 at almost $1.155 billion, primarily due to production of hybrid vehicles.
+This table is reproduced from Appendix A, Table A-32.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 62-
+May 9, 2001 Final Report
+Exhibit 4-10: Capital Infrastructure Costs (Millions of 1998 Dollars) Advanced Diesel $127 $90 $78 $126 $105 $83 -$14 $17 $33 $20 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 Hybrid (2X) $220 $47 $156 -$18 $355 $700 $670 $604 $481 $504 $364 $138 -$85 -$29 $158 $38 $56 $75 $92 $96 $101 $96 $73 $76 $74 $73 Hybrid (3X) $0 $0 $4 $41 $166 $48 $131 $74 $42 $32 $25 $71 $316 $362 $257 $213 $222 $166 $113 $91 $63 $73 $38 $32 $32 $31 Hydrogen Gasoline Fuel Cell Fuel Cell $0 $0 $0 $0 $0 $3 $13 $25 $22 $14 $8 $2 $3 $16 $61 $118 $123 $84 $56 $43 $44 $70 $34 $23 $17 $14 $0 $0 $0 $0 $0 $259 $131 $74 $42 $32 $25 $71 $316 $362 $257 $213 $222 $166 $113 $91 $63 $73 $38 $32 $32 $31
+Year
+CNG
+Electric
+Total
+2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030
+$0 $5 $19 $31 $42 $53 $51 $34 $11 $12 -$11 $8 $4 -$10 -$7 -$4 $0 $0 $1 $1 $1 $0 $1 $1 $1 $1
+$0 $0 $0 $0 $0 $9 $55 $75 $101 $121 $120 $77 $17 -$5 $2 $9 $17 $5 $4 $2 $3 $0 $3 $3 $3 $3
+$348 $141 $257 $180 $668 $1,155 $1,038 $904 $733 $736 $531 $369 $572 $697 $728 $587 $638 $496 $379 $324 $276 $312 $189 $167 $159 $154
+Capital Constraints of Auto Manufacturers Exhibit 4-11 shows aggregate capital expenditures by the motor vehicle industry in the U.S. and expenditures by the major domestic manufacturers globally in billions of dollars for 1991 to 1997.
+The U.S. expenditures column includes expenditures by the major domestic manufacturers, transplants and parts suppliers.
+Our analysis indicates that in most years, the capital spending on production facilities would be less than $2 billion per year, which is substantially less than what the major domestic
+OTT Program Analysis Methodology Quality Metrics 2002
+- 63-
+May 9, 2001 Final Report
+manufacturers have been spending on capital infrastructure.
+However, this may mean that other improvements may be deferred.
+Exhibit 4-11: Aggregate Capital Expenditures (billions of 1996 U.S. dollars) YEAR 1997 1996 1995 1994 1993 1992 1991 GM $10.1 $9.9 $9.0 $5.8 $5.6 $5.8 $6.6 Ford $7.9 $8.2 $8.9 $8.7 $7.2 $6.3 $6.5 Chrysler $5.0 $4.6 $3.7 $4.0 $3.2 $2.5 $2.5 T OT AL Big 3 $23.0 $22.7 $21.6 $18.5 $16.0 $14.6 $15.6
+4.2.3
+Greenhouse Gases, Regulated Emissions, and Energy Used in Transportation (GREET) Model
+GREET was developed to be used as an analytic tool for evaluating emissions of criteria pollutants and greenhouse gases, energy use, and petroleum consumption of various vehicle technologies on a full fuel-cycle basis (Ref. 27).
+For a given transportation fuel, a fuel cycle covers the processes from energy feedstock (or primary energy) production to on-vehicle combustion of fuel.
+In particular, the following stages are included in a fuel cycle: Â· Â· Â· Â· Â· Energy feedstock production; Feedstock transportation and storage; Fuel (or energy product) production; Fuel transportation, storage, and distribution; and Vehicular fuel combustion.
+The GREET model consists of three elements: Â· Â· Â· Light vehicles (current version 1.5) Light vehicle materials (current version 2.4), and Heavy vehicles (current version 3.4).
+Exhibit 4-12 lists the Carbon Coefficients for the different fuels.
+These coefficients are used in the Appendix A Table A-21, "Total Carbon Emissions Reductions" to calculate the reduction in carbon emissions each year to 2030 due to the market penetration of the advanced vehicle technologies.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 64-
+May 9, 2001 Final Report
+Exhibit 4-12: Carbon Coefficients Fuel Gasoline (mkt. average) #2Diesel Fuel CNG LPG Ethanol Electric Utilities (mkt. average) (1) Million metric tons per quad (10^ 15
+Coefficient, MMT/Quad 19.41 19.95 14.47 17.16 0.5823 22.32
+(1)
+Source: DOE/EIA-0573, Emissions of Greenhouse Gases in the United States, Table 6, P. 15
+BTU)
+GREET includes sixteen (16) fuel cycles.
+Among them, four (4) are petroleum-based cycles: petroleum to conventional gasoline, petroleum to RFG; petroleum to diesel; and petroleum to LPG.
+Seven (7) cycles are natural gas (NG)-based: NG to CNG; NG to liquefied natural gas (LNG); NG to LPG; NG to methanol; NG to dimethyl ether; NG to hydrogen; and NG to Fischer Tropsch diesel.
+Three (3) cycles are ethanol production cycles: corn to ethanol; woody biomass to ethanol; and herbaceous biomass to ethanol.
+The remaining two (2) cycles are soybean to biodiesel, and solar energy to hydrogen.
+GREET was developed for estimating emissions and energy use of light and heavy vehicles (i.e., passenger cars, light, medium, and heavy trucks, and buses).
+The advanced and conventional technologies included are: electric vehicles; hybrid vehicles; fuel cell vehicles operating on hydrogen, ethanol or methanol; CNG vehicles; LPG vehicles; and internal combustion engine vehicles fueled with RFG, low-sulfur diesel, M85, M100, E85, or E100.
+Fuel cycle grams per mile emissions and Btu per mile energy use are calculated for each vehicle type.
+GREET calculates the energy consumption of a fuel cycle by taking into account the amount of energy consumed in each of the stages involved in the fuel cycle.
+In addition, by considering petroleum consumption in each fuel-cycle stage, the model calculates petroleum use by different vehicle types using different fuels.
+Calculation of emissions for a particular stage are estimated in grams per million Btu of fuel throughput from the stage.
+The calculation of emissions takes into account combustion of process fuels, leakage of fuels, fuel evaporation, and other emission sources.
+Outputs resulting from GREET include the following: Â· Â· Â· Grams per mile emissions for HC, CO NOx, PM10, and SOx; Grams per mile emissions for CO2, CH4, and N2O; Global warming potential weighted greenhouse gas emissions;
+OTT Program Analysis Methodology Quality Metrics 2002
+- 65-
+May 9, 2001 Final Report
+Â· Â·
+Btu per mile fuel-cycle energy consumption; and Btu per mile fuel-cycle petroleum consumption.
+Currently, the GREET model has been linked with the IMPACTT model so that IMPACTT output is now directly and automatically used by GREET.
+Also, Version 1.5 of GREET has been released by the author but has not yet been integrated into the OTT QM/PAM tools.
+4.2.4 Costs of Various Pollutants
+The criteria pollutant emissions reduction values were calculated using an EPA estimate developed in 1990 which sets the costs of environmental controls at $360/ton for CO, $3660/ton for HC and $3300/ton for NOx (Ref. 28).
+Costs in Reference 29 were modified to reflect 1996 dollars.
+Various CO2 control cost estimates are indicated in Exhibit 4-13.
+Control costs are used instead of damage costs due to the great difficulty of calculating damage costs.
+These costs represent the "value" of reducing CO2 emissions.
+For the QM 2001 evaluations, a low-end value of $15/metric ton (tonne) of CO2 reduction was utilized.
+This equates to $55/metric ton of carbon reduced.
+Note that the QM benefit values (carbon reduction) relate to fuel economy/conservation effects only.
+4.2.5 Aggregate Environmental and Economic Benefits Estimates
+The OTT Program Analysis Methodology includes estimating reductions in carbon emissions from the commercial utilization of OTT-sponsored technologies.
+Exhibit 4-14 details carbon emission reductions estimated by technology.
+By 2030, the OTT program impact will reduce carbon emissions by more than thirteen percent (13%).
+Emissions reductions for NOx, CO, and HC also are evaluated.
+Total emissions reductions and values for NOx, CO and HC are found in Tables A23 Â­ A28 in Appendix A.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 66-
+May 9, 2001 Final Report
+Exhibit 4-13: Range of Costs to Control CO2 Emissions Study Year Reported Value ($/MMTCE) $1996 Value ($/MMT CE) $22 $61 $63 $69 $99 $149 $17 $165 $39 $220 $55 $363 $100 $150 $200 $348 $294 $250 $163 $134 $67 $196 $13.72 $98 $196 $9 $231 $18 $6 $0 $5 $27 $5 $29 $35 $109 $6 $73 $55 $165 $209 Summary of 10 models Summary of 10 models Summary of 10 models Congressional testimony Congressional testimony "Ca "Ca "Ca "Ca "Ca "Ca rbo rbo rbo rbo rbo rbo n n n n n n p p p p p p ri ri ri ri ri ri c c c c c c e" e" e" e" e" e" for for for for for for 201 201 201 201 201 201 0 0 0 0 0 0 Notes
+Costs of Tree Planting Used as a Reasonable First Approximation $17.08 Low 1988 Buchanan (Bonneville Power Adm.) $47.44 High $53 Low 1990 Dudek and LeBlanc (EDF) $58 High $80 Low 1989 Chernick and Caverhill $120 High Carbon Tax Required to Meet Stated Levels $15 Low EMF 12 (1990 levels) 1992 $150 High $35 Low EMF 12 (10% below 1990 levels) 1992 $200 High $50 Low EMF 12 (20% below 1990 levels) 1992 $330 High AFL-CIO (1990 levels) $100 1997 $150 Low David Montgomery (Charles R. Assoc.)
+1997 $200 High DOE/EIA (7% below 1990 levels) 1998 $348 DOE/EIA (3% below 1990 levels) 1998 $294 DOE/EIA (1990 levels) 1998 $250 DOE/EIA (9% over 1990 levels) 1998 $163 DOE/EIA (14% over 1990 levels) 1998 $134 DOE/EIA (24% over 1990 levels) 1998 $67 Cost of Emission Allowances under a Trading System Clinton Administration (domestic only) 1998 $200 Clinton Administration (global trading) 1998 $14 Cecil Roberts(UMW A) 1998 $100 1998 $200 Optimal Tax (taking into account projected damage) $8 Low Peck and Tiesberg 1992 $210 High Maddison $16.84 1993 $5.24 Nordhaus 1993 W illiams $0 1995 Damage Estimates for Marginal Emissions $5 Low 1993 Fankhauser and Pearce $25 High $5 Low 1996 Hope and Maul $29 High Proposed Externality Values $29 California 1990 Massachusetts $92 1990 $5 New York 1990 Nevada $61 1990 $50 Low 1992 EPA (Renewable Electricity Generation ) $150 High Miscellaneous Ledbetter and Ross (ACEEE) 1990 $176
+The Oil D The Oil D Assumes No global
+aily, 8/4/98 aily, 8/4/98 global trading; JI; etc. trading
+Lower value is for 1990 Higher value is for 2200 Tax for 2000
+Mean value of initial scenario Mean value for scenario w/ highest cost Pr Pr Pr Pr op op op op ose ose ose ose d d d d va va va va l l l l u u u u e e e e fo fo fo fo r r r r re re re re sou sou sou sou r r r r ce ce ce ce pl pl pl pl a a a a nni nni nni nni ng ng ng ng
+Values used for modelling purposes Based on gas tax needed to raise CAFE to 44 mpg
+OTT Program Analysis Methodology Quality Metrics 2002
+- 67-
+May 9, 2001 Final Report
+Exhibit 4-14: Carbon Emissions Reductions Carbon Reductions Million Metric Tons Equivalent
+Technology Year 2005
+(MMTCE) Year 2010 Year 2020 Year 2030
+Vehicle Technologies R
+Hybrid Systems Fuel Cell Advanced Combustion SIDI Car CIDI Light Truck CIDI
+Electric Vehicle Household EV EPAct ZEV Mandates
+Heavy Vehicle Systems Class 3-6 Class 7
+Materials Technologies
+Propulsion System Light Vehicle Electric Vehicle Hybrid Vehicle Fuel Cell Vehicle
+Technology Deployment
+Household EPAct Fuels Development
+Blends and FlexDedicated Fuel Total Baseline (AEO 00 - Transportation) Percent Reduction
+2.678 0.803 0.000 1.539 0.516 0.971 0.053 0.006 0.000 0.006 0.331 0.020 0.310 0.000 0.000 0.023 0.000 0.023 0.000 0.023 0.000 0.800 0.000 0.799 0.319 0.309 0.009 0.000 0.000 3.820 573.1 0.67%
+14.584 3.573 0.123 9.614 3.934 4.016 1.663 0.053 0.003 0.050 1.220 0.093 1.128 0.000 0.000 0.118 0.000 0.118 0.000 0.104 0.014 1.009 0.173 0.836 3.186 3.025 0.161 0.000 0.000 18.896 628.5 3.01%
+57.038 20.822 3.875 26.796 11.470 8.966 6.360 1.398 1.181 0.217 4.146 0.447 3.698 0.000 0.000 1.146 0.000 1.146 0.114 0.606 0.426 2.349 1.487 0.862 9.557 8.695 0.861 0.000 0.000 70.089 730.8 9.59%
+93.000 40.744 15.245 27.379 11.499 8.580 7.300 3.968 2.141 1.826 5.664 0.744 4.920 0.000 0.000 3.068 0.000 3.068 0.207 1.187 1.675 2.786 1.902 0.884 15.928 15.249 0.678 0.000 0.000 114.782 849.8 13.51%
+OTT Program Analysis Methodology Quality Metrics 2002
+- 68-
+May 9, 2001 Final Report
+5.0 Accomplishments and Future Plans 5.1 Accomplishments Three principal changes were made in the Quality Metrics calculations compared to the preceding year.
+These modifications contributed to the changes in oil savings and other program benefits: 1.
+The EIA AEO 00 base case fuel prices were similar to the base case in AEO 99.
+The lower petroleum prices continue to influence benefits estimates.
+2.
+A high fuel price scenario was added to the sensitivity study to reflect the current surge in petroleum prices.
+Current long term AEO energy price projections do not yet reflect current price increases.
+3.
+A sensitivity scenario was added to reflect a possible future market without the advanced diesel or SIDI technologies.
+4.
+Changes in the technology input assumptions.
+For example, hybrid electric vehicles are presented in two versions: the 2X version (twice conventional fuel economy) is currently available in limited classes.
+The 3X version, which is system-optimized, becomes available in the 2005-2008 time period.
+Fuel cells were split into two subcategories: gasoline-fueled and hydrogen-fueled, with the hydrogen version becoming available in the mid-teens.
+5.
+Heavy Vehicle technology market performance was analyzed using updated VIUS attributes and considering alternative vehicle cost and fuel price assumptions.
+6.
+Analysis results were extended to year 2030.
+5.2 Future Plans Analytical improvements planned for future QM and OTT Impacts Assessments include the following: 1.
+2.
+3.
+4.
+Â· Updating the vehicle choice methodology, Comparisons to Annual Energy Outlook Projections, Disaggregate Truck Class 2 benefits onto Classes 2A and 2B, Update the review of estimates of the premium for imported oil.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 69 -
+May 9, 2001 Final Report
+6.0 References 1.
+"Annual Energy Outlook 2000, With Projections to 2020," Energy Information Agency, Department of Energy, Washington, DC, Publication DOE/EIA-0383 (00).
+(Website address: http://www.eia.doe.gov/oiaf/aeo00/homepage.html).
+2.
+"Five-Year Transportation Program Plan," Office of Transportation Technologies, U.S. Department of Energy, Washington, D.C., August 1, 1994.
+3.
+Maples, J.D., et al., "Program Analysis Methodology: Office of Transportation Technologies, Quality Metrics 2001," U.S. Department of Energy, Office of Transportation Technologies, Washington, DC.
+(Web address: http://www.ott.doe.gov/analytical/impact_eval.html).
+4.
+Thompkins, M., et al., "Determinants of Alternative Fuel Vehicle Choices in the Continental United States," 77th Annual Meeting of the Transportation Research Board, Washington, D.C., January 1998.
+5.
+"Assessment of the Costs and Benefits of Flexible and Alternative Fuel Use in the U.S. Transportation Sector: Technical Report Fourteen: Market Potential and Impacts of Alternative Fuel Use in Light-Duty Vehicles: A 2000/2010 Analysis," U.S. Department of Energy, DOE/PO-0042, January 1996.
+6.
+1997 Vehicle Inventory and Use Survey, EC97TV-US U.S. Bureau of the Census, Washington, DC, 1999.
+7.
+1997 Return on Investment Survey, American Trucking Association, Arlington, Va., 1997.
+8. "Service Report: The Impacts of Increased Diesel Penetration in the Transportation Sector, EIA Office of Integrated Analyses and Forecasting," SR/OIAF/98-02, August 1998.
+(Web address: http://www.eia.gov/oiaf/servicerpt/preface.html).
+9.
+Personal Communication with Stacy Davis, ORNL, November 1998.
+10.
+Mintz, M.M., et al., "The IMPACTT Model: Structure and Technical Description," Publication No.: ANL/ESD/TM-93, Argonne National Laboratory, Argonne, Illinois, December 1994.
+11.
+Greene, D. 
+12.
+Personal Communication with Tien Nguyen, USDA Office of Fuels Development, September 1998.
+13.
+Greene, David L., "Survey Evidence on the Importance of Fuel Availability to Choice of Alternative Fuels and Vehicles," published with permission of the author, 1997.
+14.
+Kline, D. (NREL), "Long-run Import Dependence and the Import Premium," Stanford University, Energy Modeling Forum 6, 1981.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 70 -
+May 9, 2001 Final Report
+15.
+Hu, P.S.
+"Estimates of 1996 U.S. Military Expenditures on Defending Oil Supplies from the Middle East," Oak Ridge National Laboratory Technical Memorandum, Oak Ridge, Tennessee, January 1997.
+16.
+AAMA, "AAMA Motor Vehicles Facts 
+17.
+"Center Accelerates Ford R
+18.
+"Ford's New World Car Worth $6 Billion," PRS Automotive Service, July 14, 1993.
+19.
+"Ford to Refine Engine Plant," Automotive News, March 7, 1994.
+20.
+Gwenell L. Bass, "Cost Scenarios of Shortening the Normal Product Lives of Cars," Congressional Research Service, May 29, 1992.
+21.
+Girsky, S.J., et al., Automotive Industry--Industry Report Paine Webber Inc., April 10, 1995.
+22.
+"GM is Expected to Put Saturn Complex in Tennessee as UAW Board Votes," Wall Street Journal, Eastern Edition, July 29, 1985, p.31.
+23.
+Vyas, A., H. K. Ng, D. J. Santini, and J. L. Anderson, 1997, "Batteries for Electric Drive Vehicles: Evaluation of Future Characteristics and Costs through a Delphi Study," in State of Alternative Fuel Technologies - 1997, SAE International Report SP-1274, pp. 13-34, Warrendale, PA. 24.
+Cuenca, R. and L. L. Gaines, "Estimate of Electric Vehicle Production Cost," Argonne National Laboratory, Argonne, IL, unpublished information, 1997.
+25.
+Cuenca, R., "Simple Cost Model for EV Traction Motors," Proceedings of the Second World Car Conference, University of California at Riverside, Riverside, CA, 1995.
+26.
+Cuenca, R., "Methodologies for Long-Run Cost Estimations of Automotive Products," presented at the Electric Vehicle Workshop held at the University of California at Davis, Davis, CA, 1996.
+27.
+Wang, M.Q., "GREET 1.0 - Transportation Fuel Cycles Model: Methodology and Use," Publication No.: ANL/ESD-33, Argonne National Laboratory, Argonne, Illinois, June 1996.
+28.
+Personal Communication from W. Schroeer, U.S. EPA, September 1990.
+29.
+Davis, Stacy C., et al., Transportation Energy Data Book: Edition 18, Oak Ridge National Laboratory, Oak Ridge, Tennessee, August 1998.
+30.
+"Reducing Greenhouse Gases in the Transportation Sector," Presentation to ENO Transportation Foundation 77th Annual Joint Conference on Global Climate Change, Washington, DC, December 9, 1998.
+31.
+Personal Communication with John Maples, December 20, 1996.
+OTT Program Analysis Methodology Quality Metrics 2002
+- 71 -
+May 9, 2001 Final Report
+32.
+Fang, Jeffry M., "Multipliers for Assessing the Economic Impacts of Investment in Advanced Vehicle Transportation Technologies Based on 1992 Industry Structure and 1995 Regional Data: An Update", 1998
+OTT Program Analysis Methodology Quality Metrics 2002
+- 72 -
+May 9, 2001 Final Report
+7.0 Supporting Information 7.1 Glossary 1.
+APU Â­ Auxiliary Power Unit: APU's are smaller prime movers typically mounted within a vehicle to provide power to auxiliary equipment.
+An example would be to power a refrigeration system on a refrigerated truck.
+APU's are often more efficient than using the main power unit to provide power to auxiliary systems.
+2.
+CIDI Â­ Compression Ignition/Direct Injection: Diesel engines produce combustion via high pressure compression of the air/fuel mixture, rather than with a spark as in conventional automobile engines.
+Direct Injection (DI) diesel engines inject the fuel directly into the main combustion chamber rather than indirectly into a smaller pre-chamber.
+This tends to be more difficult to control, but yields a higher efficiency than the indirect injection technique.
+This term applies in this report to advanced direct-injected automotive-size diesel engines.
+3.
+CNG: Compressed Natural Gas: When used as a transportation fuel, natural gas is stored on-board either as a compressed gas or a cryogenic liquid form.
+Most CNG systems store compressed natural gas at pressures up to 3,000 to 3,500 psig.
+At 3,000 psig, one gallon of compressed natural gas contains about 27,500 BTU, about 30% of the energy density of liquefied natural gas.
+4.
+CV Â­ Conventional Vehicle: In this case, this usually applies to a conventional automobile, powered with a spark ignition engine burning gasoline.
+5.
+EE/RE Â­ Office Energy Efficiency and Renewable Energy at DOE 6.
+EIA Â­ Energy Information Agency 7.
+EPAct Â­ Environmental Policy Act 8.
+ESM Â­ Economic Spreadsheet Model 9.
+ETOH: An acronym abbreviation for ethanol or ethyl alcohol.
+Ethanol can be used in its "pure" form (95% + ethanol) or as blended with various petroleum-based hydrocarbon fuels.
+10.
+FCV-Fuel Cell (Powered) Vehicle: A vehicle obtaining motive power from an on-board fuel cell.
+11.
+FFV - Flex Fuel Vehicle: A vehicle designed to operate within a range of different fuels or fuel mixtures.
+For instance, one vehicle may be designed to burn pure ethanol or mixtures if ethanol and gasoline within specific limits.
+Emissions effects often control the permitted ranges of FFV's.
+12.
+FLEX FUEL-see FFV 13.
+FUEL ECONOMY Â­ All fuel economy values presented in this report are normalized equivalent energy economy values, that is, miles per unit of energy consumed, where the unit of energy is defined as one gallon of standard-grade gasoline containing 125,000 BTU (high heat value).
+To convert to miles per million BTU, multiply values by 8.0.
+14.
+GREET Â­ Greenhouse Gases, Regulated Emissions, and Energy Use in Transportation Model 15.
+GPRA Â­ Government Performance Results Act: The basis of the Quality Metrics Program.
+16.
+GVW Â­ Gross Vehicle Weight: This is the maximum total weight (vehicle + passengers + cargo) that is permitted by the manufacturers.
+17.
+HEV Â­ Hybrid Electric Vehicle: A Vehicle that utilizes two or more power systems for motive power-typically a combination internal combustion engine and a battery/motor.
+These systems may be interconnected in parallel (both providing motive power) or series (the internal combustion engine feeding the batteries and the batteries feeding the electric motor).
+OTT Program Analysis Methodology Quality Metrics 2002 - 73 May 9, 2001 Final Report
+18.
+HDDV -Heavy Duty Diesel Vehicle: A generic term applied to large diesel-powered trucks.
+19.
+HVMP Â­ Heavy Vehicle Market Penetration Model 20.
+IMPACTT Â­ Integrated Market Penetration and Anticipated Cost of Transportation Technologies Model 21.
+LV Â­ Light Vehicle: An automobile or light truck under 6500 LB GVW. 22.
+LNG Â­ Liquefied Natural Gas: Natural gas can be converted into liquid form for on-board storage if it is cooled to approximately -258oF.
+at atmospheric pressure.
+23.
+LPG Â­ Liquid Propane Gas: LP gas is typically a mixture of propane and butane.
+24.
+MMB/DOE-Millions of Barrels per day of Oil Equivalent: An energy measure expressed in cure oil production rate at 5.8 million BTU per barrel.
+25.
+MMTONS Â­ Million Metric Tons: Commonly used as a measure of carbon emissions generation.
+26.
+NG Â­ Natural Gas: A naturally-occurring mixture of light hydrocarbons (mostly methane with some ethane and higher carbon gases) as well as other trace gases (hydrogen, carbon dioxide, nitrogen).
+When gathered into pipelines, natural gas is made more uniform by mixing propane and other gases with it.
+27.
+OAAT Â­ Office of Advanced Automotive Technologies 28.
+OEM Â­ Original Equipment Manufacturer 29.
+OFD Â­ Office of Fuels Development 30.
+OTT Â­ Office of Transportation Technologies in the DOE Office of Energy Efficiency and Renewable Energy 31.
+PNGV Â­ Partnership for a New Generation Vehicle Program 32.
+QUADS: A measure of energy quantity.
+One Quad is equal to 1015 (a million-billion) BTU's.
+One Quad of petroleum is equal to 181 million barrels of crude petroleum or 8 billion gallons of gasoline.
+The US consumes about 100 Quads of energy annually.
+33.
+RIMS II Â­ Regional Input-Output Modeling System 34.
+RFG Â­ Reformulated Gasoline: Gasoline that has been refined in such a way to reduce emissions more than conventional gasoline-typically lower in sulfur and with better control of the volatile subfraction.
+35.
+SIDI Â­ Spark ignition direct injection or stratified charge direct injection 36.
+VIUS Â­ Vehicle Inventory and Use Survey 37.
+VMT Â­ Vehicle Miles Traveled: This term usually applies to the sum of the miles traveled by each vehicle within a selected group.
+It is a measure of overall transportation service.
+38.
+VSCC Â­ Vehicle Size/Consumer Choice Model 39.
+ZEV Â­ Zero Emissions Vehicle
+7.2 Energy Conversion Factors Used All energy values and conversion factors units used in this report are based on the values and conversion factors used in the Transportation Energy Data Book, Version 20 ORNL-6959 which is available on-line at: http//www-cta.ornl.gov/data/tedb.htm.
+Unless otherwise indicated, gross energy values (HHV) have been used throughout.
+OTT Program Analysis Methodology Quality Metrics 2002 - 74 May 9, 2001 Final Report
+Quality Metrics 2002 Results Presentations: Table 1.
+Table 2.
+QM 2002 Summary Table Â­ Energy savings, oil displaced, energy cost savings, and carbon reductions for OTT Planning Units, 2000 Â­ 2030 (3 pages) GPRA: Advanced Vehicle Technology, 2000 - 2030
+Table 2a.
+GPRA Advanced Automotive Technologies, 2000 - 2030 Table 2b.
+GPRA Heavy Vehicle Technologies, 2000 - 2030 Table 3.
+Table 4.
+Table 5.
+Table 6.
+Table 7.
+Table 8.
+Table 9.
+GPRA Materials Technologies, 2000 - 2030 GPRA Technology Deployment, 2000 - 2030 GPRA Fuels Development, 2000 - 2030 OTT QM 2001 Planning Unit Estimates, 2000 - 2030 The Transportation Petroleum Gap, 2000 - 2020 Light Vehicle Market Penetration, 2000 - 2030 Market Penetration within Light Vehicle Size Class, 2000 - 2030
+Table 10.
+Market Penetration in the Light Sector, 2000 - 2030 Table 11.
+Annual New Light Vehicle Sales Â­ numbers of vehicles sold, 2000 Â­ 2030 Table 12.
+Percent of Total Light Vehicles in Use, all technologies, 2000 Â­ 2030 Table 13.
+Number of Light Vehicles in Use by year, all technologies, 2000 Â­ 2030 Table 14.
+Summation of Gasoline Displaced by Light Vehicles, all technologies, 2000 Â­ 2030 ( 3 pages) Table 15.
+Light Truck Class 1 
+Projected Biofuels Demand Â­ Ethanol, Blends and Extenders, 2000 Â­ 2030 Table 17.
+EPACT Light Fleet Alternative Fuel Use Estimates Â­ CNG, LPG, Ethanol, Methanol, 2000 Â­ 2030 Table 18.
+ZEV and EPACT Light Electric Vehicle Fuel Use Estimates, 2000 Â­ 2030 Table 19.
+Light Vehicle Energy Cost Savings, 2000 Â­ 2030 Table 20.
+Transportation Energy Prices AEO '99, 2000 Â­ 2030 Table 21.
+Total Carbon Emissions Reductions Â­ all technologies, 2000 Â­ 2030 Table 22.
+Value of Carbon Emission Reductions Â­ all technologies, 2000 Â­ 2030 Table 23.
+Light Vehicle NOx Emission Reductions Â­ all technologies, 2000 Â­ 2030 Table 24.
+Value of Light Vehicle NOx Emission Reductions Â­ all technologies, 2000 Â­ 2030 Table 25.
+Light Vehicle CO Emission Reductions Â­ all technologies, 2000 Â­ 2030 OTT Program Analysis Methodology Quality Metrics 2002 -A-iMay 9, 2001 Final Report
+Table 26.
+Value of Light Vehicle CO Emissions Reductions Â­ all technologies, 2000 Â­ 2030 Table 27.
+Light Vehicle HC Emission Reductions Â­ all technologies, 2000 Â­ 2030 Table 28.
+Value of Light Vehicle HC Emission Reductions Â­ all technologies, 2000 Â­ 2030 Table 29.
+Light Vehicle Purchase Price Table 30.
+Total Consumer Investment-billion $1998 Table 31.
+Total Incremental Consumer Investment-billion $1998 Table 32.
+Incremental Capital Expenditure for Advanced Vehicle Production Table 33.
+New Light Vehicle Fuel Economy Table 34.
+Summary Class 3 Â­ 8 Energy and Emission Reductions Table 35.
+Market Penetration of Advanced Diesels and Alternative Fuels in Heavy Vehicles, 2000 Â­ 2023 Table 36.
+Heavy Vehicle (Class 3 Â­ 8) Sales and Stocks of Advanced Diesel and Natural Gas Vehicles, 1995 Â­ 2030 Table 37.
+Heavy Vehicles (Class 3 Â­ 8) Energy Use and Petroleum Reduction, 2000 Â­ 2030 Table 38.
+Heavy Vehicle (Class 3 Â­ 8) CO2 Emissions and Emissions Reduction (1,000 tons), 2000 Â­ 2030 Table 39.
+Heavy Vehicle (Class 3 Â­ 8) NOx Emissions and Emissions Reduction (1,000 tons), 2000 Â­ 2030 Table 40.
+Heavy Vehicle (Class 3 Â­ 8) CO Emissions and Emissions Reduction (1,000 tons), 2000 Â­ 2030 Table 41.
+Heavy Vehicle (Class 3 Â­ 8) NMHC Emissions and Emissions Reduction (1,000 tons), 2000 Â­ 2030 Table 42.
+Value of Heavy Vehicle Emission Reductions Â­ Carbon, NOx CO, NMHC, 2000 Â­ 2030
+OTT Program Analysis Methodology Quality Metrics 2002
+-A-ii-
+May 9, 2001 Final Report
+TABLE A-1b
+QM 2002 SUMMARY Primary Energy Displaced (mbpd) Primary Oil Displaced (mbpd) 2015 0.891 0.259 0.028 0.515 0.210 0.191 0.114 0.027 0.010 0.017 0.062 0.006 0.055 0.000 0.000 0.012 0.000 0.012 0.001 0.008 0.003 0.000 0.000 0.000 0.160 0.138 0.021 0.000 0.000 1.063 2020 1.363 0.507 0.027 0.682 0.279 0.236 0.167 0.048 0.028 0.021 0.098 0.011 0.088 0.000 0.000 0.020 0.000 0.020 0.003 0.015 0.003 0.000 0.000 0.000 0.240 0.218 0.022 0.000 0.000 1.623 2025 1.913 0.776 0.231 0.714 0.291 0.235 0.188 0.066 0.042 0.024 0.125 0.014 0.111 0.000 0.000 0.052 0.000 0.052 0.004 0.023 0.025 0.000 0.000 0.000 0.320 0.301 0.018 0.000 0.000 2.285 2030 2.276 0.992 0.375 0.697 0.280 0.225 0.192 0.078 0.051 0.027 0.134 0.018 0.116 0.000 0.000 0.075 0.000 0.075 0.005 0.029 0.041 0.000 0.000 0.000 0.400 0.383 0.017 0.000 0.000 2.751 2000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.033 0.000 0.033 0.000 0.000 0.000 0.000 0.000 0.034 2005 0.076 0.020 0.000 0.040 0.013 0.026 0.001 0.009 0.000 0.009 0.008 0.000 0.007 0.000 0.000 0.001 0.000 0.001 0.000 0.001 0.000 0.088 0.000 0.087 0.008 0.008 0.000 0.000 0.000 0.172 2010 0.384 0.087 0.003 0.245 0.096 0.106 0.044 0.020 0.000 0.019 0.029 0.002 0.027 0.000 0.000 0.003 0.000 0.003 0.000 0.003 0.000 0.108 0.017 0.091 0.080 0.076 0.004 0.000 0.000 0.575 2015 0.910 0.259 0.030 0.515 0.210 0.191 0.114 0.044 0.016 0.028 0.062 0.006 0.055 0.000 0.000 0.012 0.000 0.012 0.002 0.008 0.003 0.173 0.080 0.093 0.160 0.138 0.021 0.000 0.000 1.255 2020 1.468 0.507 0.102 0.682 0.279 0.236 0.167 0.079 0.045 0.034 0.098 0.011 0.088 0.000 0.000 0.023 0.000 0.023 0.004 0.015 0.004 0.236 0.142 0.094 0.240 0.218 0.022 0.000 0.000 1.967 2025 1.977 0.776 0.254 0.714 0.291 0.235 0.188 0.107 0.068 0.039 0.125 0.014 0.111 0.000 0.000 0.057 0.000 0.057 0.007 0.023 0.028 0.271 0.176 0.095 0.320 0.301 0.018 0.000 0.000 2.625 2030 2.368 0.992 0.418 0.697 0.280 0.225 0.192 0.127 0.083 0.044 0.134 0.018 0.116 0.000 0.000 0.083 0.000 0.083 0.008 0.029 0.046 0.278 0.182 0.097 0.400 0.383 0.017 0.000 0.000 3.129
+PLANNING UNIT Vehicle Technologies R
+2000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001 0.000 0.001 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.001
+2005 0.071 0.020 0.000 0.040 0.013 0.026 0.001 0.004 0.000 0.004 0.008 0.000 0.007 0.000 0.000 0.001 0.000 0.001 0.000 0.001 0.000 0.000 0.000 0.000 0.008 0.008 0.000 0.000 0.000 0.080
+2010 0.377 0.087 0.003 0.245 0.096 0.106 0.044 0.013 0.000 0.013 0.029 0.002 0.027 0.000 0.000 0.003 0.000 0.003 0.000 0.003 0.000 0.000 0.000 0.000 0.080 0.076 0.004 0.000 0.000 0.460
+Note: 1) Advanced Materials - metrics shown for Light Vehicle Materials are derived from percentages of total metrics estimated for Electric, Hybrid and Fuel Cell vehicles Electric: 8.8% of total Hybrid: 2.8% of total Fuel Cell 9.9% of total 2) EPAct/ZEV Mandate EVs are not included in Materials Technologies Planning Unit
+A. Birky - QM2002 rev2
+10/18/01
+Summary - 3
+Table A-36 Heavy Vehicle (Class 3-8) Sales and Stocks of Advanced Diesel and Natural Gas Vehicles
+SALES Year 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2025 2030 3-6 Adv.
+Diesel 0 0 0 590 1245 1585 2498 3769 5265 8945 10084 10618 11332 12052 14521 12835 13492 14246 15039 17345 15513 17887 19914 7
+Diesel CNG Adv.
+Diesel 0 12910 0 0 0 14362 0 0 0 17045 0 0 0 20254 0 590 0 23898 0 1834 0 28214 0 3412 0 34704 0 5895 0 42725 0 9634 0 50992 0 14846 0 60399 0 23697 0 69926 0 33619 0 76066 0 43978 0 83158 0 54919 0 89567 0 66400 0 96997 0 80116 0 105527 0 91846 0 116435 0 103871 0 125193 0 116215 0 134309 0 128852 0 145764 0 143232 0 161979 0 155160 0 163742 0 215719 0 163223 0 269214
+STOCKS CNG 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+STOCKS (Percent 7
+Diesel CNG Adv.
+Diesel CNG Adv. 12910 0 0.0% 0.0% 27232 0 0.0% 0.0% 44172 0 0.0% 0.0% 64221 0 0.0% 0.0% 87756 0 0.1% 0.0% 115373 0 0.2% 0.0% 149139 0 0.4% 0.0% 189376 0 0.6% 0.0% 237131 0 1.0% 0.0% 293241 0 1.5% 0.0% 357552 0 2.1% 0.0% 426388 0 2.8% 0.0% 500140 0 3.4% 0.0% 577676 0 4.1% 0.0% 659591 0 4.9% 0.0% 746646 0 5.7% 0.0% 840785 0 6.4% 0.0% 939493 0 7.1% 0.0% 1043023 0 7.8% 0.0% 1153229 0 8.5% 0.0% 1274544 0 9.2% 0.0% 1795720 0 12.4% 0.0% 2149537 0 14.7% 0.0%
+of Total) 7
+John Maples
+April 24, 2001
+Hvy Trk Sales and Stocks - 41

@@ -1,0 +1,575 @@
+An Interview with Harry Nelson Harry Nelson HN = Harry Nelson GAM = George Michael __________________________________________________________________ GAM: It's July 13, 1993.
+Harry, why don't you begin by telling us when you started at the Laboratory.
+HN: George, I started in the summer of 1960, and my first assignment was to go to the cooler and wait till I got my clearance.
+GAM: Well, what was the machine that they got you introduced to?
+HN: I basically became interested in the Lab through a representative from Remington Rand who had just installed LARC computer at Livermore.
+And I expected that I would be working on a LARC in some aspect or other.
+As it turned out, by the time I got here, the LARC was already pretty well under control.
+The Stretch computer was coming in soon, and I got assigned to work on the Stretch.
+GAM: Was this from the point of view of developing what we call software, or were you doing an applications program, or what?
+HN: I was assigned to work on an applications program called ABLE [1], one of the Lab's major and mainstream programs that had been around for years.
+GAM: Did you generate any reports that I could go get out of the library or TID, or something like that?
+HN: I don't know--it's possible that there are still some things around, but I doubt if there's anything with my particular name on it relating to that project.
+GAM: Okay.
+Well, who was your supervisor then?
+HN: It seems to me that Clarence Badger was my first supervisor.
+I worked with Bill Schultz, though, of A Division, directly.
+He was the main contact, and the author of the ABLE program.
+Barbara Snow and I were assigned to reduce Bill's algorithms and instructions to a computer code that would run on the Stretch.
+GAM: What was the language you were using then?
+HN: Well, at that time we were just using the hardware machine language--assembly language, basically.
+Also, the way we split up the work was that Barbara did the hydrodynamics section, which is the main physics of the code.
+And I did everything else--the sort of surrounding operating system, and all of the peripheral I/O code and some of the physics, also.
+But, at that time, there wasn't even an operating system for the Stretch; it was under construction by IBM, and hadn't been delivered yet.
+We basically were able to produce our own operating system as part of the code package.
+So, when we wanted to run, we would dead-start the machine, and then we'd go on and actually load everything.
+GAM: Do you remember STIPIC?
+HN: STIPIC? No.
+GAM: It was the thing that Norman Hardy wrote to do all the I/O and things like that.
+HN: I never used it.
+We did everything ourselves, using essentially the machine language and our own I/O.
+So we produced an operating system.
+Later on, IBM's operating system and Livermore extensions that Clarence Badger and Garret Boer basically put together became available.
+Of course, we were totally incompatible with that operating system.
+GAM: Naturally.
+HN: So, basically, we shared the machine with the official operating system.
+Whenever they wanted to run the regular operating system they would have to kill our program and re-dead-start the machine, and then the other users would operate under that system.
+We had our own system.
+Since the ABLE code was occupying more than half of the clock hours of that machine anyway, it didn't matter very much.
+GAM: I guess that's true.
+Do you remember how big your codes were?
+HN: Oh, let's see--the Stretch had, as I recall, 80,000 words of memory.
+GAM: I think it was 96K--there were three 32K banks.
+HN: In any case, roughly that order of number of words of memory.
+And we would use it all, whatever was available.
+We managed to fit our code into whatever space was available and not leave any.
+And then most of the data for a typical physics problem would have to reside off of the memory, on a disk storage system or even on tape.
+In fact, the problems would be generated on a different machine and brought over on tape.
+Then we would pull in the data on tape and put it over on the disk, and then do the operations.
+It was a spooling proposition where you read in the data for one row, then you worked on it, then you wrote it out, and then you read in the data for the next row, because you couldn't keep them all in memory.
+GAM: Yes.
+Well, it's clear you didn't stay on the Stretch forever, so what happened?
+HN: Well, I worked on the Stretch until the code seemed to be finished and in real production, and it was handled by operators then.
+We didn't have to contribute any further to that part of it.
+And, let's see, by the time that was all down and seemed to be working well, we had actually two projects.
+The first was a 7090--an IBM 7090 version.
+We had an IBM 709 for a lot of years, and then they upgraded it to 7090, which made it fast enough that it was reasonable to try to run ABLE on that machine.
+So at that time, we basically started a project to convert the code we had to a 7090 version--again, using assembly language.
+GAM: Well, I'm sort of re-interested in languages.
+What did you do about the language situation there?
+HN: We just basically translated by hand, one-to-one, each Stretch assembly language statement over to some equivalent--
+GAM: So you stayed away from FORTRAN?
+HN: We didn't have anything to do with the compilers at that time.
+Anyhow, that project actually never was completed; after some months working on it, we decided that it would be a better idea to work on the 6600, which was also coming about at the same time.
+Basically, the 6600 was Seymour Cray's first big machine that the Lab got.
+They had a 1604 before that--maybe a 3600, also, which was a Control Data product.
+Anyway, the Control Data 6600 came along, and William Bennett, who was working here at that time, had begun to write the ABLE code for the 6600.
+Basically, he had worked only on the physics part.
+Once again, at the time the machine came in, there wasn't an operating system.
+The operating system didn't work.
+It was there, but it was poor, and it had problems.
+I went over and sort of built a shell around Bennett's program, to do the disk reads and writes and the tape functions and so on.
+And that was quite interesting.
+I'd worked on a new machine, and I got to travel back to Wisconsin and meet Seymour Cray and to be involved in that project.
+But then that took some little time--I don't remember, a year or two probably--before that was completely functional.
+There were interesting things--for example, when the first 6600 came in, it had problems; like when you would ask for the machine to read a word from memory, you almost always got the right word, but occasionally you got zero, or you got something else, and there was no error correction, and very little checking, other than some simple parity checks.
+So almost every code that was being tried to run on the 6600 was having big problems, because they couldn't stand this occasionally getting a zero instead of the real answer.
+ABLE, on the other hand, had no problems whatsoever.
+It was written in such a way that if it happened to get a zero instead the real data item, it just could go merrily ahead.
+Of course, the answer didn't agree with the previous run exactly, but to 99.9% accuracy you got the same answers.
+So, actually, the software was better than the hardware in some sense.
+GAM: That's great.
+HN: Along in the process we devised better ways to use the disks, and better ways to use the tapes and so on, and to get our problem run faster than ever before.
+In fact, my recollection is that it ran about three times as fast on the 6600 as it had been running on the Stretch, for the same test problem.
+But the 6600 was really just an interim machine before the 7600, which was the basic goal that Seymour had to start with.
+He just needed to develop this other machine first to try out some of the ideas.
+The 7600 had a lot of improvements; not only was the cycle time cut by more than a factor of 2, but it had a much larger memory with the so-called LCM.
+Well, they had fast memory and slow memory.
+In any case, they were able to build, at that time, much bigger memory than we'd ever had before--approximately, in my recollection, 400,000 words of memory.
+GAM: It was 500,000, I think.
+HN: Well, it was supposed to be 500,000, but in fact, you couldn't really get at all of those.
+So, basically, the programmer was restricted to using 400,000.
+In any case, this meant that some problems that had to use disk before were now able to run completely inside the memory.
+And for those problems, we got an additional speed up of six times over the 6600.
+GAM: Wow!
+HN: Despite the fact that it was only two times internal--but with these other savings, it was very important.
+Basically, then, we were running approximately twenty times as fast on the 7600 as we had been ever before with this code.
+Finally, at that time we were able to actually catch up with the demand for ABLE.
+That was fast enough so we were able to run 20 problems in an hour, where it used to take a day.
+For really the first time in the Laboratory's history we'd actually caught up with the demand.
+GAM: Yes.
+Well, in a way, that speedup gave you the opportunity to run ABLE as a kind of test problem over and over again.
+HN: Yes, and people began to use it in different ways, and did parameter studies, and in fact, generated a lot more use of it than ever before.
+That's the typical thing.
+As a matter of fact, it was in that era that Wilson J. Frank devised the "Jim Frank Law."
+Jim Frank was a physicist and a leader of A Division at that time.
+He had "Jim Frank's Law," which was that for any code that you ran on any machine, if it took less than 5 minutes to complete, then it wasn't interesting.
+If it took more than 30 hours to complete, it wasn't interesting either.
+So, basically, you'd have a code which in a certain era, on a certain machine, was interesting to people because it was sufficiently complicated to do something reasonable, but took, say, 10 hours to complete.
+And then when a machine came along that was a hundred times as fast, and only took 6 minutes to complete, they lost interest in it--the same code.
+What they wanted then was more physics in it, more complex stuff.
+And it wasn't interesting to run that old problem anymore.
+The opposite was also true.
+In the original--in the Stretch--days, a ABLE problem might run 200 hours, or 300 hours.
+If they seemed to be important enough to the physicist, he would kind of fight the problem, and it would run for several hours, maybe 50 hours.
+Then it would have difficulties and would have to be rezoned and continued.
+Then it would run another 50 hours.
+So, to actually get a 300-hour run might take a month of human time, real time.
+When we got that problem down to about 15 hours, with no necessity for human intervention, then they were really happy.
+That's what they had wanted all along.
+Now, today, that same problem would probably take 10 minutes on a Cray C90, and so they really wouldn't run it anymore.
+They wouldn't care.
+They would want something that did more for them, something that did automatic rezoning or some other complexity.
+They'd want to throw in some more to get it up to the point where it seemed like it would be reasonable to do.
+GAM: Do you remember anything about difficulties with round off error and inaccuracies?
+HN: No.
+As I mentioned before, ABLE was a very accommodating code.
+It could stand an arbitrary zero thrown into the middle of it, for example, at most any time, and round off was never a big problem at all.
+It had been a problem in the 709 days.
+The 709 had basically 27 bits of fraction.
+It turned out that it was sort of a borderline amount that you could stand.
+Now, when we got the CDC Star computer, which came after the 7600, it offered two options.
+There were single precision words with 24 bits of fraction, or double precision words with 48 bits of fraction.
+The 48-bit fraction was fine, and everything worked great.
+The 24-bit fraction was not quite good enough.
+The problems actually did have a lot of round off errors, and after a long amount of work on them, mostly done by Chris Hendrickson, we actually determined that 24-bit precision was not adequate to get the answers that we hoped to get out of the codes.
+However, in the earlier days 27-bit precision was adequate, although 27 bits might not have been adequate at this time, because they were running more complex problems at that time than they were ten years earlier.
+GAM: When you mentioned Chris and so forth, by that time the thing had been stuck into FORTRAN, hadn't it?
+HN: Yes, the first FORTRAN version was for the CDC Star.
+Actually, I'm not certain about that.
+There may have been a FORTRAN version started earlier for the 7600, but it was never used, because my machine language version was so much better and faster.
+The FORTRAN version was just a development tool.
+But, when we came to the Star computer, FORTRAN was far more developed, generally speaking.
+A lot more people knew about it, and in fact, even I learned FORTRAN at that time.
+This was 1970, so I had worked here ten years before I ever even attempted to use FORTRAN.
+GAM: That's great.
+HN: I learned FORTRAN, and I also had some kind of feeling for the actual machine language that FORTRAN was generating because I had worked with machine language all my ten years.
+So, we signed a contract to get the Star computer and began working on it.
+It was supposed to be delivered in 1968.
+ABLE was one of the first codes that was going to be run on it.
+In any case, in 1968, we first were able to actually get our hands on the machine back in Minneapolis at the CDC plant, and we quickly discovered that the machine didn't work, basically.
+The hardware did not perform according to the specifications.
+Many different kinds of instructions simply gave the wrong answer, and the ones that worked didn't work all the time.
+The new thing about the Star was that it had vector instructions.
+The vector instruction would use a single hardware instruction to do a whole loop, a whole DO loop equivalent.
+It would turn out that you could write a program in which, if the DO loop length was like 500, it would work, but if it was 515 it would fail.
+Somewhere along the line something would go wrong.
+So at that time, instead of working on ABLE, I started working on the Star.
+I started writing diagnostic programs to try to discover exactly what was wrong, and to show to the engineers exactly how we were seeing these failures.
+Then I got to working very close with the CDC people to actually write real diagnostics that not only would say that something is bad, but would tell them a lot about what was bad and how it could be repaired.
+The Star wasn't actually delivered in what I consider a working condition until 1972, so that was four more years after the initial time I got my hands on it.
+Anyway, over that period, I devised a quite complex diagnostic program for the Star, which supposedly tested every possible combination of every possible instruction.
+One of the interesting things that I remember about the diagnostic program was that it was very important for a diagnostic program to have a random element.
+You could not write a diagnostic program that essentially ran from beginning to end with exactly the same subset of machine instructions.
+If you did that, the engineers would tune the machine up to make it work.
+Instead, I had to write a program that would randomly choose the vector lengths, for example, but would still have self-diagnosing check sums, or various ways of checks--or you'd run an instruction, then you'd rerun the instruction to make sure you got the same answer both times.
+But if you just picked, say, length 600, they would make it work.
+But if I said let's choose a random number between 500 and 5000, and now run it twice in a row, then it was a much more difficult problem, because the machine basically had tuning problems that allowed it to work well under only particular circumstances.
+I have an anecdote from that time.
+I worked at Livermore, and the machine was being built in Minneapolis.
+Periodically, CDC would give me a call and say "Well, we've solved all the problems that we know about.
+Come back and check it out."
+And they had my test program, and they'd run it.
+What normally happened was that as soon as my airplane set down on the runway in Minneapolis, the machine would begin to fail.
+GAM: It knew you were coming.
+HN: It knew I was coming, or so they told me.
+In any case, by the time I got there, it definitely was failing.
+So once or twice, I just got on a plane and came right back, and they worked on it a little more.
+But the Star project was probably as complicated a computer project as was ever attempted.
+Maybe the WHIRLWIND was worse--I'm sure it was worse.
+This was very complicated, and the reason was because they didn't have integrated circuits.
+I mean, when you wanted to do something more, you simply added on more and more hardware to take care of this thing.
+And vector instructions are already extremely complicated anyway, and, you know, they could be length 64,000 or something.
+GAM: Yes.
+I've heard it said that if you read the first two chapters of Iverson's book you got to know the Star programming language.
+HN: Yes, called A Programming Language, or APL.
+The Star instruction set was modeled after that language.
+But I'll tell you another interesting anecdote, which is that the APL language itself was implemented on the Star, and it was never successfully implemented.
+The Star had an APL compiler that simply never worked in the life history of the machine as far as I know.
+GAM: But it had the instructions.
+HN: Exactly right, except it was only 99% APL.
+That other 1% was crucial.
+For example, they didn't have the reshape instruction.
+They had sort of a reshape instruction in hardware, but it wasn't quite exactly the same thing.
+It didn't have all the variations.
+In order to do a reshape you had to employ many hardware instructions, a whole complicated routine.
+To my knowledge, APL was nearly always a failure, and when it did run, it was so slow and poor that nobody could possibly want to use it, despite the fact that supposedly the hardware basically imitated the instructions.
+With FORTRAN, on the other hand, we've found you have the ability to get probably about 50% of the maximum that you could get out of a hardware by any kind of careful assembly language programming.
+With the advanced vectorizing FORTRAN programs you could get up to 95% of the theoretical performance.
+So, FORTRAN was a satisfactory language for that machine, because it gave you the performance that you could have gotten no matter what you chose, and it had the advantage of some compatibility.
+You could move it back and forth to other machines, and you could check it on other machines.
+GAM: Well, when the Star first got here, it didn't have an operating system on it either?
+HN: Yes, it did have an operating system.
+Let's see, I could tell some of those stories.
+I actually have a book here that has my notes about the acceptance test for the Star, because I was involved with the Star for about five years.
+Anyway, it tells all, and it has some of my notes about the attempt.
+Here it is.
+Here we go.
+"The first Star arrives and the acceptance test begins on 20 October 1974.
+Okay.
+First thing, I got my hands on the machine at 11:00.
+My tape could not find the load point on Unit 3, the first note, so we had to call the engineer.
+He said, 'Use Unit 4.
+Unit 3 isn't very good.'
+So we moved my tape to Unit 4.
+All right.
+At 11:05 we're now on Unit 4.
+11:06: I did a program called 'Read Files,' which, as you can imagine, was fairly simple.
+That worked okay.
+11:08: Illegal instruction indicator on VH test."
+I don't know, 'VH test' was probably von Holdt test, I suspect.
+GAM: Sounds like it.
+HN: Von Holdt gave me some program to check.
+In any case, I have kept notes over the years on all the machines that I've been responsible for the testing, beginning with this machine in 1974, for at least the next ten or fifteen years.
+For all the new machines that came to the Laboratory, I had the job of giving them the "Harry test," so to speak, and to make sure that they were operating correctly.
+GAM: Well, in all that experience, did you develop a set of tastes--which one you liked the best, which language you liked the best, or if they're all the same?
+HN: No, actually, as I mentioned before, the fact that you have a random element in the test is very important.
+And another thing is that probably the worst person to test a new computer is one of the people who built it.
+The machine does everything the engineers wanted it to do, and it does everything the programmers wanted it to do, or they wouldn't let you have it.
+But, actually, a room full of monkeys with typewriters would probably be an excellent testing device, if you just had some way to cross-check to see if they were always getting the right answer.
+It's important, in any kind of a complex project, that you have testers who are totally unfamiliar with everything, because they will simply do things that nobody else had ever tried before.
+GAM: Yes, of course.
+HN: So I kind of made it a project to know as little as possible about all this equipment when it came in, so that I wouldn't be biased to not try everything.
+Then I would learn about it as I worked on it, and get more and more sophisticated.
+I would still use some of the old programs and revise them as necessary.
+I tried to not have any sort of predetermined way of going about the test.
+I remember in the Star days, our contract with Control Data was that they would ship the machine when they believed it was ready.
+Then we would test it, and if, in any 30-day period from the beginning of testing, the machine had remained in the condition that we called "up," for 90% of the hours in that 30-day window of time, and the window kept moving, the machine would be accepted.
+GAM: Yes, of course.
+HN: For example, if it was down all the first two days, you'd basically start over with a new 30-day window.
+So they had this moving target.
+And if anywhere in the first 90 days of its actually being there, there was a 30-day window when it was up for 90% of the time, then they would have considered it to have passed the test and would be able to get paid for the project.
+What constituted "up" was kind of mutually agreed on between us and the manufacturer.
+Some periods were allowed to not count because of maintenance and other factors.
+So, in the case of the Star, they actually delivered two machines within one month of each other.
+We got one machine in October, and the other came in about November.
+So we were simultaneously doing a test on two machines.
+The test began on October 20, which meant it would be sometime into January before the 90-day window would have passed.
+This meant that if they didn't ever have a period of 30 days in there when it was up 90% of the time, then they would have been deemed to have failed the acceptance test, and then some other provision of the contract would take place--probably penalty clauses or something, I don't know.
+In any case, the first Star came in and just had unbelievably many difficulties, problems, errors, and memory failures, and parts that were bad and had to be replaced.
+The machine was basically down 50% of the time for the first several weeks or so.
+It wasn't until about mid-November that it began being "up" for a reasonable amount of time during a given day.
+It still had intermittent problems, but along about the first of December the earlier bad time had all slipped out of the 30-day window, so they were beginning to get sort of up into the 80% range above ground.
+It hovered there for a long time (the last week in November had been a particularly bad time), but it kept getting better, and more and more up, and fewer and fewer failures.
+More and more repairs had been made, and so on, so that by the Christmas holidays, it meant that the next week, if they could have good time, then they would be able to ignore the part before the first of December, because that would go away, and we'd be in a December window.
+Well, it was very nip-and-tuck.
+One day they'd be at 88%, and then they would drop to 87%, and then they'd go to 89%.
+In my personal opinion, any computer that only has a 90% up time is a piece of junk, and you ought to throw it away anyhow.
+But at that time, that was all we could ask for; that was in our contract, and we had to accept it when it was 90% up.
+Another thing was, there weren't very many people leaning on the machine when it was brand new, first thing in the door.
+There were a lot of people trying to develop a code and make it work.
+But only my diagnostic program, which had been around already for four years, and under development, was really able to fully run and occupy the machine to its ultimate.
+So basically, I was the only user in some sense who was running real work.
+I tried very hard to keep it running, but over Christmas I took some vacation.
+I didn't come in, and I didn't run it.
+Well, all the time I wasn't there, the machine was considered up, and was working beautifully.
+So, by the time I got back from Christmas holidays, which was January 5, the machine was dead, for my program.
+I mean, the first time I went in and ran on it, there were things that weren't working, that were wrong, that had probably been that way for several days.
+But we don't know--I wasn't there to check it.
+I have a remark here in my notes, which says "System 102", which was the number of the first Star, "was considered to have passed the test barely, as of the morning of January 5th, which was Monday, and the first day I had come in after the holidays."
+That was it.
+When I came in, I said, "The machine is dead.
+It's bad, it's gone, it's down."
+And it took them five days to repair that problem.
+It would have failed--at that point it fell back well under the 90% up time again--but it had already passed the test.
+Meanwhile, the second machine was also under test, and it worked very well.
+It did not have the problems of the first.
+It had some problems, but it was probably passed with 95% up time in the first 30 days.
+So what had happened was that the first one had all these problems, and was under development for eight years or something, and they finally started another one.
+GAM: Based on what they'd already learned.
+HN: Yes.
+They'd learned a lot, and they didn't make a lot of mistakes the second time.
+The other thing was that since they had gone in and fixed everything on the first one, they messed it up.
+The engineers were in there with their fingers on the chips, and it's no wonder it never worked right.
+Well, those were interesting times.
+GAM: Yes, I think they would have been.
+HN: I have a little comment here that one morning we opened up the back console and we found a fried mouse that had gotten into the circuitry somehow and had been electrocuted.
+GAM: That was like that Grace Hopper finding a bug inside the Mark 1--a real bug, a beetle.
+HN: We had a mouse--we didn't mess around with no beetles.
+GAM: Going back to the Stretch, did you ever have much to do with any of the designers from IBM? Did they come out and talk to you?
+HN: No, in the case of the Stretch, I didn't.
+I worked with Norm Hardy, who did have a lot to do with them.
+GAM: He'd gone back to New York to work on it, I remember.
+HN: Yes, but other than Norm, no, none of the engineers.
+The first time I really got involved in it was the hardware side of things with the Star.
+But then, of course, I continued being involved with it with the Cray 1 and the other Cray machines that followed.
+GAM: Well, computers have sort of come a long way.
+HN: Well, nobody ever gets one fast enough.
+I mean, the "Jim Frank Law" always applies.
+When your problems get running fast enough that they only take ten minutes, then you put more physics in them.
+They're not interesting anymore, so you make them harder.
+I doubt that this will ever be overcome.
+GAM: Right now we're entering an era of parallelism of sorts.
+What's your attitude about that?
+HN: Well, all these machines from at least the Stretch days had a lot of parallelism in them.
+It was a very low level parallelism; that is, you had instruction decoding going on, you had arithmetic going on, you had I/O going on, and so on, all at the same time.
+Simultaneously, you had checking circuits, and these were all working in parallel.
+In the case of the 6600, it was the first time that the instruction itself had been broken down into parallel segments so that you could have several hardware instructions proceeding in parallel, each in different stages.
+It may have been done earlier by other people, but it's the first machine I worked on that had that feature, anyway.
+As computers have progressed, they've gotten more and more parallel.
+The thing that is different today is that the parallelism is at a higher level.
+You have entire computers running in parallel with each other and communicating and so forth.
+In the first place, you have 64-bit parallelism in a word.
+All the bits move simultaneously, and then the whole arithmetic is done simultaneously.
+All these things have made it possible for the machines to run faster.
+I mean, the speed of light hasn't changed since the 1960s, and in fact, the speed of electricity moving over the wires hasn't changed very much either.
+It actually has improved slightly in the last thirty years, but not much.
+But the things are closer together.
+The time it takes to get from one place to another is the same per inch, but there aren't as many inches.
+So a modern circuit would do the same thing in a quarter of an inch that the Stretch used to need 72 feet to do.
+In fact, the Stretch itself was de-rated from its design goal of 200 nanoseconds per clock tick to 300 nanoseconds per clock tick, because it got so big that the signal simply couldn't progress down to one end of the machine and back in 200 nanoseconds.
+It took 300, or whatever the amount of time was involved.
+GAM: It was a big machine, but the Star was bigger.
+HN: The Star was even bigger, right.
+And that same problem did happen for the Star, also.
+It had some similar problems--it simply got too big.
+Not that Livermore ever learned anything, of course--they built their own Star later, called the S1.
+GAM: That was terrible.
+HN: Well, it's what you get when you try to put everything into a machine, and then you add stuff besides.
+When you realize at the last minute that you don't have everything yet, and you've got to put more into it, then you lose compactness.
+GAM: That was contrary to RISC (reduced instruction set computer).
+HN: Right.
+And meanwhile, other people were doing RISC-type projects where they were really trying to see what hardware they could take out, and leave to the compiler, and leave to the operating system.
+Get it out of hardware!
+The Stars were trying to pile the whole language of APL into the hardware.
+It didn't work very well.
+But the Stars eventually became reasonably reliable, and were a very important addition to the Laboratory's equipment.
+They were used for many years to run very important physics problems with great success.
+GAM: What do you mean by many years?
+HN: Until at least 1978, so I'd say five years.
+It at least had a five-year life in which they were the fastest machines available for most of the work.
+GAM: In your opinion, did these people who vectorized so thoroughly produce a fairly fragile code, or not?
+HN: No, I don't think so in particular.
+On the Star, in order to get any kind of performance, you did have to have a highly vectorized code.
+What that simply meant was that you tried to break down a piece of physics into loops which did very little in each loop.
+In other words, instead of saying, "take something and add, multiply, look up a random number, generate, this, that, and the other thing, all in one loop," the loop became, "do a hundred thousand adds, do a hundred thousand multiplies, do a hundred thousand random number lookups, do this," and so on.
+It was just sort of a matter of the amount of scale that you put into one loop.
+But the code was just as readable, I think, generally speaking.
+It wasn't exactly the same as the physicists conceived it, but it was fairly straightforward to do that.
+Now, later on, the compilers got good enough that they could do that themselves.
+You could write the code in the other order, and the compiler would, in fact, break it down into those small loops by itself.
+That made it a little more readable to the authors.
+To the programmers it didn't make very much difference.
+GAM: I was thinking that when you get the thing very tightly vectorized, and then you suddenly decide you've got to put in this additional piece of stuff on a given physics loop, then all of a sudden you're all out of sync.
+HN: Well, you are if you have to now have a new data structure and a new way of thinking about it.
+Sometimes it's more complicated, sometimes it isn't.
+GAM: That didn't happen too much.
+HN: It didn't happen too often, particularly for the important applications which hadn't changed a lot over the years.
+We were still running ABLE in 1978, and it was written in 1960, or in the 1950s.
+In fact, it was only beginning to get extremely heavily used in those days.
+GAM: Thinking back about the experiences, did you ever develop a taste for saying, "My God, I wish I had this instruction on this machine," or something like that--but you didn't quite have?
+HN: Well, yes, actually some of that happened.
+In particular, I remember a case with Seymour Cray machines.
+The Cray 1--well, I can look on my notes to see when the first one was delivered, since I helped do the acceptance test.
+GAM: Please do.
+HN: Let's see.
+Here we go--Cray 1, Serial 10.
+That was the first one that we were doing acceptance test on.
+It says "January 2, 1979," Okay, so that's when that came in.
+And here's the first comment, "19:28."
+So that would have been 7:30 at night.
+"All Appendix A tests okay.
+Started Appendix B memory tests."
+At 20:20 (20 after 10:00), "six memory parity errors occurred."
+But these were correctable--on this machine we now had memory correction, so the fact that six errors happened meant nothing.
+They were simply corrected and continued.
+And, then finally, at 20:37, "High-temperature alarm bell rang due to overheated power supply."
+Then I was able to go home for that night while they fixed that, and I started over the next day.
+But the Cray 1 passed its acceptance test on the 30th day, the earliest possible time, and was working very well.
+But one thing that the Cray 1 did not have was an instruction called "gather/scatter," We'd had this instruction on the Star, and it proved very valuable for certain kinds of physics applications where it was necessary to sort of reorder your data from time to time in order to get efficient codes.
+And in one particular code that I knew about, they basically spent half of their actual compute time simply reordering the data, which, had there been a special machine instruction to do that, would have happened a lot quicker.
+So we did notice that, and we were able to make the case for the fact that we needed this instruction which would be very useful.
+We went back to Chippewa, Wisconsin, and talked to Seymour Cray about it, and explained to him what we needed, and what we thought the improvements would be, and so forth.
+And in the next Cray, the XMP Cray, that instruction was added to meet our request.
+GAM: But that's not Seymour's machine really--
+HN: Well, at that time he was still helping design the second model.
+In fact, now I recall--I did have the facts slightly wrong.
+Seymour was working on the Cray 2 project at that time, and we got him to add gather/scatter to the Cray 2.
+This meant that in order to compete, the XMP designer, Steve Chen, had to put it in his machine.
+So we got it in the XMP, since the LC (Livermore Computing Center) never did get a Cray 2.
+I'd forgotten that it was the initiator.
+But we made our argument correctly, it seemed.
+GAM: Did you do the acceptance checking out for NERSC (National Energy Research Supercomputer Center)?
+HN: No, but I did help.
+I did contribute some programs to NERSC, and I did run on Cray 2 in early times, but I wasn't a member of NERSC and I didn't officially have anything to do with their acceptance.
+I did help check out the first XMP that we got on February 8, 1984.
+And among other things, it did have the gather/scatter.
+GAM: Now we've passed the history period at that point.
+Well, I'm trying to flesh out the stuff from the first thirty years.
+All the names, and the notebooks like the one you've got there--those are just very important.
+HN: All right.
+You know, throughout my career, I was always interested in mathematics as such.
+I have a degree in mathematics.
+I have a lot of fun with it, particularly recreational mathematics--various things like prime numbers, largest prime number, and so forth.
+As I mentioned, in order to do diagnostic programs on computers, the very best thing is to do new, different things that no one ever thought of before, particularly the engineers who built it.
+So, it made it possible to use the latest and best hardware at a time when it wasn't very busy, to do interesting problems like find the world's largest prime number or something of that nature.
+I've gotten involved in a couple of those projects over the years.
+We put together a program that applied the appropriate algorithms for testing very large numbers to see if they were primes, and we surrounded that with careful diagnostic routines that would do cross checking, self checking, and so on.
+Those routines were actually quite useful to the project at hand, which was getting the machine in good condition so that we could accept it.
+It meant that we were able to do fun, interesting stuff at the same time we were carrying out our mission, and that was quite interesting.
+GAM: Well, I'm remembering that beautiful poster that you had made of the 27th Mersenne prime--great.
+HN: Right.
+In the case of the Cray 1, Dave Slowinski and I were actually able to find what was the largest prime that was known to anyone in the world at that time.
+GAM: At that time.
+HN: It's been surpassed many times since, but that was the largest then.
+The time for that calculation was available because the machine was in its pre-acceptance phase, and no one had codes ready to run on it.
+This code was ready to run, and simply ran in the background when nothing else was going on.
+And it used probably a thousand hours of compute time.
+But all that time, the Cray 1 would have been idle otherwise.
+And, as I say, it did have self-diagnosing features to it.
+GAM: Well, just as a matter of interest, was it instrumental at any time at showing a bug?
+HN: Yes, oh yes, absolutely.
+GAM: Great.
+HN: Several times we had stops--the program would halt, and say, "something's wrong here--call an engineer!"
+GAM: I love it.
+And then there's your chess stuff, you know?
+HN: Ah, that came about 1980.
+Yes, well, that's in the same era, right? Do you want to go to 1984, roughly?
+GAM: Fine.
+HN: Okay.
+Another interesting project that I worked on involved the Cray 1 also.
+A group lead by Robert Hyatt, who was at that time a student in his senior year at the University of Southern Mississippi, had written a chess-playing program in FORTRAN.
+Actually, most or all previous chess-playing programs were written in machine language, because it's very important for chess programs to get the greatest speed they can out of the hardware.
+In any case, Hyatt had this FORTRAN program running on various machines at the university there, and he was looking around for a faster machine.
+So he had the idea of contacting Cray Research to see if he could get time on the new Cray 1, just coming out, so it would run a lot faster.
+So, he did, and they seemed interested.
+The marketing department said, hey, this would be great--let's get a chess program on here, and so on.
+Because it was written in FORTRAN, you just had to make a few changes to get it ready for Cray FORTRAN to do the little details.
+So he put it on, and he was using it, and running on a Cray machine, in the computer chess tournaments, which are held annually--at that time in connection with the ACM meetings.
+Well, I was very much involved with the acceptance of Crays, and checking them.
+I'd heard about this program and was interested in it.
+I got a copy of the program to run at Livermore.
+That was part of the deal that Hyatt's group had with Cray--they could use the Crays to develop their program and run it, but they had to make it available to any customers who would like to have it.
+GAM: Yes.
+HN: That was sort of the payment.
+So I got a copy, and I checked it out.
+I'd already had a chess program that worked on the 7600 that was written many years earlier.
+I got this new program, and I discovered that it was slower on the Cray 1 than the old 7600 program had been on the 7600.
+Well, the earlier 7600 program was written in careful machine language, whereas this was FORTRAN, and it was sloppily done.
+It wasn't really sloppily done, but it didn't utilize the hardware features of the Cray.
+So, I called the guy up and volunteered.
+I said, "Hey, I know something about this.
+I can help you, I can make some changes, and here's an example."
+So I rewrote one of the programs, one of the subroutines that I knew was taking a lot of time, and sent it to him.
+And I said, "Why don't you just substitute this for what you've got?" And lo and behold, the program as a whole now is suddenly running 25% faster than it was before.
+And this was about a ten-line rewrite of one subroutine.
+So they immediately called back and said, "Hey, this is great! Let's do some more!" So I developed, really, a very interesting relationship with these people.
+And this was about 1980.
+Meanwhile, their program always had done poorly in all the chess tournaments prior to that time, because they didn't have fast hardware.
+And because it was in FORTRAN, it probably wasn't taking really complete advantage of any of the hardware they were running on.
+Well, in any case, now we had a definite goal--to make this program work well on this specific machine.
+So, what I did was to run it a little bit, do some timing studies, find out where it was actually spending its time, and suggest revisions and ways to improve it--put a table in where they were doing a computation, or revise the size of this array, etc.
+And the Cray 1 had millions of words, you know, as opposed to whatever they were using before.
+Well, the first one had a million words as opposed to a hundred thousand or whatever.
+We could expand certain things and so on.
+Well, the upshot of it was, after basically a three-year effort, we had gotten the code to run 25 times faster than the original version that I'd seen.
+In 1983, we also were going to use this version, which has been greatly improved, in the so-called world computer chess championship.
+We also had the XMP II at that time, which is the first supercomputer with two processors.
+So we were able to do some parallel things.
+We did a quite simple thing--just basically, if there were two possible moves you could make, one processor tried one of them and one tried the other.
+And they didn't communicate very well, either.
+It was crude, but it was effective.
+And in 1983, then, the Cray BLITZ program, actually, won the world championship against BELLE, which had been the champion.
+GAM: Yes, that was Ken Thompson of Bell Labs.
+HN: Ken Thompson of Bell, yes.
+It was the first time BELLE had ever lost in a computer chess event of that nature.
+GAM: Great.
+HN: We continued to make improvements and we got faster machines, four-processor machines.
+We learned how to use their parallel nature and stuff much better, so that by 1986 the program was again sped up by another factor of 5 or so.
+And we repeated as world champion in 1986 in Koln, Germany, where the tournament was held.
+Since then, we've been soundly beaten by many people with new projects and new hardware and so on, but a lot of interest was generated in those days by our program.
+GAM: That's great.
+HN: In any case, I would run, basically from my office in Livermore, on a machine in Minneapolis.
+That's where we did our development work that Cray Research Marketing Division provided.
+It was another interesting project.
+GAM: Yes, I think it's very interesting, and it had a certain kind of visibility.
+HN: Visibility, yes.
+And even today, computer chess is still quite interesting.
+Computer chess programs are much better--one of them is rated even at Grand Master level, but is still not as good as the human world champion.
+GAM: I understand.
+HN: But it's a goal.
+Well, I guess the other thing I didn't mention, George, was that I worked on a Stretch back in the '60s, till maybe '65 or so.
+And by that time I'd gotten--foolishly--onto the management track.
+GAM: Uh-oh.
+HN: I started helping the management of codes like ABLE on various processors, in particular.
+And I kept doing this until about 1970, for about five years, and finally decided that it wasn't my direction.
+GAM: Right.
+HN: That's when I got involved in the diagnostic programming of the Star.
+But somebody's got to do the management.
+It didn't have to be me, of course.
+GAM: Right.
+Well, I'm not sure someone has to do it--not in a research lab.
+HN: Well, I disagree.
+I think somebody has to at least keep their fingers on things.
+GAM: Maybe so.
+HN: I'm not sure how, though.
+GAM: So, presently you're sort of still trying to explore the limits of the capabilities of these parallel, larger machines.
+HN: Right.
+It seems that now it's becoming more and more difficult to get more parallelism into these machines at the lowest level.
+GAM: Yes?
+HN: Now, that's pretty much been entirely exploited.
+We can always have faster circuits, and we'd be glad to incorporate those as long as they allow this parallelism.
+But we haven't exploited the higher level parallelism to its greatest extent.
+GAM: Well, it's probably a language problem.
+HN: It's a language problem.
+It's also perhaps a hardware problem to some extent.
+I like to look at it this way: There's this triangle, that you made famous at the Salishan Conference, of hardware, software, and application.
+And, sort of, the parallel programming problem, parallel computer problem, can be looked at from those three aspects.
+Look at it this way: Suppose I'm a computer manufacturer.
+What I say is this: "You give me a lot of money, and I'll develop the perfect hardware to do parallel programming."
+Or I'm a company like, say, NASA/Ames.
+I say, "Hey, I'm an applications guy.
+I've already got the applications that are going to run on this machine.
+You give me a lot of money, and I'll run these applications on the best machine I can buy."
+And then you take a place like Lawrence Livermore Lab, which has software capabilities.
+What they say is, "Well, we know there's certain problems with parallel machines, difficulties and so on, but you give us a lot of money, and we'll write operating systems and languages that make it very easy to run all the applications you'd ever want on any old piece of hardware that these guys provide."
+If you didn't notice, there's one common theme among these three groups.
+GAM: Money.
+HN: You give me a lot of money, and I'll take care of the problem.
+GAM: Very good.
+Oh, that's great! Okay, I want to hear your favorite story now.
+HN: Okay.
+Well, you know I'm over 60.
+I've been around a while.
+I'm one of the few guys, today, whose grandchildren--when they went to school--were able to say, "My grandfather was a programmer!" But, in any case, you know, people come to me and ask for advice, and I'm glad to give advice.
+I mean, they probably don't listen anyway.
+I have a favorite story about giving advice that I think is important.
+When I was young and leaving home for the first time, my father came to me and he said, "Before you leave, I want to give you four pieces of advice."
+He said, "And here they are.
+The first piece of advice is: 'Never get married.'"
+"Now," he said, "The second piece of advice is: 'After you get married, don't have any children.'"
+And he said, "Okay, that's number two.
+Now, here's the third piece of advice I have."
+He said, "'After the first child is born, don't have any more.'"
+And so I'm beginning to look askance here, and finally he said, "And now I'm going to give you the fourth piece of advice, which is really the most important: 'After the second child is born, for heaven's sakes, quit taking my advice!'" That was it--quit taking my advice!
+GAM: Great! Where did you grow up?
+HN: Oh, I spent the first 18 years of my life in Topeka, Kansas, or the nearby environment.
+I went to high school there.
+Then I applied and was accepted at most of the Ivy League schools, and I went to Harvard.
+I took an A.B. in mathematics, which, I thought, was interesting.
+GAM: Oh, I didn't know that.
+HN: Then I was drafted right after that.
+And that was in 1953.
+I went to the Army for a couple of years.
+By that time I was married, and then I used the GI Bill to go back to graduate school at the University of Kansas, in Lawrence, Kansas.
+I got a master's degree in mathematics, and spent a couple of more years teaching there and working on a Ph.D.
+But I never completed it, and I still don't have it.
+[2]
+GAM: I don't think it matters anymore.
+HN: Not anymore, no.
+GAM: What was the name of the little company down in the Los Angeles area where you worked prior to LLNL?
+HN: Oh, yes.
+In 1959 I finally decided (having a couple of kids by that time also) that it was time to go out and start earning some real money instead of living off of the GI Bill, which had run out anyhow--and stop this TA, partial teaching, stuff.
+I looked around.
+And at that time the work for mathematicians--other than teaching, for which you had to have the doctorate pretty much to get anything reasonable--was in the burgeoning, new computer industry.
+And I had several offers of work from various people.
+One of them was for a company called Autonetics, in California.
+GAM: Autonetics--yes, I remember them.
+HN: Autonetics was an offshoot of North American Aviation, which was making computers for their aircraft.
+And they wanted to spin off a civilian division, which they called Autonetics, which was to adapt their airborne computers for commercial use.
+Anyway, I went there.
+__________________________________________________________________
+[1] The name "ABLE", which was never used for a computer code, will be used instead of the actual code name.
+[2] Harry's wife, Claire, who also reviewed this manuscript, added that Harry wanted to do his Ph.D. thesis on computers but that the Math Department did not approve of that topic.
+__________________________________________________________________
+For information about this page contact: George Michael -- gmichael@attbi.com

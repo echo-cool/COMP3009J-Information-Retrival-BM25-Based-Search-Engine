@@ -1,0 +1,540 @@
+' $ SPATIAL METHODS IN SCIENCE IMAGE ANALYSIS Michael Turmon 28 June 2001 A. Scientific Inference B. Ob ject finding: Volcanoes C. Image labeling: Sunspots D. Hierarchical and spatiotemporal models E. Outlook
+Thanks to Michael Burl, Becky Castano, Dennis DeCoste, Eric Mjolsness, and Padhraic Smyth for discussion
+turmon@aig.jpl.nasa.gov http://www-aig.jpl.nasa.gov/home/turmon/ 
+%
+A-1(2) '
+$
+ML FOR SCIENTIFIC INFERENCE ML methods always give: Automation: Mechanized process reduces labor and time needed Cope with increasing data volume (instruments, simulations) Important for data centers: operations often underfunded Repeatability: Well-defined algorithm produces results Uniformity over time key for long-term studies Allows uniformity among distributed investigators Crucial for highly charged sub jects like climate change Sometimes one obtains these as well: Objectivity: Problem-sensitive decision among many conclusions E.g., model order, number of clusters, which features to use Often only possible in a limited context or domain Consensus: Ubiquitous algorithms factor out disagreements Go beyond ad hoc gadgets to general, cross-domain solutions Exchange models and algorithms as well as data Composability: Can analyze machine-generated interpretations Building a data pipeline, meta-analysis, federated databases Performance gains are important: Quality: Quantitative, optimal inference gives better results Many schemes (implicitly) optimize over interpretations Gauss obtained the orbit of Ceres by least squares in 1801 Comprehensiveness: Ability to examine more information Integrate more data within a given interpretation Achieve total spatial/temporal coverage
+&
+%
+A-2(3) '
+$
+GROUND TRUTH -- MODEL VALIDITY Questions brought to fore by scientific problems Physical questions that seem decidable in principle... ...but whose very intractability motivates inference techniques! Models for observables Observables are directly sensed, allowing direct model checks Can falsify (Popper 1958), but never fully verify Computing P (data | model) falsifies some models or model classes E.g., image modeled as three classes, each of which is normal, is falsified if pooled pixels are not a normal three-mixture Information on hidden variables This `ground Â· Scientists Problems The most truth' is difficult to come by typically cannot identify ob jects reliably become very evident at single-pixel scale informative test cases are also most uncertain
+Â· Further: Lack of physical understanding of problem means even experts may be surprised at what is really there.
+Conceptual inadequacies in models Methods are often not suitably invariant to resolution Classes in image segmentation are often not mutually exclusive Spatial independence is often assumed at some point Need spatial/temporal stationarity which rarely exists Bayesian `dogma of precision': every state can be assigned a probability; every outcome can be assigned a cost (Walley 1991) 
+%
+A-3(4) '
+$
+SPATIAL MODELS General References B. D. Ripley, Statistical Inference for Spatial Processes , Cambridge, 1988.
+Discrete and continuous random fields; morphological operations N. A. C. Cressie, Statistics for Spatial Data, Wiley, 1993.
+Especially strong on geostatistics and models for point-sets Pattern Theory U. Grenander and Y.
+Chow and D. Keenan, Hands: A Pattern-Theoretic Study of Biological Shapes , Springer, 1991.
+A compelling example of synthesis of a complex shape U. Grenander and M. I. Miller, "Representations of knowledge in complex systems," Jour.
+Roy.
+Stat.
+Soc. Ser.
+B, 56(4), 549Â­603, 1994.
+Linking abstract models to pixel-level features Shapes A. Blake and M. Isard, Active Contours, Springer, 1999.
+Engineering perspective on parameterizing and tracking boundaries K. V. Mardia and I. L. Dryden, Statistical Shape Analysis, Wiley, 1998.
+Comprehensive survey of representations and distributions for shapes 
+%
+B-1(5) '
+$
+OBJECT LOCATION Known ob ject Example: volcanoes on Venus in SAR imagery from Magellan
+Known ob ject family Example: craters (scale variation; also overlap)
+Unknown ob jects Potential to detect local variations in a background 
+%
+B-2(6) '
+$
+LEARNING SCHEME Due to Michael Burl (JPL) and collaborators (P. Smyth, U. Fayyad, P. Perona) To ease computation, all images reduced in resolution 2 Ã— 2 Two-phase system Focus of attention (FOA): Identify all likely candidates Classification: Assign candidates to classes FOA sweeps whole image, identifying possible volcano sites which are extracted as square `chips' Classification treats chips as i.i.d. inputs and classes as volcano or non-volcano Training is done with scientist-supplied training chips.
+Sample Volcanoes Category 1:
+Category 2:
+Category 3:
+Category 4:
+&
+%
+B-3(7) '
+$
+FOCUS OF ATTENTION Motivation: Reduce computation by giving up early on unlikely sites Allows use of traditional iid classifiers in phase two Uses scientist-identified volcano sites to find matched filter F Average of positive examples
+2.5 2 1.5 1 0.5 0 -0.5 -1 15 10 10 5 0 0 5 15
+F is swept over image to identify strong matches Less computation by using F i fifiT Threshold the correlation to identify potential volcano sites Sites within four pixels are aggregated in the final list Use family of filters: only limited improvement
+&
+%
+B-4(8) '
+$
+CLASSIFICATION This step is in the realm of classical iid-input algorithms Non-volcano class is by nature not localized; volcano class is relatively local Feature selection using PCA compresses 152-dimensional data
+Quadratic discriminant analysis forms baseline decision rule Class-conditional normals with certain mean and covariance (Âµv , v ) fitted from volcano training data (Âµnv , nv ) fitted from non-volcano training data Classify by thresholding P (x; Âµv , v )/P (x; Âµnv , nv ) K -Nearest Neighbors a similar-performing alternative Use all volcano and non-volcano training chips Ma jority class among the K neighbors of an input chip wins Neighbors via weighted Euclidean distance (x - y )T R(x - y ) R chosen to emphasize pixels close to chip center Resulting accuracy is about as good as human experts in homogeneous data; degrades markedly in heterogeneous regions Key seems to be to have good information on local non-volcanoes
+&
+%
+B-5(9) '
+$
+DIVIDE AND CONQUER Schema Method fits relatively well into Dietterich framework Window, decide, merge FOA algorithm is where all spatial processing happens Cleverly, does not choose a fixed window position Input scale is the 15 Ã— 15 pixel window Combination rule: FOA-sites within four pels are aggregated Output scale is just the granularity of a single volcano Classification then proceeds independently at each site Include final V/NV decision into framework as well? Indicates alternate algorithm where multiple FOA sites are passed through to final classification; then these classes are merged Fundamental reason this was easy: the discrete, nonoverlapping character of volcanos simplifies the merge Agenda Burl et al. 1998: multiple components "make overall system optimization difficult if not impossible given finite training sets" Optimization seems to enter somewhere, like it or not
+&
+%
+C-1(10) '
+$
+IMAGE LABELING Solar imagery Reliably identify structures in the photosphere Sunspots: Depressed intensity and high magnetic flux Faculae: Regions of enhanced intensity and moderate flux Quiet sun: everything else Relate these structures to irradiance changes (weather/climate) Also: space weather (identify large -spots which cause flares) Mars Geology Identify soil structure (dust, sand, pebbles) Detect rocks on soil background Classify rock types (sedimentary/igneous, weathering, impact) Methods Automatic, ob jective classification using statistical model Model quantifies the uncertain relation of observables to classes Model uses spatial information to choose labels Falsifiable models (Popper 1958) can be checked against the data they claim to model General method that extends unchanged to other settings, e.g. more observables different number of features explicit accounting for miscalibration; outliers inclusion of physical knowledge (like sensor noise) 
+%
+C-2(11) '
+$
+EXAMPLE SOLAR DATA Irregularly-sampled time series of (full-disk) images Analyzed May 1996 Â­ Sep 2000; 60 GB across 25 000 images Below: SoHO/MDI, 17:58 UTC on 7 September 1997 Prepro cessed Magnetogram: Detail
+Prepro cessed Photogram: Detail
+Sunsp ot region: Intensity vs. flux 1100
+Facula region: Intensity vs. flux 1050 1040
+1000
+I n t e n s i t y
+900
+1030
+800
+700
+600
+500
+I n t e n s i t y
+1020
+1010
+1000
+990
+400
+980
+300
+970
+200 -1500
+-1000
+-500
+0
+500
+1000
+1500
+960 -250
+-200
+-150
+-100
+-50
+0
+50
+100
+150
+200
+&
+Magnetic Flux
+Magnetic Flux
+%
+C-3(12) '
+$
+PROBABILISTIC IMAGE MODELS Quantitatively describe the uncertain relation between observables and labels in a general probabilistic framework Labels x Data y
+Synthesis E Observer Analysis P ( x) P ( y | x) '
+At each spatial position, one of K physical processes is dominant.
+Observables arise depending on the dominant physical process.
+Generation of observables may be viewed as adding uncertainty (noise) to the underlying dominant process.
+Goal of analysis is to invert this noisy mapping.
+Variables of the Model Index set N of spatial coordinates s = (i, j ) Unobservable labels x = [xs]sN 
+K (e.g., ACR/Fac/QS) ys : real vector (e.g., the pair (magnetic field, light intensity)) Statistical model given by two distributions P (x) and P (y | x) 
+%
+C-4(13) '
+$
+MODEL SPECIFICS: I Describe the two distributions P (x) and P (y | x) Linking to Observables with P (y | x) Make the link via scientist-labeled images and distribution-fitting Alternatively, can infer automatically from data via clustering Obtain K distributions, one for each feature class As strawman, put forward per-class normal distributions P (ys | xs = k ) Normal(Âµk , k ) with d Ã— 1 class means and d Ã— d covariance matrices.
+(QS class, k = 1: fits the SoHO/MDI data reasonably well using Âµ1 = [ 0 1 ] and 1 = (0.01)2I .)
+For MDI, the normal distribution is inadequate for all classes: strongly multimodal cannot even transform to normality (e.g., with |flux|) quiet class,e.g., contains superpositions of effects (supergranulation is discernable in scatter plots) = it fails standard statistical tests.
+...normal model is thus falsified.
+We must introduce more realistic data models P (y | x)
+&
+%
+C-5(14) '
+$
+MODEL SPECIFICS: II Quantifying Spatial Smoothness with P (x) Typically 0 controls smoothness in the prior 1 P (x) = exp - 1(xs = xs ) Z ss
+where s s means: site s close to site s , e.g. one pixel away Penalty of per disagreement of nearby pixels to enforce spatial coherence of labelings Key property of locality: P (xs = x | x(s)) = P (xs = x | x N ( s)
+)
+At = 0, penalty and spatial constraint vanish Sample realizations from P (x) Sample from Uniform Prior Sample from MRF Prior Sample from Asymetric MRF Prior
+&
+%
+C-6(15) '
+$
+ASIDE: CONTINUITY AND EDGES Such Markov random field models allow edges in modeled images Change in discrete hidden variable forces significant change in real-valued observable Jumps undesirable in typical image restoration contexts Motivates conditional autoregressive (CAR) model P ( x s = x | x ( s) ) = P ( x s = x | x N ( s)
+) = N (AxN (s), )
+but with conditionally normal distribution (Autoregression: predict xs in terms of "itself " x N ( s)
+)
+Joint distribution of CAR model is normal, easing computation Natural parallel with familiar one-dimensional models Continuous Discrete Time Series Autoregressive (AR) Hidden Markov models (HMM) or Kalman models Imagery CAR models Markov random fields (MRF) MRF computations are the hardest: our best tools do not apply Non-gaussian, so no reduction to clever matrix manipulations Bayes net of many short cycles, junction tree algs liable to fail But: sampling, Metropolis-Hastings, and MCMC methods developed for MRFs enable very complex models
+&
+%
+C-7(16) '
+$
+SIMULATING MRFS Distribution P (x) = Z -1
+exp -
+ss
+1(xs = xs )
+No direct simulation: no Z , and state space of x huge! Randomized algorithm: Gibbs sampler Basis: craft a MC having P as its stationary distribution Adaptation of stat-mech methods (c.f. Metropolis et al. 1953) for simulating the state of interacting systems Iterative algorithm: starts at some labeling and refines it pixel-by-pixel over many image sweeps Method: ^ Choose an initial x Scan pels in raster fashion.
+At pel s, find P (xs = x | x(s)), 1 x K .
+^ ^ Choose new xs by drawing from this distribution ^ Repeat scanning ^ Result: As scans go to infinity, x P (Â·).
+That is, iterate enough and the labeling is a draw from P (x) Remarks Note local combination rule [*] Flip of one label can eventually influence all labels This method, and similar Metropolis-Hastings methods, are the basis for updating more complex spatial models 
+[*]
+%
+C-8(17) '
+$
+INFERRING THE LABELING Invert the noisy data via maximum a posteriori (MAP) rule ^ x = arg max P (x|y) x
+Bayes formula shows P (x|y) P (y|x)P (x) For normal P (ys | xs), algebra reveals the ob jective function 1 2 log P (x|y) = - 2 ys - Âµxs - 1(xs = xs ) 2 sN ss
+Interpretation First term: fidelity to data (observation close to its mean) Second term: image smoothness (this couples the pixel labels) Maximizing P (x | y) Â· Use Gibbs sampler to draw from the distribution P (x | y) Â· To maximize P (x | y), nest G.S. within simulated annealing That is, pick large and draw via G.S. from P(x | y) := (1/Z) P (x | y)
+(Effectively scale entire log-posterior, above, by ) Â· Simulated annealing: raise as Gibbs sampler iterates If up slowly enough, mode is reached
+Â· Takes about 3 min/image on Sun workstation (360MHz).
+&
+%
+C-9(18) '
+$
+MODELING THE OBSERVABLES For realistic models, benefit from the flexible mixture density G
+p (y ; ) = g =1
+g N (y ; Âµg , g )
+= {(1, Âµ1, 1) Â· Â· Â· (G, ÂµG, G)} Accounts for multimodality and superpositions of effects A very general family: take G large.
+1.2 1.1
+I n t e n s i t y
+1
+0.8
+0.6
+0.4
+I n t e n s i t y -1
+1.05
+1
+0.95
+0.2
+0.9
+0 -1.5
+Magnetic Flux -0.5 0 0.5
+1
+1.5
+-0.3
+-0.2
+Magnetic Flux -0.1 0 0.1
+0.2
+0.3
+Ask scientists to find regions of type xs = k ; estimate k for each ^ Goal: From data Y = [y 1 Â· Â· Â· y n ], find a density model p(y ; ) Method: Determine parameters by maximum-likelihood using Y : n
+^ = arg max log P (Y ; ) = arg max i=1
+log p(y i; )
+Performed via EM algorithm: done once and the model is fixed Unsupervised mode: Provide cumulative data over classes, and EM clusters y into classes: clusters are extracted after the fact.
+Order selection by cross-validated likelihood (Smyth 1999) 
+%
+C-10 '(19)
+$
+MODELS USED: SOHO/MDI Mo del Fit, varying Complexity 3.922 3.92 x 10 5
+Entire Mo del soho 1-min, whole model 1.4
+Cross-validated log likelihoods vs. number of bumps, k, for Soho 1 min data
+1.2 3.918 3.916 cross-validated loglikelihood 3.914
+1
+5 371 6 284 1 2 6 5 4 3 1 2
+0.8 3.912 3.91
+0.6 3.908 3.906 3.904
+4
+3
+0.4
+0.2 3.902 3.9
+2
+4
+6
+8
+10 12 14 number of bumps, k
+16
+18
+20
+22
+0 -2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+Quiet Sun Mo del soho 1-min, quiet model 1.05
+Facula Mo del soho 1-min, faculae model 1.12
+1.1
+1.08
+1.06
+1
+7 6
+12 43
+8 5
+1.04
+1.02
+5 3 4 2 1
+6
+1
+0.98
+0.96 -0.06 -0.04 -0.02 0 0.02 0.04 0.06
+0.94 -0.5
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+Sp ot Mo del soho 1-min, sunspot model 1.4
+Class Map soho model, of 1-min data set.
+class weights= .1, .1, .8, in order of sunspot, faculae, quiet, deep blue are sunspots, light blue are faculae, yellow is quiet sun 1.4
+1.2
+1.2
+1
+1
+I n t e n s i t y
+1 0.8
+2 0.8
+0.6
+4
+3
+0.6
+0.4
+0.4
+0.2
+0.2
+0 -2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+0 -2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+1.5
+2
+Magnetic Flux
+&
+%
+C-11 '(20)
+$
+MODELS USED: MT. WILSON Entire Mo del Mt. Wilson, model made from feature vector created from random sampling of mosaics 14000
+Miscalibration Mo del 1.6 x 10 4
+Mt. Wilson, models for weird class
+13000
+1.4
+12000
+1.2 11000
+3 10000
+1 9000
+2341 6 5 1 2 1 2
+4 2 1
+1
+2
+8000
+0.8
+7000
+0.6 6000
+5000 -250 -200 -150
+Quiet Sun Mo del Mt. Wilson, models for quiet sun
+-100
+-50
+0
+50
+100
+150
+200
+250
+0.4 -10
+-8
+-6
+-4
+Facula Mo del Mt. Wilson, models for faculae
+-2
+0
+2
+4
+6
+8
+10
+x 10
+4
+1.1
+x 10
+4
+1.06 1.08
+1.04 1.06
+1.02
+1.04
+3
+4
+65 1
+3 12
+4
+1.02
+2
+1
+0.98
+1
+0.96
+0.98
+-10
+-5
+0
+5
+10
+0.96 -100
+-80
+-60
+-40
+-20
+0
+20
+40
+60
+80
+100
+Sp ot Mo del Mt. Wilson, models for sunspots 13000
+Class Map Mt.Wilson classmap, with [.44 .44 .06 .06] as weights for classes, in order of, deep blue are sunspot, light blue are faculae, green is quiet sun, orange is weird class
+12000
+14000
+I n t e n s i t y
+11000
+12000
+10000
+10000
+1 9000
+2
+8000 8000
+6000 7000
+4000 6000 -300 -200 -100 0 100 200 300
+-250
+-200
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+Magnetic Flux
+&
+%
+C-12 '(21)
+$
+LABELINGS Labeling: 1998/01/15 11:11 UTC + 0,1,2,3,4,5 days
+200
+400
+600
+800
+1000
+1200
+1400
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+&
+%
+D-1(22) '
+$
+HIERARCHICAL SPATIAL MODELS Better Representations Represent an ob ject via a compactly-described membership function hs indicating sub jective belief site s is active region -- Larger-scale representation of an ob ject -- Provides interpretability Several Simple Mechanisms Outlines: Grenander et al., 1991 Polygons: Green 1996 Continuum triangulations: Nicholls 1997, 1998 Delaunay triangulations: Turmon 1998 Binds nearby on-ob ject regions into one ob ject Two fundamental quantities: Indicator function hs, s N h(s) = 1 means on-ob ject, h(s) = 0 if not Parameterized by tie points in N .
+Function complexity (h) 0 e.g., the number of tie points, or intensity of point process generating tie points
+&
+%
+D-2(23) '
+$
+LINK TO OBSERVATIONS Establish Markov dependence between hierarchical model layers P (h, x, y) = P (h)P (x | h)P (y | x) Raw Intensities MRF Scheme
+Pixel Labels
+Triangulation
+Membership Function
+Interpretability/Abstraction
+Probabilistic Model Penalize complexity by setting P (h) = Z -1
+exp - (h)
+This choice gives an additive penalty to disjoint ob jects Intermediate layer uses hs to bias the event {xs = Object}: - log P (x | h) = ss
+1(xs = xs ) + sN
+|1(xs = Object) - h(s)|
+The data distribution P (y | x) is as before.
+Â· One can do inference by maximizing the posterior P (h, x | y) = P (h, x, y)/P (y ) P (h, x, y) or minimizing its negative logarithm (h) + sN
+|1(xs = Object) - h(s)| + ss
+1(xs = xs ) +
+1 2
+2
+(ys - Âµxs ) sN
+2
+&
+%
+D-3(24) '
+$
+INFERRING COMPLEX MODELS We describe inferring shape models for fixed labeling To speed convergence, replace 1(xs = Object) above with its probability given the data (Fully analogous to ICE algorithm of Art Owen) Now the ob jective simplifies to (h) + sN
+P (xs = Object | y) - h(s)
+Metropolis-Hastings sampler Inference means choosing tie-point positions Construct a Markov chain on the state space of tie points V= k
+Vk = k
+(N Ã— N )
+k
+that has limit distribution (h) = P (h | x, y) (Maximize P (h | x, y) with same annealing setup as earlier) Metropolis-Hastings proposes state changes and probabilistically accepts them to achieve the desired limit distribution The operator set consists of tie-point move (M ), tie-point raise/lower (R), tie-point add (Ak ) or kill (Ak ) 
+%
+E-1(25) '
+$
+SPATIO-TEMPORAL INFERENCE Ob ject tra jectories Sea-level pressure over the Pacific ( t = 48 hrs.)
+Cyclone center shown by white cross Right: tra jectories from a series of (quantized) observations Data from P. Smyth, UC Irvine
+Other examples: sunspot motion, microblock motion from GPS Ob jects through time
+Ob jects h
+1
+h
+2
+h
+T
+y1 Labels x1 Images
+y2
+yT
+x2
+xT
+&
+%
+E-2(26) '
+$
+MODELING THE TEMPORAL PART State-based motion models Include influence of exogenous inputs and observable covariates Discover motion clusters by uncovering a hidden class C Examples Generalizations of the Kalman filter as Bayes nets with state u Â¨ Â¨Â¨ Â¨ qqq Â¨ Â¨ c Â¨ Â© ~ % E u3 q q q E uT u1 Â¨ E u2 qqq c c c qqq z1 z2 z3 c
+t
+C
+zT
+q r1 r2 r3 q c c c E u2 E u3 q u1 q c c c q z1 z2 z3
+qq qq
+r
+T
+c q q E uT qq c qq zT
+mixed dynamical model
+model with exogenous inputs rt
+Build temporal models atop de-coupled spatial models Implications Two domains of divide and conquer Easy cases: dominant locality in space (sunspots) or time (GPS) ...allows decoupled solutions Coping with both simultaneously is harder, even beyond current limits of practical optimization technology Problems... estimate model parameters automatically learn the model structure automatically 
+%
+E-3(27) '
+$
+SPATIO-TEMPORAL MODELING (I) Base concept of random vector is inadequate Capture concept of variables on structured index sets Domain : An index set Â· Principal Examples: Any finite set Zn , the first n integers (e.g., time series) Z/Zn , the cyclic version of Zn R, the real numbers Domains supporting translation play a special role Â· Operators on domains give means of combination , the union Ã—, the cross-product Allows formation of domains for images, etc.
+Â· Stencil is a Domain identifying a local neighborhood {-k , ..., -2, -1}, for a k -order autoregressive model {(-1, 0), (1, 0), (0, -1), (0, 1)}, for a first-order MRF
+(0, 1) -k rrr
+-2
+-1
+u
+(-1,0)
+u
+(1, 0)
+(0,-1)
+&
+%
+E-4(28) '
+$
+SPATIO-TEMPORAL MODELING (II) Field : Mapping on a Domain Random Field a mapping from a Domain to earlier Variables ...the spatiotemporal generalization of random variable Principal examples: Time series are random fields over Z or R Multispectral images: random fields over Ã—({1, . . . k }, Zn, Zn) (spectral index does not support translation) Neighborhood a Field from (Domain, Stencil) to a Domain ...maps (site, offset) site , often by translation ...supports adjacency for dependence structures Let M be the neighborhood corresponding to the order-1 MRF Then M (i, k ) is the k -th neighbor of site i M (i) is the set of all neighbors of site i unpack operator ...returns the neighborhood M given a Domain and Stencil
+&
+%
+E-5(29) '
+$
+MODEL SPECIFICATION Â· Simplest models have no conditional dependence: D = Zn (i D ) x[i] Normal(i, 4) Â· AR model: D = Zn S = -1 M = unpack(D , S ) (i D ) x[i]
+x[M (i; k )] e e ct[i]
+(i D ) x[i] Discrete(0,
+ct[i]-4
++e
+-ct[i]
+, 1,
+e e
+-ct[i]
+ct[i]-4
++e
+-ct[i]
+)
+Import just enough mathematical notation to express the models
+&
+%
+F-1(30) '
+$
+CONCLUSIONS Machine procedures offer many benefits to scientific inference Persistent issues: Building tractable models of observational reality Obtaining accurate training data Designing and executing clear falsification experiments Finding Ob jects Discussed a good algorithm-based approach Divide and conquer schema applicable (even suggestive) here Labeling Images Use of statistical models allows falsification experiments, easy extension to wider class of problems Spatially, temporally uniform data is key to accurate labelings Complex models Useable temporal and spatial statistical models do exist ...but the best ML perspectives often absent from this work agnostic models, robust algorithms, cross-validation, automation Cooperating space/time models, linked spatiotemporal models Futures Ob ject-level recognition in non-algorithmic framework Languages to express statistical models on structured domains Model selection in complex, flexible model space 
+%

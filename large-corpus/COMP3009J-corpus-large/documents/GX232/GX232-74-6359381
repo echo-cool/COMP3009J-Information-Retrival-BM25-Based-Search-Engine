@@ -1,0 +1,236 @@
+PUBLIC RELEASE BUREAU OF THE CENSUS Headquarters Information Processing Systems for the 2000 Decennial Census Require Technical and Management Plans and Procedures Inspection Report No.
+OSE-10034-8-0001 / November 1997
+Office of Systems Evaluation
+TABLE OF CONTENTS
+EXECUTIVE SUMMARY . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . i INTRODUCTION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 BACKGROUND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 PURPOSE AND SCOPE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2 OBSERVATIONS AND CONCLUSIONS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+I. II.
+Software Is Not Developed in Accordance with Any Well-Defined Process . . . .
+3 Estimates of Software Development Schedules and Resources Are Not Realistic for the Dress Rehearsal and the 2000 Census . . . . . . . . . . . . . . . . . . . .
+6 Requirements for Headquarters Processing Are Immature, Volatile, and Likely to Be Late . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+III.
+RECOMMENDATIONS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9 Attachment A
+Office of Inspector General
+Final Inspection Report
+EXECUTIVE SUMMARY The primary purpose of the decennial census is to provide data that reflect an accurate enumeration of all residents of the United States.
+The accuracy of census data is critical because it is the basis for apportioning seats in the Congress and for the distribution of billions of dollars by the federal government.
+The Processing Systems organization within the Decennial Systems and Contracts Management Office is responsible for the headquarters information processing systems.
+Headquarters processing is a key ingredient of the overall census process.
+It is involved with decennial census operations starting with the collection of census information, proceeding through the analysis and tabulation of census data, and ultimately preparing census results for dissemination.
+In our preinspection survey, we observed that the requirements for systems to support headquarters processing were not clearly defined, and we were unable to confirm that mechanisms required to manage the software development were being implemented and that adequate progress was being made.
+We therefore conducted this inspection to (1) evaluate the appropriateness of the system requirements, (2) assess the system implementation strategy and plan, (3) evaluate the readiness and capabilities of the development organization and the planned use of support contractors, and (4) identify system development risks.
+During our inspection, we made our findings available to Bureau of the Census managers who prepared an outline of an action plan to address our concerns.
+We assessed their plan and found their proposed approach in agreement with the recommendations provided in this report.
+We appreciate the bureau's cooperation and responsiveness during the course of this inspection.
+Our major observations and conclusions are as follows: C
+Software is not developed in accordance with any well-defined process.
+Managers and software developers within the Processing Systems organization are experienced and dedicated individuals who have a great deal of background in developing software for census applications.
+Despite their significant capabilities, we are concerned that they do not follow a well-defined software development process based on software engineering principles.
+The software development approach employed is not based on standards for (1) documenting and reviewing software specifications and design, (2) ensuring that rigorous, independent testing is carried out, and (3) ensuring the uniform and effective use of development and evaluation methods and tools.
+Because of the widespread dependence on and, hence, the criticality of correct decennial census results, we believe that the bureau needs to adopt a software development process based on at least this minimal set of elements (see page 3).
+i
+Office of Inspector General C
+Final Inspection Report
+Estimates of software development schedules and resources are not realistic for the Dress Rehearsal and the 2000 census.
+The bureau has developed a master activity schedule (MAS) that identifies activities, their interrelationships, and expected durations necessary to accomplish the 1998 Dress Rehearsal and the 2000 decennial census.
+We learned, however, that durations specified for headquarters software development activities did not indicate the expected effort required, but rather represented "windows of opportunity" or the time available for development.
+Without estimates of activity durations, management cannot determine whether software development schedules are achievable or whether requests for staffing levels to support software development are realistic.
+We also noted that the majority of the software development activities in the MAS are characterized as a "develop/test" effort, with no further breakdown into subactivities actually required to develop and test the software.
+As a result, management cannot gain appropriate insight into actual progress toward completion of the software development effort (see page 6).
+Requirements for headquarters processing are immature, volatile, and likely to be late.
+As currently planned, the 2000 decennial census and the 1998 Dress Rehearsal will rely on statistical processes that have not been used in previous censuses.
+Therefore, decisions concerning the details of these statistical processes must be documented in requirements specifications for software that must still be developed.
+However, statistical research is still being conducted and important decisions concerning the details of some of these processes are not being made in a timely manner.
+Consequently, important requirements specifications cannot be prepared within the required time frame.
+As a result, some developers have stated that they will begin development of software without having associated requirements specifications available, or with specifications that are likely to change.
+The development of software without requirements specifications, or with frequently changing specifications, increases the risk that costly and time consuming modifications will subsequently be needed to accommodate changes in requirements.
+We believe that the bureau should focus on definition and refinement of requirements, rather than risk having to modify prematurely designed and developed software (see page 8).
+C
+Our recommendations begin on page 9.
+The bureau's memorandum in response to our report is included as Attachment A.
+ii
+Office of Inspector General
+Final Inspection Report
+INTRODUCTION The primary purpose of the decennial census is to provide data that reflect an accurate enumeration of all residents of the United States.
+The accuracy of census data is critical because it is the basis for apportioning seats in the Congress and for the distribution of billions of dollars by the federal government.
+Census data are also used by federal, state, and local officials to determine requirements for the construction of highways, hospitals, schools, and bridges.
+Furthermore, the private sector relies on these data for making decisions that affect the location of office and manufacturing facilities, as well as the introduction of new products and services.
+The Bureau of the Census is currently preparing for the 2000 decennial census.
+The bureau has developed a plan that identifies its approach for conducting the 2000 census and ensuring an accurate determination of the nation's population and housing, but at a lower real cost per housing unit than the 1990 census.
+To accomplish this, the bureau has identified the following key strategic goals for the 2000 census: C C C To make every effort to count every resident using simple, easy-to-read forms.
+To implement an open process that diverse groups and interests can understand and support.
+To eliminate the differentials in the totals for racial and ethnic groups.
+To achieve these goals, the bureau has introduced procedures for the 2000 census that were not used in any previous census.
+New procedures include the use of user-friendly forms, the availability of extra forms in convenient places, multiple contacts with each household, digital capture of forms, and statistical estimation techniques.
+In the spring of 1998, the bureau will conduct a Dress Rehearsal of the 2000 census.
+The Dress Rehearsal will provide a census-like environment to evaluate the interaction of the components of the decennial census, including the new procedures.
+The bureau views the Dress Rehearsal as critical to a successful 2000 census and thus intends to conduct the Dress Rehearsal as much like the actual 2000 decennial census as possible.
+BACKGROUND Our pre-inspection survey of the acquisition and development risks associated with the 2000 census focused on four primary components of the census process: data capture, decennial field 1
+Office of Inspector General
+Final Inspection Report
+interface, data access and dissemination, and headquarters processing.
+The data capture and decennial field interface components are involved in the collection of census information from field locations, whereas the data access and dissemination component helps make the results of the census available to the public and government agencies.
+The headquarters processing component interchanges data with and supports these other components.
+It is involved with census operations starting with collection of census information, proceeding through the analysis and tabulation of the collected data, and ultimately preparing census results for dissemination.
+In addition, the headquarters processing component begins prior to the start of data collection because of its responsibility for development of the decennial master address file, which effectively controls the census process.
+As a result of our survey, we recognized the importance of headquarters processing to the overall census process.
+We also observed that the requirements for systems to support headquarters processing were not clearly defined.
+Moreover, we were unable to confirm that mechanisms required to manage software development were being implemented and that adequate progress was being made.
+Therefore, we were not convinced that the bureau has taken the necessary steps to ensure that headquarters data processing capabilities will adequately support the decennial census.
+During our inspection, we made our findings available to bureau managers who prepared an outline of an action plan to address our concerns related to the software development aspects of headquarters processing.
+We assessed their plan for dealing with our concerns and found their proposed approach in agreement with the recommendations provided in this report.
+We appreciate the bureau's cooperation and responsiveness during the course of this inspection.
+PURPOSE AND SCOPE The objectives of this inspection, which focused on census headquarters processing for both the Dress Rehearsal and 2000 census, were to (1) evaluate the appropriateness of the system requirements, (2) assess the system implementation strategy and plan, (3) evaluate the readiness and capabilities of the development organization and the planned use of support contractors, and (4) identify system development risks.
+In conducting our review, we met with management and technical personnel from the Processing Systems organization within the Decennial Systems and Contracts Management Office (DSCMO), who are responsible for the headquarters information processing systems.
+We discussed in detail the headquarters processing requirements for the decennial census and the software needed to satisfy the requirements.
+To a lesser extent, we discussed hardware associated with meeting those requirements.
+We also discussed the proposed staffing and organizational structure, including contractors necessary to support headquarters operations, and reviewed plans and processes, both management and technical, that were in place or anticipated.
+2
+Office of Inspector General
+Final Inspection Report
+Inspections are special reviews that the Office of Inspector General conducts to give agency managers information about operations, including assessments of current and foreseeable problems.
+The objective is to promote effective, efficient, and economical management and to detect fraud, waste, and abuse.
+Our work was performed in accordance with the Standards for Inspections issued by the President's Council on Integrity and Efficiency.
+OBSERVATIONS AND CONCLUSIONS I. Software Is Not Developed in Accordance with Any Well-Defined Process
+Grady Booch, James Rumbaugh, and Ivar Jacobson, noted software development experts, provide the following insight on the importance of a well-defined software development process: "The presence of a well-defined and well-managed process is the key discriminator between productive projects and unsuccessful ones.
+The reliance upon heroic programming is not a sustainable practice.
+A process 1) provides guidance as to the order of a team's activities, 2) specifies what . . . [documentation] should be developed, 3) directs the tasks of individual developers and the team as a whole, and 4) offers criteria for monitoring and measuring a project's products and activities."1 Processing Systems managers and software developers are experienced and dedicated individuals who have a great deal of background in developing software for census applications (e.g., they were involved in the 1980 and 1990 decennial censuses and Dress Rehearsals, and in the 1995 and 1996 census tests).
+They have become accustomed to reacting to demands for developing and adapting software to accommodate "spur-of-the-moment" requests.
+However, for the 2000 decennial census and its Dress Rehearsal, they are confronted with the challenges of implementing new and complex techniques with newer, less experienced staff members and support contractors.
+Despite their significant capabilities, we are concerned that they do not follow a well-defined software development process based on software engineering principles.
+Software engineering is concerned with the establishment and application of sound concepts, principles, processes (with associated activities and development methods), metrics, and environments that include development and evaluation tools.
+These, in turn, must be supported and enforced by standards, procedures, and evaluations.
+Use of sound software engineering practices will help produce software that is correct, efficient, modifiable, reliable, and verifiable.
+Unified Modeling Language, UML Summary, Rational Software Corporation, Santa Clara, CA, March 19, 1997.
+3
+1
+Office of Inspector General
+Final Inspection Report
+The bureau had previously recognized the importance of defining a software engineering approach.
+In March 1991, the bureau produced its Programming Standards and Guidelines Manual, whose stated purpose was to "cover the entire range of software development when completed."
+The manual was supposed to include sections on specification writing, analysis, program design, program coding, structured walkthroughs, documentation, and testing.
+However, only standards and guidelines for program coding and code walkthroughs were provided and, therefore, the document never fulfilled its intended purpose.
+Thus, software development is not based on standards for (1) documenting and reviewing software specifications and design, (2) ensuring the uniform and effective use of development and evaluation methods and tools, and (3) ensuring that rigorous, independent testing is carried out.
+Because of the widespread dependence on and, hence, the criticality of correct decennial census results, we believe that the bureau needs to adopt a software development process based on at least this minimal set of elements.
+A.
+No standard policy for design documentation and review exists.
+Design documentation is needed to support testing, modification, and maintenance activities, and to assess the progress of software development.
+Also, the availability of design documentation can shorten the amount of time required for a newly-hired person to become a productive member of a software development team.
+Conversely, the lack of such documentation is a burden on the other experienced team members who must spend time with new hires to familiarize them with the software design.
+Since the bureau plans to hire additional staff to support software development for headquarters processing systems and because this software must be developed in a relatively short period of time, it is important to have standards in place for documenting software design and for peer review of the design as it evolves.
+Furthermore, standards for documenting and reviewing software design are necessary to ensure that the loss of a key team member does not jeopardize the development effort and to permit necessary modifications to be readily incorporated after the Dress Rehearsal.
+B.
+No standards or policies are in effect to enforce rigorous, independent testing.
+The bureau's current approach to software development places the primary responsibility for testing on the developers.
+However, the developers lack guidance or requirements for developing test plans and procedures, and there are no provisions for independent testing.
+This approach lacks both the rigor afforded by using well-defined test plans and procedures, and the additional assurance that independent testing provides.
+The absence of rigorous, independent testing greatly increases the risk of undetected errors remaining in operational software.
+The critical nature of the decennial census and the magnitude of its effect dictate that confidence be established in its supporting elements.
+Therefore, rigorous, independent testing must be an integral part of software development to help ensure accuracy and protect the integrity of the census.
+4
+Office of Inspector General
+Final Inspection Report
+The bureau needs to develop a testing approach that ensures that all software is adequately tested.
+In addition, the bureau needs to identify critical software components, especially those dealing with sampling and estimation, that are likely to be difficult to assess for accuracy and correctness or which have not been used in previous censuses.
+For these components, development and enforcement of a policy for rigorous, independent testing should be undertaken.
+C. Software development and evaluation tools are ad hoc and inconsistently used.
+We found that there are no standard configuration management procedures or tools that developers are required to use but, instead, configuration management is performed on an ad hoc basis by individual developers.
+Configuration management is a discipline, usually implemented with an autom tool, for controlling software, hardware, and documentation throughout the system life-cycle.
+It is crucial to development and maintenance because it controls and tracks accesses and changes to system components, co among developers, and provides the means for building system baselines for testing and release.
+For exampl such fundamental functions as who is authorized to access a software module or update a baseline.
+Configuratio management also ensures that correct versions of the software are used, and enables recovery from intentional changes that result in adverse system behavior.
+Without configuration management, system integrity is jeopardized.
+The bureau needs to develop procedures and responsibilities for configuration management and select an app automated tool to adequately manage system material.
+It should also place the extensive amount of software developed for the previous decennial census and tests for the 2000 census under configuration management to facilitate determining what software is available for the Dress Rehearsal and 2000 decennial census and enable it to determine more accurately the development effort remaining.
+We also found that software development and evaluation at census are manually intensive processes and that development and evaluation methods and tools have not been used extensively.
+Software development is a human activity and, as such, is prone to the introduction of errors.
+The size and complexity of the bureau's software development effort necessitate additional assurance that the introduction of unintended errors is minimized.
+Development and evaluation methods and tools can assist developers in the avoidance of errors.
+Even the simplest of errors, if undetected early in the process, becomes difficult and expensive to find and correct later.
+The use of automated tools in other areas such as design, debugging, performance measurement, testing, and complexity assessment would not only streamline the processes, but also allow for tracking the maturity and volatility of each activity.
+Many tools are available that cover all aspects of software development, many taking into account the influences of schedule drivers, level of staff experience, languages utilized, and software complexity.
+The selection of specific tools should be driven by the software development process they are intended to support.
+The appropriate tool set should include functionality sufficient for fulfilling the bureau's needs, recognizing the short time available until the Dress Rehearsal, and should take into account staff experience and tool interoperability.
+As the bureau evolves its software development process, it 5
+Office of Inspector General
+Final Inspection Report
+should use a phased approach to introduce new procedures and tools in order to minimize disruption to Dress Rehearsal activities while still establishing a firm foundation from which systems can be developed in time to ensure a successful 2000 decennial census.
+The bureau has responded to our concerns about its software development approach by developing an action plan outline.
+The outline enumerates steps to address the deficiencies identified by putting into place an initial set of software development procedures.
+Specifically, the bureau plans to: (1) inventory all existing software and identify its applicability to the Dress Rehearsal, 2000 decennial census, or both; (2) place the identified software under configuration management for use as a baseline to determine the remaining software development effort; and (3) adhere more closely to a standard development method by seeking to facilitate the timely development of requirements specifications.
+Most reassuring is that the bureau has taken the first steps to instituting a comprehensive overhaul of its software development activities by contacting an acknowledged software engineering expert to assist in the revision of its approach to software development and to help develop a software test program.
+II.
+Estimates of Software Development Schedules and Resources Are Not Realistic for the Dress Rehearsal and the 2000 Census
+The bureau has developed a master activity schedule (MAS), using Primavera Project Planner, that identifies activities, their interrelationships, and expected durations necessary to accomplish the 1998 Dress Rehearsal and the 2000 decennial census.
+The MAS associated with headquarters processing includes numerous software development activities.
+Based on our review of the MAS for headquarters software development activities, we noted that, in many cases, the duration of an activity for the decennial census was at least equal to, and often greater than, the duration of the corresponding activity for the Dress Rehearsal.
+This situation caused us to question the bureau's ability to meet its stated intention to have the software for the Dress Rehearsal represent, as closely as possible, the software required for the decennial census.
+It was upon questioning the rationale for this situation that we learned that durations did not indicate the expected effort required, but rather represented "windows of opportunity" or the time available for development.
+Without estimates of activity durations, management cannot determine whether software development schedules are achievable or whether requests for staffing levels to support software development are realistic.
+Previously it had been stated that the durations for these activities were determined by a team of bureau professionals who were involved in software development for the 1990 census.
+The team reportedly arrived at the durations by judging the size and complexity of the software based on similar applications that had been developed previously, identifying the person who would likely be assigned to develop the software, and considering the staff's experience with the application.
+Estimating durations in this fashion is entirely appropriate, 6
+Office of Inspector General
+Final Inspection Report
+and we encourage the bureau to make use of this approach when determining the effort required for decennial software development.
+In addition to the factors above, estimates should take into account reusability of previously developed software for the same or similar application.
+Because of the importance of having a realistic schedule based on estimates for the effort required to complete software development activities, we believe that the bureau needs to estimate (1) the amount of software code from the 1990 census and the 1995 and 1996 census tests that can be reused for the Dress Rehearsal and the 2000 decennial census, and (2) the effort required for modifying existing software or completing new software.
+We believe that the durations currently specified for each software development activity should be revised to reflect accurate development estimates that include consideration of software reuse.
+Ideally, the amount of time required to develop software could be estimated by using one of several commercially available tools that provides time estimates for software development based on parameters such as size, complexity, staff experience, amount of reusable code available, and source language.
+However, time constraints on the census process probably preclude the use of such a tool, at least for the Dress Rehearsal.
+Finally, the majority of the software development activities in the MAS are characterized as a "develop/test" effort, with no further breakdown into the sub-activities actually required to develop and test the software.
+As a result, management cannot gain appropriate insight into actual progress toward completion of the software development effort.
+Therefore, we believe that the bureau needs to add milestones to software development activities in the MAS to provide a means for management to assess progress toward completion.
+In response to our concerns, the bureau plans to determine the extent to which previously developed software can be reused for the Dress Rehearsal and the decennial census, and it intends to adjust the durations of software development activities to reflect reuse.
+It also will adjust durations for new software to better reflect anticipated size and complexity.
+In addition, the bureau plans to use the MAS tool to establish more detailed milestones so that management can more closely monitor software development activities.
+7
+Office of Inspector General III.
+Final Inspection Report
+Requirements for Headquarters Processing Are Immature, Volatile, and Likely to Be Late
+As currently planned, the 2000 decennial census and the 1998 Dress Rehearsal will differ significantly from previous censuses.
+Unless restricted by Congress, the bureau will use statistical sampling to a greater extent than before and will rely on additional statistical processes that have not been used in previous censuses.
+Therefore, decisions concerning the details of these statistical processes must be documented in requirements specifications for software that still must be developed.
+However, statistical research is still being conducted and important decisions concerning the details of some of these processes are not being made in a timely manner.
+Consequently, requirements specifications for the development of software to support them cannot be prepared within the required time frame.
+As a result, some developers have stated that they will begin development of software without having associated requirements specifications available, or with specifications that are likely to change.
+Without timely availability of specifications, they will rely on their current understanding of the requirements and any past experiences with similar applications.
+The development of software without requirements specifications, or with frequently changing specifications, increases the risk that costly and time consuming modifications will subsequently be needed to accommodate changes in requirements.
+We believe that the bureau should focus on definition and refinement of requirements, rather than risk having to modify prematurely designed and developed software.
+Therefore, the bureau should identify those software development activities whose requirements specifications are currently, or are likely to be, incomplete or late, and focus the attention of appropriate Program Steering Committee teams to identify the causes for any delays in establishing the requirements.
+The bureau's Management Integration Team should take action to address the causes identified and ensure that required decisions concerning requirements are expedited.
+Such an approach is particularly important if the bureau hopes to have reasonably mature and adequately tested software available for the Dress Rehearsal in 1998, and to have the capabilities of the Dress Rehearsal software closely approximate that of the 2000 decennial census.
+During our inspection, the bureau acknowledged the importance of defining and stabilizing requirements for software development activities and has agreed to facilitate the definition of requirements and subsequent development of software requirements specifications for those activities that currently lack requirements or for which incomplete requirements exist.
+8
+Office of Inspector General
+Final Inspection Report
+RECOMMENDATIONS In order to minimize disruption to Dress Rehearsal activities while still establishing a firm foundation from which systems can be developed in time to ensure a successful decennial census, we recommend that the Chief of the Decennial Systems and Contracts Management Office implement the following recommendations: 1.
+Enlist the aid of a recognized software engineering expert to assess the bureau's current software development approach and make recommendations for its improvement to ensure successful development of software for the decennial census.
+The bureau should specifically request that recommendations address process definition, development standards, formal testing, and use of a consistent set of tools for configuration management and software development and evaluation.
+The bureau has agreed with this recommendation and has engaged the services of Tim Lister of the Atlantic Systems Guild.
+2.
+Identify software activities where timely completion is at risk due to incomplete requirements and refer them to the appropriate Program Steering Committee and the Management Integration Team for resolution of issues contributing to the delay.
+The bureau has agreed with this recommendation and has commenced activities to accomplish the identification of at-risk activities.
+3.
+Develop an inventory of existing software to identify reusable components from previous census activities and to provide estimates of the size of software for development efforts.
+The bureau has agreed with this recommendation and is in the process of inventorying existing software for use in determining remaining software development effort.
+4.
+Adjust the current MAS for each software development activity to reflect an accurate level of effort based on the availability of reusable software and estimates of relative size and complexity for new software.
+The bureau has agreed with this recommendation and will make appropriate adjustments.
+5.
+For each software development activity, define milestones that will allow determination of progress made toward completion.
+The bureau has agreed with this recommendation and will use the same tool as used for the MAS but as a separate linked schedule.
+9
+Office of Inspector General 6.
+Final Inspection Report
+Develop a plan for accomplishing the adjusted schedule defined above, based on consideration of staff skills, availability, training, and infrastructure needs.
+The bureau has agreed with this recommendation and is in the process of developing such a plan.
+7.
+Adopt and enforce guidelines for documenting and performing peer review of software design and development and for rigorous, independent testing of critical software components.
+The bureau has agreed with this recommendation and will use Tim Lister to help formulate a software test program.
+10

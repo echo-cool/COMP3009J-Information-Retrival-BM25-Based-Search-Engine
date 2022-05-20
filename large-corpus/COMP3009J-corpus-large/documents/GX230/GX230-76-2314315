@@ -1,0 +1,735 @@
+U.S. Department of Agriculture Forest Service
+National Mapping Program Technical Instructions
+Part 1 Template Development and Use Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps
+U.S. Department of the Interior U.S. Geological Survey
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use CONTENTS 1.
+TEMPLATE DEVELOPMENT AND USE 1.1 ...................
+Page 1-1 1-2 1-2 1-4 1-5 1-5 1-8 1-8 1-8
+DEPICTION SPECIFICATIONS . . . . . . . . . . . . . . . . . .
+1.1.1 Feature Definitions . . . . . . . . . . . . . . . . .
+1.1.2 1.1.3 1.1.4 1.1.5 Characteristics . . . . . . . . . . . . . . . . . . .
+Delineation . . . . . . . . . . . . . . . . . . . . .
+Depiction Conditions ................
+Source Interpretation Guidelines ..........
+1.1.5.1 1.1.5.2 1.1.6 All ....................
+Graphic ..................
+....
+Column ....
+....
+.... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1.2 APPENDIX 1-A APPENDIX 1-B APPENDIX 1-C APPENDIX 1-D
+Symbolization . . . . .
+1.1.6.1 Characteristics 1.1.6.2 Symbol Column 1.1.6.3 Label Column .
+REVISION . . . . . . . . . . .
+.
+1-9 .
+1-9 .
+1-9 .
+1-10 .
+1-11
+Instructions for Using the Feature Templates During Revision . . . . . . . . . . . . . . . . . . . . . . . . .
+1A-1 Feature/Characteristic to Feature Template/Theme Crosswalk . . . . . . . . . . . . . . . . . . . . . . . .
+1B-1 Part 5 Publication Symbols Index to Feature Template/ Theme Crosswalk . . . . . . . . . . . . . . . . . . . . .
+1C-1 Part 6 Publication Symbols Index to Feature Template/ Theme Crosswalk . . . . . . . . . . . . . . . . . . . . .
+1D-1
+5/03
+Draft for Implementation
+1-ii
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use 1.
+TEMPLATE DEVELOPMENT AND USE The single edition feature templates were derived from the Standards for 1:24,000-Scale Digital Line Graphs and Quadrangle Maps.
+Information about attribute coding was either eliminated or rewritten to make it more appropriate for use as a graphic standard.
+This part of the standard explains the format, content, and use of the single edition feature templates.
+See appendix 1-A for instructions on how to use the feature templates during revision.
+The following sections explain what is included under each heading in the templates and any global rules that apply throughout the templates.
+If a rule applies to all of the features, it is considered a global rule.
+For example, the rule for how to measure a feature to determine if it meets the minimum size for depiction is a global rule.
+The templates contain exceptions to the global rules or additional information that is unique to the feature.
+If nothing appears in the template to change a global rule, then the rule applies.
+Throughout the templates, if something being described meets the definition and depiction conditions for a feature, the feature name appears in upper case letters; for example, "BRIDGE".
+Generic names appear in lower case letters to indicate that they may not meet the definition or depiction conditions for that feature.
+If there is no applicable information under a heading, it is indicated by "N/A".
+5/03
+Draft for Implementation
+1-1
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use 1.1 DEPICTION SPECIFICATIONS The depiction specifications in the feature templates contain information on what a certain feature is, how the feature is The depiction delineated, and when the feature is to be shown.
+specifications include: 1.1.1 1.1.2 1.1.3 1.1.4 1.1.5 1.1.6 Feature Definitions Characteristics Delineation Depiction Conditions Source Interpretation Guidelines Symbolization
+The feature templates are as concise and positive as possible.
+Each template is meant to stand alone.
+Therefore, the definitions and characteristics describe what a feature is and what its characteristics are, rather than what it is not or what its characteristics are not.
+Similarly, the depiction conditions explain when to show a feature, rather than when not to show it.
+The different characteristics are grouped together by feature, rather than having a separate feature template for each characteristic.
+If this approach had not been used, the feature templates would have been much longer and more cumbersome.
+1.1.1 Feature Definitions The feature definitions determine what a feature is.
+The main goal of the feature definitions is to identify the features so that the distinctions between them are clear.
+The features and their definitions were developed by studying a variety of sources including: National Mapping Program documentation; the Defense Mapping Agency's (now the National Imagery and Mapping Agency) Feature and Attribute Coding System; the Geographic Names Information System feature classes; the Spatial Data Transfer Standard feature list; publications from other Federal agencies, including the USDA Forest Service, the National Ocean Service, the Bureau of Land Management, and the Fish and Wildlife Service; and the Canadian National Topographic Data Base feature list.
+Attempts were made to coordinate feature definitions with other organizations.
+In some cases this was difficult because 5/03 Draft for Implementation 1-2
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use feature selection was somewhat different from one agency to another and even between units within each agency.
+The feature definitions describe the nature or essential qualities that distinguish one feature from another.
+For example, the difference between a stream or river and a canal or ditch may not be obvious to a casual observer.
+However, the difference between the two features can be determined by comparing the definitions of STREAM/RIVER and CANAL/DITCH.
+Although a CANAL/DITCH are both linear water bodies, STREAM/RIVER and a the definition for
+CANAL/DITCH specifies that it is artificial and that it is used to transport water, to drain or irrigate land, to connect two or more water bodies, or to serve as a waterway for water craft.
+Therefore, a CANAL/DITCH is distinguished from a STREAM/RIVER by (1) the fact that it is artificial, and (2) the fact that it has specific uses.
+If the feature in question does not meet these two criteria, it should not considered a CANAL/DITCH.
+Although the feature definitions describe the qualities of features that are used to distinguish one feature from another, the templates do not necessarily specify how to make the distinction between the qualities themselves.
+How one goes about deciding if something is artificial or natural, or if it has some special use or not, is beyond the scope of these templates.
+There are some cases where the distinction between features is not clear, usually because past practices are not compatible with the classification method that was used to develop the domain of features in this standard.
+There are also cases where the definition is clear, but again, because of past practices, there may be some ambiguity.
+For example, the definition of a LAKE/POND states that it is a "body of standing water", so a dry lake does not fit the definition of a LAKE/POND.
+However, the symbol books list dry lakes along with other lakes and ponds.
+In cases like this, rules have been developed in the Source Interpretation Guidelines to reinforce the definition.
+The rule in this example is: "Do not depict dry lakes as LAKE/PONDS.
+See PLAYA."
+5/03
+Draft for Implementation
+1-3
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use 1.1.2 Characteristics Characteristics distinguish between the character or peculiar qualities of a feature.
+Many of these characteristics fall into one of three groups: (1) the function or purpose of the feature; (2) the form or nature of the feature; and (3) the state or existence of the feature (or characteristic).
+The definitions for the characteristics are generic.
+For instance,
+the definition for "intermittent" is the same, regardless of what hydrographic feature it is applied to.
+In some cases, more than one characteristic may apply to a feature.
+The ability to distinguish multiple characteristics of features helps to keep the number of feature templates to a minimum.
+For example, a MINE can be a "pit" with a product of "gravel" which distinguishes it from a MINE that is a "quarry" with an unspecified product, without having to create extra feature templates to accommodate every possible combination of characteristics.
+For most features, there is a discrete list of appropriate characteristics.
+However, for a few features, such as RESERVATION, the number of potential descriptors is quite large and it is not possible to create an exhaustive list of characteristics.
+In the case of RESERVATION, the "name" characteristic provides the necessary flexibility to distinguish between the different types of RESERVATIONS.
+In this standard, the characteristic "name" refers to the "proper name" of the feature, rather than any generic label that may be applicable.
+If the name is always shown the following statement is used: Show the names of FEATURES.
+If the name is shown only when it is known the following statement is used: Show the names of FEATURES if they are known.
+5/03
+Draft for Implementation
+1-4
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use The global characteristic "unspecified" can apply to any
+characteristic.
+"Unspecified" is used when a characteristic exists, but it is not necessary for it to be known to show the feature.
+For example, a spring can be shown on a map characteristic of the water is unspecified.
+even though the
+The global characteristic "general case" applies only to features themselves, rather than to characteristics.
+For instance, there are four water pipelines than can be shown: aqueducts, general case pipelines, penstocks, and siphons.
+Aqueducts, penstocks, and siphons all have specific uses; however, a general case water pipeline does not have any specific designated use, beyond the fact that it is a water pipeline.
+See appendix 1-B for a crosswalk between characteristics and the feature template/themes.
+1.1.3 Delineation The delineation guidelines describe the limits of features which, in turn, help to determine if a feature meets the minimum size for depiction and where to position labels, when appropriate.
+These guidelines generally describe real world entities, rather than the way the feature is represented on the source or the new map being prepared.
+1.1.4 Depiction Conditions The depiction conditions specify which features should be shown.
+Added features must meet the depiction conditions for those features.
+In general, previously mapped features are retained unless they positively no longer exist.
+(See section 1.1.5.2 for exceptions that are noted in the templates.)
+Depiction conditions are generally independent of the source, although some information on feature depiction that pertains to specific sources can be found in the Source Interpretation Guidelines.
+The depiction conditions reflect the National Mapping Program's policy of cartographic representation, which restricts data content and position based on graphic limitations of scale and legibility.
+Only the content that can be displayed on the printed map is shown, including all offsets in position that are necessary to accommodate 5/03 Draft for Implementation 1-5 the feature/
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use symbolization.
+See section 1.1.6 for information on symbolization.
+The templates must contain the criteria necessary to ensure that maps are accurate and consistent in style and content.
+Therefore, the depiction conditions present the requirements for map content, as well as the step-by-step decisions that are needed to determine whether or not to show a particular feature.
+An "If...Then" format is used for the depiction conditions.
+format is as follows: If a FEATURE is CONDITION, Then show.
+Some features are shown by symbol and label, some are shown by either symbol or label (but not both), while other features are named but symbolized by another feature.
+The phrase "Then show" is used when there is at least one limiting condition and the feature has its own symbol.
+The phrase "Then show the name" is used when there is a limiting condition that the feature must be named and the feature has no symbol of its own.
+The phrase "Show all" is used when there are no limiting conditions for depicting the feature.
+When there are multiple depiction conditions, each statement stands alone.
+If the feature meets one of the conditions, then it should be shown.
+The
+The depiction conditions based on minimum sizes are given in inches and in real world dimensions at 1:24,000 scale.
+In general, measure features along the longest axis (length) and/or the shortest axis (width).
+Measure square features along either axis, measure round features along the diameter, and measure irregular features against the axis of the best fitting non-oriented rectangle.
+Measure the length of linear features along the centerline of the feature and measure their width perpendicular to the centerline.
+Any specific or unique requirements for measurement are addressed separately for each feature.
+For areal measurements, the depiction conditions are expressed as "X square inches".
+Therefore, square inches indicate that the value 5/03 Draft for Implementation 1-6
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use is an areal value .
+Thus, 4 square inches indicates an areal
+equivalent in extent to a square which measures 2 inches by 2 inches, or to a rectangle which measures 1 inch by 4 inches.
+Two examples of an area equal to 4 square inches are: 2" 2" 4" 1"
+Decimal values are 0.01 square inches which measures 0.1 0.01 square inches
+handled in the same way; an area described as indicates an area equivalent in size to a square inch by 0.1 inch.
+An example of an area equal to is: 0.1" 0.1"
+Do not confuse this terminology with phrases such as "2 foot square," where neither the value nor the unit is areal. example, an area that is 2 foot square is: 2 ft. 2 ft.
+For
+The areal value terminology is used in the templates because it allows an area to be defined independently of lengths and widths.
+If there are also minimum length or width requirements, then these values are included in the depiction conditions along with the areal value.
+For example: If a LAKE/POND is $ 0.025" (50 feet at 1:24,000 scale) along the shortest axis and is $ 0.0025 square inches (10,000 square feet at 1:24,000 scale), Then show.
+5/03
+Draft for Implementation
+1-7
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use The term "landmark" is used in the depiction conditions to refer to features that are culturally or physically distinctive in relation to surrounding features.
+Their representation provides identifiable ground positions and improves the usefulness of the map.
+1.1.5 Source Interpretation Guidelines The source interpretation guidelines provide information for interpreting the depiction specifications when using specific source materials.
+They also contain any modifications to the depiction conditions specific to the source materials.
+1.1.5.1 All The source interpretation guidelines in this section provide information on how to interpret the depiction specifications, regardless of the source.
+Included are such things as when to show a coincident feature based on the depiction conditions, when to show more than one instance of the feature, when to show something as a different feature, how to select which features to show when there are several of the same features closely spaced together, and which theme a feature should be depicted in when a feature can occur in more than one theme.
+1.1.5.2 Graphic The source interpretation guidelines in this section provide information on how to interpret the depiction specifications when the source is a map.
+Most previously mapped features should be retained unless they positively no longer exist.
+However, in some cases previously mapped features must meet current depiction conditions in order to be shown on the new map; for examples of statements pertaining to these features, see the Graphic sections for AREA TO BE SUBMERGED, FORESHORE, and WASH in the Hydrography theme.
+There are also a number of offshore features shown on previously published maps prior to 1961 that are no longer required and should not be shown on revised maps for consistency reasons.
+For examples of statements pertaining to these features, see the Graphic sections for HAZARD ZONE, POST, ROCK, and SNAG/STUMP in the Hydrography theme.
+5/03 Draft for Implementation 1-8
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Instructions are also given on how to depict features that were not symbolized on previously published maps because they were coincident with other features.
+For example, the feature SURVEY LINE (Public Land Survey System theme) contains the following statement: PLSS lines may not have been shown on previously published maps because they were coincident with other features.
+If the feature they were coincident with is deleted, restore the SURVEY LINE as originally surveyed.
+1.1.6 Symbolization Feature symbolization is determined by the characteristics and dimensionality of the feature.
+A crosswalk between the feature characteristics, symbols, and labels is presented in tabular form in this section.
+1.1.6.1 Characteristics Column This column lists only those characteristics that affect symbolization.
+If there is no applicable characteristic, this is indicated by "N/A".
+Symbol Column This column lists the number of the symbol to use, as determined by the characteristics.
+If a symbol has not yet been assigned, the symbol specifications are listed.
+In some cases, the symbol number for a feature that is symbolized the same way has been listed.
+Brief notes are provided to explain dimensionality, composite symbols, or the choice multiple symbols.
+If there is no applicable symbol, this is indicated by "N/A".
+Symbol specifications are presented in the Standards for 1:24,000and 1:25,000-Scale Quadrangle Maps , Part 5: Publication Symbols .
+See also appendixes 1-C and 1-D for crosswalks between the indexes for the Part 5: Publication Symbols and Part 6: Publication Symbols books and the feature templates.
+1.1.6.2
+5/03
+Draft for Implementation
+1-9
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use 1.1.6.3 Label Column This column lists the label to be shown, as determined by the characteristics.
+The generic label is listed first.
+If there is no generic label, this is indicated by "N/L". applicable, this is also indicated.
+If a proper name is
+Generally, all names and labels that were shown on the previously published map are retained, unless the feature to which they apply positively no longer exists.
+Specifications for names and labels are shown on the style sheets in appendixes 2-C (1:24,000- and 1:25,000-scale maps) and 2-D (1:63,360 Alaska maps) of the Standards for Revised Primary Series Quadrangle Maps.
+5/03
+Draft for Implementation
+1-10
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use 1.2 REVISION The term "revision" applies to the process by which data are updated to reflect changes that have occurred since the date of the previously published map.
+Features added during revision must meet the depiction conditions listed in the feature templates.
+Revision guidelines and instructions for which features to revise on single edition maps are located in the Standards for Revised Primary Series Quadrangle Maps.
+See appendix 1-A for instructions on how to use the feature
+templates during revision.
+5/03
+Draft for Implementation
+1-11
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-A: Instructions for Using the Feature Templates During Revision
+APPENDIX 1-A Instructions for Using the Feature Templates During Revision
+5/03
+Draft for Implementation
+1A-1
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-A: Instructions for Using the Feature Templates During Revision The Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps were derived from the Standards for 1:24,000-Scale Digital Line Graphs and Quadrangle Maps .
+The information about attribute coding was either eliminated or rewritten to make it more suitable and understandable for use as a graphic standard.
+The single edition feature templates were reviewed by the USGS and USDA Forest Service to ensure that they contain consistent, concise, unambiguous instructions that describe what to show on single edition maps.
+The single edition feature templates provide the following information: Feature Definitions - a definition of the qualities that distinguish one feature from another Characteristics - a listing and definition of the characteristics that distinguish between the peculiar qualities of a feature Delineation - a description of the extent of a feature Depiction Conditions - the criteria a feature must meet to be shown on the map Source Interpretation Guidelines-All - instructions on how to interpret the depiction specifications, regardless of the source Source Interpretation Guidelines-Graphic instructions on how to
+interpret the depiction specifications when the source is a map The following steps should be taken when preparing a single edition map: "
+Determine which features should be revised.
+General guidelines and instructions are located in the Standards for Revised Primary Series Quadrangle Maps .
+"
+Use the definition and the source interpretation guidelines in the feature templates to identify what feature you are looking at on the revision imagery or previously published map.
+Use the delineation guidelines to determine the extent of the feature.
+"
+5/03
+Draft for Implementation
+1A-2
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-A: Instructions for Using the Feature Templates During Revision "
+Use the depiction conditions and the source interpretation guidelines to determine if the feature should be shown.
+"
+Use the characteristics to determine how the feature should be shown.
+For example, a small standing (as opposed to flowing) water body appears in the imagery.
+It is probably a LAKE/POND or a RESERVOIR (see Hydrography theme for both).
+It appears to have a natural shoreline and it does not have a geometric shape, so it is not a constructed basin.
+Based on the feature definition and the source interpretation guidelines, it is a LAKE/POND and not a RESERVOIR.
+Use the delineation guidelines to determine the extent of the LAKE/POND.
+It is
+naturally formed and appears to be perennial, so based on the delineation guidelines and the characteristics, the edge of the LAKE/POND is the position of the shoreline when the water is at the stage that prevails for the greater part of the year (average water elevation.)
+Use the depiction conditions to determine if this feature should be shown.
+In this example, the State is South Carolina, which is not an arid area.
+At average water elevation, the LAKE/POND is approximately 90 feet along the shortest axis and about 20,000 square feet in area.
+The depiction conditions require that a LAKE/POND must be $ 0.025" (50 feet at 1:24,000 scale) along the shortest axis and $ 0.0025 square inches (10,000 square feet at 1:24,000 scale) in order to be shown.
+The example above meets the depiction criteria, so it should be shown.
+After the LAKE/POND is identified, delineated, and the decision to show it is made, the characteristic having to do with the portion of the year the feature contains water (intermittent vs. perennial) determines the proper symbolization to be used.
+According to the source interpretation guidelines, the symbolization of the perimeter of the LAKE/POND is determined by the depiction specifications for SHORELINE, DAM/WEIR, NONEARTHEN SHORE, or SPILLWAY.
+Symbol specifications are presented in the Standards for 1:24,000- and 1:25,000-Scale Quadrangle Maps, Part 5: Publication Symbols.
+If necessary, use the crosswalk table to locate the Part 5 symbol.
+The feature characteristics also determine how or whether the LAKE/POND is labeled, because there may be an elevation, proper name, or a water characteristic of "salt" associated with it.
+Specifications for names and labels are shown on the style sheets in appendixes 2-C and 2-D in the Standards for 5/03 Draft for Implementation
+1A-3
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-A: Instructions for Using the Feature Templates During Revision Revised Primary Series Quadrangle Maps.
+The characteristics of LAKE/POND in the feature templates indicate that the value for the elevation is required only if it is known.
+According to the characteristics, the name of the LAKE/POND is shown, if it is known.
+The Standards for Revised Primary Series Quadrangle Maps indicate that new names can be added to maps, if supported by Geographic Names Information System sources, although normally the only new names that are added are those that are identified during boundary update.
+The feature template for LAKE/POND indicates that the distinctive characteristic of the water is identified only if the lake is known to be "salty".
+Since there is no evidence from the imagery or from an ancillary source that the lake is "salty", a label describing the water characteristic is not necessary.
+Summary The following is a summary of the revision procedure: 1.
+Determine what features should be revised.
+2.
+Determine what the feature is on the source.
+3.
+Determine the size and extent of the feature.
+4.
+Determine if the feature should be shown.
+5.
+Determine what the characteristics of the feature are.
+6.
+Determine the symbol specifications.
+7.
+Determine if a label is necessary.
+8.
+Add the feature symbol and/or label to the map.
+5/03
+Draft for Implementation
+1A-4
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+APPENDIX 1-B Feature/Characteristic to Feature Template/Theme Crosswalk
+5/03
+Draft for Implementation
+1B-1
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk The crosswalk in this appendix relates the feature names and characteristics to the feature themes.
+The feature names appear in upper case letters in the first column, while the characteristics are shown in upper and lower case letters.
+This crosswalk does not attempt to show the complete relationships between all of the features and characteristics, nor is it intended to imply that the features indicated are the correct ones to show in all cases.
+The reader must refer to the feature templates for the complete depiction specifications to determine which features to show.
+5/03
+Draft for Implementation
+1B-2
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic -AAgricultural Inspection Air Ventilation Airboat Trail AIRCRAFT FACILITY Airport Heliport Helitack Base Seaplane Base Airport Alkaline Alternate Amended Monument Amphitheater Amusement Park ANCHORAGE Seaplane Angle Point Animal Approved Aqua Theater Aquaculture AQUACULTURE SITE Aqueduct ARCH Natural Arch Natural Bridge Archeological Site ARCHEOLOGICAL SITE/RUIN Archeological Site Cliff Dwelling Petroglyph Pictograph Ruins AREA OF COMPLEX CHANNELS AREA TO BE SUBMERGED Arena Armory ATHLETIC FIELD Auditorium -BBAR BARREN LAND Gravel Lava Sand
+Feature Template
+Theme
+TRAFFIC INSPECTION FACILITY MINE ENTRANCE TUNNEL ENTRANCE LANE AIRCRAFT FACILITY AIRCRAFT FACILITY AIRCRAFT FACILITY AIRCRAFT FACILITY AIRCRAFT FACILITY AIRCRAFT FACILITY SPRING/SEEP WELL ROUTE SURVEY CORNER OUTDOOR THEATER PARK ANCHORAGE ANCHORAGE SURVEY CORNER CEMETERY BOUNDARY LINE OUTDOOR THEATER RESERVOIR AQUACULTURE SITE CANAL/DITCH PIPELINE ARCH ARCH ARCH ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN ARCHEOLOGICAL SITE/RUIN AREA OF COMPLEX CHANNELS AREA TO BE SUBMERGED BUILDING BUILDING ATHLETIC FIELD BUILDING
+Transportation Built-up Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Hydrography Hydrography Transportation PLSS Built-up Built-up Hydrography Hydrography PLSS Built-up Boundaries Built-up Hydrography Built-up Hydrography Hydrography Named Landforms Named Landforms Named Landforms Built-up Built-up Built-up Built-up Built-up Built-up Built-up Hydrography Hydrography Built-up Built-up Built-up Built-up
+BAR BARREN BARREN BARREN BARREN
+LAND LAND LAND LAND
+Named Nonveg Nonveg Nonveg Nonveg
+Landforms Surface Cover Surface Cover Surface Cover Surface Cover
+5/03
+Draft for Implementation
+1B-3
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic BASIN Carolina Bay Crater BAY/INLET BEACH BEND BOARDWALK Boat Access Boat Ramp Botanical Garden Boulders BOUNDARY LINE Approved Disputed Historical BOUNDARY POINT Reference Point Breakwater Brick BRIDGE Covered Uncovered BUILDING Arena Armory Auditorium Capitol City Hall Community Center Courthouse Firehouse Forest Headquarters Grain Elevator Grange Hall Guard Station Hospital House of Worship Library Medical Center Memorial Museum Observatory Post Office Radio Facility Railroad Station Ranger District Office Roundhouse School Stadium Substation Townhall Work Center 5/03
+Feature Template BASIN BASIN BASIN BAY/INLET BEACH BEND BOARDWALK LAUNCHING RAMP LAUNCHING RAMP PARK FORESHORE BOUNDARY LINE BOUNDARY LINE BOUNDARY LINE BOUNDARY LINE BOUNDARY POINT BOUNDARY POINT PIER/BREAKWATER/JETTY KILN BRIDGE BRIDGE BRIDGE BRIDGE BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING BUILDING Draft for Implementation
+Theme Named Landforms Named Landforms Named Landforms Hydrography Nonveg Surface Cover Named Landforms Built-up Built-up Built-up Built-up Hydrography Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Built-up Built-up Hydrography Transportation Transportation Transportation Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up
+1B-4
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic BUILT-UP AREA Business Bypass -CCable CABLE/PIPELINE SITE Cable Pipeline Cable and Pipeline CABLEWAY Ski Lift CAMPGROUND Campsite Campsite CANAL/DITCH Aqueduct Canoe Trail CAPE Capitol Carolina Bay CAVE ENTRANCE CEMETERY Animal Human Charcoal CHIMNEY CITY City Hall Civil Government Clay CLIFF Cliff Dwelling Coke Communication Community Center Compressor Connector CONTOUR Depression Control CONVEYOR Cooling Pond Cooling Coral Corral Correctional COUNTY County Route Courthouse Cranberry Bog 5/03
+Feature Template BUILT-UP AREA ROUTE ROUTE
+Theme Built-up Transportation Transportation
+CABLE/PIPELINE SITE CABLE/PIPELINE SITE CABLE/PIPELINE SITE CABLE/PIPELINE SITE CABLE/PIPELINE SITE CABLEWAY CABLEWAY CAMPGROUND CAMPGROUND CAMPGROUND CANAL/DITCH CANAL/DITCH LANE CAPE BUILDING BASIN CAVE ENTRANCE CEMETERY CEMETERY CEMETERY KILN CHIMNEY CITY BUILDING INSTITUTIONAL SITE MINE CLIFF ARCHEOLOGICAL SITE/RUIN KILN TOWER BUILDING PIPELINE REGULATION STATION ROUTE CONTOUR CONTOUR TOWER CONVEYOR RESERVOIR TOWER FORESHORE REEF HOLDING PEN INSTITUTIONAL SITE COUNTY ROUTE BUILDING CULTIVATED CROPLAND Draft for Implementation
+Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Hydrography Hydrography Transportation Named Landforms Built-up Named Landforms Named Landforms Built-up Built-up Built-up Built-up Built-up Boundaries Built-up Built-up Built-up Named Landforms Built-up Built-up Built-up Built-up Built-up Transportation Hypsography Hypsography Built-up Built-up Hydrography Built-up Hydrography Hydrography Built-up Built-up Boundaries Transportation Built-up Veg Surface Cover
+1B-5
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic Crater CREVASSE FIELD CUL-DE-SAC CULTIVATED CROPLAND Cranberry Bog Orchard/Grove Vines/Bushes Customs Custom Station Port of Entry Custom Station -DDAM/WEIR Earthen Nonearthen Debris Basin Decorative Pool Defensive Earthworks Depression DEPTH CURVE DESERT Dewatering Area Dirt Road DISH Disposal Oil Sump Sludge Pit DISPOSAL SITE Tailings Waste Rock Disputed DISTURBED SURFACE DIVIDE Donation Land Claim DRAW SPAN DRIVE-IN THEATER SCREEN Drive-In Theater DRYDOCK Drydock Duck Pond DUNES Sand -EEducation/Research EMBANKMENT Defensive Earthworks Levee Spoil Bank ESTUARY 5/03
+Feature Template BASIN CREVASSE FIELD CUL-DE-SAC CULTIVATED CROPLAND CULTIVATED CROPLAND CULTIVATED CROPLAND CULTIVATED CROPLAND TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION
+Theme Named Landforms Hydrography Transportation Veg Surface Cover Veg Surface Cover Veg Surface Cover Veg Surface Cover Transportation Transportation Transportation Transportation
+FACILITY FACILITY FACILITY FACILITY
+DAM/WEIR Hydrography DAM/WEIR Hydrography DAM/WEIR Hydrography INUNDATION AREA Hydrography RESERVOIR Hydrography EMBANKMENT Built-up CONTOUR Hypsography DEPTH CURVE Hypsography DESERT Named Landforms INUNDATION AREA Hydrography ROAD Transportation DISH Built-up RESERVOIR Built-up RESERVOIR Built-up RESERVOIR Built-up DISPOSAL SITE Built-up DISPOSAL SITE Built-up DISPOSAL SITE Built-up BOUNDARY LINE Boundaries DISTURBED SURFACE Built-up DIVIDE Named Landforms PUBLIC LAND SURVEY SYSTEM AREA PLSS DRAW SPAN Transportation DRIVE-IN THEATER SCREEN Built-up OUTDOOR THEATER Built-up DRYDOCK Built-up GATE Hydrography INUNDATION AREA Hydrography DUNES Nonveg Surface Cover DUNES Nonveg Surface Cover
+INSTITUTIONAL SITE EMBANKMENT EMBANKMENT EMBANKMENT EMBANKMENT ESTUARY Draft for Implementation
+Built-up Built-up Built-up Built-up Built-up Hydrography
+1B-6
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic Evaporator EXHIBITION GROUND -FFeedlot FENCE LINE Ferry Crossing FILTRATION PLANT Filtration Pond Firehouse FISH LADDER FLUME Floodgate Flowing FORD FORESHORE Boulders Coral Gravel Mud Rock Sand Shell Forest Forest Development Road Forest Headquarters Forest Service Administrative Area Forest Service Ranger District Forest Service High Clearance Primary Secondary 4-Wheel Drive Road FRACTURE FUMAROLE -GGAGING STATION Tide Station GAP GATE Drydock Floodgate Lock Road Restricted Toll Tidegate Generator 5/03
+Feature Template RESERVOIR EXHIBITION GROUND
+Theme Hydrography Built-up
+HOLDING PEN FENCE LINE LANE FILTRATION PLANT RESERVOIR BUILDING FISH LADDER FLUME GATE WELL FORD FORESHORE FORESHORE FORESHORE FORESHORE FORESHORE FORESHORE FORESHORE FORESHORE RESERVATION ROAD BUILDING RESERVATION RESERVATION ROUTE ROUTE ROUTE ROUTE ROAD FRACTURE FUMAROLE
+Built-up Built-up Transportation Built-up Hydrography Built-up Hydrography Hydrography Hydrography Hydrography Transportation Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Boundaries Transportation Built-up Boundaries Boundaries Transportation Transportation Transportation Transportation Transportation Named Landforms Hydrography
+GAGING STATION GAGING STATION GAP GATE GATE GATE GATE GATE GATE GATE GATE WINDMILL Draft for Implementation
+Hydrography Hydrography Named Landforms Hydrography Hydrography Hydrography Hydrography Transportation Transportation Transportation Hydrography Built-up
+1B-7
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic GEYSER Glacier Golf Course Grain Elevator Grange Hall Grassland Gravel
+Feature Template GEYSER ICE MASS SPORTS SITE BUILDING BUILDING RESERVATION FORESHORE BARREN LAND MINE MORAINE ROAD BUILDING TANK
+Theme Hydrography Hydrography Built-up Built-up Built-up Boundaries Hydrography Nonveg Surface Cover Built-up Nonveg Surface Cover Transportation Built-up Built-up
+Gravel Road Guard Station Guzzler -HHAZARD ZONE Rock Area Shoal Wreckage Heat HELIPAD Heliport HELISPOT Helitack Base Historic Historical HISTORICAL MONUMENT HOLDING PEN Corral Feedlot Stockyard Homestead Entry Survey Hospital Hot House of Worship Human Hummocked Ice -IICE MASS Glacier Snowfield Ice Shelf Incline Railway INCLINE/FLOW Indian Allotment Indian Land Indian Mound
+HAZARD ZONE HAZARD ZONE HAZARD ZONE HAZARD ZONE WELL HELIPAD AIRCRAFT FACILITY HELISPOT AIRCRAFT FACILITY TRAIL BOUNDARY LINE INSTITUTIONAL SITE HISTORICAL MONUMENT HOLDING PEN HOLDING PEN HOLDING PEN HOLDING PEN SPECIAL SURVEY AREA BUILDING SPRING/SEEP WELL BUILDING CEMETERY MOUNT
+Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Transportation Transortation Transportation Transportation Boundaries Built-up Built-up Built-up Built-up Built-up Built-up PLSS Built-up Hydrography Hydrography Built-up Built-up Named Landforms
+ICE MASS ICE MASS ICE MASS ICE MASS RAILWAY INCLINE/FLOW SPECIAL SURVEY AREA RESERVATION MOUNT
+Hydrography Hydrography Hydrography Hydrography Transportation Named Landforms PLSS Boundaries Named Landforms
+5/03
+Draft for Implementation
+1B-8
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic INSTITUTIONAL SITE Civil Government Correctional Education/Research Historical Medical Military Religious Intake Intermittent
+Feature Template INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE INSTITUTIONAL SITE WATER/INTAKE OUTFLOW LAKE/POND RESERVOIR SHORELINE STREAM/RIVER INTERCHANGE ROUTE INUNDATION AREA INUNDATION AREA INUNDATION AREA INUNDATION AREA INUNDATION AREA INUNDATION AREA INUNDATION AREA INUNDATION AREA ISLAND ISTHMUS
+Theme Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Transportation Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Named Landforms Named Landforms
+INTERCHANGE Interstate INUNDATION AREA Controlled Debris Basin Dewatering Area Duck Pond Percolation Basin Retarding Basin Not Controlled ISLAND ISTHMUS -JJetty -KKILN Brick Charcoal Coke -LLAKE/POND Intermittent Perennial LAND GRANT LAND PARCEL LANE Airboat Trail Canoe Trail Ferry Crossing Seaplane Landing/ Takeoff Shipping Dredged Turning 5/03
+PIER/BREAKWATER/JETTY
+Built-up
+KILN KILN KILN KILN
+Built-up Built-up Built-up Built-up
+LAKE/POND LAKE/POND LAKE/POND LAND GRANT LAND PARCEL LANE LANE LANE LANE LANE LANE LANE LANE Draft for Implementation
+Hydrography Hydrography Hydrography PLSS Boundaries Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation
+1B-9
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic LANE - continued Undredged LAUNCH FACILITY LAUNCH PAD LAUNCHING RAMP Boat Access Boat Ramp Seaplane Ramp Lava Levee Library Light Duty Road Dirt Gravel Paved LOCALE Location Monument LOCK CHAMBER Lock Lookout Loop -MMangrove MARINA Meander Corner Medical Medical Center Memorial MILE MARKER Military Military Lot MINE Open Pit Pit Clay Gravel Sand Quarry Strip Mine Danger Area MINE ENTRANCE Air Ventilation Miniature MINOR CIVIL DIVISION MOBILE HOME PARK MONORAIL MORAINE Gravel MOUNT Hummocked Ice 5/03
+Feature Template LANE LAUNCH FACILITY LAUNCH PAD LAUNCHING RAMP LAUNCHING RAMP LAUNCHING RAMP LAUNCHING RAMP BARREN LAND EMBANKMENT BUILDING ROAD ROAD ROAD ROAD LOCALE SURVEY CORNER LOCK CHAMBER GATE TOWER ROUTE
+Theme Transportation Built-up Built-up Built-up Built-up Built-up Built-up Nonveg Surface Cover Built-up Built-up Transportation Transportation Transportation Transportation Built-up PLSS Hydrography Hydrography Built-up Transportation
+TREES Veg Surface Cover MARINA Built-up SURVEY CORNER PLSS INSTITUTIONAL SITE Built-up BUILDING Built-up BUILDING Built-up MILE MARKER Hydrography RESERVATION Boundaries INSTITUTIONAL SITE Built-up PUBLIC LAND SURVEY SYSTEM AREA PLSS MINE Built-up MINE Built-up MINE Built-up MINE Built-up MINE Built-up MINE Built-up MINE Built-up MINE Built-up HAZARD ZONE Hydrography MINE ENTRANCE Built-up MINE ENTRANCE Built-up RAILWAY Transportation MINOR CIVIL DIVISION Boundaries MOBILE HOME PARK Built-up MONORAIL Transportation MORAINE Nonveg Surface Cover MORAINE Nonveg Surface Cover MOUNT Named Landforms MOUNT Named Landforms Draft for Implementation
+1B-10
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic MOUNT - continued Indian Mound Pingo Mud MUD POT Museum -NNarrow Gauge NATION Natural Arch Natural Bridge Navigation Non-Producing NONEARTHEN SHORE -OObservatory OFFSHORE PLATFORM Oil Sump Open Pit Orchard/Groves OUTDOOR THEATER Amphitheater Aqua Theater Drive-In Theater Outflow Overlook Access -PParade Ground Park PARK Amusement Park Botanical Garden Parade Ground Picnic Area Zoo Paved Penstock Percolation Basin Perennial
+Feature Template MOUNT MOUNT FORESHORE PLAYA MUD POT BUILDING
+Theme Named Landforms Named Landforms Hydrography Hydrography Hydrography Built-up
+RAILWAY NATION ARCH ARCH TOWER WELL NONEARTHEN SHORE
+Transportation Boundaries Named Landforms Named Landforms Built-up Built-up Hydrography
+BUILDING OFFSHORE PLATFORM RESERVOIR MINE CULTIVATED CROPLAND OUTDOOR THEATER OUTDOOR THEATER OUTDOOR THEATER OUTDOOR THEATER WATER/INTAKE OUTFLOW ROAD
+Built-up Built-up Built-up Built-up Veg Surface Cover Built-up Built-up Built-up Built-up Hydrography Transportation
+Petroglyph Picnic Area Pictograph
+PARK RESERVATION PARK PARK PARK PARK PARK PARK ROAD PIPELINE INUNDATION AREA LAKE/POND RESERVOIR SHORELINE STREAM/RIVER ARCHEOLOGICAL SITE/RUIN PARK ARCHEOLOGICAL SITE/RUIN
+Built-up Boundaries Built-up Built-up Built-up Built-up Built-up Built-up Transportation Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Built-up Built-up
+5/03
+Draft for Implementation
+1B-11
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic PIER/BREAKWATER/JETTY Breakwater Jetty Pier Pier Pingo Pinnacle Pipeline PIPELINE
+Feature Template PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY MOUNT PINNACLE CABLE/PIPELINE SITE PIPELINE PIPELINE PIPELINE PIPELINE PIPELINE
+Theme Built-up Built-up Built-up Built-up Built-up Named Landforms Named Landforms Built-up Built-up Hydrography Hydrography Hydrography Hydrography Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up Named Landforms Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Transportation Built-up Built-up Built-up Built-up Built-up Transportation PLSS Boundaries Transportation Built-up Built-up PLSS PLSS Built-up PLSS PLSS PLSS PLSS PLSS PLSS Built-up
+Aqueduct Penstock Siphon PIPELINE REGULATION STATION PIPELINE REGULATION STATION Compressor PIPELINE REGULATION STATION Pumping PIPELINE REGULATION STATION Valve PIPELINE REGULATION STATION Pit MINE Clay MINE Gravel MINE Sand MINE PLATEAU PLATEAU Platform Area HAZARD ZONE PLAYA PLAYA Mud PLAYA Salt PLAYA Sand PLAYA POPULATED PLACE POPULATED PLACE Port of Entry TRAFFIC INSPECTION FACILITY Post Office BUILDING POWER SITE POWER SITE Sun POWER SITE Wind POWER SITE Power Transmission Line TRANSMISSION LINE Primary Highway ROAD PRINCIPAL MERIDIAN PRINCIPAL MERIDIAN Prison RESERVATION Private ROAD Producing WELL PROSPECT PROSPECT Protracted SURVEY LINE Protraction Block PUBLIC LAND SURVEY AREA PROVING GROUND PROVING GROUND PUBLIC LAND SURVEY AREA PUBLIC LAND SURVEY SYSTEM AREA Donation Land Claim PUBLIC LAND SURVEY SYSTEM AREA Military or Warrant Lot PUBLIC LAND SURVEY SYSTEM AREA Protraction Block PUBLIC LAND SURVEY SYSTEM AREA Section PUBLIC LAND SURVEY SYSTEM AREA Tract PUBLIC LAND SURVEY SYSTEM AREA Pumping PIPELINE REGULATION STATION
+5/03
+Draft for Implementation
+1B-12
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic -QQuarry -RRACETRACK Raceway Radio Facility Railroad Station RAILWAY Incline Railway Miniature Transit RAILWAY YARD Ramp RANGE Ranger District Office RAPIDS Reclaimed/Reverted/ Converted Recreation RECREATIONAL SLIDE REEF Rock Coral Reference Point Religious RESERVATION Forest Grassland Indian Land Military Park Prison Wilderness Wildlife RESERVOIR Aquaculture Disposal Oil Sump Sludge Pit Decorative Pool Evaporator Stock Tank Swimming Pool Tailings Pond Treatment Cooling Pond Filtration Pond Settling Pond 5/03
+Feature Template
+Theme
+MINE
+Built-up
+RACETRACK SPORTS SITE BUILDING BUILDING RAILWAY RAILWAY RAILWAY RAILWAY RAILWAY YARD ROAD RANGE BUILDING RAPIDS DISPOSAL SITE MINE TRAIL RECREATIONAL SLIDE REEF REEF REEF BOUNDARY POINT INSTITUTIONAL SITE RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR Draft for Implementation
+Built-up Built-up Built-up Built-up Transportation Transportation Transportation Transportation Transportation Transportation Named Landforms Built-up Hydrography Built-up Built-up Transportation Built-up Hydrography Hydrography Hydrography Boundaries Built-up Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Built-up Hydrography Hydrography Built-up Built-up Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography
+1B-13
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic RESERVOIR - continued Sewage Treatment Pond Water Storage Rest Area Access REST SITE Retarding Basin Restricted RIDGE Road Restricted Toll ROAD Overlook Access Ramp Rest Area Access Runaway Truck Ramp Traffic Circle Turning Roadway ROAD BLOCK/BERM/BARRIER Rock ROCK Rock Area Roundhouse ROUTE County Route Interstate State Route U.S. Numbered USDA Forest Service High Clearance Primary Secondary Ruined Pier/Breakwater/ Jetty Ruins Runaway Truck Ramp RUNWAY/APRON/TAXIWAY Abandoned Operational Under Construction -SSalt Sand
+Feature Template
+Theme
+RESERVOIR RESERVOIR ROAD REST SITE INUNDATION AREA ROAD RIDGE GATE GATE GATE ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD BLOCK/BERM/BARRIER FORESHORE REEF ROCK HAZARD ZONE BUILDING ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE PIER/BREAKWATER/JETTY ARCHEOLOGICAL SITE/RUIN ROAD RUNWAY/APRON/TAXIWAY RUNWAY/APRON/TAXIWAY RUNWAY/APRON/TAXIWAY RUNWAY/APRON/TAXIWAY
+Hydrography Hydrography Transportation Transportation Hydrography Transportation Named Landforms Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Hydrography Hydrography Hydrography Hydrography Built-up Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Built-up Transportation Transportation Transportation Transportation Transportation
+Scattered Trees 5/03
+PLAYA LAKE/POND BARREN LAND DUNES FORESHORE MINE PLAYA TREES Draft for Implementation
+Hydrography Hydrography Nonveg Surface Cover Nonveg Surface Cover Hydrography Built-up Hydrography Veg Surface Cover
+1B-14
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic SCENIC BYWAY Scenic School Sea SEA/OCEAN Seaplane Anchorage Seaplane Base Seaplane Landing/Takeoff Seaplane Ramp Secondary Highway Section Section Corner Section Subdivision Corner Settling Pond SEWAGE DISPOSAL PLANT Sewage Treatment Pond Shell Shipping Dredged Turning Undredged Shoal SHOPPING CENTER SHORELINE Intermittent Perennial SHRUBLAND Siding SINK/RISE Siphon SKI JUMP Ski Lift Sludge Pit Snowfield SOUNDING SPECIAL SURVEY AREA Homestead Entry Survey Indian Allotment U.S. Survey Special Survey Corner SPILLWAY Spoil Bank SPORTS SITE Golf Course Raceway Winter Recreation Area SPOT ELEVATION SPRING/SEEP Alkaline Hot Sulphur Spur Stadium 5/03
+Feature Template
+Theme
+SCENIC BYWAY Transportation TRAIL Transportation BUILDING Built-up WALL Hydrography SEA/OCEAN Hydrography ANCHORAGE Hydrography AIRCRAFT FACILITY Transportation LANE Transportation LAUNCHING RAMP Built-up ROAD Transportation PUBLIC LAND SURVEY SYSTEM AREA PLSS SURVEY CORNER PLSS SURVEY CORNER PLSS RESERVOIR Hydrography SEWAGE DISPOSAL PLANT Built-up RESERVOIR Hydrography FORESHORE Hydrography LANE Transportation LANE Transportation LANE Transportation LANE Transportation HAZARD ZONE Hydrography SHOPPING CENTER Built-up SHORELINE Hydrography SHORELINE Hydrography SHORELINE Hydrography SHRUBLAND Veg Surface Cover RAILWAY Transportation SINK/RISE Hydrography PIPELINE Hydrography SKI JUMP Built-up CABLEWAY Built-up RESERVOIR Built-up ICE MASS Hydrography SOUNDING Hypsography SPECIAL SURVEY AREA PLSS SPECIAL SURVEY AREA PLSS SPECIAL SURVEY AREA PLSS SPECIAL SURVEY AREA PLSS SURVEY CORNER PLSS SPILLWAY Hydrography EMBANKMENT Built-up SPORTS SITE Built-up SPORTS SITE Built-up SPORTS SITE Built-up SPORTS SITE Built-up SPOT ELEVATION Hypsography SPRING/SEEP Hydrography SPRING/SEEP Hydrography SPRING/SEEP Hydrography SPRING/SEEP Hydrography ROUTE Transportation BUILDING Built-up Draft for Implementation
+1B-15
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic Standard Gauge State Route STATE/TERRITORY Stock Tank Stockyard STREAM/RIVER Intermittent Perennial Strip SUBMERGED STREAM Substation SUBSTATION Sulphur Sun SURVEY CORNER Amended Monument Angle Point Location Monument Meander Corner Section Corner Section Subdivision Corner Special Survey Corner Witness Corner Witness Point SURVEY LINE Protracted Surveyed Surveyed SWAMP/MARSH Swimming Pool -TTailings Tailings Pond TANK Guzzler Water Tank Telephone TERRACE Tide Dismantled Operational Tidegate Toll TOWER Communication Control Cooling Lookout 5/03
+Feature Template RAILWAY ROUTE STATE/TERRITORY RESERVOIR HOLDING PEN STREAM/RIVER STREAM/RIVER STREAM/RIVER MINE SUBMERGED STREAM BUILDING SUBSTATION SPRING/SEEP WELL POWER SITE SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SWAMP/MARSH RESERVOIR
+Theme Transportation Transportation Boundaries Hydrography Built-up Hydrography Hydrography Hydrography Built-up Hydrography Built-up Built-up Hydrography Hydrography Built-up PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS PLSS Hydrography Hydrography
+DISPOSAL SITE RESERVOIR TANK TANK TANK TRANSMISSION LINE TERRACE GAGING STATION GAGING STATION GAGING STATION GATE GATE ROAD TOWER TOWER TOWER TOWER TOWER Draft for Implementation
+Built-up Hydrography Built-up Built-up Built-up Built-up Named Landforms Hydrography Hydrography Hydrography Hydrography Transportation Transportation Built-up Built-up Built-up Built-up Built-up
+1B-16
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic TOWER - continued Navigation Water Water Intake Townhall Tract Traffic Circle TRAFFIC INSPECTION FACILITY Agricultural Inspection Customs Custom Station Port of Entry Weigh TRAIL Historic Recreation Scenic TRAILHEAD Transit TRANSMISSION LINE Power Telephone Treatment Cooling Pond Filtration Pond Settling Pond Sewage Treatment Pond TREE TREES Scattered Trees Woodland Truck TUNNEL TUNNEL ENTRANCE Air Ventilation Turning Roadway TURNTABLE -U-
+Feature Template
+Theme
+TOWER Built-up TOWER Built-up TOWER Built-up BUILDING Built-up PUBLIC LAND SURVEY SYSTEM AREA PLSS ROAD Transportation TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION TRAFFIC INSPECTION TRAIL TRAIL TRAIL TRAIL TRAILHEAD RAILWAY TRANSMISSION LINE TRANSMISSION LINE TRANSMISSION LINE RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR TREE TREES TREES TREES ROUTE TUNNEL TUNNEL TUNNEL ENTRANCE TUNNEL ENTRANCE ROAD TURNTABLE FACILITY FACILITY FACILITY FACILITY FACILITY FACILITY Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Built-up Built-up Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Veg Surface Cover Veg Surface Cover Veg Surface Cover Veg Surface Cover Transportation Hydrography Transportation Transportation Transportation Transportation Transportation
+Underwater CONTOUR Unimproved Road ROAD Forest Development Road ROAD 4-Wheel-Drive Road ROAD U.S. Numbered ROUTE U.S. Survey SPECIAL SURVEY AREAS USDA Forest Service ROUTE -VVALLEY 5/03 VALLEY Draft for Implementation
+Hypsography Transportation Transportation Transportation Transportation PLSS Transportation
+Named Landforms
+1B-17
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic Valve Vines/Bushes -WWALL Sea Warrant Lot WASH Waste Rock Water Water Intake WATER INTAKE/OUTFLOW Intake Outflow Water Storage Water Tank Water Tower WATERFALL Weak Corner Weigh WELL Heat Non-Producing Producing Water Alkaline Hot Sulphur Well Area WELL FIELD WHARF Wilderness Wildlife Wind WINDMILL Generator Winter Recreation Area Witness Corner Witness Point Woodland Work Center WRECK Hull and/or Superstructure Mast and/or Funnel Wreckage Area
+Feature Template PIPELINE REGULATION STATION CULTIVATED CROPLAND
+Theme Built-up Veg Surface Cover
+WALL WALL WALL PUBLIC LAND SURVEY SYSTEM AREA WASH DISPOSAL SITE WELL TOWER TOWER WATER/INTAKE OUTFLOW WATER/INTAKE OUTFLOW WATER/INTAKE OUTFLOW RESERVOIR TANK TOWER WATERFALL SURVEY CORNER TRAFFIC INSPECTION FACILITY WELL WELL WELL WELL WELL WELL WELL WELL WELL HAZARD ZONE WELL FIELD WHARF RESERVATION RESERVATION POWER SITE WINDMILL WINDMILL SPORTS SITE SURVEY CORNER SURVEY CORNER TREES BUILDING WRECK WRECK WRECK HAZARD ZONE
+Built-up Hydrography Hydrography PLSS Hydrography Built-up Hydrography Built-up Built-up Hydrography Hydrography Hydrography Hydrography Built-up Built-up Hydrography PLSS Transportation Built-up Hydrography Hydrography Built-up Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Built-up Boundaries Boundaries Built-up Built-up Built-up Built-up PLSS PLSS Veg Surface Cover Built-up Hydrography Hydrography Hydrography Hydrography
+5/03
+Draft for Implementation
+1B-18
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-B: Feature/Characteristic to Feature Template/Theme Crosswalk
+Feature/Characteristic -X-Y-ZZoo
+Feature Template
+Theme
+PARK
+Built-up
+5/03
+Draft for Implementation
+1B-19
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+APPENDIX 1-C Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+5/03
+Draft for Implementation
+1C-1
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk The crosswalk in this appendix relates the symbol names listed in the index of the Standards for 1:24,000- and 1:25,000-Scale Quadrangle Maps, Part 5: Publication Symbols to the feature templates.
+This crosswalk does not attempt to show the complete relationships between all of the symbols and feature characteristics in the templates, nor is it intended to imply that the symbol indicated is the correct one to show on the map in all cases.
+The reader must refer to the Standards for 1:24,000- and 1:25,000-Scale Quadrangle Maps, Part 5: Publication Symbols and the feature templates for the complete depiction specifications to determine the correct features to show.
+The entries that are unique to single edition maps have asterisks ( *) next to them.
+In some cases, additional feature templates and themes that relate to the index symbol name are listed, to improve the usefulness of the crosswalk.
+5/03
+Draft for Implementation
+1C-2
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry -AAirboat trail Airport Apron Aqueduct aboveground underground underwater tunnel Archeological site Area between shoreline and sounding datum line (topographic/bathymetric) Area limits Area to be submerged Area to be submerged (fill) Arrow, one-way Athletic field -BBathymetric Contour approximate depression index intermediate rise, inside depression sounding datum value label Bathymetric contour, primary approximate depression index primary rise, inside depression Bathymetric contour, supplementary approximate supplementary supplementary depression rise, inside depression Bathymetric feature names Bathymetric gradient tint first second third fourth fifth sixth seventh overprint Battle trench Beach, gravel Beacon (topographic) Bench mark (coincident with found section corner) Boardwalk *Boat access, no ramp Boat ramp
+Feature Template
+Theme
+LANE AIRCRAFT FACILITY RUNWAY/APRON/TAXIWAY CANAL/DITCH CANAL/DITCH PIPELINE PIPELINE TUNNEL ARCHEOLOGICAL SITE/RUIN N/A CABLE/PIPELINE SITE AREA TO BE SUBMERGED AREA TO BE SUBMERGED ROAD ATHLETIC FIELD
+Transportation Transportation Transportation Hydrography Hydrography Hydrography Hydrography Hydrography Built-up N/A Built-up Hydrography Hydrography Transportation Built-up
+N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A EMBANKMENT BARREN LAND BEACH TOWER SURVEY CORNER BOARDWALK LAUNCHING RAMP LAUNCHING RAMP
+N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A N/A Built-up Nonveg Surface Cover Nonveg Surface Cover Built-up PLSS Built-up Built-up Built-up
+5/03
+Draft for Implementation
+1C-3
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Boundary Alaska borough barrio city park civil township county county park, large county park, small district federally administered area *Forest Service administrative *Forest Service land status outline *Forest Service ranger district Hawaii forest reserve Hawaiian homestead in road incorporated city, town, village, borough, or hamlet indefinite judicial division municipio national *Non-National Forest System lands old Indian reservation old Indian treaty line parish precinct State State forest, monument, park, or reservation territorial town Boundary enhancement (federally administered area) Boundary monument with number and elevation third order or better elevation, with tablet third order or better elevation, without tablet Braided stream Breakwater narrow wide Breastworks Bridge highway or road railroad road Building Built-up area -CCableway Campground *name Campsite
+Feature Template BOUNDARY LINE COUNTY MINOR CIVIL DIVISION PARK MINOR CIVIL DIVISION COUNTY RESERVATION RESERVATION MINOR CIVIL DIVISION RESERVATION RESERVATION LAND PARCEL RESERVATION N/A N/A BOUNDARY LINE CITY BOUNDARY LINE COUNTY COUNTY NATION LAND PARCEL SURVEY LINE SURVEY LINE COUNTY MINOR CIVIL DIVISION STATE RESERVATION STATE MINOR CIVIL DIVISION RESERVATION BOUNDARY POINT BOUNDARY POINT BOUNDARY POINT BOUNDARY POINT AREA OF COMPLEX CHANNELS PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY EMBANKMENT BRIDGE BRIDGE BRIDGE BRIDGE BUILDING BUILT-UP AREA
+Theme Boundaries Boundaries Boundaries Built-up Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries N/A N/A Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries PLSS PLSS Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Hydrography Built-up Built-up Built-up Built-up Transportation Transportation Transportation Transportation Built-up Built-up
+CABLEWAY CAMPGROUND CAMPGROUND CAMPGROUND
+Built-up Built-up Built-up Built-up
+5/03
+Draft for Implementation
+1C-4
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Canal double-line single-line Canal lock Carline Carolina bay Causeway narrow wide Cave entrance Cemetery Channel in water area less than 100' wide (topo/bathy) 100'-400' wide (topo/bathy) over 400' wide (topo/bathy) Cliff dwelling Cog railway Coke ovens College College (for 1:63,360-scale quadrangle maps) Compressor station Continental divide Contour adjacent depression approximate at ditches and canals at levee or spoil bank bathymetric carrying depression feathering-out treatment glacier or permanent snowfield, indefinite glacier or permanent snowfield, indefinite depression indefinite indefinite depression index intermediate obsolete supplementary supplementary depression supplementary indefinite depression Conveyor Coral reef (topographic) Reef (topographic) (fill) Reef (topo/bathy) Reef (topo/bathy) (fill) Corral Cranberry bog Crevasse field *Cul-de-sac
+Feature Template CANAL/DITCH CANAL/DITCH CANAL/DITCH GATE RAILWAY BASIN PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY CAVE ENTRANCE CEMETERY LANE LANE N/A N/A N/A ARCHEOLOGICAL SITE/RUIN RAILWAY KILN BUILDING INSTITUTIONAL SITE BUILDING INSTITUTIONAL SITE PIPELINE REGULATION STATION DIVIDE CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR N/A CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR N/A CONTOUR CONTOUR CONTOUR CONVEYOR REEF REEF REEF N/A N/A HOLDING PEN CULTIVATED CROPLAND CREVASSE FIELD CUL-DE-SAC
+Theme Hydrography Hydrography Hydrography Hydrography Transportation Named Landforms Built-up Built-up Built-up Named Landforms Built-up Transportation Transportation N/A N/A N/A Built-up Transportation Built-up Built-up Built-up Built-up Built-up Built-up Named Landforms Hypsography Hypsography Hypsography Hypsography Hypsography N/A Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography N/A Hypsography Hypsography Hypsography Built-up Hydrography Hydrography Hydrography N/A N/A Built-up Veg Surface Cover Hydrography Transportation
+5/03
+Draft for Implementation
+1C-5
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Cul-de-sac -DDam carrying road diversion earthen outline large earth masonry masonry (fill) with lock Datum shift tick Dike Ditch double-line single-line Diversion dam Donation land claim Drawbridge highway or road railroad road Drive-in theater Dry lake or pond Dry lake or pond (fill) Drydock Duck pond Duck pond (fill) -EEvaporator -FFederally administered area boundary Federally administered area boundary (enhancement) Feedlot Fence line Ferry highway or road railroad Field line Fish hatchery Fish hatchery (fill) Fish ladder
+Feature Template CUL-DE-SAC
+Theme Transportation
+DAM/WEIR DAM/WEIR EMBANKMENT DAM/WEIR CONTOUR DAM/WEIR DAM/WEIR DAM/WEIR LOCK CHAMBER GATE N/A (Show) EMBANKMENT CANAL/DITCH CANAL/DITCH CANAL/DITCH EMBANKMENT PUBLIC LAND SURVEY AREA SURVEY LINE BRIDGE DRAW SPAN BRIDGE DRAW SPAN BRIDGE DRAW SPAN BRIDGE DRAW SPAN DRIVE-IN THEATER SCREEN OUTDOOR THEATER PLAYA PLAYA DRYDOCK INUNDATION AREA INUNDATION AREA
+Hydrography Hydrography Built-up Hydrography Hypsography Hydrography Hydrography Hydrography Hydrography Hydrography N/A (Show) Built-up Hydrography Hydrography Hydrography Built-up PLSS PLSS Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Built-up Hydrography Hydrography Built-up Hydrography Hydrography
+RESERVOIR
+Hydrography
+BOUNDARY LINE BOUNDARY LINE HOLDING PEN FENCE LINE LANE LANE LANE FENCE LINE AQUACULTURE SITE RESERVOIR AQUACULTURE SITE RESERVOIR FISH LADDER
+Boundaries Boundaries Built-up Built-up Transportation Transportation Transportation Built-up Built-up Hydrography Built-up Hydrography Hydrography
+5/03
+Draft for Implementation
+1C-6
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Flat salt foreshore Floodgate Flume Footbridge Ford (on class 3 road) *Ford (on unimproved road) Foreshore flat *Forest Headquarters *Forest System land status outline *Forest System land status, nonnational (fill) Found closing corner Found section corner bench mark coincident with Fracture Fumarole -GGaging station Gate flood *gate sluice tide toll Geyser Glacial advance moraine retreat Glacier extent of ice indefinite contours indefinite depression contours Graticule intersection Graticule tick Kentucky and Tennessee Grave Gravel beach *Guard Station -HHelipad *Helispot Highway bridge drawbridge ferry island on dam
+Feature Template FORESHORE PLAYA FORESHORE GATE FLUME BRIDGE FORD FORD FORESHORE BUILDING LAND PARCEL RESERVATION LAND PARCEL RESERVATION SURVEY CORNER SURVEY CORNER SURVEY CORNER FRACTURE FUMAROLE
+Theme Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Transportation Transportation Hydrography Built-up Boundaries Boundaries Boundaries Boundaries PLSS PLSS PLSS Named Landforms Hydrography
+GAGING STATION GATE GATE GATE GATE GATE GATE GEYSER ICE MASS ICE MASS MORAINE ICE MASS ICE MASS ICE MASS CONTOUR CONTOUR N/A (Show) N/A (Show) N/A (Show) CEMETERY BARREN LAND BEACH BUILDING
+Hydrography Transportation Hydrography Transportation Hydrography Hydrography Transportation Hydrography Hydrography Hydrography Nonveg Surface Cover Hydrography Hydrography Hydrography Hypsography Hypsography N/A (Show) N/A (Show) N/A (Show) Built-up Nonveg Surface Cover Nonveg Surface Cover Built-up
+AIRCRAFT FACILITY HELIPAD HELISPOT ROAD BRIDGE BRIDGE DRAW SPAN LANE ROAD ROAD
+Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation
+5/03
+Draft for Implementation
+1C-7
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Highway - continued overpass primary (class 1) primary (class 1) (fill) primary (class 1) with median strip ramps route markers secondary (class 2) secondary (class 2) (fill) secondary (class 2) with median strip snowshed tunnel with median tunnel without median under construction, class 1 underpass Holiday area (topo/bathy) Homestead monument Horizontal control station coincident with found section corner with checked spot elevation with third-order or better elevation House of worship House of worship (for 1:63,360-scale quadrangle maps) -IInadequate survey area (topo/bathy) Incline railway Intertidal zone (topo/bathy) -JJetty narrow submerged (topo/bathy) wide -K-LLabels bathymetric contour value contour value *county road highway route marker hydrography feature interior land net margin type *National Forest, high clearance vehicles *National Forest, primary road *National Forest, scenic byway
+Feature Template ROAD ROAD ROAD ROAD ROAD ROUTE ROAD ROAD ROAD BUILDING TUNNEL TUNNEL ROAD ROAD N/A SURVEY CORNER N/A (Show) SURVEY CORNER SPOT ELEVATION N/A (Show) BUILDING BUILDING
+Theme Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Transportation Transportation Transportation N/A PLSS N/A (Show) PLSS Hypsography N/A (Show) Built-up Built-up
+N/A RAILWAY N/A
+N/A Transportation N/A
+PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY N/A PIER/BREAKWATER/JETTY
+Built-up Built-up N/A Built-up
+(See appropriate feature) N/A CONTOUR ROUTE ROUTE (See appropriate feature) (See appropriate feature) PUBLIC LAND SURVEY AREA N/A (Show) ROUTE ROUTE SCENIC BYWAY
+N/A Hypsography Transportation Transportation PLSS N/A (Show) Transportation Transportation Transportation
+5/03
+Draft for Implementation
+1C-8
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Labels - continued *National Forest, secondary road road route marker *trail, national scenic, recreational, or historic route *trail number, Forest Service Lake dry dry (fill) intermittent intermittent (fill) perennial perennial (fill) perennial salt perennial salt (fill) Land grant line Land grant monument Land subject to inundation Land subject to inundation (fill) Landing strip paved seaplane unpaved Landmark object Lava Lava flow outline Levee large with road or railroad Located object Location monument -MMangrove Mangrove (fill) Marsh submerged submerged (fill) Masonry dam dam (fill) reservoir spillway Meander corner *Military or warrant lot line Mine dump entrance former open pit open pit (fill) shaft strip Mineral monument
+Feature Template ROUTE ROUTE ROUTE TRAIL TRAIL LAKE/POND PLAYA PLAYA LAKE/POND LAKE/POND LAKE/POND LAKE/POND LAKE/POND LAKE/POND LAND GRANT SURVEY LINE SURVEY CORNER INUNDATION AREA INUNDATION AREA RUNWAY/APRON/TAXIWAY RUNWAY/APRON/TAXIWAY LANE RUNWAY/APRON/TAXIWAY (See appropriate feature) BARREN LAND INCLINE/FLOW N/A EMBANKMENT EMBANKMENT EMBANKMENT (See appropriate feature) SURVEY CORNER
+Theme Transportation Transportation Transportation Transportation Transportation Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography PLSS PLSS PLSS Hydrography Hydrography Transportation Transportation Transportation Transportation Nonveg Surface Cover Named Landforms N/A Built-up Built-up Built-up PLSS
+TREES TREES SWAMP/MARSH SWAMP/MARSH SWAMP/MARSH DAM/WEIR DAM/WEIR RESERVOIR SPILLWAY SURVEY CORNER PUBLIC LAND SURVEY AREA SURVEY LINE MINE DISPOSAL SITE MINE ENTRANCE MINE MINE MINE MINE ENTRANCE MINE SURVEY CORNER
+Veg Surface Cover Veg Surface Cover Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography PLSS PLSS PLSS Built-up Built-up Built-up Built-up Built-up Built-up Built-up Built-up PLSS
+5/03
+Draft for Implementation
+1C-9
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Mineral monument, U.S. Mining claim Monorail Mud flat Mud pot -NName barrio bathymetric feature *campground civil township district hydrographic feature interior land net *picnic area precinct quadrangle (title panel) *scenic byway town Neatline Nonearthen shore -OOil sump Oil sump (fill) Open pit mine Open pit mine (fill) Open water area, perennial Orchard Overpass highway railroad road -PPenstock aboveground underground underwater Permanent snowfield extent of ice indefinite contours indefinite depression contours Picnic area *name Pier covered narrow narrow, ruin wide wide, ruin
+Feature Template SURVEY CORNER SPECIAL SURVEY AREA SURVEY LINE MONORAIL FORESHORE PLAYA MUD POT
+Theme PLSS PLSS PLSS Transportation Hydrography Hydrography Hydrography
+(See appropriate feature) MINOR CIVIL DIVISION N/A CAMPGROUND MINOR CIVIL DIVISION MINOR CIVIL DIVISION (See appropriate feature) (See appropriate feature) PUBLIC LAND SURVEY AREA PARK MINOR CIVIL DIVISION N/A (Show) SCENIC BYWAY MINOR CIVIL DIVISION N/A (Show) NONEARTHEN SHORE
+Boundaries N/A Built-up Boundaries Boundaries PLSS Built-up BOUNDARIES N/A (Show) Transportation Boundaries N/A (Show) Hydrography
+RESERVOIR RESERVOIR MINE MINE (See appropriate feature) CULTIVATED CROPLAND ROAD RAILWAY ROAD
+Built-up Built-up Built-up Built-up Veg Surface Cover Transportation Transportation Transportation
+PIPELINE PIPELINE PIPELINE PIPELINE ICE MASS ICE MASS CONTOUR CONTOUR PARK PARK REST SITE PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY
+Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hypsography Hypsography Built-up Built-up Transportation Built-up Built-up Built-up Built-up Built-up Built-up
+5/03
+Draft for Implementation
+1C-10
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Pipeline aboveground aboveground water elevated elevated water submerged submerged water underground underground water Pit former sludge Pit (fill) sludge (fill) Platform Pond dry dry (fill) duck duck (fill) intermittent intermittent (fill) perennial perennial (fill) perennial salt perennial salt (fill) Power substation Power transmission line Prospect Pulloff area *Pulloff area Pumping station -QQuarry former Quarry (fill) -RRacetrack Raceway Railroad bridge drawbridge
+Feature Template PIPELINE PIPELINE PIPELINE PIPELINE PIPELINE N/A N/A PIPELINE PIPELINE MINE MINE RESERVOIR MINE RESERVOIR OFFSHORE PLATFORM LAKE/POND PLAYA PLAYA INUNDATION AREA INUNDATION AREA LAKE/POND LAKE/POND LAKE/POND LAKE/POND LAKE/POND LAKE/POND SUBSTATION TRANSMISSION LINE PROSPECT REST SITE ROAD REST SITE ROAD PIPELINE REGULATION STATION
+Theme Built-up Hydrography Built-up Hydrography Built-up Hydrography N/A N/A Built-up Hydrography Built-up Built-up Built-up Built-up Built-up Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Built-up Built-up Transportation Transportation Transportation Transportation Built-up
+MINE MINE MINE
+Built-up Built-up Built-up
+RACETRACK SPORTS SITE RAILWAY BRIDGE BRIDGE DRAW SPAN ferry LANE *in light-duty road RAILWAY in street (class 1 and 2 highways) RAILWAY in street (class 3 and 4 roads) RAILWAY narrow gauge, multiple tracks RAILWAY narrow gauge, single track RAILWAY overpass RAILWAY
+Built-up Built-up Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation
+5/03
+Draft for Implementation
+1C-11
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Railroad - continued roundhouse siding snowshed standard gauge, multiple tracks standard gauge, single track transit, multiple tracks transit, single track tunnel underpass yard yard (fill) Railway cog incline Ramp, boat or seaplane Range line location approximate *location doubtful other land surveys protracted *Ranger district office Rapids on double-line stream on single-line stream Recreational slide Redoubt Reef coral (topographic) coral (topographic) (fill) coral (topo/bathy) coral (topo/bathy) (fill) rock (topographic) rock (topographic) (fill) rock (topo/bathy) rock (topo/bathy) (fill) Reference monument Reservoir covered water covered water (fill) masonry masonry (fill) Rest area *Rest area River mileage marker Road *block, berm, or barrier bridge bridge (class 3 road) change in classification class 3 class 3 with median class 4 class 5 drawbridge
+Feature Template BUILDING RAILWAY BUILDING RAILWAY RAILWAY RAILWAY RAILWAY TUNNEL RAILWAY RAILWAY YARD RAILWAY YARD RAILWAY RAILWAY RAILWAY LAUNCHING RAMP SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE BUILDING RAPIDS RAPIDS RAPIDS RECREATIONAL SLIDE EMBANKMENT REEF REEF REEF N/A N/A REEF REEF N/A N/A BOUNDARY POINT RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR RESERVOIR REST SITE ROAD REST SITE ROAD MILE MARKER ROAD ROAD BLOCK/BERM/BARRIER BRIDGE BRIDGE ROAD ROAD ROAD ROAD ROAD BRIDGE DRAW SPAN
+Theme Built-up Transportation Built-up Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up PLSS PLSS PLSS PLSS PLSS Built-up Hydrography Hydrography Hydrography Built-up Built-up Hydrography Hydrography Hydrography N/A N/A Hydrography Hydrography N/A N/A Boundaries Hydrography Built-up Hydrography Hydrography Hydrography Hydrography Transportation Transportation Transportation Transportation Hydrography Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation
+5/03
+Draft for Implementation
+1C-12
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Road - continued drawbridge (class 3 road) ferry *four-wheel-drive (class 5) *light-duty, dirt (class 3c) *light-duty, dirt (class 3c) (fill) *light-duty, composition unspecified (class 3) *light-duty, gravel (class 3b) *light-duty, gravel (class 3b) (fill) *light-duty, paved (class 3a) *light-duty, paved (class 3a) (fill) overpass route markers snowshed tunnel (class 1 and 2 highway) tunnel (class 3 road) underpass *unimproved (class 4) Roadside park Rock bare or awash (topographic) bare or awash (topo/bathy) bare or awash (topographic; dangerous to navigation) reef (topographic) reef (topographic) (fill) reef (topo/bathy) reef (topo/bathy) (fill) Rocks, group of bare or awash (topographic) bare or awash (topo/bathy) sunken (topo/bathy) Roundhouse Ruins Runways -SSalt flat Sand Sand dunes Sand in open water *Scenic byway name School School (for 1:63,360-scale quadrangle maps) *Seaplane anchorage *Seaplane base
+Feature Template BRIDGE DRAW SPAN LANE ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROUTE BUILDING TUNNEL TUNNEL ROAD ROAD REST SITE ROCK ROCK N/A HAZARD ZONE ROCK REEF REEF N/A N/A HAZARD ZONE HAZARD ZONE ROCK N/A N/A BUILDING ARCHEOLOGICAL SITE/RUIN RUNWAY/APRON/TAXIWAY
+Theme Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Transportation Transportation Transportation Transportation Hydrography Hydrography N/A Hydrography Hydrography Hydrography Hydrography N/A N/A Hydrography Hydrography Hydrography N/A N/A Built-up Built-up Transportation
+PLAYA BARREN LAND PLAYA DUNES BAR BARREN LAND SCENIC BYWAY BUILDING INSTITUTIONAL SITE BUILDING INSTITUTIONAL SITE ANCHORAGE AIRCRAFT FACILITY
+Hydrography Nonveg Surface Cover Hydrography Nonveg Surface Cover Named Landforms Nonveg Surface Cover Transportation Built-up Built-up Built-up Built-up Hydrography Transportation
+5/03
+Draft for Implementation
+1C-13
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Seaplane landing area Seaplane ramp Seawall Section line location approximate *location doubtful *military or warrant lot line other land surveys protracted Seep Service area *Service area Sewage disposal plant Sewage disposal plant (fill) Sewerline, submerged (topo/bathy) Shoal Shoreline apparent indefinite nonearthen reservoir tailings pond unsurveyed Shrubland Siphon Ski lift Sludge pit Sludge pit (fill) Sluice gate Snowfield, permanent Snowshed highway or road railroad Sounding datum line (topo/bathy) Special survey monument Spillway Spoil area (topo/bathy) Spoil bank Spot elevation Spring State plane coordinate tick primary quaternary quintary secondary tertiary Stockyard Stream braided disappearing at a sink double-line intermittent double-line intermittent (fill) double-line perennial double-line perennial (fill) indefinite intermittent indefinite perennial
+Feature Template LANE LAUNCHING RAMP WALL PUBLIC LAND SURVEY AREA SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SPRING/SEEP REST SITE ROAD REST SITE ROAD SEWAGE DISPOSAL PLANT SEWAGE DISPOSAL PLANT N/A HAZARD ZONE SHORELINE SHORELINE SHORELINE NONEARTHEN SHORE RESERVOIR RESERVOIR SHORELINE SHRUBLAND PIPELINE CABLEWAY RESERVOIR RESERVOIR GATE ICE MASS BUILDING BUILDING BUILDING N/A SURVEY CORNER SPILLWAY N/A EMBANKMENT SPOT ELEVATION SPRING/SEEP N/A (Show) N/A (Show) N/A (Show) N/A (Show) N/A (Show) HOLDING PEN STREAM/RIVER AREA OF COMPLEX CHANNELS SINK/RISE STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER
+Theme Transportation Built-up Hydrography PLSS PLSS PLSS PLSS PLSS PLSS PLSS Hydrography Transportation Transportation Transportation Transportation Built-up Built-up N/A Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Veg Surface Cover Hydrography Built-up Built-up Built-up Hydrography Hydrography Built-up Built-up Built-up N/A PLSS Hydrography N/A Built-up Hypsography Hydrography N/A (Show) N/A (Show) N/A (Show) N/A (Show) N/A (Show) Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography
+5/03
+Draft for Implementation
+1C-14
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry Stream - continued reappearing at a sink single-line intermittent single-line perennial submerged unsurveyed intermittent unsurveyed perennial Swamp submerged submerged (fill) submerged wooded shoreline submerged wooded (fill) wooded wooded (fill) Swimming pool Swimming pool (fill) -TTailings former Tailings pond Tailings pond (fill) Tank Taxiway Telephone line Tennessee Valley Divide Tide station Tidegate Tollgate Township Line location approximate *location doubtful other land surveys protracted Tract Traffic circle Traffic circle (class 3 road) Trail *national scenic, recreation, or historic *Trailhead Trees, scattered Tunnel aqueduct highway with median highway without median mine entrance railroad road wing and cross tick for highway or road Turntable
+Feature Template SINK/RISE STREAM/RIVER STREAM/RIVER SUBMERGED STREAM STREAM/RIVER STREAM/RIVER SWAMP/MARSH SWAMP/MARSH SWAMP/MARSH SHORELINE SWAMP/MARSH TREES SWAMP/MARSH TREES RESERVOIR RESERVOIR
+Theme Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Veg Surface Cover Hydrography Veg Surface Cover Hydrography Hydrography
+DISPOSAL SITE DISPOSAL SITE RESERVOIR RESERVOIR TANK RUNWAY/APRON/TAXIWAY TRANSMISSION LINE DIVIDE GAGING STATION GATE GATE PUBLIC LAND SURVEY AREA SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE SURVEY LINE PUBLIC LAND SURVEY AREA ROAD ROAD TRAIL TRAIL SCENIC BYWAY TRAILHEAD TREES TUNNEL TUNNEL TUNNEL TUNNEL TUNNEL MINE ENTRANCE TUNNEL TUNNEL TUNNEL TURNTABLE
+Built-up Built-up Hydrography Hydrography Built-up Transportation Built-up Named Landforms Hydrography Hydrography Transportation PLSS PLSS PLSS PLSS PLSS PLSS PLSS Transportation Transportation Transportation Transportation Transportation Transportation Veg Surface Cover Hydrography Transportation Hydrography Transportation Transportation Built-up Transportation Transportation Transportation Transportation
+5/03
+Draft for Implementation
+1C-15
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry -UUnderpass highway railroad road University University (for 1:63,360-scale quadrangle maps) UTM grid *UTM grid tick -VValve station Vertical control station recoverable mark, no tablet with tablet Vineyard -WWall Wash narrow permanent channel in wash wide Water filtration plant Water filtration plant (fill) Waterfall on double-line stream on single-line stream *"Weak" corner Weir Well geothermal water Wharf Wind generator Windmill *Winter recreation area Witness corner Wooded swamp Wooded swamp (fill) submerged shoreline submerged (fill) Woods submerged (fill)
+Feature Template
+Theme
+(See appropriate feature) ROAD RAILWAY ROAD BUILDING INSTITUTIONAL SITE BUILDING INSTITUTIONAL SITE N/A N/A (Show)
+Transportation Transportation Transportation Built-up Built-up Built-up Built-up N/A N/A (Show)
+PIPELINE REGULATION STATION N/A (Show) N/A (Show) CULTIVATED CROPLAND
+Built-up N/A (Show) N/A (Show) Veg Surface Cover
+WALL WALL WASH WASH STREAM/RIVER WASH FILTRATION PLANT RESERVOIR FILTRATION PLANT RESERVOIR WATERFALL WATERFALL WATERFALL SURVEY CORNER DAM/WEIR WELL WELL WELL WELL WHARF WINDMILL WINDMILL SPORTS SITE SURVEY CORNER SWAMP/MARSH TREES SWAMP/MARSH TREES SHORELINE SWAMP/MARSH TREES TREES TREES
+Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Hydrography Built-up Hydrography Hydrography Hydrography Hydrography PLSS Hydrography Built-up Hydrography Hydrography Hydrography Built-up Built-up Built-up Built-up PLSS Hydrography Veg Surface Hydrography Veg Surface Hydrography Hydrography Veg Surface Veg Surface Veg Surface
+Cover Cover Cover Cover Cover
+5/03
+Draft for Implementation
+1C-16
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-C: Part 5 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 5 Index Entry *Work center Wreck exposed masts exposed or sunken Wreckage, exposed -X-Y-Z-
+Feature Template BUILDING WRECK WRECK HAZARD ZONE WRECK HAZARD ZONE
+Theme Built-up Hydrography Hydrography Hydrography Hydrography Hydrography
+5/03
+Draft for Implementation
+1C-17
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6: Publication Symbols Index to Feature Template/Theme Crosswalk
+APPENDIX 1-D Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+5/03
+Draft for Implementation
+1D-1
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6: Publication Symbols Index to Feature Template/Theme Crosswalk The crosswalk in this appendix relates the symbol names listed in the index for the Standards for 1:24,000- and 1:25,000-Scal e Quadrangle Maps, Part 6: Publication Symbols to the feature templates.
+This crosswalk does not attempt to show the complete relationships between all of the symbols and feature characteristics in the templates, nor is it intended to imply that the symbol indicated is the correct one to show on the map in all cases.
+The reader must refer to the Standards for 1:24,000- and 1:25,000-Scale Quadrangle Maps, Part 5: Publication Symbols and the feature templates for the complete depiction specifications to determine the correct features to show.
+5/03
+Draft for Implementation
+1D-2
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry -AAdjacent depression contours Approximate boundary Approximate contour Index Intermediate Approximate mean low water line Aqueduct Elevated Tunnel Underground Area limits Area to be submerged -BBeach, gravel Bench mark coincident with found section corner Boardwalk Borrow pit Large Boundary Approximate Barrio Cemetery City park Civil township County County park District Federal reservation boundary enhancement Incorporated borough Incorporated city Incorporated hamlet Incorporated town Incorporated village Indefinite In road Judicial division Municipio National National monument National park National reservation Parish Park 5/03
+Feature Template
+Theme
+CONTOUR BOUNDARY LINE CONTOUR CONTOUR SHORELINE CANAL/DITCH CANAL/DITCH FLUME TUNNEL CANAL/DITCH CABLE/PIPELINE SITE AREA TO BE SUBMERGED PIPELINE
+Hypsography Boundaries Hypsography Hypsography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Hydrography Hydrography
+BARREN LAND BEACH SURVEY CORNER BOARDWALK MINE MINE BOUNDARY LINE MINOR CIVIL DIVISION CEMETERY PARK MINOR CIVIL DIVISION COUNTY RESERVATION MINOR CIVIL DIVISION BOUNDARY LINE CITY CITY CITY CITY CITY (See appropriate feature) (See appropriate feature) COUNTY COUNTY NATION RESERVATION RESERVATION RESERVATION COUNTY
+Nonveg Surface Cover Nonveg Surface Cover PLSS Built-up Built-up Built-up Boundaries Boundaries Built-up Built-up Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries
+Draft for Implementation
+1D-3
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Boundary - continued City County Private Small State Precinct State State reservation Territory Town Boundary monument With number 
+Feature Template
+Theme
+PARK RESERVATION PARK PARK RESERVATION MINOR CIVIL DIVISION STATE RESERVATION STATE MINOR CIVIL DIVISION BOUNDARY POINT SPOT ELEVATION
+Built-up Boundaries Built-up Built-up Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Boundaries Hypsography
+BOUNDARY POINT
+Boundaries
+BOUNDARY POINT AREA OF COMPLEX CHANNELS PIER/BREAKWATER/JETTY BRIDGE DRAW SPAN BRIDGE DRAW SPAN BRIDGE BRIDGE BRIDGE BRIDGE BRIDGE TRAIL TREES BUILDING BUILDING BUILDING BUILDING
+Boundaries Hydrography Built-up Transportation Transportation Transportation Transportation Transportation Hydrography Transportation Transportation Transportation Transportation Veg Surface Cover Built-up Built-up Built-up Built-up
+CAMPGROUND CANAL/DITCH CONTOUR CANAL/DITCH CANAL/DITCH RAILWAY TRAIL CONTOUR Draft for Implementation
+Built-up Hydrography Hypsography Hydrography Hydrography Transportation Transportation Hypsography
+1D-4
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Causeway Cave Cemetery Small Change in number of lanes Channel In wash, permanent In water area Church In congested area Large Placement Claypit Large Cliff dwelling Closing corner Found Indicated Cloverleaf Coke ovens College Conduit, elevated Contour Approximate Index Intermediate Carrying Depression Adjacent Supplementary Feathering out treatment Index Intermediate Supplementary Contouring At ditches and canals At levees Control points, objects that may or may not have geodetic position Coral reef Small Cranberry bog Crevasses, glacial Cut -DDam Carrying road Large earth Large masonry 5/03
+Feature Template PIER/BREAKWATER/JETTY CAVE ENTRANCE CEMETERY CEMETERY N/A LANE STREAM/RIVER LANE BUILDING BUILDING BUILDING BUILDING MINE MINE ARCHEOLOGICAL SITE/RUIN SURVEY CORNER SURVEY CORNER SURVEY CORNER ROAD KILN BUILDING INSTITUTIONAL SITE PIPELINE CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR CONTOUR BOUNDARY POINT REEF REEF CULTIVATED CROPLAND CREVASSE FIELD CONTOUR
+Theme Built-up Named Landforms Built-up Built-up N/A Transportation Hydrography Transportation Built-up Built-up Built-up Built-up Built-up Built-up Built-up PLSS PLSS PLSS Transportation Built-up Built-up Built-up Built-up Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Hypsography Boundaries Hydrography Hydrography Veg Surface Cover Hydrography Hypsography
+DAM/WEIR CONTOUR DAM/WEIR Draft for Implementation
+Hydrography Hypsography Hydrography
+1D-5
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Dam - continued Small masonry With lock Danger curve Dead end road Depth curve Depression contour Adjacent Supplementary Destination arrow Direction arrow Disappearing stream at definite point Ditch Intermittent Perennial Ditches and canals, contouring at Dolphin Drawbridge Railroad Road Drive-in theater
+Feature Template
+Theme
+DAM/WEIR DAM/WEIR LOCK CHAMBER GATE HAZARD ZONE ROAD DEPTH CURVE CONTOUR CONTOUR CONTOUR N/A ROAD SINK/RISE CANAL/DITCH CANAL/DITCH CONTOUR N/A BRIDGE DRAW SPAN BRIDGE DRAW SPAN DRIVE-IN THEATER SCREEN OUTDOOR THEATER PLAYA DRYDOCK
+Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Hydrography Hypsography Hypsography Hypsography N/A Transportation Hydrography Hydrography Hydrography Hypsography N/A Transportation Transportation Transportation Transportation Built-up Built-up Hydrography Built-up Transportation Transportation Nonveg Surface Cover
+Dry lake or pond Drydock Dual highway Overall width 100' or less ROAD Overall width over 100' ROAD Dune area DUNES -EElevations, water surface
+Evaporator Exposed wreck Exposed wreckage or foul ground -FFalls Large Small 5/03
+AREA TO BE SUBMERGED CANAL/DITCH INUNDATION AREA LAKE/POND STREAM/RIVER RESERVOIR WRECK HAZARD ZONE WRECK
+Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography
+WATERFALL WATERFALL Draft for Implementation
+Hydrography Hydrography
+1D-6
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Feathering-out treatment Federal reservation boundary enhancement Fence line Ferry Fill, road or railroad Filtration plant Fish hatchery Flat, foreshore Flume Elevated Underground Footbridge Foot trail Ford Road Trail Foreshore flat Foul ground -GGaging station Gas pipeline Aboveground Underground Gas tank Glacial crevasses Glacial moraine Glacier Gravel beach Gravel pit Large -HHorizontal control station Checked spot elevation Coincident with section corner Third order or better Third order or better, permanent mark Vertical angle elevation -IIndefinite boundary 5/03
+Feature Template CONTOUR BOUNDARY LINE FENCE LINE LANE CONTOUR FILTRATION PLANT RESERVOIR AQUACULTURE SITE RESERVOIR FORESHORE FLUME FLUME CANAL/DITCH PIPELINE BRIDGE TRAIL FORD FORD FORESHORE HAZARD ZONE
+Theme Hypsography Boundaries Built-up Transportation Hypsography Built-up Hydrography Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Transportation Transportation Transportation Hydrography Hydrography
+GAGING STATION PIPELINE PIPELINE TANK CREVASSE FIELD MORAINE ICE MASS CONTOURS BEACH BARREN LAND MINE MINE
+Hydrography Built-up Built-up Built-up Hydrography Nonveg Surface Cover Hydrography hydrography Nonveg Surface Cover Nonveg Surface Cover Built-up Built-up
+SPOT ELEVATION SURVEY CORNER N/A (Show) N/A (Show) SPOT ELEVATION
+Hypsography PLSS N/A (Show) N/A (Show) Hypsography
+(See appropriate feature) Draft for Implementation
+1D-7
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Indefinite or unsurveyed shoreline Index contour Approximate Intermediate contour Approximate Intermittent Canal Ditch Lake or pond Stream Intricate surface area Inundation,land subject to -JJetty -K-LLake Dry Intermittent Perennial Land grant Land grant monument with or without geodetic position Land subject to inundation Landmark object Lanes, change in number of Levee Contouring at levees Large earth With road With railroad Located object Lock Canal Double-line stream -MMangrove Marsh Submerged Wooded 5/03
+Feature Template
+Theme
+SHORELINE CONTOUR CONTOUR CONTOUR CONTOUR CANAL/DITCH CANAL/DITCH LAKE/POND STREAM/RIVER DISTURBED SURFACE INUNDATION AREA
+Hydrography Hypsography Hypsography Hypsography Hypsography Hydrography Hydrography Hydrography Hydrography Built-up Hydrography
+PIER/BREAKWATER/JETTY
+Built-up
+PLAYA LAKE/POND LAKE/POND LAND GRANT SURVEY LINE SURVEY CORNER INUNDATION AREA (See appropriate feature) ROAD EMBANKMENT CONTOUR CONTOUR ROAD EMBANKMENT RAILWAY EMBANKMENT (See appropriate feature) GATE GATE LOCK CHAMBER
+Hydrography Hydrography Hydrography PLSS PLSS PLSS Hydrography Transportation Built-up Hypsography Hypsography Transportation Built-up Transportation Built-up Hydrography Hydrography Hydrography
+TREES SWAMP/MARSH SWAMP/MARSH SWAMP/MARSH Draft for Implementation
+Veg Surface Cover Hydrography Hydrography Hydrography
+1D-8
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Marsh - continued
+Feature Template
+Theme
+TREES Masts, exposed on sunken wreck Meander corner Mine Areal strip Linear strip Open pit Mine dump Mine shaft Mine tunnel entrance Mining claim Moraine, glacial Mud -NNavigable canal -OOil pipeline Aboveground Underground Oil reservoir, open Oil sump Oil tank Open pit mine Large Orchard Overpass -PPack trail Penstock, underground Perennial Ditch Lake or pond Salt lake or pond Stream Unsurveyed Permanent snowfield Picnic area Pier Covered Pile Pipeline Gas or oil, aboveground 5/03 TRAIL PIPELINE CANAL/DITCH LAKE/POND LAKE/POND STREAM/RIVER STREAM/RIVER ICE MASS PARK REST SITE PIER/BREAKWATER/JETTY PIER/BREAKWATER/JETTY N/A PIPELINE Draft for Implementation PIPELINE PIPELINE RESERVOIR RESERVOIR TANK MINE MINE CULTIVATED CROPLAND (See appropriate feature) CANAL/DITCH HAZARD ZONE WRECK SURVEY CORNER MINE MINE MINE DISPOSAL SITE MINE ENTRANCE MINE ENTRANCE SPECIAL SURVEY AREA SURVEY LINE MORAINE FORESHORE PLAYA
+Veg Surface Cover Hydrography Hydrography PLSS Built-up Built-up Built-up Built-up Built-up Built-up PLSS PLSS Nonveg Surface Cover Hydrography Hydrography Hydrography
+Built-up Built-up Built-up Built-up Built-up Built-up Built-up Veg Surface Cover
+Transportation Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Transportation Built-up Built-up N/A Built-up
+1D-9
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Pipeline - continued Gas or oil, underground Pond Dry Intermittent Perennial Power transmission line Private road Prospect Pumping station -QQuarry Large -RRailroad Bridge Drawbridge Multiple track Single track Dismantled In street Narrow gauge Multiple track Single track On levee Tunnel U.S. standard gauge Juxtaposition Multiple main line track Sidings Single track Railroad station Railroad yards Railway, incline Range line Location doubtful Rapids Large Small Reef Rock or coral Small, rock or coral Reference monument Reservoir Covered Water 5/03
+Feature Template
+Theme
+PIPELINE PLAYA LAKE/POND LAKE/POND TRANSMISSION LINE ROAD PROSPECT PIPELINE REGULATION STATION MINE MINE
+Built-up Hydrography Hydrography Hydrography Built-up ROAD Built-up Built-up Built-up Built-up
+BRIDGE DRAW SPAN BRIDGE BRIDGE TRAIL RAILWAY RAILWAY RAILWAY EMBANKMENT RAILWAY TUNNEL RAILWAY RAILWAY RAILWAY RAILWAY BUILDING RAILWAY YARD RAILWAY SURVEY LINE SURVEY LINE RAPIDS RAPIDS REEF REEF BOUNDARY POINT RESERVOIR RESERVOIR RESERVOIR Draft for Implementation
+Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Transportation PLSS PLSS Hydrography Hydrography Hydrography Hydrography Boundaries Hydrography Hydrography Hydrography
+1D-10
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Reservoir - continued Natural shoreline Road Bridge Drawbridge Change in number of lanes Class 1 Class 2 Class 3 Class 4 Class 5 Dead end Dual highway Overall width 100' or less Overall width over 100' Fill Class 1 Class 2 On levee Private Streets in urban areas Toll Tunnel Under construction, classification known Rock Bare or awash Dangerous to navigation Sunken Rocks, group of, bare or awash Roundhouse and turntable, railroad Route markers Ruins -SSalt flat Sand area In open water Sandpit Large Sand, shifting, area 5/03
+Feature Template
+Theme
+SHORELINE BRIDGE BRIDGE DRAW SPAN N/A ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD ROAD EMBANKMENT ROAD ROAD ROAD GATE ROAD TUNNEL ROAD ROCK ROCK HAZARD ZONE ROCK N/A HAZARD ZONE ROCK BUILDING TURNTABLE ROUTE ARCHEOLOGICAL SITE/RUINS
+Hydrography Transportation Transportation Transportation N/A Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Transportation Built-up Transportation Transportation Transportation Transportation Transportation Transportation Transportation Hydrography Hydrography Hydrography Hydrography N/A Hydrography Hydrography Built-up Transportation Transportation Built-up
+PLAYA BARREN LAND DUNES BAR BARREN LAND MINE MINE DUNES Draft for Implementation
+Hydrography Nonveg Surface Cover Nonveg Surface Cover Named Landforms Nonveg Surface Cover Built-up Built-up Nonveg Surface Cover
+1D-11
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry School In congested area Large Placement Several buildings Scrub Seawall Section corner Found Indicated Section line Location doubtful Sewage disposal Plant Shifting sand area Shoal Shoreline Indefinite Or unsurveyed Siphon Ski lift Sludge pit Sluice gate Double-line stream Snag Snowfield, permanent Snowshed Soundings Spoil bank Spot elevation Spring Stream Braided Disappearing at a definite point Double line In marsh In swamp Intermittent Perennial Unsurveyed Streets in urban areas Strip mine Areal Linear Stump Submerged, area to be Sunken Rock Wreck 5/03
+Feature Template BUILDING BUILDING BUILDING BUILDING BUILDING INSTITUTIONAL SITE SHRUBLAND WALL SURVEY CORNER SURVEY CORNER SURVEY CORNER SURVEY LINE SURVEY LINE RESERVOIR SEWAGE DISPOSAL PLANT BARREN LAND DUNES HAZARD ZONE SHORELINE SHORELINE SHORELINE PIPELINE CABLEWAY RESERVOIR GATE GATE LOCK CHAMBER N/A ICE MASS BUILDING SOUNDING EMBANKMENT SPOT ELEVATION SPRING/SEEP AREA OF COMPLEX CHANNELS SINK/RISE STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER STREAM/RIVER ROAD MINE MINE N/A AREA TO BE SUBMERGED N/A N/A
+Theme Built-up Built-up Built-up Built-up Built-up Built-up Veg Surface Cover Hydrography PLSS PLSS PLSS PLSS PLSS Hydrography Built-up Nonveg Surface Cover Nonveg Surface Cover Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Built-up Hydrography Hydrography Hydrography N/A Hydrography Built-up Hypsography Built-up Hypsography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Transportation Built-up Built-up N/A Hydrography N/A N/A
+Draft for Implementation
+1D-12
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry Sunken - continued Mast exposed Supplementary contour Supplementary depression contours Swamp Submerged Wooded Swimming pool, masonry -TTailings Pond Tanks Gas Oil Water Telegraph line Toll road Tollgate Township line Location doubtful Traffic circle Trails Tramway, landmark lines Transmission line, power Tunnel Aqueduct Railroad Road Turntable Roundhouse and -UUnderpass Unsurveyed shoreline U.S. mineral monument or location monument Urban area -VVertical control station Marked with tablet, elevation third order or better
+Feature Template
+Theme
+HAZARD ZONE WRECK CONTOUR CONTOUR SWAMP/MARSH SWAMP/MARSH SWAMP/MARSH TREES RESERVOIR
+Hydrography Hydrography Hypsography Hypsography Hydrography Hydrography Hydrography Veg Surface Cover Hydrography
+DISPOSAL SITE RESERVOIR TANK TANK TANK TRANSMISSION LINE ROAD GATE SURVEY LINE SURVEY LINE ROAD TRAIL CABLEWAY RAILWAY TRANSMISSION LINE TUNNEL TUNNEL TUNNEL TURNTABLE BUILDING
+Built-up Hydrography Built-up Built-up Built-up Built-up Transportation Transportation PLSS PLSS Transportation Transportation Built-up Transportation Built-up Hydrography Transportation Transportation Transportation Transportation
+(See appropriate feature) SHORELINE SURVEY CORNER BUILT-UP AREA
+Hydrography PLSS Built-up
+N/A (Show)
+N/A (Show)
+5/03
+Draft for Implementation
+1D-13
+Standards for USGS and USDA Forest Service Single Edition Quadrangle Maps Part 1: Template Development and Use Appendix 1-D: Part 6 Publication Symbols Index to Feature Template/Theme Crosswalk
+Part 6 Index Entry
+Feature Template
+Theme
+Vertical control station - continued Recoverable mark-no tablet, elevation third order or better N/A (Show) Vineyard CULTIVATED CROPLAND -WWall Prominent Wash Water Area Surface elevations WALL WALL WALL WASH STREAM/RIVER (See appropriate feature) (See appropriate feature) AREA TO BE SUBMERGED CANAL/DITCH INUNDATION AREA LAKE/POND STREAM/RIVER TANK WELL WELL FIELD WELL WHARF WHARF WINDMILL SURVEY CORNER TREES WRECK N/A HAZARD ZONE
+N/A (Show) Veg Surface Cover
+Built-up Hydrography Built-up Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Hydrography Built-up Built-up Built-up Hydrography Built-up Built-up Built-up PLSS Veg Surface Cover Hydrography N/A Hydrography
+Tank Wells (excluding water) Well, water Wharf Covered Windmill Witness corner Woods Wreck Exposed Sunken Wreckage, exposed -X-Y-Z-
+5/03
+Draft for Implementation
+1D-14

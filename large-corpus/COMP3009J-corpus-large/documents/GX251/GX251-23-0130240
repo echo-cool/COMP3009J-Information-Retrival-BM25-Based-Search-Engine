@@ -1,0 +1,480 @@
+DIABETES MANAGEMENT The Use of Computers in Population-Based Diabetes Management Richard W. Grant, MD, MPH, and James B. Meigs, MD, MPH
+T
+ype 2 diabetes mellitus affects almost 10% of the U.S. adult population, and its prevalence is increasing [1,2].
+The risk of heart disease and stroke is 2 to 4 times greater in patients with diabetes, and these patients are also at increased risk of renal disease, blindness, and lower extremity amputation [3Â­5].
+Numerous large, well- conducted randomized trials have demonstrated that these complications can be reduced or prevented with appropriate medical care [6Â­14].
+Despite the widespread publication of evidence-based practice guidelines, however, care of patients with diabetes remains far from ideal.
+Community-based observational studies have repeatedly shown poor rates of glycemic, blood pressure, and cholesterol control in patients with diabetes [15Â­23].
+The care of a patient with diabetes is complex.
+Patients must be seen in clinic several times per year for testing of risk factor levels (such as glycosylated hemoglobin [HbA1c] and low- density lipoprotein cholesterol), assessment of blood pressure and foot care, and adjustment of medical regimens [24]
+Patients are often taking 5 or more medicines to treat hyperglycemia, hypertension, and hyperlipidemia.
+Many patients also have other associated comorbidities such as coronary artery or peripheral vascular disease, depression, and obesity.
+Currently, the majority of diabetic patients are cared for by primary care physicians who also arrange for consultation with ophthalmologists, nutritionists, podiatrists, and other health care professionals.
+It is perhaps not surprising that, in contrast to the care provided in the unique environment of randomized clinical trials, care in the community often fails to achieve evidencebased goals.
+Given the proven efficacy of appropriately adjusted pharmaceutical therapy, limitations in observed effectiveness of care can be attributed to failures at any number of steps in care.
+These limitations include lack of identification or loss to follow-up of patients with diabetes, clinical inertia in the adjustment of pharmaceutical therapy, lack of provider awareness of evidence-based guidelines, and patientcentered factors related to appointment or medication adherence and to lifestyle modification [25Â­30]
+Barriers related to cost of care, convenience and accessibility to clinical sites, and misunderstandings about prescribed regimens also reduce overall effectiveness of care [31Â­34].
+390 JCOM July 2002 Vol. 9, No. 7
+A Population-Based Approach Chronic disease management has traditionally been physiciancentered, with changes in care organized around the clinical visit.
+This model puts pressure on providers to address all aspects of clinical management in the setting of extreme time constraints.
+Moreover, the very occurrence of these clinic visits--and thus opportunities for adjusting care to meet evidence-based guidelines--depends both on physician appointment availability and on patient participation and active engagement in the process of care.
+In contrast to traditional clinic-based care, population-based diabetes management takes an epidemiologic overview to plan, organize, deliver, and monitor patient care [35].
+Key elements of populationbased care include a community perspective, application of clinical epidemiology principles, evidence-based practice, an emphasis on outcomes, and an emphasis on prevention [36].
+The organization of clinical data for a large cohort of patients is critical to the population-based approach.
+The collection, storage, and evaluation of these data are particularly wellsuited to computerized clinical information systems.
+Indeed, the effective integration of information technology ("informatics") should be seen as a prerequisite for the overall improvement of diabetes care.
+Computerized information systems are finding increasing use in clinical care.
+These informatics systems are used to (1) create patient registries by identifying specific populations (such as the cohort of all type 2 diabetic patients in a particular medical practice); (2) identify patients within the registry who are not meeting particular goals (eg, testing frequency, risk factor levels, specialty referrals); (3) coordinate specific interventions (such as patient mailings or physician reminders); (4) provide evidence-based treatment algorithms to aid in clinical decision making; and (5) serve as the organizing structure for integrated care delivery.
+Below we review some examples of how computer informatics systems have been applied to diabetes management and describe both the strengths and limitations of these approaches.
+From the General Medicine Division, Department of Medicine, Massachusetts General Hospital, and Harvard Medical School, Boston, MA.
+www.turner-white.com
+CLINICAL REVIEW Diabetes Patient Registries The first step in population-based disease management is to identify a specific population of patients to be managed.
+Population management requires that the care delivery system be responsible for a particular group of patients and, correspondingly, that these patients receive care primarily from this medical system.
+Managed care organizations by their nature have been at the forefront of creating registries of specific patient populations.
+Engelgau et al, for example, describe their experience in developing a diabetes surveillance system for a group of 3 managed care organizations.
+Combining data from inpatient, pharmacy, clinic, and laboratory records, they sought to develop an algorithm to characterize their diabetic populations [37].
+Important barriers to retroactively defining a patient population include shortcomings in chart documentation, inaccuracies in data sources created for other purposes (such as billing claims), and difficulties in linking data from different sources [38].
+Prospective enrollment of patients by clinicians is a more accurate approach but is limited by low rates of physician participation [39].
+Assessing and Improving Quality of Care Once established, population-based diabetes registries are used to characterize and subsequently improve the quality of care within a medical system.
+Various algorithms have been developed using prediction rules to identify high-risk subgroups of patients in need of more intensive interventions [40,41].
+The advent of new informatics technologies provides the potential for efficient identification of population subsets by any number of relevant criteria ("red flags"), such as high number of prescribed medicines, elevated blood pressure level, or prespecified adherence barriers.
+This "surveillance function" identifies patients and/or responsible physicians who can then be targeted for tailored interventions [42].
+There have been a number of different strategies employed to improve the overall quality of care for patient populations [43,44].
+Interventions directed toward physicians have included reminders and evaluations or "report cards" [45].
+Computer -generated reminders can be patientspecific or general, and can be in the form of letters, e-mail messages, or on- screen prompts for systems with computerized medical records [46].
+Report- cardÂ­style evaluations feed back a physician's performance on various criteria for the patients identified as being under his or her care [47].
+Alternately, reminders can be directed toward patients, generally as letters (on clinic letterhead) to encourage appointment adherence or to recommend laboratory testing [48,49].
+Hurwitz et al found that a computerized reminder system was effective in improving quality of diabetes care.
+In a randomized controlled trial with 181 patients, the authors www.turner-white.com
+found that testing frequency (for HbA1c, glucose, and albuminuria) and ophthalmology referrals were significantly greater in the reminder group [48].
+In a large meta-analysis of computerized prompts for preventive care services (not limited to diabetes care), Balas et al also found that such prompting significantly improved physician performance [50].
+Other research has found that computerized prompts that require physician responses are more effective compared to passive reminders [51].
+Computer -Based Decision Support Systems Building on the technology of simple reminders, clinical informatics systems can now provide real-time evidencebased decision support for providers during patient encounters.
+Computer -based decision support systems (CDSSs) can lead to improved care by interacting with health care providers to modify diagnostic and therapeutic decisions.
+Approaches include (1) automated alerts to providers in response to the appearance of certain types of abnormal clinical data, (2) programs that critique new orders and propose changes in those orders when appropriate, (3) programs that suggest new orders and procedures in response to relevant patient data, and (4) applications that function by summarizing patient care data and that attempt to retrospectively assess the average or typical quality of medical decisions and therapeutic interventions made by health care providers [52].
+In developing computer -based decision support tools, evidence from clinical trials and meta-analyses is combined with provider consensus to define diagnostic criteria, therapeutic goals, and algorithms for intensifying treatment [53].
+There is ongoing enthusiasm for implementing such interventions via computer -based approaches [54Â­56].
+Several diabetes management programs have been shown to lower HbA1c levels, reduce foot amputations, and potentially save money over time [57,58].
+However, new programs must be tested in randomized trials to control for temporal trends in care and must look at important clinical outcomes rather than just process measures.
+For example, Hetlevik et al found that a computer -based clinical decision support system implemented in 29 health centers caring for more than 1000 diabetes patients did not lead to clinically significant changes in physician behavior or in patient outcomes [59].
+Our own experience with computer -based decision support, also tested in a randomized controlled trial, found that rates of testing and screening significantly increased while actual risk factor levels showed small but nonsignificant improvements after 1 year [60].
+In another controlled study, Lobach et al demonstrated that provider - oriented, patient- specific computer -based decision support used at the time of the clinical encounter improved process outcomes but not disease outcomes in diabetes [61].
+In their review of trials of clinical decision support Vol. 9, No. 7 July 2002 JCOM 391
+DIABETES MANAGEMENT systems (not limited to diabetes care), Hunt et al concluded that published studies of CDSSs are increasing rapidly, and their quality is improving [62].
+CDSSs can enhance clinical performance for drug dosing, preventive care, and other aspects of medical care, but not convincingly for diagnosis.
+Thus, although CDSSs represent a very promising tool for improving the care of diabetic populations, more randomized trials focusing on patient outcomes are needed.
+Extending Disease Management Beyond the Clinic Visit One of the goals of a population-based approach to diabetes care is to manage the health of a cohort of patients without relying exclusively on the clinical encounter to make changes or otherwise manage the disease.
+Computer -based algorithms allow a greater role for nonphysicians in the participation of population-based care.
+The specific benefits of computer aids to populationbased diabetes care are gradually becoming rigorously documented.
+In a controlled trial, Peters and Davidson showed that a comprehensive diabetes care program that included nurses using a computerized tracking system and evidencebased management protocols led to significant improvements in glycemic and cholesterol control and in several process measures of quality diabetes care [63].
+Over 2 years, intervention patients received more frequent screening for diabetes complications and had a decrease in HbA1c levels (from 11.9% to 8.8%) compared with usual care patients, who had no change in HbA1c levels.
+Aubert et al report the first randomized trial of a primary careÂ­based case management program for diabetic patients [64].
+The intervention achieved significant reductions in HbA1c values and improvements in self-reported health.
+Working within a group -model health maintenance organization (HMO), nurse case managers enrolled patients in an education program, arranged for diet and exercise counseling, and managed glycemia using an algorithm under the direction of an endocrinologist and family physician.
+After 2 initial assessments the nurse saw patients quarterly, with weekly phone contact for those on insulin.
+Patients were otherwise followed by their primary care providers.
+Of 138 diabetes patients (121 with type 2 diabetes mellitus), 71 were randomized to the intervention, and 72% completed 12 -month follow-up.
+HbA1c levels decreased more in the intervention group (1.7% versus 0.6% in the usual care group; P 
+This study also demonstrates that diabetes care can be substantially improved by enhancing primary care, not bypassing it.
+Using personnel and resources already available within a HMO, they created comprehensive system change capable of substantially improving key clinical outcomes [65].
+392 JCOM July 2002 Vol. 9, No. 7
+Vaughan et al implemented and evaluated a CDSS for nurse-managed oral hypoglycemic therapy in type 2 diabetes [66].
+Using computer -based treatment algorithms, a nurse provided exclusive management of 102 patients with newly diagnosed type 2 diabetes.
+After an initial education, patients were seen at their usual clinic by the nurse only on a monthly basis until satisfactory glycemic control was established and thereafter reviewed every 3 months.
+Patients in the control group of practices (n = 116) were treated according to normal procedures.
+In the study group, 98% patients achieved HbA1c levels within the normal range.
+The control practices achieved much poorer degrees of metabolic control (P 
+This decision support system was successful at achieving standards of diabetes control and care equal to or better than conventional structures of diabetes care.
+Thus, implementation of such a system on a simple computer platform could greatly assist and possibly improve diabetes management in general practice.
+One limitation of intensive nurse case management is the potential cost inefficiency--in the Aubert study [64], it took a case manager 1 year to lower HbA1c levels from 9.0% to 7.3% in 71 patients.
+Another, potentially less expensive application of informatics systems in population management is automated processes such as telemedicine.
+In randomized trials, Piette et al have shown that automated calls with telephone nurse follow-up led to improvements in process outcomes and improved HbA1c levels [67,68].
+A recent Cochrane organized review of the telemedicine literature found only 5 trials assessing the provision of home-based care for chronic disease.
+Most studies were of small numbers of patients, and none showed clear benefits [69].
+Further research is clearly needed in this area.
+Integrated Models of Care Integrated models of care take a population-based perspective and fully apply informatics resources for comprehensive diabetes management.
+Such approaches provide more meaningful visits for diabetic patients and more intensive followup, ensure closer adherence to evidence-based guidelines, meet the self-management needs of patients, and ensure ready availability of meaningful clinical information on individual patients and the larger population of patients [65].
+Several HMO-based primary care disease management programs have effectively improved diabetes care.
+The disease management program at Group Health Cooperative of Puget Sound integrates diabetes- specific information into an electronic medical record, provides diabetes- specific intervention prompts, facilitates patient scheduling to arrange needed services, restructures visits to focus on the patient's diabetes (rather than other acute problems), and offers organized care by a range of providers (primary care providers, endocrinologists, dietitians, and diabetes educators).
+Two www.turner-white.com
+CLINICAL REVIEW years after implementation of this program, annual rates of HbA1c measurement increased slightly (from 77% to 80%), retinal examinations increased from 46% to 64%, and foot examinations increased from 18% to 56%.
+In the year after it was made available, 80% of physicians had logged on to the diabetes registry.
+The authors concluded that providing support to primary care teams in several key areas has made a population-based approach to diabetes care a practical reality in the setting of a staff model HMO [70].
+Other HMO-based systems have taken a similar approach [71].
+In New Mexico, the Lovelace Health Systems' EPISODES OF CARE program resulted in improved control through the integration of practice guidelines, physician performance feedback, increased patient education and clinic access, and a computerized reminder system.
+This cohort study found that after 2 years, 78% of patients had had at least 1 HbA1c test, the mean value decreased from 12.2% at baseline to 10.4%, and eye examination rates increased from 47% to 53% [72].
+Results from the Kaiser Health Plan are also encouraging.
+Preliminary data show improved metabolic control as well as potential cost- savings due to reduced rates of hospitalization in intervention patients [73].
+Although HMO disease management programs are limited in their transportability outside of HMO settings, they do provide guidance for development of more generalizable programs.
+Future Directions: The Role of Internet Access and Collaborative Medical Records Increasing patients' access to their own electronic medical records represents a new frontier in diabetes management.
+Web-based informatics programs create the potential to provide individuals with secure and convenient access to their personal medical information [74].
+In an ongoing survey of internet use, the Pew Internet 
+Many physicians and health care organizations have either started to interact electronically with patients or plan to do so [75].
+In a recent survey, 14% of physicians report communicating with patients via e-mail [76].
+The impact on patient-physician collaboration of this increased access is not yet known, although older studies of patient- carried "paper records" showed that use of such records improved the effectiveness of chronic disease care [77,78].
+A large randomized trial of diabetic patients' use of a home medical record is currently underway [79].
+The internet offers availability 24 hours a day, low cost, and the capacity to reach large numbers of patients and thus represents a promising method of delivering diabetes selfmanagement programs.
+Web sites that emphasize personalized goal setting, feedback, and social support have been met with high levels of acceptance and patient satisfaction www.turner-white.com
+[80,81].
+In one pilot study, patients who frequently accessed a Web site designed to increase physical activity through goal setting, peer support, and an online "personal coach" had increased physical activity and a decrease in depression symptoms [82].
+Another study found that a professionally moderated internet discussion group for patients with diabetes was widely used and appeared to be a useful strategy for engaging patients in chronic disease care [83].
+Another new approach uses computer -based, selfadministered diabetes care questionnaires that can be entered directly into the electronic medical record.
+In one pilot project, patients completed a questionnaire using a touchscreen interface, and their responses were then matched to evidence-based guidelines to provide patientspecific diabetes care advice.
+The average time required was 10.9 minutes, and a mean of 3.0 recommendations were provided per patient.
+Patient and health care practitioner satisfaction with the questionnaire and the patient- specific feedback was high [84].
+Such an approach promises to improve both the patient clinical database as well as patient-physician collaboration.
+Caveats and Limitations Use of computers in population-based diabetes management is driven by evidence-based guidelines for care.
+However, it is important to note limitations of these and other quality benchmarks.
+In a review of evidence-based guidelines in diabetes, Larme and Pugh detail health professionals' perceived barriers to providing evidence-based care [85].
+Physicians reported that contextual factors such as time constraints, established referral relationships, low patient awareness and motivation, and inadequate reimbursement --particularly for preventive care practices--have a larger impact on failure to reach evidence-based goals than lack of clinical knowledge.
+Innovative disease management systems must take these barriers into account if they are to improve care delivery.
+Computer informatics systems have the ability to collect, analyze, and present clinical information to providers in an encompassing, efficient manner and to track the overall care of a population independent of provider visits.
+Patient and physician input is critical to the design of these systems.
+Success of care depends on much more than prescribing the right medicine at the right time.
+Patients must be engaged in their care, agree with the plan, and adhere to medications and necessary lifestyle modifications.
+Computer -based systems will not help with these areas, but by increasing efficiency and quality of care, these systems may "free up" more time for the effective patient-physician relationships that form the core of good medical care.
+Successful programs must address the critical role that patients play in managing their illness [65].
+Innovations in Vol. 9, No. 7 July 2002 JCOM 393
+DIABETES MANAGEMENT integrated systems of care must be validated in welldesigned controlled trials.
+Ultimately, by taking a populationbased approach and by integrating the many benefits that modern clinical informatics systems can provide, we can greatly improve the prevailing inefficient and ineffective approach to diabetes care.
+Corresponding author: Richard W. Grant, MD, MPH, General Medicine Division, Massachusetts General Hospital, 50 Staniford St. 9th Floor, Boston, MA 02114, rgrant@partners.org.
+Financial disclosures: None.
+Author contributions: conception and design, RWG, JBM; analysis and interpretation of data, RWG, JBM; drafting of the article, RWG, JBM; critical revision of the article for important intellectual content, RWG, JBM; final approval of the article, RWG, JBM. 13.
+Prospective Diabetes Study (UKPDS) Group [published erratum appears in Lancet 1999;352:837 - 53].
+Lancet 1998;352: 837Â­53.
+Prevention of cardiovascular events and death with pravastatin in patients with coronary heart disease and a broad range of initial cholesterol levels.
+The Long-Term Intervention with Pravastatin in Ischaemic Disease (LIPID) Study Group.
+N Engl J Med 1998;339:1349Â­57.
+Curb JD, Pressel SL, Cutler JA, et al.
+Effect of diuretic-based antihypertensive treatment on cardiovascular disease risk in older diabetic patients with isolated systolic hypertension.
+Systolic Hypertension in the Elderly Program Cooperative Research Group [published erratum appears in JAMA 1997; 277:1356].
+JAMA 1996;276:1886Â­92.
+Yusuf S, Sleight P, Pogue J, et al.
+Effects of an angiotensinconverting- enzyme inhibitor, ramipril, on cardiovascular events in high-risk patients.
+The Heart Outcomes Prevention Evaluation Study Investigators [published erratum appears in N Engl J Med 2000;342:748].
+N Engl J Med 2000;342:145Â­53.
+Pyorala K, Pedersen TR, Kjekshus J, et al.
+Cholesterol lowering with simvastatin improves prognosis of diabetic patients with coronary heart disease.
+A subgroup analysis of the Scandinavian Simvastatin Survival Study (4S) [published erratum appears in Diabetes Care 1997;20:1048].
+Diabetes Care 1997;20:614Â­20.
+Management of dyslipidemia in adults with diabetes.
+American Diabetes Association.
+Diabetes Care 1998;21:179Â­82.
+Bo S, Cavallo -Perin P, Gentile L. Prevalence of patients reaching the targets of good control in normal clinical practice.
+A cohort-based study in type 2 diabetes.
+Diabetes Care 1999;22:2092.
+Marshall CL, Bluestein M, Chapin C, et al.
+Outpatient management of diabetes mellitus in five Arizona Medicare managed care plans.
+Am J Med Qual 1996;11:87Â­93.
+Shorr RI, Franse LV, Resnick HE, et al.
+Glycemic control of older adults with type 2 diabetes: findings from the Third National Health and Nutrition Examination Survey, 1988Â­1994.
+J Am Geriatr Soc 2000;48:264Â­7.
+Meigs JB, Stafford RS. Cardiovascular disease prevention practices by U.S. Physicians for patients with diabetes.
+J Gen Intern Med 2000;15:220Â­8.
+Peters AL, Legorreta AP, Ossorio RC, Davidson MB. Quality of outpatient care provided to diabetic patients.
+A health maintenance organization experience.
+Diabetes Care 1996;19:601Â­6.
+Stolar MW. Clinical management of the NIDDM patient.
+Impact of the American Diabetes Association practice guidelines, 1985Â­1993.
+Endocrine Fellows Foundation Study Group.
+Diabetes Care 1995;18:701Â­7.
+Frolkis JP, Zyzanski SJ, Schwartz JM, Suhan PS.
+Physician noncompliance with the 1993 National Cholesterol Education Program (NCEP-ATPII) guidelines.
+Circulation 1998;98:851Â­5.
+Gotto AM Jr.
+Lipid management in patients at moderate risk for coronary heart disease: insights from the Air Force/Texas Coronary Atherosclerosis Prevention Study (AFCAPS/ TexCAPS).
+Am J Med 1999;107:36S- 39S.
+American Diabetes Association Clinical Practice Recommendations 2001.
+Diabetes Care 2001;24 Suppl 1:S1 - 133.
+www.turner-white.com
+11.
+12.
+References 1.
+Harris MI, Flegal KM, Cowie CC, et al.
+Prevalence of diabetes, impaired fasting glucose, and impaired glucose tolerance in U.S. adults.
+The Third National Health and Nutrition Examination Survey, 1988 - 1994.
+Diabetes Care 1998;21:518Â­24.
+2.
+Mokdad AH, Ford ES, Bowman BA, et al.
+Diabetes trends in the U.S.: 1990Â­1998.
+Diabetes Care 2000;23:1278Â­83.
+3.
+Matthews DR.
+The natural history of diabetes-related complications: the UKPDS experience.
+United Kingdom Prospective Diabetes Study.
+Diabetes Obes Metab 1999;1 Suppl 2:S7Â­13.
+4.
+Haffner SM, Lehto S, Ronnemaa T, et al.
+Mortality from coronary heart disease in subjects with type 2 diabetes and in nondiabetic subjects with and without prior myocardial infarction.
+N Engl J Med 1998;339:229Â­34.
+5.
+Gu K, Cowie CC, Harris MI. Mortality in adults with and without diabetes in a national cohort of the U.S. population, 1971Â­1993.
+Diabetes Care 1998;21:1138Â­45.
+6.
+The effect of intensive treatment of diabetes on the development and progression of long-term complications in insulindependent diabetes mellitus.
+The Diabetes Control and Complications Trial Research Group.
+N Engl J Med 1993;329: 977Â­86.
+7.
+Efficacy of atenolol and captopril in reducing risk of macrovascular and microvascular complications in type 2 diabetes: UKPDS 39.
+UK Prospective Diabetes Study Group.
+BMJ 1998;317:713Â­20.
+8.
+Tight blood pressure control and risk of macrovascular and microvascular complications in type 2 diabetes: UKPDS 38.
+UK Prospective Diabetes Study Group [published erratum appears in BMJ 1999;318:29].
+BMJ 1998;317:703Â­13.
+9.
+Effect of intensive blood-glucose control with metformin on complications in overweight patients with type 2 diabetes (UKPDS 34).
+UK Prospective Diabetes Study (UKPDS) Group [published erratum appears in Lancet 1998;352:1557].
+Lancet 1998;352:854Â­65.
+10.
+Intensive blood-glucose control with sulphonylureas or insulin compared with conventional treatment and risk of complications in patients with type 2 diabetes (UKPDS 33).
+UK 394 JCOM July 2002 Vol. 9, No. 7
+14.
+15.
+16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+CLINICAL REVIEW 25.
+el-Kebbi IM, Ziemer DC, Musey VC, et al.
+Diabetes in urban African-Americans.
+IX. Provider adherence to management protocols.
+Diabetes Care 1997;20:698Â­703.
+26.
+Phillips LS, Branch WT, Cook CB, et al.
+Clinical inertia.
+Ann Intern Med 2001;135:825Â­34.
+27.
+Ellrodt AG, Conner L, Riedinger M, Weingarten S. Measuring and improving physician compliance with clinical practice guidelines.
+Ann Intern Med 1995;122:277Â­82.
+28.
+Worrall G, Freake D, Kelland J, et al.
+Care of patients with type II diabetes: a study of family physicians' compliance with clinical practice guidelines.
+J Fam Pract 1997;44:374Â­81.
+29.
+Glasgow RE, McCaul KD, Schafer LC. Barriers to regimen adherence among persons with insulin- dependent diabetes.
+J Behav Med 1986;9:65Â­77.
+30.
+McCaul KD, Glasgow RE, Schafer LC. Diabetes regimen behaviors.
+Predicting adherence.
+Med Care 1987;25:868Â­81.
+31.
+Andrulis DP. Access to care is the centerpiece in the elimination of socioeconomic disparities in health.
+Ann Intern Med 1998;129:412Â­6.
+32.
+Rost K, Carter W, Inui T. Introduction of information during the initial medical visit: consequences for patient followthrough with physician recommendations for medication.
+Soc Sci Med 1989;28:315Â­21.
+33.
+Browne DL, Avery L, Turner BC, et al.
+What do patients with diabetes know about their tablets? Diabet Med 2000;17:528Â­31.
+34.
+Fletcher SW, Fletcher RH, Thomas DC, Hamann C. Patients' understanding of prescribed drugs.
+J Community Health 1979; 4:183Â­9.
+35.
+Wagner EH. Population-based management of diabetes care.
+Patient Educ Couns 1995;26:225Â­30.
+36.
+Ibrahim MA, Savitz LA, Carey TS, Wagner EH. Populationbased health principles in medical and public health practice.
+J Public Health Manag Pract 2001;7:75Â­81.
+37.
+Engelgau MM, Geiss LS, Manninen DL, et al.
+Use of services by diabetes patients in managed care organizations.
+Development of a diabetes surveillance system.
+CDC Diabetes in Managed Care Work Group.
+Diabetes Care 1998;21:2062Â­8.
+38.
+Hebert PL, Geiss LS, Tierney EF, et al.
+Identifying persons with diabetes using Medicare claims data.
+Am J Med Qual 1999;14:270Â­7.
+39.
+Bonney MA, Harris M, Burns J, Davies GP. Diabetes information management systems.
+General practitioner and population reach.
+Aust Fam Physician 2000;29:1100Â­3.
+40.
+Selby JV, Karter AJ, Ackerson LM, et al.
+Developing a prediction rule from automated clinical databases to identify high-risk patients in a large population with diabetes.
+Diabetes Care 2001;24:1547Â­55.
+41.
+Meigs JB, Cagliero E, Murphy-Sheehy P, et al.
+Use of a simple claims-based algorithm to identify type 2 diabetes patients for intensive management.
+J Gen Intern Med 1999;14:55.
+42.
+Griffin SJ, Kinmonth AL. Systems for routine surveillance for people with diabetes mellitus.
+Cochrane Database Syst Rev 2002;1:CD000541.
+43.
+Balas EA, Austin SM, Mitchell JA, et al.
+The clinical value of computerized information services.
+A review of 98 randomized clinical trials.
+Arch Fam Med 1996;5:271 - 8.
+44.
+Renders CM, Valk GD, Griffin SJ, et al.
+Interventions to improve the management of diabetes in primary care, outpatient, and community settings: a systematic review.
+Diabetes Care 2001;24:1821Â­33.
+Renders CM, Valk GD, Franse LV, et al.
+Long-term effectiveness of a quality improvement program for patients with type 2 diabetes in general practice.
+Diabetes Care 2001;24:1365Â­70.
+McDonald CJ, Overhage JM, Tierney WM, et al.
+The promise of computerized feedback systems for diabetes care.
+Ann Intern Med 1996;124:170Â­4.
+Nyman MA, Murphy ME, Schryver PG, et al.
+Improving performance in diabetes care: a multicomponent intervention.
+Eff Clin Pract 2000;3:205Â­12.
+Hurwitz B, Goodman C, Yudkin J. Prompting the clinical care of non-insulin dependent (type II) diabetic patients in an inner city area: one model of community care.
+BMJ 1993; 306:624Â­30.
+Macharia WM, Leon G, Rowe BH, et al.
+An overview of interventions to improve compliance with appointment keeping for medical services.
+JAMA 1992;267:1813Â­7.
+Balas EA, Weingarten S, Garb CT, et al.
+Improving preventive care by prompting physicians.
+Arch Intern Med 2000; 160:301Â­8.
+Litzelman DK, Dittus RS, Miller ME, Tierney WM. Requiring physicians to respond to computerized reminders improves their compliance with preventive care protocols.
+J Gen Intern Med 1993;8:311Â­7.
+Haug PJ, Gardner RM, Tate KE, et al.
+Decision support in medicine: examples from the HELP system.
+Comput Biomed Res 1994;27:396Â­418.
+Mazze RS, Etzwiler DD, Strock E, et al.
+Staged diabetes management.
+Toward an integrated model of diabetes care.
+Diabetes Care 1994;17 Suppl 1:56Â­66.
+Classen DC.
+Clinical decision support systems to improve clinical practice and quality of care.
+JAMA 1998;280:1360Â­1.
+Dinneen SF, Bjornsen SS, Bryant SC, et al.
+Towards an optimal model for community-based diabetes care: design and baseline data from the Mayo Health System Diabetes Translation Project.
+J Eval Clin Pract 2000;6:421Â­9.
+Gorman CA, Zimmerman BR, Smith SA, et al.
+DEMS--a second generation diabetes electronic management system.
+Comput Methods Programs Biomed 2000;62:127Â­40.
+Rith-Najarian S, Branchaud C, Beaulieu O, et al.
+Reducing lower - extremity amputations due to diabetes.
+Application of the staged diabetes management approach in a primary care setting.
+J Fam Pract 1998;47:127Â­32.
+Ginsberg BH, Tan MH, Mazze R, Bergelson A. Staged diabetes management: computerizing a disease state management program.
+J Med Syst 1998;22:77Â­87.
+Hetlevik I, Holmen J, Kruger O, et al.
+Implementing clinical guidelines in the treatment of diabetes mellitus in general practice.
+Evaluation of effort, process, and patient outcome related to implementation of a computer -based decision support system.
+Int J Technol Assess Health Care 2000;16:210Â­27.
+Meigs JB, Cagliero E, Chueh H, et al.
+The MGH Diabetes Primary Care Improvement Project: a controlled trial of a web-based patient- specific decision support tool.
+Diabetes 2001;50 Suppl 2:A250 - 251.
+45.
+46.
+47.
+48.
+49.
+50.
+51.
+52.
+53.
+54.
+55.
+56.
+57.
+58.
+59.
+60.
+www.turner-white.com
+Vol. 9, No. 7 July 2002 JCOM 395
+DIABETES MANAGEMENT 61.
+Lobach DF, Hammond WE. Computerized decision support based on a clinical practice guideline improves compliance with care standards.
+Am J Med 1997;102:89Â­98.
+62.
+Hunt DL, Haynes RB, Hanna SE, Smith K. Effects of computer -based clinical decision supports systems on physician performance and patient outcomes: a systematic review.
+JAMA 1998;280:1339Â­46.
+63.
+Peters AL, Davidson MB. Application of a diabetes managed care program.
+The feasibility of using nurses and a computer system to provide effective care.
+Diabetes Care 1998;21: 1037Â­43.
+64.
+Aubert RE, Herman WH, Waters J, et al.
+Nurse case management to improve glycemic control in diabetic patients in a health maintenance organization.
+A randomized, controlled trial.
+Ann Intern Med 1998;129:605Â­12.
+65.
+Wagner EH.
+More than a case manager.
+Ann Intern Med 1998;129:654Â­6.
+66.
+Vaughan NJ, Potts A. Implementation and evaluation of a decision support sytem for type II diabetes.
+Comput Methods Programs Biomed 1996;50:247Â­51.
+67.
+Piette JD, Weinberger M, McPhee SJ, et al.
+Do automated calls with nurse follow-up improve self- care and glycemic control among vulnerable patients with diabetes? Am J Med 2000;108:20Â­7.
+68.
+Piette JD, Weinberger M, Kraemer FB, McPhee SJ. Impact of automated calls with nurse follow-up on diabetes treatment outcomes in a Department of Veterans Affairs Health Care System: a randomized controlled trial.
+Diabetes Care 2001; 24:202Â­8.
+69.
+Renders CM, Valk GD, Griffin SJ, et al.
+Interventions to improve the management of diabetes mellitus in primary care, outpatient and community settings: a systematic review.
+Cochrane Database Syst Rev 2001;1:CD001481.
+70.
+McCulloch DK, Price MJ, Hindmarsh M, Wagner EH.
+A population-based approach to diabetes management in a primary care setting: early results and lessons learned.
+Eff Clin Pract 1998;1:12Â­22.
+71.
+Clark CM Jr, Snyder JW, Meek RL, et al.
+A systematic approach to risk stratification and intervention within a managed care environment improves diabetes outcomes and patient satisfaction.
+Diabetes Care 2001;24:1079Â­86.
+72.
+Friedman NM, Gleeson JM, Kent MJ, et al.
+Management of diabetes mellitus in the Lovelace Health Systems' EPISODES OF CARE program [published erratum appears in Eff Clin Pract 1999;2:100].
+Eff Clin Pract 1998;1:5Â­11.
+Sadur CN, Moline N, Costa M, et al.
+Diabetes management in a health maintenance organization.
+Efficacy of care management using cluster visits.
+Diabetes Care 1999;22:2011Â­7.
+Kuperman GJ, Sussman A, Schneider LI, et al.
+Towards improving the accuracy of the clinical database: allowing outpatients to review their computerized data.
+Proc AMIA Symp 1998:220Â­4.
+Taylor H, Leitman R.
+The increasing impact of eHealth on physician behavior.
+Harris Interactive Health Care News 2001;1:31.
+Taylor H, Leitman R. Study reveals big potential for the internet to improve doctor -patient relations.
+Harris Interactive Health Care News 2001;1:1.
+Turner RC, Waivers LE, O'Brien K.
+The effect of patientcarried reminder cards on the performance of health maintenance measures.
+Arch Intern Med 1990;150:645Â­7.
+Dickey LL, Petitti D.
+A patient-held minirecord to promote adult preventive care.
+J Fam Pract 1992;34:457Â­63.
+Tsai CC, Starren J. msJAMA.
+Patient participation in electronic medical records.
+JAMA 2001;285:1765.
+Feil EG, Glasgow RE, Boles S, McKay HG. Who participates in Internet-based self-management programs? A study among novice computer users in a primary care setting.
+Diabetes Educ 2000;26:806Â­11.
+McKay HG, Feil EG, Glasgow RE, Brown JE. Feasibility and use of an Internet support service for diabetes self-management.
+Diabetes Educ 1998;24:174Â­9.
+McKay HG, King D, Eakin EG, et al.
+The diabetes network internet-based physical activity intervention: a randomized pilot study.
+Diabetes Care 2001;24:1328Â­34.
+Zrebiec JF, Jacobson AM.
+What attracts patients with diabetes to an internet support group? A 21 -month longitudinal website study.
+Diabet Med 2001;18:154Â­8.
+Hunt DL, Haynes RB, Hayward RS, et al. Patient- specific evidence-based care recommendations for diabetes mellitus: development and initial clinic experience with a computerized decision support system.
+Int J Med Inf 1998;51:127Â­35.
+Larme AC, Pugh JA. Evidence-based guidelines meet the real world: the case of diabetes care.
+Diabetes Care 2001;24:1728Â­33.
+73.
+74.
+75.
+76.
+77.
+78.
+79.
+80.
+81.
+82.
+83.
+84.
+85.
+Access is with permission from the Journal of Clinical Outcomes Management, Volume 9, Number 7, pp. 390Â­396.
+Copyright 2002 TURNER WHITE COMMUNICATIONS, INC.
+All rights reserved.
+396 JCOM July 2002 Vol. 9, No. 7
+www.turner-white.com

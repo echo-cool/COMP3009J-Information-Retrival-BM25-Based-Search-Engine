@@ -1,0 +1,22 @@
+[doe_logo.gif] Ask A Scientist Mathematics Archive [Button2.gif]
+A number of the form (2^p)-1, where p is a prime, is called a Mersenne number.
+If a Mersenne number is prime, it is called a Mersenne prime.
+It is not known if there are infinitely many Mersenne primes.
+The smallest non-prime Mersenne number is (2^11) - 1 = 2047 = 23*89; the largest Mersenne prime known as of 1992 is (2^756,839) - 1, which has 227,832 digits! It is also the largest prime known as of 1992, and the 32nd known Mersenne prime.
+Mersenne numbers are named for the French mathematician Marin Mersenne (1588-1648), who studied them.
+Actually, interest in these numbers goes back at least as far as Euclid, who considered sums of powers of 2, that is, sums of the form 1 + 2 + 4 + . . .
++ 2^N [we recognize this as a geometric series, whose sum is 2^(N + 1) - 1].
+Euclid observed that sometimes this sum is a prime number, and he proved that if the sum (1 + 2 + 4 + . . .
++ 2^N) is prime, then the number (2^N) * (1 + 2 + 4 + . . .
++ 2^N) is a perfect number (a number equal to the sum of its proper divisors).
+In carrying this over to the discussion of Mersenne primes, we must now make the identification N = p - 1.
+Mersenne showed that if (2^p) - 1 is prime, then p must be prime (the converse is not
+true, e.g. for p = 11), and Euler showed that ALL of the even perfect numbers are given by [2^(p - 1)] * [(2^p) - 1]
+Nowadays, most of the interest in Mersenne numbers is connected with the search for larger and larger prime numbers.
+This is because Euler also developed an algorithm that greatly facilitates checking for primeness of a Mersenne number
+.
+_________________________________________________________________
+[anlogo.gif] [UofC_Logo.gif]
+Back to Mathematics Ask A Scientist Index NEWTON Homepage Ask A Question
+NEWTON is an electronic community for Science, Math, and Computer Science K-12 Educators.
+Argonne National Laboratory, Division of Educational Programs, Harold Myron, Ph.D., Division Director.

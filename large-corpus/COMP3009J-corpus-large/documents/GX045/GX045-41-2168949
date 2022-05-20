@@ -1,0 +1,75 @@
+Mr. Chairman, Madam Chairwoman and Members of the Subcommittees:
+Thank you for inviting me to participate in today's hearing on the Year 2000 problem and its impact on the Global Positioning System (GPS).
+In addition to being the Department of Defense's primary radionavigation system, GPS has become an integral asset in numerous civilian applications and industries, including emergency services, airlines services, commercial fishing and shipping, corporate vehicle fleet tracking, and surveying.
+It also plays a critical role in communications networks and, hence, the Internet.
+The system is affected by both the Year 2000 computing problem and a problem associated with the way the system keeps track of time.
+1 Today, I will discuss these two important issues, their potential impact, and the status of remedial efforts.
+GPS, THE YEAR 2000 PROBLEM, AND THE
+END-OF-WEEK ROLLOVER PROBLEM
+GPS was designed to support military missions, such as missile guidance and search and rescue.
+The system consists of a constellation of 24 operational satellites which are positioned so that system users can receive signals from at least 6 satellites nearly 100 percent of the time at any point on earth.
+The satellites are constantly monitored by ground stations located throughout the world.
+Anyone using a GPS receiver can determine their location with great precision.
+Defense began launching GPS satellites in 1978 and started using the system in 1980.
+The system became fully operational in 1995.
+GPS is now used in numerous civilian applications and industries.
+For example, emergency vehicles use GPS to pinpoint destinations and map routes; shipping companies use the system to track movement of their vessels; truck and transportation services use the system to track their fleets and to speed deliveries; and airlines use GPS to develop flight plans and to land planes.
+GPS is also being used to map roads, track forest fires, assist in construction projects, and even monitor earthquakes.
+Additionally, telecommunications companies are increasingly relying on GPS receivers to synchronize their own networks, comparing their reference clocks directly with a GPS receiver.
+GPS is affected by both the Year 2000 computing problem and an upcoming end-of-week rollover.
+The Year 2000 computing problem is rooted in the way dates are recorded and computed in many computer systems.
+For the past several decades, systems have typically used two digits to represent the year, such as "97" representing 1997, in order to conserve on electronic data storage and reduce operating costs.
+With this two-digit format, however, the Year 2000 is indistinguishable from 1900, 2001 from 1901, and so on.
+As a result of this ambiguity, system or application programs that use dates to perform calculations, comparisons, or sorting may generate incorrect results when working with the years after 1999.
+The upcoming end-of-week rollover is a problem that will occur for the first time on August 21, 1999.
+Instead of using calendar dates, GPS counts weeks, and seconds within a week, from precise clocks on the satellites.
+This is based on how the signal codes transmitted by the satellite are generated.
+GPS started at week zero on January 6, 1980.
+Because of the design of the time counter, GPS can only count as high as 1024 weeks.
+At the end of the 1024th week, which will occur on August 21, 1999, the time counter will roll over to week zero and start counting over.
+This is known as the end-of-week rollover problem in the GPS community.
+I will now discuss the potential impact of the Year 2000 problem and the upcoming end-of-week rollover on each of the three GPS components--space, control, and user--as well as the status of remedial efforts.
+Space Component
+The space component of GPS consists of 24 operational satellites in 6 orbits at approximately 11,000 miles above the earth.
+The satellites transmit radio signals that permit adequately equipped users to calculate position, velocity, and time anywhere on or above the earth's surface and in any weather condition.
+They are equipped with very precise clocks that keep accurate time to within three nanoseconds.
+According to the Air Force Materiel Command (AFMC), the executive agent for the Department of Defense in acquiring GPS satellites, all GPS satellites are Year 2000 compliant as well as end-of-week rollover compliant.
+The space component also includes satellite support systems, which are physically located on the ground.
+These systems are responsible for maintaining the satellites and their proper functioning.
+This includes keeping the satellites in proper orbits (called station keeping) and monitoring satellite subsystem health and status--e.g., monitoring solar arrays, battery power levels, and propellant levels, and activating spare satellites, if possible.
+While the satellite support systems are end-of-week rollover compliant, they are not yet Year 2000 compliant, according to AFMC.
+AFMC reports that these systems are in the process of being either replaced or renovated and tested.
+This work is expected to be done by December 1999.
+Workarounds have also been reportedly developed for systems being replaced.
+Ground Component
+The GPS control, or ground, component consists of a master control station, five monitoring stations, and three ground antennas located throughout the world.
+The monitoring stations track all GPS satellites in view and collect ranging 2 information from the satellite broadcasts.
+The stations send this data to the master control station, which computes precise satellite orbits.
+This information is then formatted into updated navigation messages for each satellite and transmitted to each satellite through the ground antennas, which also transmit and receive satellite control and monitoring signals.
+These systems are interconnected through networks and also have their own information systems and equipment which must be renovated for Year 2000 compliance.
+According to AFMC, the ground support systems are now both Year 2000 and end-of-week rollover compliant.
+Contingency plans are also in place for these systems.
+User Component
+The user component consists of receivers, processors, and antennas that allow land, sea, or airborne operators to receive the GPS satellite broadcasts and compute their precise position, velocity, and time.
+According to AFMC, many newer GPS receivers, including all designs procured for the Department of Defense by the GPS Joint Program Office, have been tested and have demonstrated that they are Year 2000 compliant and end-of-week rollover compliant.
+According to the U.S. Coast Guard Navigation Center, however, the accuracy of navigation on some older receivers may be severely affected by the end-of-week rollover.
+ACTIVITIES ONGOING TO RAISE AWARENESS OF
+PROBLEM WITH OLDER RECEIVERS
+Several activities are ongoing to raise awareness among owners of older GPS receivers of the upcoming end-of-week rollover problem.
+The U.S. Coast Guard Navigation Center has been assigned with responsibility of being the government liaison to the civil sector for GPS. Its Internet website explains the potential rollover problem on older receivers and provides an extensive list of manufacturers and points-of-contact.
+The Air Force has provided a list, also available on the Internet, of specific receivers that have been tested and found to be compliant by the Department of Defense.
+Furthermore, the President's Council on Year 2000 Conversion's Internet site provides links to sources of GPS Year 2000 and end-of-week rollover information.
+These activities are important and should be useful to GPS users seeking to determine whether their receivers will operate correctly at the end-of-week rollover.
+However, even with these awareness efforts, it is conceivable that some organizations and users may not even be aware that their GPS receiver could be vulnerable to the end-of-week rollover problem.
+Moreover, some may not even be aware that they rely on a GPS receiver as a communications network tool.
+Because they contain precise clocks, GPS receivers are sometimes used to synchronize time in communications networks.
+Synchronization is critical to the transmission of compressed or packetized 3 voice, data, and video transmissions.
+Timing errors due to the lack of synchronization, in fact, can lead to data loss and degradation and eventually to network disruption or even complete failures.
+Because of the interconnective and interdependent nature of networks, these problems, in turn, could impact other networks and even the Internet.
+As a result, it is vital that organizations make an effort to determine (1) whether the networks they operate rely on GPS equipment as a time source and (2) the potential GPS-related risks.
+Once the problem and its potential impact are known, organizations and individual users can (1) modify receivers, (2) replace them with newer models, or (3) contact their service providers to ensure that GPS receivers supporting their telecommunications networks are not susceptible to the upcoming end-of-week rollover.
+Because the rollover is less than 4 months away, however, organizations must take these measures as quickly as possible.
+-- -- --
+Mr. Chairman, Madam Chairwoman and Members of the Subcommittees, this concludes my testimony.
+I will be happy to answer questions you or Members of the Subcommittees may have.
+(511155)

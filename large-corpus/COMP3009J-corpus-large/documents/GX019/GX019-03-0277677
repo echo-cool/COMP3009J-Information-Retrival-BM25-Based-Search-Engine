@@ -1,0 +1,38 @@
+Neuroinformatics Grants Line under title Cell Centered Database and Data Federation Projects Maryann Martone^1, Amarnath Gupta^2, Bertram Ludaescher^2, Ilya Zaslavsy^2, Xufei Qian^2, Mona Wong^1, Shenglan Zhang^1, Joshua Tran^2 and Mark Ellisman^1,2 For the past several years, we have been working to develop databases, tools and strategies for integrating multi-resolution data on cell structure.
+As part of the Human Brain Project, we have created a web-accessible 3D Cell Centered Database containing high resolution 3D volume data on cellular and subcellular structures along with information on the distribution of key proteins involved in signal transduction.
+Such datasets will provide valuable information in the spatial domain of 1 nm3 to 10 Ã¯Â¿Â½m3, a realm which includes structures such as spiny dendrites, synaptic complexes and organelles.
+The promise of neuroinformatics is that such structures will be linked with data being accrued at the organ, tissue and molecular level, to form an integrated view of the nervous system.
+To help accomplish this, we developed a mediator-based approach termed "Knowledge guided mediation" where conceptual links between data are exploited to allow integration across data sources.
+This system links separate databases and data sources system by using ontologies to provide the semantic "glue" knowledge for integrating across information obtained at different scales and using different techniques.
+In our prototype system, we used a local ontology we developed for the anatomy of the cerebellum called ANATOM which contained simple "is a" and "has a" relationships.
+We refer to these ontologies, which are coded in F-logic, as "domain maps" because they encapsulate expert domain knowledge.
+In the past year, we have begun to map our data to the generally available UMLS (Unified Medical Language System), a large ontology and meta-thesaurus developed by the National Library of Medicine.
+In the past year, we have added "process maps" to the family of semantic maps for bridging the knowledge gaps across sources.
+Process maps model dynamic processes such as cellular signaling cascades and disease processes.
+In this case, dynamic processes are presented as a series of nodes and edges where the nodes are states and the edges are transitions.
+A second powerful approach to integrating across scales is to provide a spatial framework for registering and querying brain data.
+We have been developing tools for turning a standard brain atlas into a spatial atlas.
+A "Spatial Markup and Rendering Tool"was developed based on a geographical mapping tool which establishes a common coordinate system and allows for the addition of topological information about relationships between various graphical elements.
+As a demonstration, we have taken a standard brain atlas, in this case the Paxinos and Watson Rat Brain Atlas."
+The atlas drawings are converted into SVG (Scalable Vector Graphics), the emerging XML format for vector graphics.
+SVG files are accessed via a Web interfacethat (1) establishes the common Paxinos 3D coordinate space "on the fly" byexamining slice metadata and interrelationships between shapes on each slice, and (2) allows the user to associate labels with graphic representations of anatomical structures, as well as encode topological relationships between anatomical structres (such as "inside", "adjacent", "contains", "intersects" etc.) by filling in a form.
+Once the user defines a brain region, the tool links the user to a UMLS browser where the appropriate concept from the UMLS can be linked to the geometry.
+The annotations (mark-ups) defined in this fashion, are organized by an F-logic-based mediator, and can be queried from the same interface, with both spatial (by pointing, or defining an area of interest) and attribute (by specifying an anatomic structure and a relationship) queries.
+Once in the database, these relationships can be used to find structures from the atlas, and consequently can be related to observational data accessible through the mediator.
+Thus the atlas serves as visual representation of the semantic link between heterogeneous distributed data.
+The tool has been recently modified to allow the user to mark the location of data acquired about a particular brain region.
+The geometry ID of that dataset along with the database containing the data is recorded.
+Some of these tools will be demonstrated during the poster session.
+__________________ ^1 National Center for Microscopy and Imaging Research, ^2 San Diego Supercomputer Center; University of California, San Diego [brain_bottom3.gif] Home Members Program Announcements Agency Contacts Research Grants Publications Related Servers Data Sharing * Guidelines * Selected Publications * Governmental Policies * Philanthropic Policies
+Something for Kids What's New * HBP Annual Conference * Workshops * Neuroinformatics Interest Group * Neuroscience Events * Conferences
+HBP Archives * Program Announcements * Research Grants * Neuroinformatics Interest Group * HBP Annual Conference * Workshops * Neuroscience Events * Conferences
+Produced and updated by the National Institute of Mental Health.
+For problems or questions regarding this web site, please contact Dr. Stephen H. Koslow.
+NIMH
+Updated: November 04, 2003
+| NIMH Home | Welcome | News and Events | Clinical Trials | Funding Opportunities | | For the Public | For Practitioners | For Researchers | Intramural Research | | Top |
+For information about NIMH and its programs, please email, write or phone us.
+National Institute of Mental Health (NIMH) Office of Communications 6001 Executive Boulevard, Room 8184, MSC 9663 Bethesda, MD 20892-9663 Phone: 301-443-4513 or 1-866-615-NIMH (6464), toll-free TTY: 301-443-8431; FAX: 301-443-4279 FAX 4U: 301-443-5158 E-mail: nimhinfo@nih.gov Web site: http://www.nimh.nih.gov
+Se Habla EspaÃ¯Â¿Â½ol
+[Disclaimer, Copyright, and Privacy Notice]
+H H S logo - link to U. S. Department of Health and Human Services Department of Health and Human Services NIH Logo National Institutes of Health (NIH) 9000 Rockville Pike Bethesda, Maryland 20892 Go to FirstGov Web Site

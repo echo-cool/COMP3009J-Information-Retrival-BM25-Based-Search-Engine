@@ -1,0 +1,98 @@
+Maintaining Accurate Coordinates for the National CORS Network T. SOLER, R.A. SNAY, R.H. FOOTE, and M.W.
+CLINE, U.S. Key words: CORS, GPS-defined Geodetic Frames SUMMARY The U.S. National Geodetic Survey (NGS) computes positional coordinates daily for the more than 350 permanent ground-based GPS stations that comprise the National Continuously Operating Reference Stations (CORS) network.
+Each daily solution involves the use of a recent 24-hour data set.
+These quality control activities are designed to detect significant deviations from adopted positional coordinates and/or velocities, whereupon the adopted coordinates and velocities may be updated.
+Such coordinate changes were applied, for example to several CORS located in Alaska in association with the magnitude 7.9 Denali earthquake of 3 November 2002.
+In addition, NGS annually estimates positional coordinates and velocities for stations in the National CORS network using several years of pertinent GPS data.
+NGS will update previously adopted positional coordinates and velocities if the new estimates differ from these adopted values by prespecified tolerances.
+TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 1/8 Maintaining Accurate Coordinates for the National CORS Network T. SOLER, R.A. SNAY, R.H. FOOTE, and M.W.
+CLINE, U.S. 1.
+INTRODUCTION The current realization of the North American Datum of 1983 (NAD 83), denoted by NAD 83 (CORS96), is derived from the original definition of NAD 83 (1986), established around 1986 through a combined adjustment of all classical geodetic observations supplemented with available Doppler observations and a few VLBI baselines measured at the time.
+As a result, the National Geodetic Survey (NGS) provided a consistent set of geodetic latitudes and longitudes for more than 200,000 points on a frame that replaced the outdated NAD 27 datum [Schwarz, 1989].
+Subsequently, NGS recognized the implications and promise of GPS technology since its early stages of development and embarked on the promotion and adaptation of GPS methods to improve the NAD 83 (1986).
+Consequently, progressing along with the constant improvements in our knowledge of terrestrial coordinate frames, NGS has devised and published several newer realizations of NAD 83, refining at each step the published coordinates.
+A brief history of the previous NAD 83 realizations is available in Snay and Soler [2000].
+Today, a proliferation of continuously operating reference stations (CORS) are being operated for a myriad of applications.
+Such is the case of the network maintained by NGS, comprising at present -February, 2003- of a set of 351 permanently monumented GPS antennas whose coordinates define the National Spatial Reference System (NSRS).
+NGS's National CORS network has become an effective tool for accurate 3D geodetic positioning in the United States, the corresponding GPS data are being used by a plethora of investigators interested in ionospheric research, crustal motion, water vapor studies, photogrammetric applications, etc.
+[Snay et al., 2002].
+For more information about the U.S. National CORS network consult the web address: http://www.ngs.noaa.gov/CORS/.
+2.
+CORS COORDINATES AND VELOCITIES Coordinates and velocities of CORS sites are determined by NGS by exploiting the most advanced GPS methodologies and software.
+These points are originally known in a welldefined coordinate frame and epoch, such as the geocentric International Terrestrial Reference Frame (ITRF) (currently ITRF2000 or ITRF00, epoch 1997.0) [Altamimi et al., 2002]
+This set of coordinates is complemented by a velocity field which primarily accounts for the motion of the stations as a consequence of tectonic plate rotations.
+The ITRF00 coordinates and velocities are also transformed to the NAD 83 (CORS96) datum, using equations and parameters jointly adopted by Natural Resources of Canada (NRCan) and NGS [Craymer et al., 2000].
+The explicit form of the transformation equations and the adopted set of 14-transformation parameters are given in Soler and Snay [2003].
+TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 2/8 At this writing, NGS provides NAD 83 (CORS96) coordinates referred to an epoch date of 2002.00.
+That is, the published NAD 83 coordinates for a CORS site correspond to this site's position on January 1, 2002.
+The NAD 83 site velocity needs to be applied to compute the site's location at any other date.
+Previously, NAD 83 positions for the CORS sites were published for the same epoch date of the ITRF00, namely 1997.00 (January 1, 1997).
+The use of a current epoch date of 2002.00 will reduce systematic errors occurring when points are positioned to CORS sites without applying appropriate site velocities.
+This current epoch date will especially benefit those involved in positioning activities in areas of active crustal motion, like western CONUS and Alaska.
+3.
+COORDINATES MONITORING NGS monitors through daily solutions of the GPS CORS network the quality of the computed coordinates.
+As a byproduct, NGS compiles plots of the variation of the CORS Figure 1.
+Differences between published and daily computed coordinates at GAIT ITRF00 coordinates with respect to the published values in the local horizon reference frame (n, e, u), spanning a period of 60 days.
+Figure 1 depicts the differences between the published TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 3/8 and computed coordinates during the 60 days preceeding day 41of 2003, for station GAIT (Gaithersburg, Maryland).
+Notice that in this particular example the behavior of the determined coordinates agrees well with the horizontal (red) broken line that represents the Figure 2.
+GAIT residuals derived from the multi-year solution adopted (published) values.
+It should be emphasized that all plotted coordinates were corrected for the effect of plate motion.
+On the top of the graph are given the mean (bias) and rms in each of the three components, North, East, and Up (vertical), during the 60 day TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 4/8 period.
+It is clear from the plot that a possible data glitch occurred on day 359.
+Clearly, this single anomaly is not affecting the overall behavior of the data and can be ignored.
+However, the scrupulous checking of the 60-day time series often detects unreported antenna changes, whenever an antenna was replaced or slightly moved by the CORS site operators without notifying NGS.
+There appears to be a negative bias of about 1cm along the vertical component that originally could be attributed to this particular reason.
+Nevertheless, in this specific instance, the records at GAIT showed that the antenna was not replaced or moved.
+The possibility of local subsidence could be another explanation, if the difference with respect to the published coordinates has a secular trend and increases with time.
+To confirm or deny this type of situation, NGS also produces a so-called multiyear solution, where data available in our CORS archives is combined into a single solution using every third day since the collection of data started until the last available year on record [Marshall et al., 2001].
+Fig 2 shows the results for the same station presented in Fig. 1, including GPS data for the period 1994-2001.
+Figure 3 .
+Displacements at Alaska CORS due to the Denali earthquake Sometimes a natural phenomenon will displace a CORS antena.
+Geophysical processes (earthquakes, volcanic activity, etc.) may produce significant station displacements that TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 5/8 should be computed and corrected.
+This information is critical to the CORS users if they want to determine accurate relative positions from CORS stations.
+On November 3, 2002, a magnitude 7.9 earthquake occurred along the Denali Fault in Alaska.
+The geographic coordinates of the epicenter are 63.52oN and 212.47oE, at a depth of 5.0Km.
+We have determined 3-dimensional displacements associated with this earthquake at several CORS located in Alaska (see Fig. 3).
+We computed pre-earthquake positional coordinates for these CORS by using GPS data observed during the 5-day period immediately preceding the earthquake.
+We also computed post-earthquake positional coordinates by using GPS data observed during the 5-day period that begins 9 days following the earthquake, hence our computed displacements may include some postseismic motion.
+Figure 4.
+Displacements at station GNAA in Alaska due to Denali earthquake TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 6/8 Each day of GPS data was processed using PAGES software [Schenewerk, 1993], holding fixed the positional coordinates of station YELL and BAY2, to previously adopted values.
+(Station YELL, whose approximate coordinates are 62.5oN and 245.5oE, is located in Canada to the east of the area displayed in the map of Fig. 3.)
+Each 5-day set of GPS data was combined using the ADJUST software developed by NGS (ftp://ftp.ngs.noaa.gov/pub/pcsoft /adjust/v.4.16/), with the positional coordinates of YELL constrained.
+Fig. 3 displays the displacements obtained by subtracting the pre-earthquake coordinates from the postearthquake coordinates.
+Figure 4 is an alternative way to see the earthquake-related displacements at station GNAA using the 60-day time series described above.
+Notice that the displacements implied by Fig. 4 appear to be slightly larger that the ones computed originally and plotted on Fig. 3.
+This result suggests that postseismic deformation continued beyond the 14 day window considered when determining the values tabulated in Fig. 3.
+4.
+CONCLUSIONS The rigorous realization of geodetic frames based on networks of GPS continuously operating reference stations requires constant monitoring of the set of coordinates and velocities defining the particular frame of the datum in question.
+Changes of antenna positions caused by human or natural effects should be promptly detected, and corrections passed to the GPS user involved in accurate relative positioning as soon as feasible.
+NGS developed software called Horizontal Time Dependent Positioning (HTDP) [Snay, 1999] capable of transforming coordinates between ITRF00 and NAD 83 (CORS96) where local distortions of geodetic marks near the epicenter of major earthquakes (such as the Denali earthquake) are taken into consideration and corrected using dislocation theory.
+Consequently, the accurate definition of a geodetic datum based on GPS observations involves more than the simple transformation of frames.
+Daily monitoring of coordinate changes is a must if rigorous relative GPS positioning with respect to CORS is desired.
+REFERENCES Altamimi, Z, P Sillard and C Boucher (2002) ITRF2000: A new release of the International Terrestrial Reference Frame for Earth science applications.
+J. Geophys.
+Res., 107(B10): ETG2/1-19.
+Craymer, M, R Ferland, and RA Snay (2000) Realization and unification of NAD 83 in Canada and the U.S. via the ITRF.
+Rumel R, H Drewes, W Bosch, H Hornik (eds) Towards an Integrated Global Geodetic Observing System (IGGOS), IAG Section II Symposium, Munich, October 5-9, 1998.
+International Association of Geodesy Symposia, vol. 120: 118121, Springer-Verlag, Berlin.
+Marshall, JD, M Cline, W Dillinger, M Schenewerk, RA Snay and T Soler (2001) Determining ITRF2000 positions and velocities for the National CORS.
+Eos, Trans.
+AGU, 82(47): F291 (Abstract).
+TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 7/8 Schenewerk, MS (1993) MGPS-PAGE4 users manual.
+OES Internal Document, NOAA, Silver Spring, MD. Schwarz, CR (ed) (1989) North American Datum of 1983.
+NOAA Professional Paper NOS 2, U.S. Department of Commerce, National Oceanic and Atmospheric Administration.
+Snay, RA (1999) Using the HTDP software to transform spatial coordinates across time and between reference frames.
+Surveying and Land Information Systems, 59(1): 15-25.
+Snay, RA and T Soler (2000) Modern Terrestrial Reference Systems.
+Part 2: The evolution of the NAD 83.
+Professional Surveyor, 20(2): 16, 18.
+Snay, RA, G Adams, M Chin, S Frakes, T Soler and N Weston (2002) The synergistic CORS program continues to evolve.
+Proc.
+ION-GPS 2002, Portland, OR, September 24-27: 26302639.
+Soler, T and RA Snay (2003) Transforming positions and velocities between ITRF00 and NAD 83, J. Surv.
+Engrg.
+ASCE, in press.
+BIOGRAPHICAL NOTES T Soler is Chief, Global Positioning System Branch at NGS. RA Snay serves as the Manager of the National CORS program.
+RH Foote and MW Cline are geodesists with NGS and members of the CORS Data Analysis Team.
+CONTACTS TomÃ¯Â¿Â½s Soler, Ph.D.
+Chief, Global Positioning System Branch National Geodetic Survey, NOS, NOAA 1315 East-West Highway Silver Spring, MD 20910-3282 USA Tel. +(301) 713-3205 x 157 Fax + (301) 713-4324 Email: Tom.Soler@noaa.gov TS5, Reference Frame T Soler, RA Snay, RH Foote, MW Cline Rigorous Geodetic Datum Monitoring Using GPS FIG Working Week 2003 Paris, France, April 13-17, 2003 8/8

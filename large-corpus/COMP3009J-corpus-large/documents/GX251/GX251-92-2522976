@@ -1,0 +1,756 @@
+DHS Webmasters' handbook Text-only print version _________________________________________________________________ Table of contents 1.
+An overview - Site goals
+2.
+Accessibility - Accessibility links
+3.
+FAQ
+4.
+Library - Miscellaneous resources and reference material - Internet development - Intranet development
+5.
+Links and resources Accessibility Favorite examples of good design Government sites with good design Graphics for the web Search Style Technical tips: - CSS - HTML - JavaScript - XML
+6.
+Setting up your site: file structure Migrating files
+7.
+Templates Customizing navigation template Customizing content templates
+8.
+Tools 
+1.
+An overview
+This handbook is for DHS Webmasters.
+It assumes that you know basic HTML and are using the DHS OIS standard software application, Macromedia Dreamweaver, for creating Web pages.
+If you do not have this application, you should talk to your manager about getting it.
+You may also need some training to use it effectively.
+An excellent tutorial comes with the software package.
+There are also Dreamweaver classes available in house through DAS (HRSD at www.hr.das.state.or.us/hrsd/trod/training.htm and IRMD's STEPS (training.das.state.or.us/), and outside the agency through New Horizons (www.newhorizons.com/retail/)and Chemeketa Online (bbs.chemeketa.edu/).
+The DHS Web leaders, under the direction of Dan Postrel, Communication Administrator, are: * Mike Cooksey (email Mike, mike.d.cooksey@state.or.us) - Technology infrastructure * Ed Kramer (email Ed, ed.kramer@state.or.us) - Content * Julee Syverson (email Julee, julee.syverson@state.or.us) - Design and development
+Our server administrator at CRM is Gary Barr (email Gary, gary.e.barr@state.or.us).
+The DHS Web site is organized by topic instead of by division or program.
+Each topic area has an "owner," or a primary Webmaster, who has overall responsibility for the topic area.
+The primary Webmasters for each cluster is:
+Pam Rouske (email Pam, pam.g.rouske@state.or.us) - Administrative Services
+Theresa Norman (email Theresa, theresa.norman@state.or.us) - Children, Adults 
+Julee Syverson (email Julee, julee.syverson@state.or.us) - Director's Office
+Rocke Klockner (email Rocke, rocke.p.klockner@state.or.us) - Health Services
+Becki Trachsel (email Becki, becki.b.trachsel@state.or.us) - Seniors 
+"If each Agency site looks and feels different from every other one and is organised uniquely, the customer faces a confusing and frustrating hunt for information.
+No matter how good any individual site may be, if there is no consistency or coherence among the multitude of sites the customer must search, the overall effect is one of complexity and confusion."
+- The IBM Global Services Report, 2001
+Site goals for Web developers
+You will help your program or cluster by presenting timely and accurate information on your site, and you will help the department by keeping your pages consistent in appearance and function with the rest of the site.
+We want the DHS site to be clean, uncluttered and standardized in appearance.
+Remember, your pages on the site are a reflection of the agency as a whole, not just your program.
+Our goal as DHS Webmasters is to create pages that express professionalism and consistency in the use of design elements, page layout, navigation and function, and file maintenance.
+First goal: Professionalism and consistency in the use of design elements
+We have designed a series of graphic elements (www.dhs.state.or.us/web/library/elements.html) that tie in with our design that you are welcome to use on your pages.
+We define "design elements" as headers, bars, bullets, and other graphics ready for you to use on your Web pages.
+The Web developers' library includes graphic text buttons such as "PDF," "Word" etc.
+(Let us know if you need other such buttons and we will make them for you.)
+We also have provided a series of headers (www.dhs.state.or.us/web/library/headers.html) to title your pages.
+Use design elements consistently and intelligently, not just to "decorate" your page.
+Use them only if they serve the content; in other words, they make your material easier to find or your message easier to comprehend.
+Use design elements sparingly.
+Don't clutter your pages with unnecessary art.
+Use art only if it enhances your navigation or illustrates your message in a professional manner.
+Avoid low-quality clip art and cartoons, jokes, animated gifs, non-standard fonts, flashing or scrolling text or other Web clichÃ¯Â¿Â½s.
+Second goal: Professionalism and consistency in page layout
+Use the Dreamweaver templates we've provided, located at the root directory of our site in the /Templates/ directory.
+The templates refer to a Cascading Style Sheet (CSS), located at the root in the /style/ folder.
+We want the DHS site to look integrated, well structured and uniform; we don't want the user to think he/she has left the DHS site at any point.
+(This standardization in look-and-feel does not include Web applications at this time.
+OIS may adopt look-and-feel and application function standards in the near future.)
+Third goal: Professionalism and consistency in navigation and function
+The function of various buttons and navigation elements should look and act the same on every page.
+Every page, for example, has:
+Breadcrumbs.
+This is Web slang for the navigation string that resides below the header and above the body copy.
+Breadcrumbs lead users page by page back to the DHS home page.
+Headers and footers.
+Every page is contained by a header and footer.
+The header identifies Oregon DHS; some also include the section title of the page.
+The footer has your address and contact information.
+Structure.
+Your navigation should be well defined and logical, so your content is easy to locate.
+If you are having problems structuring your site, contact the Communication Office for help.
+Fourth goal: Professionalism and consistency in file maintenance
+You probably won't be the only one using your folders or updating your pages.
+Make your HTML code clean and easy to maintain and your file structure streamlined and logical.
+Don't add unnecessary functions or coding to your pages.
+We want all the pages of the site to look and act the same (please email any requests for exceptions to Mike Cooksey, mike.d.cooksey@state.or.us).
+_________________________________________________________________
+2.
+Accessibility
+"The power of the Web is in its universality.
+Access by everyone regardless of disability is an essential aspect."
+- Tim Berners-Lee, W3C Director and inventor of the World Wide Web
+Web accessibility is an important goal for our department.
+We need do everything possible to make the site accessible to those who have disabilities.
+Our template has been tested with the JAWS screen reader.
+Using header tags.
+Header tags not only format your text for easy readability on the screen, but they also establish an outline of your information that enables screen readers such as JAWS to build an accurate table of contents for blind users.
+You should therefore use your 
+Our CSS (cascading style sheet) already has the formatting for this structure in place for you.
+The text on your pages will be well organized and consistent as long as you use the 
+Problems with spacing.
+Many of us work around the layout limitations of HTML by using transparent *. gifs as "spacers" to design the placement images and text on our pages.
+Using spacers, however, can make it tedious for people with screen readers, as most readers read each 
+To get around this recital of unnecessary information, make sure your alt tag for spacers is set for 
+This is the only way to make most screen readers skip the spacer entirely and move on to more illuminating content.
+Using alt tags.
+Make sure you use alt tags to identify all important photos and graphics.
+Alt tags for photos.
+Use a short sentence or two to describe the photos, similar to what you would find under a newspaper photo caption.
+Alt tags for data.
+Describe the outcomes or results of your data charts as clearly as possible.
+For complex material, it would be a good idea to have the researcher who provided the material write a short narrative description for you to use in the alt tag.
+For complex data, you may have to use the longdesc (www.w3.org/TR/REC-html40/struct/objects.html#adef-longdesc-IMG) attribute.
+Alt tags for illustrations.
+Use your best judgment when deciding what to describe and what to leave off.
+For example, if you are using an illustration with your content that is primarily for decorative purposes, don't describe it if it will mean very little to your blind user.
+Instead, code your alt tag as follows: 
+Alt tags for graphic elements.
+Don't use descriptive alt tags for graphic elements like bars, bullets, borders, or transparent gifs that aren't necessary to the flow of the content.
+Don't leave the alt tags out, either, as some screen readers will say something like "unidentified graphic element" every time they hit 
+Instead, code your alt tag with double quotation marks 
+This attribute makes most screen readers skip over the graphic entirely.
+Blockquotes.
+Try to avoid using blockquotes or indentations to control indention.
+Both are common workarounds used by Web page builders to format text and create attractive page layouts; however, accessibility software may interpret and deliver information a certain way because of the tag.
+In the case of a blockquote, traditionally used to cite sources and quotations, a text-to-voice reader might interpret the information as a quote and read it accordingly when, in fact, you were just trying to indent a paragraph.
+Text sizing.
+Don't use absolute values to format text for your various titles, subtitles or body text.
+(An example of an absolute font tag is: 
+Use relative tags instead.
+For example, use "default" for your text size setting, so folks who have their browsers set to a larger pitch font because of sight disabilities will see your body text at a size better suited for their needs.
+When you want your text to be larger or smaller than your body text for emphasis or other reasons, but don't want to use header tags, use relative formatting like 
+Difficult elements for screen readers.
+You need to provide alternative content if you're creating pages with certain elements that are hard for screen readers to read.
+Examples are detailed maps, complex graphics, frames (which we don't use in our current design), and older PDFs (Adobe's Portable Document Format).
+If you are including PDFs on your site, try to use ones that have been produced in Acrobat 5.0, which has many accessibility features lacking in earlier versions.
+A booklet on making accessible PDFs is available on the Adobe accessibility site (access.adobe.com).
+For accessibility reasons, don't use any form of scripting to produce content that may appear or disappear based on the user's actions, unless you provide a text-only version on the same page.
+For example, drop-down menu items coded in Javascript on an HTML page will not read with a JAWS screen reader, leaving the blind user unable to navigate further.
+You would need to recreate the navigation in straight HTML somewhere else on the page so your users could proceed.
+A rule of thumb to see if your page is accessible is to read through your code from top to bottom; that's the way a screen reader will read your page to a blind user.
+By reading it through yourself, you may find images, image maps and other information out of sequence and missing alt tags.
+By repairing and checking your pages carefully before posting them, you will make your site more accessible even if you don't have access to a screen reader to test them on.
+(Note: OIS has JAWS set up on a testing station available to you in the Technology and Strategy group, HSB 5th floor.
+Bring your own headphones).
+Ten quick tips to make Web sites accessible (from the World Wide Web Consortium) 1.
+Images 
+Use the alt attribute to describe the function of each visual.
+2.
+Image maps.
+Use a client-side map and text for hotspots.
+3.
+Multimedia.
+Provide captioning and transcripts of audio, and descriptions of video.
+4.
+Hypertext links.
+Use text that makes sense when read out of context.
+For example, avoid "click here."
+Some of your users may not be using a mouse.
+5.
+Page organization.
+Use headings, lists, and consistent structure.
+Use CSS for layout and style where possible.
+6.
+Graphs 
+Summarize or use the longdesc (www.w3.org/TR/REC-html40/struct/objects.html#adef-longdesc-IMG) attribute.
+7.
+Scripts, applets, 
+Provide alternative content in case active features are inaccessible or unsupported.
+8.
+Frames.
+Use the noframes element and meaningful titles.
+9.
+Tables.
+Make line-by-line reading sensible.
+Summarize.
+10.
+Check your work.
+Validate.
+Use the W3c guidelines (www.w3.org/TR/WCAG) to find out more about Web accessibility Ã¯Â¿Â½ W3C (MIT, INRIA, Keio) 2001/01.
+For complete guidelines 
+Accessibility links
+* The Access Board www.access-board.gov/indexes/technicalindex.htm * Accessible.org accessible.org * ADA Accessibility Requirements www.skally.net/ada.html * American Council for the Blind www.acb.org/accessible-formats.html * Blindness Resource Center www.nyise.org/speech/access.htm * Center for Applied Special Technology (CAST) www.cast.org * CNET Builder.com: Accessibility builder.cnet.com/webbuilding/pages/Authoring/Accessibility/ss01.ht ml * HTML Writers Guild's AWARE (Accessible Web Authoring Resources and Education) Center aware.hwg.org * Information about Section 508 from Government Computer News www.gcn.com/sect508/ * Information Technology and Technical Assistance Training Center (ITTATC), Center for Assistive Technology and Environmental Access, Georgia Institute of Technology www.ittatc.org/laws/stateLawAtGlance.cfm * International Center for Disability Resources www.icdri.org/ * National Federation of the Blind: Web Accessibility www.nfb.org/tech/webacc.htm * Royal National Institute of the Blind (UK) www.rnib.org.uk/digital/hints.htm * Section 508 www.section508.gov * Sitepoint.com article "Design 
+Note: To see more articles and reports on accessibility, check the Civic Resource Group research site (www.civicresource.com/briefs/briefs_accessibility.html) _________________________________________________________________
+3.
+Frequently asked questions
+06/26/03 Q: What is the DHS policy for Web site design and development?
+A: The policy is on the DHS Web site at www.dhs.state.or.us/policy/admin/is/070_012.htm.
+05/13/03 Q: What is the difference between XML and HTML, and will we need to be XML-compliant on the DHS Web site?
+A: Yes, we will need to consider XML compliance in the future.
+Dreamweaver already has a built-in "convert to XML" function under the "File" menu.
+For more details, see the information about XML the Communication Office and OIS T
+04/23/03 Q: I just upgraded from Dreamweaver 4 to MX, and the MX interface is very different.
+I'd like it to look more like Dreamweaver 4 until I'm used to MX.
+Is there a way to do this?
+A: Yes; Under the preferences menu in Dreamweaver, pick General, then click the "Change Workspace" button.
+This will take you to a menu page with screen shots of each interface.
+Pick the "Dreamweaver 4 workspace."
+You can always change it back later by going back to this menu and choosing "Dreamweaver MX workspace."
+03/25/03 Q: Awhile ago, we were told the OIS T
+Is that testing station available yet?
+A: OIS has JAWS set up on a testing station available to you in the Technology and Strategy group, HSB 5th floor.
+Both Internet Explorer and Netscape Navigation are loaded on this machine, labeled "JAWS."
+Please bring your own headphones.
+01/15/03 Q: My pages look different in the Netscape 7 than they do in Internet Explorer 6, especially the navigation tables, which seem to have black borders in some of the face icon cells.
+How do I fix this?
+A: Check the first line of your source code, the 
+If it is in lower-case letters, that's the problem, because this format causes table cell errors.
+Please reformat the sentence as follows:
+<
+Another problem might be that this 
+If you copy the text above and make sure it's on line 1, your table cell errors should disappear.
+12/19/02 Q: How do I add or correct links to the indexes of site-wide index pages like "data," "training" or "publications"?
+A: Contact the Webmaster in charge of that folder and send your new links or revisions to them.
+Data: send links to the Communication Office Publications: send links to the Communication Office Training: send links to Susan Blanche-Kappler
+Send your input via email, and make sure to include the URL of your link.
+Example:
+Please add the Community Guide to Assisted Living Handbook (www.dhs.state.or.us/seniors/publications/assisted.pdf) to the Publications page under the topic "Seniors" and also under the topic "People with Disabilities."
+You may have publications that should be cross-reference on both the data and publications index pages.
+In that case, note that with your request.
+10/25/02 Q: Where do I get graphics like colored bullets, rules, and buttons?
+A: Look in the Web developers' library library for a page of graphic elements (located at www.dhs.state.or.us//web/library/elements.html) that have already been designed for the site.
+We've made buttons, bullets, dividers, topic bars, and arrows.
+Choose the color and type of bullet or button from the /images/ directory at the root level that suits your needs.
+If you need other graphics, contact the Communication Office.
+Note regarding text buttons like "MORE" and "PDF" buttons: to keep them from floating above the baseline of your text and causing problems with line spacing, use the following indication in your 
+align="absbottom"
+For example, the whole string of code for your "more" button should be:
+<
+10/22/02 Q: I'm confused; when do I use a navigation template and when do I use a content template?
+A: The navigation template has navigation buttons on the left side, and are for pages that need extra levels for searching deeper into the particular content of the page.
+An example would be a the home page for Human Resources (www.dhs.state.or.us/admin/hr/).
+Another page that should have the navigation template are pages at a level high enough that the user would benefit by having navigation at hand to other high level areas.
+The content templates are for content pages, those at the lower levels of the site structure.
+You could think of them as source or "target" pages.
+An example would be a news release (sample at www.dhs.state.or.us/news/2003news/2003-0428.html).
+There may be links up through the navigation or outside the site from the news release, but it is at the lowest level of the content navigation string.
+09/23/02 Q: What do I put for the Webmaster contact information in the footer of my Web pages?
+A: The generic language for the footer found on the main template is as follows:
+If you have questions about DHS, problems getting DHS services, or comments about this site, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+The email address dhs.info@state.or.us sends messages to the Governor's Advocacy Office, who will forward the Web-related enquiries for the main site on to the Communication Office.
+However, for your Web pages comments about your site should be directed to you.
+You could edit the generic paragraph as follows:
+If you have questions about DHS or problems getting DHS services, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+If you have comments about this site, email us: Webmaster.
+DHS Groupwise users, address email to (your email account name)@state.or.us
+For the Webmaster link, we recommend getting a Groupwise account specific to your Web site (for example, "contracts.web@state.or.us") instead of using your individual state address.
+This way, your privacy is protected since your name is no longer associated with the site, and if your job duties include someone else at some point, the privileges to read and write to the Web Groupwise account can be shared.
+Get this account by contacting the DHS help desk.
+Note: The size of the footer text is 
+09/23/02 Q: What do I put in the four subfolders in my directory titled "data," "publications," "images" and "archive?" I noticed there are four folders at the root level named the same.
+A: You put statistics, surveys and other data in your "data" folder.
+Publications like online brochures, newsletters and handbooks go in your "publications" folder.
+All graphics (JPEGs and GIFs) go in your "images" folder.
+You put last year's newsletters, old surveys and old HTML pages in the "archives" folder.
+The criteria you use to determine whether to throw out material or archive it is this: if you think it would be useful for research, historical record or analysis, keep it.
+If the information is wrong or outdated, discard it.
+You put your own statistics, pubs, graphics, and older material in your own "data," "publications," "images" and "archive" folders.
+The ones at the root-level are for department-wide items.
+For example, our DHS annual report would go in the publications folder at the root level.
+09/12/02 Q: Now that I have a unix account as a DHS Webmaster, what are my next steps to migrate to the new Web site?
+A: If you haven't already, talk to your content editor (see the roster at www.dhs.state.or.us/web/content/roster.html) and go over your site inventory together.
+Between the two of you, decide which content from your existing site is ready to move over to the new site and where it should go.
+You'll be coming up with a navigation structure together as well.
+You'll turn this information into your navigation links in the right-hand table on the template.
+You will also need to set up your access to the new site via Dreamweaver.
+More discussion on this is in the previous FAQ.
+You will need to use the master templates to make your own topic template in Dreamweaver next.
+Finally, migrate your old pages and put them into the new template you've created.
+09/10/02 Q: In Dreamweaver, how do I set up access to the new site?
+A: First, contact the Communication Office, who administers the DHS Webmaster permission list (Microsoft Word file at www.dhs.state.or.us/web/library/permissions.doc) and maintains the site file structure (Microsoft Word file at www.dhs.state.or.us/web/library/file_structure.doc).
+They will contact CRM, who host our site, and ask you to send CRM your RACF ID and a password.
+After CRMreceives the notification from the Communication Office and the RACF ID and password from you, they will email you that your account has been established.
+After you've received CRM's confirmation, open Dreamweaver, and from the "Site" menu, pick "New Site".
+The most important screens are the first two, local site setup (the working version of the site on your hard drive), and remote site setup (where you set up FTP access and use your new login and password).
+Note: The remote site folder is /project/dhs/ _________________________________________________________________
+4.
+Library
+Miscellaneous resources and reference material
+Links
+Site file structure (Microsoft Word file) (www.dhs.state.or.us/web/library/file_structure.doc)
+Web content committee list (www.dhs.state.or.us/web/content/roster.html)
+Webmaster staff list (www.dhs.state.or.us/web/library/webmasters.html)
+Web site access permission list (Microsoft Word file) (www.dhs.state.or.us/web/library/permissions.doc)
+Internet development
+DHS logos (www.dhs.state.or.us/images/logo/)
+Graphic elements (www.dhs.state.or.us/web/library/elements.html)
+Headers (www.dhs.state.or.us/web/library/headers.html)
+Navigation icons - faces (www.dhs.state.or.us/web/library/faces.html)
+Templates: navigation (www.dhs.state.or.us/web/library/templatenavigation.html)
+Templates: content-1 (www.dhs.state.or.us/web/library/templatecontent1.html)
+Templates: content-2 (www.dhs.state.or.us/web/library/templatecontent2.html)
+Intranet development
+DHS logos (www.dhs.state.or.us/images/logo/)
+Graphics elements 
+Headers (intranet.dhs.state.or.us/dev/inheaders.html)
+Templates: navigation (intranet.dhs.state.or.us/dev/intemplate_nav.html)
+Templates: content-1 (intranet.dhs.state.or.us/dev/intemplate_content1.html)
+Templates: content-2 (intranet.dhs.state.or.us/dev/intemplate_content2.html)
+Templates: content-3 (intranet.dhs.state.or.us/dev/intemplate_content3.html) _________________________________________________________________
+5.
+Links and resources
+Accessibility
+(See links under "Accessibility" above)
+Favorite examples of good design
+- Interesting interfaces * New Yorker online (www.newyorker.com/) * Ray of light productions (PC only) (www.rayoflight.net/) * 7rings.com (www.7rings.com/) * Slate magazine (slate.msn.com/)
+- Good advice * Web Pages that Suck (www.webpagesthatsuck.com/) * Molly.com * www.molly.com/articles/webdesign/webdesign.php)
+Government sites with good design * Human Services Inc. (www.humanservicesinc.org/) * Maui, Hawaii (www.co.maui.hi.us/) * My Florida (www.myflorida.com/portal/Government) * New York State Dept. of Health (www.health.state.ny.us/home.html) * State of California portal (www.state.ca.us/state/portal/myca_homepage.jsp) * Texas Dept. of Human Services (www.dhs.state.tx.us/) * US Dept. of Health 
+Graphics for the web * Internet.com's Optimizing Web Graphics (webreference.com/dev/graphics/photoshop.html) * JPG FAQ (www.faqs.org/faqs/jpeg-faq/) * Lynda Weinman's Browser-friendly Palette (www.lynda.com/hex.html) * NCSA's Image Map Tutorial (National Center for Supercomputing Applications) (hoohoo.ncsa.uiuc.edu/docs/tutorials/imagemapping.html) * Portable Network Graphic (PNG) Format (www.libpng.org/pub/png/) * Scalable Vector Graphics (SVG) Format (http://www.adobe.com/svg/main.html) * WDG (Web Design Group) Use of ALT Tags in Images (www.htmlhelp.com/feature/art3.htm) * World Wide Web Consortium PNG Specification (www.w3.org/Graphics/PNG/) * World Wide Web Consortium SVG Specifications (www.w3.org/Graphics/SVG/Overview.htm8)
+Optimizing graphics for the Web
+See optimizing graphics links in Tools 
+Search tips * Search tips from Google (http://www.google.com/help/refinesearch.html) * Advanced search tips from Yahoo (http://help.yahoo.com/help/us/ysearch/basics/basics-08.html)
+Style guides * Jack Lynch's Guide to Grammar and Style (www.andromeda.rutgers.edu/~jlynch/Writing/) * Usability: Jakob Nielsen (www.useit.com/) * What you need to know about...Web Design (webdesign.about.com/)
+- Corporations * IBM Web Design Guidelines (www-3.ibm.com/ibm/easy/eou_ext.nsf/Publish/572) * Internet2 Company Style Guide (www.internet2.edu/styleguide/) * Tyson Foods Graphics Standard and Logo Guide (www.tyson.com/logoguide/manual.asp)
+- Academia * Arizona State University Graphics Standards Manual (www.asu.edu/ia/webdevelopment/gsm/) * Creighton University Graphics Standards Manual (www.creighton.edu/PubRel/gfxstd/index.html) * Memorial University of Newfoundland (www.mun.ca/univrel/g-main.html) * Rochester Institute of Technology Library: Corporate Identify (wally.rit.edu/pubs/guides/corpid.html) * San Francisco State University Graphics Standards Manual (www.sfsu.edu/~puboff/standards/welcome.htm) * University of Connecticut Graphics Standards Manual (www.logo.uconn.edu/grphstnd.htm) * University of Missouri Graphics Standards and Style Guide (www.umkc.edu/ucomm/standards/) * University of Texas Health Sciences Center Graphics 
+- Government * Access Washington style guide (www.wa.gov/dis/tools/awstyleguide/) * Queensland Web Centre (www.qld.gov.au/web/cue/overview/) * Texas Parks 
+- Publishers * Wiley Publishers Corporate Identity Manual (www.wiley.co.uk/about/corpident/) * Yale Web Style Guide (www.info.med.yale.edu/caim/manual/)
+Technical tips: * Builder.com (builder.com.com/) * Computing terminology (foldoc.doc.ic.ac.uk/foldoc/) * Dictionaries (www.dictionary.com/) * Internet.com (www.internet.com/home-d.html) * Internet FAQ Consortium (www.faqs.org/) * Internet terms (www.matisse.net/files/glossary.html) * Lynda Weinman (www.lynda.com/) * Microsoft Internet Explorer Home Page (www.microsoft.com/) * NetLingo: the Internet Dictionary (www.netlingo.com/) * Netscape Home Page (www.netscape.com) * Search Engine Watch (searchenginewatch.com/) * SitePoint (www.sitepoint.com/) * Tom Boutell's FAQs (www.boutell.com/faq/) * World Wide Web Consortium (W3C) (www.w3.org/) * ZDNet (www.zdnet.com/)
+- ColdFusion * ColdFusion Developer's Journal (www.sys-con.com/coldfusion/) * ColdFusion introduction: why go dynamic? (www.macromedia.com/software/coldfusion/resources/get_started/arti cles/godynamic.html) * ColdFusion scripting tips (builder.cnet.com/webbuilding/pages/Programming/ScriptMagic/ss01.h tml?tag=st.bl.3882.dir1.ScriptMagic_1) * ColdFusion tutorial (www.macromedia.com/support/coldfusion/tutorial_index.html)
+- CSS * World Wide Web Consortium CSS Specifications (www.w3.org/Style/CSS/) * WDG (Web Design Group) CSS Guide (www.htmlhelp.com/reference/css/) * Sitepoint.com article: Client side coding: CSS (www.sitepoint.com/subcat/90)
+- HTML * Garvick.com: Beginner's tutorial to HTML (www.garvick.com/webdesign/tutorial.htm) * Getting started with HTML (W3C) (www.w3.org/MarkUp/Guide/) * History of HTML (www.w3.org/MarkUp/historical) * iBoost Journals HTML Tips (www.iboost.com/build/programming/html/index.html) * NCSA (The National Center for Supercomputing Applications) HTML Primer (archive.ncsa.uiuc.edu/General/Internet/WWW/HTMLPrimer.html) * St. Mary's University Intermediate HTML Tutorial (library.stmarytx.edu/acadlib/doc/html/inter.htm) * WDG (Web Design Group) HTML Help (www.htmlhelp.com/) * WDG HTML Validator (www.htmlhelp.com/tools/validator/) * World Wide Web Consortium (WC3) HTML 4.01 Specifications (www.w3.org/TR/REC-html40/) * WC3 HTML Home Page (www.w3.org/MarkUp/) * WC3 Markup Validation Service (validator.w3.org/)
+- JavaScript * Scriptsearch.com (/www.scriptsearch.com/JavaScript/) * Builder.com (builder.cnet.com/webbuilding/0-3882.html)
+- XML * Articles and resources (www.dhs.state.or.us/web/handbook/xml.html) * World Wide Web Consortium (WC3): Introduction to XML (www.w3.org/XML/) _________________________________________________________________
+6.
+Setting up your site: File structure
+The top-level file structure of the site is set up on the new remote site and ready for your subfolders and files.
+See the file structure of the site, sorted by topic folder (Word document at www.dhs.state.or.us/web/library/file_structure.doc) or see the web files and folders sorted by Webmaster.
+(Word document at www.dhs.state.or.us/web/library/permissions.doc).
+Four common folders.
+Folders with the common names "archive," "data," "images," and "publications" are already set up for you within each main topic folder.
+Don't rename these folders, or we won't know where to look for your material.
+You may, however, delete them if they aren't applicable.
+What goes in these four folders? * Put all graphics (such as JPG and GIF files) in your topic images folder
+* Put HTML publications and all downloadable documents (such as Word files) in your topic publications folder
+* Put all data (such as Excel files) in your topic data folder.
+Note: sometimes a file could conceivably belong in more than one folder.
+However, don't put it in more than one place, just keep it in the most logical folder in your file structure, and make sure it's cross-referenced on the both publication and index pages.
+* Put all archive material (such as back issues of newsletters, reference material, etc.) in your topic archive folder
+Remember, Dreamweaver templates should not reside inside your subtopic folder.
+In order for the templates and style sheets to work properly, you must keep your templates in the "Templates" folder at the root directory.
+Adhering to this structure will assist our search engine in finding and logging in your pages, as well as keeping the overall site well organized.
+Publications and data indexes.
+These main pages reside at the top level of the site structure and contain links to all the various publications throughout the site.
+They are maintained by the Communication Office, but we rely on you to let us know what publications and data you have that you want listed there.
+Let us know when you have a new link to add to one of these top-level indexes.
+Email the Communication Office with Publication or Data listings.
+In your email, tell us what text you want us as your link (like the name of your publication or data), the URL of the link, and what section you want the link to appear in.
+Here's an example of how your email to us could look:
+"Please add Survey of Adoption Programs (www.dhs.state.or.us/children/publications/survey.html) to the Children section of the Publication index page."
+Subfolders.
+You will most likely be adding folders of your own within your main topic folder.
+They may in turn also need one or more of these subfolders in them (for example, Human Resources will have a publication folder, and a safety 
+The safety and wellness folder will need it's own publications folder to store the "Safety Spot" newsletters.)
+Tip: In collaboration with your content person, try to keep your file structure as flat as possible so material isn't buried too deep.
+In other words, avoid too many folders within folders.
+We would like our information to be available in as few "clicks" of the user's mouse button as possible from the home page.
+Tip: Make sure your Web site's file structure on your local drive is exactly mirrored on your remote site.
+Launch pages.
+Each of your subtopics should have a folder of its own, and each folder needs a "launch" (main) page.
+This main page must be called "index.html" or "index.htm" for the search engine to find and log it properly.
+Access rights to the server.
+The consolidated DHS site is at www.dhs.state.or.us.
+We've given our server administrator, Gary Barr at CRM a list of all the Webmasters and the folders they have permission to access.
+We've notified all of you, and Gary has set up your accounts.
+Note: Information about setting up your site in Dreamweaver can be found both in the software manual and in the FAQ section of this site.
+Transferring files.
+Download your files to the correct topic folder on the local site (usually your hard drive).
+Go to the remote site (www.dhs.state.or.us) and copy the /style/ and /images/ directories to your root directory.
+Also get the files called "template.dwt," template_content1.dwt and template_content2.dwt from the remote site.
+You will need to rename these file for your topic before saving them back to the remote site (example: seniors_content1.dwt).
+Setting up your site: Migrating files from your current server to the consolidated server
+If you are migrating existing material already in Dreamweaver templates to the new template and new site, the process of applying the revised template is simple.
+From the "Modify" menu, choose "Apply Template to Page"/"Select Template."
+Select the new template you have made.
+This applied the new template to your old pages.
+If your existing material does not already have a Dreamweaver template applied, the cleanest and fastest procedure is: 1.
+Copy your body copy from the source HTML file 2.
+Paste it into a blank Dreamweaver page 3.
+Check the body copy and make sure you delete all references to body text font and font size (the style sheet will take care of all of that).
+Retain only your HTML paragraph 
+From the "Modify" menu choose "Apply Template" to apply your customized template to the page 5.
+Save it in the appropriate folder on the new site
+Note: If you get a message asking "Include dependent files?" choose "No." _________________________________________________________________
+7.
+Templates
+Two types of templates.
+We have created two basic types of Dreamweaver templates for your Web pages.
+One is a navigation template, the other a content template.
+Description of the navigation template.
+The navigation template is used for high-level pages in the site.
+Navigation buttons down the left side of the pages lets the user move around through the main topic areas of the site.
+The purpose of navigation pages is to allow the user to get quickly to the information he/she is after, and move easily both back to the higher-level pages or forward to more specific target or destination pages where the content resides.
+Using the navigation template.
+Use the navigation template for most index.htm or "home" pages.
+Description of the content template.
+The content pages are the target pages, the pages where the actual material resides.
+The content template doesn't have the left-hand navigation menu since the content page is at the lowest or target level of the site.
+(That doesn't mean that the content pages have no navigation of their own; some content pages may have table of contents links, links to references on other sites, links to more specific explanations or links to glossaries or other related material).
+We have designed two content templates for your use, one with a generic header called template_content1 (at www.dhs.state.or.us/web/library/templatecontent1.html) and a second, called template_content2 (at www.dhs.state.or.us/web/library/templatecontent2.html) with a customized header providing navigation to main areas of the site.
+Both templates provide a navigation string ("breadcrumbs") below the header that steps the user back through the higher-level pages all the way home to the DHS index page.
+These templates are located in the Templates folder
+Using the content templates.
+The template_content1.dwt template is a "bare bones" format for your content, with a generic header that says only "Oregon Department of Human Services."
+You can use this for content that needs little in the way of topic headings or additional navigation.
+The template_content2.dwt template has a topic-specific header, a search field and additional navigation across the top of the header to get to other major areas of the "Inside DHS" site.
+Note: You don't need to apply any of the templates to pages with their own formatting, such as news releases, publications, policies, etc., but you must make sure you have links back to pages higher in the navigation structure.
+We don't want the user to feel stranded in your content.
+Cascading Style Sheets (CSS).
+Your template gets its formatting information from CSS.
+This is a style sheet that specifies various font sizes and styles used in HTML documents, and gives our Web pages a consistent look and feel.
+Style sheets also reduce the amount of format coding needed on individual pages, and decrease the use of deprecated HTML code (more information about deprecated code is at the W3C Web site at: www.w3.org/TR/html4/conform.html#deprecated.
+More info about CSS is also available in the links and resources section of this handbook).
+A line of code in the content and navigation templates ties the document to the DHS style sheet.
+You do not have to program this yourself.
+Note: The style sheet your template refers to is located in the root level directory called /style/.
+Your pages will be using this style sheet to set heading size and color for your body text, titles, subtitles, etc.
+Your body text will most likely be set to default, which is 
+When you use subtitles or topic titles, you need to use standard HTML heading tags (
+For example, when you coding the title of your page:
+Instead of: 
+Use: 
+The style sheet will determine what font size, color, and style the 
+The text color for links has also been set in CSS.
+Links appear green, active links should appear orange, and visited links will be purple.
+To see what the style sheet heading tags look like applied to text, see the sample navigation template (www.dhs.state.or.us/web/library/templatenavigation.html).
+Customizing navigation template
+Naming the navigation template.
+Open the master Dreamweaver navigation template ("template.dwt" in the Templates directory on the root level).
+Rename the file, and save it back to the same Templates directory.
+If you are using Dreamweaver's "check in/check out" feature, make sure when you are done copying or cloning templates you check the masters back to the remote site so someone else can use them.
+Naming files and folders (these conventions apply throughout the site): 1. Use only lower case letters (no capital letters) 2.
+Don't use any spaces 3.
+Don't use any symbols, special characters like number signs (#) or slashes (/), or punctuation (commas, periods) 4.
+Don't create file names longer than 20 characters (not including the extension)
+Editable template areas.
+You have six editable areas on your template to customize before adding your body text:
+1.
+Metadata
+2.
+Title
+3.
+Header
+4.
+Navigation string (breadcrumbs)
+5.
+Navigation table: topics, face icons, rows
+6.
+"Hot Topics"
+7.
+Footer
+1.
+Fill in the metadata.
+Metatags are part of the HTML code for a Web page, and are not normally visible to your viewers.
+Metatags contain information that search engines use to understand the Web site.
+The template already has the metadata subject areas outlined and ready for you to enter your topical information.
+The meta information includes "description" and "keywords" as well as some other data areas used by the Oregon.gov search feature.
+The better your metatags, the easier it is for search engines to find and index your site.
+Metatags are placed in the HTML document in the 
+Your template will already have an editable area for metadata.
+"Description" metatags give a bit more information about your page.
+The user might read this to decide if the page has the specific information he/she is looking for.
+An example of a description metatag is "Immunization guidelines for Oregon schoolchildren under the age of 5."
+A typical search engine's entry for your page would display both the title and the description found in your metadata.
+For the examples used above, your viewer would see:
+Oregon DHS: Immunization Immunization guidelines for Oregon schoolchildren under the age of 5
+This hopefully gives your viewer enough useful information to decide whether or not this page is what is needed.
+"Keyword" metatags tell search engines what specific words apply to your HTML page.
+List as many specific keywords as possible; don't use general keywords like "Oregon public health," "Oregon" or "DHS" as keywords on any but top-level pages.
+Though many search engines unconstrained by processing speed can scan your entire document and automatically generate a list of keywords, you need to accommodate older search engines as well.
+By supplying these specific keywords, you allow older search applications to find and index your page accurately.
+A comma separates each keyword.
+Typical keywords for the Immunization page in the example listed above could be "immunization, shot, vaccination, inoculation."
+Most search engines can understand variations of your keywords (using the example above, like: "immunize, vaccine, vaccinate, shots, and inoculate").
+Older search applications won't find these extrapolated terms, though.
+To be more inclusive, you might want to combine both these lists for your keywords.
+2.
+Write an accurate page title: Residing inside the header tag below the metadata, the page title (also called "doctitle") needs to be accurate and specific to the content on your page, because the title you pick will show up on the top bar of your user's browser.
+Also when your page comes up in most search engine lists, the title is the first thing the user will see, and should tell him/her right away if that's the page they are looking for.
+Please construct your pages with titles that start with "Oregon DHS:" as in the following example:
+"Oregon DHS: Immunization"
+For an explanation of the other metadata already outlined in your template, see the guidelines from the Oregon State Library FindOr (www.osl.state.or.us/findor/) project.
+3.
+Choose your header.
+Find the header that fits your topic from the headers (www.dhs.state.or.us/web/library/headers.html) in the Web developers' library library.
+If you need help picking the right one, or feel you need a specific one for a subtopic, ask the content committee member for your topic area (see the roster at www.dhs.state.or.us/web/content/roster.html).
+4.
+Don't forget "breadcrumbs."
+Put a navigation string above the navigation table on every page.
+The format for your breadcrumbs should be: "DHS home | Your topic | Your subtopic | Your page name."
+Note that the page you are actually on is not a link, since "you are there."
+Example:
+DHS home | Web developers | Library | Headers 
+5a.
+Navigation table: List your topics.
+The list of topics in your navigation table at the left side of the page should have already evolved from discussions between you and your content person.
+The standards for the topics in the table are as follows: * Keep your navigation to one line if possible, but no more than two to keep the table coding intact
+* As you will throughout your site, use initial capitalization for all but proper nouns (in other words, "Oregon Health Plan" would be upper-lower case, but "Medicaid information" would be initial cap only)
+* Alphabetize the navigation topics in the table, unless the sequence is essential.
+Sample exceptions: + Main topic pages (like "Children" or "Policy") have for their first navigation item "An overview."
+Though "An overview" may not be alphabetically be first, it still needs to be in the first row of your navigation table.
++ Processes or procedures that need to be in a specific order, or items of higher importance than others whose topics can't be forced into alphabetical terms.
++ Online publications whose table of contents is topic-based, not alphabetical.
++ Archives can generally be placed at the end of the list, even though the word alphabetically may at or close to the top of the list.
+5b.
+Navigation table: choose the face icons.
+Select the appropriate graphic from the faces library (at www.dhs.state.or.us/web/library/faces.html).
+If you need help in choosing faces appropriate for your uses, call the Communication Office and someone will assist you.
+Do not design your own buttons; you must use the images we've created, to keep the DHS standard look-and-feel.
+Note that the background of the cells that hold the icons is black and the alignment is to the right.
+5c.
+Navigation table: rows.
+Try to keep to 10 or fewer items in your left navigation menu, as studies have shown more than 10 navigation items are confusing.
+If you need fewer than the 10 rows provided, delete the unnecessary rows.
+Note: The total width of the navigation table should be 177 pixels.
+Each row in the navigation table should be 28 pixels in height.
+If your navigation table doesn't look right, check the height of the rows and width of the table.
+Note also that the background of the face cell is black (#000000) and the background of the topic area is blue-gray (#F3F4FF).
+To add a row: Select the the place where you want to add the new row.
+(You can select a row by placing your mouse to the left of the navigation table.
+When a right-pointing arrow appears, click.
+Make sure just the row is selected, not the entire table.)
+When the row is selected go to the "Modify" menu, select "Table"/"Insert Row."
+To delete a row: Select the row you want to remove.
+Hit the delete key.
+6.
+Add "Hot Topics."
+Your upper-level topic pages might need shortcuts to pages of special interest with heavy traffic or timely pages (like a monthly food drive page).
+Use the "Hot Topics" area for these links.
+If you don't have any hot topics to link to, you can delete this table.
+If you need it later, you can always copy it again from the main template.
+7.
+Revise the template footer.
+The generic language for the footer found on the main template is as follows:
+If you have questions about DHS, problems getting DHS services, or comments about this site, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+The email address dhs.info@state.or.us sends messages to the Governor's Advocacy Office, who will forward the Web-related enquiries for the main site on to the Communication Office.
+However, for your topic-based Web pages, comments about your site should be directed to you.
+You could edit the generic paragraph as follows:
+If you have questions about DHS or problems getting DHS services, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+If you have comments about this site, email us: Webmaster.
+DHS Groupwise users, address email to (your email account name)@state.or.us
+For the Webmaster link, we recommend getting a Groupwise account specific to your Web site (for example, "seniors.web@state.or.us") instead of using your individual state address.
+This way, your privacy is protected since your name is no longer associated with the site, and if your job duties include someone else at some point, the privileges to read and write to the Web Groupwise account can be shared.
+Get this account by contacting the DHS HelpDesk.
+Besides giving the link, spell out your email address in GroupWise-friendly terms in the footer.
+In other words, give out the entire email address as in the example above.
+Note: The size of the footer text is 
+Also using the 
+Use the following format:
+Oregon Department of Human Services (same on all addresses, bold) Administrative Services (your cluster or program) 500 Summer St. NE, E94, Salem, OR 97301-1097 (your cluster or program's address, suite, and zip+four) Phone: (503) 945-5733 (your cluster or program's main phone number) Fax: (503) 378-2897 (your cluster or program's main fax number) TTY: (503) 947-6214 (your cluster or program's main TTY phone number)
+Final steps: "freeze" your template.
+Remember to make the areas you have customized into uneditable areas before you start applying it to any pages.
+Areas you'll want to make uneditable probably include the header, footer, and (most importantly) your left menu navigation table.
+This doesn't preclude you from adding or removing topics on the template later, but makes global changes possible to pages that have the template applied.
+For example, if you leave the left menu as an editable area and make a change to the navigation later on, you will have to manually make the same change on the left menu of each page that uses the template, which defeats the whole purpose.
+To make a section uneditable: on your customized template page (in Dreamweaver MX), click on the editable area you want to make uneditable, and from the "Modify" menu, select "Templates," then "Remove Template Markup."
+To make a section editable: on your customized template page (in Dreamweaver MX), select the entire area you want to make editable, and from the "Insert" menu, select "Template Objects," then "Editable Region."
+At this point, the navigation template is ready for body copy.
+If you're not ready to start populating it, save the template and close the file.
+Test, test, test! You should be testing your pages in both Internet Explorer and Netscape Navigator to see how if they look and function properly in each browser.
+If possible, you should also test on both IBM-compatible and Macintosh platforms.
+Customizing content templates
+Naming the content template.
+Open one of the two master Dreamweaver content templates, "template_content1.dwt" (more info at www.dhs.state.or.us/web/library/templatecontent1.html) or "template_content2.dwt" (more info at www.dhs.state.or.us/web/library/templatecontent2.html) in the Templates directory on the root level.
+Rename the file, and save it back to the same Templates directory.
+If you are using Dreamweaver's"check in/check out" feature, make sure when you are done copying or cloning templates you check the masters back to the remote site so someone else can use them.
+Naming files and folders (these conventions apply throughout the site): 1. Use only lower case letters (no capital letters) 2.
+Don't use any spaces 3.
+Don't use any symbols, special characters like number signs (#) or slashes (/), or punctuation (commas, periods) 4.
+Don't create file names longer than 20 characters (not including the extension)
+Editable template areas.
+You have five editable areas on your template to customize before adding your body text:
+1.
+Metadata
+2.
+Title
+3.
+Header
+4.
+Navigation string (breadcrumbs)
+5.
+Footer
+1.
+Fill in the metadata.
+Metatags are part of the HTML code for a Web page, and are not normally visible to your viewers.
+Metatags contain information that search engines use to understand the Web site.
+The template already has the metadata subjects outlined and ready for you to enter your topical information.
+The meta information includes "description" and "keywords" as well as some other data areas used by the Oregon.gov search feature.
+The better your metatags, the easier it is for search engines to find and index your site.
+Metatags are placed in the HTML document in the 
+Your template will already have an editable area for metadata.
+"Description" metatags give a bit more information about your page.
+The user might read this to decide if the page has the specific information he/she is looking for.
+An example of the description metatag might be "Immunization guidelines for Oregon schoolchildren under the age of 5."
+A typical search engine's entry for your page would display both the title and the description found in your metadata.
+For the examples used above, your viewer would see:
+Oregon DHS: Immunization Immunization guidelines for Oregon schoolchildren under the age of 5
+This hopefully gives your viewer enough useful information to decide whether or not this page is what is needed.
+"Keyword" metatags tell search engines what specific words apply to your HTML page.
+List as many specific keywords as possible; don't use general keywords like "Oregon public health," "Oregon" or "DHS" as keywords on any but top-level pages.
+Though many search engines unconstrained by processing speed can scan your entire document and automatically generate their own list of keywords, you need to accommodate older search engines as well.
+By supplying these specific keywords, you allow older search applications to find and index your page.
+A comma separates each keyword.
+Typical keywords for the Immunization page in the example listed above could be "immunization, shot, vaccination, inoculation."
+Most search engines can understand variations of your keywords (using the example above, like: "immunize, vaccine, vaccinate, shots, and inoculate").
+Older search applications won't find these extrapolated terms, though.
+To be more inclusive, you might want to combine both these lists for your keywords.
+2.
+Write an accurate page title: Residing inside the header tag below the metadata, the page title (also called "doctitle") needs to be accurate and specific to the content on your page, because the title you pick will show up on the top bar of your user's browser.
+Also when your page comes up in most search engine list, the title is the first thing the user will see, and should tell him/her right away if that's the page they are looking for.
+Please construct your pages with titles that start with "Oregon DHS:" as in the following example:
+"Oregon DHS: Immunization"
+For an explanation of the other metadata already outlined in your template, see the guidelines from the Oregon State Library FindOr (www.osl.state.or.us/findor/ )project.
+3.
+Choose your header.
+Find the header that fits your topic from the headers at www.dhs.state.or.us/web/library/headers.html.
+If you need help picking the right one, or feel you need a specific one for a subtopic, ask the content committee member for your topic area (see the roster at www.dhs.state.or.us/web/content/roster.html).
+4.
+Don't forget "breadcrumbs."
+Put a navigation string above the navigation table on every page.
+The format for your breadcrumbs should be: "DHS home | Your topic | Your subtopic | Your page name."
+Note that the page you are actually on is not a link, since "you are there."
+Example:
+DHS home | Web Developers | Library | Headers 
+5.
+Revise the template footer.
+The generic language for the footer found on the main template is as follows:
+If you have questions about DHS, problems getting DHS services, or comments about this site, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+The email address dhs.info@state.or.us sends messages to the Governor's Advocacy Office, who will forward the Web-related enquiries for the main site on to the Communication Office.
+However, for your topic-based Web pages, comments about your site should be directed to you.
+You could edit the generic paragraph as follows:
+If you have questions about DHS or problems getting DHS services, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us
+If you have comments about this site, email us: Webmaster.
+DHS Groupwise users, address email to (your email account name)@state.or.us
+For the Webmaster link, we recommend getting a Groupwise account specific to your Web site (for example, "seniors.web@state.or.us") instead of using your individual state address.
+This way, your privacy is protected since your name is no longer associated with the site, and if your job duties include someone else at some point, the privileges to read and write to the Web Groupwise account can be shared.
+Get this account by contacting the DHS HelpDesk.
+Put your email address in GroupWise-friendly terms in the footer.
+In other words, spell out the entire email address-don't just create an email link from a name in the footer.
+(Example: "Questions or comments on this site: Health Webmaster.
+DHS GroupWise users, address email to health.info@state.or.us").
+Note: The size of the footer text is 
+Also using the 
+Use the following format:
+Oregon Department of Human Services (same on all addresses, bold) Administrative Services (your cluster or program) 500 Summer St. NE, E94, Salem, OR 97301-1097 (your cluster or program's address, suite, and zip+four) Phone: (503) 945-5733 (your cluster or program's main phone number) Fax: (503) 378-2897 (your cluster or program's main fax number) TTY: (503) 947-6214 (your cluster or program's main TTY phone number)
+Final steps: "freeze" your template.
+Remember to make the areas you have customized into uneditable areas before you start applying it to any pages.
+Areas you'll want to make uneditable probably include the header, footer, and (most importantly) your left menu navigation table.
+This doesn't preclude you from adding or removing topics on the template later, but makes global changes possible to pages that have the template applied.
+For example, if you leave the left menu as an editable area and make a change to the navigation later on, you will have to manually make the same change on the left menu of each page that uses the template, which defeats the whole purpose.
+To make a section uneditable: on your customized template page (in Dreamweaver MX), click on the editable area you want to make uneditable, and from the "Modify" menu, select "Templates," then "Remove Template Markup."
+To make a section editable: on your customized template page (in Dreamweaver MX), select the entire area you want to make editable, and from the "Insert" menu, select "Template Objects," then "Editable Region."
+The content template is ready for body copy.
+Save the template and close the file.
+Test, test, test! You should be testing your pages in both Internet Explorer and Netscape Navigator to see how if they look and function properly in each browser.
+If possible, you should also test on both IBM-compatible and Macintosh platforms.
+_________________________________________________________________
+8.
+Tools 
+Code snippets
+Here are some common bits of useful code.
+(Please contact the Communication Office to contribute to this section):
+Redirects:
+To redirect people from the old DHS site to the new one, put this code in your metadata:
+<
+The number "0; in the code above should be replaced with the number of seconds you decide the user should wait to get to the new page.
+If you want the user to go to the new site immediately, you would use "0; however, if you want the user to have time to read your redirect and find out that he/she should bookmark the new page, 20 seconds or so allows a little more reading and comprehension time.
+You can use a sentence like:
+The Oregon Department of Human Service site has moved.
+Our new home page is at http://www.dhs.state.or.us.
+The page that you have selected is now located at http://www.dhs.state.or.us/xxxx. (xxxx would be where you would complete the URL to get the user to your new page) You may click on this link to go there now, or be automatically redirected to our new page in 20 seconds.
+We suggest you bookmark the new page.
+This redirect will expire December 31, 2003.
+Today's date:
+<
+Note: be aware that later versions of Netscape (such as version 7.01) do not read JavaScript correctly.
+You may end up with the wrong date on all pages using this code.
+It might be advisable to use this script sparingly if at all.
+See also HTML tutorial links
+Image libraries
+Graphics for the Web site are available from the following download pages: * DHS logos (at www.dhs.state.or.us/images/logo/) * Navigation icons (at www.dhs.state.or.us/web/library/faces.html for the navigation table) * Headers (at www.dhs.state.or.us/web/library/headers.html for the top of page) * Graphic elements (at www.dhs.state.or.us/web/library/elements.html for arrows, buttons, bullets, dividers, bars, etc.)
+Metadata samples
+Here's a sample of the minimum metadata you should have on each page to allow people using our State Library search engine, FindOR, locate your material:
+<
+Please note, in order to allow the state's government locator feature to find your page, you should use the metadata specifications provided by the State Library on their FindOR site at www.osl.state.or.us/findor/, especially noting their subject tree (www.osl.state.or.us/findor/gilstree.html).
+The State Library also offers metatag training (email FindOR trainer Jey Wann.
+GroupWise users: jey.a.wenn@state.or.us).
+A word on dates: Be careful with the content format of the date related tags.
+Dates are expressed as YYYY/MM/DD.
+Examples:
+<
+Note: Unless you have the dates in YYYY/MM/DD format, a user using the correct date format to search for a file in FindOR won't find your document.
+Optimizing graphics for the Web
+When creating images for the Web, keep file size in mind.
+Large graphic files take a long time for users with the minimum 28-baud modems to download.
+Waiting too long for pages to load can make users frustrated with the site before they've had a chance to really explore it.
+To avoid this, produce illustrations and photos with the minimum resolution, size and color depth necessary.
+You can do this manually, but programs like ImageReady (bundled with Photoshop) can be used to automate the process of minimizing your graphic file sizes.
+Web page file size limit
+Try to keep your Web page no larger than 64K, including all graphics.
+This way, viewers with older modems can see your pages and get to your information without waiting around too long for pages to load.
+64K may seem like an impracticably small size, but there are workarounds if you have pages that really need lots of graphics.
+For example, if you have large detailed graphic such as maps, rather than slowing down the loading of your entire page, you could show tiny snapshot of the maps with a link to see each one in a larger size on a separate page.
+This way, the user has a choice whether or not to click for a more detailed view, and will probably be willing to wait if it's exactly the information he or she needs.
+Another way to make a graphic load faster is to specify the height and width in the HTML code (example: 
+By specifying the height and width of the graphic, the page will load with the proper amount of space "reserved" for each graphic prior to displaying the graphic.
+This makes for a faster load and also keeps the page layout from sizing and resizing itself in an annoying fashion as the viewer waits for it to display.
+Graphics file formats
+There are two choices of Web graphics file formats in popular use, *.jpg (Joint Photographic Experts Group) and *.gif (Graphics Interchange Format).
+There will hopefully be more formats to use in the future (like the much-anticipated Portable Network Graphics [PNG] format and Scalable Vector Graphics [SVG]
+Things to remember about both file formats: Either file format works for image maps (graphics with clickable areas).
+Note: There is an excellent NCSA tutorial for making image maps at hoohoo.ncsa.uiuc.edu/docs/tutorials/imagemapping.html.
+Both formats compress your image and lose data that can't be recovered.
+To avoid problems with this limitation, keep your master graphic in *.PSD format (if you've used Photoshop with multiple layers) or in *.TIF format (if the graphic is all on one layer).
+This way you always have a full-resolution master to go back to when you need to make corrections or revisions.
+GIF file format
+You should use the GIF format for most of your Web graphics.
+Use the GIF format for: * Simple illustrations, logos, diagrams and charts * Graphic elements, like arrows and bars * Images that need a transparent background (called the GIF89a format.
+In Photoshop, you will need the GIF89a plug-in to create these) * Animated images (called the GIF89 format)
+Things to remember about GIFs: A GIF file contains only 256 colors (also called "8-bit" or "indexed" color).
+You really have only 216 colors (also called "Web safe" or "browser safe" colors) if you are building for both Mac and PC browsers with old 8-bit video cards (see "browser friendly" palette info at www.lynda.com/hex.html).
+However, since such cards have been obsolete for 5 years now, it is not as important as it once was to stick to this palette.
+The GIF file format also allows one of the 256 colors to be transparent in what's called the GIF89a format.
+A transparent channel allows you to create Web graphics that can be used on a colored background on a Web page.
+Note: To create these graphics, make the background layer in Photoshop approximately the same color as your Web background, so when you make the background transparent, the image will be anti-aliased to the right color.
+(We've all seen graphics with fuzzy halos on Web pages, and that's because the graphic artist who created them didn't realize this, or else the HTML coder changed the background color on the Web site without asking for a new graphic anti-aliased to the new color.)
+Images with lots of tiny detail (like the DHS logo) may need to be saved at 300 dpi or greater, but try to restrict most of your GIF images to 72 dpi to save on file size.
+After all, most monitors only display at approximately that resolution, so your viewer won't be missing much.
+Tip: Use the "interlace" option when saving GIFs in Photoshop.
+That way the image will begin building on the Web page and slowly evolve, instead of showing a "loading graphic" symbol until the image is downloaded.
+JPEG file format
+Use the JPEG file format for: * Photos, either black-and-white or color * Images for the Web that have lots of detail * Images that don't work well as GIFs, like images with many colors or gradiants
+Things to remember about JPGs: JPEGs, named after the committee that invented it, was designed for compressing full-color or gray-scale images, mainly photographic.
+Unlike GIFs, which are limited to 256 colors, JPEGs can contain millions of colors.
+Because you can select from 12 degrees of compression, you can moderate the file size and control degree of detail you are willing to lose.
+Try to restrict JPG images to 72 dpi; in most cases, it will be sufficient.
+Note you can't make transparent JPGs; if you need a transparent graphic, you will have to make it a GIF.
+(More about JPEGS can be found at www.faqs.org/faqs/jpeg-faq/)
+PNG 
+PNG stands for "Portable Network Graphic."
+PNG is a file format for raster images, like GIF and JPG, but the compression is "lossless" instead of "lossy"; in other words, no data is lost when the graphic is saved as a PNG.
+It also can contain much more than 256 colors (8-bit indexed color), unlike GIF.
+It supports thousands of grays (16-bit grayscale) and millions of colors (24- and 36-bit truecolor).
+PNG came about around a number of years ago when it looked like CompuServe was going to charge for the use of its proprietary GIF format.
+Programmers got busy with an alternative format for GIFs, and improved it both in compression capabilities and number of colors.
+PNG was approved by the WWW Consortium (www.w3c.org) in 1996, but hasn't had widespread graphics application support or browser support yet (for example, Netscape 7.0 and lower don't support it).
+PNG can also substitute nicely for TIF format as well.
+It handles indexed-color, grayscale, and truecolor images equally well, and allows transparent images.
+It doesn't offer animated images or photos yet, so it isn't ready to replace animated GIFs or JPGs completely.
+PNG has competition, however, Seeing how unpopular it's decision to charge royalties for the GIF format was with users, CompuServe retracted its move in that direction.
+Instead, it started developing a new compressed graphics format, called GIF24.
+GIF24 was supposed to be a public domain format that can support 24-bit images (unlike the current 8-bit limit on GIFs).
+As of this writing, however, it looks like CompuServe is going to support the PNG file format instead (source: WWW Consortium PNG Web site at www.w3.org/Graphics/PNG/CS-950214.html).
+SVG stands for "Scalable Vector Graphic."
+SVG is an XML-based graphics language from W3C specifications.
+SVGs are vector images that scale well in a variety of displays, from desktop monitors to PDAs to wireless phones.
+SVG is text-based, so it is accessible to screen readers.
+It was developed collaboratively (Adobe [which has a downloadable SVG viewer] and Sun, among others).
+Optimizing graphics references * Boutell.com www.boutell.com * Common Internet File Formats (archival) www.matisse.net/files/formats.html * Internet FAQ Consortium www.faqs.org * Lynda.com www.lynda.com * World Wide Web Consortium (W3C) www.w3c.org _________________________________________________________________

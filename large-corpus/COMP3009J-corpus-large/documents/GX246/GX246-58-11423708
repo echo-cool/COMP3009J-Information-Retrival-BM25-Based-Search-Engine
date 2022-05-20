@@ -1,0 +1,110 @@
+[LINK]-DHS Oregon Department of Human Services Webmasters' handbook DHS home | Web | Webmasters' handbook | Tools 
+(Please contact the Communication Office to contribute to this section):
+Redirects:
+To redirect people from the old DHS site to the new one, put this code in your metadata:
+<
+The number "0; in the code above should be replaced with the number of seconds you decide the user should wait to get to the new page.
+If you want the user to go to the new site immediately, you would use "0; however, if you want the user to have time to read your redirect and find out that he/she should bookmark the new page, 20 seconds or so allows a little more reading and comprehension time.
+You can use a sentence like:
+The Oregon Department of Human Service site has moved.
+Our new home page is at http://www.dhs.state.or.us.
+The page that you have selected is now located at http://www.dhs.state.or.us/xxxx. (xxxx would be where you would complete the URL to get the user to your new page) You may click on this link to go there now, or be automatically redirected to our new page in 20 seconds.
+We suggest you bookmark the new page.
+This redirect will expire December 31, 2003.
+Today's date:
+<
+Note: be aware that later versions of Netscape (such as version 7.01) do not read JavaScript correctly.
+You may end up with the wrong date on all pages using this code.
+It might be advisable to use this script sparingly if at all.
+[star_pur.gif] See also HTML tutorial links
+Back to top
+Image libraries
+Graphics for the Web site are available from the following download pages: * DHS logos * Navigation icons (for the navigation table) * Headers (for the top of page) * Graphic elements (arrows, bullets, dividers, bars, etc.)
+Back to top
+Metadata sample
+Here's a sample of the minimum metadata you should have on each page to allow people using our State Library search engine, FindOR, locate your material:
+<
+Please note, in order to allow the state's government locator feature to find your page, you should use the metadata specifications provided by the State Library on their FindOR site, especially noting their subject tree.
+The State Library also offers metatag training (email FindOR trainer Jey Wann.
+GroupWise users: jey.a.wenn@state.or.us).
+A word on dates: Be careful with the content format of the date related tags.
+Dates are expressed as YYYY/MM/DD.
+Examples:
+<
+Note: Unless you have the dates in YYYY/MM/DD format, a user using the correct date format to search for a file in FindOR won't find your document.
+Back to top
+Optimizing graphics for the Web
+When creating images for the Web, keep file size in mind.
+Large graphic files take a long time for users with the minimum 28-baud modems to download.
+Waiting too long for pages to load can make users frustrated with the site before they've had a chance to really explore it.
+To avoid this, produce illustrations and photos with the minimum resolution, size and color depth necessary.
+You can do this manually, but programs like ImageReady (bundled with Photoshop) can be used to automate the process of minimizing your graphic file sizes.
+Web page file size limit
+Try to keep your Web page no larger than 64K, including all graphics.
+This way, viewers with older modems can see your pages and get to your information without waiting around too long for pages to load.
+64K may seem like an impracticably small size, but there are workarounds if you have pages that really need lots of graphics.
+For example, if you have large detailed graphic such as maps, rather than slowing down the loading of your entire page, you could show tiny snapshot of the maps with a link to see each one in a larger size on a separate page.
+This way, the user has a choice whether or not to click for a more detailed view, and will probably be willing to wait if it's exactly the information he or she needs.
+Another way to make a graphic load faster is to specify the height and width in the HTML code (example: 
+By specifying the height and width of the graphic, the page will load with the proper amount of space "reserved" for each graphic prior to displaying the graphic.
+This makes for a faster load and also keeps the page layout from sizing and resizing itself in an annoying fashion as the viewer waits for it to display.
+Back to top
+Graphics file formats
+There are two choices of Web graphics file formats in popular use, *.jpg (Joint Photographic Experts Group) and *.gif (Graphics Interchange Format).
+There will hopefully be more formats to use in the future (like the much-anticipated Portable Network Graphics [PNG] format and Scalable Vector Graphics [SVG]
+Things to remember about both file formats: Either file format works for image maps (graphics with clickable areas).
+Note: There is an excellent NCSA tutorial for making image maps.
+Both formats compress your image and lose data that can't be recovered.
+To avoid problems with this limitation, keep your master graphic in *.PSD format (if you've used Photoshop with multiple layers) or in *.TIF format (if the graphic is all on one layer).
+This way you always have a full-resolution master to go back to when you need to make corrections or revisions.
+Back to top
+GIF file format
+You should use the GIF format for most of your Web graphics.
+Use the GIF format for: * Simple illustrations, logos, diagrams and charts * Graphic elements, like arrows and bars * Images that need a transparent background (called the GIF89a format.
+In Photoshop, you will need the GIF89a plug-in to create these) * Animated images (called the GIF89 format)
+Things to remember about GIFs: A GIF file contains only 256 colors (also called "8-bit" or "indexed" color).
+You really have only 216 colors (also called "Web safe" or "browser safe" colors) if you are building for both Mac and PC browsers with old 8-bit video cards (see "browser friendly" palette).
+However, since such cards have been obsolete for 5 years now, it is not as important as it once was to stick to this palette.
+The GIF file format also allows one of the 256 colors to be transparent in what's called the GIF89a format.
+A transparent channel allows you to create Web graphics that can be used on a colored background on a Web page.
+Note: To create these graphics, make the background layer in Photoshop approximately the same color as your Web background, so when you make the background transparent, the image will be anti-aliased to the right color.
+(We've all seen graphics with fuzzy halos on Web pages, and that's because the graphic artist who created them didn't realize this, or else the HTML coder changed the background color on the Web site without asking for a new graphic anti-aliased to the new color.)
+Images with lots of tiny detail (like the DHS logo) may need to be saved at 300 dpi or greater, but try to restrict most of your GIF images to 72 dpi to save on file size.
+After all, most monitors only display at approximately that resolution, so your viewer won't be missing much.
+Tip: Use the "interlace" option when saving GIFs in Photoshop.
+That way the image will begin building on the Web page and slowly evolve, instead of showing a "loading graphic" symbol until the image is downloaded.
+Back to top
+JPEG file format
+Use the JPEG file format for: * Photos, either black-and-white or color * Images for the Web that have lots of detail * Images that don't work well as GIFs, like images with many colors or gradiants
+Things to remember about JPGs: JPEGs, named after the committee that invented it, was designed for compressing full-color or gray-scale images, mainly photographic.
+Unlike GIFs, which are limited to 256 colors, JPEGs can contain millions of colors.
+Because you can select from 12 degrees of compression, you can moderate the file size and control degree of detail you are willing to lose.
+Try to restrict JPG images to 72 dpi; in most cases, it will be sufficient.
+Note you can't make transparent JPGs; if you need a transparent graphic, you will have to make it a GIF.
+(More about JPEGS.)
+Back to top
+PNG: Web graphic file format of the future
+PNG stands for "Portable Network Graphic."
+PNG is a file format for raster images, like GIF and JPG, but the compression is "lossless" instead of "lossy"; in other words, no data is lost when the graphic is saved as a PNG.
+It also can contain much more than 256 colors (8-bit indexed color), unlike GIF.
+It supports thousands of grays (16-bit grayscale) and millions of colors (24- and 36-bit truecolor).
+PNG came about around a number of years ago when it looked like CompuServe was going to charge for the use of its proprietary GIF format.
+Programmers got busy with an alternative format for GIFs, and improved it both in compression capabilities and number of colors.
+PNG was approved by the WWW Consortium in 1996, but hasn't had widespread graphics application support or browser support yet (for example, Netscape 7.0 and lower don't support it).
+PNG can also substitute nicely for TIF format as well.
+It handles indexed-color, grayscale, and truecolor images equally well, and allows transparent images.
+It doesn't offer animated images or photos yet, so it isn't ready to replace animated GIFs or JPGs completely.
+PNG has competition, however, Seeing how unpopular it's decision to charge royalties for the GIF format was with users, CompuServe retracted its move in that direction.
+Instead, it started developing a new compressed graphics format, called GIF24.
+GIF24 was supposed to be a public domain format that can support 24-bit images (unlike the current 8-bit limit on GIFs).
+As of this writing, however, it looks like CompuServe is going to support the PNG file format instead (source: WWW Consortium PNG Web site).
+SVG stands for "Scalable Vector Graphic."
+SVG is an XML-based graphics language from W3C specifications.
+SVGs are vector images that scale well in a variety of displays, from desktop monitors to PDAs to wireless phones
+SVG is text-based, so it is accessible to screen readers.
+It was developed collaboratively (Adobe [which has a downloadable SVG viewer] and Sun, among others).
+Back to top Optimizing graphics references * Boutell.com www.boutell.com * Common Internet File Formats (archival) www.matisse.net/files/formats.html * Internet FAQ Consortium www.faqs.org * Lynda.com www.lynda.com * World Wide Web Consortium (W3C) www.w3c.org Go back: see previous section, Templates Text-only print version (Text-only version of entire Webmasters' handbook) Back to top If you have questions about DHS, problems getting DHS services, or comments about this site, email us: DHS Information.
+DHS Groupwise users, address email to dhs.info@state.or.us.
+(About this site) (Disclaimer)
+Icons
+Oregon Department of Human Services Communication Office 500 Summer St. NE E25, Salem, OR 97301-1098 Phone: (503) 945-5944 Fax: (503) 378-2897 TTY: (503) 947-5330

@@ -1,0 +1,898 @@
+DATAPLOT Reference Files CHAPTER 14 DATAPLOT Reference Files Overview DATAPLOT comes with a large number of reference files.
+If the location of these files are defined properly, then tyou can access these files using the LIST, READ, and CALL commands directly without specifying the directory name.
+For these commands (LIST, READ, CALL), DATAPLOT first tries to locate the file in the user's directory.
+If unsuccessful, DATAPLOT then searches the directory where the reference files are stored.
+The reference files are ASCII text files that can be copied to your own directory and modified using any standard text editor.
+On most Unix systems, the directory will be /usr/local/lib/dataplot.
+For IBM/PC's the default directory is C:\DATAPLOT.
+For systems that do not have a default, contact the DATAPLOT installer at your site for the specific location of these files.
+Although the file names were chosen to be valid on a large number of systems (8 character file names with a 3 character extension separated by a period), the names may vary on some systems.
+Specifically: Â·A few systems may not allow file name extensions (e.g.,the CDC NOS/VE operating system).
+In this case, the extension is probably coded as an underscore.
+For example, the file BERGER1.DAT is coded as BERGER1_DAT.
+If your site uses a non-standard extension, then that extension must be used on the various DATAPLOT commands.
+For example, READ BERGER1_DAT.
+Y X. Â·Unix systems are case sensitive.
+DATAPLOT will find the reference file regardless of the case when using the LIST, READ, and CALL commands.
+However, if you want to copy a reference files for your own use, you need to check which case is used on your system.
+The default on Unix is that support files (e.g. the on-line help files) are in lower case while the sample data and macro files are in upper case.
+The following types of files are provided: Â·The DATAPLOT support files.
+These include the on-line help files, the on-line news file, the on-line command dictionary, and various other files.
+On most systems, the support files have a file name extension of ".TEX" or ".tex."
+Â·Sample data files are provided.
+On most systems these files have a ".DAT" or ".dat" file name extension.
+Â·There are various macro, menu macro, and program files.
+On most systems, these files have an extension of ".DP" or ".dp." Macro files and program files demonstrate the capabilities of DATAPLOT .
+Program files analyze a specific data set while macro files are intended to be more general (i.e., easy to adapt to your own data sets).
+Menu macro files demonstrate how to create user defined menus.
+Â·Reference files contain various types of reference information.
+On most systems, these files have a ".TEX" or ".tex" file name extension.
+Â·Map files contain the coordinates for several sample maps.
+On most systems, these files have a ".DAT" or a ".dat" file name extension.
+Â·Fractal art files contain the data to generate sample fractals.
+On most systems, these files have a ".DAT" or ".dat" file name extension.
+Â·Experiment design files contain commonly used experimental designs.
+On most systems, these files have a ".DAT" or ".dat" file name extension.
+Additional sample data and macro files are frequently added, so the list in this chapter is not complete.
+DATAPLOT Reference Manual
+September 14, 1996
+14-1
+DATAPLOT Reference Files
+Support files DATAPLOT uses the following support files (these may have lower case names on some systems): DPHE1F.TEX DPHE2F.TEX DPHE3F.TEX DPHE4F.TEX DPHE5F.TEX DPHE6F.TEX DPHE7F.TEX DPNEWF.TEX DPDIRF.TEX DPDICF.TEX DPSYSF.TEX DPLOGF.TEX DPBUGF.TEX DPMAIF.TEX DPQUEF.TEX DPMESF.TEX COMMANDS DATASETS DESIGNS Help file 1 (generic subjects).
+Help file 2 (commands starting with the letters A thru C).
+Help file 3 (commands starting with the letters D thru K).
+Help file 4 (commands starting with the letters L thru O).
+Help file 5 (commands starting with the letters P thru S).
+Help file 6 (commands starting with the letters T thru Z).
+Help file 7 (defines aliases for various commands).
+News file (contains a description of recent additions to DATAPLOT).
+Directory file (one line summary of all DATAPLOT commands grouped by command category).
+Dictionary file (one line summary of all DATAPLOT commands grouped alphabetically).
+Global login macro file.
+User login macro file.
+File containing a list of known bugs.
+File used by the MAIL command.
+File used by the QUERY command.
+File used by the DATAPLOT MESSAGE command.
+File containing one line descriptions of DATAPLOT commands (subset of DPDICF.TEX file).
+File containing a list of on-line data files (subset of DPDIRF.TEX).
+File containing a list of on-line design of experiment files (subset of DPDIRF.TEX).
+DISTRIBU File containing descriptions of the distributions available in DATAPLOT.
+FUNCTION File containing one line descriptions of DATAPLOT functions (subset of DPDIRF.TEX).
+MACROS File containing a list of on-line macro files.
+PROGRAMS File containing a list of on-line program files.
+SYNTAX File containing sample syntax for DATAPLOT commands.
+DPSNAPSH.PS A Postscript format file that contains a "quick reference" for the most commonly used DATAPLOT commands.
+We recommend printing copies of the DPSNAPSH.PS file, the news file (DPNEWF.TEX) and the directory file (DPDIRF.TEX) as part of the DATAPLOT documentation.
+The news file contains commands that are not yet available in the hard-copy documentation.
+The help files are essentially on-line versions of this Reference Manual (Volumes I and II), so there is little reason to print them.
+The system login file allows a site to define local defaults.
+This file is generally maintained by the local site installer.
+In addition, you can create a login file to define whatever defaults you prefer.
+Creating a local login file is optional.
+The DATAPLOT MAIL and QUERY commands are obsolete since most operating systems provide far more sophisticated mail commands than DATAPLOT provides.
+Files DPME1F.TEX through DPM20F.TEX are used by the MENU command which, as of this printing, is still under development.
+Most of these files are currently incomplete.
+14-2
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Data files The following are sample data and reference files (many generated by NIST scientists or DATAPLOT users).
+This can be useful for experimenting with DATAPLOT.
+Most of these files require a SKIP command in order to pass over comment lines.
+You can do a LIST 
+----------Core Data Sets ---------------------------Univariate LEW.DAT MAVRO.DAT SUNSPOT2.DAT SINSIN.DAT Regression BERGER1.DAT PONTIUS.DAT SPIEGEL.DAT Multi-factor BATTADD2.DAT DRAFT69B.DAT SHEESLE2.DAT SPLETT2.DAT DEX: Design of Expriments BOXSPRIN.DAT SPLETT3.DAT SPLETT4.DAT Multivariate AUTO83.DAT AUTO83B.DAT IRIS.DAT Steel-concrete beam deflection.
+Filter transmittance.
+Monthly sunspot.
+Multiple sine curves.
+Alaska pipeline radiographic calibration.
+Load cell calibration.
+Nuclear tank calibration.
+Battery additive.
+1969 draft lottery data rankings.
+Defective lightbulbs (mean data).
+Charpy V-NIST notch testing.
+2**3 defective springs.
+2**3 eddy current.
+2**4 eddy current.
+EPA auto miles per gallon.
+EPA auto miles per gallon.
+Classic Fisher iris data.
+Quality and Statistical Process Control (SPC) CROARK3.DAT NIST SEM line width SRM. UGIANSKY.DAT Interlaboratory stress correlation.
+DATAPLOT Reference Manual
+September 14, 1996
+14-3
+DATAPLOT Reference Files
+---------------Univariate----------------------------------NIST datasets DZIUBA1.DAT FUNEL5A.DAT LEW.DAT KEYWEST.DAT MARSHAK.DAT MAVRO.DAT MORALES.DAT MORALES2.DAT REHM.DAT SIMIU.DAT SOULEN0.DAT SOULEN.DAT VANGEL1.DAT WASHDC.DAT ZARR13.DAT ZARR14.DAT ZARR15.DAT Standard resistor.
+Funnel data.
+Steel-concrete beam deflection.
+Maximum wind speeds for Key West, Florida.
+Nuclear thermometry cryothermometry experiment.
+Filter transmittance.
+Mass spectrometry exa-fluor.
+Mass spectrometry exa-fluor.
+Biomedical air flow.
+Thunderstorm wind velocity.
+Josephson junction cryothermometry.
+Josephson junction cryothermometry.
+Tensile strength.
+Maximum wind speeds for Washington, DC.
+Heat flow meter apparatus calibration.
+Heat flow meter apparatus calibration.
+Heat flow meter apparatus calibration.
+Mary Natrella Handbook datasets NATR21.DAT Washer (2-1).
+NATR26.DAT Rocket (2-6).
+SEMATECH datasets SPAGON1.DAT SPAGON2.DAT Miscellaneous datasets CLEAR.DAT FLICKER.DAT GEAR.DAT LIN.DAT LOTTERY3.DAT LOTTERY4.DAT MICHELSO.DAT RANDN.DAT RANDU.DAT RANDWALK.DAT SEMATECH semi-conductor thickness.
+SEMATECH semi-conductor thickness.
+Component clearance inspection data.
+Flicker noise.
+Gear diameters (Ishikawa).
+Polonium 209 SRN concentrations.
+Maryland "Pick 3" lottery numbers.
+Maryland "Pick 4" lottery numbers.
+Michekson's 1879 determination of the speed of light.
+Normal random numbers.
+Uniform random numbers.
+Random walk.
+14-4
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+---------------Time Series----------------------------------NIST datasets BAKER.DAT DUTTON.DAT DZIUBA1.DAT FUNEL5A.DAT HABER1.DAT HAYES1.DAT KEYWEST.DAT LEW.DAT LUTHER.DAT MARSHAK.DAT MAVRO.DAT NBSPOW1.DAT NBSPOW2.DAT NBSPOW3.DAT NEGIZ3.DAT NEGIZ4.DAT REHM.DAT SIMIU.DAT SOULEN0.DAT SOULEN.DAT WASHDC.DAT Miscellaneous datasets CLEAR.DAT CONSUMPR.DAT FLICKER.DAT GEAR.DAT GNP.DAT GNP2.DAT LIN.DAT LOTTERY3.DAT LOTTERY4.DAT MICHELSO.DAT OIL.DAT RANDN.DAT RANDU.DAT RANDWALK.DAT SIN1.DAT SIN2.DAT SIN3.DAT SIN4.DAT SUNSPOT.DAT SUNSPOT.DAT Box-Jenkins datasets BOXJENK1.DAT BOXJENK2.DAT FUNEL5A.DAT Force calibration.
+Dutton coherency plot data.
+Standard resistor.
+Funnel data.
+Density of 2-admissable numbers.
+Fire research smoke obscuration.
+Maximum wind speeds for Key West, Florida.
+Steel-concrete beam deflection.
+Torsion pendulum experiment for G. Nuclear thermometry cryothermometry experiment.
+Filter transmittance.
+NIST metrology data (part 1).
+NIST metrology data (part 2).
+NIST metrology data (part 3).
+Aerosol particle size dynamic modeling.
+Aerosol particle size dynamic modeling.
+Biomedical air flow.
+Thunderstorm wind velocity.
+Josephson junction cryothermometry.
+Josephson junction cryothermometry.
+Maximum wind speeds for Washington, DC.
+Component clearance inspection data.
+Consumer price index (by year relative to 1974).
+Flicker noise.
+Gear diameters (Ishikawa).
+Gross National Product.
+Gross National Product.
+Polonium 209 SRN concentrations.
+Maryland "Pick 3" lottery numbers.
+Maryland "Pick 4" lottery numbers.
+Michekson's 1879 determination of the speed of light.
+Oil depth analysis.
+Normal random numbers.
+Uniform random numbers.
+Random walk.
+Sinusodial data (frequency = 0.1).
+Sinusodial data (frequency = 0.2).
+Sinusodial data (frequency = 0.3).
+Sinusodial data (frequency = 0.4).
+Monthly sunspot.
+Yearly sunspot.
+Box and Jenkins data.
+Box and Jenkins data.
+Funnel data.
+DATAPLOT Reference Manual
+September 14, 1996
+14-5
+DATAPLOT Reference Files
+NOAA datasets ASCO2.DAT ASF11.DAT ASF12.DAT ASN2O.DAT ELKINS11.DAT ELNINO.DAT MLCO2.DAT MLCO2MON.DAT MLF11.DAT MLF12.DAT MLN2O.DAT NAF11.DAT NWF11.DAT NWF12.DAT NWN2O.DAT PBCO2.DAT PBF11.DAT PBF12.DAT PBN2O.DAT QUASIBIE.DAT SPCO2.DAT SPF11.DAT SPF12.DAT SPN2O.DAT Pandit DDS datasets DDS1.DAT DDS2.DAT DDS3.DAT DDS4.DAT DDS5.DAT DDS6.DAT DDS7.DAT DDS8.DAT DDS9.DAT DDS10.DAT DDS11.DAT DDS12.DAT DDS13.DAT DDS14.DAT DDS15.DAT DDS16.DAT DDS17.DAT DDS18.DAT DDS19.DAT DDS20.DAT DDS21.DAT
+American Samoa monthly CO2 (1973-86).
+American Samoa monthly refrigerant-11 (1977-86).
+American Samoa monthly refrigerant-12 (1977-86).
+American Samoa monthly N2O (1977-86).
+Elkins North Atlantic refrigerant-11.
+El Nino/Southern Oscillation.
+Mauna Loa monthly CO2 (1958-87).
+Mauna Loa monthly CO2 (1974-86).
+Mauna Loa mon refrigerant-11 (1977-86).
+Mauna Loa mon refrigerant-12 (1977-86).
+Mauna Loa monthly N2O (1977-86).
+Elkins North Atlantic refrigerant-11.
+Niwot Ridge monthly refrigerant-11 (1977-86).
+Niwot Ridge monthly refrigerant-12 (1977-86).
+Niwot Ridge monthly N2O (1977-86).
+Point Barrow monthly CO2 (1973-86).
+Point Barrow monthly refrigerant-11 (1977-86).
+Point Barrow monthly refrigerant-12 (1977-86) .
+Point Barrow monthly N2O (1977-86).
+Quasi-biennial index.
+South Pole monthly CO2 (1973-86).
+South Pole monthly refrigerant-11 (1977-86).
+South Pole monthly refrigerant-12 (1977-86).
+South Pole monthly N2O (1977-86).
+Papermaking gate openings.
+Yearly sunspot numbers.
+IBM stock prices.
+Mechanical vibratory system displacement.
+Grinding wheel profile.
+Machine part diameter 1.
+Machine part diameter 2.
+US treasury securities.
+Money market rates.
+Hospital in-patient counts US consumer price index.
+US wholesale price index.
+Airline passenger counts.
+Nuclear plant crack lengths Wood surface height.
+Papermaking machine I/O.
+Chemical concentration.
+US gross national product.
+US durables expenditures.
+Papermaking machine I/O.
+Papermaking machine I/O.
+14-6
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Image analysis datasets BENNETT.DAT BRAIN.DAT CUBE.DAT EHRSTEIN.DAT WOOLLEY.DAT Bivariate datasets CHOI.DAT CHOI2.DAT SINSIN.DAT
+Fracture surface roughness.
+Brain wave analysis.
+Vertices of a cube.
+Resistivity of semiconductor wafers.
+Optical disk errors.
+Fire residue emission trigger (N=4000).
+Fire residue emission trigger (N=1000).
+Multiple sine curves.
+DATAPLOT Reference Manual
+September 14, 1996
+14-7
+DATAPLOT Reference Files
+---------------Regression------------------------------------1-variable and polynomial BERGER1.DAT Alaska pipeline radiographic calibration.
+BOXRATS.DAT Rat growth rate versus supplement amount.
+BOXSPRAY.DAT Aerosol spray dispersion versus age.
+BOXWELD.DAT Intertial weld breaking strength versus velocity.
+FREQPRIM.DAT Frequency of prime numbers.
+GRAYI326.DAT Blood pressure.
+MICHELSO.DAT Michekson's 1879 determination of the speed of light.
+MORALES.DAT SO2 isotope analysis.
+MORALES2.DAT SO2 isotope analysis.
+NATR511.DAT Young's modulus.
+NATR522.DAT Young's modulus (with replications).
+NATR527.DAT Colorimetry.
+NATR533.DAT Tire wear.
+NATR540.DAT Tire wear.
+NATR65.DAT 3-variable.
+NATR627.DAT Cubic.
+NORRIS6.DAT Ozone photometry.
+PONTIUS.DAT Load cell calibration.
+PRIMESM.DAT Mersenne prime numbers.
+SNAIL.DAT Snail spiral data.
+SPIEGEL.DAT Nuclear tank calibration.
+WAMPLER1.DAT Polynomial fitting test data.
+1-variable and non-linear BENNETT5.DAT Superconductivity magnetization.
+BOXBOD.DAT Oxygen demand versus incubation time.
+CHWIRUT1.DAT Ultrasonic reference block calibration.
+CHWIRUT2.DAT Ultrasonic reference block calibration.
+ECKERLE4.DAT Circular interference transmissions.
+GRAYI617.DAT Visual response proportion.
+HABER1.DAT Density of 2-admissable numbers.
+HAHN1.DAT Thermal expansion of copper.
+KIRBY2.DAT Electron microscope line width standard.
+KIM.DAT Electron mobility analysis.
+LEW3.DAT Concrete tensile strength.
+MISRA1.DAT Dental research monomolecular absorbtion study.
+NELSON.DAT Dialetric breakdown strength of insulation.
+ROSZMAN1.DAT Quantum defects for sulfur 1 atom.
+SWANSON1.DAT Ozone spectroscopy.
+THURBER.DAT Semiconductor mobility modelling.
+Multi-variable BOXCHEM2.DAT Chemical impurity, 2 independent variables.
+BOXCLEAN.DAT Acid effects on cleanser stability.
+BOXYIELD.DAT Chemical yield (function of time, temperature).
+BOXYIEL2.DAT Chemical yield (function of time, temperature).
+HALD647.DAT Cement hardening (Regression, 4 variables).
+LONGLEY.DAT Longley labor statistic regression data.
+NELSON.DAT Dialetric breakdown strength of insulation.
+USADEBT.DAT USA national debt (1947 to 1993).
+WAMPLER2.DAT Multilinear fitting test data.
+14-8 September 14, 1996 DATAPLOT Reference Manual
+DATAPLOT Reference Files
+---------------Quality and Statistical Process Control (SPC)------------Quality/SPC data files QUAL7OLD.TEX QUALCOCH.TEX QUALEWMA.TEX QUALPCI.TEX QUALTAG.TEX Control Charts CCC.DAT CCP.DAT CCPN.DAT CCU.DAT CCXBAR.DAT CLEAR.DAT CROARKIN.DAT CROARK2.DAT CROARK3.DAT DRAFT69B.DAT GEAR.DAT The "7 Old Tools" for quality control.
+Control charts.
+EWMA control charts Process capability index.
+The 2 primary Taguchi reference books for quality.
+Surface defects per square yard (C Control Charts).
+Defective motors (P Control Charts).
+Defective mirrors (P and PN Control Charts).
+Cracks in plastic wire after refrigeration and flexing (U Control Chart).
+Silicon wafer thickness (Mean, Range, and S control charts).
+Component clearance inspection data.
+Mass calibration.
+NIST magnification standard.
+NIST SEM line width SRM. 1969 draft lottery data rankings.
+Gear diameters (Ishikawa).
+DATAPLOT Reference Manual
+September 14, 1996
+14-9
+DATAPLOT Reference Files
+----------1-factor (including the "2-sample" problem)------------NIST datasets BATTADD2.DAT BATTADD3.DAT BATTERY1.DAT CHOLEST1.DAT DORKO4.DAT FUNNEL5B.DAT FUNNEL5C.DAT SPLETT2.DAT VANGEL2.DAT WATTERS.DAT Miscellaneous datasets LOTTERY3.DAT LOTTERY4.DAT MICHELSO.DAT PENTAGON.DAT USADEBT.DAT USADEFIC.DAT Battery additive (2-level).
+Battery additive (3-level).
+Battery comparison.
+NIST cholesterol SRM. NIST GASIE SO4 concentration.
+2-sample funnel data.
+2-sample funnel data.
+Charpy testing (4-levels).
+Tensile strength.
+NIST Si and Cr SRM.
+Maryland "Pick 3" lottery numbers.
+Maryland "Pick 4" lottery numbers.
+Michekson's 1879 determination of the speed of light.
+Pentagon expenditures by year.
+US national debt (1947-1993).
+US national deficit (1989 to 1988).
+Mary Natrella Handbook datasets NATR323.DAT Fusion (3-23).
+NATR326.DAT Concrete (3-26).
+NATR332.DAT Batteries (3-32).
+NATR334.DAT Steel (3-34).
+NATR338.DAT Dextrons (3-38).
+NATR341.DAT Cement (3-41).
+NATR41.DAT Batteries (4-1).
+NATR45.DAT Tubes (4-5).
+NATR48.DAT Dive bombs (4-8).
+SEMATECH datasets SPAGON3.DAT SPAGON4.DAT SEMATECH semi-conductor thickness.
+SEMATECH semi-conductor thickness.
+14-10
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+----------Multi-factor-----------------------------2-factor CLARK0.DAT FREY.DAT OLYMPICS.DAT PERIODIC.DAT WRIGHT11.DAT 3-factor CHALLENG.DAT CURVEBAL.DAT CURVEBA2.DAT EDA1.DAT HAMAKER.DAT MANDEL.DAT 4-factor ELECT92.DAT RIPKEN.DAT SHEESLEY.DAT SHEESLE2.DAT 5+-factor AUTO83.DAT Electrical connectors.
+Frey drug fatality analysis (ANOVA).
+Scoring for women's figure skating in 1994 Olympics.
+Chemistry periodic table.
+Wright brothers original flight data.
+NASA Challenger disaster data.
+Curveball data (partial data set) (ANOVA).
+Curveball data (full data set) (ANOVA).
+Compare 2 detectors.
+Drill speed.
+Specific volume of rubber.
+1992 presidential election (by state).
+Cal Ripken batting average.
+Light bulb lead wire weld process (raw data).
+Defective lightbulbs (mean data).
+EPA automobile miles per gallon.
+DATAPLOT Reference Manual
+September 14, 1996
+14-11
+DATAPLOT Reference Files
+----------Reliability-----------------------NIST datasets FULLER2.DAT VANGEL2.DAT Miscellaneous datasets ABERNE17.DAT ABERNE35.DAT ABERNE43.DAT CASTILL6.DAT CASTILL7.DAT CASTILL8.DAT CLEAR.DAT GEAR.DAT HAHN.DAT RANDN.DAT RANDU.DAT Airplane glass failure times.
+Strength at failure.
+Compressor rivet failure.
+Fatigue failure time.
+Bearing cage failure time.
+Chain link strength.
+Electrical insulation lifetime.
+Wire cycles-to-failure.
+Component clearance inspection data.
+Gear diameters (Ishikawa).
+Reliability of locomotive gears.
+Normal random numbers.
+Uniform random numbers.
+----------Extreme value analysis-----------------------NIST datasets KEYWEST.DAT SIMIU.DAT WASHDC.DAT Castillo datasets CASTILL1.DAT CASTILL2.DAT CASTILL3.DAT CASTILL4.DAT CASTILL5.DAT CASTILL6.DAT CASTILL7.DAT CASTILL8.DAT CASTILL9.DAT CASTILL10.DAT CASTILL11.DAT CASTILL12.DAT CASTILL13.DAT CASTILL14.DAT Miscellaneous datasets CLEAR.DAT GEAR.DAT RANDN.DAT RANDU.DAT Maximum wind speeds for Key West, Florida.
+Thunderstorm wind velocity.
+Maximum wind speeds for Washington, DC.
+Maximum yearly wind speeds.
+Maximum yearly river discharge.
+Maximum yearly wave height.
+Between phone call wait times.
+Chain link strength.
+Chain link strength.
+Electrical insulation lifetime.
+Wire cycles-to-failure.
+Philadelphia yearly precipitation.
+Maximum wave height in Norway.
+Maximum yearly river discharge in Macon.
+Maximum yearly river discharge in Hawk.
+Oldest man's age in Sweden.
+Oldest woman's age in Sweden.
+Component clearance inspection data.
+Gear diameters (Ishikawa).
+Normal random numbers.
+Uniform random numbers.
+14-12
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+----------Miscellaneous categories-----------------------3D-plotting and contouring BENNETT.DAT BRAIN.DAT CUBE.DAT EHRSTEIN.DAT Multivariate AC.DAT AUTO79.DAT AUTO83.DAT AUTO83B.DAT BIOMED3.DAT CURRIE.DAT CURRIE3.DAT CURRIE4.DAT FLURY5.DAT GNP.DAT IRIS.DAT KAUL.DAT KRASNY1.DAT MORALES.DAT MORALES2.DAT NEGIZ3.DAT PALLETT.DAT PLANETS.DAT SMALL14.DAT UGIANSKY.DAT Uncertainty GARBOCZI.DAT Probability RANDN.DAT RANDU.DAT Mathematics FREQPRIM.DAT PRIMESM.DAT Pareto analysis GASTAX86.DAT MURDER86.DAT NBSSOFTW.DAT NBSACTIV.DAT TRAFFIC.DAT Fracture surface roughness.
+Brain wave analysis.
+Vertices of a cube.
+Resistivity of semiconductor wafers.
+2**(6-3) air conditioner performance.
+Automobile characteristics.
+EPA automobile miles per gallon.
+EPA automobile miles per gallon.
+Biomedical (Multivariate).
+Pollution source analysis.
+Atmospheric zinc concentrations.
+Atmospheric chemical concentrations.
+Flury-Riedwyl Swiss bank note data.
+Gross national product.
+Classic Fisher iris data.
+Refrigerant analysis.
+2**5 cigarette flamability study.
+Mass spectrometry exa-fluor.
+Mass spectrometry exa-fluor.
+Aerosol particle size dynamic modeling.
+Voice recognition ATIS SLS test results.
+Solar system planet statistics.
+Atomic modelling.
+Interlaboratory stress correlation.
+Percolation data (error bar plotting).
+Normal random numbers.
+Uniform random numbers.
+Frequency of prime numbers.
+Mersenne prime numbers.
+Gasoline tax (by state).
+1986 murder rates (by state).
+Software used at NIST.
+Statistical computing activities at NIST.
+Automobile traffic fatalities by state.
+DATAPLOT Reference Manual
+September 14, 1996
+14-13
+DATAPLOT Reference Files
+----------Design of experiments (most from Box, Hunter, and Hunter book)--------Comparative design datasets BATTADD3.DAT BOXAUTO.DAT BOXBLOOD.DAT BOXCLOTH.DAT BOXPENIC.DAT BOXPOISO.DAT BOXSHOES.DAT BOXTOMAT.DAT FUNNEL.DAT 2**k full factorial design datasets BOXCAKE.DAT BOXCAKE2.DAT BOXCHEM.DAT BOXPILOT.DAT BOXRADAR.DAT BOXREACT.DAT BOXSOLAR.DAT BOXSPRIN.DAT BOWEN.DAT KRASNY1.DAT NUT.DAT SPLETT3.DAT SPLETT4.DAT STENBAKK.DAT SUPERCON.DAT VECCHIA.DAT WEBER.DAT Battery additive (3 levels).
+Latin square design for automobile emissions.
+Comparitive randomized design for blood coagulation time.
+Greco-Latin square design for cloth data.
+Randomized block design for penicillin yield.
+Randomized block design for poison antidote.
+Randomized block design for boys shoe sole wear.
+Comparitive randomized design for tomato yield.
+Randomized block design for funnel experiment.
+2**5 cake taste.
+2**3 cake taste.
+2**4 chemical yield.
+2**3 pilot plant yield.
+2**3 radar acquisition time.
+2**5 reactor efficiency.
+2**4 solar collection efficiency.
+2**3 defective springs.
+2**3 dental polysac adhesion.
+2**5 cigarette flamability.
+2**3 nut strength.
+2**3 eddy current.
+2**4 eddy current.
+2**10 DAC converter.
+2**3 superconductivity temperature.
+2**4 superconducting chip optimization.
+2**5 hospital energy consumption.
+2**(k-p) fractional factorial design datasets AC.DAT 2**(6-3) air conditioner performance.
+AMRF.DAT 2**(7-4) automobile manufacturing tooling station.
+BOXBIKE2.DAT 2**(7-4) bike speed.
+BOXBIKE3.DAT 2**(7-4) bike speed.
+BOXCLEAN.DAT 2**(4-1) cleanser stability.
+BOXFILT.DAT 2**(7-4) filtration time.
+BOXFILT2.DAT 2**(7-3) filtration time.
+BOXREAC2.DAT 2**(5-1) reactor efficiency.
+BOXSPRI2.DAT 2**(3-1) defective springs.
+BOXSPRI3.DAT 2**(3-1) defective springs.
+ESSEX.DAT 2**(7-4) piston dome porosity.
+QUINLAN.DAT 2**(15-11) speedometer casing.
+VIBRATE.DAT 2**(9-5) vibration of a component.
+Taguchi design datasets BOXCAKE.DAT BOXCAKE2.DAT KENSEI.DAT QUINLAN.DAT 2**5 cake taste.
+2**3 cake taste.
+L18 aerosol spray.
+L16 speedometer casing.
+14-14
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Optimization (response surface) design datasets BOXCLEAN.DAT 2**(4-1) cleanser stability.
+BOXYIELD.DAT 2**3 chemical yield.
+BOXYIEL2.DAT 2**3 chemical yield.
+Regression design datasets BOXBOD.DAT BOXCHEM2.DAT BOXRATS.DAT BOXSPRAY.DAT BOXWELD.DAT Oxygen demand versus incubation time.
+Chemical impurity, 2 independent variables.
+Rat growth rate versus supplement amount.
+Aerosol spray dispersion versus age.
+Intertial weld breaking strength versus velocity.
+DATAPLOT Reference Manual
+September 14, 1996
+14-15
+DATAPLOT Reference Files
+Reference files These files contain various types of reference information.
+AREACODE.TEX United States phone area codes (ordered alphabetic by state).
+AREACOD2.TEX United States phone area codes (ordered numerically).
+AREAS.TEX Area formulae for geometric figures.
+ASCII.TEX ASCII numeric equivalents.
+ATOMS.TEX Relative number of atoms of elements in universe.
+BARKEREX.TEX Index of selected examples from "Quality by Experimental Design" by Barker.
+BINTAILP.TEX Binary tail probabilities.
+BOXHHEX.TEX Index of selected examples from "Statistics for Experimenters" by Box, Hunter, and Hunter.
+CALENDAR.TEX Calendars for the years 1988 and 1989.
+CONSTANT.TEX Mathematical, physical, and engineering constants.
+CONVFACT.TEX Conversion factors between metrics/units.
+DEFAULTS.TEX DATAPLOT default settings.
+DEMING14.TEX Demings's 14 "deadly diseases" (industrial quality).
+DEMING7.TEX Demings's 7 "dreadful diseases" (industrial quality).
+DEXSTAT2.TEX Typical command sequence in using DEXSTAT2.DP.
+ER.TEX File containing control sequence to get out of Tektronix mode for the IBM-PC 386 version of DATAPLOT.
+FEDPAY88.TEX U. S. Federal salary scale for 1988.
+HOT.TEX 10 hottest locations in the United States.
+ISHIKAW4.TEX The 4 usual "M" components in Ishikawa cause and effect diagram.
+JAPANU.TEX Japan's 3 U's to be eliminated in the work area.
+JAPANW.TEX Japan's 5 W's (and 1 H) for component analysis.
+JAPAN6.TEX Japan's 6-point program for quality manufacturing.
+JAPAN3.TEX The 3 modern concepts in Japanese industry.
+JOBS.TEX Fastest growing jobs requiring a college degree.
+KACKER.TEX Kacker's 7 summary points of Taguchi's philosophy.
+LATITUDE.TEX Latitude and longitude of United States cities.
+MORTGAGE.TEX Washington DC 30 year mortgage rates (December/87).
+NEWTOOLS.TEX The "7 New Tools" for quality control.
+NORPPCC.TEX Percent points of the normal probability plot.
+PERIM.TEX Perimeter formulae for geometric figures.
+POSTCODE.TEX United States postal state codes (alphabetically).
+POSTRATE.TEX April 1988 postal rates for various weights.
+POSTRAT2.TEX U. S. postal rates for various years.
+PDF.TEX Probability density functions for distributions.
+PPF.TEX Percent point functions for distributions.
+PRESDENT.TEX U. S. Presidents (ordered by year).
+QUALCOST.TEX Japan's definition and 4 components of "quality cost."
+SPECTRUM.TEX Electromagnetic Spectrum (by frequency).
+SNOWY.TEX 10 snowiest places in the United States.
+TAX1979.TEX 1979 federal income tax rates.
+TAX1987.TEX 1987 federal income tax rates.
+TIMEMANA.TEX 6 techniques for time management.
+VOLUMES.TEX Volume formulae for geometric figures.
+WINDCHIL.TEX Windchill factor curves.
+WORKSTAT.TEX Top 10 workstations in 1986.
+14-16
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Map files These data files contain X and Y coordinates for some sample maps.
+DATAPLOT does not have a specific mapping capability.
+It can draw the borders by simply doing: PRE-SORT OFF PLOT Y X More complicated maps (e.g., counties within a state) can be handled by defining a tag variable (e.g., all values for a given county within a state map will have the same value for the tag variable).
+The REGION BASE POLYGON command (see the REGION BASE command in the Plot Control chapter) can be used to draw solid filled or hatch pattern maps.
+CHINA.DAT NBSPART1.DAT TEXAS.DAT USA.DAT USA3.DAT Map Map Map Map Map coordinates for China.
+of middle of NIST campus.
+coordinates for Texas.
+coordinates for USA (crude resolution). coordinates for USA.
+Fractal art files These files contain data that can be used to generate fractal plots (via the FRACTAL PLOT command).
+FRACBRAN.DAT Fractal data to generate a branch.
+FRACCHRI.DAT Fractal data to generate a Christmas tree.
+FRACCLOU.DAT Fractal data to generate a cloud.
+FRACFERN.DAT Fractal data to generate a fern.
+FRACFRON.DAT Fractal data to generate a frond.
+FRACGALA.DAT Fractal data to generate a galaxy.
+FRACPENT.DAT Fractal data to generate a pentagon.
+FRACSPIR.DAT Fractal data to generate a spiral.
+FRACSQUA.DAT Fractal data to generate a square.
+FRACTRIA.DAT Fractal data to generate a triangle.
+DATAPLOT Reference Manual
+September 14, 1996
+14-17
+DATAPLOT Reference Files
+On-line experiment design files CC2.DAT CC3.DAT GRLATSQ3.DAT GRLATSQ4.DAT LATSQ3.DAT LATSQ4.DAT PLACBURM.DAT PERM9.DAT PERM16.DAT PERM20.DAT PERM30.DAT PERM50.DAT PERM100.DAT PERM200.DAT PERM500.DAT PERM1000.DAT L4.DAT L8.DAT L9.DAT L12.DAT L16.DAT L16B.DAT L18.DAT L25.DAT L27.DAT L32.DAT L32B.DAT L36.DAT L50.DAT L54.DAT L64.DAT L64B.DAT L81.DAT STAR2WC.DAT STAR3WC.DAT TAGINDEX.DAT 2TO2.DAT 2TO3M1.DAT 2TO3.DAT 2TO4M1.DAT 2TO4.DAT 2TO5M2.DAT 2TO5M1.DAT 2TO5.DAT 2TO6M3.DAT
+2-factor central composite design.
+3-factor central composite design.
+3 by 3 Graeco-Latin square design.
+4 by 4 Graeco-Latin square design.
+3 by 3 Latin square design.
+4 by 4 Latin square design.
+Plackett-Burman orthogonal experimental designs 11 factors, 2 levels.
+Random permutations of 1-9.
+Random permutations of 1-16.
+Random permutations of 1-20.
+Random permutations of 1-30.
+Random permutations of 1-50.
+Random permutations of 1-100.
+Random permutations of 1-200.
+Random permutations of 1-500.
+Random permutation of 1-1000.
+Taguchi L4 orthogonal experimental designs 3 factors, 2 levels.
+Taguchi L8 orthogonal experimental designs 7 factors, 2 levels.
+Taguchi L9 orthogonal experimental designs 4 factors, 3 levels.
+Taguchi L12 orthogonal experimental designs 11 factors, 2 levels.
+Taguchi L16 orthogonal experimental designs 15 factors, 2 levels.
+Taguchi L16B orthogonal experimental designs 5 factors, 4 levels.
+Taguchi L18 orthogonal experimental designs 7 factors, 6/3 levels.
+Taguchi L25 orthogonal experimental designs 6 factors, 5 levels.
+Taguchi L27 orthogonal experimental designs 13 factors, 2/3 levels.
+Taguchi L32 orthogonal experimental designs 31 factors, 2 levels.
+Taguchi L32B orthogonal experimental designs 10 factors, 2/4 levels.
+Taguchi L36 orthogonal experimental designs 22 factors, 3 levels.
+Taguchi L50 orthogonal experimental designs 12 factors, 2/5 levels.
+Taguchi L54 orthogonal experimental designs 26 factors, 2/3 levels.
+Taguchi L64 orthogonal experimental designs 31 factors, 2 levels.
+Taguchi L64B orthogonal experimental designs 21 factors, 4 levels.
+Taguchi L81 orthogonal experimental designs 40 factors, 3 levels.
+2-factor star design.
+3-factor star design.
+Taguchi orthogonal experimental designs--ordered by factors/runs/ levels.
+Full factorial experimental designs 2 levels, 2 factors, 4 runs.
+Fractional factorial experimental designs 2 levels, 3 factors, 4 runs.
+Full factorial experimental designs 2 levels, 3 factors, 8 runs.
+Fractional factorial experimental designs 2 levels, 4 factors, 8 runs.
+Full factorial experimental designs 2 levels, 4 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 5 factors, 8 runs.
+Fractional factorial experimental designs 2 levels, 5 factors, 16 runs.
+Full factorial experimental designs 2 levels, 5 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 6 factors, 8 runs.
+14-18
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+2TO6M2.DAT 2TO6M1.DAT 2TO6.DAT 2TO7M4.DAT 2TO7M3.DAT 2TO7M2.DAT 2TO7M1.DAT 2TO7.DAT 2TO8M4.DAT 2TO8M3.DAT 2TO8M2.DAT 2TO8M1.DAT 2TO9M5.DAT 2TO9M4.DAT 2TO9M3.DAT 2TO9M2.DAT 2TO10M6.DAT 2TO10M5.DAT 2TO10M4.DAT 2TO10M3.DAT 2TO11M7.DAT 2TO11M6.DAT 2TO11M5.DAT 2TO11M4.DAT 2TO15M11.DAT 2TO31M26.DAT 2KINDEX.DAT
+Fractional factorial experimental designs 2 levels, 6 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 6 factors, 32 runs.
+Full factorial experimental designs 2 levels, 6 factors, 64 runs.
+Fractional factorial experimental designs 2 levels, 7 factors, 8 runs.
+Fractional factorial experimental designs 2 levels, 7 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 7 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 7 factors, 64 runs.
+Full factorial experimental designs 2 levels, 7 factors, 128 runs.
+Fractional factorial experimental designs 2 levels, 8 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 8 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 8 factors, 64 runs.
+Fractional factorial experimental designs 2 levels, 8 factors, 128 runs.
+Fractional factorial experimental designs 2 levels, 9 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 9 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 9 factors, 64 runs.
+Fractional factorial experimental designs 2 levels, 9 factors, 128 runs.
+Fractional factorial experimental designs 2 levels, 10 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 10 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 10 factors, 64 runs.
+Fractional factorial experimental designs 2 levels, 10 factors, 128 runs.
+Fractional factorial experimental designs 2 levels, 11 factors, 16 runs.
+Fractional factorial experimental designs 2 levels, 11 factors, 32 runs.
+Fractional factorial experimental designs 2 levels, 11 factors, 64 runs.
+Fractional factorial experimental designs 2 levels, 11 factors, 128 runs.
+Fractional factorial experimental designs 2 levels, 11 factors, 16 runs.
+Fractional factor experimental designs 2 levels, 31 factors, 32 runs.
+2**(k-p) experimental designs--ordered by factors and runs.
+DATAPLOT Reference Manual
+September 14, 1996
+14-19
+DATAPLOT Reference Files
+Macro files The following are macro files.
+These write your own macros.
+Second, they CASCADEP.DP DEXCONT.DP DEXCONT2.DP DEXCONTP.DP DEXCONTQ.DP DEXFACT2.DP DEXFACT3.DP DEXPARET.DP DEXSCAT1.DP DEXSCAT2.DP DEXSTAT1.DP DEXSTAT2.DP DEXSTAT3.DP HOTELL.DP IRLS.DP KW.DP LAD.DP LOGO.DP LOGO2.DP LOGO3.DP LOGO3B.DP LOGO4.DP MARK.DP MARK2.DP MDPLOT.DP PLOTTEXT.DP REFPLOT.DP SDPRED.DP SETCOLOR.DP SHADEBOX.DP SUBPLOT.DP SUBPLOTR.DP WILCOXRS.DP WILCOXSR.DP
+macros serve two purposes.
+First, they provide examples of how to provide useful capabilities that you can apply to your own data sets.
+Generate a cascade plot (for time series).
+Generate a DEX contour plot.
+Generate a DEX contour plot (subsets).
+Generate a DEX contour plot.
+Generate a DEX contour plot.
+Create all 2-term interaction factors.
+Create all 2 and 3 term interaction factors.
+Generate a Pareto plot of absolute effects.
+Generate a multiplot of main effects scatter plots.
+Generate a plot of main effects and 2-term interactions.
+Generate a multiplot of statistics plots (main effects).
+Generate a multiplot of statistics plots (main, 2-term).
+Generate a statistics plots (main, 2-term, 3-term).
+Compute Hotelling (simultaneous) confidence limits.
+Perform an iteratively reweighted least squares analysis (10 weight functions supplied).
+Performs a Kruskal-Wallis 1-way analysis of variance.
+Perform a least absolute deviations or a Lp fit (for 1 
+Generate DATAPLOT logo in lower right corner.
+Generate DATAPLOT logo (larger size).
+Generate DATAPLOT logo (for landscape mode).
+Generate DATAPLOT logo (for portrait mode).
+Generate JJF and DATAPLOT logo.
+Generate user defined logo.
+Generate user defined logo with DATAPLOT logo.
+Generate a Tukey mean difference plot.
+Superimpose text strings on pre-existing plot.
+Generate the DATAPLOT tutorial reference plot.
+Compute the linear fit confidence limits for observations.
+Set-up Postscript colors and page size.
+Draw a legend box (with shadow effect).
+Generate subseries plot of raw data.
+Generate subseries plot of residuals.
+Wilcoxon rank sum test (also known as the Mann-Whitney U test).
+Wilcoxon signed rank test.
+14-20
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Menu macro files The following files are menu macro files (i.e., they prompt the user for input).
+They serve two purposes.
+First, they provide examples of how to write your own menu macros.
+Second, they provide useful capabilities to use with your own data sets.
+CONNDOTS.DP Connect dots via the cross-hair.
+DEXCUBE.DP Generate the cube for a 2**3 factorial design.
+DEXSQUAR.DP Generate the square for a 2**2 factorial design.
+INVMAT.DP Invert a matrix.
+ISHIKAWA.DP Generate an Ishikawa diagram.
+ISHIKAW2.DP Generate an Ishikawa diagram.
+MULTITEXT.DP Position text via the cross-hair.
+NORMHIST.DP Generate a histogram and a normal density trace.
+PARETO.DP Generate a Pareto plot.
+PIECHART.DP Generate labelled pie chart.
+PLOT1VAR.DP Read and plot 1 variable (elementary).
+PLOT2VAR.DP Read and plot 2 variables (elementary).
+PLOTFUNC.DP Plot a function.
+PLOTSIN.DP Plot a sine function (elementary).
+RANDSAMP.DP Generate a stratified random sample.
+SIMPMETH.DP Compute a simplex solution to a linear programing problem.
+SORT.DP Sort an alphabetic list via priorities.
+SUM.DP Compute the sum of a list of numbers.
+TTEST.DP Perform a t-test on 2 variables.
+WORDCHAV.DP Generate a centered vertical wordchart.
+WORDCHAH.DP Generate a centered horizontal wordchart.
+3DPLOT.DP Generate a 3d-plot with cube frame.
+DATAPLOT Reference Manual
+September 14, 1996
+14-21
+DATAPLOT Reference Files
+Program files The following files provide a variety of sample data analyses performed by DATAPLOT.
+They can provide useful guides to performing similar analyses on your own data sets.
+----Basic statistics and graphics-----------------------------------4PLOT.DP Generate a 4-PLOT analysis (GEAR.DAT).
+BALLSTIC.DP Generate a ball and stick Pareto plot.
+BARPLOT6.DP Generate a Pareto bar plot.
+BENNETT.DP Fit with indicator variables (BENNETT.DAT).
+BERGER1.DP Fitting for the Alaska pipeline data (BERGER1.DAT).
+BIHIST.DP Generate a bihistogram (AUTO83B.DAT).
+BIQUAD.DP Carry out a bi-quadratic data transformation.
+BOXPLOT.DP Generate a box plot (AUTO83.DAT).
+BOXPLOT2.DP Generate a box plot (PBF11.DAT).
+CHWIRUT1.DP Non-linear fitting of the NIST ultrasonic calibration data (CHWIRUT1.DAT).
+COLORMAP.DP Show the available colors on a given output device.
+CONTOUR.DP Generate a contour plot (BRAIN.DAT).
+CPKPLOT Generate a Cpk plot (GEAR.DAT).
+GANOVA3.DP Generate a 3-factor GANOVA plot (HAMAKER.DAT).
+HABER1.DAT Non-linear fitting of 2-admissable numbers data (HABER1.DAT).
+HAMAKER.DP A graphical analysis of variance (HAMAKER.DAT).
+HIST.DP Generate a histogram (SUNSPOT2.DAT).
+HIST2.DP Generate a presentation graphics histogram (WORKSTAT.TEX).
+HUMPHREY.DP Generate random card selection and random run sequence using the RANDOM SAMPLE and RANDOM PERMUTATION commands for dosimetry data.
+LEW11.DP Non-linear fitting of beam deflection data (LEW11.DAT).
+LISSAJOU.DP Generate plots of Lissajous trigonometric functions.
+LP.DP Demonstrate the use of the LAD.DP macro for performing Lp fits (CHWIRUT1.DAT).
+MATHOPER.DP Generate a word chart with math options.
+MAXITEST.DP A large test macro.
+MEANPLOT.DP Generate a mean plot (PBF11.DAT).
+MINITEST.DP DATAPLOT test macro.
+MORTGAGE.DP Generate mortgage table.
+MULTITRA.DP Generate a multi-trace plot (HAYES1.DAT).
+NORMDENS.DP Draw a labelled normal density function.
+PDFPLOT.DP Generate pdf traces for the chi-square distribution.
+PLOT25.DP Generate a multiplot of 25 representative plots.
+PONTIUS.DP Analyze NIST load calibration data (PONTIUS.DAT).
+PREDPLOT.DP Generate plot of predicted values (CHWIRUT1.DAT).
+QUANPLOT Generate a quantile-quantile plot (AUTO83.DAT).
+RESPLOT.DP Generate a residual plot (SPIEGEL.DAT).
+RFSPREAD.DP Generate a r-f spread plot.
+RIDGE.DP Perform a ridge regression.
+ROOTPLOT.DP Generate a plot before extracting roots.
+SDPLOT.DP Generate a standard deviation plot (PBF11.DAT).
+SIGN.DP Perform a sign test for paired samples.
+SLPLOT.DP Generate a spread-location plot.
+SPIRAL.DP Generate a spiral plot.
+TAGTRACE.DP Show how to annotate traces semi-automatically.
+14-22
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+Generate a map of Texas.
+Non-linear fitting of semi-conductor electron mobility data (THURBER.DAT).
+UGIANSKY.DP Generate a Youden plot (UGIANSKY.DAT).
+WEIBPLOT.DP Generate a Weibull plot (ABERNE17.DP).
+WEIGHTS.DP Demonstrate the use of the IRLS.DP macro for performing iteratively reweighted least squares.
+WRIGHT11.DP Analyze Wright brothers lift data (WRIGHT11.DAT).
+YOUDPLOT.DP Generate a Youden plot (UGIANSKY.DAT).
+----Bootstrap Analysis-----------------------------------BOOTBERG.DP Perform a bootstrap linear slope analysis (BERGER1.DAT).
+BOOTBER2.DP Perform a bootstrap inverse calibration analysis (BERGER1.DAT).
+BOOTLEW.DP Perform a bootstrap location analysis (LEW1.DAT).
+BOOTMARS.DP Perform a bootstrap location analysis (MARSHAK.DAT).
+BOOTSIMI.DP Perform a bootstrap analysis for an unsupported statistic (SIMIU3.DAT).
+EFRON1.DP Generate statistics for a bootstrap simulation.
+----Time Series Analysis-----------------------------------DATAPLOT.DP Generate a run sequence plot (BAKER.DAT).
+NEGIZ4.DP ARIMA analysis of particle size data (NEGIZ4.DAT).
+LAGPLOT.DP Generate a lag plot (LEW.DAT).
+SPECPLOT.DP Generate a spectral plot (LEW.DAT).
+SPIKEPLO.DP Generate a spike plot (GNP.DAT).
+----Multivariate Analysis-----------------------------------BIPLOT.DP Generate a biplot.
+CANNCORR.DP Perform a canonical correlation analysis.
+FISH2DIS.DP Perform Fisher's discriminant analysis on 2 populations.
+FISHIRIS.DP Perform Fisher's discriminant analysis on Fisher's iris data.
+MULTPLOT.DP Generate multiple scatter plots (AUTO83.DAT).
+PARCOORD.DP Generate a parallel coordinates plot (AUTO79.DAT).
+PLANETS.DP Generate a scatter plot matrix for the planets data (PLANETS.DAT).
+PERIODIC.DP Generate a scatter plot matrix for the periodic table data (PERIODIC.DAT).
+PERIODI2.DP Generate plots for the periodic table data (PERIODIC.DAT).
+PROFPLOT.DP Generate a profile plot (AUTO79.DAT).
+STARPLOT.DP Generate a star plot (AUTO79.DAT).
+----Control Charts-----------------------------------CCC.DP Generate a C control chart (CCC.DAT).
+PCC.DP Generate a P control chart (PCC.DAT).
+PCC.DP Generate a P control chart (PCC.DAT).
+UCC.DP Generate a U control chart (UCC.DAT).
+XBARCHAR.DP Generate a mean control chart (CCXBAR.DAT).
+----Experiment Design-----------------------------------Most of the following analyze data sets from the book "Statistics for Experimenters" by Box, Hunter, and Hunter.
+2TO30M21.DP Generate a 2**(30-21) fractional factorial design.
+A.DP Generate a block plot (BOXSHOES.DAT).
+B.DP Generate a block plot (SHEESLE2.DAT).
+TEXASMAP.DP THURBER.DP
+DATAPLOT Reference Manual
+September 14, 1996
+14-23
+DATAPLOT Reference Files
+BATTADD.DP BATTADD2.DP BLOCPLOT.DP BOXAUTO.DP BOXAUTO2.DP BOXAUTO3.DP BOXBIKE2.DP BOXBIKE3.DP BOXBLOOD.DP BOXBOD.DP BOXCAKE.DP BOXCAKE2.DP BOXCAKE3.DP BOXCAKE4.DP BOXCHEM.DP BOXCHEM2.DP BOXCLEAN.DP BOXCLOTH.DP BOXFILT.DP BOXFILT2.DP BOXPENIC.DP BOXPILOT.DP BOXRADAR.DP BOXRATS.DP BOXREACT.DP BOXREAC2.DP BOXSHOE2.DP BOXSHOE3.DP BOXSHOES.DP BOXSOLAR.DP BOXSPRAY.DP BOXSPRIN.DP BOXWELD.DP BOXYIELD.DP BOXYIEL2.DP C.DP DEXCUB70.DP DEXINTMP.DP DEXMEANP.DP DEXOPT.DP DEXREG.DP DEXSCREE.DP DEXSIM.DP DEXSURF.DP DEXTITCU.DP
+Analyze the battery acid data (BATTADD.DAT).
+Analyze the battery acid data (BATTADD.DAT).
+Block plot analysis (SHEESLE2.DAT).
+Analyze the Box automobile emissions experiment (BOXAUTO.DAT).
+Analyze the Box automobile emissions experiment (BOXAUTO.DAT).
+Analyze the Box automobile emissions experiment (BOXAUTO.DAT).
+Analyze the bicycle data (BOXBIKE2.DAT).
+Analyze the bicycle data (BOXBIKE3.DAT).
+Analyze the blood coagulation time (BOXBLOOD.DAT).
+Analyze the oxygen demand data (BOXBOD.DAT).
+Analyze the cake taste data (BOXCAKE.DAT).
+Analyze the cake taste data (BOXCAKE2.DAT).
+Analyze the cake taste data (BOXCAKE2.DAT).
+Analyze the cake taste data (BOXCAKE2.DAT).
+Analyze the chemical yield data (BOXCHEM.DAT).
+Analyze the chemical yield data (BOXCHEM2.DAT).
+Analyze the cleanser stability data (BOXCLEAN.DAT).
+Analyze cloth wear data (BOXCLOTH.DAT).
+Analyze the filtration time at new plant data (BOXFILT.DP).
+Analyze the filtration time at new plant data (BOXFILT.DP).
+Analyze penicillin yield data (BOXPENIC.DAT).
+Analyze pilot plant chemical yield data (BOXPILOT.DAT).
+Analyze the radar acquisition speed data (BOXRADAR.DAT).
+Analyze the rat growth data (BOXRATS.DAT).
+Analyze the chemical reactor efficiency data (BOXREACT.DAT).
+Analyze the chemical reactor efficiency data (BOXREAC2.DAT).
+Analyze the Box shoes data (BOXSHOES.DAT).
+Analyze the Box shoes data (BOXSHOES.DAT).
+Analyze the Box shoes data (BOXSHOES.DAT).
+Analyze the solar collection efficiency data (BOXSOLAR.DAT).
+Analyze the aerosol spray dispersion data (BOXSPRAY.DAT).
+Analyze defective springs data (BOXSPRIN.DAT).
+Analyze the weld strength data (BOXWELD.DAT).
+Analyze the chemical yield data (BOXYIELD.DAT).
+Analyze the chemical yield data (BOXYIEL2.DAT).
+Generate a block plot (RIPKEN.DAT).
+Generate 70 2**(3-1) cubes (BOX.DAT).
+Generate a matrix of interaction plots (BOXREAC2.DAT).
+Generate DEX mean plots (BOXREAC2.DAT).
+Perform a graphical analysis of optimizing designs (BOXYIEL2.DAT).
+Perform a graphical analysis of regression designs (BOXSPRAY.DAT).
+Perform a graphical analysis of screening designs (BOXREAC2.DAT).
+Generate an experimental simulation.
+Generate various experiment design surfaces.
+Generate a 2**(3-1) title page cube (DEXTITCU.DAT).
+14-24
+September 14, 1996
+DATAPLOT Reference Manual
+DATAPLOT Reference Files
+ELECT92.DP Block plot analysis of 1992 presidential election (ELECT92.DAT).
+FUNNEL.DP Analyze a funnel experiment (FUNNEL.DAT).
+FUNNEL2.DP Analyze a funnel experiment (FUNNEL.DAT).
+KRASNY2.DP Block plot analysis of cigarette ignition data (KRASNY1.DAT).
+PALLETT.DP Generate block plots (PALLET.DAT).
+SHEESLE2.DP Generate a block plot (SHEESLE2.DAT).
+----Mathematics-----------------------------------BEAM.DP Solve an elastic beam differential equation.
+CHEMMIX.DP Solve a system of linear equations to determine a chemical mixture.
+CIRCLE.DP Solve the equation of a circle (Matrix Cofactor).
+CIRCUIT.DP Solve a system of linear equations for an electrical circuit problem.
+DERIVPLO.DP Plot a function with its first two derivatives.
+DIOPHANT.DP Solve the Diophantine equation using set intersection.
+FFT1.DP Perform a frequency-domain smoothing (FFT).
+FFT2.DP Convolve/deconvolve a signal (FFT).
+FFT3.DP Perform a frequency-domain smoothing (FFT).
+FFTPLOT.DP Generate an FFT plot of normal random numbers.
+FILTER.DP Assess filter stability by solving for complex roots.
+OIL.DP Maximize oil production via the simplex method.
+PLOTMAT.DP Plot a matrix (Matrix).
+PLOTROOT.DP Plot the complex roots of a family.
+POLYROO1.DP Solve for the complex roots of a polynomial.
+POLYROO2.DP Solve for the roots of the sum of 20 quintics using polynomial arithmetic.
+RAIN.DP Solve a raindrop differential equation.
+SPRINGS.DP Solve for the frequency of a spring (Eigenvalues)
+DATAPLOT Reference Manual
+September 14, 1996
+14-25
+14-26

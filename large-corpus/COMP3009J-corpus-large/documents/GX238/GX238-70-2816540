@@ -1,0 +1,524 @@
+Hans-Christian MÃ¼ller Duisburg Gerhard-Mercator-University Department of Communication Engineering Bismarckstrasse 81, 47048 Duisburg A New Approach to Fire Detection Algorithms based on the Hidden Markov Model Abstract In this paper the theory and some experimental results of a new approach to fire detection algorithms are discussed.
+The algorithm is based on a signal classification principle, which is widely used in the field of speech recognition.
+The sensor signals are transformed into appropriate finite time series.
+The transformation is done in a preprocessing step that extract a suitable sequence from the signals to be classified.
+The time series are modeled by a Hidden Markov Model (HMM).
+The classification of a recognized sequence is the final step with respect to the decision making process.
+1
+Introduction
+Advances in semiconductor technology have influenced the development of fire detection algorithms to a high degree in recent years.
+The use of microprocessors in fire detection devices is nearly state-of-the-art.
+Improvement of detectivity has been achieved in modern fire detection systems independently of the design scheme with respect to central or distributed intelligence.
+Implementation of improved detection algorithms leads to reduced false alarm rates and good detection features in comparison with the classical threshold detector.
+Modern fire detection algorithms are often based on a fuzzy logic or a neural network approach.
+They might include some sort of feature extraction methods applied to the sensor signals.
+In the following we will introduce the concept of statistical models of sequential data with respect to the fire detection problem.
+2
+Hidden Markov Models
+Let us consider an urnÂ­andÂ­ball system [1], [2]
+We assume that there are N (large) glass urns in a room.
+Within each is a large quantity of colored balls.
+There are M distinct colors of the balls.
+The physical process to obtain observations is as follows.
+A genius is in the room, and, according to some random procedure, it chooses an initial urn.
+From this urn, a ball is chosen at random, and its color is recorded as the observation.
+The ball is then replaced in the urn from which it was selected.
+A new urn is the selected according to the random selection procedure associated with the current urn, and the ball selection process is repeated.
+The entire process generates a finite observation sequence of colors, which we would like to model as the observable output of an Hidden Markov Model (HMM).
+Obviously, the simplest HMM that corresponds to the urnÂ­andÂ­ball process is one in which each state corresponds to a specific urn, and for which a (ball) color probability is defined for each state.
+The choice of urns is dictated by the state transitionÂ­matrix of the HMM.
+Furthermore, it should be noted that the ball colors in each urn may be the same, and the distinction among various urns is in the way the collection of colored balls is composed.
+Therefore an isolated observation of a particular color ball does not immediately tell which urn it is drawn from.
+2.1 Elements of an HMM
+The above experiment consists of drawing balls from urns in some sequence.
+Only the sequence of balls is shown to us.
+An HMM for discrete symbol observation such as the urnÂ­andÂ­ball model is characterized by the following: 1.
+N , the number of states in the model.
+Although the states are hidden, for many practical applications there is often physical significance attached to the states of the model.
+Thus, in the urnÂ­andÂ­ball model, the states correspond to the urns.
+Generally, the states are interconnected in such a way that any state can be reached from any other state.
+However, other possible interconnections of states are often of at time t is denoted as qt .
+2.
+M , the number of distinct observation symbols per state.
+The observation symbols correspond to the physical output of the system being modeled.
+For the urnÂ­andÂ­ ball experiment the observation symbols are the colors of the balls selected from Â¥ Â¤Â¡ Â£Â¢ Â£Â¢ Â£Â¢ Â¡
+interest.
+In the following individual states are labeled as 1 2 Â¡
+N and the state
+3.
+T , the length of an observation sequence.
+Â£Â¢ Â£Â¢ Â¢ Â©Â¨ Â¦
+4.
+O
+O1 O
+2
+O
+T
+the observation sequence, where Ot denotes the observation at
+time t .
+Â¥ Â¦
+5.
+The state transition probability distribution A Â¡ Â¦ Â¦ Â¨ Â¦
+a
+ij
+where
+at time t .
+For the special case where any state can be reached from any other state have a 0 for one or more (i j) pairs.
+Â¥ Â¨ Â¦ Â¡ Â¦ Â¡
+in a single step, we have a ij
+ij
+0 for all i j. For other types of HMMs, we would
+6.
+The observation symbol probability distribution B Â¡ Â¦ Â¦ Â¨ Â¦
+in state j. Â¥ Â¦
+7.
+The initial state distribution Â¦
+i , in which Â¡ Â¦ 1
+defines the probability of being in state i at the beginning of the experiment (i.e., at Â¦
+t
+1).
+It can be seen from the above that a complete specification of an HMM requires the specification of two model parameters, N and M , specification of observation symbols, and the specification of the three sets of probability measures A, B and .
+For convenience, Using the model, an observation sequence O Â¦ Â¡ Â¡ Â©Â¨ Â¦
+A B will be used as a compact notation to denote an HMM. 1 by choosing one of the urns, according to the 1 are denoted as q1 and O Â¦ Â£Â¢ Â£Â¢ Â¢
+We start our experiment at time t
+initial probability distribution , then we choose a ball, the observation symbol from this urn.
+The state and the observation symbol at time t t Â¦ 1
+respectively.
+After this we choose an urn (may be the same or a different from the urn at 1) according to the transition probability distribution A and again select a ball (denoted T generates the observation Â¦ Â¨
+as O2 ) from this urn depending on the observation symbol probability b j k for that urn (state).
+The continuation of this procedure up to time t Â£Â¢ Â£Â¢ Â¢ Â¨ Â¦
+sequence O
+O1 O
+2
+OT .
+Â¨
+Â¦
+Â¨
+i
+Pq
+i
+1
+i
+O1 O
+2
+Â¦
+defines the probability of observing the symbol Ot
+vk at time t given that we are
+N
+O
+T
+bj k Â¨
+P Ot
+vk qt
+i
+defines the probability of being in state j at time t
+1 given that we were in state i
+bj k , k M
+1
+Â¡
+a
+ij
+P qt
+1
+j qt
+i
+1
+ij
+N
+is generated as follows:
+Â¥
+Â§Â¡ Â£Â¢ Â£Â¢ Â£Â¢ Â¡
+Â¡
+Â¦
+the urns.
+We denote the individual symbols as V
+v1 v2
+vM .
+2.2
+The Three Problems for HMMs
+Most applications of HMMs are finally reduced to solving three main problems.
+These are: Â¡ Â¡ Â¡ Â¡ Â¨ Â¨ Â¦ Â¦ Â£Â¢ Â£Â¢ Â¢ Â£Â¢ Â£Â¢ Â¢ Â¨ Â¨ Â¦ Â¦
+Problem 1: Given the observation sequence O quence, for a given model? Problem 2: Given the observation sequence O Â¨
+O1 O
+2
+O
+T
+and a model
+AB,
+how do we efficiently compute P O , the probability of the observation se
+O1 O
+2
+O
+T
+and a model q1 q Â¨ 2
+AB,
+T
+that P O Q , the joint probability of the observation sequence and the state sequence is maximized? or P O Q is maximized? Â¡ Â¨ Â¨ Â¡ Â¡ Â¨ Â¦
+Problem 3: How do we adjust the HMM model parameter
+A B so that P O
+Problem 1 is the evaluation problem, namely, given a model and a observation sequence, how do we compute the probability that the observation was produced by the model? Problem 1 can be viewed as one of scoring how well a given model matches a given observation sequence.
+For example, if we consider the fire detection problem the solution of problem 1 allows to make an alarm decision.
+Problem 2 is the one in which we attempt to uncover the hidden part of the model.
+Typical uses might be to learn about the structure of the model, to find the optimal state sequence for a given observation sequence.
+Problem 3 is the one in which we attempt to optimize the model parameters to best describe how a given observation sequence comes about.
+The observation sequences to adjust the model parameters are called training sequences because they are used to "train" the model.
+This problem is the crucial one for most applications of HMMs, because it allows us to create best models for real phenomena.
+2.3 Types of the HMMs
+One way to classify types of HMMs is by the structure of the transition matrix A.
+In the special case of ergodic or fully connected HMMs every state can be reached from every other state of the model in a single step.
+Â£Â¢ Â£Â¢ Â¢
+Â¦
+how do we choose a corresponding state sequence Q Â¡ Â¨
+q
+such
+1
+2
+1
+2
+3
+4
+3
+4
+(a) Figure 1: Two types of HMMs
+(b)
+a
+41
+a
+42
+a
+43
+a
+44
+For some applications, particularly the one discussed here, other types of HMMs have been found to account for observed properties of the signal being modeled better than the standart ergodic model.
+One such model is shown in Figure 1(b).
+This model is called a leftÂ­rightÂ­model because the underlying state sequence associated with the model has the property that the system states proceed from left to right as time increases.
+Clearly, the leftÂ­rightÂ­type of HMM has the desirable property that it can model signals whose properties change in time in a successive manner (e.g., increasing sensor signal values obtained form a scattering light smoke sensor).
+The transition coefficients have the property ( Â¡ Â¦
+a
+ij
+Hence, no transitions are allowed to states whose indices are lower than that of the current Â¥ Â¦
+one.
+Clearly, the initial state distribution 21 0
+3Â¦
+Â¡
+)
+Â¦
+i
+0
+i
+Â¦
+Â¡
+1
+'
+a #
+31
+a
+32
+a
+33
+a
+34
+0
+j
+i
+i is given by i 1 1
+(
+Â¡
+(
+Â¦
+A
+21
+22
+23
+24
+%
+a "
+a
+a
+a
+%
+a " "
+11
+a
+12
+a
+13
+a
+14
+&
+Â¦
+As shown in Figure 1(a), for an N !" "
+4 state model, we have
+with a
+ij
+0 for all 1
+ij
+4
+because the state sequence must begin in state 1.
+Often, with leftÂ­rightÂ­models, additional constraints are placed on the transition coefficients.
+A constraint of the form Â¨ Â¡ Â¦ Â¦
+a
+ij
+0
+j
+i
+i
+is often used to make sure that large changes in state indices do not occur.
+In particular, for the example of Figure 1(b), the value of i is 2.
+3 Realization
+A discussion of the solution of the three problems of HMMs will exceed the score of the paper.
+The solution of problem 3, the synthesis or training problem, is not necessarily part of a detection algorithm.
+The parameters of an HMM can be viewed as parameters of the detection algorithm which have to be adjusted by a preceding training procedure.
+The solution of problem 1, the analysis problem, will be discussed later from the computational effort point of view which is of some interest as far as the practical realization is concerned.
+3.1 The parameters of the HMM 10 states.
+The number of distinct observation 12.
+We use a sampling rate of Â¦
+We are using a leftÂ­rightÂ­model with N Â¦
+symbols per state is M
+15.
+Here, the observation symbols represent certain sensor signal
+values.
+The length of an observation sequence equals T The initial state distribution 4 Â¦ Â¢
+0 2 Hz.
+Hence, the observation length corresponds to a duration of 1 minute.
+i is given according to the chosen leftÂ­rightÂ­model by Â¦ Â¥ 1
+a 10
+1 vector with only one nonzero component, i.e.
+1.
+The remaining parameter, 10 matrix, as well as the 4 4
+the transition probability distribution, represented by a 10
+observation symbol probability distribution, represented by a 10 of type TF1, TF3, TF4, TF5 and TF7.
+3.2 Solution of Problem 1 Â¨
+15 matrix, are adjusted
+by a couple of training sequences, i.e, we used 30 training sequences taken from test fires
+A straightforward way to determine P O is by enumerating every possible state sequence of length T .
+There are N T of such state sequences.
+5Â¢ Â£Â¢ Â¢ Â¦
+The probability of the observation sequence O
+O1 O
+2
+O
+T
+given the state sequence
+t1
+The probability of such a state sequence Q can be written as @ Â£7 Â£7 7 7 7 Â¦
+PQ Â¨
+q1
+a
+q1 q2
+a
+q2 q3
+a
+qT
+1 qT
+The probability that the O and Q occur simultaneously, is the product of the above two terms Â¨ Â¡ Â¨ Â¦
+POQ Â¡ Â¨
+POQPQ
+The probability of O given the model is obtained by summing this joint probability over all possible state sequences Q.
+Hence, we have all Q
+2 3 10 7 Â¢
+13
+multiplications.
+Clearly, a more efficient procedure is required to solve prob-
+lem 1.
+Such a procedure exists and is called the forward procedure.
+Consider the forward variable t i defined as Â¦ Â¡ Â§Â¡ Â£Â¢ Â£Â¢ BÂ¢ Â¡ Â¡ Â¨ Â¦Â¨ Â¨
+t i
+P O1 O
+2
+Ot qt
+the state i at time t given the model .
+We can solve for t i inductively, as follows: 1.
+Initialization Â¡ Â¨ Â¦Â¨ Â¨
+1 i 2.
+Induction
+i bi O
+i
+1
+i
+N
+i1
+3.
+Termination Â¨ Â¦
+PO Â¨
+i1
+6
+N
+T i
+Â¡
+A
+Â¨
+F
+Â¨
+6
+ED
+Â¦
+Â¨
+t
+1
+j
+N
+t i a
+ij
+b j Ot
+1
+1
+t
+T
+11
+5Â¡ Â£Â¢ 5Â¢ CÂ¢ Â¡
+i.e., the probability of the partial observation sequence, O1 O Â¡
+Â¦
+Â¦
+A
+N
+T
+1 additions.
+Even for small values, N
+10 and T
+12, this means approximately
+i
+2
+A
+summation over all possible state sequences requires 2T Â¨
+A
+From the last equation we see that the summand involves 2T
+Â¨
+Â¡
+Â¨
+Â¦
+PO Â¨
+POQPQ
+1 multiplications.
+Hence 1N T
+Â¨
+Â£7 Â£7 97
+Â¨
+87
+Â¨
+b Â¦
+q1
+O
+1
+b
+q2
+Â¡
+Â¨
+6
+Â¦
+Â¡
+Â¨
+Â£Â¢ 5Â¢ Â¢
+Â¨
+Â¦
+Q
+q1 q
+2
+q
+T
+and the model is POQ
+T
+P Ot qt
+O
+2
+b
+qT
+O
+T
+multiplications and
+Ot , (until time t ) and
+j
+N
+Again, let us examine the number of multiplications involved with this procedure.
+The initialization step involves N multiplications.
+The induction step requires N multiplicaand for 1
+step.
+The termination step requires no further multiplications.
+Hence the total number computations for the forward procedure as compared to 2 3 10 computation of P O .
+3.3 The Algorithm Â¨ 7 Â¢ Â¦ Â¦ A Â¨ Â¨
+of multiplications is N
+NN
+1T
+1 .
+For N
+10 and T
+The algorithm we used works as follows: At each discrete time instant t (e.g., multiple integer of 5 seconds) an observation sequence O is taken from the sensor signal including the current signal value as well as the 11 preceding signal values.
+Then the a posteriori probability P O is calculated according to the forwardÂ­procedure.
+4 Experiments and Results Â¨
+In this section we present some results taken from a computer simulation of the algorithm described above.
+The following plots show the output signal s t of a scattering light smoke sensor and the a posteriori probability P O plotted as SR Â¤Q Â¨ P Â£A Â¡ I Â¦ Â¨ Â¨
+P O Â¡ HÂ¨ G
+min 150
+l og P O
+The performance of the system in case of a testfire TF1 is in the following plot.
+250 Â¡
+200 150 100 50 0 0 100 200 300 t s 400
+500
+Figure 2: Sensor signal s t and the logarithm of the a posteriori probability P O in case of testfire TF1 Â¨ Â¨
+Â¨G Â¨
+A
+Â¨
+QP
+Â¨
+t
+T , which amounts to N
+1NT
+1 multiplications in the induction 12 we need about 1200 13
+required by the direct
+st P O
+600
+tions plus one for the out of bracket b j Ot Â¨
+1
+term.
+This has to be done for 1
+j
+N
+Obviously, P O is maximum (or equivalent: P O is minimum) about 100 seconds after the smoke sensor signal s t leaves the steadyÂ­state value.
+Figure 3 shows the preformance of the system in case of a smoldering fire, i.e. testfire TF2.
+Here, the maximum of P O is reached 60 seconds after the smoke sensor signal s t leaves the steadyÂ­state value.
+Â¨ Â¨ Â¨ Â¡ Â¨G Â¨
+250 Â¨G Â¨ Â¨G Â¨
+200 150 100 50 0 0 50 100 150 200 250 t s 300 350
+400
+450
+Figure 3: Sensor signal s t and the logarithm of the a posteriori probability P O in case of testfire TF2 Â¨ Â¨
+Figure 4 shows the preformance of the system in case of a slowly developing fire, i.e. testfire TF7.
+250 Â¡
+200 150 100 50 0 0 100 200 300 t s 400
+st P O
+500
+Figure 4: Sensor signal s t and the logarithm of the a posteriori probability P O in case of testfire TF7 Â¨ Â¨
+st P O Â¡
+500
+QP QP
+600
+leaves the steadyÂ­state value.
+Finally, in the last simulation presented here we used an artificial burst signal.
+Signlas like this are most unlikely to occur in real fire situtations, but may, for example, occur due to electromagnetic influences.
+250 Â¡
+200 150 100 50 0 0 100 200 300 400 500 t s Â¨
+st P O Â¨G Â¨
+600
+700
+800
+900
+1000
+Figure 5: An artificial burst sensor signal s t and the logarithm of the a posteriori prob
+ability P O Â¨
+smaller (greater) as compared to the last three examples.
+Note, a classical threshold detector will reach its alarm condition in case of the shown artificial burst signal.
+5 Conclusion
+In this paper we have derived a new approach for fire detection algorithms.
+The key element of our approach, which appears to be quite useful, is a HiddenÂ­MarkovÂ­Model.
+To be more precise, we used a leftÂ­rightÂ­model.
+Simulation studies has been presented which show the ability to improve detection features in comparision with the classical threshold detector.
+References [1] Dugad, Rakesh and Desai, U. B.; A tutorial on hidden markov models; Indian Institute of Technology, Bombay Powai; 1996 [2]
+5
+Â¨
+Â¨
+A
+Obviously, the maximum value of P O (the minimum value of Â¨
+log P O ) is much
+Â¨
+Again, the maximum of P O is reached 60 seconds after the smoke sensor signal s t Â¨
+QP

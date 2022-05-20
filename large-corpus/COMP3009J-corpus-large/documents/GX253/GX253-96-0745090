@@ -1,0 +1,240 @@
+THIS OPINION WAS NOT WRITTEN FOR PUBLICATION The opinion in support of the decision being entered today (1) was not written for publication in a law journal and (2) is not binding precedent of the Board.
+Paper No. 37 UNITED STATES PATENT AND TRADEMARK OFFICE __________ BEFORE THE BOARD OF PATENT APPEALS AND INTERFERENCES __________ Ex parte RUSSELL F. LEWIS __________ Appeal No. 1997-1572 Application 07/792,534 ___________ 1
+HEARD: December 6, 1999 ___________ Before THOMAS, LALL and GROSS, Administrative Patent Judges.
+LALL, Administrative Patent Judge.
+DECISION ON APPEAL This is a decision on appeal under 35 U.S.C. Â§ 134 from the Examiner's final rejection2 of claims 1, 3, 7 to 12 and 16 1
+Application for patent filed November 12, 1991.
+There are two entries in the record marked as final rejections, [paper nos. 14 and 23].
+This appeal is from the final rejection marked as paper no. 23, the other having been withdrawn.
+An amendment after the final rejection was filed [paper no. 24], however, it contained only a request for 1
+2
+Appeal No. 1997-1572 Application 07/792,534
+to 21.
+Claim 2 has been canceled and claims 4 to 6 and 13 to
+15 have been indicated as allowable.
+The disclosed invention relates to the field of electronic systems and, more particularly, to improved systems and methods for handprint recognition.
+The data processing
+system includes a handprint input device coupled to an accelerator system.
+The input device is operable to receive
+manually inputted handwritten characters and output digital data representing a series of points activated by the user of the input device as the handprinted characters are written on the input device.
+stroke data.
+The output data is converted to vector
+The real time recognition function is performed
+by the accelerator system by comparing the vector stroke with a library of sample handprint data.
+The accelerator system
+thus outputs a stream of conventional character data to a general purpose processor.
+Consequently, the general purpose
+processor is freed from the time consuming task of the character recognition function.
+The invention is further
+illustrated by the following claim.
+reconsideration.
+2
+Appeal No. 1997-1572 Application 07/792,534
+Claim 11 is reproduced below as representative of the invention.
+11.
+A handprint recognition accelerator system operable to receive input data from a handprint input device and to output recognizable character data, the handprint recognition accelerator system comprising: a collection processor operable to receive said input data, to convert said input data into vector stroke data and to output said vector stroke data; a user independent handprint memory operable to store user independent handprint character samples; and a recognition processor operable to stroke data, compare said vector stroke independent handprint character samples recognizable character data based on the comparisons.
+receive said vector data to said user and output said results of said
+The Examiner relies on the following references: Fujimoto et al.
+(Fujimoto) Nakatsuka 4,015,239 5,265,174 Mar. 29, 1977 Nov. 23, 1993
+Claims 1, 3, 7 to 12 and 16 to 21 stand rejected under 35 U.S.C. Â§ 103 as being obvious over Nakatsuka, and claims 20 and 21 also stand rejected over Nakatsuka and Fujimoto.
+3
+Appeal No. 1997-1572 Application 07/792,534
+Rather than repeat the arguments of Appellant or the Examiner, we make reference to the briefs3 and the answer for the respective details thereof.
+OPINION We have considered the rejections advanced by the Examiner and the supporting arguments.
+reviewed We have, likewise,
+Appellant's arguments set forth in the briefs.
+We affirm.
+In our analysis, we are guided by the general proposition that in an appeal involving a rejection under 35 U.S.C. Â§ 103, an examiner is under a burden to make out a prima facie case of obviousness.
+If that burden is met, the burden of going
+There are three entries in the record marked as appeal briefs [paper nos. 20, 28 and 30].
+The Examiner withdrew the final rejection on which the first brief was based.
+The second brief was non-compliant with the rules.
+The third brief [paper no. 30] is for this appeal.
+A reply brief was filed [paper no. 32] and was entered in the record by the Examiner without any further response [paper no. 34]
+4
+3
+Appeal No. 1997-1572 Application 07/792,534
+forward then shifts to the applicant to overcome the prima facie case with argument and/or evidence.
+Obviousness is then
+determined on the basis of the evidence as a whole and the relative persuasiveness of the arguments.
+See In re Oetiker,
+977 F.2d 1443, 1445, 24 USPQ2d 1443, 1444 (Fed.
+Cir. 1992); In re Hedges, 783 F.2d 1038, 1039, 228 USPQ 685, 686 (Fed.
+Cir. 1986); In re Piasecki, 745 F.2d 1468, 1472, 223 USPQ 785, 788 (Fed.
+Cir. 1984); and In re Rinehart, 531 F.2d 1048, 1052, 189 USPQ 143, 147 (CCPA 1976).
+We are further guided by the
+precedence of our reviewing court that the limitations from the disclosure are not to be imported into the claims.
+Lundberg, 244 F.2d 543, 113 USPQ 530 (CCPA 1957); In re Queener, 796 F.2d 461, 230 USPQ 438 (Fed.
+Cir. 1986).
+We also In re
+note that the arguments not made separately for any individual claim or claims are considered waived.
+and (c).
+See 37 CFR Â§ 1.192 (a)
+In re Baxter Travenol Labs., 952 F.2d 388, 391, 21
+USPQ2d 1281, 1285 (Fed.
+Cir. 1991) ("It is not the function of this court to examine the claims in greater detail than argued by an appellant, looking for nonobvious distinctions over the prior art."); In re Wiechert, 370 F.2d 927, 936, 152 USPQ 247,
+5
+Appeal No. 1997-1572 Application 07/792,534
+254 (CCPA 1967) ("This court has uniformly followed the sound rule that an issue raised below which is not argued in this court, even if it has been properly brought here by reason of appeal is regarded as abandoned and will not be considered.
+It is our function as a court to decide disputed issues, not to create them.").
+We now treat the rejections before us.
+Rejection of Claims 1, 3, 7 to 12 and 16 to 21 under 35 U.S.C. Â§ 103 These claims are rejected as being obvious over Nakatsuka.
+We first take the broad independent claim 11.
+The
+Examiner asserts [answer, pages 3 to 4 and 7] that, in Nakatsuka, the accelerator comprises: "a collection processor operable to receive the first data, to convert the first data into stroke data and to output the stroke data ... ; a user independent handprint memory operable to store user independent handprint samples ... ; and a recognition processor ... to compare the stroke data to the samples and output the second data based on the results of the comparisons 6
+Appeal No. 1997-1572 Application 07/792,534
+... ."
+Appellant argues that Nakatsuka does not disclose the
+storing of the handprint samples and the recognition of the handprint, it only discusses the storing and the recognition of the handwritten samples [brief, pages 5 and 6].
+The
+Examiner responds that there is no difference between the handwritten and the handprint data and the disclosure in Nakatsuka regarding handwritten applies equally to handprint samples [answer, pages 8 and 10].
+Appellant cites an article
+by C. Y.
+Suen to illustrate the difference between the two, as for example, there is a space between the handprinted characters [brief, pages 8].
+We agree with the Examiner.
+The
+Suen article does not illustrate any difference between the handwritten and the handprinted data.
+We agree that there is
+a space between the characters in a handprinted sample as compared with a handwritten sample; however, from the point of view of converting the handprinted data into vector stroke data, there is no difference.
+If anything, it would be
+simpler to convert the handprinted data because each character stands alone and the interference of the neighboring character is minimized.
+Next, Appellant argues that Nakatsuka does not
+7
+Appeal No. 1997-1572 Application 07/792,534
+disclose a collection processor and a recognition processor [brief, pages 6 to 7].
+We disagree with Appellant's position.
+Nakatsuka, figure 1, does show a collection processor in CPU 3 and a part of RAM 5, since processor 3 receives the input (handwritten sample) from input device 2 and stores it in RAM 5.
+Nakatsuka also shows a library of user character samples Nakatsuka further shows a Claim 11 does not
+in dictionary units 8 and 9.
+recognition processor as CPU 3 and unit 7.
+call for a general processor.
+Therefore, we need not discuss Thus, we
+here arguments regarding the general processor.
+sustain the rejection of claim 11.
+We now consider independent claim 1.
+Additional to the
+elements discussed above relating to claim 11, the Examiner contends that Nakatsuka also shows a general processor.
+The
+Examiner states that Nakatsuka discloses a "general processor coupled to the accelerator system and operable to receive and use the second data (3 in figure 1)" [answer, page 3].
+The
+Examiner also states that Nakatsuka does not show a plurality
+8
+Appeal No. 1997-1572 Application 07/792,534
+of processors, however, "[i]t would have been obvious ... to simply stack a number of processors by assigning different functions to each processor when there is a prior teaching of the equivalent functions performed on one processor."
+[Answer, page 9 ].
+Appellant argues that Nakatsuka does not
+show a general processor [brief, page 6] and also controverts the Examiner's "functionally equivalent" argument [brief, page 7 and reply brief, pages 1 and 4]
+We find that Nakatsuka's
+invention is directed to a "Pattern Recognition Apparatus" and as such does not go into what is specifically done to the digital data output after the recognition process.
+Therefore,
+Nakatsuka does not show a general processor in the same sense that Appellant does in figure 2 of the specification.
+However, Nakatsuka does disclose a bus line 11 which connects the output of the recognition apparatus to an external output unit such as a printer 13.
+We are of
+the view that to connect the digital output of the recognition process and apparatus of Nakatsuka to a general processor, instead of a printer, would have been obvious to an artisan in the data processing arts.
+9
+Appeal No. 1997-1572 Application 07/792,534
+Thus, we sustain the rejection of claim 1 over Nakatsuka.
+Even though we sustain the Examiner's rejection of claim 1 for additional reasons than that advanced by the Examiner, our position is still based on the collective teachings of the references applied in the final rejection, and does not constitute a new ground of rejection.
+In re Bush, 296 F.2d
+491, 496, 131 USPQ 263, 267 (CCPA 1961); In re Boyer, 363 F.2d 455, 458 n.2, 150 USPQ 441, 444 n.2 (CCPA 1966).
+We discuss other claims which are discussed separately and individually by Appellant.
+Claim 3.
+Appellant argues [brief, page 10] that
+Nakatsuka does not show a "handprint memory", a "stroke memory" and a "recognized character memory" as claimed in claim 3.
+This is merely a conclusory statement.
+Nevertheless, we note that Appellant is looking for an express showing of each labeled element.
+Nakatsuka indeed shows a
+memory area for storing library data for the recognition apparatus (elements 8 and 9), a memory area coupled to a collection processor (3) and recognition processor (3 and 7)
+10
+Appeal No. 1997-1572 Application 07/792,534
+for storing vector data (RAM 5, also see column 2, line 62 to column 3, line 8), and a memory area after the recognition is completed (5d) [column 5, lines 45 to 48]. sustain the rejection of claim 3.
+Claims 7 and 16.
+These claims each call for the Therefore, we
+recognition processor to be comprised of "first and second parallel recognition processors" each operable to receive vector stroke data from the collection processor.
+Appellant
+argues that "Appellant has not claimed mere parallel processing."
+[Brief, page 10, see also reply brief, page 2].
+We note that this is merely a conclusory statement and not a substantive argument.
+Furthermore, Appellant has not shown in
+the specification figures the recognition processor to be comprised of a first and a second processors.
+A brief mention
+of such arrangement is found on page 11 of the specification.
+We agree with Appellant that the invention does not reside in the concept of parallel processing.
+Therefore, we are of the
+view that once Nakatsuka is recognized to have a recognition processor, to have it replaced by two processors acting in parallel (that is duplicated what is
+11
+Appeal No. 1997-1572 Application 07/792,534
+already taught) would have been obvious to an artisan in data processing arts.
+The artisan is supposed to be imbued with a As our
+certain body of knowledge in the related arts.
+reviewing court has stated, we observe that an artisan must be presumed to know something about the art apart from what the references disclose (see In re Jacoby, 309 F.2d 513, 516, 135 USPQ 317, 319 (CCPA 1962)) and the conclusion of obviousness may be made from "common knowledge and common sense" of the person of ordinary skill in the art (see In re Bozek, 416 F.2d 1385, 1390, 163 USPQ 545, 549 (CCPA 1969)).
+Moreover, skill See
+is presumed on the part of those practicing in the art.
+In re Sovish, 769 F.2d 738, 743, 226 USPQ 771, 774 (Fed.
+Cir. 1985).
+Therefore, to the extent disclosed and claimed, claims
+7 and 16 are properly rejected.
+Claims 8 and 17.
+These claims depend on claims 7 and 11
+respectively and each further calls for the first and the second parallel recognition processors "to process the same vector data using different handprint recognition methods."
+We note that Nakatsuka does show different methods of character recognition.
+12
+Appeal No. 1997-1572 Application 07/792,534
+Notwithstanding Appellant's arguments [brief, page 11 and reply brief, page 2], which are no more than mere conclusory statements, we note that Nakatsuka's disclosure combined with the ordinary skill of an artisan (see our discussion regarding claim 7 above), would justify the rejection of claims 8 and 17.
+Claims 9, 10, 18 and 19.
+These claims each call for
+various components of the claimed apparatus being "formed on a single semiconductor substrate."
+The Examiner asserts
+[answer, pages 4 and 5], and we agree, that to arrange various components of a recognition system on a single semiconductor substrate would have been obvious to an artisan since the process of constructing such components on a substrate is admitted by Appellant to have been known [specification, page 12, lines 20 to 23]
+Also, see our discussion of claim 7
+We are not persuaded by Appellant's arguments to the
+contrary [brief, pages 11 and 12, and reply brief, pages 2 and
+13
+Appeal No. 1997-1572 Application 07/792,534
+3].
+19.
+Thus, we sustain the rejection of claims 9, 10, 18 and
+Claim 12.
+This claim additionally calls for a "stroke
+memory" coupled to the collection processor and to the recognition processor and a "recognized character memory" coupled to the recognition processor.
+Contrary to Appellant's
+arguments [brief, page 11], we find that Nakatsuka does disclose a stroke memory and a recognition memory as explained in our discussion above in regard to claim 11.
+The term
+"coupled to" in this claim could be interpreted to meet the claimed connections by Nakatsuka in our discussion of claim 11.
+Thus, we sustain the rejection of claim 12.
+Rejection of Claims 20 and 21 over Nakatsuka and Fujimoto This rejection has not been specifically argued by Appellant.
+Appellant states that "whether or not Fujimoto
+discloses cleaning the handprint data into vector stroke data ... is of no moment."
+[Brief, page 9].
+Therefore, we do not
+discuss this rejection in any depth, except to note that Fujimoto does indeed show the cleaning and thinning of the raw handwritten data into vector stroke data as suggested by the
+14
+Appeal No. 1997-1572 Application 07/792,534
+Examiner [answer, pages 5 to 6]. rejection of claims 20 and 21.
+Therefore, we also sustain
+Finally, we briefly address the argument of unexpected results.
+We agree with the Examiner's statement [answer,
+pages 11 and 12] that the record is devoid of evidence supporting the presence of any unexpected results.
+Such
+evidence should be from impartial parties and substantial in nature.
+Attorney's arguments in a brief cannot take the place In re Pearson, 494 F.2d 1399, 1405, 181 USPQ Likewise, mere attorney argument does
+of evidence.
+641, 646 (CCPA 1974). not take the place of
+evidence lacking in the record.
+Meitzner v. Mindick, 549 F.2d
+775, 782, 193 USPQ 17, 22 (CCPA 1977), cert. denied, 434 U.S. 854, 195 USPQ 465 (1977).
+In summary, we have sustained the rejections of claims 1, 3, 7 to 12 and 16 to 21.
+Accordingly, we affirm.
+No time period for taking any subsequent action in connection with this appeal may be extended under 37 CFR
+15
+Appeal No. 1997-1572 Application 07/792,534
+Â§ 1.136(a).
+AFFIRMED
+JAMES D. THOMAS Administrative Patent Judge
+PARSHOTAM S. LALL Administrative Patent Judge
+ANITA PELLMAN GROSS Administrative Patent Judge
+) ) ) ) ) BOARD OF PATENT ) ) APPEALS AND ) ) INTERFERENCES ) ) )
+PSL/pgg W. Daniel Swayze, Jr.
+Texas Instruments Incorporated P.O. Box 655474 M/S 219 Dallas, TX 75265 16
+Appeal No. 1997-1572 Application 07/792,534
+17

@@ -1,0 +1,1119 @@
+A Distributed Collaboratory for High-Throughput Analysis and Annotation of Genomes __________________________________________________________________ Summary The interpretation of the human genome represents the next grand challenge at the interface of computing and biology.
+The human and several microorganism genome sequencing projects will soon be producing data at a rate which exceeds current analysis capabilities.
+New methods and infrastructure need to be implemented for effective analysis and management of this data.
+Our overall objective is to design and implement a distributed computational framework for the genome community, which will provide users, genome centers, and this collaboratory, with services, tools and infrastructure for high-quality analysis and annotation of large amounts of genomic sequence data.
+The main components of the Analysis and Annotation Engine consist of a number of services, a broker that oversees the distribution of tasks, and a data warehouse, with services implemented using distributed object technology.
+We plan to use state-of-the-art computational technologies, algorithms, and data management techniques to provide biologists with as much information about a sequence as is feasible at any given time, and provide mechanisms to update the description of genomic regions over time.
+This framework will make maximal use of existing tools and database systems, and integrate services across many resources.
+Services for data input, analysis and gene modeling, sequence comparison, information retrieval, and data submission to central databases will be implemented within a flexible and extensible environment and configurable modes for high-throughput processing of large amounts of data will be supported.
+This framework will address issues of software sharing and reuse, generic interfaces to analysis tools, and methods for analysis system interoperation, which have not been adequately addressed in informatics developments community wide.
+We plan for a phased development in five areas over the initial three year time-frame of the project: Task 1.
+Framework for the Analysis and Annotation Engine deals with the design and construction of a genome analysis environment using distributed object technology and issues of interoperability; Task 2.
+Data Input and Visualization Services addresses data input issues for users and genome centers, data submission to public databases, and data visualization; Task 3.
+Analysis Services discusses the major methods and algorithms for sequence analysis we will initially deploy in our environment; Task 4.
+Data Mining Services deals with data mining; Task 5.
+Data Warehouse addresses the design and workings of the data management and storage facility.
+A collaboratory of central database designers, analysis tool builders, sequence data generators, and experimental biologists from 5 National Laboratories and 7 academic institutions, and with significant leveraging from existing informatics projects, will provide the expertise and tools necessary for this coordinated design and development effort.
+A Project Plan addresses the phased approach to implementation, plans for flow of data from genome centers to this project and to central databases, the collaboratory's plans to analyze and annotate significant amounts of public domain ``orphan'' data, the role of collaboratory members in implementation, and the organization of the collaboratory.
+I. SPECIFIC OBJECTIVES
+Our overall objective is to design, develop, and implement a distributed computational framework for the genome community which will provide users, genome centers, and this collaboratory, with services, tools and infrastructure for high-quality analysis and annotation for large amounts of genomic sequence data.
+Our specific objectives are as follows: * Implement an analysis system for DNA sequence data which will allow DOE funded projects to have consistent high-quality annotation, and through this, provide a model for the rest of the community.
+* Since large amounts of sequence are imminent and the analysis of these sequence data is critical, implement a working baseline system by the end of year 1.
+* Construct an extensible framework where multiple tools can be linked together and interoperate, where successful tools can be shared and easily accessed by the community, and which will serve as a focal point for future development of analysis tools.
+* Provide user access to multiple tools, state-of-the-art methods, specialized algorithms, high performance computing hardware, and many types of services without the user having to be a computer expert.
+* Provide users with data input, data analysis, data mining, data management, and data submission services all within a single easy to use environment.
+* Support large-scale batch processing modes using sophisticated algorithms, methods, and parallel computer hardware for large data providers (genome centers and databases) to meet the throughput requirements of the next phase of genome sequencing.
+* Provide a data model and the means to maintain and update the description of a genomic region.
+Users (individuals and large-scale producers) can specify recurrent analysis and data mining operations which continue over long time periods.
+* Provide mechanisms for the community to view (public domain) analysis results for genomic regions contained in the system by direct visualization using tools in the framework and through (user agreed) submission of annotation to central public databases.
+* Facilitate the analysis by this collaboratory of large amounts of public domain genome sequence data (through arrangements with the sequence producers) which might otherwise go unanalyzed.
+To facilitate these objectives we envision an Analysis and Annotation Engine with the following components: i. Efficient and cross-cutting services and the corresponding agents for input of data from individuals, genome centers and from public database interfaces for purposes of generating analysis and annotation.
+These methods will be facilitated with the cooperation and assistance of genome centers and central databases. ii.
+A central body of data which will be stored in a warehouse, and analyzed and updated over time to provide a current best description of features at the sequence level for genomic regions which have been entered into the system.
+This description will be used to provide annotation for central public databases and be largely publicly available.
+A corresponding data model for analysis results and annotations (based on models compatible with GSDB, GDB(TM) and other central databases) will be used in the warehouse and to facilitate the submission of annotations to these databases. iii.
+A process manager which, based on an objective function, will activate data input, analysis, data mining and data submission services, schedule tasks to meet user requests, and continually update the data and its analysis state for users and within the warehouse.
+iv. Multiple pattern recognition tools and methods for feature detection and gene modeling.
+These will include several new hybrid methods which make integral use of pattern recognition, ESTs and protein homology to accurately recognize genes and to automate whole and partial gene model construction in fully or partially assembled sequence.
+In addition to providing the most accurate possible descriptions of genes and other features, these methods will also provide information of potential value to sequence assembly and finishing at genome centers.
+v. Multiple methods for sequence comparison, including specialized algorithms for frameshift tolerant alignment and sensitive comparison of long genomic regions.
+This will make integral use of parallel computers and specialized hardware systems created through the integration of high-performance computing resources at the ORNL, LBNL, ANL and at other collaborating sites.
+vi. Services and search agents for data mining (using CORBA agents and other methods, and using OPM, Kleisli, and Magpie data translators) to retrieve remote information relevant to the annotation of newly discovered genes and to provide inferencing relevant to a gene's biological role or significance.
+vii.
+Interfaces for access to services and data for individual users, from public databases, and from analysis environments constructed at genome centers.
+These interfaces will allow the configuration of multiple-step analysis protocols using available components.
+An API will be constructed to allow linkage of software at genome centers with the analysis capabilities in this project.
+This will provide widespread access to multiple tools and platforms for analysis.
+Specific linkage to DOE sequencing centers will be made in partnership with GSDB and GDB. viii.
+Portable scalable high-performance computer codes for compute intensive tasks which can be activated at multiple sites and used transparently during interactive or automated processing, and be configured in analysis protocols.
+This will provide needed cycles to genome centers and provide access to such capabilities by biologists with minimal computing expertise.
+ix. Services and corresponding agents which provide convenient mechanisms for the submission of data and analysis results to multiple public databases.
+II.
+BACKGROUND AND SIGNIFICANCE
+The human genome project, supported by DOE and NIH, is revolutionizing biology and biotechnology, providing important new emphasis on the biological sciences and their practical applications.
+Our increasing ability to analyze, manipulate, modify genes and biological macromolecules is creating new knowledge about fundamental biological processes, and providing numerous opportunities to apply this knowledge.
+There is significant new investment in the US, as companies new and old, seek to utilize the information for medicine and health care that stems from knowing all human genes, and the sequences of DNA from many humans.
+At expected data rates, the finished (fully assembled) sequence generated each day will represent approximately 75 new genes (and their respective proteins).
+The information contained in these is of immeasurable value to medical research, biotechnology, the pharmaceutical industry and researchers in a host of fields ranging from microorganism metabolism, to structural biology.
+With only a small fraction of genes which cause human genetic disease identified, each new gene revealed by genome sequence analysis has the potential to have significant impact on human health.
+Timely development of diagnostics and treatments related to these is worth billions of dollars for the US economy, and computational analysis is a key component which can supply the necessary knowledge for this.
+In addition to health-related biotechnology, other application areas of great importance to DOE include bioremediation, waste control, meeting energy fuel demands of the future and health risk assessment.
+Sequencing of microorganisms and other model organisms with significance for these biotechnology areas is also ramping up at a very rapid rate.
+The genomes for Haemophilus influenzae and yeast have just been fully sequenced, although the significance of many genes remains to be determined.
+The potential for the discovery of new enzymes and chemical processes important for biotechnology (for example - new types of degradative enzymes) as well as new insights into disease causing microbes makes these efforts highly valuable in both economic and social terms.
+Annotation (the elucidation and description of biologically relevant features in the sequence) is an essential prerequisite before genome data can become useful.
+The quality with which annotation is done will have direct impact on the value of the sequence.
+A plain sequence is a meaningless string of characters, and one key to producing biological information and insight from this flood of data lies in effective and timely computation.
+At a minimum, this data must be annotated to indicate the existence of gene coding regions, control regions, and relationships between the sequence and other known sequences.
+In the last year or so significant growth of EST collections and new types of hybrid gene modeling methods, which integrate EST data with pattern recognition approaches, have become available.
+These can be used to produce very accurate analyses of genome sequence data in many cases.
+These methods require significant computational power, but if computing resources can be mustered, are capable of providing unprecedented accuracy for the localization of genes and other features in the sequence.
+Beyond coding region identification, finding features like simple and complex repeats, characterizing the organization of promoters and gene families, and tying together evidence for metabolic pathways are further annotation activities that add knowledge and value to a genome.
+Additionally important are statistical patterns such as the distribution of G+C content (isochore), codon usage, and correspondences between computed biochemical or structural properties and properties of expressed proteins measured experimentally.
+As complete genomes on the order of 2 to 3000 Megabases are sequenced, the length of DNA comparison strings has changed from single genes to entire genomes, with a concomitant expansion in the time to compute.
+In order to look at long range patterns of expression, syntenic regions on the order of 10's of megabases become of reasonable length for consideration.
+Significant work is required to develop the tools that will permit the analysis and visualization of long genomic regions needed for comparative genomic studies.
+The recent funding of more than 10 major genome centers to begin high-throughput sequencing of the human genome has brought these analysis and annotation challenges into immediate focus.
+It has been estimated that on average from 1997 to 2003, approximately 2 million bases of newly finished DNA sequence will be produced every day and be made available on the Internet and in central databases.
+In addition, for many centers, sequence will be released for a given clone well before final sequence assembly, in the form of smaller sequence fragments (contigs) down to 1 kilobase (kb) in size.
+This means that at any given time, large amounts of partially assembled sequence will be available for analysis.
+We expect that the state of these sequences will be dynamic, changing day to day, and therefore, standard ``pipeline'' approaches which facilitate a single analysis pass are inadequate to deal with the temporal aspect of the problem.
+Already, sequence is arriving at a rate and in forms which makes analysis and annotation very difficult.
+For example, several hundred thousand bases of human DNA sequence from chromosome 21 has appeared in the public sequence databases in 1-5 kb fragments rather than as a contiguous sequence.
+While this may meet the letter of informal international agreements to make sequence data available in a timely fashion, it is hardly useful to the broader biomedical community.
+Anyone who wishes to analyze this must ``re-assemble'' the sequence from these many small fragments - an absolutely ridiculous task.
+Large genomic clones are being routinely posted on the Internet and being deposited into public databases, with virtually no comment, analysis, or annotation, and mechanisms for their entry into public domain databases are in many cases inadequately defined.
+Valuable sequences are going unanalyzed because of the lack of methods and procedures for handling this data, and because current methods for doing so are so time consuming and inconvenient.
+And in real terms, the flow of data is just beginning.
+At a very basic level, the primary question that can be asked of DNA sequence is what biologically relevant features can be associated with the DNA sequence and what can be inferred from these features? What features can and should be located and annotated for newly generated DNA sequence is presently a matter of discussion within the human genome community.
+During the spring of 1996 the National Center for Human Genome Research (NCHGR) at the NIH conducted an electronic workshop on the annotation of human DNA sequence to ask ``What annotation should be required before submission of the sequence to a central database?'' Examining the responses of the participants of this workshop can help to identify trends in the thinking of members of the genome community on the subject of sequence annotation.
+The first trend that emerges is that there is no consensus on what constitutes appropriate initial annotation of DNA sequence.
+The range of opinion runs from ``no annotation is needed'', based on the observation that the sequence itself can be annotated later by individuals with different goals, to ``as much as possible'' (actually a list of more than 50 features or associated data).
+Also, the overall strategy for completing the DNA sequence of the human genome is still being worked out (see for example the commentary by Venter et al. (1996), and therefore the structure of the resulting data is still in flux.
+There was consensus that certain metadata (discussed below) such as the origin of the clone which was sequenced, needs to be included and this has been taken into account in our data capture plan described previously.
+There was also general agreement that, what ever level of annotation is associated with the DNA sequence, the generation of the annotation cannot be allowed to become a bottleneck which slows down the release of the sequence data from the sequencing centers to the user community.
+This proposal is directed at alleviating this potential bottleneck.
+It is clear that the information needed to make these data useful is not merely the sequence of a particular region of human DNA, but rather a detailed description of the biologically relevant features which are contained in that sequence.
+The ability of major sequencing centers to generate DNA sequence is rapidly outstripping their ability to provide comprehensive and timely annotation of the sequence.
+What follows is a comparison of current annotation from a high throughput sequencing center with what we envision as a prototype of automated annotation.
+The cosmid HS314G4 (accession number Z69667, 31557bp) is from the teleomeric end of human chromosome 16 (16p13.3).
+The cosmid was generated at Los Alamos National Laboratory and was sequenced at the Sanger Center.
+The annotation of this 31kbp of DNA localizes 22 simple and complex (Alu and MER) repetitive DNA elements, 2 putative CpG islands (without specification of how they were detected) and 10 regions with homology to various, usually unspecified, expressed sequence tags (ESTs).
+Table I shows the annotation of HS314G4 from its GenBank(R) entry.
+Analysis of the this sequence using Xgrail_1.3 in conjunction with a variety of database search tools reveals a much richer picture of the biological implication of this sequence.
+Using different, but well documented methods, this analysis finds 41 simple and complex repeats and 8 CpG islands.
+The GRAIL analysis also reveals 38 potential protein coding exons (30 of them ``excellent'').
+Figure 1 shows the Xgrail analysis of HS314G4.
+Through a combination of gene modelling and database searching the GRAIL exons identify 5, or possibly 6, genes.
+Three of these putative genes have homologs in GenPept and ``complete'' cDNA sequences for two of these genes are also in the sequence databases.
+One gene, consisting of 11 exons, is identical to the gene for a pancreas specific protein disulfide isomerase (PDIp, Desilva et al., 1996) which has been mapped by somatic cell hybrids and FISH to human chromosome 16p13.3.
+The presence of a cDNA sequence for PDIp allows for the refinement of the computer generated gene model and the precise annotation of the genomic structure of this gene, which is currently undocumented.
+A second gene consisting of 7 exons is identified as a member of the GDP-dissociation inhibitor family by homology to a mouse rho-GDI (79% identity).
+Again the gene model for rho-GDI can be refined by using the cDNA sequence (MUSRHOG, L42463) which, even though it is heterologous, allows the precise identification of intron/exons boundaries and the annotation of this as yet undescribed human gene.
+It is also interesting to note that the PDIp and rho-GDI genes are very close together, the 3' end of rho-GDI and the 5' end of PDIp are separated by less than 300bp, and transcribed in the same direction.
+[gen-1.gif]
+Another gene model containing 12 exons shows similarity to a number of G-protein signaling factors (BLAST P value 
+It is probable that with further analysis the gene represented by this model could be further characterized.
+A final gene model made up of 3 exons does not appear to have any close relatives in any of the protein sequence databases.
+It does, however, hit a number of ESTs in dbEST so it presumably represents a genuine transcriptional unit and its presence in cDNA libraries derived from several different tissues suggest that it may be widely expressed.
+The last transcriptional unit identified by this analysis is a single, excellent exon which is not represented in the protein sequence databases but which does hit a number of ESTs.
+ESTs corresponding to this exon are found in several cDNA libraries again suggesting a general expression pattern.
+We do not imply that the above analysis is exhaustive, for example we do not report any of the bibliographic data related to these genes nor are any of the possible biochemical and/or structural data which may be relevant presented.
+Neither have descriptions of the gene families of these proteins nor the evolutionary relationships of these proteins been reported.
+Nor are the gene modeling methods as sophisticated as those we will apply in this project.
+Yet this preliminary analysis provides much more useful information than can be found in the current DNA sequence database entry for this cosmid.
+It should also be noted that this analysis took more than a day's work for a knowledgeable analyst.
+Clearly if even this minimal level of biological annotation is to be included in all of the sequence currently being generated at the major sequencing centers, a more streamlined methodology must be developed.
+It is also important for a user to know what analysis was preformed on the data and when.
+It is just as important to know that if the sequence annotation reveals nothing of biological interest, there really is nothing there.
+In another cosmid from 16p13.3, similar analysis found a paucity of coding exons and it is important that a user knows the way in which the data were generated so that they that the absence of a feature doesn't merely reflect a lack of analysis.
+This collaboratory recognizes the analysis of this data as a community-wide problem which needs a clearly defined plan and course of action.
+Sporadic manual methods, applied by interested individuals (as third party annotation) will not provide the consistent level of base annotation which is really needed, and such processes will not have the required throughput to keep up with data generation rates.
+Part of the rate limitation is due to the difficulty in capturing, organizing and assembling the data, the necessity to reformat the data for various analysis methods and for multiple database submission tools.
+In fact, in a workshop at the most recent VIIth Genome Sequencing and Analysis Conference in Hilton Head, SC, the most common complaint by biologists about analysis was the necessity to continuously reformat data to apply the next tool.
+Analysis tool designers have in general failed to achieve any significant level of interoperability between systems.
+Different tools are not designed to work with one another or be easily configured into any larger framework for analysis and annotation.
+This was also alluded to in a 1992 review of DOE informatics which stated:
+Very little central direction is given to the DOE genome informatics effort.
+As a consequence, the individual centers and off-site investigators are operating in independent, often conflicting directions, with duplication of effort.
+For example, standardization of data interfaces for software tools was not mentioned as a goal at any of the centers (in the review).
+Many of the software tools include modular features (which) were being implemented as tightly coupled components of their respective laboratory information systems and not as components which could be easily transferable to any other site.
+This leads to an unfortunate duplication of effort.
+In addition, successes at any of the centers are not recognized and propagated to other centers.
+The framework we propose to create using distributed object technology will provide the basis for interoperability, modularity, software sharing, component reuse, and analysis system growth that will be necessary for the next phase of the genome project.
+Databases in general have also been slow to deal with both the magnitude and complexity of this analysis.
+This is partly because the analysis is not the primary mission of the databases, whose primarily job is to collect and manage the data.
+Some databases, such as GenBank, will not accept computer generated annotation at the present time (unless generated in-house using in-house tools) and in this model, analysis results must be regenerated every time an individual needs it.
+This is a very inefficient process, with significant inherent redundancy of effort, and it requires the user to have the expertise to facilitate the required analysis.
+This is generally not likely to produce optimal results.
+GSDB has taken the issue of linkage to analysis systems more seriously and is providing mechanisms to link through the database interface to tools.
+GSDB has also has taken steps to provide mechanisms for bulk data and annotation submission.
+However while enabling analysis from the database interface, this mechanism does not provide or define the means by which analysis or annotation is actually generated (what tools and methods are used and by whom).
+Therefore, the responsibility for large-scale analysis falls upon the bioinformatics community, which must address the infrastructure and provide the effort needed to facilitate annotation on a consistent and community-wide basis.
+We believe that by linking data generators, tool makers, database designers, and biologists together, we can implement the missing components of this infrastructure and provide a solution to the community at large.
+In considering a large-scale analysis and annotation process, it is useful to consider models for this which have developed previously.
+Procedures for high-throughput analysis have been most notably applied to several microorganisms (Haemophilus influenzae (Fleischmann et al. 1995) and Mycoplasma genitalium (Fraser et al. 1995) using relatively simple methods designed to facilitate basically a single pass through the data (a pipeline which produces a one-time result or report).
+We believe however that this is too simple a model for the analysis of genomes in the long term.
+For one thing, the analysis of genomic regions needs to be updated continually through the course of the genome project - the analysis is never really done.
+On any given day, new information relevant to a sequenced gene may show up in a database, and new links to this information need to be generated.
+Secondly, the more complex structure of human genes, and the availability of new analysis methods provides both a necessity and an opportunity to carry out more sophisticated analysis on this data than was needed for on microorganisms.
+Additionally, our capabilities for analysis and the state of the sequence itself will change with time.
+We will be able to recognize many features (like regulatory regions) better in several years than we can now.
+There will be significant advantage in reanalyzing sequences and updating annotations continually as methods improve and databases with relevant information grow.
+In this model, annotation is a living thing which will develop richness and improve in quality over the years.
+The ``single pass-through pipeline'' is simply not the appropriate model for human genome analysis.
+In addition few genome centers are applying state-of-the-art methods to their initial analysis, partly because of lack of computer power, partly because newer more accurate methods have not been widely deployed in the community or are not understood, and partly because proper analysis and annotation using current methods take a lot of time and effort.
+Genome centers are primarily sequence generators and are often content to leave the analysis to someone else.
+Center informatics groups have a very difficult local support mission and are often unable to deal with ``non-essential'' issues.
+So whose mission is it? How will we analyze 2 megabases a day in a consistent and high-quality manner? This collaboratory will work to ensure that this question is answered for DOE sequencing projects and implement a model for the rest of the community as well.
+We will also commit to analyze and annotate large amounts of ``orphan'' data which would otherwise go unanalyzed by the sequence generators (with their permission and help).
+Also, part of the reason that analysis and annotation has been placed on the back burner is that methods for many types of analysis are only partially accurate.
+A strategy to compensate for this is the ``shove all predictions from all tools into ACeDB'' method, which assumes that truth can be established at some later date by a human annotator.
+Better methods of analysis, better data management models, and better analysis models need to be applied.
+Even though we have highly optimized methods for producing the sequence data, current manual processes for sequence input, analysis, comparison, information retrieval, and results submission represent a very wasteful and inconsistent process.
+As a community, we are relying on Internet posting, analysis by random individuals, and ad hoc one-pass pipelines which simply do not scale to high-throughput genome sequencing.
+We believe that, just as we have teams of experts for generating the sequence, we need to have teams of experts who help the community analyze and annotate the sequence.
+The members of this collaboratory represent such a team, and can provide services with impact community-wide.
+Through good engineering and high-quality services, we can make analysis and annotation much easier to generate, maintain and update, and make these important capabilities accessible to individuals and genome centers alike.
+It is not our mission to impose standards for how annotation should be done, but rather to make it easier to access and utilize a variety of methods which can add value to the sequence through high-quality analysis.
+It is essential that we apply the next generation of organization, methods and infrastructure to this problem.
+III.
+APPROACH
+III.1 Basic System Concept
+The main components of the Analysis and Annotation Engine consist of (1) a number of services, (2) a broker that oversees distribution of tasks, and (3) a data warehouse.
+The services will be implemented using distributed object technology.
+Each provided service will have a well defined interface that facilitates integration with other processes.
+These components will be used to build and maintain a description of each genomic sequence region entered into the system and update these over time as new information or analysis can be facilitated.
+Our data model uses a physical genomic clone as a basic information unit since most genome centers producing sequence data do this also, and this also makes it easy to link to entities in the GDB(TM) and GSDB databases.
+Basically each clone has map information associated with it and information about the contigs from it which have been sequenced.
+In some cases the sequence will be complete for the clone while in other cases, several contigs may have been sequenced with uncharacterized gaps and uncertain order.
+Our system will input, construct and maintain a description of these reagents and link analysis results produced through pattern recognition, sequence comparison, etc. to this physical clone framework.
+To build and continually update the analysis associated with these clones, several types of servers and agents must work toward objectives which benefit this central data.
+We use the term servers to indicate systems which provide analysis and agents to indicate processes which interact with data sources such as genome centers or databases.
+For example, we view access to SWISS-PROT to get information about a protein as facilitated by an agent, while an in-house sequence comparison algorithm would be set up as a server.
+The multiple processes of analysis, update, input, etc. will be going on all the time asynchronously under the guidance of the service broker.
+We show these agents and servers schematically in Figure 2.
+In this project, our workspace (contained in a data warehouse) is designed for members of the community to conduct analysis and manage analysis results.
+It is not a substitute for local data management at genome centers or for central public databases.
+What is maintained in the warehouse is a working copy of data which users (individuals, genome centers, central databases, and this collaboratory) place there for purposes of facilitating an ongoing analysis process.
+Computer-based agents will operate on the data, based on arrangements made by users or using default options provided by the system.
+Users can direct agents to facilitate one-time tasks or set up ``standing instructions'' which will trigger analysis events over time, either periodically or conditionally.
+An example of a conditional operation would be to submit analysis results to GSDB when a particular type of analysis has been done in the system.
+A periodic operation would be to ``check SWISS-PROT every 24 hours for any new proteins related to a gene in my sequence, and if so create a data link to the SWISS-PROT entry''.
+Agents may be invoked to input data from particular sources, configure and carry out series of analysis steps using the available analysis servers, submit analysis results to databases, and many other tasks.
+For example we will construct agents to input sequence and clone metadata from genome centers, central databases, or individual users, agents for information retrieval (data mining) of remote databases and agents for submission of annotation and analysis results to public databases like GDB, GSDB, GenBank.
+We will construct or use existing servers for analysis operations such as pattern recognition, gene modeling, sequence comparison.
+Since this is a distributed system, servers may be physically remote.
+Unlike any other existing system, components for data input, analysis, storage, update and submission will all be linked in a single framework.
+[gen-2.gif]
+Using this approach, a user can define a set of instructions for the Analysis and Annotation Engine that improve the analysis state of the data, recognize the existence of new relevant information, submit new findings to public databases, etc. over long time-frames.
+Unlike the one-pass analysis pipeline, this approach provides greater flexibility to configure analysis steps, triggers, conditions, and updates.
+Also unlike the pipeline approach, where steps must follow one another, individual processes for input, analysis, data mining, etc. in this system are effectively decoupled from one another and interact with one another only at the level of the data in the warehouse.
+This leads to full modularity of design with the accompanying advantages of flexibility and an ease of addition of new processes to the system.
+Using this approach the analysis of each genomic region entered into the system can remain current and we will be able to provide biologists as much information about a sequence as is feasible at any given time.
+III.2 Interoperability, Flexibility, and Extensibility
+The model we propose, which uses a broker between analysis tools or agents and the data warehouse, has many advantages in terms of being able to establish interoperability, arrange for flexible steps in analysis, and being able to extend the system to incorporate new tools and services.
+The broker deals with details of I/O to the warehouse and as a result agents and analysis servers do not need to know the details of data formats in the warehouse or where data is physically stored.
+The broker will get data from the warehouse as needed and package relevant parts of the data for specific agents or servers.
+We believe that the ways the data is structured for presentation to analysis tools and agents can be relatively simple and standardized.
+For example many analysis programs use a segment of sequence and a set of parameters as input.
+It should be possible to create a standard interface formats where input data can be presented to such programs.
+We may likewise be able to define a limited set of standard ways or presenting analysis results of various kinds.
+For example, many analysis tools define a feature output similarly and the overall output could be the same sequence and an array of features.
+Simple features like a TATAA box or predicted exon would have a start and end position, quality parameters; an alignment would have start and end plus the name of the aligned sequence with coordinates.
+Agents and servers will return results such as feature objects to the service broker which will route them to the warehouse, the user interface for graphical display (in which the user service than assembles the features into lines and marks the sequence in an intelligent manner) or to a report generator, submission tool, etc.
+By creating a modest set of standardized ways of representing typical data types, it becomes fairly easy for analysis steps to be linked together through the broker.
+A given tool (server) merely needs to make use of the existing formats and it can automatically be linked into a set of steps configured by a user.
+Existing tools and services can also be incorporated.
+For example, if we were to incorporate BLAST, we would build a wrapper that takes the input and constructs BLAST email, web request, or command line, and parses the output to generate the feature list which is returned to the broker.
+(The wrapper would likely be written to handle ASN.1 format to be more reusable.)
+A great advantage to this system is its modularity and extensibility.
+Agents for new databases can be added and new analysis modes can be facilitated by new servers without undoing or significantly changing existing systems.
+Future developments are made easier by allowing developers to focus on writing good algorithms, while making use of the input and output services from the broker.
+This way the I/O is does not have to be duplicated for every new service and the tool is immediately compatible with other processes in a manner somewhat similar in spirit to the World Wide Web.
+This differs significantly from a tightly coupled pipeline approach where components are depend on one another in fixed and specific ways, and where slower operations, such as data mining, are difficult to include since they slow down the pipeline.
+In our model we have effectively decoupled the various processes from one another, but provided generic ways for them to interact as needed.
+It is inevitable that changes in the data model (the representation of analysis results) may be needed over time to incorporate new types of information or analysis, but this can be done in ways which do not undo or conflict with previous parts of the model, and such changes should have a limited effect on the many component parts of this system.
+One of our goals is to be able to easily modify and adapt this framework to the changing analysis needs throughout the course of the genome project.
+We will make information available so servers can be added by other designers and tool builders.
+We expect this framework to act as a nucleation site for tool builders (described in Task 3).
+Unlike the description of DOE informatics in the 1992 review, this model can achieve interoperation of tools, software reuse by multiple centers and a flexible, user defined coupling of processes.
+III.3 Services
+The model we have described provides the basis for several types of services for users.
+These include services for interactive access by individuals, batch processing modes for genome centers and the collaboratory, and services for analysis, data mining and data submission to central databases.
+A schematic of these services is shown in Figure 3.
+We describe these briefly here:
+[gen-3.gif]
+Service Manager / Task Broker
+The Service Manager is a central routing point in the system.
+There can be as many brokers as necessary to cope with the workload.
+Services that come on-line, have to register with the broker and unavailable services are marked as down.
+The broker also keeps track of which services have been requested and answered.
+An unanswered service will be forwarded to one other analysis server if the service is redundantly provided.
+If the request cannot be answered by the second server it will be forwarded to an operator.
+The service manager will deal with issues of prioritizing and task scheduling based on an objective function.
+Large-Scale Data Input Services.
+Sequence data from large producers, e.g., genome centers, databases, can be processed in an automatic manner.
+We will negotiate with the data producers an appropriate exchange mechanism for the data and help to configure the kinds of analysis that should be performed on the sequence.
+We envision building software agents that will fetch data from ftp sites and similar ``publication'' mechanisms and pipe the sequence data through a mutually agreed upon set of analysis routines.
+The results can be returned to the data providers, and if specified by the data provider, submitted to public genome sequence databases, and maintained in the warehouse.
+Individual User Services.
+The user input services will consist of graphical user interfaces to specify analysis tasks, submit sequences for analysis, and display results.
+Biologists will be able to select services they want applied to their sequence, specify parameters, and send the sequence to the service broker which will route requests to the appropriate service providers, e.g., a compute server that runs the requested analysis on the sequence.
+A special type of agent for submission of data to central databases will be provided based on the SubmitData system developed at LBNL (see Appendix I).
+Options for submission of data to central databases will be configurable by users.
+Analysis Services.
+Analysis services form one of the core components in the Analysis and Annotation Engine.
+Members of this collaboratory are developing new algorithms for sequence comparison, pattern recognition, and gene modeling as a result of current DOE and NIH-funded projects.
+Many of these, as well as other existing computational biology tools, will be incorporated into this framework.
+Through the use of a common interface it will be possible to add new services and build CORBA wrappers to integrate existing services.
+Because analysis services can be anywhere on the Internet, any respectable computational biologist will be able to offer a new service to the community by implementing the standard interface and registering it with the broker.
+Dedicated high-performance compute servers making use of supercomputer centers at ORNL, LBNL, and ANL will be able to carry most of the load, but additional compute servers can be added anytime, if there is a need.
+Data Mining Services.
+Many types of information with potential value for interpreting each newly sequenced genome region must be retrieved from more than a dozen remote databases.
+Automated methods to retrieve, collate, and fuse database information will be implemented to provide insight into a gene's biochemical function, pattern of expression, organism function, the corresponding protein's potential structure or structure class, functional family, functional motifs, metabolic role, and potential relationship to disease phenotypes.
+We will construct two kinds of agents: update agents and search agents.
+Update agents deal with databases, e.g., GenBank, and other data sources that produce data regularly and will automate maintenance of the data warehouse.
+Update agents will also be used to extract summary information, e.g., all references from SWISS-PROT to other databases.
+Search agents handle more specific information gathering tasks, e.g., where the source of the information is not certain.
+Information collected this way would be stored in the warehouse with a time stamp, and be available as annotation.
+Search agents will very often return pointers to relevant information in other databases.
+This way over time we can build a respectable repertoire of genome information without downloading the universe onto our disks.
+For search agents, a user would be able to specify which connections and what order to follow (in a manner similar to configuring a set of analysis tasks).
+Data Warehouse
+The data warehouse will be a distributed storage facility for sequence data, metadata, analysis results, data links, and parameters to run the analysis routines.
+We will evaluate the usability of more generic search engines, like IRx(R), Lycos, Inktomi, etc., to generate rigorous indexes of genome related information.
+Such an index would greatly facilitate the annotation.
+It would be possible to extract related information about a sequence by merely examining the index that contains very brief descriptions and links to public databases.
+The user interface or a report generator is left with the task of following each link and retrieving relevant information from the databases.
+The data retrieved by the intelligent agents or calculated by the Analysis and Annotation Engine must be efficiently stored in the warehouse for optimal access by the Engine as well as users.
+The terabyte storage facilities at the CCS and NERSC are available and could be used to handle the data warehousing needs of the project.
+Some data sources include multimedia (gene expression and anatomical objects which involve multidimensional data).
+The data warehouse component of the project will leverage components developed in previous DOE computing efforts and will need to optimize the access times by both the Analysis and Annotation Engine itself and by mining agents seeking specific calculated results.
+III.4 Task Outline
+We conceptually divide the project into five research and development tasks described in Section IV.
+RESEARCH PLAN.
+The following is an outline of these sections:
+Task 1.
+Framework for the Analysis and Annotation Engine
+* Building the Framework * Service Manager / Task Broker * Defining Object Interfaces
+Task 2.
+Data Input and Visualization Services
+* Large-Scale Data Input Services * User Input Services * Visualization, Data Submission Tools, and Report Generators
+Task 3.
+Analysis Services
+* Pattern Recognition Algorithms * Gene Modeling Systems * Sequence Comparison Systems * Providing Constraints for Sequence Assembly * Tools for Comparative Genomics * Protein Characterization Tools * Other Analysis Tools and Resources
+Task 4.
+Data Mining Services
+* Data Mining Agents * Data Accessors and Translators
+Task 5.
+Data Warehouse
+* The Data Model * Warehouse Databases
+Project Plan - Implementation, Organization, and Data Flow i. Detailed Implementation Plan ii.
+The Role of Collaboratory Members in System Implementation iii.
+Organization and Management of the Collaboratory iv. Large-Scale Analysis and Annotation Plan by the Collaboratory
+IV.
+RESEARCH PLAN
+The Analysis and Annotation Engine incorporates a number of functions that will work in parallel and be distributed among the members of the collaboratory.
+The scenario somewhat resembles existing web services, in particular, the BCM Search Launcher (Smith et al. 1995) which presents a common interface to a number of sequence analysis tools on a web page, forwards the query to an appropriate web server executing the analysis programs, and enhances the results by inserting hypertext links to databases.
+But instead of providing a common, easy-to-use front end to biologists, we intend to take a more active role in establishing tools and in acquiring and analyzing genome information.
+We propose to build a more general tools framework that will use state-of-the-art Distributed Object technology.
+The main process steps are given below and illustrated in Figure 4:
+i. Data Input Agents poll Internet sites of participating genome centers to collect any new data that has been posted.
+New sequences and metadata are captured, placed in the analysis queue.
+Central community databases with interfaces which support analysis, like GSDB, can access the system by posting data to be analyzed in the queue.
+Individual users may use other interfaces, e.g., web interfaces, email, or special graphical user interfaces, to submit sequences to the analysis queue.
+An overall process manager maintains lists of available services, servers, and resources.
+ii.
+The Analysis Queue feeds a series of Analysis Servers which execute tools for sequence similarity searches, pattern recognition, hybrid pattern recognition, and sequence comparison based gene modeling, etc., in a number of separate processes.
+These analysis servers are running continuously polling the queue maintained by the process manager.
+Multiple servers which perform the same function will compete for tasks and achieve approximate load balancing.
+Implementations of analysis algorithms for parallel machines and specialized sequence comparison hardware will be integrated as available services.
+The planned analysis services are described in Task 3.
+iii.
+Upon completion of the analysis, Analysis Results, such as gene models, promoters, and repetitive DNAs, will be placed in the Data Warehouse and linked to the clone or clones on which these features appear, updating the description of this genomic region.
+iv. Data Mining Agents make use of analysis results such as gene models to find information at remote sites which may be relevant to the analysis.
+Information returned by data mining agents is placed in the warehouse in the appropriate attributes of the data model.
+In some cases inferencing related to data mining may provide information which triggers new analysis tasks.
+Each data mining agent will be designed with a particular information retrieval goal (to get a particular type of information or result).
+One or several data mining agents may be designed for a given database and some agents may facilitate cross-database query.
+These agents may make use of existing systems such as Kleisli, OPM, or Magpie which are designed to facilitate translation and multiple database query or may have to use other and potentially ad hoc methods.
+Data mining agents are described in Task 4.
+v. Data Submission Agents submit new results to participating genome databases, with each submission agent tailored to the types of data appropriate for the target database.
+Depending on the database, the source of the original sequence and arrangements made with sequencing centers, the sequence itself may or may not be part of the submission.
+A special type of submission agent will be constructed to return results of analysis to the genome center responsible for the data.
+Data submission agents are described in Task 2.
+[gen-4.gif]
+While we have described these events in a somewhat linear order, it is important to realize that the many processes for capture, analysis, mining and submission are going on continually and asynchronously.
+An overall objective function will be used to prioritize tasks in the several queues and between queues so that the most time critical steps are done expediently.
+We view our warehouse somewhat like a real warehouse of perishable items, where expiration dates and consumer demand determine the replenishment policy.
+The objective function is designed to facilitate the most essential tasks first and prevent problems, bottlenecks or spoilage.
+More detail about the warehouse, the objective function, and overall framework for the task management is described in Task 1 and Task 5.
+In our warehouse we must necessarily keep a brief description of clones, genes, etc.
+It is the responsibility of central databases, however, to provide this information to the community.
+We view our system as a ``staging ground'' for data and analysis which is designed to provide the basis for information in public databases or feedback to data producers or other users.
+By mirroring the structure of data in GSDB and GDB in our data model we expect to be able to transfer results to these databases without significant difficulty and also provide links to data which will only reside in these databases.
+Task 1.
+Framework for the Analysis and Annotation Engine
+Task 1.1 Building the Framework
+Designers of computer software have been searching for a rigorous, building-block approach to the design and construction of programs for many decades.
+While early concepts of these building blocks, e.g., subroutines in COBOL and FORTRAN, showed promise to assemble complex software from smaller parts, they were soon replaced by better, more powerful techniques, e.g., structured programming, inheritance, polymorphism.
+Each successive step has incorporated lessons learned from the previous technology, kept the parts that work, and added new concepts.
+Today's modern Object Technology promises reduced development cycles through extensive reuse by encapsulating state and behavior into objects.
+Objects are defined by classes which can be grouped into hierarchies.
+Frameworks and Design Patterns (Gamma et al. 1995) define the complex interplay of classes and objects at various levels of granularity.
+While an object-oriented framework defines the actual static and dynamic parts of a program, a design pattern gives an abstract model for reusing programming concepts.
+The Object Management Group(R) (OMG(R)) is addressing the problems of even wider reuse by building a set of standards for framework interoperability.
+Their Common Object Request Brokerage Architecture (CORBA(R)) technology defines how objects and their interfaces can be dynamically created and destroyed within a heterogeneous distributed network of object-oriented software systems.
+An Object Request Broker(R) (ORB(R)) controls and manages interfaces and facilitates interoperation among the connected client and server objects.
+Distributed object technology promises to bring plug-and-play software componentry, interoperability of objects, portability of objects independent of operating systems and hardware platforms, and coexistence with legacy application through wrappers.
+While CORBA is not the only choice for implementing distributed objects, it is certainly farthest along in the development of tools and implementations.
+Microsoft's OLE/COM(R) (Object Linking and Embedding / Component Object Model) technology remains tied to the Windows operating system and does not support distributed components, i.e., it lacks remote method invocations and distributed objects.
+We propose to use CORBA technology to build a general, reusable framework for sequence analysis tools and related services.
+The CORBA standard was first published by the Object Management Group (OMG) in 1991 and addresses the need for a standardized framework for application integration and interaction across diverse architectures and environments.
+OMG, with over 600 members, is the worlds largest software consortium dedicated to fostering interoperability and portability of application software.
+The technology has been implemented by about two dozen software companies, many of which are working on their third release of a CORBA(TM) compliant product, an indication of the maturity of the technology.
+A key feature of the CORBA(TM) model is the isolation of the client and server by a well-defined interface that allows the client application to invoke functionality on the server without knowing implementation details.
+This affords the software developer total freedom in the way the service is implemented, e.g., the programming language, underlying hardware.
+Communication between the client and server is enabled by an Object Request Broker(R) (ORB(R)) that acts as a software bus.
+The encapsulating interface is defined using IDL (Interface Definition Language) which can be compiled to generate client stubs and server skeletons in a number of programming languages, e.g., C, C++, Smalltalk, Ada, and more recently, Java(TM).
+The standard defines both a Static Invocation Interface (SII) for predefined communication interfaces and a Dynamic Invocation Interface (DII) that allows a client to learn about available functions on a particular server.
+The DII would allow the agent to dynamically adjust to changing data structures on the server.
+At least two companies are working to improve performance over high speed ATM networks, an important feature in the context of this proposal.
+The OMG(R) also defined standards for common object services, CORBAservices(TM), that provide standard functionality for 16 application areas, ranging from providing persistent storage, externalizing data, querying databases, to copying, moving, naming services, to more sophisticated trading and transaction services.
+Implementations of the CORBA architecture are available from a number of vendors and for a broad range of platforms and operating systems.
+A number of vendors have announced Java(TM) bindings to CORBA(TM) and Manfred Zorn, one of the P.I.s, has tested the interoperability of the BlackWidow/Java implementation with other CORBA implementations, e.g., Orbeline/C++ and HP Distributed Smalltalk.
+A general overview of the framework was shown in Figure 3 on page 19.
+As described in Section III.
+APPROACH, a Service Manager/Task Broker that relates requests for services to the service providers.
+Service requests will come primarily from Data Input Agents that routinely contact public Internet sites of collaborating Genome Centers to retrieve new sequence information.
+These agents will launch a standard analysis and annotation request from the system.
+We anticipate that the bulk of the throughput will be handled in this automated fashion.
+Individual users will be able to access User Services of different kinds to either launch analysis jobs or view results of completed annotation runs.
+Biologists will be able to select the services they want applied to their sequence, specify parameters, and submit the sequence to the service broker which will forward the request to the appropriate service provider, i.e., a compute server that runs the requested analysis on the sequence.
+The Analysis Services bind the analysis servers, i.e., the computers running analysis software, to the framework.
+Through the use of a common interface it will be possible to add new services and build CORBA wrappers to integrate existing services.
+The analysis servers can be anywhere on the Internet, any computational biologist will be able to offer a new service to the community by implementing the standard interface and registering it with the broker.
+Dedicated high-performance compute servers, e.g., massively parallel computers and large workstation farms, will be able to carry most of the load, but additional compute servers can be added anytime if there is a need.
+In order to support the analysis service it is necessary to collect sequence information, annotation, etc.
+We will develop Data Mining Agents that will search databases, retrieve information, and stock the Data Warehouse.
+Since there are many more data sources available than we can possibly keep up-to-date and on-line in our warehouse, the agents will have an evaluation strategy or objective function, that will govern which databases to update, which information to replace.
+We plan to incorporate existing tools to work as data mining agents, e.g., OPM for GDB, Kleisli, Magpie, and develop new agents if necessary.
+[gen-5.gif]
+Figure 5 shows a more specific view of this architecture: Using the Internet as the backbone, distributed client and server objects will communicate via an Object Request Broker (ORB).
+The ORB is shown in the figure as a continuous piece, but in reality, each client and each server will incorporate vital parts that together embody the ORB.
+Some vendors have additional stand-alone daemons representing ORB functions, e.g., the osagent used by ORBeline, while others use run-time libraries to represent important ORB functions, e.g., the Interface Repository.
+Via an ORB, distributed client and server objects are able to communicate with each other, e.g., a client may invoke a function in a server object.
+These functions are expressed in an Interface Description Language (IDL) and stored in the repository.
+The IDL interface definitions can be compiled into client stubs and server skeletons that are incorporated into the client and server implementations.
+We will define the relevant interfaces for the proposed services.
+Using IDL, services can be implemented in a number of programming languages and hardware configurations.
+It is possible to add services while the system is operational.
+It should be noted here that this model represents a departure from the existing monolithic software model that is widely employed in bioinformatics.
+Instead we propose to build a set of interconnected services that cover graphical user interfaces, access to databases, and data processing.
+Future developments are facilitated by concentrating on specific services and plugging them into the framework, i.e., developers can focus on writing a good algorithm, would be able to get the input data and sequence from our framework, and return the results back to it.
+Time consuming development of existing functions can be offset by reusing existing services.
+Task 1.2 Service Manager / Task Broker
+The service manager or task broker is a central routing point in the framework.
+There can be as many brokers as necessary to cope with the workload.
+Services that come on-line, register with the broker, unavailable services are marked as down.
+The CORBA standard specifies currently 16 CORBAservices, some of which will be useful in building the framework.
+Since many of the analysis services require significant resources, e.g., compute time, data storage, client requests may not be handled in short order, but instead put in a processing queue, an EventChannel.
+The CORBA Event Service allows objects to dynamically register or unregister their interest in specific events, e.g., requests for a particular service.
+An EventChannel supports both push and pull type operation, i.e., a request by a user agent may trigger a reaction from the appropriate analysis service (push) or an analysis service may periodically check the EventChannel for new requests (pull).
+The broker maintains an EventChannel for each of the services and keeps track of which services have been requested and answered.
+An unanswered service will be forwarded to one other analysis server if the service is redundantly provided.
+If the request cannot be answered by the second server it will be forwarded to a human operator to determine the cause of the problem.
+The broker will be responsible for authenticating users that access the system and authorizing the use of system resources.
+Current CORBA implementations have only very limited support for the CORBA Security service that should handle these issues, but are compatible with existing technology that might be used instead, e.g., OSF Kerberos or Sun NIS+.
+Task 1.3 Defining Object Interfaces
+A key feature to the proposed tools framework is being able to plug in new analysis tools.
+In order to accomplish that it is necessary to provide a standard interface that is general enough to allow interoperability and yet specific enough for a particular analysis tools to still be useful.
+The interface has to define input and output parameters to achieve interoperation.
+A number of existing software packages demonstrate the feasibility of such a common interface:
+GCG
+The GCG package (Genetics Computer Group URL) contains a number of programs for many applications in molecular biology spanning from sequence analysis, assembly, project management, to graphical display tools.
+The programs in the package are derived from a set of useful tools and new tools developed by the community continue to be added.
+The programs exhibit a common command line interface that allows users to specify input and output parameters in a consistent format and aids the user to cope with the initially overwhelming complexity of these tools.
+This common format can be used to string tools together and pipe results from one program into another.
+This interoperation is achieved by rewriting the tools extensively to fit the common interface model, i.e., replacing the original I/O with code that use calls to a common library of input and output routines that conforms to the package guidelines.
+While this approach is acceptable for a software company, it cannot be seen a general model where a diverse community develops software on heterogeneous hardware platforms, languages, etc.
+GDE
+The Genetic Data Environment (GDE) (Smith, S. 1993) is built around a core sequence editor that displays any number of sequences.
+Tools can be invoked on a set of sequences to perform various kinds of analysis.
+Analysis programs can be integrated into the GDE environment by describing the input and output parameters in a descriptive language.
+The description of a program is used to interrogate the user about required input and output parameter, generate a graphical window in which the user can alter default settings of program parameters, and formulate a command line string that can be executed by the operating system to perform the selected analysis operation.
+In order to show the results of some of the tools, a generic text window is used to display the textual output, i.e., for some sequence similarity search tools the program output is not parsed and displayed in a graphical user interface, but instead the familiar text format is presented in a terminal emulator.
+ace
+The ace format is supported in many labs that use the ACeDB data management system for public and in-house data.
+The C. elegans consortium has embraced the.ace format and put considerable effort into producing translators to and from ace format.
+It is read and interpreted by the ACeDB data managers (and error checked at the same time), but it can just as easily be read by other non-ace codes.
+The ace format is a tag value format, where all the information that pertains to one object is collated in one paragraph.
+A blank line separates data from different objects.
+The first tag in the paragraph is the name of the object that is referenced.
+Since the name is a plain English word, the format is entirely human readable and self-explanatory.
+Every object is addressed using its common name, but it is quite easy to associate an internal key to those names to make the ace format compatible with databases that do not use object names as keys.
+Learning from these and other software integration projects we will attempt to build a framework using modern distributed objects technology.
+Most sequence analysis tools require three types of input parameters: * a single sequence or a set of sequences that need to be annotated.
+Many standard formats exist already.
+Popular formats include plain sequence, FASTA format, GenBank format.
+Some of these need to be defined better before they can be used as standards, but in essence, there seems to be agreement in the field that these are valid standards.
+* a set of parameters for the algorithm to modify program behavior.
+Each algorithm has a different set of parameters, but these sets are well known and it is possible to define a default set.
+Most researchers use a default set already and, since the algorithms are well characterized, a standard set of parameter defaults could be created for different purposes, e.g., sensitive, specific, etc., to make it easier for non-experienced users.
+* one or more databases that will be used to search against.
+The latter only applies for algorithms that include homology searches.
+However, many genefinding methods now include built-in sequence comparison searches as well.
+We will develop a Parameter object that will be used to define program parameters, and that will be handed over to all the server objects involved in performing an analysis function.
+Program output can be treated in a similar manner by defining a sequence based metric and placing features on the sequence.
+Thus program output would have to be modified or existing output parsed to generate an AnnotatedSequence object that contains a set of AnnotationFeatures.
+For simple features, e.g., a sequence signal like a TATAA box, the feature object would specify the start and end possibly end of the feature, quality parameters, and the name and short description of the feature.
+An alignment would additionally have the name and spanning coordinates of the aligned sequence.
+An important aspect is to capture the feature and disregard any assumptions on implementation or display the features.
+A client receiving such an AnnotatedSequence would then use this information to either create a graphical display, write a detailed report, or feed the data into a database or further analysis program.
+Such an approach makes it possible to integrate analysis tools into the framework and provides the opportunity to use features constructively in the analysis.
+An object specification of a Genome Exchange Model (GEM) in OMG IDL(TM) is shown in Appendix II.
+Goals for Task 1.
+Framework for the Analysis and Annotation Engine:
+Year 1
+* Refine framework concept through discussion with collaboratory members * Construct initial Service Manager / Task Broker framework * Define initial object interfaces
+Year 2
+* Continue implementation of Service Manager / Task Broker * Define comprehensive set of object interfaces * Extend control interfaces to automate operation of the Analysis and Annotation Engine * Incorporate additional CORBAservices
+Year 3
+* Finish implementation of tools framework * Define object interfaces for additional specialty objects * Advanced control functions in the Service Manager
+Task 2.
+Data Input and Visualization Services
+Task 2.1 Large-Scale Data Input Services
+We expect to implement several methods for sequence data capture and input:
+Genome Centers
+We will negotiate with Genome Centers to set up mechanisms for accessing their finished or partially assembled daily sequence data.
+Data input agents will routinely access anonymous ftp sites to search for new sequence data and feed them into the Analysis and Annotation Engine.
+Initially these agents will be implemented using simple scripts, but will later be replaced with CORBA based agents that will be fully integrated in the tools framework.
+Sequence Databases
+The Analysis and Annotation Engine will be used to annotate finished sequence clones which have been submitted to central sequence databases such as GSDB (curated by collaboratory participants Fields, Keen and Schad - NCGR).
+Both automated and interactive procedures for interoperation with the GSDB Annotator interface tool (Keen et al. 1996) will be facilitated to allow individual users or the GSDB staff to access the Analysis and Annotation Engine from within a GSDB session or during the data submission process.
+Clone metadata will include identifiers assigned by the GDB central mapping database (Genome DataBase, a collaboratory participant) (Fasman et al. 1996), and possibly additional data about the state of the sequence assembly, e.g., known sequence gaps, known fragment order or partial order, information about data quality and redundancy, and information related to the underlying physical map.
+Standards for defining the structure of such information will be established with the genome centers and with the advice of the database design teams for GDB (Fasman, Cottingham, Kingsbury) and GSDB (Fields, Keen, Schad), who are participants in this project, and where detailed analysis results will eventually be archived.
+The sequence data and its annotations (analysis results) will be posted at this project's web site, where it will be publicly available via HTTP connection, either as static ``pages'' or by invoking common gateway interface (CGI) processes.
+Procedures for returning information to each respective genome center will also be facilitated using the web and HTTP exchanges as well.
+We will participate in arrangements between sequence generators and the GSDB and GDB databases, to input analysis generated in this project into these databases together with their sequence submissions.
+Task 2.2 User Input Services
+Direct input services are important for both the occasional biologist user and members of the collaboratory to test services or other maintenance procedures.
+For individual users who want to analyze and annotate sequence we will develop simple clients that are capable of submitting sequence data for analysis and are integrated into the CORBA framework.
+These clients will initially be web-based clients similar to the BCM Search Launcher web pages.
+We will define HTML forms pages on this project's web server which allow users to select analysis tasks.
+We will define standard sets of parameters for the analysis services to facilitate access and usability.
+Within the second year we expect to implement a CORBA-based client that is fully integrated into the tools framework.
+Since it is possible to hide a CORBA client underneath an HTML interface, users with only a web browser, e.g., Netscape, may continue to access the Analysis and Annotation Engine.
+The main focus of the development and production of the Analysis and Annotation Engine is, however, on large scale sequence annotation in collaboration with the producers of such data.
+Task 2.3 Visualization, Data Submission Tools, and Report Generators
+An important component of the user services is providing visualization tools to display analysis results.
+The volume and complexity of the analyzed information and results generated will require an extremely sophisticated approach to data access and visualization.
+Users need to interface to the raw data, the analysis process, the resulting synthesis of gene models, features, patterns, map data, and to the work of collaborators.
+Visual Collaboratory User Interface
+Data visualization will allow the scientist to explore the data and metadata generated from the Analysis and Annotation Engine together with data from genome community databases.
+The wealth of visual displays from the user community will need to be interoperate with the system.
+Toward this end, collaborative work will be pursued to integrate views such as the Java-based Interactive Genome Browser (Helt and Rubin, University of California, Berkeley) with the tools framework through agent delivered data objects.
+The Java-based Interactive Genome Browser is based on earlier work using CD-ROM and web dynamic image creation technologies to present FlyBase data.
+A prototype browser has been developed using BioTkperl, a high level set of widgets specifically designed to support development of bioinformatics GUI components (Helt, unpublished, Searls, 1995).
+This prototype (see Figure 6) displays features along the physical map of Drosophila chromosome 2 from band 34-36, as well as sequence annotations for DS02740, an 83kb P1 clone located cytologically at 35E6-35F5, and sequenced at the Berkeley Drosophila Genome Project.
+The upper part of Figure 6 represents a portion of this Drosophila genome.
+The black numbered boxes near the top represent cytogenetic bands, the blue bars at the next level denote regions covered by P1 contigs and the thinner green lines show the position of the individual P1 clones which make up the contigs.
+The black lines represent portions of this chromosome that have been sequenced and can be found in the various sequence databases.
+Finally the small red boxes represent the position of P-element insertions.
+One can increase the level of magnification for this browser.
+The lower portion of Figure 6 displays some of the features found in the DNA sequence of one of the P1 clones which spans the junction of chromosomal band 35D and 35E.
+In this display the know genes are in black, the maroon boxes represent BLASTX matches to sequences in public databases, green represents genes predicted by the program Genefinder and the purple boxes are protein coding regions predicted by GRAIL.
+A number of other types of information can be accessed through this browser.
+It is important for visualization tools to allow the user multiple views of the data at various levels of resolution.
+When completely converted to the Java environment and by using data communication middleware, this front end browser is likely become an integral part of the visualization solutions available to the genome community.
+[gen-6.gif]
+Other community visual rendering paradigms include MapViewer, a helper application for viewing genomic maps from the Genome DataBase (GDB) (Fasman et al., 1996), and ACeDB (Durbin and Thierry-Mieg), a data management and visualization environment widely used in the genome community.
+Figure 7 shows an ACeDB display of physical and genetic mapping data from mouse chromosome 7 found in a local database maintained at ORNL.
+One of the reasons that ACeDB has enjoyed wide popularity in the genome community is that the code is open and freely accessible.
+It also makes it easy to incorporate a wide range of multimedia data, in this case an image of the phenotype of mice with a mutation at the P (pink-eyed dilute) locus (the light colored mice), compared to their normal littermates.
+Other useful interfaces to genomic data include the GSDB Annotator, which is an interactive browser and editor client for GSDB (Keen et al., 1996), and Entrez from the National Center for Biotechnology Information (NCBI).
+An approach to designing and building interface tools is to use OPM together with the Genera software developed by one of the project participant's (Stan Letovsky).
+Genera automatically generates form-based Web interfaces from OPM metadata.
+Markowitz et al. are currently also extending OPM with data visualization facilities in another project on collaboratories.
+[gen-7.gif]
+bioWidget (URL) is a domain-specific widget set designed to facilitate rapid prototyping of graphical user interfaces.
+It extends the bioTk project initiated by D. Searls (Searls 1995b) by implementing a platform independent, WWW deliverable set of tools in the Java programming language.
+The overarching philosophy behind bioWidget is the creation of adaptable, reusable modules that are easily incorporated in a variety of applications and promote interaction between those applications.
+The widgets encapsulate recurring themes in graphical objects and their behaviors, relieving the programmer of many tedious details.
+In addition to general support and help widgets, the bioWidget package includes: map.class, a module supporting the creation of various forms of abstract sequence schematics, genome maps, and map objects; multimap.class, an extension of map.class that simultaneously displays and coordinates multiple maps; sequence.class, a scrolling window of sequence data and support for domain operations, e.g., annotation. bioWidget has already proved very successful in support of GAIA, a genome annotation project under development at U.Penn., and is now being adopted by a wider community of bioinformatics researchers and developers as part of a consortium to extend its capabilities.
+We will participate in community-wide widget development efforts, e.g., BioWidget, in order to leverage complementary efforts and encourage compatibility with our proposed framework.
+Graphical user interfaces implemented with a common widget set should be able to display results from the Analysis and Annotation Engine.
+We will work with interface developers to extend existing tools, and if necessary, develop new user interfaces to satisfy the need for rich graphical displays of sequence analysis results and annotation.
+Data Submission Tools
+In collaboration with sequence databases we will work on integrating the annotation output with submission tools to facilitate direct submission to public genome databases.
+Candidates include SubmitData (Zorn et al. and Appendix I) developed by project participant Manfred Zorn.
+It is a framework for submission to public genome databases, that supports a number of protocols already and can be integrated into a CORBA-based tool framework.
+SubmitData uses database specific parsers to convert database definitions from their native format into a general object definition which control a form-based user interface generator and direct the submission process.
+By performing many consistency checks at the site of the data generator, SubmitData helps to produce timely and accurate submissions.
+Figure 8 shows some of the windows involved in preparing a submission to GSDB.
+[gen-8.gif]
+The output generated by the Analysis and Annotation Engine can possibly be converted into ASN.1 format which would allow the use of SeqIn, a tool developed by Kans et al. at the National Center for Biotechnology Information, to submit data to the GenBank database.
+The GSDB Annotator will be available to submit sequences to the GSDB database.
+We will work with GDB to ensure that important mapping information will be submitted to GDB.
+Procedures for returning information to each respective genome center will also be facilitated using the web and HTTP exchanges as well.
+We will participate in arrangements between sequence generators and the GSDB and GDB databases, to input analysis generated in this project into these databases with their sequence submissions.
+Web Collaboration and Conferencing Tools
+Web-based technologies are developing at an incredible pace.
+Technologies such as chat rooms (Chatting) and whiteboards, groupware (HyperNews) and electronic notebooks (see Electronic Notebook Workshop reference) will change the way researchers interact.
+As these communication technologies mature, they will be incorporated into the primary interface of the framework to place a wide range of options at the fingertips of researchers.
+Concentration on web-based solutions provides for portability to all platforms, and leverages the work of labs, universities and industry.
+The Collaborative Management Environment (CME) is a DOE funded, joint research project between Ames Laboratory and Oak Ridge National Laboratory to establish a framework for a robust, scalable, and secure virtual management system that could ultimately become the de facto standard management system for DOE.
+This system will provide sophisticated search and cross-cut capabilities within a single site or across multiple sites for finance and project information.
+CME research is divided into two functional components that will support a web-based information system: intelligent agents at each site and data analysis and programming tools.
+The major ORNL participants in this project are also developers in the CME project.
+We view this type of technology as not only important to community users, but also for communication within this collaboratory.
+Report Generators
+Unfortunately most existing tools that perform sequence analysis return long lists of information.
+Sorting through the hits is often tedious.
+Probability scores are often poor predictors of the biological relevance of hits found by sequence similarity searches.
+We plan to evaluate existing technology to develop report generators that would focus on specific topics of interest to a user.
+A key concept is to keep the annotation report well structured and largely free from user interface aspects.
+It should be up the reporting tool, e.g., the graphical user interface or a report writer, to format the analysis and annotation results according to its own specifications.
+Similar tools are currently being developed for Internet searching.
+The rationale is very similar: a search by Lycos or Yahoo returns too many hits and the high scoring ones are not necessarily the interesting ones.
+Cell biologists have other interests than evolutionists, and they again differ from protein chemists, i.e., what is relevant to one group may be irrelevant to another.
+We plan to develop filtering tools that will allow a user to customize the analysis and annotation results.
+The following summarizes our goals for Task 2.
+Data Input and Visualization Services:
+Year 1
+* Construct key agents for input, and submission * Construct prototype individual user interface * Establish interfaces for major genome center access * Establish data input processes from participating genome centers * Establish access methods to posted sequences from agreeing non-participating centers * Establish baseline viewer for examining analysis and annotation results * Data submission tools and procedures for multiple databases * Establish data flow from major genome centers * Establish interoperation with GSDB
+Year 2
+* Deploy individual graphical user interface * Implement viewer for browsing the warehouse * Integrate data submission tools fully into the framework
+Year 3
+* Deploy full individual graphical user interface for data input and visualization * Improve viewer for browsing the data warehouse * Advanced protein viewing tools with threading and homology modeling by incorporating public domain tools into the framework
+Task 3.
+Analysis Services
+In this section we describe the analysis servers which will be attached to the Analysis and Annotation Engine.
+These include tools for (1) pattern recognition, (2) gene modeling, (3) sequence comparison, (4) providing constraints for sequence assembly, (5) methods for comparative genomic analysis, and (6) protein characterization.
+In addition to our initial set of tools, we expect other tool builders to attach tools to the framework over time.
+Task 3.1 Pattern Recognition Algorithms
+Pattern based methods for sequence feature identification take advantage of statistical variations in the sequence of a given feature when compared to the base distribution in ``bulk'' DNA.
+Often, several statistical measures are calculated and used to train an artificial intelligence-based system such as a neural network to recognize the feature of interest.
+The features which can be identified by these methods can be small, like a splice donor junction which is on the order of 10 base pairs, or very large, for example the isochore defined by the regional G+C content of the DNA, and which may be hundreds of thousands of base pairs in length.
+A number of biologically useful features can be localized computationally using pattern recognition methods.
+These include: protein coding exons, tRNAs, splice junctions, CpG islands, isochore ([C+G]), and simple and complex repetitive DNAs.
+Methods for identifying other features of biological interest, such as regions which regulate gene expression are also being developed.
+In many cases several methods are available to locate a given feature and we will give the user a choice of the best available methods.
+The goal of pattern recognition is to decorate the sequence with various informative features so that the functional organization of a genomic region can be understood.
+For example, Figure 9 illustrates a number of biologically relevant features which GRAIL recognizes in a DNA sequence and which are presented to a user in the XGRAIL interface.
+The central grey bar reflects the local concentration of G and C nucleotides which, in human DNA, correlates with the density of genes (the particular region represented in this figure has a high percentage of G+C and is relatively gene rich).
+Two other features are superimposed on the central grey bar: The magenta boxes mark the locations of CpG islands (Gardiner-Garden and Frommer 1987), regions with a locally high concentration of the dinucleotide CG, that are thought to be associated with genes and the regulation of their expression.
+The yellow boxes indicate the presence of various DNA elements which are highly repeated in the human genome and are often referred to as ``junk'' DNA, though in some cases they may have unknown functions.
+The peaks above and below the central grey bar are regions of the sequence which the programs predicts as protein encoding regions (exons) which are presumably parts of genes.
+Genes can be found on either strand of a DNA helix which is why there are peaks both above and below the central bar.
+The colored bars immediately above the various peaks give an indication of the confidence level of the predictions for each exon.
+Green bars represent very likely exon candidates (
+In the central region of the figure there are a series of cyan boxes linked together by yellow lines.
+These represent a group of exons which the analysis predicts belong to the same gene.
+The concatenation of the sequence represented by these cyan boxes forms a gene model, that is, the portion of the DNA sequence which encodes the protein product of the gene.
+None of these features are obvious by casual inspection of the DNA sequence, but rather are found by examining the sequence with the various algorithms that make up the GRAIL system.
+[gen-9.gif]
+Several of the best feature recognition methods will be included in this framework.
+We describe some of these in more detail:
+Protein Coding Regions.
+A number of systems will be included to locate protein coding exons.
+Many of these, such as the ORNL GRAIL exon scoring system have a hybrid structure which involves the calculation of a set of individual statistical measures for each sequence region, followed by the fusion of the results using a neural network or other method for final prediction or feature scoring (Uberbacher and Mural 1991, Xu et al. 1994a, 1996b, 1996e).
+Similar methods are used in the LBNL/Haussler Hidden Markov Model method and Pevzner's system for coding exon detection which will be described later.
+Splice Sites.
+Locating splice-junctions is important for determining intron/exon junctions which must be accurately located in order to make proper gene models and arrive at protein translations.
+Several systems have been developed for splice-junction recognition and the three gene modeling systems (ORNL, Haussler, and Pevzner) have systems for this which will be incorporated into the Analysis and Annotation Engine.
+CpG Islands
+The location of CpG islands, regions with a locally high concentration of the dinucleotide CG, which are thought to be associated with genes and control of gene expression, can be determined statistically (Gardiner-Garden and Frommer 1987).
+It has been estimated that there as many as 60,000 CpG islands in the human genome (Antequera and Bird 1993) and they are considered to be indicators of genes in the region.
+CpG islands found at the beginning, middle, and end of genes may have different properties but this is still a research issue.
+tRNAs.
+Several methods have been developed to recognize regions which encode tRNA molecules, including the use of grammars, GenLang (Dong and Searls 1994) and statistical methods (Fichant and Burks 1991; Eddy and Durbin 1994).
+One or more tRNA finding systems will be incorporated in the framework.
+Repetitive DNAs.
+Human DNA contains many interesting complex and simple perfect and imperfect repeating motifs.
+Locating these repeats is not only of intrinsic biological interest, but identifying and masking such repeats is critical before database searching because the presence of repeats in the query sequence and the presence of repeats in the target sequences dominates sequence comparison, obscuring useful results.
+Methods for identifying such repeats involve statistical comparison against a complex repeat reference library (Jurka et al. 1992) as well as fast methods for identifying arbitrary simple repeats (Milosavljevic and Jurka 1993, Guan and Uberbacher, 1996b).
+A rapid method for identifying simple repeats has been designed at ORNL and will be used in the Analysis and Annotation Engine (Guan and Uberbacher 1996b).
+It is described in detail in a reprint in Appendix III.
+We will also incorporate Jurka's Censor server (Jurka et al., 1996) (through a CORBA wrapper) for complex repeats as well as a BLAST/Smith-Waterman hybrid system constructed at ORNL.
+Regulatory Regions.
+A number of systems are under development for detection of regulatory regions including systems at ORNL and LBNL.
+Matis et al. 1996 (ORNL) have constructed a multiple sensor neural network system for TATA containing promoters and are extending this to include a host of other transcription factor binding sites and promoter types.
+A system to detect PolyA sites has also been constructed.
+A promoter prediction system using time-delay neural networks has been constructed by Reese and others at LBNL (Kulp et al. 1996).
+Both of these systems have produced mixed results, but in the longer term, we expect several useful promoter prediction systems to be included in this framework.
+This remains an area of intense study.
+Detection of Sequencing Errors.
+Dynamic programming based algorithms for detecting errors in DNA sequence data based on statistical measures have been developed at ORNL (Xu et al. 1996a, 1996d) and will be made available for users.
+In particular, coding region frameshift information is critical when attempting to recognize and model genes in the sequence.
+A paper describing this method in detail is contained in Appendix III.
+This type of information is particularly important for genome centers who will wish to go back and examine the raw data underlying potential errors.
+In some cases such apparent errors in frame are actually present in the sequence and represent an important loss of function of a gene through evolution (a pseudogene).
+Calculation of Isochore Parameters.
+It has long been recognized that base composition of human DNA is not uniform over the entire genome.
+Rather, the genomes of humans and other mammals, are a mosaic of large regions, several hundred thousands of base pairs, with locally uniform base composition (Bernardi et al. 1985, Bernardi 1993).
+These large regions of relatively uniform base composition are referred to as isochores.
+Isochores differ in their gene density and presumably, in components of gene regulatory processes (such as what types of regulatory elements are likely to be present).
+Determination of isochore from sequence data is rather straight forward but we believe the having knowledge of local isochore properties will become increasingly important for understanding genome organization, packaging, gene regulation, and gene expression patterns.
+Long Range Statistical Correlations and Fractal Sequence Properties
+Participating researchers at LBNL are undertaking a systematic study of long-range statistical correlations in genomic DNA sequence as well as an examination of fractal properties.
+Work at ORNL has involved the measurement of Markov chain properties of various DNA domains (Xu et al. 1994a, 1994d) and the elucidation of statistical and periodic patterns by Fourier transform methods related to chromosomal packaging and nucleosome formation (Uberbacher et al. 1988a, 1988b, 1989).
+Methods for extracting such sequence properties will be included in the framework as they are developed and shown to be useful.
+Task 3.2 Gene Modeling Systems
+The recognition of genes and modeling of multiple genes within genomic sequence represents one of the most essential core services we will provide.
+The technology of gene finding has improved steadily over the last five years to a level where most genes can be recognized with good but usually imperfect fidelity.
+Recent growth of the public domain EST collections provides complementary information which can be used in gene finding systems.
+Methods which combine pattern recognition and EST comparison methods can provide much more accurate gene models than either method alone.
+We expect to implement at least three such gene modeling systems in the framework, which make use of a combined pattern recognition and EST/protein homolog approach for detecting and computing the structure of genes.
+These include the ORNL Gene Modeling method (an outgrowth of GRAIL), Generalized hidden Markov model system created by Haussler in collaboration with LBNL, and Pevzner's homology-based gene modeling system.
+Additionally, GeneParser and GeneID systems will be considered.
+Participants from TIGR will aid in the development of EST-based gene finding methods and provide access from this framework to EST collections at TIGR.
+The ORNL Gene Modeling method.
+Since its initial development (Uberbacher and Mural, 1991), the GRAIL system at ORNL has become a standard for predicting protein coding regions (exons) and modeling genes in DNA sequences.
+The gene modeling method which will be implemented in this project is a new development (Xu et al. 1996c / reprint in Appendix III) and is considerably more complex and sophisticated than the on-line GRAIL system.
+This gene modeling method is capable of using protein homologs and ESTs to refine gene structures found by pattern recognition methods.
+The problem is approached as an optimization based on features detected and weighted constraints, and is solved using a dynamic programming algorithm.
+The basic algorithm scans through possible gene coding regions from left to right and constructs an optimal gene structure over the sublist which is consistent with a given reference set of constraints from homology calculations.
+The algorithm runs in time and space, where k is the maximum number of reference models for an exon candidate and n is the number of possible exon candidates.
+This system is capable of recovering exons missed in pattern recognition, removing false exons, recognizing non-coding exons, and automatically and accurately modeling complete or partial genes in a sequence (when EST or protein homology information is available).
+Significant computing power is required and this will be provided using the facilities at the ORNL Center for Computational Sciences (CCS).
+Extension of the gene modeling algorithms described above are being made to process multiple genes in an automated fashion (Xu et al. 1996b).
+Currently in the standard GRAIL system, although single genes can be modeled semiautomatically, analysis of longer sequences require significant manual intervention and trial and error model building.
+Changes in the objective function used by the gene modeling algorithms and additional bookkeeping are necessary to accomplish multiple gene modeling in an automated mode.
+The availability of EST or protein homolog information helps the accuracy of this process significantly.
+[gen-10.gif]
+An example of fully automated multiple gene modeling is shown in Figure 10.
+The X-axis represents the sequence axis.
+The bars with connecting lines on the top represent the predicted gene structures (five genes are predicted); the hollow rectangles in the middle represent predicted exon candidates where the height of an rectangle represents the probability of a predicted exon being an actual exon.
+Horizontal lines at the bottom represent genes homologous to the corresponding predicted exons.
+The system initially uses GRAIL to predict exon candidates on a given DNA sequence, as shown in the middle section of the figure.
+Then homology search is done for each predicted exon candidate in both EST and protein databases.
+Reference gene models are formed based on the identified homologous proteins, as shown in the bottom of the figure.
+Gene structures are predicted, using predicted exon candidates, in such a way that is most ``consistent'' with the homologous genes and the probabilities of the predicted exons, as shown in the top of the figure.
+By comparing to reference gene models, falsely predicted exons can be removed, exons missed by GRAIL prediction can be identified and located, and exons can be parsed into separate gene models automatically.
+This type of technology, applied here and in the two subsequent methods, should make gene modeling highly accurate.
+Generalized Hidden Markov Models for Gene Model Construction (LBNL/Haussler).
+This method involves a combination of neural network predictions with ``generalized'' hidden Markov model parameters in a complex gene parser.
+Hidden Markov Models (HMMs) for DNA can be viewed as generative stochastic models of sequences that go though a sequence of hidden states, and in each hidden state they generate a single letter in the alphabet {A,C,G,T} according to certain probabilities associated with that state (Krogh et al. 1994a, Krogh et al. 1994b).
+The sequence of hidden states forms a Markov chain, in the sense that which state generates the nth letter depends only on which state generated the n-1st letter.
+This contrasts with (non-hidden) Markov models of sequences, in which the sequence of letters itself forms a Markov chain, i.e. the nth letter depends only on the n-1st letter, or on the letters at positions n-k,... n-1 in the case of a kth order Markov model.
+In a generalized HMM, each state can generate a string of one or more letters according to a probability distribution specified by some arbitrary mechanism, particular to that state.
+The only thing demanded of this mechanism is that the probability, i.e., likelihood, can be efficiently calculated of any string under the distribution defined by the mechanism.
+Models of this type were described in Stormo and Haussler (1994), for the case of only two possible states, exons and introns, and the Markov chain for the states is trivial, in the sense that it alternates back and forth between these two states with probability 1.
+Each time such a model is in the exon state, it generates a string according to the probability distribution associated with exon strings, and each time it is in the intron state it generates a string using the intron distribution.
+The output is the concatenation of these generated strings.
+To use such a generative model for recognition of introns and exons in a DNA sequence, a dynamic programming method can be used to ``invert the generative process'' and find the most likely sequence of individual strings and their states that were concatenated to make the sequence.
+This is referred to as ``parsing'' the sequence (constructing the best gene model).
+Recently, this model has been extended to include more than 2 states, with general Markov transition probabilities between states.
+This is the basis of ``generalized'' HMMs.
+This method for gene modeling divides the problem into two parts.
+First, it recognizes potential coding regions, intronic regions and acceptor/donor splice junctions (signals are combined using simple neural networks), respectively.
+Then it parses the recognized exon/intron/splice-junction signals into a single gene structure using a pre-trained transition diagram, called a hidden Markov model.
+The transition diagram consists of states and transition probabilities among states.
+Each state may represent a recognized signal or a utility-state, which can be used, for example, to enforce the reading frame consistency between adjacent exons.
+A dynamic programming-based optimization algorithm finds a most probable path going through the states for a given DNA sequence, which corresponds to an optimal exon/intron structure parsing of the sequence (Kulp et al. 1996).
+The flexibility of generalized HMMs allows easy addition of other capabilities to the gene modeling system, such as the ability to incorporate homology information discovered by searches of a protein database, and to find promoters, RNA genes, known repetitive DNA sequences etc., as soon as states for these have been defined with appropriate probability distributions.
+Once these states are defined one can ``wire them in'' to the existing HMM architecture by modifying the Markov chain transition probabilities to include the new states.
+Continued development of the generalized hidden Markov model approach is funded in a separate grant from DOE and will be leveraged for this project.
+Pevzner's Homology-Based Gene Modeling Method.
+(collaboratory participant Pevzner at USC) (Gelfand et al. 1996a, 1996b) This homology-based gene modeling algorithm combines multiple similarities to protein homologs and ESTs (in progress) to construct a gene model.
+Sequence level signals (like potential splice sites) are recognized statistically.
+This method uses a new combinatorial approach for gene modeling, which uses related proteins to derive the correct exon-intron structure.
+Instead of employing statistical properties of exons, the method attempts to solve the combinatorial problem of finding a set of segments in a genomic sequence whose concatenation (splicing) resembles a known protein.
+The approach is based on the following idea: given a genomic sequence, it first finds a set segments containing all true exons.
+This can be done by selecting all segments between possible acceptor and donor sites (statistically recognized edge signals) with further filtering of this set (in a way that does not lose the true exons).
+The resulting set of segments, of course, may contain many false exons.
+Then, all possible segment assemblies are explored to find an assembly with the highest similarity score to each given similar known target protein.
+The number of different segment assemblies is, of course, enormous, but the spliced alignment algorithm, which is the key ingredient in this method, scans all of these possibilities in polynomial time.
+In this algorithm, the exon assembly problem is reduced to the search for the optimal path in a graph.
+Vertices in this graph correspond to the segments, arcs correspond to potential transitions between segments, and the path weight is defined as the weight of the optimal alignment between the concatenated segments of this path and the target sequence.
+The three gene modeling methods just described have different structures, but in many basic respects share common characteristics and needs for underlying statistical, pattern recognition, and sequence comparison algorithms.
+Therefore, these gene modeling servers should be able to share underlying servers for component operations.
+Gene Modeling in Partially Assembled Sequence.
+One of the added complexities, which has not been fully explored, is modification of these algorithms to deal with the incomplete nature of the target genomic sequence.
+Since in many cases, multiple contigs (sequence fragments) will be present which have gaps between them and indeterminate ordering, genes may only be partially present with parts missing in these gaps.
+Furthermore parts of a gene may exist on several fragments, although this may be unknown to the original sequencing laboratory.
+[gen-11.gif]
+Basically in a large genomic clone (perhaps 30000 to 150000 DNA bases long), small overlapping fragments of the sequence generated randomly are assembled into contigs, whose overall order and position is not initially known and which have gaps between them.
+Many segments of the sequence data, unknown at the outset, will have emerging importance to one another as the analysis proceeds, and these relationships need to be discovered and exploited within the overall analysis process.
+The presence and structure of genes and other signals in the sequence, and the structure of the sequence assembly itself, are being determined simultaneously.
+The system will input any existing information about the order of these contigs, any characterization of gaps between them, and other physical map-related metadata.
+Available information about order in the assembly will be used by the system to consider genes which span gaps.
+Homology information and data mining information will be used in an integral way to detect and model genes, identify genes which cross gaps, infer additional order between contigs based on database information, and help determine what parts of genes are missing in gaps or off the end of a contig or clone.
+This is illustrated schematically in Figure 11.
+Gene model information will be used to help collapse related EST assemblies which in many cases cover separate parts of the same gene.
+The identification of genes and their extent can be used to decide which gaps are important to close with high quality sequence at the experimental genome centers.
+Sequence quality or redundancy information from the assembly (if available) can be used to localize regions where sequence quality is low and indel detection system may be useful to apply.
+The majority of this information would not be discovered using the standard approach.
+The gene modeling algorithms can be modified to compensate for the partial or gapped nature of the gene models since these phenomena violate constraints used in current gene modeling algorithms.
+However, the gene modeler must know when a gene is partially missing and where, in order to apply the proper algorithm in the proper way.
+Such information can be obtained from homolog or EST data and can also contribute information which may relate contigs in a genomic clone (and provide sequence assembly constraints).
+This is discussed below in Task 3.4.
+An expert system to make these types of determinations is under construction at ORNL and could also potentially be used by all three gene modeling methods.
+Task 3.3 Sequence Comparison Systems
+Calculation of similarity between newly obtained sequence and archives of various types of information is perhaps the most valuable tool for obtaining biological knowledge.
+A range of algorithms is available or under development to solve somewhat different sequence comparison problems.
+Each available method has particular strengths and specialized uses.
+A full range of algorithms needs to be used for various tasks, and our intent is to provide or access a wide range of general methods such as Blast, FASTA, and Smith-Waterman, and additionally specialized methods for long DNA comparisons and frame-tolerant DNA-protein alignment.
+A number of sequence comparison systems are available as Internet servers (such as the NCBI BLAST server) and, where possible, we will incorporate these into our framework by building CORBA wrappers.
+We have considerable high-performance computer hardware available at ORNL, LBNL, and ANL for support of community-wide services of this type, and we may also utilize specialized hardware boards based on expertise at LANL.
+A very brief overview of some of the types of methods we will bring into the analysis and annotation framework is provided below:
+Dynamic Programming / Smith-Waterman.
+The Smith-Waterman (SW) algorithm (Smith and Waterman 1981, Gotoh 1982) is a dynamic programming algorithm, which can be conveniently described in a grid-like graph.
+One sequence is placed vertically to the left of the graph, and the second sequence is placed on top of the graph.
+Each cell (i,j) of this matrix contains a score based on the similarity of the ith element in the horizontal sequence to the jth element in the vertical sequence and the scores of the diagonally preceding cells.
+Diagonal edges represent matches or substitutions, and the vertical and horizontal edges represent insertions and deletions.
+The algorithm starts at the upper left corner, and tries to find a lowest scoring path between the upper left corner and the lower right corner (which corresponds to an optimal global alignment of the two sequences).
+With proper initialization, local alignments can be found in a similar way.
+The complexity of the SW algorithm is , where m and n are the lengths of the two sequences compared.
+For reasons of sensitivity and gap tolerance, global comparisons of cDNAs or EST assemblies against long genomic regions, or long DNA-DNA comparisons often use this algorithm.
+Also comparing long sequence regions against each other requires significant memory space, and special algorithms (described later) have been designed which dramatically reduce space requirements (see also Guan and Uberbacher, Appendix III).
+We will implement Smith-Waterman servers at ORNL, LBNL and ANL as part of this project.
+FASTA.
+FASTA (Pearson and Lipman 1988) is one of the many heuristic algorithms proposed to speed up sequence comparison.
+The basic idea is to add a fast prescreen step to locate the highly matching segments between two sequences, and then extend these matching segments to local alignments using more rigorous algorithms such as Smith-Waterman.
+FASTA starts its prescreen process by building a look-up table from one sequence in linear time, and then scans the second sequence to identify the matching segments by recognizing segments of bases having the same offset.
+The prescreen step reduces the search space to a small portion of the database and thus decreases the search time significantly.
+Depending on how the matching segments are extended to local alignments, the complexity of the algorithm is between and , assuming .
+A modified version of FASTA allows several matching segments to be connected to form a local alignment, thus allowing gaps in the final alignment.
+FASTA has reduced sensitivity compared to Smith-Waterman and can therefore miss important but weak similarities.
+The ORNL genQuest system provides a FASTA server which will be incorporated into this project.
+BLAST and BLAST2.
+This heuristic search algorithm is based on mathematical results that allow the statistical significance of matching sequence segments to be estimated under an appropriate random sequence model.
+In BLAST (Altschul et al. 1990), a maximal segment pair (MSP) is the highest scoring pair of identical length segments chosen from two sequences.
+Recent results allow the estimate of the highest MSP score at which chance similarities are likely to appear.
+BLAST minimizes the search time by concentrating on only those sequence regions whose similarity with the query sequence exceeds the chance similarity score.
+The BLAST algorithm consists of three steps: compiling a list of highly-scoring words from the query, scanning the database for hits (Maximal Segment pairs - MSPs) and extending hits to local alignments.
+The complexity of the BLAST algorithm is , where w is the number of words generated, n is the database size, and a, b, c are constants.
+BLAST is faster than FASTA, but it doesn't allow gaps in its alignments and is less sensitive.
+As part of this project, a new version of BLAST called BLAST2 which contains increased sensitivity, will be implemented as a server at ORNL in collaboration with its author, Warren Gish of the Washington University Genome Center, St. Louis.
+The NCBI and ORNL genQuest system provide servers for BLAST which will be implemented in the project framework.
+BEAUTY.
+(BLAST Enhanced Alignment Utility) (Worley et al. 1995) is a tool developed at Baylor College of Medicine which uses BLAST to search several custom databases and incorporates sequence family information, location of conserved domains and information about any annotated sites or domains directly into the BLAST query results.
+The conserved site and domain information reported by BEAUTY comes form the Entrez database (NCBI), the PROSITE database (Bairoch et al. 1996), the Blocks database (Pietrokovski et al. 1996) and the PRINTS protein motif fingerprint database (Attwood and Beck, 1994).
+These results, along with the BLAST analysis are presented to the user in a simple graphical form.
+With the help of the Baylor participants we will incorporate BEAUTY into the Analysis and Annotation Engine and explore the techniques used in BEAUTY for presenting other forms of analysis to the user.
+Frameshift-Tolerant Dynamic Programming Sequence Alignment Algorithm.
+As experimental data, DNA sequences are subject to error, and frameshift errors usually weaken homology recognition between sequences.
+ORNL (Guan and Uberbacher 1995) has developed an algorithm to find the optimal alignment in the presence of sequence errors (reprint in Appendix III).
+This algorithm compares a DNA sequence translated in three frames with a protein sequence.
+In the standard Smith-Waterman algorithm, a score matrix cell (i,j)'s value can depend on three other matrix cells: , , and .
+The new alignment algorithm considers not only the three cells in the same matrix, but also the same three cells in the other two frames' matrices.
+That is, when computing the alignment for a given frame of translation, the algorithm also considers whether there is a better partial alignment in either of the other frames prior to this point that can be continued by shifting the frame to the one under consideration.
+The algorithm's complexity is , but several times slower than Smith-Waterman, and must make use of available high-performance computing hardware.
+Searching all sequence with this algorithm has significant utility for detecting errors in the sequence (important to genome centers) and locating potential pseudogenes (genes which were disrupted by evolutionary accidents) based on homologs.
+There are currently no publicly available servers which support this type of method and we will implement such a server as part of this project.
+Linear Space Smith-Waterman for Comparison of Long Genomic DNAs
+Dynamic programming algorithms are often used to find the similarity of sequences as well as to deliver the actual alignment of two sequences.
+But space is often the limiting factor when aligning long sequences using dynamic programming methods.
+Comparison of long DNAs using Smith-Waterman requires the calculation of a very large matrix which is sometimes too large for computer memory.
+For example, a comparison of requires 1012 matrix terms.
+Special algorithms have been designed to dramatically reduce space requirements (see Guan and Uberbacher, Appendix III).
+A linear space algorithm for computing maximal common subsequences, proposed by D. S. Hirschbert, was modified by E. W. Myers and Webb Miller to deliver optimal alignment in linear space.
+We have improved the Myers and Miller algorithm by introducing a new divide and conquer technique that reduces the running time to about half while maintaining the linear space property.
+An example of this is shown in the bottom of Figure 12 which displays a small portion of the total alignment.
+We expect these types of comparisons to become increasingly useful for examining large duplications and evolutionary relationships between long sequence domains.
+Currently there are no publicly available methods for this type of sequence alignment and a server for this will be implemented as part of this project.
+Matrix Comparison Tools for Long Genomic Regions
+Dot matrix calculation and a linear space alignment algorithm provide tools for studying the overall relationship of long sequences.We have developed an X-Windows based package for analyzing long sequences.
+Figure 12 shows a comparison of the T-cell receptor alpha and delta loci from human (HUMTCRADCV, 97,634bp) and mouse (MUSTCRA, 94,647bp).
+The upper left panel displays a dot matrix comparison of these sequences (described in next section).
+The right panel is a detail of the boxed region of the left panel.
+The first horizontal panel (with vertical colored bars) is a representation of the region compared in the upper right panel, while the lower panel shows a portion of the actual sequence alignment.
+All windows are scrollable.
+Colors represent regions of identity levels, red for greater than 69% identity, orange denotes 60-69% identity, yellow 50-59%, green 40-49%, and blue 30-39% identity.
+The dot matrix calculation is done using an offset technique used in a number of sequence comparison packages including FASTA.
+Basically, each segment of a sequence is compared with every segment of the second sequence, and the similarity the two segments is determined.
+The similarities of the two sequences are plotted in a window according to the thresholds set for the length of the step and the similarity cutoff score.
+The similarities are also displayed in the link-analysis window that shows the sequence relationship in a different way.
+This dot matrix calculation and link analysis can be applied to any selected region, allowing detailed analysis of a sub-region.
+The results of the dot matrix calculation for a sub-region is displayed in the subsequence-dot-plot window.
+Tools for visually examining long-range relationships between genomic regions will become increasingly valuable as more sequences are generated.
+Tools for Multiple Sequence Alignment.
+The ability to perform multiple sequence alignments is the basic prerequisite for defining gene families and for studying the evolutionary relationships among genomes.
+A number of methods for multiple sequence alignment have been developed and we will make these accessible through our system.
+Some examples of the kinds of multiple alignment programs that we include are: CLUSTAL W (Thompson et al., 1994) a general purpose program for multiple alignments of DNA and protein sequences; PIMA (Smith and Smith, 1992) which performs multiple alignments using a covering pattern construction algorithm; and MAP (Huang, 1994) which computes a multiple global alignment using an iterative pairwise method.
+These programs can be accessed in a number of ways including through the BCM Search Launcher (Baylor College of Medicine) which, with the help of the Baylor participants, will be connected to the Analysis and Annotation Engine.
+Task 3.4 Providing Constraints for Sequence Assembly
+The assembly of sequence contigs into a completed contiguous sequence for a clone is one of the most difficult processes in genomics and ``closing'' the gaps in the sequence is perhaps the most time consuming part of experimental sequencing.
+Improvements in the basic technology associated with sequence assembly algorithms could have a dramatic effect on the cost of genome sequencing.
+Errors and uncertainties in the sequence, as well as many repeated sequence patterns make it very difficult to reliably determine the overlap of individual sequence contigs.
+Current algorithms which attempt assembly without human intervention have only mixed success and in most cases require significant intervention by a human expert to arrive at the correct sequence assembly result.
+This type of process does not scale well for the high throughput stage of genome sequencing.
+[gen-12.gif]
+Identification of genes in the sequence and determining that the same gene is common to more than one contig provides independent information which can be used to link portions of a sequence assembly together (see Task 2).
+The most widely used assembly algorithm, Phil Green's PHRAP (personal communication) could potentially be modified to add additional constraints imposed by knowledge of the extent of individual genes.
+Such information should be routinely available based on analysis of partially assembled sequence in this project.
+The Ace.mbly package (J. Thierry-Mieg - personal communication) has just recently been modified to allow the use of these types of constraints in the assembly of sequence.
+Our intent is to collaborate with the developers of assembly algorithms so that the assembly state information obtained through our analysis can be used expeditiously at experimental sequencing centers.
+Task 3.5 Tools for Comparative Genomics
+With the completion of the genomic sequences of Haemophilus influenzae, Mycoplasma genitalium and Saccharomyces cerevisiae the area of comparative genomics is reaching a new, and even more important phase.
+In addition, the completion of nearly half of the genomic sequence of Caenorhabditis elegans and rapid progress in the sequencing of other model organisms will enhance our understanding of the genome structure and evolution of higher eukaryotes.
+A number of databases which will be accessible through our data warehouse, YPD (the yeast protein database), FlyBase, and MGD (the mouse genome database), to name only a few, provide important comparative data for attempting to elucidate the function of newly discovered human genes.
+As well as providing tools for multiple sequence alignments (see above), we will also implement services for phylogenetic analysis (Phylip, for example) and provide visualization interface for aiding in the interpretation of the output from such analyses.
+As more data become available, we, in particular, Terry Gaasterland, will also develop methods to increase the utility of metabolic databases, by integrating information on how pathways are modified cross-species.
+Task 3.6 Protein Characterization Tools
+A number of methods are in development for learning about the structure and function of new proteins based on their sequences.
+In particular links from this framework to structural biology are very important.
+We anticipate several types of methods in the Analysis and Annotation Engine including:
+AI-Based Structural Classification.
+Methods for protein structural classification based on prediction using AI are in development which can provide an indication of the structural type of a protein without reliance on homology information.
+This is valuable for new proteins which do not have known homologs and can sometimes provide an general idea of function (Craven et al. 1995).
+Methods for Protein Threading.
+A number of methods for protein threading, finding the ``best'' fit of the sequence of a newly identified protein to currently known protein structures, are currently under development using dynamic programming as well as more computationally intensive methods.
+While not currently particularly accurate, these methods are undergoing rapid development and it is likely that they will soon be producing useful results.
+Dynamic programming methods could be implemented in this framework at the present time, but more accurate methods which treat energies more rigorously are on the way.
+Rick Lathrop (UCSF) has agreed to help us implement his tools at ORNL, although suitable improvements in the technology which would make these useful for routine use by the community is probably some time in the future.
+ORNL also has a research effort and has developed new threading algorithms (Xu et al.
+Appendix III) in this area and hopes to provide on-line services within the time frame of this proposal.
+Protein Structure Viewers.
+Rasmol and other public domain viewers provide the capability to link a protein sequence with a structure in PDB.
+Much can be learned about a new protein sequence by viewing the structure of a close homolog.
+Additional structure viewing tools are likely to be incorporated for threading and homology modeling systems in years 2 and 3.
+Task 3.7 Other Analysis Tools and Resources
+The open nature of the interface to this system will not only allow developers of new tools to make them easily available to the system, but will also allow us to build links to the large number of currently existing tools which are available over the world wide web.
+One popular list of molecular biology related analysis tools and data resources:
+(http://www.public.iastate.edu/~pedro/research_tools.html)
+lists over 175 programs and data sources which provide information ranging from the prediction of protein secondary structure to servers which perform multiple sequence alignments.
+We will build connections to the most useful of these systems, with the assistance of the service provider whenever possible, and provide links to others so as to give users maximum flexibility in generating the type of analysis that they desire.
+The following summarizes our goals for Task 3.
+Analysis Services:
+Year 1
+* Implement baseline pattern recognition systems * Basic Gene Modeling Methods * Sequence Comparison Systems * Implement basic protein structure viewing tools * Implement tRNA gene finders
+Year 2
+* Genome comparison tools * Suite of protein characterization tools * Sequence Comparison Servers * Implement automated partial and multiple gene modeling algorithms * Create algorithms and constraints to exploit unfinished sequence data, and links to sequence assembly tools * Advanced protein viewing tools for threading and homology modeling
+Year 3
+* Genome comparison tools * Suite of protein characterization tools * Sequence Comparison Servers * Implement automated partial and multiple gene modeling algorithms * Tools for structure effects genomic sequences (bending, nucleosome placement, chromosome packaging signals) * Analysis tools for long range statistical patterns in genomic sequence
+Task 4.
+Data Mining Services
+The kinds of information which need to be gathered and brought to bear on the analysis are diverse, widely distributed, semantically complex, and often interrelated in non-obvious ways.
+This part of the proposal will involve developing data-mining resources with intelligent agents to identify and query the appropriate data resources, assemble the information for feedback to pattern recognition and gene modeling programs, and summarize the biological function of the sequence of interest into a report for biologists.
+A brief, hypothetical example, can give an indication of the complexity and richness of the analysis paths which may be followed when retrieving the data relevant to describing a DNA sequence.
+The protein predicted to be encoded by a newly discovered human gene may have, as its closest known relative, a protein from the nematode C. elegans, and though no function has been discovered for this gene in the worm is part of a gene family with a well characterized member in yeast and another member from E. coli whose 3D structure has been solved by X-ray crystallography.
+No less than five separate databases would have to be queried to assemble this information and several of these queries would have been dependent on the success of a previous query.
+Often, as in the above example, the best way to present the data may be an image, for instance a visualization of the 3D structure of a protein.
+Developing multimedia presentations of the data will be critical which underlines the importance of visualization in Task 2.
+Input from a number of experts will be critical to designing and implementing the data mining and inference portion of the Analysis and Annotation Engine.
+Another example of data mining involves using metadata from dbEST to suggest an expression profile for a newly identified gene.
+If a gene has multiple hits in the EST database then one can take advantage of the fact that the sequences in this database come from many cDNA libraries made from mRNA from many different tissues.
+If a gene is represented by multiple cDNA clones from only one library, one might infer a tissue specific expression pattern for that gene.
+Conversely, finding homologous cDNAs in libraries from multiple tissues would suggest a more ubiquitous pattern of expression.
+The presence of homologous cDNAs in non-normalized libraries can also give a rough estimate of expression level by comparing the number of hits for the gene of interest to the total number of cDNA sequenced from the library.
+It should be noted that obtaining this kind of analysis requires information which is contained in multiple databases.
+This is usually not information that can be retrieved by a simple query, since it requires manipulation of data received after searching the database.
+World-wide there are a wide range of databases covering many aspects of molecular biology and genomics.
+These range from large, well established and widely used public data bases such as GDB (Fasman et al., 1996) and SWISS-PROT (Bairoch and Apweiler, 1996) to small specialized databases like the androgen receptor gene mutation database (Gottlieb et al., 1996).
+In addition there are a number of privately maintained proprietary databases.
+A recent issue of Nucleic Acids Research (vol 24, no.1, 1996) listed over 50 databases relevant to genomics and molecular biology.
+We will maintain satellite copies of the large, widely-used public databases (Table II) in our data warehouse to facilitate the frequent database searches which will take place as part of the analysis and annotation process.
+Smaller, more specialized databases (Table III) will be accessed by retrieval agents when appropriate and/or links to these databases may be provided for the user to follow and determine the relevance of the information for their purposes.
+Because we will build an open interface to our analysis and annotation system, we will be able to include generic data retrieval agents which can be customized by users to extract pertinent data from local databases and include it in their analysis.
+CAPTION: Table II: Databases potentially supported as satellites in the data warehouse.
+Database Reference GSDB (Keen et al. 1996) GenBank (Benson et al. 1996) PIR (George et al. 1996) SWISS-PROT (Bairoch and Apweiler, 1996) GDB (Fasman et al. 1996) EcoCyc (Karp et al. 1996) EMP (Selkov et al.1996) YPD (Garrels, 1996) FlyBase (The FlyBase Consortium, 1996) MGD (http://www.informatics.jax.org/) PROSITE (Bairoch et al. 1996) Blocks (Pietrokovski et al. 1996)
+CAPTION: Table III: Examples of other potential data sources for the Analysis and Annotation Engine
+Database Reference Small RNA database (Gu and Reddy, 1996) RDP (Maidak et al. 1996) MITOMAP (Kogelnik et al. 1996) Androgen Receptor Mutation DB (Gottlieb et al.1996) Glucocorticoid Receptor Resource (Danielsen and Martines, 1996)
+Part of the necessary information is already captured in a number of genome databases and we rely on our collaborators at GSDB (NCGR), GDB (JHU), and the biology community to continue the compilation of high quality genome information.
+The recent database issue in Nucleic Acid Research (January 1996) provides a good overview of the current status and number of public molecular biology data resources.
+Task 4.1 Data Mining Agents
+Building and maintaining such a complex dataset can become quite time and resource consuming.
+We propose to develop a set of intelligent agents that would assist in this task.
+These agents will contact database servers, ftp sites, web pages, etc., to extract the necessary information, and populate the data warehouse.
+The agents will need to select and retrieve only relevant data, allowing for fault tolerance for temporary network or database dropouts.
+The agents will need to be intelligent enough to handle variation in the underlying data structures, use inferencing to combine facts into higher-level knowledge and affect overall process flow decision-making.
+We envision building a set of modular agents to collect information from the various data sources.
+An overview of the architecture is given in Figure 13.
+Various data resources, e.g., molecular biology databases, ftp sites, web servers, will be accessed by the Data Mining Agents using either database specific tools, e.g., OPM, generic interrogation systems, e.g., Kleisli, or custom software programs to retrieve relevant information and store it in the data warehouse.
+The data warehouse keeps track of a minimal amount of information to identify a sequence and link it to relevant information in public databases necessary to construct annotation.
+By storing these links in a local data warehouse we can alleviate potential problems associated with timely collection of information from distributed sources over the net.
+It is equally important that the high-performance analysis not be hampered by slow or difficult access to a number of databases in order to complete the annotation process.
+We propose three kinds of agents:
+Update agents
+These agents will deal with public databases, e.g., GenBank, GSDB, that produce data regularly.
+A GenBank agent would contact the ftp site, look for new daily updates and retrieve them.
+If there is a new complete release (every two months) it would start the complete download and unpacking of GenBank.
+It is expected that such an automated system will not work smoothly all the time, therefore if need be (an error) an operator has to step in and finish the downloading manually.
+Update agents could also be used to extract summary information, e.g., all references, links from SWISS-PROT to other databases.
+Search agents
+Search agents deal with more specific information, e.g., find all connections with SOD1.
+These agents would go to GDB, retrieve all about SOD1 which includes GenBank accession numbers, retrieve GenBank information, follow links there, look into other databases.
+This type of agents will be invoked by the Analysis and Annotation Engine to add specific annotation to a sequence and will work on a case by case basis.
+The information collected this way would nevertheless be stored in the warehouse with an expiration date, and used immediately for the annotation.
+This way over time we compile a repertoire of genome information without first going out and downloading the universe onto our disks.
+For search agents, a user will be able to specify which connections to follow: check PDB because s/he is interested in the structures, omit GenBank and use GSDB instead.
+Generic search engines
+We will evaluate more generic search engines, such as web based search engines, e.g., Lycos, Inktomi, or AltaVista, to tabulate genome information and create indices in a rigorous manner.
+The analysis returns a hit with some other sequences, and we will be able to extract a list of related data by looking into our index, with short descriptions and links of this sequence.
+The user interface or report generator is left with the task of following each link and retrieving relevant information from the databases.
+Task 4.2 Data Accessors and Translators
+The overriding design requirement is to perform any translations from a site-specific data format only once, either at that site or at a middle-tier server site.
+The translation process itself depends upon the mechanisms chosen for data exchange and the format of the provided data and will range from relatively trivial to very tedious.
+For example, data already available in a DBMS server supporting SQL, e.g., built using OPM, or an object-oriented query language may be retrieved rather easily using OPM.
+Filters and/or parsers will be necessary for translating data into a common format.
+Through using OPM for the design of the database, many of the translators needed for central databases such as GDB and GSDB can be built automatically.
+However, this does not hold true for a number of other databases which have been built using other methods.
+For example, translators for OMIM (human disease genes) and metabolic database will have to be built from scratch.
+Two additional systems for querying multiple remote sites and producing data translations (Kleisli and MAGPIE, see Appendix I) use different methods and have different strengths.
+Most notable in the Kleisli system is the inherent ability to deal with non-relational targets.
+[gen-13.gif]
+The public genome databases GDB and PDB have been implemented using the Object-Protocol Model (OPM) data management tools.
+These tools provide facilities for efficiently constructing, maintaining, and exploring Molecular Biology Databases (MBD), using application-specific constructs on top of commercial database management systems (DBMSs).
+The OPM tools also provide facilities for reorganizing MBDs and for exploring seamless multiple heterogenous MBDs.
+The OPM data management tools have been highly successful in developing new genomic databases, such as GDB 6.0 (released in January 1996) and the relational version of PDB, and in constructing OPM views and interfaces for existing genomic databases such as GSDB.
+The OPM data management tools are currently used by over ten groups in USA and Europe.
+OPM and the OPM tools are currently being adapted to work in the CORBA framework, i.e., providing a translation from an OPM schema to an IDL definition and developing tools to implement Persistence services on top of OPM style databases.
+The OPM tools can be used to design a data model which describes biological objects which are consistent with representations in central databases such as GDB and PDB, which have used the OPM model.
+Most importantly, OPM has tools (including translators) for both generating and querying databases, as well as for defining OPM views on existing databases.
+This method has been used previously for constructing views of central databases such as GSDB, GenBank (ASN.1), and one could use these tools for bringing all the relevant data from remote databases into a common format.
+We may need to extend OPM and the tools according to emerging requirements, however the existing tools provide a good starting point and year one activities would involve creating the metadata infrastructure required by the agents for data mining.
+The LBNL OPM team has already done work on how metadata would be organized for multiple genome databases and are quite advanced on developing translators for accessing/querying multiple heterogeneous genome databases.
+The CPL/Kleisli system addresses the problem of integrating multiple, distributed heterogeneous data sources and application programs.
+One of the strengths of Kleisli is its ability to deal with nontraditional sources, such as data exchange formats, rather than mainstream databases, with the data exchange formats commonly employ complex, nested data structures composed of collection types such as sets, multi-sets, variants, records, lists, and arrays.
+Furthermore, relational query languages are notably deficient in their ability to query lists and sequences, precisely the data structures used to represent BioSequences information.
+Kleisli uses general-purpose query system, CPL/Kleisli, that provides access to a variety of flat files (GenBank), custom systems (ACeDB, ASN.1), application programs (BLAST), and relational databases (GDB, GSDB).
+It features a uniform query interface across heterogeneous data sources, a modular and extensible architecture, and most significantly for dealing with the Internet environment, a programmable optimizer.
+Kleisli is capable of complex data manipulation such as structural mediation - a complex data ``join'' between structures that come from different sources - and structural wrapping type transformations involving nesting/unnesting plus generalized selections and projections.
+Kleisli has been shown to be efficient in composing and executing queries that were considered difficult, if not unanswerable, without first either building a monolithic database or writing highly application-specific integration code.
+Detail on the system architecture can be found in Appendix I.
+The system is organized into three layers: (1) a CPL query interpreter; (2) an optimizer and application programming interface; (3) Data drivers, modular interfaces that mediate between Kleisli and external data sources.
+The basic query interface to Kleisli is the CPL query language (Collection Programming Language) developed at the University of Pennsylvania by Chris Overton, one of our collaborators.
+CPL uses the native operations associated with records, variants, sets, lists and multi-sets as the basis of a complete query language for complex types.
+CPL currently uses a comprehension syntax, and can be thought of as SQL extended to a richer type system.
+Within the context of the Kleisli system, it should be thought of as relatively low-level glue language on top of which user views of an integrated data system can be developed.
+The types of data sources currently compatible with Kleisli include Sybase, ACeDB, ASN.1 as well as BLAST; the drivers are generic rather than source specific, meaning that once a Sybase driver has been written any Sybase database can be supported.
+Because communication with the drivers is facilitated through UNIX pipes, drivers can be written in any language; we have used C, perl, as well as Prolog.
+In addition, a flexible printing routine allows data to be converted to a variety of formats for use in displaying (e.g., HTML) or reading into another programming language (e.g., perl).
+We expect that integrating Kleisli into a CORBA-based agent will be straightforward.
+MAGPIE (see Appendix I) is an automated system for carrying out genomic sequence analysis.
+MAGPIE (Multipurpose Automated Genome Project Investigation Environment) is designed and implemented to meet the challenges that arise with the generation of complete microbial genome sequences, during and beyond the lifetime of a genome sequencing project.
+In many ways MAGPIE is a model for methods of analysis and data mining which could become part of the much larger scale processing proposed in this project.
+Another tool for building accessors and indexes for a broad variety of molecular biology databases is included in the Sequence Retrieval System (SRS) at EMBL Heidelberg (Etzold et al.).
+It includes a generic parser to parse the text format of a database and an object-oriented query language.
+SRS provides access to 36 sequence and sequence-related databases.
+In this project we propose to develop and implement a framework, where the most appropriate tool can be used to access data sources.
+We will start with a few, and gradually evolve the system by adding translators and databases.
+One of our data mining goals is not to summarily input data from external sources, but to extract high-level summary information, and to create and maintain active links to the underlying data at the remote data sources.
+We plan to use a hypertexting mechanism to establish these links within the analysis results document and access the Web interface to the remote data sources to utilize the links.
+Goals for Task 4.
+Data Mining Services include:
+Year 1
+* Establish OPM, Kleisli data mining agents for most essential databases * Collect parameter and defaults files in BioParameter database * Establish BioSequence as comprehensive sequence collection
+Year 2
+* Establish update agents for specialty databases * Implement BioIndex database
+Year 3
+* Establish data mining agents for niche and new databases * Institute BioIndex as a query service to the genome community * Include syntenic links to multiple organism databases
+Task 5.
+Data Warehouse
+We propose to build a data warehouse to support our data management needs.
+The data warehouse will need to satisfy four criteria, efficient storage of data, high speed communication to the Analysis and Annotation Engine, full access by agents for data exchange with external databases, and extensibility for the future data needs (including multimedia objects) for this project.
+The proposed Analysis and Annotation Engine is designed to process large amounts of sequence information.
+In order to achieve the high-throughput operation, we cannot rely on external database servers and network connections to supply the necessary data.
+We have to build a local sequence storage that can be accessed and scanned rapidly.
+The data retrieved by the Data Mining agents from the distributed database repositories or calculated by the Analysis and Annotation Engine must be efficiently stored in a local repository for optimal access.
+This local repository will be replicated among participating collaboratory sites for optimal throughput of the Engine and synchronized at regular intervals.
+Information collected by the Data Mining agents and analysis results will be compiled into an index to provide rapid access to existing sequence feature annotation.
+While other warehouse efforts in Bioinformatics, e.g., the Integrated Genome Database (IGD) (Ritter et al. 1994) or the GenomeTopographer project at CSHL (Marr et al.
+URL), attempt to physically integrate data sources, we restrict the content of the warehouse to the immediate needs of the Analysis and Annotation Engine.
+The Integrated Genomic Database (IGD) is an international project to develop an information management system for human genome researchers which interconnects existing molecular biology databases and analysis tools.
+It is a joint project between DKFZ, Heidelberg (Germany), CNRS, Montpellier (France), ICRF, London (UK), LBNL, Berkeley (USA), MRC, London/Cambridge (UK), and WIS, Rehovot (Israel).
+It integrates a number of molecular biology databases by downloading the data and translating the information into a unified database schema.
+Building and maintaining such a database, particularly the definition of the unified schema, integration of numerous differing data formats, access methods, etc., is a monumental task.
+The GenomeTopographer presents a workspace for biologists that includes tools, local data, and access to a number of public databases.
+We do not intend to duplicate their efforts and do not propose to develop a unified schema for genome information.
+By limiting the scope to collecting sequence information and to building a genome-specific index, we drastically reduce the complexity in building the data warehouse.
+This genome-specific index will be modeled after recently developed Internet search engines, e.g., Lycos, Inktomi.
+In the past, database indexes have been largely limited to indexing the contents of one particular database.
+Sequence databases have been distributed since their inception with flat file indexes that relate database structures with the corresponding entries, e.g., the GenBank author.idx file lets you find an entry by the name of it's author.
+More sophisticated tools like IRx(R) (Information Retrieval eXperiment, Lister Hill National Center for Biomedical Communications at the National Library of Medicine) permit forming complex queries with boolean operators to search the database.
+NCBI recently added a text searching capability using IRX for their GenBank database.
+Multidatabase indexes are less common.
+Examples are the Entrez system at NCBI, the Mouse Genome Database (MGD, see URL) at the Jackson laboratory, and the WAIS Wide Area Information System that can be used to index reams of text documents, gopher sites, data files, and much more.
+Entrez (Entrez URL) is an integrated database retrieval system which accesses DNA and protein sequence data, related MEDLINE references, a collection of genome data and 3-D structures from MMDB.
+The DNA and protein sequence data are integrated from a variety of sources, including GenBank, EMBL, DDBJ, dbEST, dbSTS, GSDB, PIR, SWISS-PROT, Protein Research Foundation (PRF), PDB, and patents.
+The DNA sequence, protein sequence, MEDLINE, genome and 3-D structure data are linked to provide easy traversal among the datasets.
+Some of the links are simple cross-references, for example, between a sequence and the abstract of the paper in which the sequence was reported, or between a protein sequence and its corresponding DNA sequence.
+Other links, however, are based on computed similarities among the sequences or among the textual documents.
+The precomputed `neighbors' allow very rapid access for browsing groups of related records.
+We plan to evaluate some of these index building technologies and approaches.
+This genome-specific index is intended to provide entry points for further exploration in conjunction with annotated features on a sequence.
+Task 5.1 The Data Model
+[gen-14.gif]
+The ways in which users from the biological community access and interact with the data generated by this project will be a major determinant of the success of the project.
+Behind the analysis and interfaces which will be built as a part of this project, it is important to have a rich and robust data model.
+The major data being analyzed in this project, nucleotide sequence, can be viewed as the finest level of resolution of a physical map.
+In genomics, maps both genetic and physical, are relatively simple, one-dimensional objects, yet they can communicate a wealth of biological information and can serve as a framework for links to more complex types of information.
+Descriptions of chromosomes can be viewed as a series of hierarchical maps proceeding from the banding pattern seen in the light microscope to the actual DNA sequence.
+Within the genome community a number of data management structures have been created which capture the essential richness of genomic maps and can serve as a model for organizing and presenting the type of information which will be generated by this project.
+It should also be clear from the previous discussion that the annotation process is rather fluid, that is not all users want the same annotation and, because our knowledge of biology is incomplete, we cannot assume that all of the features which would be useful to annotate have even been discovered.
+In fact it seems a virtual certainty that entirely new classes of features will be discovered and become part of our analysis within the time-frame of this proposal.
+It is important that the data model is sufficiently robust to accommodate the plastic nature of the annotation process.
+Information generated in this project will also migrate to a number of public databases which will necessitate the development of export tools and translators, and a compatibility with these community resources is essential.
+Since there is great variation in the way data are stored and organized at the various genome centers, it is desirable to establish as much commonality as possible in representing and accessing similar data types when and where possible and feasible.
+Thus, considerable effort will be put toward establishing a data model which standardizes common information provided by the various centers while retaining the ability to represent data specific to a site.
+The starting points for this effort are the models for existing molecular databases, such as the Genome DataBase, the Genome Sequence DataBase, and the Protein Data Bank.
+Beyond the types of data models in the community databases, this project will analyze new types of data and therefore poses new challenges.
+For example since we will examine unfinished sequences (partially sequenced clones, sets of contigs with order and gaps, unordered contig sets, partial and gapped gene models), implementation of several new concepts related to how sequence needs to be represented will be required.
+These developments may impact the community database schema as well.
+A preliminary data model with explicit focus on capturing links to other databases is shown in Figure 14.
+The central part of the data model is the object Sequence which characterizes a particular sequence, usually a name and the nucleotide or amino acid sequence.
+Relationships among sequences will be captured through subclasses of Relationships, e.g., to establish a relationship between a nucleotide sequence and it's amino acid translation or 3D structure.
+Annotation that can be extracted from public databases and those generated by the analysis routines will be handled by the Feature object that references a set of sequence objects.
+Each Feature identifies the span to which the annotation applies and has a Link to an existing data resource, i.e., only pointers or accession numbers will be stored in the warehouse.
+In case of new sequences collected from web sites, and the like, we will have to keep additional information to ensure proper identification of the sequence, e.g., clone names, producer, time-stamps.
+We do not want to duplicate existing efforts but rather integrate existing knowledge by building a common sequence based index.
+The sequence will be used as the key to access all references.
+Instead of following hierarchies of relationships, e.g., a gene is similar to a known protein that occurs in a transcription factor database and is referenced by GDB to point to a human disease tabulated in OMIM, we will attempt to construct a flat reference profile: once the gene is identified all connections will be available to be included in a report or displayed on a visualization system.
+The goal is to provide as much information up front in order to facilitate the interpretation of the results.
+The details of the links can be found by accessing the data resources that originated the annotation.
+Task 5.2 Warehouse Databases
+We will evaluate a number of commercial database management systems for their ability to provide fast access to a large amount of information.
+Two of the principal laboratories (ORNL and LBNL) have Sybase licenses that can be used to set up a preliminary storage system.
+The Data Management Group at LBNL (V. Markowitz) has the necessary expertise to advise us on selection criteria and performance issues.
+We can also draw upon the experience of public database providers, GDB(TM) and GSDB, that did extensive evaluations before choosing a database management system.
+We will also investigate current capabilities of object-oriented databases and their fitness into our object-oriented framework.
+Table IV shows potential data sources and the corresponding components of the warehouse.
+Some databases may contain data that will end up in more than one component.
+CAPTION: Table IV: Databases organized by information type.
+These databases represent the types of information and potential data sources for the data warehouse.
+Initial targets are indicated with bold type.
+Information types Databases Sequence
+(BioSequence) EMBL, EMNEW GenBank, GenBankUpdates GSDB PIR SWISS-PROT TREMBL GenPept NRL3D Structure
+(BioSequence, BioIndex) PDB NDB HSSP DSSP ALI FSSP Sequence related
+(BioIndex) PROSITE, PROSITEDOC EPD, YPD ECDC GDB OMIM MIMMAP ENZYME REBASE PRODOM, SWISSDOM PIRALN FlyBase BLOCKS TFSITE, TFFACTOR
+BioSequence
+We plan to maintain an up-to-date set of nucleic acid and protein sequence databases and related information.
+The sequences will be transformed into one or more standard formats used in the Analysis and Annotation Engine.
+Initially we will use the sequence data as they are distributed by the database provider in order to get the service components up and running as quickly as possible.
+In the following years we plan to integrate sequences from various sources and build a non-redundant, non-overlapping set of sequences to reduce redundancy in the analysis and annotation.
+A compound identifier will be used to mark the source database, data type, and the original identifier similar to the identifiers used by public genome databases.
+BioIndex
+The BioIndex will provide direct links from the sequence identifier to relevant related information.
+The browsing model, i.e., looking up references that provide further insights and more references that the user may follow (e.g., the Entrez neighbors that can be followed or hypertext linked web pages), is very powerful for direct user interaction.
+However, for the development of an automated annotation system it would require decision making capabilities that complicate the development of autonomous agents.
+Implementing the proper heuristics proves sometimes to be quite difficult to implement.
+We propose an indexing model where all relevant links and references are collapsed to one level, i.e., given a sequence the index reveals all connections of this sequence with other sequences, structures, genes, gene products, and more.
+The graphical interface to the ACeDB database demonstrates this concept very nicely: the display is bursting with information, invisible lines separate BLAST hits from GeneFinder predictions, etc., but the information is visible at once.
+The user does not need to switch to separate windows to see the concerted annotation.
+Such an interface is quite different from hypertext-linked web pages where more information is always a mouse click away (and the user gets sometimes lost in cyberspace).
+The BioIndex will concentrate information and leave it up to the visualization, post-processing, or the user to make the decision about the relative importance of each data item.
+This approach allows the development of a multitude of user interface client programs that receive the very same output from the Analysis and Annotation Engine, but will be able to highlight different properties to different users.
+All users are equal, but some users are more equal.
+And they should be allowed to customize their interface.
+The BioIndex will be a significant component in providing such a capability to the Analysis and Annotation Engine.
+The development of this index will start with compiling obvious connections, e.g., compiling references from databases and among databases.
+Many databases already have links to other information, e.g., SWISS-PROT references PIR, OMIM, EMBL, and others.
+We will begin extracting these links and creating a composite index.
+As an alternate approach we plan to evaluate generic indexing tools: the Internet index inktomi is a program resulting from the NOW (Network Of Workstations) project at the University of California at Berkeley and indexes web pages; IRX as a more traditional text retrieval system; WAIS, a network-based text retrieval and indexing system.
+BioParameter
+This warehouse component provides a common access point for parameter and default files used in the Analysis and Annotation Engine.
+Examples of such files are the PAM and BLOSUM matrices, codon usage tables, base tuple frequencies, default parameter settings, etc.
+In the future documentation and on-line help facilities will be added.
+The following summarizes our goals for Task 5.
+Data Warehouse:
+Year 1
+* Design and implement base schema * Build baseline warehouse * Include major analysis systems for features and gene modeling * Install and integrate satellites of major central databases in warehouse * Populate warehouse with first year data plus legacy sequence
+Year 2
+* Build fully implemented data warehouse * Design and implement extended schema * Include all analysis features * Incorporate additional satellites
+Year 3
+* Build fully equipped data warehouse * Regular distribution of data warehouse within collaboratory __________________________________________________________________
+Last Modified: 04:00pm PDT, July 25, 1996

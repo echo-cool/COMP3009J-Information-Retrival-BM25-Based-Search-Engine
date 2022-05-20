@@ -1,0 +1,14 @@
+#next previous up next next up previous Next: 2^64 -2^10 + 1 Up: Random Number Generators Previous: 48-bit CRI Linear Congruential 61-bit Prime Modulus Linear Congruential Generator This algorithm is slower than the generators using a power of two modulus, but produces a random number sequence free of short period patterns in the low order bits.
+A pattern does occur for this generator, however, and is described in [5].
+The next value for the random state x[n] is determined from the current value x[n - 1]
+x[n] = a x[n - 1]
+Where the multiplier, a = 437799614237992725, is hardwired into the algorithm and p is a Mersenne prime; that is, a prime that is of the form p = 2^m - 1 where m is also a prime.
+For this generator m = 61, which is the largest value of m less than 64 for which 2^m - 1 and m are primes.
+The multiplier was again chosen to obtain maximal period of the generator, 2^61 -2 $ \approx$ 2.3 x 10^18, for this algorithm.
+This generator is the same as the default one-stream SPRNG pmlcg generator and was checked to insure that it satisfies the requirements for maximal period.
+The interface routines for this generator are declared as: Rng_Type RngP61Seed( Rng_UInt32 i, Rng_UInt32 j );
+Rng_Type RngP61Spawn( Rng_Type *x );
+int iRngP61( Rng_Type *x );
+double dRngP61( Rng_Type *x );
+float fRngP61( Rng_Type *x ); _________________________________________________________________
+next up previous Next: 2^64 -2^10 + 1 Up: Random Number Generators Previous: 48-bit CRI Linear Congruential

@@ -1,0 +1,12 @@
+<
+By default, PHP uses the libc random number generator with the 
+<
+It uses a random number generator with known characteristics, the Mersenne Twister, which will produce random numbers that should be suitable for seeding some kinds of cryptography (see the home pages for details) and is four times faster than what the average libc provides.
+The Homepage of the Mersenne Twister can be found at 
+<
+If you want a random number between 5 and 15 (inclusive), for example, use 
+<
+<
+To get the same results in these versions the short example should be 
+<
+<

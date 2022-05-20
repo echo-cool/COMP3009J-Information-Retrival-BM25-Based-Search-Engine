@@ -1,0 +1,278 @@
+December 2002 CLASSIFICATION DEFINITIONS 715 - 1 CLASS 715, DATA PROCESSING: PRESENTATION PROCESSING OF DOCUMENT SECTION I - CLASS DEFINITION This class provides for data processing means or steps wherein human perceptible elements of electronic information (i.e., text or graphics) are gathered, associated, created, formatted, edited, prepared, or otherwise processed in forming a unified collection of such information storable as a distinct entity.
+Class 715 is structured into 15 main divisions: (A) Synchronization of diverse media 358, (B) Hypermedia (C) Drawing (D) Spreadsheet (E) Form (F) Table 381, (G) Version management (H) Annotation control (I) Structured document (e.g., HTML, SGML, ODA, CDA) (J) Hierarchical control (K) Layout (L) Display processing (M) Edit, composition, or storage control (N) Font selection (O) Miscellaneous 702, SECTION II CLASSES REFERENCES TO OTHER 703, 700, 600, 382, 379, 345,
+SEE OR SEARCH CLASS: 235, Registers, various subclasses for data bearing record controlled systems, basic machines and associated indicating mechanisms for ascertaining the number of movements of various
+704,
+devices and machines, plus machines made from these basic machines alone (e.g., cash registers, voting machines), and in combination with various perfecting features, such as printers and recording means.
+Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclasses 418 through 475 for computer graphics processing; subclasses 700-867 for operator interfaces; subclasses.1.1-111 for visual display systems with selective electrical control including display memory organization and structure for storing image data and manipulating image data between a display memory and display device.
+Facsimile and Static Presentation Processing, appropriate subclasses for transmitting, processing, or reproducing a permanent picture or static presentation processing for a hard copy (e.g., printer) device.
+Telephonic Communications, various subclasses for two-way electrical communication of intelligible audio information of arbitrary content over a link including an electrical conductor.
+Electrical Audio Signal Processing Systems and Devices, various subclasses for wired oneway audio systems, per se.
+Image Analysis, various subclasses for operations performed on image data with the aim of measuring a characteristic of an image, detecting variations, detecting structures, or transforming the image data, and for procedures for analyzing and categorizing patterns present in image data.
+Surgery, subclasses 300 through 595 for diagnostic testing applications of computers in the life sciences including patient monitoring and medical imaging.
+Data Processing: Generic Control Systems or Specific Applications, subclasses 1 through 89 for data processing generic control systems; subclasses 90-306 for applications of computers in various environments.
+Data Processing: Measuring, Calibrating, or Testing, appropriate subclasses for application of computers in measuring and testing.
+Data Processing: Structural Design, Modeling, Simulation, and Emulation, subclasses 3 through 22 for data processing simulation.
+Data Processing: Speech Signal Processing, Linguistics, Language Translation, and Audio Compression/Decompression, subclasses 1 through 10 for linguistics.
+December 2002 Edition New Class
+715 - 2
+CLASSIFICATION DEFINITIONS
+December 2002
+705,
+706,
+707,
+708,
+711,
+717,
+Data Processing: Financial, Business Practice, Management, or Cost/Price Determination, appropriate subclasses for business data processing.
+Data Processing: Artificial Intelligence, appropriate subclasses for artificial intelligence in general.
+Data Processing: Database and File Management or Data Structures, appropriate subclasses for database and file management or data structures.
+Electrical Computers: Arithmetic Processing and Calculating, subclasses 1 through 9 for hybrid computers; subclasses 100-714 for calculators, digital signal processing and arithmetical processing, per se; subclasses 800-854 for electric analog computers.
+Electrical Computers and Digital Processing Systems: Memory, subclasses 1 through 6 for addressing particular memory configurations and systems; subclasses 100-173 for memory accessing and control, per se; subclasses 200221 for address formation processing.
+Data Processing: Software Development, Installation, and Management, appropriate subclasses for a data processing software development tool.
+An entity of visually perceptible elements of electronic information (i.e., text or graphics).
+FILE A named collection of data.
+INFORMATION Meaning that a human being assigns to data by means of the conventions applied to that data.
+MEMORY A functional unit to which data can be stored and from which data can be retrieved.
+PERIPHERAL A functional unit that transmits data to or receives data from a computer to which it is coupled.
+PRESENTATION PROCESSING Manipulating data for generating visually perceptible output.
+PROCESSING
+SECTION III - GLOSSARY COMPUTER A machine that inputs data, processes data, stores data, and outputs data.
+DATA Representation of information in a coded manner suitable for communication, interpretation, or processing.
+See Address Data, Instruction Data, Status Data, and User Data in this Glossary.
+(2) DATA PROCESSING See Processing, below.
+DIGITAL DATA PROCESSING SYSTEM An arrangement of processor(s) in combination with either memory or peripherals, or both, performing data processing.
+DOCUMENT Methods or apparatus performing systematic operations upon data or information exemplified by functions such as data or information transferring, merging, sorting, and calculating (i.e., arithmetic operations or logical operations).
+(1) Note.
+In this class, the glossary term data is used to modify processing in the term data processing; whereas the term digital data processing system refers to a machine performing data processing.
+Note.
+In an effort to avoid redundant constructions, in this class, where appropriate, the term address data processing is used in place of address data data processing.
+PROCESSOR A functional unit that interprets and executes instruction data.
+TEXT
+December 2002 Edition New Class
+December 2002
+CLASSIFICATION DEFINITIONS
+715 - 3
+Data including alphanumeric characters representing words and symbols.
+Usually text characters are coded using a standard such as ASCII, which assigns numeric values to each character, number, or symbol.
+USER DATA Data other than address data, instruction data, or status data.
+(Also see Data) SUBCLASSES 502 500 MISCELLANEOUS: This subclass is indented under the class definition.
+Subject matter not provided for in any of the above subclasses of this class.
+SEE OR SEARCH CLASS: 358, Facsimile and Static Presentation Processing, subclass 403 for a document filing and retrieval system.
+500.1 SYNCHRONIZATION OF DIVERSE MEDIA: This subclass is indented under the class definition.
+Subject matter wherein a presentation includes elements having more than one data type where the elements are presented in a predetermined order and timing relationship.
+(1) Note.
+Authoring, playing, or recording a presentation which includes synchronization of different media is classified herein.
+ment or to other documents is classified herein.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 854 for details of navigation within a structure when such interactivity is not within the context of document processing.
+DRAWING: This subclass is indented under the class definition.
+Subject matter wherein the textual information may include a graphic presentation formatted as a drawing document, such as CAD and CAM designs.
+SPREADSHEET: This subclass is indented under the class definition.
+Subject matter wherein the textual information may include numerical information and is formatted into a ledgerlike worksheet.
+(1) Note.
+The processing of the informational content within cells of a ledgerlike sheet is classified herein.
+503
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 629 for merge or overlay of graphical objects.
+501.1 HYPERMEDIA: This subclass is indented under the class definition.
+Subject matter wherein the textual information includes embedded links or format codes that direct process flow to alternate or additional displays.
+(1) Note.
+Processing of a document containing embedded links which, when selected or processed, changes the display to other portions of the same docu-
+SEE OR SEARCH CLASS: 705, Data Processing: Financial, Business Practice, Management, or Cost/Price Determination, subclasses 30 through 34 for this subject matter in an accounting data processing system, and subclasses 35-45 for this subject matter in a financial data processing system.
+504 Cell format control: This subclass is indented under subclass 503.
+Subject matter wherein the format within each spreadsheet entry is controlled.
+FORM: This subclass is indented under the class definition.
+Subject matter wherein the information is inserted at a designated geometric location within a document.
+Form creation: This subclass is indented under subclass 505.
+Subject matter wherein the geometric location is specified.
+505
+506
+December 2002 Edition New Class
+715 - 4
+CLASSIFICATION DEFINITIONS
+December 2002
+507
+Form filling: This subclass is indented under subclass 505.
+Subject matter wherein placing information in the location provided for such information is performed.
+Fitting data into field on form: This subclass is indented under subclass 507.
+Subject matter wherein the textual information or the geometric location is modified to meet the limitations of an existing field geometric constraint.
+512 TABLE: This subclass is indented under the class definition.
+Subject matter wherein the textual information may include numerical information and is formatted into a tabular format.
+Ruled lines: This subclass is indented under subclass 509.
+Subject matter wherein straight linear curves are created to indicate rows or columns in the tabular presentation.
+(1) Note.
+The processing of lines for the division of cells within a table is classified herein.
+508
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclasses 716 through 726 for operator interface aspects of groupware and cooperative data processing.
+717, Data Processing: Software Development, Installation, and Management, appropriate subclasses for management of software code.
+ANNOTATION CONTROL: This subclass is indented under the class definition.
+Subject matter wherein an optional or selectable limited display of textual data related to data unconditionally displayed (e.g., memo field display related to text) is performed.
+STRUCTURED DOCUMENT (E.G., HTML, SGML, ODA, CDA): This subclass is indented under the class definition.
+Subject matter wherein the document is created and processed according to a standardized arrangement of interrelated hierarchical flow and page layout (e.g., office document architecture (ODA), content document architecture (CDA), standard generalized markup language (SGML), or hypertext markup language (HTML)).
+(1) Note.
+The processing of a document according to a standard which directs a receiving application as to the layout of its content is classified herein.
+509
+510
+513
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 443 for the generation of lines.
+511 VERSION MANAGEMENT: This subclass is indented under the class definition.
+Subject matter wherein previous embodiments of documents are retained and organized through the use of various display attributes for the multiple embodiments.
+(1) Note.
+Processing of multiple versions of one or more documents through a plurality of display views or simultaneous presentation is classified herein.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclasses 419 through 427 for the details of three-dimensional presentation processing for a document containing virtual reality markup language (VRML).
+704, Data Processing: Speech Signal Processing, Linguistics, Language Translation, and Audio Compression/ Decompression, subclass 270.1 for speech assisted network.
+December 2002 Edition New Class
+December 2002
+CLASSIFICATION DEFINITIONS
+715 - 5
+514
+HIERARCHICAL CONTROL: This subclass is indented under the class definition.
+Subject matter wherein the textual information may vary in scope of context and may contain or be contained by information of different scope.
+(1) Note.
+This includes subject matter where textual information is divided into sets, at least one of which contains a subset and where each subset may in turn contain subsets, and where the data is controlled by each set and subset.
+519
+Horizontal spacing: This subclass is indented under subclass 518.
+.
+Subject matter wherein the distance between elements in the left and right orientation (e.g., kerning) within documents is altered or specified.
+Area designation: This subclass is indented under subclass 517.
+Subject matter wherein a geometric subset of a presentation surface is specified (e.g., a frame).
+Boundary processing: This subclass is indented under subclass 517.
+Subject matter wherein perimeters of geometric subsets of a presentation surface within documents or document subsets (e.g., flow of text, figures, column or page balancing) are specified, modified or controlled.
+(1) Note.
+The layout of elements around other elements whose location has been pre-specified (e.g., a method in which a set of figures flow around a geometrically locked figure), methods for flowing text around figures, or methods for handling text across boundaries, such as line breaks or column breaks, is classified herein.
+520
+521
+515
+Compound document: This subclass is indented under subclass 514.
+Subject matter wherein the document includes elements having different data types.
+(1) Note.
+The processing of a document containing multiple types of elements is classified herein.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclasses 419 through 427 for the details of three-dimensional presentation processing for a document containing virtual reality markup language (VRML).
+516 Matching application process to displayed data type: This subclass is indented under subclass 515.
+Subject matter wherein processes specific to elements of different data formats within a common document are accessed and executed.
+LAYOUT: This subclass is indented under the class definition.
+Subject matter wherein geometric positioning of elements within the document is altered or specified.
+Spacing control: This subclass is indented under subclass 517.
+Subject matter wherein a distance between elements within documents is altered or specified.
+522
+Format information in separate file: This subclass is indented under subclass 517.
+Subject matter wherein layout specifications are stored separately from the data to which such specifications are applied.
+Format transformation: This subclass is indented under subclass 517.
+Subject matter wherein layout specifications are modified automatically or translated between specifications.
+Detecting format code change: This subclass is indented under subclass 517.
+Subject matter wherein a modification in a layout specification is recognized.
+Pagination: This subclass is indented under subclass 517.
+Subject matter wherein the document is divided into units (i.e., pages) which are sized according to a display or print medium.
+523
+517
+524
+518
+525
+December 2002 Edition New Class
+715 - 6
+CLASSIFICATION DEFINITIONS
+December 2002
+526
+DISPLAY PROCESSING: This subclass is indented under the class definition.
+Subject matter wherein the document is prepared for visual output.
+(1) Note.
+Processing of a document to enhance the visibility of particular elements through the addition of various attributes is classified herein.
+532
+Dictionary: This subclass is indented under subclass 531.
+Subject matter including a memory means for storing a collection of words related to a language.
+SEE OR SEARCH CLASS: 704, Data Processing: Speech Signal Processing, Linguistics, Language Translation, and Audio Compression/ Decompression, subclass 10 for dictionary building, modification, or prioritization.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclasses 581 through 618 for display attribute controllers.
+527 Print preview: This subclass is indented under subclass 526.
+Subject matter wherein an image of data as interpreted by an output device is displayed for operator approval prior to output on a hard copy output device.
+Color attribute: This subclass is indented under subclass 526.
+Subject matter wherein data specifying a color code is defined or modified.
+Text attribute: This subclass is indented under subclass 526.
+Subject matter wherein data specifying a font text characteristic (e.g., italics, bold, underline, size, or highlighting) is defined or modified.
+EDIT, COMPOSITION, OR STORAGE CONTROL: This subclass is indented under the class definition.
+Subject matter including means or steps for developing or changing a document wherein one or more elements of a document (i.e., text, graphics, control, or format codes) are added, deleted, or modified, or including means or steps for storing the resultant altered document or the alterations.
+Text: This subclass is indented under subclass 530.
+Subject matter wherein the editing, composition, or storage is peculiar to the textual information (e.g., hyphenation or punctuation).
+533
+Spell check: This subclass is indented under subclass 531.
+Subject matter including a means for checking the spelling of a word.
+Input of abbreviated word form: This subclass is indented under subclass 531.
+Subject matter wherein a group of pre-selected characters or a symbol (i.e., short form) is replaced by a whole word (i.e., long form).
+Ideographic generator: This subclass is indented under subclass 531.
+Subject matter wherein the construction of word, phrase, or sentence is in a pictorial character form or a non-Roman phonetic symbol.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 467 for the generation of the font for ideographic characters; subclass 471 for display peripheral interface input devices having foreign language capability.
+534
+528
+535
+529
+530
+536
+Multilingual: This subclass is indented under subclass 531.
+Subject matter wherein the processing of the textual information is performed in more than one language.
+SEE OR SEARCH CLASS: 704, Data Processing: Speech Signal Processing, Linguistics, Language Translation, and Audio Compression/ Decompression, subclass 8 for national language support.
+531
+December 2002 Edition New Class
+December 2002
+CLASSIFICATION DEFINITIONS
+715 - 7
+537
+Footnoting: This subclass is indented under subclass 531.
+Subject matter wherein the elements include primary and related data (i.e., an explanation or comments) where related data is presented at a position separate from but marked as related to primary data.
+Equation or formula processing: This subclass is indented under subclass 531.
+Subject matter wherein the elements or other formal code sequences include a mathematical or formulaic expression.
+Block control: This subclass is indented under subclass 530.
+Subject matter wherein a subset of elements in a document delineated by a technique of marking such elements is edited.
+Replacement of element: This subclass is indented under subclass 530.
+Subject matter wherein a selected element is replaced with another element in the document.
+902 Handwritten textual input: This subclass is indented under subclass 530.
+Subject matter wherein the textual information includes symbolic data entered by manual transcription of such symbols.
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 179 for stylus-type display peripheral interface input devices.
+382, Image Analysis, subclasses 119 through 123 for image analysis applications using a signature, and subclasses 186 and 187-189 for pattern recognition of handwritten characters.
+900
+SEE OR SEARCH CLASS: 345, Computer Graphics Processing, Operator Interface Processing, and Selective Visual Display Systems, subclass 467 for the generation of fonts.
+CROSS-REFERENCE ART COLLECTIONS DOCUMENT STRUCTURAL ELEMENT: This cross-reference art is indented under subclass 900.
+Subject matter comprising methods or apparatus for processing data formatted for presentation in a unified collection of such information (document) with special structural element that are not provided for elsewhere.
+Active document: This cross-reference art is indented under subclass 900.
+Subject matter wherein a document contains elements or attributes which include scripts or procedural instructions which are executed upon the document or its environment.
+Multilayer document: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information within documents contains multiple textual elements in depth layers allowing for transparency, opacity, and coloration based on intervening layers.
+3-D spreadsheet: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information within spreadsheet documents is contained within spreadsheets having the dimensions of depth, height, and width.
+Details of spreadsheet data records: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information within spreadsheet documents contain presentation data specified at individual data record levels.
+Spreadsheet cell protection: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information within spreadsheet documents is writeprotected.
+538
+539
+901
+540
+541
+903
+904
+542
+FONT SELECTION: This subclass is indented under the class definition.
+Subject matter wherein the features of a character set for a specified collection of information are determined.
+(1) Note.
+The automatic or user-specified selection of a predefined font is classified herein.
+905
+December 2002 Edition New Class
+715 - 8
+CLASSIFICATION DEFINITIONS
+December 2002
+906
+Creating one form from another: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information within a form specifies a new set of field relationships based on an existing set of relationships.
+Hierarchical document control with varying levels of detail: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information is presented in greater or lesser relative amounts of data based on the level of precision (e.g., outlining).
+Document format layout template: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information predefines the geometric positioning of text.
+Document page collating: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information orders and numbers document pages.
+Document presenting plural pages on a single sheet: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information presents multiple pages of information on a single substrate which can be cut or folded to present each page as a separate physical entity.
+Document page description processing: This cross-reference art is indented under subclass 900.
+Subject matter wherein textual information presents the display of textual data based on the interleaved data and instructions for display.
+907
+908
+909
+910
+911
+END
+December 2002 Edition New Class

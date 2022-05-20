@@ -1,0 +1,57 @@
+USGS/CVO Logo, click to link to National USGS Website USGS/Cascades Volcano Observatory, Vancouver, Washington __________________________________________________________________ GPS - The Global Positioning System Excerpt from: Dvorak, John J., 1992, Tracking the Movement of Hawaiian Volcanoes: Global Positioning System (GPS) Measurements: Earthquakes and Volcanoes, v.23, no.6, p.255-267 The Global Positioning System (GPS) uses information broadcast by orbiting satellites to accurately monitor changes in the horizontal and vertical position of survey points on volcanoes -- data on deformation needed to forecast future eruptions.
+The radio signals transmitted by GPS satellites include time, ranging data, and information on the predicted position of the satellites in space.
+Deformation studies on volcanoes often involve a procedure called relative positioning.
+To carry out this procedure, one receiver is situated at a stable control station and the other is set up at a point where the change in relative position is to be determined.
+Although a detailed description of how the system works is beyond the scope of this article, the central core of GPS operations is the simultaneous determination of distances between ground station and set of four or more satellites.
+This is accomplished by distance ranging.
+The ground-station receiver simultaneously records time-coded ranging signals from the satellites.
+The ground station also continuously generates a time-tagged replica of the ranging signal sent by the satellites.
+The time codes are embedded in the signals in such a way that the source-to-receiver transit time can be recovered from the data stream.
+Multiplication by the speed of light gives the corresponding distances.
+___________________________________
+A constellation of orbiting satellites continuously sends radio signals that can be used with proper receiving equipment and computer processing to determine the relative positions of points on the Earth's surface.
+Positions can be determined to within about a centimeter using GPS.
+This high precision means that slight surface movements of geophysical interest, such as the movements around active volcanoes, can be tracked by repeating measurements at the same survey marks.
+To understand how this high precision is possible, think of the narrow triangle formed by a pair of receivers on Earth and a GPS satellite in a 20,000-kilometer-high orbit.
+The satellite is used as a reference point with a predictable position in space.
+The precision of the measured distance between the receivers depends on how well we know the distance between a receiver and the satellite.
+For example, if we wish to know to within a centimeter the distance between two receivers separated by 100 kilometers, then we must know the position of the 20,000-kilometer-high satellite to within a few meters.
+How is it possible to achieve such high precision of the position of a satellite moving in orbit at 5 kilometers per second?
+Technology and orbital mechanics have developed to the point that we can now account for small shifts in orbit that result from nonspherical components of the Earth's gravity field, solar radiation pressure, thermal emission of the satellites, and gravitational attractions of the Moon and Sun.
+Furthermore, we can construct simple models of the Earth's atmosphere and ionosphere to account for time delays of the radio signals from a satellite.
+The actual procedure of making these calculations is very complex and requires huge chunks of computer time.
+This has somewhat limited our use of GPS.
+However, improved schemes to process GPS measurements and the development of receivers that simultaneously track eight or more satellites indicate that GPS will be applied to more and more studies of crustal movements in the future.
+Conventional land-surveying techniques have been used extensively in the past to record ground movements around volcanoes, including those in Hawaii.
+However, use of these techniques limits the choice of potential survey marks.
+These marks, which are usually located near a road, must be visible from other survey marks.
+In contrast, GPS survey marks can be located almost anywhere, even in remote and rugged terrain, as long as the site has a clear view of the sky.
+Furthermore, GPS measurements can be made in almost any weather condition.
+In contrast, unfavorable weather often seriously restricts, or precludes, the use of conventional techniques.
+In addition, repeated GPS measurements determine both vertical and horizontal components of ground movement.
+In the case of conventional techniques, determination of horizontal and vertical components requires combination of different sets of conventional observations, such as leveling and distance ranging with the use of laser beams.
+Finally, GPS receivers are portable, require only one person to set up the equipment, and can operate unattended for several months on batteries and solar panels.
+These many advantages mean GPS will probably supplant conventional land-surveying techniques as the principal method of monitoring small shifts in the Earth's crust.
+To illustrate the capability of GPS, we repeated measurements of the distance between a pair of relatively stable stations, a station at Hilo on the island of Hawaii and another station several hundred kilometers distant at Kokee on the island of Kauai.
+The largest variation among our three independent measurements, carried out in each of three consecutive years, was 0.038 meters, or about 1.5 inches.
+Elevations can also be determined with GPS.
+However, elevations determined by GPS observations differ from the elevations shown on topographic maps.
+The more familiar topographic elevations, called orthometric heights, are determined by techniques that make use of a local horizontal surface, such as the surface of a standing body of relatively quiet water.
+Most topographic elevations refer to the height above mean sea level determined by conventional leveling.
+Near a large, massive mountain, such as a volcanic island rising high above the seafloor, mean sea level is warped slightly because the mountain has a slight gravitational attraction to seawater.
+Because GPS uses orbiting satellites, GPS_derived elevations, called geometric heights, are referenced to the center of mass of the Earth, not to sea level.
+To illustrate the difference, consider two different estimates of the elevation of Mauna Kea, the highest mountain in the Pacific Ocean, one elevation indicated on a topographic map and the other determined by GPS.
+On the MAUNA KEA quadrangle map, the summit has an elevation of 4,205 meters above mean sea level, the orthometric height determined by conventional geodetic techniques.
+A GPS measurement on March 25, 1989, yielded a distance of 6,379,930.2 meters between the center of mass of the Earth and the top of Mauna Kea.
+Another GPS measurement in 1989 determined that means sea level at Hilo Bay was 6,375,714.4 meters from the center of mass of Earth.
+Subtraction yields the geometric height of GPS elevation of Mauna Kea, 4,215.8 meters.
+Thus, as shown in the accompanying graph, (Web note: not online), the geometric height of Mauna Kea is about 11 meters greater than the orthometric height.
+However, this ambiguity does not pose a big problem when measuring a change in elevation.
+The quantity of primary interest is the difference between two determinations of the point, each carried out using the same scheme of measurement.
+The GPS method gives extremely accurate estimates of these differences.
+__________________________________________________________________
+Return to: [Report Menu] ...
+[GPS Menu] ...
+[Volcano and Hydrologic Monitoring Techniques] ... __________________________________________________________________ __________________________________________________________________
+ButtonBar __________________________________________________________________ __________________________________________________________________
+URL for CVO HomePage is: 

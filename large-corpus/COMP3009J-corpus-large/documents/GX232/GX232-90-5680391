@@ -1,0 +1,304 @@
+Jefferson Lab EE CAD Group Business Plan Prepared by The EE CAD Group staff with help from Bruce Ullman, Training 
+The responsibility for designing and documenting electrical and electronic wiring diagrams, chassis, layouts, circuit boards, etc. for the Accelerator, the Free Electron Laser (FEL), and other major systems for which Jefferson Lab is responsible, rests with the EE CAD Group in the Accelerator Engineering Department.
+This plan is designed to identify the framework for improved group operations, continuous process improvement, and quality customer service.
+It will be reviewed in six months (Jan 2004) by the Group to evaluate its implementation and make any necessary revisions.
+It will thereafter be reviewed annually.
+MISSION 
+2.
+3.
+4.
+5.
+6.
+7.
+Maximize technical design skills through training Keep software current and distributed Integrate customers into a visible and standardized process Define what constitutes an acceptable job Utilize well-managed outsourcing to supplement in-house resources Establish realistic documentation standards and apply them consistently and equitably Maintain useful work metrics
+OBJECTIVES Objectives: Each of our goals has a subordinate set of objectives for at least the next year.
+If we meet all of the objectives under a goal, we will have reached that goal.
+Goal 1.
+Maximize technical design skills through training (Appendix C) 1.1 Identify qualifications and skills required for designers 1.1.1 Define ME qualification 1.1.2 Define EE qualification 1.2 Assess designers' current skill level against requirements 1.2.1 Identify gaps 1.3 Identify training programs that teach required skills 1.4 Create development plans for each designer to address gaps with appropriate training 1.5 Create PCAD training program for customers Goal 2.
+Keep software and hardware current and distributed 2.1 Upgrade or replace at least 2 of the designers' oldest and/or least capable CPUs/RAM each year 2.2 Manage PCAD licensing for customers 2.2.1 Default permission level for non-EECAD people is "schematic" 2.2.2 Create permanent PCAD seats for all appropriate EECAD designers 2.3 Manage AutoCAD licensing for site wide customers 2.3.1 Maintain a list of current network and stand alone users 2.3.2 Create/maintain permanent AutoCAD seats for all appropriate EECAD designers Goal 3.
+Integrate customers into a visible and standardized process 3.1 Manage single Library used by all 3.1.1 Work with customers to identify additional Library entries not now in the EECAD Library 3.1.2 Update customers' computers daily with EE CAD master libraries 3.1.3 Update customers' computers with EE CAD standard formats 2
+3.1.4 Require that the Library be used for all design work, including work done by customers 3.1.5 Create Library Manager role in EE CAD Goal 4.
+Define what constitutes an acceptable job 4.1 All requests must include: - A clear and legible statement of what is needed - Pertinent mounting/installation information - Where the job will fit into a larger system and what it will do - Desired Delivery Date - Point(s) of contact with email and phone - An indication of whether outsourcing is acceptable if it cannot be done in-house - A particular designer may be requested under certain circumstances 4.2 Requests for mechanical design work must also include: - A complete bill of materials - Information on any new components - A sketch or sample ("as built") 4.3 Requests for electrical/electronic design work must also include: - Information on any new components - A schematic with critical nets defined and associated rules to be applied to the nets o If the schematic is submitted electronically, provide a library, use at least a 25 mil grid (a smaller grid will add time to the job), and use B or C size sheets (larger sheets will add time to the job) 4.4 PC Board requests must also include: - Board size - Preferred number of layers and stacking - Any critical component placements - Whether to use through-hole or surface mount - Any special fabrication information (e.g. "no solder mask" areas, special plating) 4.5 Requests for any other type of job must include a sketch Goal 5.
+Utilize well-managed outsourcing to supplement in-house resources 5.1 Publish criteria for doing electrical design work for JLab in the form of a Statement of Work (SoW) 5.2 Work with Procurement to identify 5.2.1 vendors for outsourcing selected jobs 5.2.2 contractors who can be brought in to work on overflow 5.3 Manage contracted work to same standard as in-house work Goal 6.
+Establish realistic documentation standards and apply them consistently and equitably 6.1 Provide storage and file structure for design documentation 6.2 Publish regular reports to Management 6.2.1 status of design projects finished vs documented 6.2.2 turnaround times for check prints and vellums by customer 6.3 Put due date (two weeks from delivery date) on check prints and email customers who have had them beyond due date (copy to their supervisor and designer) 6.4 Email customers who have had vellums for more than two weeks (copy to their supervisor and designer) 6.7 Deliver all vellums to a person for approval; don't drop them off Goal 7.
+Maintain useful work metrics 7.1 Designers estimate work in hours for every job 7.2 Designers log their work (contract manager logs time, cost for contracted jobs) by customer, project type, name Â­ not for external consumption 7.2.1 log time expended on - research (ME 
+- date check print(s) out - date check print(s) back - date out for internal check - date back from internal check - date vellum out - date vellum back - date docs to Document Control and job logged out 7.3 Job Control compile weekly and monthly summaries of all work--in-house or outsourced 7.3.1 by customer for external distribution to customers' managers 7.3.2 by designer (including original estimates) for internal use
+ASSETS Management Structure: Management is considered an asset as it provides the operational framework for the Group, its resources, and its leadership.
+Lab Director: Christopher Leemann Accelerator Division Director: Swapan Chattopadhyay Accelerator Engineering Group Leader: Will Oren Electrical Systems Manager: Bill Merz Electrical Systems Deputy: Ron Lauze' EE Computer Assisted Design (CAD) Group Leader: Roger Flood Equipment: The Group's equipment consists almost completely of computer hardware and software.
+See Appendix F for a current inventory.
+The Group's designers should never be limited by the capabilities of their hardware.
+The hardware replacement plan attempts to provide every designer with hardware capable of using the full capabilities of the software.
+The CPUs and RAM on at least three machines a year should be upgraded.
+The priority is that the two oldest and/or least capable machines are upgraded first.
+Machines that are replaced are considered as server replacements before they are declared excess.
+Staff: The staff is currently composed of five regular employees, a term employee, a student, a full-time contractor, and a part-time casual employee.
+Designers: Roger Flood Lori Zukerman Ismael (Mel) Gonzales David Williams Kim Ryan Gordon Baker Â­ on loan from Mechanical Engineering (Term) Miriam Angello Â­ Student Intern Kevin Arenius Â­ Contractor Bob Vignato Â­ Retired (Part time Casual)
+Technician:
+4
+METHOD OF OPERATION Work Flow: The general operation of the EE CAD Group consists of customers bringing work, either electronically using our Web-based work request form, or in hard copy.
+We accept work in any form as long as it meets all of our acceptance criteria.
+Generally, customers bring either a design that they want us to refine, alter, etc. or an idea that they want us to turn into a design.
+See Appendix B.
+All work is logged in by one of our "work coordinators" who must first ensure it meets all of our acceptance criteria (Appendix E).
+The request must provide a clear statement of what is needed as the end product as well as if (and how) it will fit into a larger system.
+The customer may include a request that a particular designer work on the project if, for example, the customer and designer have worked on a similar project together previously.
+The customer must also indicate if he/she is willing to have the job outsourced if the EE CAD staff cannot handle it.
+Most importantly, all acceptable jobs must include a usable schematic with mounting/installation information if applicable, a good bill of materials, and a library.
+Once a job is accepted, the work coordinator assigns it a priority and a project designer, and enters that information into the log.
+Priorities are based on what program/department category the job is for.
+The categories are: Â· EE AC Systems Â· EE DC Systems Â· EE I
+Selection of a project designer is based on three things.
+First, which designers have the technical expertise to carry out the job; second, which qualified designers have workloads that can support it; and third, is the designer requested by the customer one of these? If there is no designer who fits the first two criteria and the customer has not ruled it out in the work request, the job will be outsourced.
+Roles and Responsibilities: The roles of the EE CAD stakeholders, as well as their associated responsibilities, are listed in Appendix D.
+All but one of the Group's current staff is a designer, and most of these either are, or aspire to be, qualified for both electrical/electronic work and for the more mechanical work that is involved with electrical system design.
+Therefore, with the exception of Job Control, the staff's responsibilities, and the skills associated with them, are cumulative--from basic skills that apply to all, to skills that are unique to one person.
+General Design Responsibilities: All designers have certain basic responsibilities in common: Â· Possess basic drafting skills Â· Familiarity with computer-assisted design Â· Understand and follow group work practices per business plan Â· Proficient in basic use of Windows MS Office suite Â· Ability to plan and estimate work Â· Ability to communicate effectively for successful results Designers who do mechanical work have additional responsibilities: Â· Understand mechanical concepts of tolerance, loading, and dimensioning Â· Recognize mechanical symbology Â· Understand the mechanical fabrication process Â· Proficiency in AutoCAD Designers who do electrical/electronic work (PC boards) have similar (but not identical) responsibilities: 5
+Â· Â· Â· Â·
+Understand electrical/electronic concepts of tolerance, loading, and dimensioning Recognize electrical/electronic symbology Understand the electrical/electronic fabrication process Proficiency in PCAD
+Position-specific Responsibilities: In addition to being a Work Coordinator, the Group Leader Â· Communicates group needs to Management on training, space, manpower, budget Â· Assesses customer satisfaction Â· Makes sound outsourcing decisions Â· Manages group budget Â· Exercises supervisory 
+Additional Duty Responsibilities: In addition to being a qualified EE and/or ME designer, the Work Coordinators also: Â· Are proficient in planning and estimating work Â· Understand changing Lab priorities Â· Set internal priorities to match Lab priorities Â· Know other designers' capabilities 
+A designer who does only mechanical or only electrical/electronic work has these six common responsibilities plus the four that are unique to their specialty; totaling ten.
+Designers who do both mechanical and electrical/electronic work will have the common 6 plus all 8 of the specialized responsibilities; a total of 14.
+The 5 work coordinator responsibilities fall on qualified designers who already have either 10 or 14 responsibilities as designers.
+The Group Leader, who is one of the work coordinators, has an additional set of unique responsibilities that brings his total into the twenties.
+Additional functions like Library Manager and Software Manager add unique responsibilities to the totals of the designers assigned to perform them.
+Since Job Control is not run by a designer, the responsibilities of this function are both unique and complete unto 6
+themselves.
+We recognize that customers too have their part to play in how well we can serve them.
+We serve our customers and the Lab best when customers adhere to their responsibilities: Â· Provide work requests that meet the Group's published acceptance criteria Â· Indicate designer preference 
+These are listed in Appendix C along with the proficiency level required for the position.
+Annually, the Group Leader will assess the actual proficiency of the employees filling each position against what is required.
+Any "gaps" that are identified are documented in the employee's performance appraisal as expectations for the coming year.
+Training: The individual group member and the Group Leader work with the Training and Performance Office to identify ways to close the skill gap and help the employee meet the related performance objective.
+Formal short courses, both on and off site, may be supplemented by online training, mentoring, OJT, reading published materials, conferences, etc. and are funded by the Group.
+Standards of Performance Product Quality: Our highest priority is to produce designs that meet or exceed customer expectations, that work when they are fabricated and installed, and that are well-documented so they can be reproduced or modified with as little effort and as much accuracy as possible.
+satisfy Â· Â· Â· Â· Â· Customer Service: Customer service is essential and is our highest priority after product quality.
+Efforts to our customers include but are not limited to: Timeliness Adherence to specifications Flexibility within guidelines of Business Plan Keeping customer informed Requesting feedback on completed work
+Metrics: "If it doesn't get measured, it doesn't get done."
+That quote may be a little extreme, but it often isn't far from the truth.
+We measure our own performance in a variety of ways and track our customers' interactions with us as well.
+Job Control takes the data provided by the designers, turns it into reports that can improve performance, and ensures it gets into the right hands.
+We log two kinds of internal data and produce two regular reports.
+Logs: Jobs are logged in when they are received by a work coordinator and logged out by the designer (or contract manager for outsourced work).
+However, we also log several milestones in between.
+The work coordinator logs the date the job is assigned to a designer or is outsourced.
+The designer logs the date that check print(s) go out and when they come back; when the job goes out for internal checking and when the check is complete; and when the vellum is taken to the customer and when it is signed.
+Designers also track the hours that go into each step in a job: Â· research (ME 
+7
+Data Reported; Primary Sort Estimates vs actual time; by designer Estimates vs actual time; by customer Estimates vs actual time; by design process step Turnaround time for check prints; by customer Turnaround time for vellums; by customer Job requests rejected; by customer Workload; by designer Workload; by customer Workload; by program/project category
+Frequency quarterly quarterly quarterly monthly monthly quarterly weekly weekly weekly
+Produced for Internal use only Internal use only Internal use only Flood, Lauze', Merz, W. Oren Flood, Lauze', Merz, W. Oren Flood, Lauze', Merz, W. Oren Flood, Lauze' Flood, Lauze' Flood, Lauze'
+Communication: Communication is essential to maintaining a pleasant and productive workplace.
+The most important goal when communicating is for both parties to ensure the receiver understands the message the way the sender intended
+1.
+Concerns about safety, environment, health, work processes, or other work related issues should be brought to the attention of a Work Coordinator.
+2.
+Concerns or questions about difficult customer interactions, personnel issues, office rules 
+unresolved except with the agreement of all parties involved.
+3.
+Concerns will be resolved and questions answered in a timely fashion.
+Issues will not be left 4.
+No idea will be dismissed out of hand.
+Decisions that affect others will be made only after those affected are consulted (except when restricted by statute or policy).
+However, once a decision is made and those affected are informed, everyone will both follow it and support it.
+5.
+Disagreements between group members should first be discussed between the principals, and only elevated if unresolved.
+In most cases, personal information regarding group members and their interaction should be kept within the group.
+6.
+The most important consideration in any decision is its effect on the group's ability to perform its mission.
+Group members must always ask themselves if what they want to do will improve their ability to accomplish the mission.
+For example, if it will help them personally but reduce service to the customer, it is not likely to be supported..
+Office Rules: These mutually agreed upon rules apply to everyone in the EE CAD Group; however, non-exempt (hourly) employees may not work more than 40 hours per week without approval of overtime by the Group Leader.
+1.
+Work Hours: Start: 7:00 am Break: 10 minutes any time Lunch 1 hour between 11:00 am and 1:00 pm Break 10 minutes any time Quit 4:00 pm 2.
+Staff member absences during the day In cases of prolonged absence, computers must be locked while unattended 3.
+Staff member vacation planning Requests for time off are required as far in advance as the total vacation time requested.
+For example one week notice for one week of vacation, unless an unexpected circumstance or emergency arises.
+4.
+End of day close-down All files will be saved, applications closed, and computers either shut down, rebooted, or locked before a Group member departs for the day.
+5.
+Logging Â· All work will be logged in the Group Electronic Log 8
+Â· Â· Â· Â·
+No work will be performed on Lab time that is not logged Log entries for work estimates will be made no later than one day after the job is assigned Log entries for actual hours worked may be collected in any form but, to keep Group-wide data current, hours must be entered into the Group Electronic Log no later than one day after a project milestone (e.g. Research, Preparation, Preparing Schematic) has been completed You are not expected to account for all your work hours in the Log (i.e. Log totals for any designer are not realistically expected to add up to eight hours each day).
+6.
+Telephones and email Â· Â· Â· We are a customer service organization.
+Calls should be answered when they are first received.
+If some work-related activity precludes answering the phone when it rings, check voicemail and return calls within one hour after becoming available.
+Do not let the day end with a voicemail from a customer unanswered, or an email from a customer unacknowledged.
+Even if you don't have the answer, let them know you're aware of their question.
+7.
+Steps for Group Leader to follow to resolve issues Â· Â· Â· Â· Review the issue Investigate all aspects of the situation Try to resolve as soon as possible Make appropriate decisions, communicate what needs to be done with all parities involved, and ask if they understand and will comply
+8.
+Steps for noncompliance * Â· Â· Â· Â· Verbal Warning Written Warning Written Notice Disciplinary Suspension
+* It depends upon the nature of the non-compliance: e.g. safety violations, physical assault, etc., would result in immediate disciplinary suspension
+9
+EXTERNAL INTERFACES Major JLab Customers Division/Department (Contacts) Accelerator EES (E. Martin, W. Merz)
+APPENDIX A
+Accelerator EESRF (W. Woodworth, R. Terrell, R. Nichols, T. Powers, C. Cox, T. Plawski, H. Dong, S. Cooper)
+Accelerator SRF ( W. Sommer, J. Gordon,)
+Accelerator Safety Systems (H. Robertson, J. Jefferson)
+Accelerator EESIC (D. Napier, K. Cole, S. Kauffman, T. Allison , R. Gonzales, O. Garza, D. Eardley, D. Seidman, P. Francis, B. Cumbia, E. Strong)
+Accelerator EESDC (M. Augustine, C. Seaton, D. Gelhaar, T. Seeberger, S. Wood) Accelerator Injector Group (J. Hansknecht)
+Types of Work Requested AC voltage monitoring RF/DC-related Hi-V and current read-backs Analog Block re-design Wiring diagrams System prints High-speed multi-layer schematic designs, layouts, and library support Simple thru-hole two to four layer PCBs System Prints Wiring Diagrams Chassis Mixed digital 
+FEL (D. Gruber, R. Evans, J. Coleman, K. Jordan, C. Sexton, R. Walker) Physics--Liaison and Hall C (H. Areti, C. Yan, N. Sinkine)
+10
+Commercial Contractors/Vendors Company/Individual and Contact Information Services/Products Provided
+Sierra Proto Express (800)763-7503 Attn: Doc Walker https://www.2justforyou.com/NASApp/sierraproject/ jsp/tabs_welcome_home_.jsp
+Wide variety of products from simplest 2layer boards to complex multi-layer PCBs
+PCSM 115 Jack Guynn Drive Galax, VA 24333 276.236.4921 www.pcsm-pcb.com Phoenix Designs 4057 Darling Court Lilburn, GA 30047 770.923.3465 www.phoenixdesigns.com
+A prototype, low volume quick turn PCB manufacturer in Southwest VA.
+They can produce up to 24 layer boards and have the capabilities to do the following: Controlled Impedance, Blind 
+Specializes in PCB design, fabrication 
+Uses PCAD software.
+11
+APPENDIX B
+Process: acceptance to delivery Job request received by Work Coord Log entry
+Goal 4 criteria met? N Return to customer
+Y
+Outsource? Y Find contractor
+N
+Work Coord assigns designer based on -job-skills match -workloads -customer preference and assigns priority based on criticality of program category (see goal 7) Log entry
+Designer contacts customer
+Designer estimates job per goal 7 Estimate to Bob
+A
+Inform customer
+Questions? Problems? Y
+N
+Designer does w ork
+Designer sends check print to customer Log entry
+Log entry
+Designer resolves with customer? N
+Y
+change
+Custom er response? None for 2 weeks
+OK
+Job stats to Bob
+B
+Roger/Lori resolves
+Em ail to customer w / cc to supr
+Bob publishes weekly stats
+A
+som ebody m anages contract
+Contractor com pletes job, sends check print Log entry
+B
+Log entry Log entry Log entry
+B
+Rotating Checker* gets final design
+Designer Meet Goal Y or 6 contractor standards? makes vellum Log entry N Return to designer or contractor for rew ork
+Designer or contract m anager delivers vellum to customer for approval
+Custom er signs? N Designer brings vellum back, tries again
+Y
+Designer or contract m anager docum ents
+*ME checker 
+12
+TRAINING 
+APPENDIX C * Method College/VoTech courses College/VoTech courses Read Business Plan Application-specific courses Experience, OJT Short courses in Communication, Interpersonal Skills, Human Behavior College/VoTech courses, experience, OJT, published material College/VoTech courses, experience, OJT, published material Experience, OJT, published material Application-specific courses College/VoTech courses, experience, OJT, published material College/VoTech courses, experience, OJT, published material Experience, OJT, published material Application-specific courses Course in MS Windows OJT Tutorial, published material Tutorial, Published material, OJT Tutorial, Published material, OJT Published material Experience, OJT, Project Management course Lab reports, publications, documents, meetings, announcements Experience Short course Short course Short course in Negotiating, mentoring with successful manager JLab pubs, mentoring with Procurement JLab publications, mentoring with CFO staff Short courses, Supervisor's "How To" Guide
+Required Skill Perform basic drafting tasks Be familiar with CAD concepts Understand and follow group work practices outlined in Business Plan Maintain proficiency in basic use of MS Windows Office suite Effectively plan and estimate work Communicate successfully with customers Understand electrical/electronic concepts of tolerance, loading, dimensioning Recognize electrical/electronic symbology Understand the electrical/electronic fabrication process Use PCAD to produce design projects Understand mechanical concepts of tolerance, loading, dimensioning Understand the mechanical fabrication process Recognize mechanical symbology Use AutoCAD to produce design projects Set up and manage computer files effectively Be able to update connected computers with current libraries Know how to keep licenses current Assign permissions and seats correctly Track usage accurately Upgrade hardware and software in a timely manner Be able to plan and estimate work Understand changing Lab priorities and be able to set internal priorities to match them Know designers' capabilities 
+Prof Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able Able
+EE Designer Requires Basic Designer qualification
+ME Designer Requires Basic Designer qualification
+Library Manager Requires EE Designer qualification Software Manager
+Work Coordinator Requires EE Designer qualification at the teach proficiency level
+Group Leader Requires Work Coordinator qualification
+*
+Proficiency levels:
+1 Â­ Unskilled (no knowledge or ability) 2 Â­ Minimally Able (aware of skill, can demonstrate some knowledge, but demonstrates little ability to use it) 3 Â­ Able (Fully able to use the skill effectively) 4 Â­ Teach (So proficient in the skill that he/she can teach it to others)
+14
+ROLES 
+APPENDIX D
+Be familiar with computer-assisted design Understand 
+ME Designer Roles Use advanced skills to produce a variety of mechanical design products Work with customers to meet or exceed their expectations Responsibilities Understand the concepts of tolerance, loading, and dimensioning as they apply to mechanical design Recognize mechanical design symbology Understand the mechanical fabrication process Maintain proficiency in AutoCAD
+EE Designer Roles Use advanced skills to produce a variety of electrical and electronic design products Work with customers to meet or exceed their expectations Responsibilities Understand the concepts of tolerance, loading, and dimensioning as they apply to electrical/electronic design Recognize electrical/electronic design symbology Understand the electrical/electronic fabrication processes Maintain proficiency in PCAD
+Work Coordinator/Software Manager Roles Manage software licenses assigned to the Group Assign work to designers Responsibilities Know requirements of software license(s) Equitably manage the assignment of permissions and seats Track usage accurately Distribute hardware and software upgrades in a timely manner Understand (and have access to) changes in Lab priorities Set internal priorities to match Lab priorities Plan, assign, and estimate work based on Â· Current program priorities (SNS, FEL, CEBAF, etc.)
+15
+Â· Designers' capabilities 
+Library Manager Role Maintain master component libraries Responsibilities Be proficient in computer files management Keep master libraries current and complete Update customers' computers with master libraries
+Job Control Roles Manage Electronic Log system Follow up on documentation Support full-time designers Responsibilities Keep database current 
+Group Leader Roles Lead the Group according to the Business Plan Ensure customers' needs are being met or exceeded Make decisions on outsourcing Responsibilities Communicate group needs to Management on training, space, manning, budget Assess customer satisfaction Make sound outsourcing decisions Manage group's funds Manage group members' performance (supervisory 
+Customers Role Develop parts, components, and systems for use in the Accelerator, FEL, etc.
+Responsibilities Use EE CAD for all designs that will be installed in JLab systems Provide work requests that meet EE CAD criteria Include proper documentation (users manual, specs on new parts, etc.) as part of design Log off software seat when not using it Return check prints within 2 weeks Sign vellums within 2 weeks
+16
+ACCEPTANCE CRITERIA
+APPENDIX E
+Acceptance Criteria include the criteria for accepting a job and the standards for documenting the resulting product.
+New Jobs Note: Change requests will only be accepted via hard copy mark-ups or detailed electronic files.
+The EE CAD Group will accept new jobs electronically or in hard copy as long as they meet the following criteria.
+The preferred method for submitting a work request is the Web-based Work Request Form (https://www1.jlab.org/ul/apps/eecad/submit.cfm) which you can fill out yourself or have a member of the Group help fill it out for you.
+All requests must include: Â· A clear and legible statement of what is needed Â· Pertinent mounting/installation information Â· Where the job will fit into a larger system and what it will do Â· Desired Delivery Date Â· Point(s) of contact with email and phone Â· An indication of whether outsourcing is acceptable if it cannot be done in-house In addition, you may request a particular designer if that person has experience working with you on this type of job.
+Additional requirements Requests for mechanical design work must also include: Â· A complete bill of materials Â· Information on any new components Â· A sketch or sample ("as built") Requests for electrical/electronic design work must also include: Â· Information on any new components Â· A schematic with critical nets defined and associated rules to be applied to the nets o If the schematic is submitted electronically, Provide a library Use at least a 25 mil grid (a smaller grid will add time to the job) Use B or C size sheets (larger sheets will add time to the job) PC Board requests must also include: Â· Board size Â· Preferred number of layers and stacking Â· Any critical component placements Â· Whether to use through-hole or surface mount Â· Any special fabrication information (e.g. "no solder mask" areas, special plating) Requests for any other type of job must include a sketch
+17
+HARDWARE 
+P4- 1.8GHz 526M RAM (Vignato) 2.
+P4- 2.8GHz 1G RAM (Williams) 3.
+P4- 2.2GHz 1G RAM (Baker) 4.
+P4- 1.7GHz 512M RAM (Arenius) 5.
+P4- 3.2GHz 1G RAM (Ryan) 6.
+P4- 2.8GHz 1G RAM (Gonzales) 7.
+Apple Macintosh (Ryan) 8.
+P4- 1.5GHz 384M RAM (Angello) 9.
+P4- 2.8GHz 1G RAM (Flood) 10.
+P4- 2.5GHz 768M RAM (Zukerman) 11.
+486 machine ??M RAM (Gonzales) 12.
+P4- 1GHz 512M RAM--PCAD Full suite server (Zukerman) 13.
+P3- 850MHz 384M RAM--ACAD 
+P1-133MHz laptop 24M RAM (Zukerman) 15.
+P4 Toshiba laptop (Flood) Monitors: Description 1.
+17" CRT (Vignato) 2.
+20" Flat Panel (Zukerman) 3.
+20" Flat Panel (Zukerman) 4.
+20" Flat Panel (Williams) 5.
+20" Flat Panel (Williams) 6.
+20" Flat Panel (Ryan) 7.
+20" Flat Panel (Ryan) 8.
+Generic Apple (Ryan) 9.
+20" Flat Panel (Gonzales) 10.
+20" Flat Panel (Baker) 11.
+21" CRT (Angello) 12.
+21" CRT (Flood) 13.
+21" CRT (Flood) 14.
+20" Flat Panel (Arenius) Peripherals: Description 1.
+Digital Camera (Zukerman) 2.
+Network hub (Zukerman) 3.
+Belkin switch box (Zukerman) 4.
+Two Digitizers (Gonzales 5.
+Flatbed scanner (Gonzales) 6.
+HP Laser Jet 4MV (Zukerman) 7.
+HP Laserjet 5L (Vignato) Software Description
+APPENDIX F
+1.
+AutoCAD Mechanical Desktop/Inventor V7 - expires 5/5/04 (Williams) 2.
+AutoCAD Mechanical Desktop/Inventor V7- expires 5/5/04 (Gonzales) 3.
+AutoCAD network seat (Baker) 4.
+AutoCAD network seat (Ryan) 5.
+AutoCAD network seat (Arenius) 6.
+AutoCAD network seat (Flood) 7.
+AutoCAD network seat (Angello) 8.
+AutoCAD network seat (Zukerman) 9.
+AutoCAD network seat (Vignato) 10.
+PCAD Network seat (Angello) 11.
+PCAD Network seat (Flood) 12.
+PCAD Stand Alone license (Williams) 13.
+PCAD Stand Alone license (Zukerman) 14.
+PCAD Stand Alone license (Ryan) 15.
+PCAD Stand Alone license (Arenius) 16.
+PCAD Network licenses (8 full suite, 8 schematic suite only) Version 2002 on server- expires 9/30/04 (Zukerman) 17.
+AutoCAD Network Licenses (11 total) Version 2004 on server-expires 5/5/04 (Zukerman) 18.
+Douglas CAD: MAC PCB design software (Ryan) 19.
+Adobe Acrobat v6 (Williams) 20.
+Adobe Acrobat v6 (Ryan) 21.
+Adobe Acrobat v6 (Gonzales) 22.
+Adobe Acrobat v6 (Zukerman) 23.
+Adobe Acrobat v6 (Flood) 24.
+Adobe Acrobat v6 (Arenius) 25.
+Adobe Acrobat v6 (Angello) 26.
+Adobe Acrobat v6 (Baker) 27.
+MSOffice 2000 (Williams) 28.
+MSOffice 2000 (Baker) 29.
+MSOffice 2000 (Arenius) 30.
+MSOffice XP Pro (Ryan) 31.
+MSOffice 2000 (Gonzales) 32.
+MSOffice 2000 (Angello) 33.
+MSOffice 2000 (Flood) 34.
+MSOffice 2000 (Zukerman) 35.
+MSOffice 2000 (Vignato) All designers are running MS Windows 2000 except Ryan who is running MS XP Pro.
+18

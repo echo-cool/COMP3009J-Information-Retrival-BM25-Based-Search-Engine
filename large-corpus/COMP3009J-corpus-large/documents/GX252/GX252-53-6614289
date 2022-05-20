@@ -1,0 +1,432 @@
+Census 2000 Evaluation R.3.a June 6, 2002 Pre-Appointment Management System/Automated Decennial Administrative Management System System Requirements Study FINAL REPORT This evaluation study reports the results of research and analysis undertaken by the U.S. Census Bureau.
+It is part of a broad program, the Census 2000 Testing, Experimentation, and Evaluation (TXE) Program, designed to assess Census 2000 and to inform 2010 Census planning.
+Findings from the Census 2000 TXE Program reports are integrated into topic reports that provide context and background for broader interpretation of results.
+Prepared by Titan Systems Corporation/ System Resources Division Kevin A. Shaw, Project Manager Planning, Research, and Evaluation Division
+Intentionally Blank
+PREFACE
+Purpose of the System Requirements Study The main objective of the System Requirements Study is to assess the efficacy of the requirements definition processes that were employed by the U.S. Census Bureau during the planning stages of the Census 2000 automated systems.
+Accordingly, the report's main focus is on the effectiveness of requirements methodologies, including processes for coordination, communication, and documentation, and their impact on overall system functionality.
+The report also addresses certain contract management issues and their effect on system development and/or operational considerations.
+The System Requirements Study synthesizes the results from numerous interviews with a range of personnel--both U.S. Census Bureau staff and contractors--who were involved with the planning, development, operations, or management of Census 2000 systems.
+The findings and recommendations in this report are qualitative in nature; they reflect the varied opinions and insights of those personnel who were interviewed.
+The intent is to use the results from this study to inform planning for similar future systems.
+Intentionally Blank
+CONTENTS EXECUTIVE SUMMARY .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . iii 1.
+2.
+3.
+4.
+BACKGROUND ....... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1 METHODOLOGY ..... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2 LIMITS ............... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3 RESULTS ............ . . . . . . . . . .
+4.1 Requirements definition . . . . . . . . .
+4.2 Requirements issues .. . . . . . . . . . .
+4.3 Alignment with business processes 4.4 System deficiencies ... . . . . . . . . .
+4.5 Contract management practices . . .
+RECOMMENDATIONS .. . . . . .
+5.1 Plan for policy change . . . . . .
+5.2 Reporting requirements . . . . .
+5.3 Change Control ...... . . . . .
+5.4 Training requirements . . . . . .
+5.5 Software release process . . . .
+5.6 Maintain corporate knowledge 5.7 Dress Rehearsal ...... . . . . .
+....
+....
+....
+....
+....
+.... base .... . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+.4 .4 .5 .6 .8 10 10 10 11 12 12 13 13 13
+5.
+. . . . . . .
+..
+References .................. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+15 Participants .................. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+i
+Intentionally Blank
+ii
+EXECUTIVE SUMMARY The Pre-Appointment Management System/Automated Decennial Administrative Management System was the first fully integrated applicant, personnel and payroll system developed for the Decennial Census.
+This enterprise wide system utilized stateof-the-art client server technology to manage and distribute data to 12 Regional Census Centers, the Puerto Rico Area Office, and 520 Local Census Offices.
+The overall objective was to develop a comprehensive system for temporary employees that manages the complete employment life-cycle.
+The system was successful at integrating processes that were previously handled by non-interoperable (i.e., independent) systems.
+Time constraints imposed by late funding of the project placed limits on the implementation of some requirements, however this did not affect the overall performance of the system.
+This study presents information based on debriefings with personnel involved with the Pre-Appointment Management System/Automated Decennial Administrative Management System.
+The Pre-Appointment Management System/Automated Decennial Administrative Management System was quite large in scope.
+In all, there were over 3,000,000 applications processed and weekly payroll reached a maximum of over 520,000 individuals.
+Previous systems were developed in-house.
+A commercial off-the-shelf product that could fully meet the unique needs of the Decennial Census was not found, however the commercial product with the best fit was used as the basis for development.
+Major results of the study include: Â· Right system for the job.
+A formalized method was successfully used to identify requirements.
+However, there were significant obstacles to implementing an effective system especially prior to dress rehearsal.
+The development of the system was impacted by requirements changes and severe performance issues.
+Although there were significant challenges that posed high risks throughout the development process, the production system performed to the satisfaction of the U.S. Census Bureau and its stakeholders.
+Reporting requirements not adequately fulfilled.
+Although the system produced many types of reports, other real-time reporting requests were not fulfilled because of late data warehouse implementation, inability of management reporting systems to fully use feeder system data, and heavy programmer workload.
+System was easy to use.
+Decennial Administrative locally operated front-end was developed to address requirement was dropped.
+users, taking into account The Pre-Appointment Management System/Automated Management System incorporated a user friendly, interface for capturing applicant and payroll forms.
+It data capture issues that arose after the original scanning This interface was designed for a wide variety of the level of education, physical limitations and the iii
+Â·
+Â·
+ability to minimize human error.
+This was a major factor that contributed to the efficiency and success of the system.
+Â· Integrated team of personnel.
+The success of the system was largely due to the highly dedicated team of U.S. Census Bureau and contractor personnel.
+This experienced, cohesive team worked together to address technical and procedural issues capably, even under the pressures associated with time constraints and mandatory deadlines.
+All major performance issues were resolved before deployment.
+These and other findings have led to the following key recommendations: Â· Plan for policy change - design for flexibility.
+The system's processes were highly regulated and therefore subject to change in local and national laws which affect system requirements.
+The development team found it difficult, at times, to implement these policy changes in the system.
+The design of the system ought to be modularized and be adequately sized and flexible enough to accommodate these types of changes.
+Reporting requirements - include all stakeholders.
+The system produced many automated and ad-hoc reports but there were many real-time reporting requests that were not fulfilled.
+Reporting requirements need to be considered from many different viewpoints and stakeholders from all key areas should be represented during this phase to ensure that their information needs are met.
+Identification of reporting needs during the requirements phase will maximize the benefit that can be derived from the system for all users.
+Change control - implement formal process.
+Modifications were performed continuously and an efficient formal change control process was employed.
+Additionally, a well documented System Investigations Requirement log was used throughout the entire change management process.
+Changes should be systematically assessed in light of programmatic goals.
+The requirements for change control and supporting documentation should be included in the system development methodology.
+The Change Control Board also must have adequate resources to address programs with large and complex scopes.
+Â·
+Â·
+iv
+1.
+BACKGROUND The Titan Systems Corporation, System Resources Division (Titan/SRD) was tasked by the Planning, Research, and Evaluation Division (PRED) of the U.S. Census Bureau to conduct system requirements studies for 12 automated systems used in the decennial census.
+This report is a study of the Pre-Appointment Management System/Automated Decennial Administrative Management System (PAMS/ADAMS) program.
+It addresses the extent to which the requirements definition process was successful in identifying the needed system functionality and offers one of several evaluation approaches for examining these automated systems.
+The report results are intended to assist in the planning of similar systems for the 2010 Census.
+PAMS/ADAMS is the Census 2000 Applicant, Personnel, and Payroll system.
+It is an automated enterprise-wide integrated system that utilizes state-of-the-art client server technology to manage distributed databases that make information (segmented data) available to Regional Census Centers (RCCs) and their associated Local Census Offices (LCOs).
+PAMS/ADAMS is comprised of administrative management programs that support applicant tracking and processing, selection records, recruiting reports, personnel and payroll processing, and archiving of historical data.
+For 1990 decennial census field operations, the Census Bureau operated separate payroll and personnel systems known respectively as the Decennial Automated Payroll System (DAPS) and the District Office Personnel System (DOPPERS).
+There was also a separate applicant processing and criminal check program called the Applicant File.
+None of these programs were linked to one another and they did not share pertinent information.
+Planning for a more integrated system covering payroll and personnel applications, known as the Weekly Regional Automated Personnel and Payroll System (WRAPPS), began in 1992.
+The purpose of this system was to accommodate an estimated 350,000 temporary census workers to conduct Census 2000 operations.
+The WRAPPS was intended to be implemented in March 1995 for the test census that year, but did not materialize due to budgetary constraints.
+The PAMS/ADAMS project was initiated in 1994.
+The system design incorporated the concepts of WRAPPS and expanded it to include a fully integrated system including applicant, personnel, and payroll functions, as well as a criminal history check.
+These functions were separate modules during the 1990 Census and in the proposed design for WRAPPS.
+In addition to anticipating a payroll of 350,000 employees at peak, the system needed to support and pool up to six million applicants.
+Senior management determined that, due to time and resource limitations, an in-house development effort would not be undertaken.
+Inquiries to other government agencies were initiated to determine if any of their systems could be utilized, but they either lacked the needed capability or the agencies were not interested in handling the Census Bureau's large and intermittent requirements.
+1
+In September 1996, the Census Bureau purchased a commercial-off-the-shelf (COTS) productÂ­PeopleSoft 5.0Â­and began modifying the software so that it would be "federalized" with respect to making it compliant with all Office of Personnel Management (OPM) rules and regulations.
+The primary organizations developing PAMS/ADAMS were: Andersen Consulting (a contractor now known as Accenture); the Field Division (sponsor); and the Financial and Administrative Systems Division (technical lead and programming).
+By March 1998, the PAMS/ADAMS system was installed in 12 RCC's.
+It was released to all 520 LCOs for production as the offices were opened; these releases took place between August and November 1999.
+During this timeframe, the entire PAMS/ADAMS system underwent stress/volume/performance testing and some modules were re-written to improve the efficiency of the code.
+In February 2000, PeopleTools 7.0 was released to the RCCs significantly improving the performance of the PeopleSoft modules.
+At the same time, the development team released the PAMS/ADAMS Data Entry (PADE) system with the File Transfer Protocol (FTP) version.
+These were two significant software changes.
+PAMS/ADAMS is part of the Decennial Field Interface (DFI) and interfaces with the Decennial Applicant Name Check (DANC), Management Information System 2000 (MIS 2000), and Operations Control System 2000 (OCS 2000).
+There were many other system interfaces with PAMS/ADAMS which were reliant on it for personnel and payroll information such as cost reporting for the Commerce Administrative Management System (CAMS), geocoding functions, and data for Equal Employment Opportunity Office, Bureau of Labor Statistics, and Department of Treasury.
+The goal of the PAMS/ADAMS system was to provide an automated, integrated, comprehensive, centralized, enterprise-wide system to: create an automated applicant file; support the hiring of employees; process personnel actions; pay employees; provide reports and other types of output; and maintain historical data.
+PAMS/ADAMS contained 3.7 million applicants on file and there were a maximum of 512,000 individuals on the weekly payroll during the peak of Census 2000.
+Overall, the PAMS/ADAMS system managed more than 865,000 employees in the year 2000.
+The PAMS/ADAMS was initially installed in three regional sites in January 1997 for testing in the Census 2000 Dress Rehearsal.
+By March 1998, PAMS/ADAMS was completely installed in all regions.
+System and program enhancements continued throughout the life-cycle of the PAMS/ADAMS, resulting in a comprehensive automated system that was in place by February 2000.
+A weekly payroll was produced from March 1997 until December 2001.
+2.
+METHODOLOGY The Titan/SRD Team interviewed key personnel for each of the Census 2000 automated systems using a structured approach centered around four fundamental areas.
+A set of questions under each of those areas was designed to explore: (1) the effectiveness of the 2
+requirements definition process; (2) how well the systems were aligned with business processes; (3) identification of any deficiencies in functionality or performance relative to actual operational needs; and (4) how effective the agency contract management activities were in regards to contractor performance.
+A similar, but separate set of questions, was designed for contractors who were identified as key personnel.
+The contractors were asked about the following areas: (1) the clarity of the statement-of-work and the impact of any changes to specifications; (2) their interactions with government personnel and the technical direction they received; (3) the timeline for the work; and (4) their impressions of the system's suitability and operational effectiveness.
+The purpose of the system requirements study is to summarize the results of interviews with key personnel by system.
+A variety of related system documentation was reviewed in connection with the interviews.
+The assessments provided in Section 4., Results, reflect the opinions and insights of key personnel who were interviewed by the Titan/SRD Team in September 2000.
+Those personnel had varying levels of knowledge about the PAMS/ADAMS system based on their involvement with system planning, development, implementation, or operational issues.
+Section 5., Recommendations, provides value added perspectives from the Titan/SRD Team that seek to illuminate issues for management consideration in the planning of future systems.
+Quality assurance procedures were applied to the design, implementation, analysis, and preparation of this report.
+The procedures encompassed methodology, specification of project procedures and software, computer system design and review, development of clerical and computer procedures, and data analysis and report writing.
+A description of the procedures used is provided in the "Census 2000 Evaluation Program Quality Assurance Process."
+Study participants reviewed the results of this system requirements study.
+Comments have been incorporated to the fullest possible extent.
+3.
+LIMITS The following limits may apply to this system requirements study: Â· The perception of people participating in the interview process can significantly influence the quality of information gathered.
+For instance, if there is a lack of communication about the purpose of the review, less than optimal results will be obtained and the findings may lack depth.
+Each interview was prefaced with an explanation about its purpose in order to gain user understanding and commitment.
+3
+Â·
+In some cases, interviews were conducted several months, even years, after the participant had been involved in system development activities.
+This extended timeframe may cause certain issues to be overlooked or expressed in a different fashion (i.e., more positive or negative) than if the interviews had occurred just after system deployment.
+Each interview was completed within a one to two hour period, with some telephone follow-up to solicit clarification on interview results.
+Although a detailed questionnaire was devised to guide each interview and gather sufficient information for the study, it is not possible to review each aspect of a multi-year development cycle given the limited time available with each participant.
+Although this is a limitation, it is the opinion of the evaluators that sufficient information was gathered to support the objectives of the study.
+Every effort was made to identify key personnel and operational customers who actively participated in development efforts.
+In the case of PAMS/ADAMS, all government personnel who participated in the study are still with the Census Bureau.
+The contractors interviewed for the study are no longer active on the program.
+Â·
+Â·
+4.
+RESULTS This section contains findings that relate to the effectiveness of the requirements definition process used during the development of PAMS/ADAMS.
+The requirements process establishes the foundation for a system and, as such, must be designed to thoroughly consider all technical and functional aspects of development and operation of the system.
+4.1 Requirements definition In the period from 1994-1997, a series of Joint Application Development (JAD) sessions provided the forum for further development of the PAMS/ADAMS.
+The WRAPPS was expanded to include applicant processing, cost and progress reporting, and an applicant criminal history check, in addition to the personnel and payroll modules.
+One lesson learned from 1990 is that it would be beneficial to link these programs to alleviate duplicate keying of identical information used across all programs.
+In 1995, the Census Bureau contracted with Andersen Consulting (Accenture) to test systems software and provide recommendations for a future application that would meet Census-specific requirements.
+PeopleSoft software was one of the COTS products recommended and the Census Bureau implemented this option (the other was REL-TEK).
+Andersen worked for more than two years with Headquarters (HQ) staff on the conception, development, and implementation of an integrated PAMS/ADAMS.
+4
+Initial requirements for PAMS/ADAMS included a scanning capability to input data from hand completed forms filled out by U.S. households and enumerators/field personnel.
+Scanning products currently on the market could not handle the volume nor meet the quality control standards needed by the Census Bureau.
+Scanning requirements were then dropped and replaced with the front-end keying option.
+Consideration was not given to the format, layout or content of the keying function in PeopleSoft because keying was not an initial requirement.
+Much interpretation and manipulation was needed by the user to input information from forms completed by hand with the PeopleSoft keying option.
+Thus, the Census Bureau developed its own front-end dedicated to providing a friendly interface at the user level.
+Requirement changes were constant and frequent throughout the development life-cycle making it difficult for contractors and the Census Bureau to meet project deadlines, some of which were imposed by law.
+Additional requirements were generated by a variety of external and internal forces including changes in legal requirements imposed at federal, state, and local levels as well as Census Bureau interdepartmental requests.
+Examples of changes made late in the decade include an increase in the number of LCOs from 476 to 520 (which changed the entire geographic reference file) and the incorporation of the use of non-citizens in the applicant pool.
+The impact of complicated changes like these were significant.
+4.2 Requirements issues 4.2.1 A commercial off-the-shelf product was used Initial development efforts began with the Weekly Regional Automated Personnel 
+The development team was encouraged to use a COTS product as part of the Federal Government's efforts to streamline the development process.
+A consultant was hired to determine the best COTS product that would meet the Census Bureau's unique requirements.
+PeopleSoft was considered the best fit mainly due to scalability, functionality, and strong corporate backing.
+Although there was a federal version of the PeopleSoft human resources software, it did not incorporate all federal regulations required by the Census Bureau.
+There was no federal version of the PeopleSoft payroll package, but it was nonetheless considered the best fit.
+The consulting firm performed a fit analysis.
+It was estimated that the PeopleSoft base federal product would meet over 90 percent of the Census Bureau's PAMS/ADAMS requirements (Accenture report, February 1996).
+Interviews with Census Bureau staff indicated that only about half of the requirements were actually met.
+Extensive modifications, however, were needed to meet unique Census Bureau and oversight agency requirements.
+More customization was required than originally anticipated.
+While this did not have a significant impact on the budget, it severely increased the risk of not completing the system in time.
+Significant technical issues also existed with PeopleTools.
+The Census Bureau project was the first of its kind for this software 5
+company and there were technical and manual solutions that had to be developed, because some processes could not be implemented in PeopleSoft.
+4.2.2 Changes occur in federal and Census Bureau requirements In August of 1999, well into the development phase, there was a major change in requirements due to a Supreme Court decision.
+A traditional census was to be conducted rather than one using the planned sampling method.
+This impacted the overall design and scale of the system.
+The Census Bureau also instituted a late change in requirements, from one to multiple project codes.
+A significant redesign effort was required to implement changes like this.
+The impact on the PAMS/ADAMS development team was not always considered before such changes were proposed.
+4.2.3 Unanticipated reporting requirements impacted development PAMS/ADAMS provided daily files to MIS 2000 and OCS 2000; however, these systems were not able to produce all required reports.
+This placed an unanticipated burden on PAMS/ADAMS development staff to provide the information to users.
+4.3 Alignment with business processes This section contains findings that relate to how well PAMS/ADAMS supported the specific business processes that were associated with the Census Bureau's goal to manage the complete life-cycle of applicant to employee.
+Designing PAMS/ADAMS to fully support this objective, in the decennial census environment, was an especially difficult challenge due to the sheer magnitude of applicants to be processed and hundreds of thousands of temporary employees that had to be paid on a weekly basis.
+4.3.1 New data entry system improves ease-of-use The pre-appointment and daily time capture process required data entry from a number of hand completed forms.
+The PeopleSoft screens did not replicate the forms.
+The fields and associated menus were configured in a different logical format.
+The user interface was therefore not intuitive and required a significant amount of ramp-up time.
+Therefore, the PADE interface was developed.
+This was an independent system that mirrored census forms and reduced latency.
+The PADE interface, introduced after the dress rehearsal, was developed in-house with the aid of both the Census Bureau and contractor personnel.
+The first release of PADE occurred in September 1999 and it used Taskmaster as the communications software between LCOs and their respective RCC.
+In February 2000, PADE incorporated FTP to handle communications.
+The transfer of payroll and applicant data between LCOs and RCCs improved significantly.
+6
+PADE incorporated user recommendations and greatly improved ease of use and efficiency.
+The development team met with programmers to discuss requirements for data capture and then process flows were created.
+Screen images mirrored the printed form and contained large easy-to-see logically ordered fields that employed effective coloration techniques to facilitate screen navigation.
+Drop-down boxes were used for fields with commonly used default values.
+It was able to process payroll data independently, without dependency on the network, thus significantly increasing overall system speed.
+PADE proved to be an excellent tool for entering census applicant and payroll data.
+4.3.2 Numerous edits used to ensure data integrity Edit checks were employed thoroughly and appropriately throughout the PADE system.
+The user interface contained edit checks at critical fields such as Name, Social Security Number and Payroll fields to name a few.
+Data were batched and summarized at the local and regional levels prior to transmission.
+Manual checks were instituted to validate the receipt of transmitted data.
+Sufficient edit checks were designed into the front end to ensure data accuracy before batching and submission from remote locations.
+4.3.3 Extraordinary team established for development effort The PAMS/ADAMS integrated team was comprised of subject matter experts from the Field Division and developers/programmers from Financial and Administrative Systems Division.
+The team was both knowledgeable and dedicated, consisting of management and technical staff and programmers from prior censuses in addition to contractors.
+Many months of additional hours were put in by both Census Bureau employees and contractors.
+The integrated teams worked very well together.
+There was a high level of commitment exhibited by the entire staff.
+Excellent communications existed between headquarters and the regions.
+Regular conference calls were conducted that provided valuable information.
+4.3.4 Formal change control process was established An efficient formal change control process was employed and managed by the Change Control Board (CCB).
+A well documented System Investigations Requirement (SIR) log, recommended by the consulting firm, was used throughout the entire change management process.
+Modifications were performed continuously.
+Software modifications were tested by the PAMS/ADAMS development and/or procedural team for verification prior to being sent to the Beta Site where further testing, release, and migration to the field were performed.
+Few problems were encountered as a result of modifications once this process was implemented.
+7
+4.3.5 DOTS was first line of defense to resolve problems Remedial issues that were experienced in the field by the LCOs and RCCs were first responded to by Decennial Operations Technical Support (DOTS).
+The DOTS staff isolated remedial issues (e.g., fixing software bugs) from system-related issues (e.g., inherent design flaw).
+A formalized process was in place which facilitated timely escalation of technical issues from the DOTS staff to the development team.
+Operational manuals provided step by step instructions.
+Subject matter experts provided procedural support to both the RCCs and DOTS.
+4.4 System deficiencies This section contains findings that relate to any specific shortcomings that were identified with respect to the system's ability to accomplish what it was supposed to do.
+Recognizing that 100 percent success is rarely achievable, especially in the case of a completely new system, it is still worthwhile to assess deficiencies in the spirit of constructively identifying "lessons learned."
+Such insights can greatly contribute to improvements in future system development activities.
+4.4.1 Some reporting requirements not satisfied PAMS/ADAMS processed thousands of applications and collected payroll data on a daily basis.
+Recruiting information was needed both in text and graphical formats and cost and progress information for each of the 520 offices was needed daily.
+The system produced over 50 automatically generated reports.
+Real time reporting needs for oversight management functions were not adequately satisfied.
+For example, daily and weekly reports were needed for recruitment.
+These recruitment reports were created by hand because requested automated reports could not always be produced.
+Automatically generated reports fell short of providing adequate information and the process of requesting ad hoc reports was challenging and time consuming.
+There were many requests for ad hoc reports.
+However, working knowledge of Structured Query Language (SQL) was needed in order to produce these reports.
+Programmers were not always available to develop these custom queries because their efforts were concentrated on other system problems.
+Therefore not all requests could be accommodated.
+A similar problem also existed in 1990.
+The need for a data warehouse to accommodate ad hoc and immediate reporting requirements was recognized prior to production.
+Funding was requested but not initially provided.
+After December 2000, software for a data warehouse was purchased and development was initiated; however, this was too late to meet the full range of user requirements.
+8
+4.4.2 Software tested at Beta Test Site Critical to maintaining integrity and security in a distributed system is the timeliness and synchronous deployment of releases.
+Prior to rollout to the field, all software releases were required to be tested by a formal process instituted by the Beta Site then deployed.
+Urgent releases that were sent to the Beta Site were to be tested and deployed within 48 hours.
+Normal releases were to be deployed within a week.
+All field sites were to receive the updates simultaneously.
+There were some delays and inconsistencies experienced for some software releases, apparently due to the following factors.
+Beta Site testing process required an extensive amount of paperwork; the process seemed to impede the system; some urgent releases took as long as normal releases to be deployed; some Beta Site personnel were not sufficiently familiar with the PeopleSoft product and processes; testers were trained in PeopleSoft; however, personnel responsible for rollout were not trained; migration could not be automated due to a limitation in the PeopleSoft product; software updates were not deployed concurrently, and as a result there were inconsistencies in code being executed from site to site which produced operational problems.
+4.4.3 Late start caused by funding delays Delays were experienced due to budgeting issues that put the project at risk.
+There were fixed dates by which the project needed to be completed by law.
+Funding was adequate, but the project got a very late start.
+The commercial software was not purchased until September 1996, and not put into production until January 1997.
+This caused significant implementation issues which could have been mitigated by purchase and deployment in earlier test censuses.
+Funding delays were beyond the control of the Census Bureau.
+As a result, much had to be done at the last minute.
+All functional requirements were implemented; however, some non-critical requirements could not be incorporated due to a shortage of time.
+Requirements not implemented included automated retroactive payments, overpayment tracking, and multiple selection process requirements.
+4.4.4 Dress Rehearsal highlights performance issues During dress rehearsal, PAMS/ADAMS was a highly distributed system with 130 early opening LCOs and the dress rehearsal offices.
+This produced a tremendous reliance on telecommunications as the LCOs were tethered electronically to their respective RCCs.
+Therefore users were dependent on a smooth telecommunications flow to accomplish their tasks.
+In this regard, there were significant performance issues that occurred.
+There were also severe latency issues associated with the use of Taskmaster, which was used initially for PADE software releases to the field, as required by the Beta Site.
+It was not designed to effectively handle the capacity required by the system.
+To remedy this problem, in-house programmers wrote FTP programs to transfer data.
+The results were better throughput and higher integrity.
+Load testing was performed using worst case scenarios.
+9
+In addition, memory errors, i.e., "loss of memory," caused problems in the PeopleSoft data entry process.
+Prior to dress rehearsal, the primary means for capturing applicant, personnel or payroll data was through use of PeopleSoft supplied screens.
+While using these screens, memory errors often occurred requiring users to reboot their machines and restart the entire data entry process.
+This problem occurred whenever a personnel action was initiated and users attempted to navigate through the human resources panels.
+It became difficult to process applications, hire actions, and payrolls on a continuous flow basis.
+This and other performance issues were resolved with an upgrade from People Tools 5.0 to PeopleTools 7.0.
+4.5 Contract management practices This section contains findings that relate to the effectiveness of contract administration activities.
+4.5.1 Limited levels of expertise Experience requirements were placed in the Statement of Work (SOW) in accordance with sound contracting practices, however the Census Bureau received programmers with little or no PeopleSoft experience.
+Inefficient programmers were quickly identified and efforts were put in place to replace them.
+PeopleSoft skills were in high demand so it was difficult to find replacements.
+Resumes for new consultants were carefully reviewed for prospective candidates.
+Each new consultant was provided an orientation binder.
+There were also specific contract management processes put in place including sign in/sign out procedures.
+Some programmers were limited in their ability to speak English, which produced an initial communication barrier.
+However, co-location of contractors with Census Bureau personnel mitigated the communication gap.
+The integrated team worked well together.
+Overall contractor performance was assessed by Census Bureau staff as being good.
+5.
+RECOMMENDATIONS This section synthesizes the findings from above and highlights opportunities for improvement that may apply to the Census Bureau's future system development activities.
+The recommendations reflect insights from Titan/SRD analysts as well as opinions regarding "lessons learned " and internal "best practices" that were conveyed by Census personnel during interviews.
+5.1 Plan for policy change - design for flexibility.
+PAMS/ADAMS processes are highly regulated and therefore subject to change.
+In addition to Congressional and other oversight organization regulations there are labor laws, local and national laws that affect system requirements.
+Regulatory changes that 10
+impacted requirements after the commencement of system development included Office of Personnel Management (OPM) regulatory changes, Office of Child support enforcement laws, and unemployment benefit regulations.
+There are also a number of external entities such as the Department of Health and Human Services, OPM, the Social Security Administration, the Bureau of Labor Statistics, and the Federal Bureau of Investigation with which the system and its processes must interface.
+The PAMS/ADAMS development team found it difficult, at times, to implement these policy changes in the system.
+Recommendation: Given the number of high impact external factors that can affect system requirements in conjunction with time limitations imposed by law, the design of the system ought to be modularized and be adequately sized and flexible enough to accommodate these types of changes.
+Issues relating to project risks will be mitigated as a result.
+It is also recommended that all major system requirements, including those for decennial interfaces, be defined early in the decade to ensure adequate system testing.
+5.2 Reporting requirements - include all stakeholders.
+Large systems such as PAMS/ADAMS have a diverse user community.
+Reports were needed for many activities including recruitment, processing of applicants, and personnel and payroll functions.
+Although the system produced many automated and ad-hoc reports, other real-time reporting requests were not fulfilled for the following reasons.
+First, a data warehouse did not exist early enough in the process to facilitate reporting.
+Second, MIS 2000 and OCS 2000 were not always able to untilize PAMS/ADAMS data to produce reports, so reporting requirements shifted to the PAMS/ADAMS development staff.
+And third, programmers did not have sufficient time to respond to custom requests in addition to handling remedial problems.
+Although most other requirements were identified for PAMS/ADAMS, the reporting requirements were not adequately identified in the requirements phase.
+Recommendation: Production of reports is a functional requirement.
+It is therefore necessary to identify reporting needs and mechanisms such as a data warehouse during the requirements process.
+Early implementation of a data warehouse (i.e., independent, non-production database) would provide flexibility to facilitate ad hoc reporting needs.
+Also, if reporting requirements are identified in a timely manner, the feasibility of producing reports can be assessed to determine if users needs can be satisfied.
+Making an early determination of which reports the system must provide, or cannot produce, will allow stakeholders to explore other reporting options if necessary.
+Reporting requirements need to be considered from many different viewpoints and stakeholders from all key areas should be represented during this phase to ensure that their information needs are met.
+Some organizations may be able to share similarly designed reports, thus reducing the number of reports that would need to be created during the development process.
+Additionally, the resources and time needed for 11
+retrofitting the system in order to accommodate similar reports could also be reduced.
+Identification of reporting needs during the requirements phase will maximize the benefit that can be derived from PAMS/ADAMS for all users.
+5.3 Change control - implement formal process.
+Modifications were performed continuously in PAMS/ADAMS and an efficient formal change control process was employed and managed by the Change Control Board (CCB).
+A well documented System Investigations Requirement (SIR) log, recommended by the consulting firm, was used throughout the entire change management process.
+The concept of a CCB is an effective means of identifying, assessing, prioritizing, and approving changes both in a development and production environment.
+Although a CCB can add some layer of bureaucracy to the process, it is essential to ensure that any proposed changes are considered in light of the original requirements and available resources.
+Recommendation: Require the use of formalized change control processes as part of all development efforts.
+Include representatives from each stakeholder organization on the board to ensure a fair assessment of the business and technical risks involved with each change.
+Changes should be systematically assessed in light of programmatic goals.
+The requirements for change control and supporting documentation should be included in the system development methodology.
+The CCB also must have adequate resources to address programs with large and complex scopes.
+5.4 Training requirements - institute formal training program.
+The decennial census employs a large number of temporary or short term personnel.
+The continuous hiring requirements, turnover rate of temporary and short term employees, and level of education and language considerations emphasize the need for a formal training program.
+Procedural changes led to extensive modifications.
+Staff at the regional census centers had to be retrained as a result of modifications made to the user interface.
+A training database was planned but never fully implemented.
+Updates to the training database were not applied at the same time as updates to the production database.
+The regions became frustrated and stopped using it.
+Recommendation: Institute a formalized training program.
+Engage the expertise of training consultants and form an integrated team with these consultants and Census Bureau subject matter experts.
+Delivery ought to be in a number of different formats (i.e., instructor based, train the trainer, and Computer Based Training (CBT)) to accommodate the wide variety of training needs.
+To facilitate the development of a training program, commitment to a specific software product must be done early in the decade so all subsequent activities (training procedures and manuals) can be effectively developed and implemented.
+12
+5.5 Software release process - implement formal testing and deployment.
+The PAMS/ADAMS development team performed verification and before sending software releases to the Beta Site where load testing were performed.
+Both organizations used formalized processes for management; however, these processes, which share dependencies, coordinated.
+validation testing and product releases change control and were not well
+Recommendation: Institute a coordinated formalized end-to-end testing and deployment effort to increase efficiency.
+Include individuals from the Beta Site in JAD sessions and ensure there is collaboration between the Beta Site and its processes with those of PAMS/ADAMS.
+Implement quality control standards for the product release process to ensure successful concurrent deployment to the field.
+5.6 Maintain corporate knowledge base - maintain intercensal core team.
+The interdivisional design and development teams for PAMS/ADAMS were comprised of subject matter experts with many years of decennial census experience, some from as far back as the 1990 and 1980 decennial censuses.
+A tremendous knowledge base has developed as a result.
+There exists a potential loss of this knowledge due to retirement or attrition.
+Also there was much communication and collaboration that took place between the Census Bureau and PeopleSoft.
+The Census Bureau provided recommendations and feedback that were used by PeopleSoft to develop a Federal version of their software package.
+Recommendation: Maintain a core team between censuses comprised of subject matter and technical experts.
+Document to the extent possible this extensive knowledge base and communicate it with the core team.
+This will enable the Census Bureau to maintain and enhance the system to the next decade.
+Rather than starting system development again from scratch, consider using an upgraded web-based federal version of PeopleSoft.
+Some modification will most likely be needed again to meet the unique needs of census; however, changes to accommodate federal oversight requirements would certainly be minimized.
+5.7 Dress rehearsal - perform development/testing activities early in decade.
+The dress rehearsal was beneficial in that it brought to light some performance issues.
+Three geographically dispersed regions participated in the Census 2000 Dress Rehearsal, which contributed to the comprehensiveness of this indispensable phase of the development life cycle.
+However, during Dress Rehearsal, the system had to support full production activities for early census operations in 12 regions.
+Thus, the dress rehearsal was too late to effectively evaluate system effectiveness.
+13
+Recommendation: Development and testing activities need to be performed early in the decade to identify performance issues and to ensure that the system is functional prior to Dress Rehearsal.
+14
+References Census 2000 Systems Architecture, Version 2.0, September 2000.
+Section 3, pages 3-1 to 3-17.
+Draft Program Master Plan (PMP) for Pre-Appointment Management System/Automated Decennial Administrative Management System (PAMS/ADAMS), March 23, 2000.
+Author(s): Ray Loftin.
+Best Practices and Recommendations from New Mexico; Notes from an Administrative Debriefing Session held in Albuquerque, NM, October 2000.
+Prepared by PAMS/ADAMS Staff, Field Division.
+Studies of Nonresponse Followup (NRFU) Preparation, Applicant and Payroll Scanning, and Computer System Operations, Census 2000 Dress Rehearsal, August 1998.
+Author(s): Warren Davis.
+Project Scoping Overview for Pre-Appointment Management System/Automated Decennial Administrative Management System, January 1995.
+Prepared by Field Division.
+Statement of Work for PAMS/ADAMS Development, December 13, 1995.
+Prepared by Financial and Administrative Systems Division.
+Draft PAMS/ADAMS Implementation Project Workcell Approach, Organization, Roles and Responsibilities, April 26, 1996.
+Prepared by Andersen Consulting (Accenture).
+PAMS/ADAMS Project Overview - Kickoff Debriefing for PAMS/ADAMS Project Team, March 27, 1996.
+Prepared by Andersen Consulting (Accenture).
+PAMS/ADAMS Development Alternative Vendor Solution Technical Proposal, February 1996.
+Prepared by Andersen Consulting (Accenture).
+Chronology of PAMS/ADAMS, May 22, 2001.
+Author(s): Mark Taylor.
+15
+Participants Mark Taylor Field Division 2-1111, +1.301.457.1827 Mark.M.Taylor@census.gov Field Division 2-1408, +1.301.457.4899 Harold.E.Hayes@census.gov Field Division 2-1408, +1.301.457.4899 Pamela.H.White@census.gov Field Division 2-1408, +1.301.457.3284 Karen.S.Seebold@census.gov Field Division 2-1111, +1.301.457.2030 Janet.R.Cummings@census.gov Field Division Denver Regional Census Center, +1.303.231.5050 James.T.Christy@census.gov Field Division Denver Regional Census Center, +1.303.231.5050 Russell.W.Frum@census.gov Finance and Administrative Services Division 2-1408, +1.301.457.4899 Cathy.A.Ayoob@census.gov Finance and Administrative Services Division 2-1408, +1.301.457.4899 Reid.Katan@census.gov Finance and Administrative Services Division 2-1408, +1.301.457.4899 Kim.D.Rosnick@census.gov
+Harold Hayes
+Pam White
+Karen Seebold
+Janet Cummings
+Jamey Christy
+Russell Frum
+Cathy Ayoob
+Reid Katan
+Kim Rosnick
+16
+Participants - Continued Katherine Chang Finance and Administrative Services Division 2-1408, +1.301.457.4899 Katherine.D.Chang@census.gov Human Resources Division 3-3007, +1.301.457.4600 George.E.Barnett@census.gov Decennial Management Division 2-1422, +1.301.457.8436 Raymond.N.Loftin@census.gov Decennial Management Division 2-2012, +1.301.457.3998 Edison.Gore@census.gov Decennial Management Division 2-1422, +1.301.457.4223 Agnes.S.Kee@census.gov
+George Barnett
+1
+Ed Gore
+Ray Loftin
+Agnes S Kee (DMD Program Support)
+1
+Individual not interviewed for this study.
+17

@@ -1,0 +1,89 @@
+Go to the first, previous, next, last section, table of contents.
+__________________________________________________________________
+The GNU Plotting Utilities
+The GNU plotting utilities consist of eight command-line programs: the graphics programs graph, plot, pic2plot, tek2plot, and plotfont, and the mathematical programs spline, ode, and double.
+Distributed with these programs is GNU libplot, the library on which the graphics programs are based.
+libplot is a function library for device-independent two-dimensional vector graphics, including vector graphics animations under the X Window System.
+There are versions for both C and C++.
+The graphics programs and libplot can export vector graphics in the following ten formats.
+X If this output option is selected, there is no output file.
+Output is directed to a popped-up window on an X Window System display.
+PNM This is "portable anymap" format.
+There are three types of portable anymap: PBM (portable bitmap, for monochrome images), PGM (portable graymap), and PPM (portable pixmap, for colored images).
+The output file will be in whichever of these three formats is most appropriate.
+Portable anymaps may be viewed or edited with many applications, such as the free image display application xv. GIF This is pseudo-GIF format rather than true GIF format.
+Unlike GIF format it does not use LZW compression, so it does not transgress the Unisys LZW patent.
+However, files in pseudo-GIF format may be viewed or edited with any application that understands GIF format, such as xv. AI This is the format used by Adobe Illustrator.
+Files in this format may be edited with Adobe Illustrator (version 5, and more recent versions), or other applications.
+PS This is idraw-editable Postscript format.
+Files in this format may be sent to a Postscript printer, imported into another document, or edited with the free idraw drawing editor.
+See section How to get idraw.
+Fig This is a graphics format that may be displayed or edited with the free xfig drawing editor.
+See section How to get xfig.
+PCL 5 This is a powerful version of Hewlett--Packard's Printer Control Language.
+Files in this format may be sent to a LaserJet printer or compatible device (note that most inkjets do not support PCL 5).
+HP-GL This is Hewlett--Packard's Graphics Language.
+By default, the modern variant HP-GL/2 is produced.
+Files in HP-GL or HP-GL/2 format may be imported into a document or sent to a plotter.
+Tek This is the graphics format understood by Tektronix 4014 terminals and emulators, including the emulators built into the xterm terminal emulator program and the MS-DOS version of kermit.
+Metafile This is device-independent GNU graphics metafile format.
+The plot program can translate it to any of the preceding formats.
+Of the command-line graphics programs, the best known is graph, which is an application for plotting two-dimensional scientific data.
+It reads one or more data files containing datasets, and outputs a plot.
+The above output formats are supported.
+The corresponding commands are graph -T X, graph -T pnm, graph -T gif, graph -T ai, graph -T ps, graph -T fig, graph -T pcl, graph -T hpgl, graph -T tek, and graph.
+graph without a `-T' option (referred to as `raw graph') produces output in GNU metafile format.
+graph can read datasets in both ASCII and binary format, and datasets in the `table' format produced by the plotting program gnuplot.
+It produces a plot with or without axes and labels.
+You may specify labels and ranges for the axes, and the size and position of the plot on the display.
+The labels may contain subscripts and subscripts, Greek letters, and other special symbols; there is also support for Cyrillic script (i.e., Russian) and Japanese.
+You may specify the type of plotting symbol used for each dataset, and such parameters as the style and thickness of the line (if any) used to connect points in a dataset.
+The plotting of filled regions is supported, as is the drawing of error bars. graph provides full support for multiplotting.
+With a single invocation of graph, you may produce a plot consisting of many sub-plots, either side by side or inset.
+Each sub-plot will have its own axes and data.
+graph -T X, graph -T tek, and raw graph have a feature that most plotting programs do not have.
+They can accept input from a pipe, and plot data points to the output in real time.
+For this to occur, the user must specify ranges for both axes, so that graph does not need to wait until the end of the input before determining them.
+The plot program is a so-called plot filter.
+It can translate GNU graphics metafiles (produced for example by raw graph) into any supported output format.
+The corresponding commands are plot -T X, plot -T pnm, plot -T gif, plot -T ai, plot -T ps, plot -T fig, plot -T pcl, plot -T hpgl, plot -T tek, and plot.
+The plot program is useful if you wish to produce output in several different formats while invoking graph only once.
+It is also useful if you wish to translate files in the traditional `plot(5)' format produced by, e.g., the non-GNU versions of graph provided with some operating systems.
+GNU metafile format is compatible with plot(5) format.
+The pic2plot program can translate from the pic language to any supported output format.
+The pic language, which was invented at Bell Laboratories, is used for creating box-and-arrow diagrams of the kind frequently found in technical papers and textbooks.
+The corresponding commands are pic2plot -T X, pic2plot -T pnm, pic2plot -T gif, pic2plot -T ai, pic2plot -T ps, pic2plot -T fig, pic2plot -T pcl, pic2plot -T hpgl, pic2plot -T tek, and pic2plot.
+The tek2plot program can translate from Tektronix format to any supported output format.
+The corresponding commands are tek2plot -T X, tek2plot -T pnm, tek2plot -T gif, tek2plot -T ai, tek2plot -T ps, tek2plot -T fig, tek2plot -T pcl, tek2plot -T hpgl, and tek2plot.
+tek2plot is useful if you have an older application that produces drawings in Tektronix format.
+The plotfont program is a simple utility that displays a character map for any font that is available to graph, plot, pic2plot, or tek2plot.
+The 35 standard Postscript fonts are available if the `-T X', `-T ai', `-T ps', or `-T fig' options are used.
+The 45 standard PCL 5 fonts (i.e., "LaserJet" fonts) are available if the `-T ai', `-T pcl' or `-T hpgl' options are used.
+In the latter two cases (`-T pcl' and `-T hpgl'), a number of Hewlett--Packard vector fonts are available as well.
+A set of 22 Hershey vector fonts, including Cyrillic fonts and a Japanese font, is always available.
+When producing output for an X Window System display, any of the graphics programs can use scalable X fonts.
+Of the command-line mathematical programs, spline does spline interpolation of scalar or vector-valued data.
+It normally uses either cubic spline interpolation or exponential splines in tension, but like graph it can function as a real-time filter under some circumstances.
+Besides splining datasets, it can construct curves, either open or closed, through arbitrarily chosen points in d-dimensional space.
+ode provides the ability to integrate an ordinary differential equation or a system of ordinary differential equations, when provided with an explicit expression for each equation.
+It supplements the plotting program gnuplot, which can plot functions but not integrate ordinary differential equations.
+The final command-line mathematical program, double, is a filter for converting, scaling and cutting binary or ASCII data streams.
+It is still under development and is not yet documented.
+The libplot function library is discussed at length elsewhere in this documentation.
+It gives C and C++ programs the ability to draw such objects as lines, open and closed polylines, arcs (both circular and elliptic), quadratic and cubic Bezier curves, circles and ellipses, points, marker symbols, and text strings.
+The filling of objects other than points, marker symbols, and text strings is supported (fill color, as well as pen color, can be set arbitrarily).
+Text strings can be drawn in any of a large number of fonts.
+The 35 standard Postscript fonts are supported by the X Window System, Illustrator, Postscript, and xfig drivers, and the 45 standard PCL 5 fonts are supported by the Illustrator, PCL 5 and HP-GL/2 drivers.
+The latter two also support a number of Hewlett--Packard vector fonts.
+All drivers, including the PNM, GIF, Tektronix and metafile drivers, support a set of 22 Hershey vector fonts.
+The support for drawing text strings is extensive.
+Text strings may include subscripts and superscripts, and may include characters chosen from more than one font in a typeface.
+Many non-alphanumeric characters may be included.
+The entire collection of over 1700 `Hershey glyphs' digitized by Allen V. Hershey at the U.S. Naval Surface Weapons Center, which includes many curious symbols, is built into libplot.
+Text strings in the so-called EUC-JP encoding (i.e., the Extended Unix Code for Japanese) can be also be drawn.
+Such strings may include both syllabic Japanese characters (Hiragana and Katakana) and ideographic Japanese characters (Kanji).
+A library of 603 Kanji, including 596 of the 2965 frequently used Level 1 Kanji, is built into libplot.
+The drawing editors idraw and xfig are not distributed along with the GNU plotting utilities.
+However, they are free software, and you may readily obtain them elsewhere (see section Obtaining Auxiliary Software).
+__________________________________________________________________
+Go to the first, previous, next, last section, table of contents.

@@ -1,0 +1,23 @@
+NIST hidden Markov model (data structure) Definition: A variant of a finite state machine having a set of states, Q, an output alphabet, O, transition probabilities, A, output probabilities, B, and initial state probabilities, upper-case Pi .
+The current state is not observable.
+Instead, each state produces an output with a certain probability, B. Usually the states, Q, and outputs, O, are understood, so an HMM is said to be a triple, (A, B, upper-case Pi ).
+Formal Definition: After Michael Cohen.
+* A = {a[ij] = P(q[j]
+* B = {b[ik] = P(o[k]
+Also known as HMM.
+See also Markov chain, Baum Welch algorithm, Viterbi algorithm.
+Note: Computing a model given sets of sequences of observed outputs is very difficult, since the states are not directly observable and transitions are probabilistic.
+One method is the Baum Welch algorithm.
+Although the states cannot, by definition, be directly observed, the most likely sequence of sets for a given sequence of observed outputs can be computed in O(nt), where n is the number of states and t is the length of the sequence.
+One method is the Viterbi algorithm.
+Thanks to Arvind 
+Author: PEB
+More information
+See Michael Cohen's Hidden Markov Models for definitions, examples, algorithms, proofs, etc. __________________________________________________________________
+Go to the Dictionary of Algorithms and Data Structures home page.
+__________________________________________________________________
+If you have suggestions, corrections, or comments, please get in touch with Paul E. Black (paul.black@nist.gov).
+Entry modified Fri Aug 2 10:12:39 2002.
+HTML page formatted Thu Apr 17 10:49:11 2003.
+This page's URL is http://www.nist.gov/dads/HTML/hiddenMarkovModel.html
+to NIST home page NIST Centennial 1901-2001

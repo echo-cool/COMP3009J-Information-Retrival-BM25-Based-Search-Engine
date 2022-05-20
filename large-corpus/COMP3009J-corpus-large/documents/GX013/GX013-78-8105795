@@ -1,0 +1,376 @@
+[ahgplogo1_5.jpg] Research Abstracts from the DOE Genome Contractor-Grantee Workshop IX January 27-31, 2002 Oakland, CA Human Genome Project Information Genomes to Life Program Overview _________________________________________________________________ Home Author Index Sequencing Table of Contents Abstracts Sequencing Resources Table of Contents Abstracts Instrumentation Table of Contents Abstracts Functional Analysis and Resources Table of Contents Abstracts Bioinformatics Table of Contents Abstracts Microbial Cell Project Table of Contents Abstracts Microbial Genome Program Table of Contents Abstracts Ethical, Legal, and Social Issues Table of Contents Abstracts Low Dose Ionizing Radiation Table of Contents Abstracts Infrastructure Table of Contents Abstracts Ordering Information Abstracts from Previous Meetings Sequencing Resources Abstracts ________________________________
+Construction of BAC Libraries Using Sheared DNA
+Kazutoyo Osoegawa, Chung Li Shu, and Pieter J. de Jong
+Childrens Hospital Oakland Research Institute, Oakland, CA 94609
+kosoegawa@mail.cho.org
+Bacterial artificial chromosome (BAC) libraries have initially been developed to provide intermediate DNA substrates for genome mapping and sequencing.
+After completion of the human draft sequence, mapped and sequenced BAC clones have also become important for disease diagnostics and functional genomics.
+There is nevertheless still a need for additional BAC clones for regions poorly represented in the conventional BAC libraries to complete genome projects and to create more representative libraries for future genome projects.
+To this end, we cloned sheared DNA in a modified BAC vector in anticipation of reduced cloning bias.
+BAC libraries with different average insert sizes and random ends support a hybrid approach to genome sequencing based on a combination of whole genome shotgun and clone-by-clone sequencing.
+High-molecular-weight DNA is sheared by multiple cycles of freezing and thawing.
+The fragment ends are then blunted by treatment with Mung Bean nuclease and T4 DNA polymerase, and are ligated to the blunt-end side of an adapter which has a 3' overhang (ACAC) at the other end.
+The ligation products are size-fractionated to remove the excess of adapter and to obtain the desirable-size insert DNA fragments for cloning.
+The new vector (pTARBAC6) has two BstXI restriction sites flanking a replaceable stuffer fragment.
+Upon BstXI digestion, a vector fragment with two 3' overhangs (GTGT) is generated, complementary to the adapter-ligated genomic fragments.
+We have been able to construct several BAC libraries from Drosophila, Ciona savignyi and mouse with different average insert sizes to fit the applications.
+Provisional results with the new libraries indicate a random clone distribution and a very low level of undesirable chimeric clones.
+Initial screening results for the fly BAC library indicates a possible extension of contigs towards the telomeres.
+To facilitate closing the clone gaps in the human genome, we are constructing a BAC library using sheared DNA.
+Information on our completed libraries can be found at: www.chori.org/bacpac.
+The US DOE specifically funded the technology development of sheared BAC libraries and the construction of a human BAC library (ER62962).
+_________________________________________________________________
+8.
+BAC Library End Sequencing in Support of Whole Genome Assemblies
+David C. Bruce, Mark O. Mundt, Kim K. McMurry, Linda J. Meincke, Donna L. Robinson, Norman A. Doggett, and Larry L. Deaven
+DOE Joint Genome Institute and Center for Human Genome Studies, Los Alamos National Laboratory
+dbruce@lanl.gov
+The Center for Human Genome Studies at Los Alamos National Laboratory has end sequenced over 75,000 BAC clones from Fugu, Ciona, Chlamydomonas and Human libraries to support whole genome shotgun sequencing and assembly efforts by the Joint Genome Institute of Fugu, Ciona, and Chlamydomonas and in support of our human chromosome 16 finishing efforts.
+Beginning from libraries arrayed in 384 well plates, stock plates are translated into a 96 well format.
+After growth in a 96 well deep plates, the sequencing template is purified using 96 well LigoChem ProPrep BAC 96 kits.
+Following sequencing template resuspension, the template is labeled with ABI PRISM BigDye Terminator v3.0 chemistry in 384 well format.
+The labeled template is run on ABI PRISM 3700 DNA Analyzer.
+We are achieving an overall 80% paired end pass rate and greater than 450 bp read length.
+Process details and quality statistics will be presented.
+Supported by the US DOE, OBER under contract W-7405-ENG-36.
+_________________________________________________________________
+9.
+An Approach to Filling Gaps in the Sequence of the Human Genome
+X.-N. Chen^1, P. Bhattacharyya^1, S. Y. Zhao^2, M. Sekhon^3, J. McPherson^3, M. Wang^4, U.-J. Kim^4, H. Shizuya^4, M. Simon^4, and J. R. Korenberg^1
+^1Medical Genetics, Cedars Sinai Medical Center, UCLA, Los Angeles, CA ^2The Institute for Genomic Research, Rockville, MD ^3Washington University Genome Sequencing Center, St Louis, MI ^4Caltech, Pasadena, CA
+Xiao-Ning.Chen@cshs.org
+The story of metazoan evolution is a story of genomic duplication.
+Primates are not an exception and the human genome reflects a rich history of recent duplication events that are a source of contemporary genomic variability and instability.
+We now link these duplicated regions to the draft sequence (Golden Path and Celera) and show that they are located throughout chromosome arms, reflect regions of instability and represent gaps in the current draft sequence of the human genome.
+To avoid biases in sequence sets introduced by unstable regions, we have defined at random a subset of BACs for putatively duplicated regions and integrated them with the draft sequence.
+They provide anchor points for sequencing centromeres, pericentromeres and duplications in chromosome arms.
+These include a total of 6,000 BACs mapped by FISH, 3,500 defined at random, 184 from screens with alpha satellite, 346 with telomeric oligos and ~2,000 from other screens of the Caltech BAC libraries A and B.
+About 957 are STS linked.
+Out of 6,000 BACs, 373 mapped to centromeric regions, 192 to single centromeres, 150 to multiples and 20 to all human centromeres.
+Of 990 multisite BACs, 350 were defined at random suggesting a minimum of 10% of the genome was duplicated and interspersed.
+Fingerprint database analysis: A total of 489 were fingerprinted, 33 with 5-29 bands showed no database match and suggested a minimum of 8% of duplications (non centromeric) were not represented in the fingerprint database.
+End sequence analysis: Golden Path 1.1 draft sequence analysis: Of the 434 end sequenced BACs, 134 or 30% had no match in the draft sequence; 145 had hits of over 98% homology and 147 had hits of 80-98%.
+Three were located on orphan contigs.
+Celera database analysis: Out of 1020 ends 243 represent BACs with a single end sequenced and 382 with both ends sequenced.
+Out of the 243 single BAC ends, 53% had no significant hits (defined by Ã¯Â¿Â½ 97% homology); 47% had hits of Ã¯Â¿Â½ 98% homology.
+Of the 382 BACs with both ends sequenced only 134 pairs of ends had hits on the same chromosome.
+Only 65 out of these were spaced in the correct range (BES within 80-300 Kb and Ã¯Â¿Â½ 350bp match to draft).
+Perhaps, the most important observation was that 14% (86 of 625 BACs) had no matches to the Celera database.
+Therefore, they identify the holes in the current human draft sequence.
+This analysis of both sources of Human draft sequence (Golden Path 1.1) and Celera database suggests that at least 65% of BACs recognizing more than one site in the Human genome identified largely at random by FISH, were not included in the draft sequence and therefore identify gaps in both sources of the genome draft sequence.
+These BACs provide anchors for defining hotspots of genomic instability, for sequencing centromeric regions containing genes and for filling gaps in the draft sequence.
+_________________________________________________________________
+10.
+Isolation of Segments Missing from the Draft Human Genome Sequence Using Yeast
+N. Kouprina, G. Solomon, S.-H. Leem, A. Ly, E. Pak, J. C. Barrett, and V. Larionov
+Laboratory of Biosystems and Cancer, National Cancer Institute, NIH, Bethesda, MD 20892
+kouprinn@mail.nih.gov
+The reported draft human genome sequence includes multiple short contigs (groups of overlapping segments) that are separated by gaps of unknown sequence.
+The gaps in the draft sequence may arise from chromosomal regions that are not present in the Escherichia coli libraries used for DNA sequencing because they can not be cloned efficiently, if at all, in bacteria.
+To estimate the extent of the human genome missing in E. coli libraries, we compared euchromatic human DNA cloned in YACs and BACs.
+To isolate human genomic sequences in yeast, we applied the Transformation-Associated Recombination (TAR) cloning method.
+This method allows selective cloning in yeast without DNA manipulations in vitro and avoids chimeric recombinants.
+The TAR cloning vector contained both YAC and BAC cassettes that allowed propagation of the same sequence in yeast and bacteria.
+Approximately 6% of human DNA sequences transformed less efficiently and was less stable in E. coli than in yeast.
+This fraction included both specific genes (KAI1 and MUC2) and anonymous DNA regions that have not previously been recovered from BAC libraries.
+DNA sequences from the ends of these YAC clones are not in the draft genome sequence.
+The results suggest that it may be possible to fill gaps in the draft human sequence using clones propagated as YACs in yeast.
+We demonstrate the use of recombinational cloning in yeast (TAR) to recover problematic genomic regions and to verify contigs assembly rapidly and potentially systematically.
+_________________________________________________________________
+11.
+Recent Segmental Duplications: A Dynamic Source of Gene Innovation and Complex Regions of Sequence Assembly
+J. A. Bailey, J. E. Horvath, M. E. Johnson, M. Rocchi, and E. E. Eichler
+Department of Genetics and Center for Human Genetics, Case Western Reserve School of Medicine and University Hospitals of Cleveland, Cleveland, OH, 44106
+eee@po.cwru.edu
+It has been estimated that 5% of the human genome consists of interspersed duplicated material that has arisen over the last 30 million years of evolution.
+Two categories of recent duplicated segments can be distinguished: segmental duplications between non-homologous chromosomes (transchromosomal duplications) and duplications largely restricted to a particular chromosome (chromosome-specific duplications).
+A large proportion of these duplications exhibit an extraordinarily high degree of sequence identity at the nucleotide level (
+Through processes of paralogous recombination, these same regions are targets for rapid evolutionary turnover among the genomes of closely related primates.
+The dynamic nature of these regions in terms of recurrent chromosomal structural rearrangement and their ability to generate to create fusion genes from juxtaposed cassettes suggests that duplicative transposition has been an important force in the evolution of our genome.
+Cycles of segmental duplication over periods of evolutionary time may provide the underlying mechanism for domain accretion and the increased modular complexity of the vertebrate proteome.
+Further, our data suggest that a small fraction of important human genes may have emerged recently through duplication processes and will not possess definitive orthologues in the genomes of model organisms.
+I will discuss computational methods developed in my laboratory to 1) unambiguously identify recent genomic duplicates within the human genome and 2) to assess their importance in hominoid gene innovation.
+The impact of this chromosomal architecture for assembly the final draft sequence, particularly within chromosomes 16 and 19, will be discussed.
+_________________________________________________________________
+12.
+Pooling DNA Clones for Shotgun Sequencing
+Richard Gibbs^1 and the staff of the Baylor College of Medicine-Human Genome Sequencing Center, Wei Wen Cai^2, and Allan Bradley^3^
+^1Baylor College of Medicine-Human Genome Sequencing Center ^2Department of Molecular and Human Genetics, Baylor College of Medicine ^3Sanger Center
+agibbs@bcm.tmc.edu
+We have developed two methods based upon clone pooling for more efficient shotgun DNA sequencing.
+The first is Concatenation cDNA Sequencing (CCS), a procedure where multiple cDNA inserts are joined together by ligation for sequencing in a single shotgun project.
+CCS has been continually refined since our first experiments with small numbers of pooled cDNAs in 1995.
+In the month of August 2001 we completed 900 cDNAs using the method.
+With further increments in the efficiency of the approach we expect to have the ability to analyze entire mammalian transcriptomes in a few months.
+The second methodology is an improvement on procedures for the sequencing and assembly of whole genomes.
+The Clone Array Pooled Sequencing Scheme (CAPSS), is based upon the pooling of rows and columns of arrayed genomic clones prior to shotgun library construction.
+Random sequences are accumulated, and the data processed by sequential comparison of rows and columns, to assemble the sequence of clones at points of intersection.
+Compared to either a clone-by-clone approach or whole genome shotgun sequencing, CAPSS requires relatively few library constructions and only minimal computational power for a complete genome assembly.
+Computer simulations show the practicability of the method and testing of CAPSS in the assembly of Rat Genome sequences is underway.
+_________________________________________________________________
+13.
+Production Clone Rearraying Using the QBot (Genetix Ltd.) and the LANL Cherrypicking Program
+John J. Fawcett, James Colehan, Lyn Honeyborne, Bill Stevenson, David C. Bruce, Norman A. Doggett, and Larry L. Deaven
+DOE Joint Genome Institute and Center for Human Genome Studies, Los Alamos National Laboratory and Genetix Limited, United Kingdom
+fawcett@lanl.gov
+Clone rearray or cherry picking of subclones is the first hands on step toward setting up finishing reactions.
+Finishing plates contain up to 96 unique candidate subclones selected from thousands of archival source plates.
+Cherrypicking is directed rearraying of clones from source plates into one or more destination plates.
+We have automated this process on the Qbot with custom software.
+The LANL Cherrypicking program utilizes QBot capabilities accessible via the Developers Toolkit (Genetix Ltd).
+Subclones from source plates are deposited into specific destination wells and plates as specified by imported finishing scripts.
+Rearrayed subclone plates are provided to DENS and custom primer finishing teams for appropriate finishing reactions (see Abstract of Bruce et al.).
+The development of LANL Cherrypicking program was a joint effort of LANL and Genetix Ltd. _________________________________________________________________
+14.
+Applications of Isothermal Rolling Circle Amplification in a High-Throughput Sequencing Environment
+John C. Detter, Jamie M. Jett, Andre R. Arellano, Alicia R. Ferguson, Kristie Tacey, Mei Wang, Heidi C. Turner, Susan M. Lucas, Ken Frankel, Paul Predki, Dan Rokhsar, Paul M. Richardson, and Trevor L. Hawkins.
+U.S. DOE Joint Genome Institute, Walnut Creek, CA 94598
+detter2@llnl.gov
+High-throughput sequencing requires several DNA amplification steps.
+In general, researchers have been limited to methods such as in vivo amplification in E. coli. and Polymerase Chain Reaction to obtain source DNA for library creation and template DNA for sequencing.
+Replication by rolling circle is common among bacteriophages and viruses in nature.
+Recently, Rolling Circle Amplification (RCA) with F29 DNA polymerase has been applied in vitro to specific target sequences using specific primers and to circular cloning vectors using random hexamer primers to achieve exponential DNA amplification by way of DNA strand displacement.
+At the Joint Genome Institute we have examined the use of random hexamer primed RCA (TempliPhi^) for several applications related to sequencing.
+Here, we demonstrate that RCA can be used effectively for amplification of plasmids, cosmids and BACs for direct end sequencing.
+DNA from RCA amplified BAC and Cosmid clones can also be used to generate random shotgun libraries.
+In addition, we show that whole bacterial genomes can be effectively amplified from cells or small amounts of purified genomic DNA without apparent bias for use in downstream applications including whole genome shotgun sequencing.
+This work was performed under the auspices of the U.S. Department of Energy, Office of Biological and Environmental Research, by the University of California, Lawrence Livermore National Laboratory under Contract No.
+W-7405-Eng-48, the Lawrence Berkeley National Laboratory under contract No.
+DE-AC03-76SF00098, and the Los Alamos National Laboratory under contract No.
+W-7405-ENG-36.
+_________________________________________________________________
+15.
+Efficient Isothermal Amplification of Single DNA Molecules
+Stanley Tabor and Charles Richardson
+Department of Biological Chemistry and Molecular Pharmacology, Harvard Medical School, Boston, MA 02115
+tabor@hms.harvard.edu
+We are developing DNA polymerases for use in DNA sequencing and amplification applications.
+We will describe a very efficient isothermal amplification system that we have been developing that is based on the replication machinery of bacteriophage T7.
+It is capable of amplifying a single DNA molecule, increasing the amount of DNA up to a trillion-fold in a 30 min reaction.
+Amplification is nonspecific.
+The template can be circular (e.g. plasmid or BAC DNA) or linear (e.g. genomic DNA).
+The products are linear double-stranded DNA fragments that average several thousand base pairs in length.
+The reaction requires the T7 DNA polymerase , the T7 helicase/primase complex (T7 gene 4 protein) , and single-stranded DNA binding protein.
+The reaction requires no exogenous primers, using the inherent primase activity of the T7 primase.
+It is critical to remove all contaminating DNA from the reaction mixture, since the system efficiently amplifies all DNA present.
+We have developed a successful strategy to deal with this problem that involves cleansing the reaction mixture by treatment with Micrococcal nuclease.
+There are a number of applications in which a robust generic amplification system is attractive: 1.
+A simple alternative to the current methods used to prepare plasmid and BAC DNA templates for DNA sequencing.
+2.
+The immortalize of rare genomic DNAs, such as hard-to-culture microorganisms or purified chromosomes.
+3.
+An extremely sensitive assay for the presence of DNA in a sample.
+By including a dye in the reaction mixture that fluoresces when it binds DNA, the reaction provides a fast, robust assay that detects DNA over 13 orders of magnitude in several minutes.
+4.
+The sequencing of haplotypes can be expedited by the use of templates that have been amplified from single chromosomes.
+We will present our progress on the use of isothermal amplification in these applications.
+_________________________________________________________________
+16.
+Amplification of BAC DNA with Rolling Circular Amplification
+Cliff S. Han, Judy Tesmer, Linda L. Meincke, Donna L. Robinson, Connie S. Campbell, Larry L. Deaven, and Norman A. Doggett
+DOE Joint Genome Institute and Center for Human Genome Studies, Los Alamos National Laboratory
+han_cliff@lanl.gov
+Bacteria artificial chromosome (BAC) cloning systems provide the major clone resource in sequencing the human genome and will continue to be one of the major tools in finishing the human genome and for sequencing other organisms.
+Despite the many advantages of BACs, it remains a challenge to purify large amounts of BAC DNA in a high throughput manner because of its low copy number and relatively long DNA strands.
+Here we introduce a method based on rolling circular amplification to generate large amount of BAC DNA.
+Starting with less them 1 ml culture, several micrograms of BAC DNA can be generated.
+The amplified DNA is well suited for restriction mapping, BAC end sequencing, and subcloning for shotgun sequencing.
+The major steps of the protocol include 1) lysis of bacteria cell with lysozyme to release DNA; 2) degrading of bacteria DNA with restriction enzyme and plasmid-safe DNAse; 3) amplification of BAC DNA with on rolling circular amplification.
+Supported by the US DOE, OBER under contract W-7405-ENG-36.
+_________________________________________________________________
+17.
+A Single-Copy, Amplifiable Plasmid Vector That Uses Homing Endonuclease Recognition Sites to Facilitate Bidirectional Nested Deletion Sequencing of Difficult Regions
+John J. Dunn, Laura Praissman, Laura-Li Butler-Loffredo, and Sean McCorkle
+Biology Department, Brookhaven National Laboratory, Upton, NY 11973-5000
+jdunn@bnl.gov
+The long term goal of this project is to develop improved methods for finishing difficult regions in draft sequences.
+Difficult regions we are focusing on include long repeats and regions that interfere with polymerase progression.
+Towards this goal, we have developed a plasmid vector, pSCANS, based on the low-copy F replicon which allows rapid generation of an ordered set of nested deletions from either strand of a cloned DNA fragment.
+The size of the vector has been reduced to the 4.4-kbp range by removing the 2.5-kbp sop (stability of plasmid genes) region from the F replicon.
+The resulting plasmid has the low copy number typical of F plasmids and it remains stable enough to be easily maintained by growth in the presence of kanamycin, the selective antibiotic.
+DNA in amounts convenient for sequencing is readily obtained by amplification from an IPTG-inducible P1 lytic replicon.
+The vector's multiple cloning region (MCR) has several unique sites for both shotgun and directional cloning.
+It is flanked on one side by recognition sequences for the extremely rare cutting intron encoded nucleases I-CeuI and I-SceI, and on the other side by a recognition sequence for another intron encoded enzyme, PI-PspI and a nicking site for the phage f1 protein, gpII, that initiates f1 rolling circle DNA replication.
+Cleavage with the intron encoded enzymes leaves four-base 3' overhangs that are resistant to digestion with E. coli ExoIII.
+Between these sites and the MCR are recognition sites for several rare 8-base cutters that leave ExoIII sensitive termini.
+Double cutting with one intron encoded enzyme and an adjacent rare cutting restriction endonuclease allows for unidirectional 3' to 5' digestion across the insert with ExoIII.
+Alternatively, plasmid linearized on one side of an insert with I-SceI can be blunt ended to produce an ExoIII sensitive end and then cut with I-CeuI to generate an adjacent ExoIII resistant end.
+The f1 nicking site can be used for ExoIII digestion of the other strand of the insert or for producing single-stranded plasmid circles for library normalization or subtraction.
+After ExoIII digestion, the resulting single-stranded regions are digested with S1 nuclease, and the ends are repaired and ligated with T4 DNA polymerase and ligase.
+Pooling samples from several different Exo III digestion time points before subsequent S1 treatment generates a good distribution of deletion clones following electroporation.
+Deletion clones are sized and sequenced using vector specific forward and reverse primers.
+Cloned fragments at least 10 thousand base pairs long can be sequenced and assembled easily by generating an ordered set of nested deletions whose ends are separated by less than the length of sequence read from a single priming site within the adjacent vector.
+Assembly of the overlapping sequences is guided by knowledge of the relative length of the portion of the fragment remaining in the clone, as determined by gel electrophoresis.
+Even highly repeated DNA can be assembled correctly at comparatively low redundancy by knowing the relative locations of the sequences obtained.
+Nested deletions can also demarcate the ends of problem regions that obstruct polymerase progression which causes a failure of the sequencing reaction.
+Several different approaches can then be used to attempt to finish the sequence.
+One promising method is to PCR amplify the problem region and completely replace guanine with 7-deaza guanine.
+Incorporation of this analogue prevents formation of non-Watson-Crick base paired DNA triplexes that otherwise block some sequencing reactions.
+The amplicons are then sequenced using standard Big dye terminator chemistry supplemented with various reagents know to facilitate extension through problematic regions.
+Our results with a C+Trich repeat from chromosome 19 will be presented.
+_________________________________________________________________
+18.
+DENS: Finishing Without Custom Primers
+Levy Ulanovsky, Olga Chertkov, Malinda Stalvey, Marie-Claude Krawczyk, David Hill, David Bruce, Mark Mundt, Larry Deaven, and Norman Doggett
+DOE Joint Genome Institute and Center for Human Genome Studies, Los Alamos National Laboratory
+levy@lanl.gov
+DENS (Differential Extension with Nucleotide Subsets) is primer walk sequencing without custom primer synthesis.
+DENS largely eliminates the cost of custom primer synthesis - several dollars, compared to less than a dollar for the rest of the expenses (per lane) combined.
+DENS works by converting a short primer (selected from a pre-synthesized library of 1440 octamers with 2 degenerate bases each) into a longer one on the template at the intended site only.
+DENS starts with a limited initial extension of the octamer primer at 20Ã¯Â¿Â½ C in the presence of only 2 of the 4 possible dNTPs.
+The primer is extended by 5 bases or longer at the intended priming site, which is deliberately selected, as is the two-dNTP set, to maximize the extension length.
+The subsequent cycle-sequencing at 60Ã¯Â¿Â½ C accepts the primer extended at the intended site, but not at alternative sites where the initial extension (if any) is generally short.
+We have now automated all labor-intensive steps in DENS and have employed this as part of our finishing strategy to improve low quality targets.
+Several megabases of chromosome 16 have been finished using 
+Supported by the US DOE, OBER under contract W-7405-ENG-36.
+_________________________________________________________________
+19.
+High Throughput Synthesis of Oligonucleotides in Support of Finishing
+L. Sue Thompson, Mark Mundt, David Bruce, Larry Deaven, and Norman Doggett
+DOE Joint Genome Institute and Center for Human Genome Studies, Los Alamos National Laboratory
+thompson_l_sue@lanl.gov
+Los Alamos is currently using a Liquid Chemical Dispensing Robot, built by Bioautomation and called the MerMade by its creators at the University of Texas Southwest, to synthesize large numbers of oligonucleotides for use in custom primer finishing reactions.
+With the first MerMade installed in February of 1999, approximately 12,000 oligos were made the first year.
+During and since that time methods and infrastructure have been modified and developed to optimize protocols for cost effective and safe production of large numbers of oligonucleotides.
+One important determination made during the first year of operations was that a more effective ventilation system was needed to minimize hazardous chemical exposure to the technician and surrounding laboratory tenants.
+The Mermade oligonucleotide synthesis laboratory completed a move in August of 2000 to the site of a chemical synthesis laboratory facility with two custom-design fume hoods with individual Phoenix controls for the existing Mermade and a second MerMade.
+Each MerMade synthesizer is designed to synthesize two standard 96 well plates of oligonucleotides in a single run, using standard phosphoramidite chemistry.
+Synthesizing four days per week on two MerMades allows the production of 1536 oligonucleotides per week and 70,000 oligonucleotides per year.
+A Beckman Biomek 2000, automated workstation, performs most time consuming multi-channel pipetting tasks.
+With the Normalization Wizard software each plate is quantitated on a Molecular Dynamics SpectraMax plate reader and normalized to the user's specifications.
+Quality control involves running a representative sample of each plate on a gel and/or analyzing a representative sample on the Voyager DE Biospectrometry Workstation with MALDI-TOF mass analysis.
+Supported by the US DOE, OBER under contract W-7405-ENG-36.
+_________________________________________________________________
+20.
+Automated 384-Well Purification for Terminator Sequencing Products
+Chris Elkin, Hitesh Kapur, David Humphries, Troy Smith, and Trevor Hawkins
+U.S. DOE Joint Genome Institute, Walnut Creek, CA 94598
+Elkin1@llnl.gov
+We have developed an automated purification method for terminator sequencing products based on magnetic bead technology.
+This four-step method is optimized for use in 384-well PCR plates and low costs.
+The end product is essentially salt free and allows for water loading onto capillary gel systems.
+We have tested this method with various DNA templates such as PCR, Plasmids, Cosmids and Rolling Circle Amplification products and found a 40 base pair increase in read length, as compared to ethanol precipitation methods.
+Our new method also eliminates all centrifugation steps and is compatible with both MegaBACE 1000 and ABI Prism 3700 instruments.
+Currently, this method is producing 100 (384-well plates) per day on a Biomek FX robotic platform with an average pass rate of 90% and readlength 
+This work was performed under the auspices of the U.S. Department of Energy, Office of Biological and Environmental Research, by the University of California, Lawrence Livermore National Laboratory under Contract No.
+W-7405-Eng-48, the Lawrence Berkeley National Laboratory under contract No.
+DE-AC03-76SF00098, and the Los Alamos National Laboratory under contract No.
+W-7405-ENG-36.
+_________________________________________________________________
+21.
+Whole Genome Direct Sequencing: Completion of Microbial Genome and Mammalian BAC Projects using ThermoFidelase, Fimer and D-Strap Technologies
+S. Kozyavkin, A. Malykh, K. Mezhevaya, A. Morocho, N. Polouchine, V. Shakhova, O. Shcherbinina, and A. Slesarev
+Fidelity Systems, Inc., 7961 Cessna Avenue, Gaithersburg, MD 20879-4117
+serg@fidelitysystems.com
+http://www.fidelitysystems.com
+We have developed a novel strategy for genomic DNA sequencing that minimizes the number of reactions and potentially eliminates the need in subcloning and production of shotgun libraries.
+The successful scale up of our approach has resulted in complete and highly accurate sequence of a microbial genome and a number of human and mouse BACs.
+A core component of the procedure is the use of genomic DNA as a template in a robust sequencing reaction.
+The addition of ThermoFidelase 2 with its unique combination of topoisomerase and DNA binding activities is used to shorten the cycles of denaturation and primer annealing.
+The dramatic increase in specificity, quality and yield of priming from megatemplates is achieved by using Fimers (modified oligonucleotides with proprietary SUC modifications) instead of regular primers and multiplying the number of thermal cycles.
+The third element of new strategy, D-Strap is based on Fimer design that targets evolutionary conserved elements in RNA- or protein-coding genes.
+We have optimized reagents and protocols for a sequencing production environment of a small team and limited resources.
+Using a novel approach, we have determined the complete 1,694,969 nucleotide sequence of the GC-rich genome of Methanopyrus kandleri, a hyperthermophile that can grow at 110 deg C.
+As little as 3.3x sequencing redundancy was sufficient to assemble the genome with 
+The optimization of protocols and reagents resulted in the increase of an average read length of direct genomic traces from 370 q20 bases in the beginning of the project to 500 bases at the end.
+Due to the unique position of M. kandleri on the phylogenetic tree (a single species phylum in euryarchaeal division), the initiation step based on D-Strap was supplemented with limited sequencing of cloned plasmids directly from cell cultures (i.e., without isolation of DNA).
+The utility of produced Fimers was further demonstrated in sequencing reactions with the other strain of M. kandleri (9% sequence difference).
+We continue the development of D-Strap technology for direct sequencing of microbial genomic DNA of various sizes and taxonomic origin (~ 5 Mb, 20% sequence difference).
+The completeness and high quality of M. kandleri sequence was a prerequisite for the application of COG-based methods in comprehensive genome annotation, analysis of proteome evolution and reconstruction of cellular metabolism which was done by Dr. Koonin's group at NCBI in a very short period of time (weeks).
+We anticipate that combination of low redundancy direct genomic sequencing and speedy analysis will help eliminate backlog of unfinished projects and make microbial and comparative genomics more affordable for small scientific teams.
+Whole Genome Direct sequencing of mammalian organisms (3 Gb genomes) can not be done with the current technology.
+Instead, BAC libraries with sequenced ends and low coverage Whole Genome Shotgun (WGS) data can be used to initiate the project.
+We have optimized Fimer design and BAC sequencing protocols for the production of reads of up to ~ 1 kb long, including sequencing through difficult and repetitive regions.
+The utility of D-Strap Fimers that target evolutionary conserved mammalian exons was demonstrated on human and mouse BACs.
+Our data show that 100% contiguity and high quality of assembled sequence can be achieved starting from 
+The critical elements for the robust genome finishing technology and methods for further optimization of overall workflow for high throughput environment will be discussed.
+Supported in part by DOE and NIH (DE-FG02-98ER82577, 00ER83009, R44GM55485, R43HG02186).
+_________________________________________________________________
+22.
+A Tape Conveyer System for Storage and Distribution of Biological Samples
+Ger van den Engh and Juno Choe
+Institute for Systems Biology, Seattle, WA 98115
+engh@systemsbiology.org
+We are developing a tape system for packaging large numbers of biological samples.
+The samples are stored in 5 microliter wells that are formed in a long plastic tape.
+A cover tape seals the wells.
+A 10 inch diameter spool can hold 10,000 samples.
+The tapes can be used for storage and retrieval of cells, microorganisms, or biological molecules.
+When used as conveyer system, the tapes can be used to perform experiments on large numbers of samples.
+The tapes are particularly powerful when combined with cell sorting.
+A cell sorter may deposit a string of rare event on a tape.
+The content of each well may be expanded by the PCR or by natural proliferation single cells.
+One application is the rapid subcloning of a piece of DNA.
+DNA fragments are transfected into a specially constructed plasmid.
+The plasmid has a cloning site in between green and red fluorescent protein.
+The native plasmid transcribes a hybrid protein that fluoresces red when excited with blue/green light.
+When the linker between the proteins is disrupted by an insert, the transcribed protein emits green fluorescence.
+The bacteria carrying plasmids with an insert have a different color from the bacteria that do not have an insert.
+Thus the bacteria with inserts can be easily detected in a cell sorter.
+The use of sorting for subclone selection represents a significant increase in speed in clone preparation for DNA fragment sequencing.
+_________________________________________________________________
+23.
+Developing a High Throughput Lox Based Recombinatorial Cloning System
+Robert Siegel^1, Raj Jain^2, Nileena Velappan^2, Leslie Chasteen^2, and Andrew Bradbury^2^
+^1Pacific Northwest National Laboratory, Richland, Washington ^2Los Alamos National Laboratory, Los Alamos, New Mexico
+amb@lanl.gov
+The selection of antibodies (single chain Fvs scFvs) against protein targets can be done using a number of different systems, including phage, phagemid, bacterial or yeast display vectors.
+Genetic selection methods have also been developed based on yeast two hybrid and enzyme complementation systems.
+In general, selection vectors are not suitable for subsequent scFv production.
+Furthermore, once scFvs have been selected, they can be usefully modified by cloning into other destination vectors (e.g. by adding dimerization domains, detection domains, eukaryotic expression in eukaryotic vectors etc.).
+However, this is relatively time consuming, and requires checking of each individual construct after cloning.
+An alternative to cloning involves the use of recombination signals to shuttle scFvs from one vector to another.
+These have the advantage that DNA restriction and purification can be avoided.
+Such systems have been commercialized in two general systems: Gateway, uses lambda att based recombination signals, while Echo uses a single lox based system to integrate a source plasmid completely into a host plasmid.
+We have examined the potential for using heterologous lox sites and cre recombinase for this purpose.
+Five apparently heterologous lox sites (wild type, 511, 2372, 5171 and fas) have been described.
+A GFP/lacZ based assay to determine which of these were able to recombine with each other was designed and implemented.
+Of the five, three (2372, 511 and wt) were identified which recombined with one another at levels less than 2%.
+To use recombination as a cloning system, it is important to be able to select against host vectors which do not contain the insert of interest.
+Two toxic genes were examined for this purpose.
+The tetracycline gene confers sensitivity to nickel, while the sacB gene confers sensitivity to sucrose.
+We confirmed these sensitivities, although found that some antibiotic resistances interfere with survival of bacteria hosting non-tetracycline containing plasmids.
+In preliminary experiments we have demonstrated that recombination from one plasmid to another, using 2272 and wild type lox sites and sacB or tetracycline, can occur in vivo at very high efficiency.
+This opens the possibility of using this system to easily transfer scFvs after selection to other plasmids.
+However, the utility of this system is not limited to scFvs any DNA fragment (gene, open reading frame, promoter etc.) can easily be shuttled from one plasmid to another using these lox based signals.
+_________________________________________________________________
+24.
+Plant Mini-Chromosome Vectors
+J. Mach and H. Zieler
+Chromatin, Inc.
+mach@chromatininc.com
+Chromatins technology focuses on the design of plant mini-chromosomes, large DNA molecules with the capacity to carry multiple genes.
+Other gene delivery methods for plants introduce individual genes into a host chromosome, causing irreparable damage to host genes and unpredictable effects on the expression of the introduced gene.
+In contrast, because plant mini-chromosomes segregate independently from the host chromosomes, they eliminate insertional mutagenesis and position effects.
+A major obstacle to the development of mini-chromosome has been the challenge of identifying centromeres.
+Chromatins proprietary technology allows purification of centromere DNA from important crop species and incorporation of that DNA into mini-chromosomes, along with other essential chromosomal components.
+These mini-chromosomes can be delivered into plant cells and tested to determine which sequence combinations exhibit the highest degree of stability through successive cell generations.
+Like the mini-chromosomes developed previously for yeast and bacterial systems, plant mini-chromosomes will improve the reliability and efficiency of gene delivery, enable precise control of gene expression, and significantly expedite the analysis of new gene functions.
+Chromatins technology focuses on the design of plant mini-chromosomes, large DNA molecules with the capacity to carry multiple genes.
+Other gene delivery methods for plants introduce individual genes into a host chromosome, causing irreparable damage to host genes and unpredictable effects on the expression of the introduced gene.
+In contrast, because plant mini-chromosomes segregate independently from the host chromosomes, they eliminate insertional mutagenesis and position effects.
+We are currently assembling key chromosomal components into plant mini-chromosomes.
+These mini-chromosomes can be delivered into plant cells and tested to determine which sequence combinations exhibit the highest degree of stability through successive cell generations.
+Like the mini-chromosomes developed previously for yeast and bacterial systems, plant mini-chromosomes will improve the reliability and efficiency of gene delivery, enable precise control of gene expression, and significantly expedite the analysis of new gene functions.
+_________________________________________________________________
+25.
+Sampling Diversity with Mitochondrial Genomics
+Jeffrey L. Boore, Nikoletta Danos, David DeGusta, H. Matthew Fourcade, Lisa Gershwin, Allen Haim, Kevin Helfenbein, Martin Jaekel, Kirsten Lindstrom, J. Robert Macey, Susan Masta, MÃ¯Â¿Â½nica Medina, Rachel Mueller, Marco Passamonti, Corrie Saux, Renfu Shao, and Yvonne VallÃ¯Â¿Â½s
+DOE Joint Genome Institute, Walnut Creek, CA 94598
+JLBoore@lbl.gov
+Mitochondrial DNA (mtDNA) comparisons serve as a model for genome evolution and as a tool for reconstructing evolutionary relationships.
+Relative to the nuclear genome, this system has several advantages for a comprehensive sampling across life.
+Mitochondrial genomes are small and gene-rich with a conserved complement of genes that are homologous among plants, protists, fungi, and animals.
+The products of these genes participate in well-characterized biochemical processes and play important roles in metabolism, health, aging, and biochemical adaptation.
+The comparison of mitochondrial genomes, especially of the relative arrangements of their genes, has proven to be among the best of datasets for reconstructing the evolutionary relationships among major groups of organisms.
+MtDNAs are typically circular, allowing physical isolation from nuclear DNA.
+To date, individual labs have produced, at most, a few mtDNA sequences per year.
+We are developing techniques to greatly accelerate this effort, including protocols for the rapid purification of mtDNAs for shotgun cloning, bioinformatics tools for streamlined data processing, web-based tools for comparisons of mitochondrial genomic features, and improved computational methods for reconstructing minimum genome rearrangement pathways.
+These innovations can lead to a larger, more comprehensive survey of biodiversity at the genome level than has been previously imagined possible.
+This work was performed under the auspices of the U.S. Department of Energy, Office of Biological and Environmental Research, by the University of California, Lawrence Livermore National Laboratory under Contract No.
+W-7405-Eng-48, the Lawrence Berkeley National Laboratory under contract No.
+DE-AC03-76SF00098, and the Los Alamos National Laboratory under contract No.
+W-7405-ENG-36.
+_________________________________________________________________
+[ahgplogo1_5.jpg]
+The online presentation of this publication is a special feature of the Human Genome Project Information Web site.

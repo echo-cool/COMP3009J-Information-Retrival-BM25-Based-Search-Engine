@@ -1,0 +1,67 @@
+Errata, Proposed Changes, and Maintenance Activities ANSI/NISO Z39.86-2002, Specifications for the Digital Talking Book Reports of errata and requests for modifications to the standard should be sent to nls@loc.gov, with "Z3986" in the subject line.
+__________________________________________________________________
+Errata Proposed Changes Maintenance Activities Z39.86 Advisory Committee Operating Procedures __________________________________________________________________
+Errata
+Section 3.2.1
+Paragraph 4 should read: For upwards-compatibility, the element dc-metadata in an OEB package is required to have an attribute of xmlns:dc="http://purl.org/dc/elements/1.0/" and xmlns:oebpackage="http://openebook.org/namespaces/oeb-package/1.
+0/".
+Text in current version of standard December 30, 2002 __________________________________________________________________
+Section 7.3
+Element: 
+Entry should read: dur (CDATA, IMPLIED) The duration of the seq.
+The value syntax is defined by the SMIL 2.0 Timing and Synchronization Module [SMIL].
+See section 7.7, "Clock Values."
+Text in current version of standard August 27, 2002 __________________________________________________________________
+Section 7.6
+Example 7.2, sixth 
+Section 8.3
+Element: 
+Text in current version of standard December 30, 2002
+Element: 
+Text in current version of standard December 30, 2002 __________________________________________________________________
+Proposed Changes
+Sections 3.3 and 5.1
+Section 5.1 requires that specific file extensions be used in audio filenames.
+It is proposed that this requirement be removed and that players determine file type from the MIME media-type in the manifest instead.
+Section 5.1 would be modified accordingly, and a reference added, pointing to section 3.3, which would be modified to specify the MIME values for compliant audio files and require that players reference the MIME type.
+Text in current version of standard December 30, 2002 __________________________________________________________________
+Sections 3.3 and 6
+Section 6 requires that specific file extensions be used in image filenames.
+It is proposed that this requirement be removed and that players determine file type from the MIME media-type in the manifest instead.
+Section 6 would be modified accordingly, and a reference added, pointing to section 3.3, which would be modified to specify the MIME values for compliant image files and require that players reference the MIME type.
+Text in current version of standard December 30, 2002 __________________________________________________________________
+Sections 7.1.2 and 7.7
+The standard is ambiguous on whether it supports use of the "npt=" prefix within clipBegin and clipEnd values in SMIL files.
+It is proposed that this support be required and be stated explicitly.
+However, SMIL 2.0, which Z39.86 references, also allows use of SMPTE timings.
+It is proposed that support for SMPTE be explicitly excluded from Z39.86.
+Section 7.1.2 will be revised to make clearer that not all parts of the SMIL modules used in Z39.86 are automatically supported in Z39.86.
+Section 7.7 will be revised to reference the MediaClipping module where "npt=" is described, specify support for the "npt=" prefix, provide an example, and specify that support for SMPTE is not required.
+Section 7.1.2 in current version of standard Section 7.7 in current version of standard March 14, 2003 __________________________________________________________________
+Section 8.4.3
+To eliminate ambiguity, it is proposed that this section be revised to read: The mapRef attribute on each navTarget must reference the innermost navPoint that contains the starting point of the element referenced by the navTarget.
+Text in current version of standard December 30, 2002 __________________________________________________________________
+Appendix 1 - DTBook DTD
+In DTBook, the element 
+Since the standard method for referencing a stylesheet in XML is via the processing instructions, the use of the 
+It is proposed that the 
+December 30, 2002 __________________________________________________________________
+Maintenance Activities
+Modules to Extend DTBook
+The Advisory Committee plans to explore extensions to the DTBook DTD.
+The first effort will be to develop a module that supports markup of poetry.
+Experimentation will determine whether the module will be retained or the new elements integrated into the base DTD.
+Status: Begun, 12/02.
+Module planned to be completed by 2/03.
+__________________________________________________________________
+Support for Scalable Vector Graphics
+The Advisory Committee proposes to research future support for Scalable Vector Graphics (SVG) in the standard.
+__________________________________________________________________
+Support for Multiple Textual Content Files
+With very large documents, a single textual content file will be difficult to process and render.
+The "Include" function is theoretically workable, but with a very large document may create an unparseable file when all entities are resolved.
+Research into the best methods for creating and processing multiple textual content files is needed.
+__________________________________________________________________
+NLS home || Z39.86 Home
+Comments on this page to nlswebmaster@loc.gov
+Last updated March 13, 2003

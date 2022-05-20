@@ -1,0 +1,92 @@
+Privacy and Legal Notice CIAC INFORMATION BULLETIN I-005c: E-Mail Spamming countermeasures Detection and prevention of E-Mail spamming November 25, 1997 22:00 GMT __________________________________________________________________ PROBLEM: Unsolicited E-Mail.
+PLATFORM: All platforms which accept E-Mail from the Internet DAMAGE: Loss of user productivity and reduction of availability of resources.
+SOLUTION: Follow the guidelines outlined below.
+___________________________________________________________________________ VULNERABILITY Programs which implement this type of malicious activity are in ASSESSMENT: widespread use.
+No legal remedies are available yet.
+___________________________________________________________________________
+INTRODUCTION:
+Spam (aka UCE: Unsolicited Commercial E-mail) is the Internet version of "Junk mail."
+It is an attempt to deliver a message, over the Internet, to someone who would not otherwise choose to receive it.
+Almost all spam is commercial advertising.
+Potential target lists are created by scanning Usenet postings, stealing Internet mailing lists, or searching the Web for addresses.
+Such information is gathered with automated searches to retrieve e-mail addresses for spamming.
+The low cost of e-mail spamming engines offered for sale with millions of e-mail addresses, coupled with the fact that the sender does not pay extra to send e-mail, has resulted in the current explosive growth of "junk e-mail."
+Currently, unless the spammer offers to sell illegal items, there is no legal remedy to use to stop the e-mail spammers.
+Congress is currently considering legislation to require the marking of unsolicited commercial e-mail (UCE), but that legislation is not yet complete.
+TERMINOLOGY:
+To better understand the concepts in this bulletin, please consider the following terminology.
+Mail User Agent (MUA).
+This refers to the program used by the client to send and receive e-mail from.
+It is usually referred to as the "mail client."
+An example of this is Pine or Eudora.
+Mail Transfer Agent (MTA).
+This refers to the program used running on the server to store and forward e-mail messages.
+It is usually referred to as the "mail server program."
+An example of this is sendmail or the Microsoft Exchange server.
+CONFIGURATION AND USAGE GUIDELINES:
+Mail filtering in the Mail Transfer Agent or Mail User Agent is the only practical solution today for removing spam messages, and it is less than perfect.
+There are three primary information sources used to filter incoming e-mail :
+- Header Information - Mailer Type (a special type of Header information) - IP Address (domain name).
+Header filtering is performed by scanning the header and/or envelope of a message, and comparing that information to a list of "filters."
+If the "From", "X-Sender", or "Sender" address is in the "filter" list, the message is dropped.
+Filtering by e-mail envelope and/or header information on the Mail User Agent or Mail Transfer Agent is the most effective way of limiting spam on your network.
+Filtering on the Mail Transfer Agent is accomplished by adding rules to the configuration for the specific mail system running on the server.
+Mail User Agent filtering is accomplished through filters set in a user's mail reader.
+The most logical location for filtering is your Mail Transfer Agent, since it can perform this service for a larger number of mail accounts and is a central point for administration.
+The down side to this is that users need to feed- back "SPAM" information to the e-mail administrators so that is can be incorporated into an organization-wide filtering list.
+This requires continuous maintenance to keep the spamming filters list up-to-date, since it is built in reaction to spamming activity.
+Predetermined "filtering" lists are usually available in the public domain, see the references at the end for starting locations.
+Also, if the spamming filter list is not made with care, valid e-mail messages may be discarded along with the spam.
+Mailer filtering using the specific Header information field: "X-mailer."
+This type of filtering enables you to eliminate an entire class of senders -- those who use suspect Mail Delivery Agents.
+Some of the more popular Mail User Agent's with spammers are: Floodgate, Extractor, Fusion, Masse-mail, Quick Shot, NetMailer, WorldMerg, Aristotle Mail, Emailer Platinum, Master Mailer, and Calypso.
+Be aware that, as with other Header filtering, filtering on "X-mailer" always runs the risk of eliminating legitimate mail from people using these mailers.
+Lastly, you can filter traffic from a domain or range of IP addresses.
+This is probably the easiest way to limit spam from those addresses associated with spamming.
+Again you may also block mail from legitimate users.
+You can also take proactive measures to fight back against spammers.
+You can determine the true domain where the spam mail originated, then contact the administrators of that domain.
+The SPAM FAQ (see references for location) will contain the latest details on this process.
+SOME DO NOTS
+Do NOT spam, mail bomb, or hack spammers.
+In many cases the site indicated as the source of the spamming is not the spammers real site, so attacking that site is not only wrong, but you are actually "spamming" yourself.
+DO NOT Sending "remove" messages to a spammer.
+It simply validates your e-mail address for future spammings.
+DO NOT act as a gateways for spammers.
+Use an Mail Transfer Agent that facilitates blocking the forwarding of messages by spammers from your organizations SMTP ports.
+Currently sendmail has filters to prevent this.
+Mail Transfer Agent's that do not have this capability can be protected by rerouting all mail for the domain through a host running sendmail with filters.
+The sendmail server then hands the messages to the preferred mail server which is hidden by router filters.
+It is very important that the site e-mail administrators work closely with their users to make the decision about which sites, mailers, and senders to be blocked.
+You should also have a special e-mail address (e.g. abuse@someorg.gov, spam@someorg.gov) where users can send copies of spam messages they have received.
+IMPORTANT POINTS TO CONSIDER
+Basing filtering decisions on a single class of mailer type can have significant negative effects.
+If the selction of mailer type is not researched, you may block a significant amount of legitimate e-mail.
+Verify that the mailer you have choosen to filter is primarily used for the purpose of spamming.
+For example, filtering on "Eudora" mailer could be a problem.
+While this mailer has been used for spamming, it is widely used for legitimate purposes.
+Thus filtering on this mailer would result in a significant loss of legitimate e-mail, while only limiting a potentially small amount of spam.
+An analysis of nearly 9,000 spam messages,found that only 840 of these messages actually had X-Mailer headers.
+Of those having the X-Mailer header, less than 15% were special-purpose bulk mailers, the other 85% were Eudora, Pegasus Mail, and Netscape Mail.
+The bulk mailers, which had no X-Mailer header, accounted for the nearly 90% of the sample.
+Keep in mind that it is the person and not the mailer that is the problem.
+This rule of thumb also aplies to filters based on domain names, but not IP address ranges.
+There is a significant amount of "forged" sending domains in spam messages.
+When a forged domain is placed in a spam filter, an effective Denial of Service against the forged domain, has been accomplished.
+For example there have been many problems with mass mailers forging the cyber.com domain.
+Faking a sending domain is trivial, and some mass mailers will fake an address in order to not receive complaints about their practice.
+REFERENCES
+Keeping up-to-date on the techniques to eliminate or reduce SPAM is very important.
+The following are sources for more information about spamming and actual methodologies implementing filtering.
+SPAM FAQ http://www.cs.ruu.nl/wais/html/na-dir/net-abuse-faq/spam-faq.html Legal and Legislative Information http://www.cauce.org Filtering mail to your personal account http://spam.abuse.net/spam/tools/mailblock.html#filters Blocking spam e-mail for an entire site http://spam.abuse.net/spam/tools/mailblock.html Blocking IP connectivity from spam sites http://spam.abuse.net/spam/tools/ipblock.html Sendmail Information http://www.sendmail.org/antispam.html
+______________________________________________________________________________
+CIAC would like to acknowledge the contributions from :
+Shawn Hernan James R. Cutler David Harris CERT/CC EDS __________________________________________________________________ __________________________________________________________________
+CIAC services are available to DOE, DOE Contractors, and the NIH.
+CIAC can be contacted at: Voice: +1 925-422-8193 (7 x 24) FAX: +1 925-423-8002 STU-III: +1 925-423-2604 E-mail: ciac@ciac.org World Wide Web: http://www.ciac.org/ Anonymous FTP: ftp.ciac.org __________________________________________________________________
+This document was prepared as an account of work sponsored by an agency of the United States Government.
+Neither the United States Government nor the University of California nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights.
+Reference herein to any specific commercial products, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation or favoring by the United States Government or the University of California.
+The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or the University of California, and shall not be used for advertising or product endorsement purposes.
+__________________________________________________________________
+UCRL-MI-119788 [Privacy and Legal Notice]

@@ -1,0 +1,16 @@
+TRandom3 __________________________________________________________________ class description - source file - inheritance tree __________________________________________________________________ class TRandom3 : public TRandom public: TRandom3 TRandom3(UInt_t seed = 65539) TRandom3 TRandom3(TRandom3
+For more information see the Mersenne Twistor homepage http://www.math.keio.ac.jp/~matumoto/emt.html
+Advantage: large period 2**19937-1 relativly fast (only two times slower than TRandom, but two times faster than TRandom2) Drawback: a relative large internal state of 624 integers
+Aug.99 ROOT implementation based on CLHEP by P.Malzacher
+the original code contains the following copyright notice: __________________________________________________________________
+TRandom3(UInt_t seed) *-*-*-*-*-*-*-*-*-*-*default constructor*-*-*-*-*-*-*-*-*-*-*-*-*-*-* *-* =================== __________________________________________________________________
+~TRandom3() *-*-*-*-*-*-*-*-*-*-*default destructor*-*-*-*-*-*-*-*-*-*-*-*-*-*-* *-* ================== __________________________________________________________________
+Float_t Rndm(Int_t) Machine independent random number generator.
+Produces uniformly-distributed floating points between 0 and 1.
+Method: Mersenne Twistor __________________________________________________________________
+void SetSeed(UInt_t seed) Set the random generator sequence
+Inline Functions __________________________________________________________________
+TClass* Class() TClass* IsA() const void ShowMembers(TMemberInspector
+________________________________________________________________
+ROOT page - Class index - Top of the page __________________________________________________________________
+This page has been automatically generated.

@@ -1,0 +1,70 @@
+NASA logo COMPUTING, INFORMATION AND COMMUNICATIONS TECHNOLOGY (CICT) Intelligent Systems Project Automated Reasoning Funded Task IS logo __________________________________________________________________ IS Task List | AR Task List | MBFP Task List __________________________________________________________________ Probabilistic Fault Detection for Hybrid Discrete/Continuous Systems NASA Ames Research Center Richard Dearden (RIACS) Vandi Verma (CMU/RI) Reid Simmons (CMU/RI), Rich Washington (RIACS), Dan Clancy (ARC/IC), Thomas Willeke (QSS/ARC), Frank Hutter (ARC) Abstract A rover or autonomous spacecraft must constantly monitor for faults and unexpected conditions, based on models of the system configuration, environment, and current action.
+Dangerous state changes must be detected very quickly, but with few false alarms and minimal computational power.
+Probabilistic models (based on particle filters) can help distinguish sensor noise and expected state changes from conditions that are unexpected and mission-threatening.
+This will permit tight tolerances and close monitoring of critical systems.
+Global decisions will be handed off to a higher-level reasoner (within the CLARAty autonomy architecture model), which will feed back situation knowledge for adjusting resource estimates and thresholds.
+Experiments will be conducted with a Marsokhod rover wheel model that has 23 discrete modes (including 14 fault modes), plus four continuous state variables.
+Field test demonstration of onboard health management will be conducted with an Ames K9 rover.
+Other applications may include Space Shuttle engine or life support systems.
+Task Description
+DOMAIN:[ ] Fault detection and verification in planetary rovers, spacecraft health maintenance systems, in situ propellant production plants, and other complex systems.
+CONCEPT:[ ] Probabilistic models can help distinguish sensor noise and expected state changes from conditions that are unexpected and mission-threatening.
+This will permit tight tolerances and close monitoring of critical systems, without excessive false alarms.
+PROBLEM:[ ] A rover (or any device or subsystem) may be operating in one of several states -- planned or unplanned -- within various environmental states.
+Measurable parameter values such as wheel speed and current draw must be interpreted in the light of these states, to distinguish dangerous faults (such as a wheel jam) from expected or temporary conditions (such as high current drain on slopes and rough terrain).
+An intelligent monitoring system must be aware of intended actions (or expected environmental changes) and likely consequences.
+However, faults are deviations from expected operating conditions and cannot be predicted from high-level models of what should be happening.
+Monitoring algorithms must generate independent estimates of immediate conditions from noisy observations of continuous parameters.
+Dangerous state changes must be detected very quickly, but with few false alarms and minimal computational power.
+(Computational power devoted to monitoring may reduce science return.
+Communication cycles for problem diagnosis and correction are even more disruptive.)
+OBJECTIVES:[ ] Techniques will be developed for hybrid discrete/continuous state estimation from noisy sensors and partial situation knowledge, with simple faults detected and diagnosed in real time.
+Internal faults will be distinguished from environmental interactions.
+The monitor will also maintain estimates of future resource utilization rates, to be compared with estimated resource availability.
+(Reasoning about a "low power" fault, for instance, may require estimates of future power use and solar power generation.)
+Global decisions will be handed off to a higher-level reasoner, which will feed back situation knowledge for adjusting resource estimates and thresholds.
+APPROACH:[ ] The rover and its environment are viewed as a finite state machine, with sensed parameters coming from a hidden Markov model (HMM) that has mixed discrete and continuous state components.
+The monitor will start with a prior probability estimates for the states, and with an estimated probability of transitioning from any state to any other.
+Since Bayesian updating of these probability models is too costly, particle filters will be used as approximations.
+Estimates get better as more particles are used, providing an "anytime" control capability that can adapt to varying levels of processor availability.
+A Marsokhod rover will also be used for development and testing.
+The Marsokhod wheel model has 23 discrete modes (including 14 fault modes), plus four continuous state variables (wheel speed, current, change in speed, and change in current).
+Sensor values are corrupted by Gaussian noise.
+Local monitoring will be performed by objects within the Functional Layer of the CLARAty autonomy architecture model.
+Faults that cannot be diagnosed locally will be passed up the CLARAty hierarchy for higher-level reasoning.
+Depending on the level of abstraction of the object (sensor, motor assembly, rover), the models will be able to detect different categories of faults (broken sensor, stuck wheel, high centering).
+Encapsulation allows each diagnosis module to be relatively simple.
+BASIS:[ ] Markov chain Monte Carlo (MCMC) methods will be used to track continuous parameters (sensor readings) and estimate the system states that are producing them.
+Hidden Markov models can handle general quantitative models and probability models, and can track multiple hypotheses simultaneously.
+Particle filters approximate the multi-state probability function by using a large number of sampled values updated through Monte Carlo simulation.
+Computation time and approximation error are independent of the size of the state space.
+(Because transitions to fault states have low probability, particles may not move to the fault states during normal Monte Carlo simulation.
+This can be cured by adding samples artificially to each fault state.)
+Additional computation and sensing can refine the model when a fault state begins to seem likely.
+NASA RELEVANCE:[ ] In addition to Mars rover fault detection and health management (with improved decision making and science return), this work can be used for controlling life support systems (such as the JSC BioPlex experiment), In Situ Propellant Production (ISPP), and other complex systems.
+It should provide an alternative to the qualitative approach of Livingstone (L2), performing spacecraft subsystem state identification and diagnosis in very dynamic situations with tight coupling to the environment.
+Progress
+SCHEDULE:[ ] FY01: Preliminary K9 rover models, with diagnosis of simple motor and driving faults.
+Particle filters will be developed for selected problems, and efficient algorithms will be defined for estimating the discrete mode of an individual component while estimating continuous parameters that it affects.
+FY02: Extend to complex faults in real time, distinguish environmental interaction from internal faults, and integrate with CLARAty.
+Data from K9, Bullwinkle, or Hyperion rovers (or their simulators) may be used.
+Explore scaling to a larger problem domain such as the Space Shuttle main engine.
+FY03: Mature algorithms to handle larger devices and demonstrate the algorithms on a larger robust system.
+Demonstratie onboard health management for the K9 rover.
+DEMONSTRATIONS:[ ] The Ames K9 rover will be used for a field test demon
+ACCOMPLISHMENTS:[ ] An efficient particle filter algorithms has been demonstrated on Marsokhod rover data.
+A simple K9 rover model has also been developed, but without telemetry collection.
+PI SLIDES:[ ] PrbDet02.pdf
+For More Information
+TASK WEB PAGE:[ ] http://ic.arc.nasa.gov/ic/projects/mba/projects/hybrid-diagnosis.html
+PARTICIPANTS:[ ] Richard Dearden (PI), USRA RIACS.
+Vandi Verma, CMU Robotics Institute.
+Reid Simmons, CMU Robotics Institute.
+Richard M. Washington, USRA RIACS.
+Daniel J. Clancy, Ames Research Center (Code IC).
+Thomas Willeke, QSS Group, Inc. at ARC.
+Frank Hutter, Ames Research Center.
+__________________________________________________________________
+Intelligent Systems | Automated Reasoning | Model-based Fault Protection __________________________________________________________________
+Responsible NASA Official: Butler Hine Project Support: Kenneth I. Laws / Updated: 23-Sep-2003 Mail Stop 269-3, NASA Ames Research Center, Moffett Field, CA 94035-1000 NASA Privacy Statement.
+For Section 508-accessible information, contact access@mail.arc.nasa.gov.

@@ -1,0 +1,701 @@
+<
+var speed=50 var loop, timer
+function ConstructObject(obj,nest){ nest=(!nest) ? '':'document.'+nest+'.' this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj]
+function displayStatusMsg(msgStr) { status=msgStr; document.returnValue = true; }
+function preloadImages() { var d=document; if(d.images){ if(!d.p) d.p=new Array(); var i,j=d.p.length,a=preloadImages.arguments; for(i=0; i
+function swapImgRestore() { var i,x,a=document.sr; for(i=0;a
+function findObj(n, d) { var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))
+function swapImage() { var i,j=0,x,a=swapImage.arguments; document.sr=new Array; for(i=0;i
+function HideAll() { ShowHide('Acidity',true); ShowHide('Alkalinity',true); ShowHide('AlluvialPlain',true); ShowHide('AnimalDamage',true); ShowHide('Apical',true); ShowHide('Aquatics',true); ShowHide('ArtificialNightLighting',true); ShowHide('Backslope',true); ShowHide('BiologicalIndicator',true); ShowHide('Bracts',true); ShowHide('Broadleaf',true); ShowHide('Calcareous',true); ShowHide('Cambium',true); ShowHide('Carbonates',true); ShowHide('Chlorotic',true); ShowHide('Chlorosis',true); ShowHide('ColdInjury',true); ShowHide('CommonName',true); ShowHide('Composites',true); ShowHide('ContractedPanicle',true); ShowHide('Crown',true); ShowHide('Crozier',true); ShowHide('DailySunlight',true); ShowHide('DiseaseSusceptibility',true); ShowHide('Dehisce',true); ShowHide('DepressionalSoils',true); ShowHide('Drainage',true); ShowHide('DroughtTolerance',true); ShowHide('DurationofFlooding',true); ShowHide('EasetoEstablish',true); ShowHide('Edaphic',true); ShowHide('Epinasty',true); ShowHide('Evapo-transpiration',true); ShowHide('Evergreen/Deciduous',true); ShowHide('FallFoliageColor',true); ShowHide('FieldMoistureCapacity',true); ShowHide('Floodplain',true); ShowHide('FlowerColor',true); ShowHide('FlowerPeriod',true); ShowHide('Forb',true); ShowHide('Fragipan',true); ShowHide('FrostShake',true); ShowHide('FruitColor',true); ShowHide('FruitPeriod',true); ShowHide('FruitType',true); ShowHide('GrowthRate',true); ShowHide('Hardpan',true); ShowHide('HerbicideUsage',true); ShowHide('Hydric',true); ShowHide('Hydrocarbons',true); ShowHide('Imbricated',true); ShowHide('Indehiscent',true); ShowHide('Inflorescence',true); ShowHide('InsectDamageSusceptibility',true); ShowHide('Inslope',true); ShowHide('Inter-veinal',true); ShowHide('Invasiveness',true); ShowHide('LeafMargin',true); ShowHide('Legumes',true); ShowHide('LifeExpectancy',true); ShowHide('LimitingLayer',true); ShowHide('Mantle',true); ShowHide('MaintenanceRequirements',true); ShowHide('Mesic',true); ShowHide('MinimumDepthtoWaterTable',true); ShowHide('MoistureRegime',true); ShowHide('Mottling',true); ShowHide('Mycorrhizae',true); ShowHide('Native',true); ShowHide('Necrosis',true); ShowHide('NodulatingBacteria',true); ShowHide('OpenPanicle',true); ShowHide('Ovary',true); ShowHide('Oxidants',true); ShowHide('Permeability',true); ShowHide('Petiole',true); ShowHide('Phenoxy',true); ShowHide('Phloem',true); ShowHide('Photochemical',true); ShowHide('Phototoxic',true); ShowHide('Physiographic',true); ShowHide('Phytotoxic',true); ShowHide('Pistil',true); ShowHide('PlaceofOrigin',true); ShowHide('PlantCommunity',true); ShowHide('PlantHeight',true); ShowHide('PlantSpread',true); ShowHide('PollutionSensitivity',true); ShowHide('Ponding',true); ShowHide('Post-emergence',true); ShowHide('Pre-emergence',true); ShowHide('PrimaryBranches',true); ShowHide('ReproduceMoreFreely',true); ShowHide('Rhizome',true); ShowHide('RootType',true); ShowHide('RootZone',true); ShowHide('Saline',true); ShowHide('SaltSpray',true); ShowHide('Scarification',true); ShowHide('ScientificName',true); ShowHide('ShrubForm',true); ShowHide('SiteOrientation',true); ShowHide('SmallGrain',true); ShowHide('SoilCompaction',true); ShowHide('SoilpH',true); ShowHide('SoilSaltContent',true); ShowHide('SoilTexture',true); ShowHide('SoilWaterHoldingCapacity',true); ShowHide('Spike',true); ShowHide('SpringFoliageColor',true); ShowHide('Sterilant',true); ShowHide('StormDamage',true); ShowHide('Stolon',true); ShowHide('Stratification',true); ShowHide('Successional',true); ShowHide('SuccessionalOccurrence',true); ShowHide('SummerFoliageColor',true); ShowHide('SummerTexture',true); ShowHide('Sunscald',true); ShowHide('SuperphosphateFertilizer',true); ShowHide('Suture',true); ShowHide('Sweating',true); ShowHide('TipDieback',true); ShowHide('Topography',true); ShowHide('Toxicity',true); ShowHide('Translocated',true); ShowHide('TreeForm',true); ShowHide('Triclopyr(Garlon)',true); ShowHide('Trimec',true); ShowHide('USDAHardinessZoneMap',true); ShowHide('UtilityLines',true); ShowHide('WildlifeUtilization',true); ShowHide('WiltingPoint',true); ShowHide('WindbreakSuitability',true); ShowHide('WinterBrowning',true); ShowHide('WinterFoliageColor',true); ShowHide('WinterTexture',true); ShowHide('Woody',true); ShowHide('Xeric',true); ShowHide('Xylem',true); // ShowHide('',true); // ShowHide('',true); // ShowHide('',true); // ShowHide('',true); // ShowHide('',true); // ShowHide('',true); // ShowHide('',true); // 1 for each goes here }
+function ShowOneOfEm(WhichDiv) { HideAll(); ShowHide(WhichDiv,false); }
+function ShowHide(WhichDiv,hideIt) { if (document.getElementById) document.getElementById(WhichDiv).style.visibility = (hideIt) ? 'hidden' : 'visible'; else if (document.all) document.all[WhichDiv].style.visibility = (hideIt) ? 'hidden' : 'visible'; else if (document.layers) document.layers[WhichDiv]
+//--
+<
+<
+<
+<
+<
+<
+<
+A pH number of less than 7 indicates acidity.
+<
+A pH number of greater than 7 indicates alkalinity.
+<
+<
+Select those animal(s) with known local populations.
+This assumes that population levels are not excessively high, such as a deer yard in winter.
+<
+<
+<
+<
+<
+<
+The apex is the tip or point of anything.
+<
+Aquatics grow in an area know as the littoral zoneâ€”the shallow zone between dry land and the open water area of a lake.
+In Minnesota waters, the littoral zone extends from the shore to a depth of about 15 feet, depending on water clarity.
+The zone width varies, depending upon whether the shoreline slopes are steep or shallow.
+There are four major aquatic plant categories, each favoring a certain water depth; however, the growing areas may overlap.
+Plant growth can vary greatly from lake to lake and even within a lake.
+Aquatic plants provide food and habitat for many animals.
+<
+There are different types of algae, some grow only in the littoral zone, while others grow beyond in well-lit surface waters of an entire lake.
+Examples: Spirogyra (filamentous algae).
+<
+Flowers and seeds on short stems that extend above the water may also be present.
+They grow from near the shore to the deepest part of the littoral zone.
+Depending on the species, they may form a low growing â€œmeadowâ€� near the lake bottom, grow with lots of open space between plant stems, or form dense stands or mats.
+Examples: Myriophyllum spicatum (Eurasian watermilfoil) and Vallisneria americana (wild celery).
+<
+They grow in protected areas where there is little wave action.
+Example: Nymphaea sp. (white water lily) and Nelumbo lutea (yellow lotus).
+<
+They typically grow in wetlands and along shorelines where water is less than four feet deep.
+Examples: Typha angustifolia (narrow-leaved cattail) and scirpus sp. (bulrush).
+<
+<
+There are many different types of lights, including mercury vapor, high-pressure sodium vapor, incandescent, metal halide, and fluorescent.
+Some plants are sensitive to one light type and not another.
+A primary symptom of adverse light effects is extending many plantsâ€™ growth, thereby delaying dormancy and proper hardening off.
+As a result, plants are susceptible to autumn frosts and winter cold injury.
+<
+<
+<
+<
+<
+<
+<
+<
+The loss of green color (chlorophyll) from foliage.
+<
+<
+Cold injury may or may not affect a plantâ€™s shape, form, or vigor.
+<
+<
+<
+<
+<
+For example, silver maple is also known as soft maple.
+In this matrix, we chose the most widely accepted name used in Minnesota, in this case: silver maple.
+Common names should be written in lower case letters (silver maple) unless part of the name is proper (Japanese tree lilac) and then capitalize only the first letter of the proper noun.
+<
+Composite flowers are aggregated into heads consisting of a few or many flowers clustered together.
+<
+Example: Andropogon gerardi (big bluestem).
+<
+<
+The new growth resembles a bishopâ€™s staff (or crozier).
+Also known as a fiddlehead.
+<
+Sunlight will vary according to surrounding vegetation, buildings, or other shade-casting structures.
+<
+Plants require, or can tolerate, eight or more hours of sun per day for normal growth.
+<
+Plants require, or can tolerate, four to eight hours of sun per day for normal growth.
+<
+Plants require, or can tolerate, fewer than four hours of sun per day for normal growth.
+<
+<
+Commonly applied to seeds or pods.
+<
+<
+Some plants are more susceptible to disease than others.
+<
+Examples: powdery mildew and anthracnose.
+<
+Examples: fireblight and Dutch elm disease.
+<
+<
+<
+The soil has a combination of the following features: 
+<
+<
+<
+<
+<
+<
+<
+<
+The site has a combination of the following features: 
+<
+<
+<
+The site has a combination of the following features: 
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+MnDOTâ€™s spring and fall transplanting seasons are illustrated in the Optimum Planting Date Zones map.
+The survival percentage is usually 75-100% with minimal maintenance (fertilization, watering, etc.).
+<
+<
+Plants may require sweating or root stimulators to improve survival.
+<
+The survival percentage is usually 75-100% with minimal maintenance (fertilization, watering, etc.).
+<
+<
+Due to low survival rates, most of these plants are not recommended for fall planting.
+<
+The survival percentage is usually 90-100% with basic maintenance (fertilization, watering, etc.).
+<
+<
+<
+The survival percentage is usually 90-100% with basic maintenance (fertilization, watering, etc.).
+<
+<
+<
+The survival percentage is usually 75-100% with basic maintenance (fertilization, watering, etc.).
+<
+<
+<
+The survival percentage is usually 75-100% with basic maintenance (fertilization, watering, etc.).
+<
+<
+<
+<
+Germination percentage increases when pre-treatments are applied.
+<
+Germination percentages increase with pre-treatments such as boiling or acid scarification, cold storage, or adding mycorrhizae, nodulating bacteria or other beneficial microbes.
+<
+<
+Germination percentage increases when pre-treatments are applied.
+<
+Germination percentages increase with pre-treatments such as certain moisture, temperature and light treatments, or adding mycorrhizae, nodulating bacteria or other beneficial microbes.
+<
+<
+<
+Rapid growth, particularly elongation, of the upper side of a plant causing curling or bending downwards.
+<
+<
+<
+<
+<
+This is water available for use by plants.
+Field moisture capacity is expressed as a percentage.
+<
+<
+Large or significant numbers of flowers will affect a plant's appearance.
+<
+<
+The times are approximate.
+Some plants may flower in more than one season.
+<
+<
+<
+<
+Also called ring or star shake.
+<
+<
+<
+Some plants bear fruit through more than one season.
+<
+<
+<
+Example: Rosa sp. (rose).
+<
+Example: Taxus sp. (yew).
+<
+Examples: Berberis sp. (barberry) and Lonicera sp. (honeysuckle).
+<
+Examples: Populus deltoides (cottonwood), Salix sp. (willow), and Physocarpus sp. (ninebark).
+<
+Examples: Pinus sp. (pine) and Juniperus sp. (juniper).
+<
+Examples: Cornus sp. (dogwood) and Celtis occidentalis (hackberry).
+<
+Examples: Magnolia sp. (magnolia) and Spiraea sp. (spirea).
+<
+<
+Examples: Cephalanthus occidentalis (buttonbush) and Morus alba var. tatarica (mulberry).
+<
+It is generally encased in an involucre or husk.
+Examples: Quercus sp. (oak), Juglans nigra (black walnut), Tilia sp. (linden), and Corylus americana (hazelnut).
+<
+Examples: Malus sp. (crabapple) and Amelanchier sp. (serviceberry).
+<
+Examples: Acer sp. (maple), Ulmus sp. (elm), and Fraxinus sp. (ash).
+<
+Example: Betula sp. (birch) and Salix amygdaloides (peach leaf willow).
+<
+Examples: Populus x canadensis â€œRobusta (Robusta poplar), Acer x freemanii â€˜Celzamâ€™ (Celebration maple), and Fraxinus pennsylvanica â€˜Marshallâ€™s Seedlessâ€™ (Marshallâ€™s seedless ash).
+<
+<
+It assumes the site meets all of the plantâ€™s requirements for normal health and vigor.
+<
+<
+<
+<
+<
+<
+<
+<
+Picloram and clopyralid are included for information only.
+<
+It is used for broadleaf weed control in lawns, grounds maintenance in intensively managed turf, and for broadleaf brush control in extensively managed areas including utility and transportation corridors.
+Evidence of 2,4-D damage is twisting of any woody plant part, epinasty, and/or distorted leaf growth.
+Indicators of 2,4-D use include turf areas free of dandelions, small grain fields free of mustard, or a known history of using products with 2,4-D as an ingredient.
+<
+It is commonly used in combination with other broadleaf herbicides (e.g. Trimec) in intensively managed turf areas for controlling chickweed, creeping Charlie, and other hard to control broadleaf weeds.
+Vanquish is a trade name for a formulation of dicamba used in extensively managed areas for controlling broadleaf weeds such as water hemlock.
+Evidence of dicamba damage is arrested leaf expansion and shoot elongation, unopened buds, and chlorotic, dwarfed, or distorted leaves.
+Indicators of potential dicamba use include turf areas that are generally free of dandelions and/or the presence of adjacent cornfields.
+<
+It is used to control most annual and perennial broadleaf plants, including woody material.
+Evergreen trees and shrubs are susceptible to picloram.
+Most grasses are resistant at low rates, though at high rates picloram acts as a soil sterilant.
+It is the preferred herbicide for controlling leafy spurge and Canada thistle in extensively managed areas due to its effectiveness and low cost.
+Pilcoram application within the root zone of desirable woody plants may cause death or severe injury.
+Indicators of potential picloram use include dried thistle and leafy spurge stocks or stressed grass, showing a range of color from green to yellow to orange.
+<
+It controls many broadleaf plants, especially composites and legumes.
+It is the preferred herbicide for controlling Canada thistle in informal landscape settings; when applied at the low application rates, it causes minimal damage to desirable woody plants.
+Clopyralid is used for prairie establishment site preparation in areas infested with Canada thistle, birdsfoot trefoil, and crown vetch.
+For crown vetch control, clopyralid must be used one season prior to seeding prairie grasses and forbs in order to minimize the death of emerging prairie seedlings.
+Clopyralid is an active ingredient in a mixture with Triclopyr (Garlon) sold under the trade name Confront.
+Confront is used as a broadleaf weed killer in turf, including lawns and grounds maintenance.
+Most woody plants are resistant to Confront; however, linden trees and sumac shrubs can show season-long leaf curling, even when applied at the manufacturerâ€™s label rates.
+<
+<
+<
+<
+<
+<
+<
+Some plants are more susceptible to insect damage than others.
+<
+Example: hackberry nipple-gall psyllid and spittlebugs.
+<
+Examples: bronze birch borer and mossy rose gall.
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+(Example: a rock layer, impermeable soil, etc.)
+<
+<
+This assumes the plant is established and compatible with the site location and conditions.
+Choose the intended landscape formality and maintenance level.
+<
+A formal landscape will require some or all of these human actions: mowing, watering, weeding, clean-up (branch, leaf, fruit, or seed litter), dead-heading, fertilization, pruning, mulching and insect/disease control.
+An informal or natural landscape may require some or all of the following human actions: mowing, weed control, insect/disease control, and periodic hazard tree pruning or removal.
+<
+<
+<
+<
+Soil moisture regimes range from soils with groundwater on the surface part of the year to those with unavailable water much of the year.
+Regimes are based mainly on the number of consecutive days that the soil control section (soil depth from about 4â€� to 12â€�) is dry.
+Factors such as runoff, climate, drainage, and slope direction contribute to the soil moisture regime.
+Sometimes referred to as xeric.
+This is the most commonly found soil moisture regime.
+Sometimes referred to as mesic.
+Sometimes referred to as hydric.
+<
+<
+The blue to green color range indicates long periods of waterlogged conditions.
+Mottled soils are not conducive to proper plant growth.
+<
+This is a mutually beneficial relationship.
+Myco means fungus and rhiza means root.
+<
+A defined area may be a site, region, or state.
+<
+<
+<
+Example: Panicum virgatum (switch grass).
+<
+The expanded base of the pistil, containing the ovules.
+<
+The electron receptor is reduced in a chemical reaction.
+<
+Example: soil.
+<
+<
+Example: 2,4-D.Phloem -- Conducting tissue that brings sugars, manufactured in the leaves, to the roots.
+Also called inner bark.
+<
+Also called inner bark.
+<
+<
+<
+<
+<
+<
+Some people prefer to plant species native to the particular region where their site is located.
+The Minnesota Society of Arboricultureâ€™s zones 1-6 are based on the Minnesota Department of Natural Resources ecological classification system boundaries.
+<
+Some people prefer to plant species native to the particular region where their site is located.
+The Minnesota Society of Arboricultureâ€™s zones 1-6 are based on the Minnesota Department of Natural Resources ecological classification system boundaries.
+<
+<
+<
+<
+<
+<
+The terrain is flat with rocky or sandy soils.
+<
+The terrain is on a steep slope exposed to full sunlight.
+The soil is rocky or sandy.
+<
+The terrain is on a steep slope shaded by land features or trees.
+The soil is rocky or sandy.
+<
+Examples include abandoned farm fields, pastures, and roadsides.
+<
+The vegetative cover is herbs, low shrubs, and trees growing on a mat of sphagnum moss. 
+<
+Standing water is usually present during floods and snowmelt.
+Inland fresh meadows include sedge meadows, fresh (wet) meadows, low prairies, and calcareous fens. 
+Marshes may be deep or shallow.
+<
+The soils are saturated during much of the growing season and may be inundated by as much as a foot of standing water.
+Coniferous swamp soils are usually organic (peat/muck) with variable pH and nutrient levels.
+<
+<
+<
+You may select a maximum height, a minimum height, or a range.
+Account for obstacles (trees, buildings, power lines, etc.) that might prevent the plant from growing beyond a certain height.
+<
+<
+You may select a maximum spread, minimum spread, or a range.
+<
+Account for obstacles (trees, buildings, etc.) that will prevent the plant from growing beyond a certain width.
+<
+<
+<
+Symptoms vary with each plant species.
+For example, alfalfa shows a bleaching appearance between leaf veins as well as on leaf margins; bracken fern shows orange-red on the margins of the frond (leaf); white birch and aspen show reddish-brown (darkening with age) inter-veinalInter-veinal and leaf margin injury; and white and jack pine show orange-red colored needles.
+All of these plants are considered good indicator plants of SO2 injury.
+<
+<
+<
+On a world-wide basis, bacteria produce about ten times more NO than the combined total of NO and NO2 emissions related to human activities.
+The indirect effect of NOX on vegetation, through its key role in forming highly phototoxic photochemical oxidants like ozone, is more important than its direct effects.
+The direct effects are usually in localized areas only and are not common.
+Symptoms vary from species to species and even from cultivar to cultivar, within a species.
+There are no common plants that serve as biological indicators.
+Chronic exposure to NO2 produces chlorosis and necrosis.
+The damage can easily be confused with other pollutants or nutrient deficiencies.
+<
+Hydrocarbons arise during the incomplete combustion of petroleum products, of which transportation sources account for more than half of the total emissions.
+The most common symptoms on broadleaf plants are small flecks or stipples visible on the upper leaf surface.
+The most common symptoms on grasses and grains are small chlorotic spots or white flecks between the veins.
+Symptoms commonly observed on coniferous plants include â€œchlorotic mottlesâ€� (small patches of yellow tissue surrounded by healthy green tissue) and â€œtipburn.â€�
+Symptoms on broadleaf plants include chlorosis (yellowing or paling of green parts of plants) and/or necrosis (death of tissue).
+The symptoms start at the leaf tip and extend toward the base of the leaf from the tip or toward the middle of the leaf from the margins.
+The most popular biological indicator of fluoride effects is gladiolus, which shows necrosis of some outer portions of the leaf.
+Coniferous plants also show necrosis of the outer portions, or tip, of the needle.
+<
+<
+<
+<
+<
+<
+<
+<
+Root systems affect and are affected by such things as soil conditions, septic systems, and underground utilities.
+<
+Examples: Pinus nigra (Austrian pine), Gleditsia sp. (honeylocust).
+<
+Examples: Picea glauca densata (Black Hills spruce), Fraxinus pennsylvanica (green ash).
+<
+Examples: Pinus ponderosa (Ponderosa pine), Crataegus sp. (hawthorn), and Quercus macrocarpa (bur oak).
+<
+<
+<
+<
+Some plants tolerate salt spray better than others.
+Relative plant tolerances are defined as follows: 
+Evergreen trees exhibit needle browning, reduced growth, and may eventually die.
+Plants rarely flower.
+(Examplesâ€”eastern white pine, American linden).
+Herbaceous plant damage is less conspicuous and may result in death of mature plants and high seedling mortality.
+<
+During most years the aesthetic impact is visible but acceptable.
+(Examplesâ€”Amur maple, green ash) 
+(Examplesâ€”honeylocust, Siberian peashrub) 10 The following table interprets the ADT and distance relationship.
+See Table 12 of reference 134 for more details and the research basis.
+<
+<
+<
+The scientific name is universally accepted.
+Scientific names always list a genus and species: Example: genus = Acer and species = saccharinum.
+<
+The forms do not identify a specific species.
+For example, both the Syringa vulgaris (common lilac) and the Juniperus sabina (Savin juniper) are upright.
+<
+Examples: Arctostaphylos uva-ursi (bearberry) and Pinus mugo (mugho pine).
+<
+Examples: Juniperus chinensis â€˜Pfitzerianaâ€™ (Pfitzer juniper) and Rhus aromatica (fragrant sumac).
+<
+Examples: Corylus americana (American hazelnut) and Eleagnus commutata (silverberry).
+<
+Examples: Parthenocissus tricuspidata (Boston ivy) and Parthenocissus inserta (woodbine ivy).
+<
+Examples: Acer ginnala (Amur maple) and Eleagnus angustifolia (Russian olive).
+<
+Examples: Caragana sp. (peashrub) and Physocarpus sp. (ninebark).
+<
+Examples: Euonymus alatus (winged euonymus), Syringa patula â€˜Miss Kimâ€™ (Miss Kim lilac).
+<
+Examples: Prunus nigra â€˜Princess Kayâ€™ (Princess Kay plum) and Spiraea vanhouteii (Vanhoutte spirea).
+<
+Examples: Thuja occidentalis â€˜Woodwardiiâ€™ (Woodward globe arborvitae) and Prunus americana (American plum).
+<
+Example: Rhamnus frangula â€˜Columnarisâ€™ (columnar buckthorn).
+<
+<
+Site orientation measures direct sun exposure and can affect things such as soil temperature.
+<
+<
+<
+<
+<
+<
+<
+<
+Soil compaction can have an effect on things such as soil drainage or a plantâ€™s ability to put out roots.
+Use a soil compaction tester to determine the siteâ€™s compaction level.
+<
+<
+<
+<
+<
+Soil that tests to a pH of 7.0 is precisely neutral.
+The degree of acidity or alkalinity is expressed as: 
+<
+This identifies the probable amount of damage that will occur to plants located within 30 to 40 feet of the road, with an average daily traffic (ADT) from 0 to 40,000 vehicles.
+Soil salt content is determined by a soil test.
+<
+Plants are not able to withstand the damaging effects of soil salt.
+<
+Caution should be used.
+<
+Plants are able to withstand the damaging effects of soil salt.
+<
+<
+The various textural classes have been arranged in a triangle.
+<
+<
+Soil water holding capacity is determined by field-testing or a Soil Conservation Service soil survey.
+<
+<
+The flowers may be congested or remote.
+Example: Sorghastrum nutans (Indiangrass).
+<
+<
+<
+<
+The stolon may root at the nodes and apex, developing new plantlets at those places.
+The term is sometimes also loosely applied to slender rhizomes near the surface of the ground.
+Example: strawberry.
+<
+Typical damage includes broken branches and split trunks.
+<
+<
+<
+<
+<
+Early or pioneer species become established on bare or disturbed sites and are eventually replaced by climax species.
+A climax plant community is self-perpetuating with no further development possible under the existing climatic or physiographic conditions.
+Example: Pinus banksiana (jack pine) is a pioneer tree that begins growing after a fire, Abies balsamea (balsam fir) is a climax tree.
+<
+Examples: Pinus banksiana (jack pine) and Populus tremuloides (quaking aspen).
+A plant to be succeeded by a late, or climax species.
+Examples: Pinus strobus (Eastern white pine) and Fraxinus pennsylvanica (green ash).
+Examples: Tilia americana (basswood) and Abies balsamea (balsam fir).
+<
+<
+<
+<
+It is the result of the detailed structure of the plant growth or of the total plant mass, influenced by the distance from which a plant is viewed.
+Up close, the texture of individual plant parts becomes more important than form.
+<
+Some plants are fine, medium, or coarse all year, while others are fine or medium in summer, yet coarse in winter.
+This definition considers a plantâ€™s overall appearance--how a plant is generally seen in the landscape.
+<
+Example: Gleditsia sp. (honeylocust).
+<
+Example: Fraxinus sp. (ash).
+<
+Example: Catalpa speciosa (catalpa).
+<
+<
+<
+It is more readily available to plants than other forms of rock phosphate.
+<
+<
+To sweat plants, create a warm (45Â° to 70Â°F), humid condition by covering them with moist mulch, then wrap the plants in plastic until the buds break open.
+<
+<
+For roadside plantings, the site is above lowlands or a ditch bottom and along the ditch's upper inslope or back slope.
+Hydric soils and wetland vegetation are present.
+<
+<
+Use caution if locating plants in areas of high pedestrian traffic or near playgrounds.
+The effects of toxins range from mild sickness and rashes to death.
+<
+<
+The forms do not identify a specific species.
+For example, both the Tilia cordata (little leaf linden) and Picea pungens (Colorado spruce) are pyramidal.
+<
+Example: Salix pentandra (laurel leaf willow) and Cornus alternifolia (pagoda dogwood).
+<
+Examples: Abies balsamea (balsam fir), Picea glauca densata (Black Hills spruce), and Picea pungens (Colorado spruce).
+<
+Examples: Pinus banksiana (jack pine) and Acer negundo (boxelder).
+<
+Examples: Ulmus americana (American elm), and Amelanchier canadensis (shadblow serviceberry).
+<
+Examples: Acer platanoides (Norway maple) and Catalpa speciosa (catalpa).
+<
+Examples: Ginkgo biloba (ginkgo), Tilia americana â€˜Redmondâ€™ (Redmond linden), and Pinus nigra (Austrian pine).
+<
+Examples: Malus â€˜Red Splendorâ€™ (Red Splendor crabapple) and Gleditsia triacanthos â€˜Impcoleâ€™ (imperial honeylocust).
+<
+Example: Betula pendula â€˜Darlecarlicaâ€™ (cutleaf weeping birch).
+<
+Examples: Carpinus caroliniana (blue beech) and Carya cordiformis (bitternut hickory).
+<
+Examples: Juniperus virginiana (Eastern red cedar), Populus x canescens â€˜Towerâ€™ (tower poplar).
+<
+<
+Used on public rights-of-way, in forests, on industrial lands, and grasslands.
+<
+<
+Winter temperatures affect a plantâ€™s ability to survive.
+Minnesotaâ€™s hardiness zones include 2, 3A, 3B, 4A, and 4B.
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+Examples: Fraxinus pennsylvanica (green ash) and Ginkgo biloba (gingko).
+<
+Examples: Betula paperifera (paper birch) and Tilia americana (American linden).
+<
+Examples: Acer saccharum (sugar maple) and Picea glauca densata (Black Hills spruce).
+<
+<
+A soil is said to be at the permanent wilting point if a plant wilts beyond recovery without added water
+<
+To design an effective windbreak, consult with the Soil and Water Conservation District or the Natural Resource Conservation Service.
+<
+permeability ranges from rapid to moderately slow.
+This group also includes excessively to somewhat poorly drained soils that are subject to flooding.
+There are two subgroups.
+They may be mildly alkaline.
+<
+These soils may be slightly saline (2-8 mmhos/cm electrical conductivity).
+<
+<
+They have been artificially drained.
+permeability is variable.
+A few of these soils may be subject to flooding not severe enough to adversely affect tree growth.
+There are four subgroups.
+<
+Some may be mildly alkaline.
+They are non- saline.
+<
+These soils may be slightly saline (2-8 mmhos/cm electrical conductivity).
+<
+<
+Included are soils with organic surfaces up to 16 inches thick.
+<
+Spring planting may be delayed because of wet conditions.
+Seedling mortality may be moderate in WSG-2K because the free carbonates in these soils can tie up minerals and limit their availability.
+<
+permeability is moderate or moderately slow.
+These soils lack free carbonates in the upper 20 inches and are non- saline.
+<
+<
+Some of these soils have a moderately high water table.
+There are three subgroups.
+<
+<
+<
+<
+Water erosion will be severe on slopes greater than 10% in WSG-4C, while it will be severe only on slopes greater than 15% in WSG-4L and WSG-4F.
+<
+These are predominantly fine sandy loam or sandy loam soils, but include soils with a sandy mantle over loamy material.
+<
+Some vegetative cover should be left during the early years of establishment on the soils with a sandy mantle over loamy materials; they are subject to soil blowing.
+The soils with a sandy mantle over loamy material will also have moderate seedling mortality because of some moisture stress in the seedling.
+<
+They have low to moderate water holding capacities.
+There are two subgroups.
+<
+<
+<
+<
+These are predominantly shallow soils with loamy sand or coarser textures and soils shallow (10â€� to 20â€�) to sand or gravel.
+<
+Water erosion will be severe on slopes greater than 15%.
+Some vegetative cover should be left during the early years of establishment because of the blowing soil.
+<
+<
+Water erosion will be severe on slopes greater than 15%.
+<
+<
+The species listed are those that would have some possibility of survival where barnyard drainage is or has taken place recently.
+<
+One or more characteristics such as soil depth, texture, wetness, available water capacity, slope, or salts severely limit tree or shrub planting, survival, or growth.
+Onsite investigations may reveal that tree and shrubs plantings can be accomplished with special treatment.
+<
+<
+<
+It is caused by great fluctuations in winter temperatures.
+<
+<
+<
+In the winter, texture is a product of the size, surface, spacing, grouping, and character of stems, and persisting seeds or leaves.
+Some plants are fine, medium, or coarse all year, while others are fine or medium in summer, yet coarse in winter.
+This definition considers a plantâ€™s overall appearance--how a plant is generally seen in the landscape.
+<
+Example: Salix nigra (black willow).
+<
+Example: Acer saccharum (sugar maple).
+<
+Example: Quercus macrocarpa (bur oak).
+<
+<
+Examples: branches, stems, or the trunk.
+<
+<
+Also called sapwood.
+<
+<

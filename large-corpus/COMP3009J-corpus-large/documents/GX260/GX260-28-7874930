@@ -1,0 +1,304 @@
+Modeling Background Linkage Disequilibrium in Human DNA Mary Sara McPeek Department of Statistics Department of Human Genetics University of Chicago Joint work with Maoxia Zheng (Department of Statistics) 1 What is background linkage disequilibrium? Linkage disequilibrium (LD) simply means that are not independent random variables.
+2
+Â©Â¨ Â§Â¦ Â¥ Â¤ Â£Â¢ Â¡
+#" $" #" !Â¨ Â¡ Â¨ Â¡
+Think of sampling DNA from the same region of the genome in many different individuals from a population.
+(Actually, each individual has 2 copies of each chromosome, so we get two DNA samples of a genomic region from each individual.
+Call each of these samples a haplotype.)
+Most sites (nucleotides) will be the same for all sampled haplotypes.
+The ones that differ for some haplotypes are polymorphic sites.
+A subset of polymorphic sites are chosen to be markers, i.e. sites at which data are collected.
+Markers we consider are binary, i.e. each haplotype can have one of two types (alleles) at a marker.
+For the moment say they are coded as 0 or 1.
+Sample an individual at random, and a haplotype at random from that individual.
+Let be the random variable representing the allele at marker .
+Importance of background LD
+Inference on population history (shared ancestry, migration, etc.)
+Mapping complex traits in humans, e.g. asthma, diabetes, hypertension Â­ When a genomic region has been implicated for a trait, can use LD to narrow the region (fine-mapping).
+Â­ Fine-mapping often involves assessing excess LD in affected individuals (cases), and comparing to background LD in controls.
+Â­ Background LD provides a null hypothesis against which to assess excess sharing among affecteds.
+Need to be able to model background LD.
+3
+Recombination and its role in LD
+Each individual has 2 copies of each chromosome, one maternally- and one paternally-inherited.
+Individual passes on one version of each chromosome to an offspring.
+Version passed on is a mixture of the two parental types, due to recombination.
+Recombination causes LD to break down quickly with distance along the chromosome.
+Can model segment breakpoints as a (non-homogeneous) Poisson process, which results in Markovian structure for LD.
+In addition to recombination, LD is also affected by mutation.
+4
+Empirical observations on background LD: recent developments
+Â­ Between blocks are regions over which there is lower LD (possibly recombination "hotspots" (Jeffries et al.
+'01)).
+NIH starting to embark on large-scale effort to identify the haplotype blocks and characterize high-resolution LD throughout the genome (HapMap project).
+Some controversy Â­ Do human haplotypes have a block structure? 5
+Â¦
+Â¦
+Recent reports suggest relatively simple form for highresolution LD (Daley et al.
+'01; Johnson et al.
+'01).
+Â­ Genome divided into disjoint blocks (roughly on the order of or kb each), with very strong LD within blocks -- each block has only a few (e.g. 2-7) commonly-occurring haplotypes.
+Long-term goals for this project 1.
+Rigorously assess goodness-of-fit of proposed models to available data.
+2.
+Hap Map: need high-throughput method for deciding appropriate models for LD throughout entire genome.
+3.
+Development of mathematical (actually statistical and computational) methods that make use of Hap Map information to map complex traits in humans.
+Currently working on #1, some initial progress on #3.
+Remainder of this talk concerns #1.
+6
+formalize models fit to data assess statistical significance of model misfit
+model selection parameter estimation
+Figure 2 from Daley et al.
+'01.
+7
+We represent this as a Markov model.
+Edges represent preferred transitions.
+1 R 2 R 3 R B 4 R B P G G G G 5 R B P G 6 R B P 7 R B P G 8 R B P G 9 R B P G G G 10 R B 11 R B
+Introduce hidden states.
+Also need to model the part of the data that does not fit neatly into a sequence of common haplotype blocks.
+1 R B P G O1,1 O1,2 2 R B P G O2,1 O2,2 3 R B P G O3,1 O3,2 4 R B P G 5 R B P G 6 R B P G 7 R B P G 8 R B P G 9 R B P G 10 R B P G 11 R B P G O11,1 O11,2
+... ... ...
+...
+O 1,j1
+... O2,j2
+... O3,j3
+... O11,j11
+Â¤Â£ Â¢Â¡
+: "other"; uncommon words 8
+Our model for the transition probabilities
+R,B,P,G
+, for any Â§ Â§ Â¤ 7 Â§
+Here is frequency of word , not depend on ). is frequency of word Â§ Â§ 65 @4 ( 
+R,B,P,G (does
+.
+9
+is "historical recombination frequency" between blocks and
+I
+R,B,P,G
+Â¢
+DC
+B
+Require HG FE
+for all , and .
+9
+%8
+Â§
+7
+Â¥ Â¤
+Â£Â¢ Â¡
+Model has property that if in the state space of , then for all in the state space of .
+Â¤ Â¢
+for all
+%8
+65 )4 32 10 )( '
+"
+, for
+,
+, for any
+#
+Â¨ Â¥
+Â§
+!
+! Â¤
+Â§
+Â£Â¢ Â¡
+Â§
+Â§
+Â§Â¤
+Â¢
+$Â¤
+Â¢
+Â¢ Â¨
+Â§Â¤
+Â§Â¤
+%$
+Â¦Â¥ Â¤
+Â¢
+Â¢
+Â¨
+Â¨
+(
+Â§
+Â§
+Â§
+P 9
+Â¢
+7
+Â¦Â¥ Â¤
+Â¦Â¥ Â¤
+Â¦Â¥ Â¤
+for Â£Â¢ Â¡
+R,B,P,G
+Â¢
+Â¤
+Â¤
+Â¡
+Â¡
+Â§
+Â§Â¤
+Â¢ Â©Â¨
+Â§
+Â¥Â¤
+Â¦Â¥ Â¤
+Â£Â¢ Â¡ Â£Â¢ Â¡ Â£Â¢ Â¡
+Â¢
+Â¤
+Â¥
+7
+B 9
+,
+Data description
+nucleotide: 1 observation: 1 C, 1 G
+Based on this observation, many pairs of words are compatible with the data: e.g. (CCAGC, GCGCT) or (CCACC, GCGGT) or ... ( possibilities).
+This type of missing information is called "unknown phase."
+Information at some nucleotides is missing for some individuals (very common in the data) Â¡
+Genotype data on mother-father-child trios, not unrelated individuals Â­ four haplotypes per family Â­ can reconstruct some of the phase information Â­ our Markov chain for a family is actually , where is as before.
+Â­ Missing information results in dependence among , conditional on the data 10
+Â§
+Â¤
+Â¢
+Â¥
+Â¢
+Â¤
+Â¢
+Â¤
+Â¡
+Â¢
+Â¡
+Â¤
+Â¨
+Â¢
+Â¢
+Â¤
+Â¨
+Â¢
+Â¢
+Â¤
+Â¨
+Â¢
+Â¤
+Â¨
+Â¢
+Â¤
+Â¨
+Â¢
+Â¤
+Â¨
+Â£Â¢ Â¡
+Â§
+Â§
+Â¤
+Â¥
+Â¢
+Genotype, not haplotype data Â­ E.g., consider block 5, and suppose an individual's 2 words in block 5 are R and G R CCAGC G GCGCT Actually observe the following in block 5: 2 2 C's 3 1 A, 1 G 4 1 C, 1 G 5 1 C, 1 T
+Likelihood calculation and maximization
+Consider independent samples for the hidden Markov chain .
+Observations on each chain consist of trio genotypes for each nucleotide (when available).
+Con, depends only on . ditional on Can use forward and backward algorithms on each of the 129 families separately to get the conditional expectations of the sufficient statistics (call this vector ) for the parameters, where the sufficient statistics are linear combinations of the indicators for each .
+Plug conditional expectations into complete data likelihood and maximize.
+Have analytical formulae for this maximization step.
+Â§ Â¤ Â¢ Â¤
+Iterate previous 2 steps.
+11
+Â¦Â¥ Â¤
+Â¤
+Â¡
+Â¢
+Â¨
+Â¢
+Â¨
+Â¢
+Â¤
+Â§Â¤
+Â¢
+Â¨
+Â¤
+Â£Â¢ Â¡
+Â¢
+Â¨
+Â¤
+Â£Â¢ Â¡
+Â¥
+Â¦
+Â§
+Â¢
+Â¤Â¢
+Â¤
+Â¢
+C Â¥Â¤ Â¤
+#Â¨ #" $" #" Â¨
+Â¢
+Â¥
+$Â¤
+Â¡
+Â¤
+Â£Â¢
+Â¨Â¨
+Â¥
+Â¢
+Â§
+9
+Â¢
+Â¤Â¡
+Â¦
+We use a hidden Markov method (HMM) for likelihood calculation and maximization over the parameter values 's, 's, 's).
+Difficulties:
+1.
+For a few families, the amount of information is very low, so the allowable state space is large in each block, and the algorithm is slow.
+2.
+Many parameters to estimate relative to the amount of data.
+Possible ways to address these include:
+1. Use Gibbs sampling (a form of Markov chain Monte Carlo) instead of HMM to approximate the needed computations.
+Involves iterative conditional sampling of conditional on current values of and , for .
+2.
+Put priors on the parameters and perform Bayesian inference.
+12
+C Â¤Â¤
+Â¤
+Â¥Â¢
+Â¥
+Â¤Â¢
+$Â¨ #" #" $" Â¨
+Â¥Â¤
+Â¢
+Â£Â¢
+#Â¨ #" $" " Â¨ Â§ 9 Â¨ Â¡ Â¤ Â¢ #Â¨ $" #" $" Â¨
+Â¤
+Â¢ Â¢
+Testing goodness of fit of the model
+1.
+Fit model estimate parameters (call estimated parameter vector ), calculate goodness-of-fit statistic .
+3.
+For th realization, estimate parameters , calculate goodness-of-fit statistic , .
+4.
+Find percentile rank of among is in upper ject (i.e. model does not fit) if ). distribution (e.g.
+Preliminary results
+Plans for assessing other data sets 13
+Â£
+Note that steps 2 and 3 involve can be done in parallel
+Â¨Â§ Â¦ " Â¦ Â¡Â¢ Â¥Â¤ Â¢ #Â¨ #" $" #" Â¨ Â¢ Â¡Â¢ Â£ #Â¨ #" $" #" Â¨ Â§ Â¢ Â¢
+independent runs
+Â¢
+Â§
+Â¦
+Â¡Â£
+2.
+Simulate rameters real data.
+realizations of data from model with pa.
+Keep same pattern of missing info as in
+Â¡
+Â¡Â¢
+Is the model adequate to describe background LD? Â­ Do the data look like a typical realization from the model, or do they show significant misfit?
+.
+Retail of
+Summary
+Initial goal of our project is to develop formal probability models that capture background LD.
+Models should be tractable and should fit well to data.
+We have developed hidden Markov models that try to capture the dependence structure in the data.
+Likelihood calculation, parameter estimation, and assessment of goodness-of-fit are computationally challenging.
+Current approach to the first two is maximum likelihood estimation by HMM.
+May also consider a Bayesian approach and Gibbs Sampling (Markov Chain Monte Carlo).
+Would like to be able to apply this approach to assess evidence for block structure of LD throughout the genome and to estimate relevant parameters.
+Our ultimate goal is to incorporate these models for background LD into mathematical (statistical and computational) methods for LD mapping of common diseases in humans.
+14

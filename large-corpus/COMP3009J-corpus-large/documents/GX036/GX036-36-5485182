@@ -1,0 +1,304 @@
+Speech Technology and Research Laboratory SRI International Menlo Park, CA 94025 DYNAMO: An Algorithm for Dynamic Acoustic Modeling FranÃ§oise Beaufays, Mitch Weintraub, Yochai Konig Abstract: This paper summarizes part of SRI's effort to improve acoustic modeling in the context of the Large Vocabulary Continuous Speech Recognition (LVCSR) project.
+It concentrates on two problems that are believed to contribute to the large error rates observed with LVCSR databases: (1) the lack of discriminative power of the speech models in the acoustic space, and (2) the discrepancy between the criterion used to train the models (typically frame-level maximum likelihood) and the task expected from the models (word-level recognition).
+We address the first issue by searching for features that help in narrowing the model distributions, and by proposing a neural-network-based architecture to combine these features.
+The neural networks (NNET) are used in association with a set of large Gaussian mixture models (GMM) whose mixture weights are dynamically estimated by the neural networks, for each frame of incoming data.
+We call the resulting algorithm DYNAMO, for dynamic acoustic modeling.
+To address the second problem, we propose two discriminative training criteria, both defined at the sentence level.
+We report preliminary results with the Spanish Callhome database.
+* Introduction * Baseline System and Databases * Recognition with Large Context-Independent Models * The DYNAMO Algorithm + Training of the DYNAMO Models + Initialization of the neural networks * Recognition Experiments with ML-trained Dynamo Models * Discriminative Training Criteria + Maximizing the posterior probability of the correct sentence + Minimizing the average number of errors in the N-best list * Recognition Experiments with Discriminatively Trained Dynamo Models * Conclusions * References * About this document ...
+Introduction
+Many factors contribute to the relatively low performance of state-of-the-art speech recognizers operating on spontaneous, telephone, speech.
+The diversity of speakers and speaking styles, the typically relaxed articulation, the multitude of pronunciation variants, the presence of extraneous noises, the superposition of more than one voice in some segments, and the distortion due to the communication channel are just a few.
+Whereas some of these factors can be efficiently dealt with by explicit modeling (e.g. vocal tract normalization (e.g. [AKC94]), pronunciation modeling (e.g. [Slo95, FW97]
+This however has the well-known drawback of resulting in broad distributions with overlaps that often cause recognition errors.
+In this context, identifying features that act as discriminants in the acoustic space would be useful to narrow the acoustic distributions.
+If such features can be found, the problem becomes how to use them, and how to ensure that sufficient data sharing is allowed for the model parameters to be reliably estimated.
+These are the main issues that motivated this work.
+In the past decade, contextual linguistic features have been widely used in conjunction with decision tree models, and have significantly improved recognition performance (e.g. [BdSG tex2html_wrap_inline795 91, YOW94]).
+Decision trees however make data sharing among different states difficult, and are not well suited to the use of features that are continuous in nature, as opposed to binary.
+For these reasons, we chose instead to base our models on neural networks.
+More recently, Ostendorf et al.
+[OBB tex2html_wrap_inline795 97] showed that a combination of acoustic and prosodic features could greatly help identifying speech segments that were erroneously recognized (32% predictability improvement for a 10-hour training subset of Switchboard).
+Similar results were reported by various researchers working on confidence measures for word recognition (e.g. [WBR tex2html_wrap_inline795 97]
+Presumably, some of these features, which include various measures of speaking rate, SNR, energy, fundamental frequency, stress pattern, and syllable position, could be directly used to disambiguate large acoustic distributions.
+In the field of speaker recognition, the use of handset detectors has dramatically decreased recognition error rates by sorting out carbon button from electret handsets [Rey96, HW97].
+The handset type could also be used as an input to the acoustic modeling algorithms.
+Another important issue in acoustic modeling is how to capture the dynamics of the speech signal.
+Much research has recently been devoted to relaxing the independence assumption imposed by most hidden Markov modeling approaches (HMM) and to modeling the correlation between successive frames of data, leading to the family of so-called segment models [ODK96].
+Without embarking in this level of complexity, and following a feature-based approach, we propose to include in the acoustic models time features similar to the time index proposed in [GN93, DASW94] and [KM94]
+These features don't model correlation but they do alleviate the independence assumption.
+Our goal here is to explore the usefulness of such knowledge sources as acoustic discriminants, and to propose an efficient and robust architecture to incorporate them in the acoustic models.
+Clearly, the richness of the acoustic space representation will have a strong influence on how far this approach can be pushed, but the success of the experiments cited above (handset classification, feature-based error prediction, etc.) indicate that the cepstrum-based representation that most systems use offers enough flexibility for the acoustic models to be significantly improved.
+As mentioned before, the architecture we propose relies on neural networks.
+An important issue related to this choice is the selection of a training criterion to optimize the weights of the networks.
+The desirable properties for this criterion are (1) to be discriminative, (2) to be closely related to the metric used to evaluate the performance of the recognizer (typically the word error rate (WER)), and (3) to be differentiable with respect to the weights of the neural networks.
+Not all the above issues will be discussed in the paper since this work is still in an early stage.
+Our first goals were to validate the architecture we propose and to investigate different discriminative training criteria.
+These two points will be addressed.
+Feature selection, however, will be the object of future work: for our preliminary experiments, we used a set generic knowledge sources including linguistic features and time indices.
+Baseline System and Databases
+The baseline system for this work is a speaker-independent continuous speech recognition system trained with 75 conversations of Callhome Spanish data and 80 conversations from Callfriend Spanish.
+It is based on continuous-density, genonic HMMs [DMM96], and uses a multipass recognition strategy [MBDW93]
+N-best lists are generated, and rescored with the original acoustic models, a trigram language model, and additional acoustic models such as decision-tree-based cross-word models (DT) or large context-independent phone GMMs (CI).
+Recognition with Large Context-Independent Models
+We conducted on the Spanish Callhome database a series of N-best list rescoring experiments with decision tree models and with large context-independent GMMs.
+The numbers of Gaussians in the GMMs were chosen to be fractions of the numbers of Gaussians used in the corresponding decision tree models.
+The smallest models had 16 times less Gaussians than the decision tree models, and the largest models had exactly the same size.
+Recognition experiments were performed with two sets of 200 sentences selected at random from the male evaluation test sets of 1995 and 1996.
+The results, reported in Table 1, show that, for this database, context-independent models perform as well as or slightly better than decision tree models, provided that the numbers of parameters are equal.
+table183 Table 1: N-best list rescoring with decision tree models and context-independent phone models of different sizes: WER in %.
+The DYNAMO Algorithm
+The architecture we propose is based on a hybrid system combining feedforward neural networks and context-independent phone models.
+Each phone is modeled with a large GMM whose mixture weights are dynamically estimated by a neural network (see Fig. 1), hence the name of the algorithm, DYNAMO.
+The means and variances of the GMMs are held constant.
+The inputs to the neural network are the knowledge sources discussed in the introduction.
+For each data frame, the knowledge sources for each phone are evaluated and inputted into the corresponding NNET.
+Each NNET outputs a set of mixture weights, and the likelihood of the observed data is computed from the corresponding phone GMM.
+figure201 Figure 1: A hybrid NNET-GMM model for dynamic acoustic modeling.
+Specifically, the likelihood of an observation, tex2html_wrap_inline811 , with respect to phone tex2html_wrap_inline813 is given by
+eqnarray444
+where tex2html_wrap_inline815 and tex2html_wrap_inline817 denote, respectively, the NNET and the GMM associated to phone tex2html_wrap_inline813 , tex2html_wrap_inline821 is the number of Gaussians in tex2html_wrap_inline817 , tex2html_wrap_inline825 and tex2html_wrap_inline827 are, respectively, the tex2html_wrap_inline829 mixture component and the tex2html_wrap_inline829 mixture weight in tex2html_wrap_inline817 , and tex2html_wrap_inline835 represents the vector of knowledge sources for phone tex2html_wrap_inline813 , at time k.
+Because the mixture weights for each phone must sum to one, the training of the neural networks is a constrained optimization problem.
+To simplify the training procedure, we chose to hard-wire this constraint in the architecture of the neural networks by using a ``softmax'' output layer [Bri90]:
+eqnarray446
+where tex2html_wrap_inline841 is the tex2html_wrap_inline829 output of the neural network, before the softmax layer.
+The Gaussians in each phone model can be interpreted as a set of basis functions.
+A multimodal probability density function is then estimated for each observation by taking a linear combination of the basis functions, the weights of which are computed dynamically by the neural network.
+The discriminative emphasis of certain portions of the acoustic space at each instant has the effect of narrowing the distributions around the acoustic areas where the data is expected to lie.
+This architecture thus outputs the likelihoods of the observations.
+This is in contrast with NNET-HMM hybrids trained for state classification [BM90], where the outputs are state posterior probabilities that need to be converted into likelihoods, and with approaches such as REMAP [BKM95, KBM96]
+Training of the DYNAMO Models
+The DYNAMO models are trained in two phases.
+First, the context-independent phone GMMs are trained with the expectation-maximization (EM) algorithm to maximize the log-likelihood of the training data.
+The means and variances of these models are retained; the mixture weights are discarded.
+Then, the adaptive parameters of the neural networks are trained with the stochastic steepest descent algorithm to optimize some criterion tex2html_wrap_inline845 .
+The neural network weights are thus updated according to
+eqnarray451
+where tex2html_wrap_inline847 denotes the set of neural network weights for phone tex2html_wrap_inline813 at iteration n, tex2html_wrap_inline853 is the instantaneous gradient of the optimization criterion tex2html_wrap_inline855 for phone tex2html_wrap_inline813 , and tex2html_wrap_inline859 is a constant that controls the learning rate.
+Note that the optimization criterion tex2html_wrap_inline855 does not need to be identical to the criterion used to train the GMMs (ML).
+Indeed, we argue in the next sections that discriminative training is better suited to this task.
+For now, however, we will assume for simplicity that tex2html_wrap_inline855 is the average log-likelihood of the data,
+eqnarray453
+where the sum is taken over all the observations tex2html_wrap_inline811 aligned to phone tex2html_wrap_inline813 .
+Applying the chain rule to the derivatives of Eq. 5, and taking Eq. 2 into account, we find
+eqnarray455
+where
+eqnarray457
+can be backpropagated through the neural network, as in the traditional backpropagation algorithm [RMT86].
+Intuitively, the backpropagation term, tex2html_wrap_inline869 , for Gaussian j is large in absolute value if the posterior probability of the Gaussian is very different from its prior probability tex2html_wrap_inline873 , with both probabilities being functions of the knowledge sources for the current data frame.
+Initialization of the neural networks
+To fasten the convergence of the neural networks and steer them away from uninteresting local minima, we initially set their weights so that the network outputs are equal to the mixture weights estimated with the EM algorithm.
+Recognition Experiments with ML-trained Dynamo Models
+We performed a set of rescoring experiments with ML-trained DYNAMO models, using linguistic questions and, in some experiments, time features.
+We chose the linguistic features to be identical to those selected by the decision trees in previous DT-rescoring experiments.
+The time features for a hypothesized phone aligned to T frames of data were the phone duration, T, and the relative time index t/T, where t = 0 ...
+T-1.
+Results are given in Table 2, where the baseline obtained by rescoring the N-best lists with the GMMs is given for comparison.
+These numbers show that the introduction of the ML-trained networks increased the overall WER.
+Further analysis of the results revealed that the likelihood of the test data had increased as a result of training but that the posterior probabilities of the correct models had decreased.
+This indicated that competing models scored higher than the correct model, which confirmed that discriminative training should be used instead.
+table243 Table 2: Rescoring experiments with ML-trained DYNAMO models: WER in %.
+Discriminative Training Criteria
+Discriminative training of speech models was first introduced by Bahl et al. under the form of Maximum Mutual Information (MMI) estimation [BBdSM86].
+In this framework, the speech models are trained to maximize the mutual information between the observation sequence tex2html_wrap_inline883 and the correct word sequence tex2html_wrap_inline885 :
+eqnarray467
+with
+eqnarray470
+where the sum in the denominator is taken over all possible word sequences, W.
+Practical implementations of Eq. 9 for continuous speech recognition include the estimation of the denominator with a phone loop model [Mer88], and its approximation by a sum over the hypotheses in an N-best list [Cho90]
+The first optimization criterion we propose is similar to the N-best list implementation of MMI, but differs in that we augment the N-best list with the correct word sequence, tex2html_wrap_inline885 .
+We then maximize the posterior probability of the correct word sequence,
+eqnarray477
+where tex2html_wrap_inline891 is the N-best list depth.
+The inclusion of the joint probability of the observation and the correct word sequence in the denominator makes the criterion depart from the original MMI but has a useful property in terms neural network training as we will show.
+Another family of discriminative criteria stems from the motivation of directly optimizing the metric used to evaluate the recognizer, i.e. the word error rate.
+Bahl et al. proposed the heuristic ``corrective training'' procedure in [BBdSM88].
+Katagiri et al. developed the Generalized Probabilistic Descent method that extends the idea of Bayes optimum classification by introducing smooth classification error functions, and generalizes this framework to the classification of patterns of variable lengths [KLJ91].
+The second criterion we propose consists in minimizing the average number of errors over the N-best list,
+eqnarray486
+where tex2html_wrap_inline895 denotes the number of errors in the tex2html_wrap_inline897 hypothesis, and tex2html_wrap_inline899 is the posterior probability of the tex2html_wrap_inline897 hypothesis in the (non-augmented) N-best list.
+Both criteria are optimized in a stochastic optimization framework, as we will discuss shortly.
+In both cases, the training procedure requires N-best lists for all the training data.
+This is typically quite costly but not infeasible, especially if the N-best list depth is limited to a small number of hypotheses (5 or 10).
+Maximizing the posterior probability of the correct sentence
+Let p(i) denote the joint probability of a word sequence i (reference or hypothesis) and of the corresponding acoustic sequence,
+eqnarray494
+where tex2html_wrap_inline907 and tex2html_wrap_inline909 are shorthands for the language model and acoustic model probabilities, tex2html_wrap_inline911 and tex2html_wrap_inline913 , respectively, and where tex2html_wrap_inline915 is the language model weight.
+With this notation, we can rewrite the posterior probability of the correct word sequence in Eq. 10 as
+eqnarray497
+Likewise,
+eqnarray499
+denotes the posterior probability of the tex2html_wrap_inline897 hypothesis in the augmented N-best list.
+(All posteriors and likelihoods are conditioned upon the set of acoustic models tex2html_wrap_inline919 for tex2html_wrap_inline921 .)
+The first training criterion can be expressed as
+eqnarray501
+where tex2html_wrap_inline923 is the number of sentences in the training set, and tex2html_wrap_inline925 represents the posterior probability of the correct transcription of sentence s.
+Adapting the neural network weights according to this criterion amounts to adjusting them after the presentation of each training sentence by an amount proportional to (stochastic gradient update)
+eqnarray503
+where we made use of the property
+eqnarray505
+Since the acoustic log-likelihoods can be expanded into sums over the observations, tex2html_wrap_inline811 , in the sentence, the above weight update formula modifies the neural network weights only for those frames where the reference and the hypothesis strings do not coincide.
+In that case, positive training is given to the correct model (c) and negative training is given to the erroneously hypothesized model (h).
+The log-likelihood gradients tex2html_wrap_inline931 are calculated according to Eqs. 6 and 7.
+This property results from the fact that the N-best list was augmented with the correct transcription (Eq. 10).
+Another desirable feature of this training criterion is that more training is given to hypotheses with high posterior probabilities (the multiplicative term, P(h)).
+A potential disadvantage is that the correct hypothesis is often not in the N-best list for databases with high error rates.
+Improving the posterior of the correct sentence may thus result in decreasing the probability of the best (although erroneous) hypothesis in the N-best list.
+Minimizing the average number of errors in the N-best list
+The second training criterion we propose is given by
+eqnarray507
+where the average number of errors tex2html_wrap_inline935 in a sentence was defined in Eq. 11.
+Note that here the posterior probability of a hypothesis is computed only with respect to the other hypotheses in the N-best list (i.e. without taking the reference into account):
+eqnarray510
+Intuitively, minimizing tex2html_wrap_inline935 ``redistributes'' the posterior probability mass to favor hypotheses with few errors and penalize hypotheses with more errors.
+Again, the weight update formula can be derived by taking the instantaneous gradient of tex2html_wrap_inline845 with respect to the weights of the neural networks.
+The weight update for each sentence is therefore proportional to
+eqnarray512
+The characteristics of this weight update formula are quite different from those of the previous criterion.
+Negative training is given to hypotheses that have a number of errors above average, and positive training is given to hypotheses with a number of errors below average.
+Of course, this average, tex2html_wrap_inline935 , evolves with the training of the models.
+If the learning process progresses correctly, tex2html_wrap_inline935 decreases with time, thereby progressively decreasing the number of hypotheses that receive positive training.
+In the limit, all the posteriors P(h) converge to zero except the one that corresponds to the hypothesis with the lowest number of errors, tex2html_wrap_inline949 , and tex2html_wrap_inline935 converges to tex2html_wrap_inline953 , thereby bringing the training process to an end.
+The main disadvantage of this criterion is that positive training is given to all the frames in the best hypothesis, including those associated with incorrectly recognized words.
+This criterion, however, is closer to the WER metric that we ultimately wish to optimize.
+Recognition Experiments with Discriminatively Trained Dynamo Models
+These experiments were limited to the training of small models (NNETs associated to GMMs tex2html_wrap_inline955 1/16), with linguistic and time features only.
+Fig.2 shows the results of a self-test experiment (i.e. the test data is identical to the training data) with the 627 male sentences of the Eval'96 test set of the Spanish Callhome database.
+The N-best list depth was limited to 10 hypotheses.
+figure311 Figure 2: Average number of errors as a function of the training epoch, for both training criteria.
+The N-best error rate for this set of sentences was 41.49%.
+The learning curves show that for the self-test experiment the ANER criterion shows more promise.
+This however is a cheating experiment, and the generalization properties of the max-posterior criterion may be superior.
+N-best rescoring of 200 randomly selected male sentences of the Eval'96 test set with the neural networks trained to minimize the ANER gave a significant WER improvement (see Table 3).
+table317 Table 3: N-best rescoring with ANER NNETs, self-test experiment: WER in %.
+A fair experiment was conducted with the max-posterior criterion.
+A set of neural networks was trained from linguistic and time features to output mixture weights for the same small phone models (GMMs tex2html_wrap_inline955 1/16).
+The training data consisted of all 15K male sentences in the training set, of which 10 % was held as a cross-validation set.
+The models were tested on the same subset of Eval'96 as in the previous experiments.
+The N-best list depth was limited to 5 hypotheses.
+The error rate is given in Table 4.
+The WER improvement is modest but since the phone GMMs in this experiments were small and hence not very detailed, little margin for improvement was left to the NNETs.
+table327 Table 4: N-best rescoring with log-posterior NNETs, fair experiment: WER in %.
+Conclusions
+We described an algorithm to incorporate new knowledge sources in a set of acoustic models, with the objective of dynamically increasing or decreasing the likelihoods of the different modes of the models, thereby narrowing their distributions.
+The algorithm makes use of feedforward neural networks to dynamically estimate the mixture weights of the speech models, given the knowledge sources for the current data frame.
+We argued that the neural networks need to be discriminatively trained, and we proposed two training criteria: maximizing the log-posterior probability of the correct transcription and minimizing the average number of errors in the N-best list.
+Preliminary experiments showed a modest but encouraging improvement in WER.
+We are currently experimenting with larger phone models and increased N-best list depths.
+References
+AKC94 A. Andreou, T. Kamm, and J. Cohen.
+Experiments in vocal tract normalization.
+In Proc. the CAIP Workshop: Frontiers in Speech Recognition II, 1994.
+BBdSM86 L. R. Bahl, P. F. Brown, P. V. de Souza, and R. L. Mercer.
+Maximum mutual information estimation of hidden markov model parameters for speech recognition.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, 1986.
+BBdSM88 L. R. Bahl, P. F. Brown, P. V. de Souza, and R. L. Mercer.
+A new algorithm for the estimation of hidden markov model parameters.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, New York, NY, April 1988.
+BdSG tex2html_wrap_inline795 91 L. R. Bahl, P. V. de Souza, P. S. Gopalakrishnan, D. Nahamoo, and M.A. Picheny.
+Context dependent modeling of phones in continuous speech using decision trees.
+In DARPA Proc.
+Speech and Natural Language Workshop, Pacific Grove, CA, February 1991.
+BKM95 H. Bourlard, Y.
+Konig, and N. Morgan.
+REMAP: Recursive Estimation and Maximization of A Posteriori Probabilities, applications to transition-based connectionist speech recognition.
+Technical Report TR-94-064, ICSI, Berkeley, CA, March 1995.
+BM90 H. Bourlard and N. Morgan.
+A continuous speech recognition system embedding MLP into HMM.
+In D. S. Touretzky, editor, Advances in Neural Information Processing Systems, volume 2.
+Morgan Kaufmann, 1990.
+Bri90 J. S. Bridle.
+Training stochastic model recognition algorithms as networks can lead to maximum mutual information estimation of parameters.
+In D. S. Touretzky, editor, Advances in Neural Information Processing Systems, volume 2.
+Morgan Kaufmann, 1990.
+Cho90 Y. L. Chow.
+Maximum mutual information estimation of HMM parameters for continuous speech recognition using the N-best algorithm.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, Albuquerque, NM, 1990.
+DASW94 L. Deng, M. Aksmanovic, D. Sun, and J. Wu.
+Speech recognition using hidden markov models with polynomial regression functions as nonstationary states.
+IEEE Trans.
+Speech, Audio Processing, 2(4), 1994.
+DMM96 V. V. Digalakis, P. Monaco, and H. Murveit.
+Genones: Generalized mixture tying in continuous hidden markov model-based speech recognizers.
+IEEE Trans.
+Speech, Audio Processing, 4(4), July 1996.
+FW97 M. Finke and A. Waibel.
+Speaking mode dependent pronunciation modeling in large vocabulary conversational speech recognition.
+In Proc.
+Eurospeech, Rhodes, Greece, September 1997.
+GN93 H. Gish and K. Ng.
+A segmental speech model with applications to word spotting.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, volume II, 1993.
+HW97 L. P. Heck and M. Weintraub.
+Handset-dependent background models for robust text-independent speaker recognition.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, Munich, Germany, April 1997.
+KBM96 Y.
+Konig, H. Bourlard, and N. Morgan.
+REMAP: Experiments with speech recognition.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, Atlanta, GA, May 1996.
+KLJ91 S. Katagiri, C.-H. Lee, and B.-H. Juang.
+New discriminative training algorithms based on the generalized probabilistic descent method.
+In Proc.
+Workshop on Neural Networks for Signal Processing, 1991.
+KM94 Y.
+Konig and N. Morgan.
+Modeling dynamics in connectionist speech recognition - the time index model.
+In Proc.
+Intl.
+Conf. on Speech and Language Processing, 1994.
+MBDW93 H. Murveit, J. Butzberger, V. V. Digalakis, and M. Weintraub.
+Large-vocabulary dictation using SRI's DECIPHER(TM) speech recognition system: Progressive-search techniques.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, pages II-319:II-322, April 1993.
+Mer88 B. Merialdo.
+Phonetic recgnition using hidden markov models and maximum mutual information training.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, New York, NY, April 1988.
+OBB tex2html_wrap_inline795 97 M. Ostendorf, W. Byrne, M. Bacchiani, M. Finke, A. Gunawardana, K. Ross, S. Roweis, E. Shriberg, D. Talkin, A. Waibel, B. Wheatley, and T. Zeppenfeld.
+Modeling systematic variations in pronunciation via a language-dependent hidden speaking mode.
+Technical Report LVCSR Summer Research Workshop, Johns Hopkins U., 1997.
+ODK96 M. Ostendorf, V. V. Digalakis, and O. A. Kimball.
+From HMM's to segment models: A unified view of stochastic modeling for speech recognition.
+IEEE Trans.
+Speech, Audio Processing, 4(5), 1996.
+Rey96 D.A. Reynolds.
+Mit lincoln laboratory site presentation.
+In NIST Speaker Recognition Workshop, Linthicum Heights, MD, March 1996.
+RMT86 D.E. Rumelhart, J.L. McClelland, and The PDP Group, editors.
+Parallel Distributed Processing, volume 1.
+The MIT Press, Cambridge, MA, 1986.
+Slo95 T. Sloboba.
+Dictionary learning: Performance through consistency.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, 1995.
+WBR tex2html_wrap_inline795 97 M. Weintraub, F. Beaufays, Z. Rivlin, Y.
+Konig, and A. Stolcke.
+Neural - network based measures of confidence for word recognition.
+In Proc.
+IEEE Intl.
+Conf. on Acoustics, Speech, and Signal Processing, Munich, Germany, April 1997.
+YOW94 S. J. Young, J. J. Odell, and P. C. Woodland.
+Tree-based state tying for high accuracy acoustic modelling.
+In Proc.
+Human Language Technology Workshop, pages 307-312, Plainsboro, NJ, March 1994.
+About this document ...
+DYNAMO: An Algorithm for Dynamic Acoustic Modeling
+This document was generated using the LaTeX2HTML translator Version 96.1 (Feb 5, 1996) Copyright Â© 1993, 1994, 1995, 1996, Nikos Drakos, Computer Based Learning Unit, University of Leeds.
+The command line arguments were: latex2html paper.tex.
+The translation was initiated by Francoise Beaufays de Alfaro on Mon Mar 30 22:32:10 PST 1998 __________________________________________________________________
+Francoise Beaufays de Alfaro Mon Mar 30 22:32:10 PST 1998

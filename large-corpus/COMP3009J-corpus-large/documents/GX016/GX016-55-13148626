@@ -1,0 +1,55 @@
+SED navigation bar Dataplot Vol 1 Auxillary Chapter __________________________________________________________________ RANDOM NUMBER GENERATOR Name: RANDOM NUMBER GENERATOR (SET) Type: Set Subcommand Purpose: Specify which uniform random number generator to use.
+Description: Random numbers for all supported probability distributions are ultimately based on an underlying uniform (0,1) distribution.
+Much research has been devoted to developing good uniform random number generators.
+Dataplot now supports a number of alternative uniform random number generators.
+Note that the default generator (i.e., the one that has been in Dataplot for many years) is based on Fibonacci sequence as defined by Marsagalia.
+Note that this is equivalent to the generator UNI of Jim Blue, David Kahaner, and George Marsagalia that is in the NIST CMLIB library.
+Support is now provided for a linear congruential generator written by Fullerton (NIST CMLIB routine RUNIF) and a multiplicative congruential generator (ACM algorithm 599).
+In addition, two generators based on the generalized feedback shift register (GFSR) methods are supported.
+The first is based on the original algorithm of Lewis and Payne (Journal of the ACM, Volume 20, pp. 456-468).
+The second is an alternative implementation given by Fushimi and Tezuka (Journal of the ACM, Volume 26, pp. 516-523).
+Both are based on codes given by Monohan (2000) in "Numerical Methods of Statistics".
+Support is also provided for the Applied Statistics algorithm 183.
+AS183 is based on the fractional part of the sum of 3 multiplicative congruential generators.
+It requires 3 integers be specified initially.
+Dataplot uses the multiplicative congruenetial generator (which depends on the SEED command) to randomly generate these 3 integers.
+These 6 generators are used to generate uniform random numbers.
+Random numbers for other distributions are then derived from these uniform random numbers.
+Note that you can use the SEED command to change the random numbers generated as well.
+The SEED does not apply to the two GFSR generators (these each have their own initialization routines).
+Syntax: SET RANDOM NUMBER GENERATOR 
+FIBONACCI LINEAR CONGRUENTIAL MULTIPLICATIVE CONGRUENTIAL GFSR FUSHIMI AS183 GENZ LUXURY FIBONACCI CONGRUENTIAL MERSENNE TWISTER
+Examples: SET RANDOM NUMBER GENERATOR FIBONACCI SET RANDOM NUMBER GENERATOR LINEAR CONGRUENTIAL SET RANDOM NUMBER GENERATOR MULTIPLICATIVE CONGRUENTIAL SET RANDOM NUMBER GENERATOR GFSR SET RANDOM NUMBER GENERATOR FUSHIMI SET RANDOM NUMBER GENERATOR AS183
+Note: The following additional random number generators have been added:
+1.
+GENZ - Alan Genz implementation of Pierre L'Ecuyer generator described in "Combined Multiple Recursive Random Number Generators" (see Reference section below).
+2.
+LUXURY - based on the Marsagalia and Zaman borrow-and-carry generator.
+Uses a code written by F. James and incorporating improvements by M. Luscher.
+3.
+FIBONNACI CONGRUENTIAL - combines the Fibonnaci generator with a congruential generator.
+Method from Kahander and Marsagalia in "Numerical Methods and Software".
+4.
+MERSENNE TWISTER - original C algorithm coded by Takuji Nishimura.
+Dataplot uses the Fortran 90 translation provided by Hiroshi Takano.
+This generator may not work as intended on versions of Dataplot compiled with Fortran 77 compilers.
+It uses some intrinsic functions that are part of the Fortran 90 standard, but not the Fortran 77 standard.
+Some Fortran 77 compilers may support these functions, but this support is optional.
+Default: FIBONACCI
+Synonyms: None
+Related Commands:
+RANDOM NUMBERS = Generate random numbers for 60+ distributions.
+PROBABILITY PLOT = Generate a probability plot.
+HISTOGRAM = Generate a histogram.
+RUNS TEST = Perform a runs test.
+Reference: "Applied Statistics Algorithms", P. Griffiths and I. D. Hill, Ellis Horwood Limited, 1985.
+"Numerical Analysis for Statistics", John Monohan, Oxford University Press, 2000.
+"Combined Multiple Recursive Random Number Generators", Pierre L'Ecuyer, Operations Research 44, 1996, pp. 816-822.
+M. Luscher, Computer Physics Communications, 79 (1994) 100.
+F. James, Computer Physics Communications, 79 (1994) 111.
+"Numerical Methods and Software", David Kahaner, Cleve Moler, and Stephen Nash, Prentice-Hall, 1989.
+Applications: Random number generation
+Implementation Date: 2002/5 2003/5: Added support for the the Alan Genz and Luxury random number generators 2003/10: Added support for the the Fibonacci-Congruential and Mersenne Twister random number generators
+Program: title case asis case asis . multiplot corner coordinates 0 0 100 100 multiplot scale factor 2 multiplot 2 2 . let y = uniform random numbers for i = 1 1 1000 title Dataplot (Fibonacci) Random Numbers uniform prob plot y move 50 8 just center text PPCC = ^ppcc . set random number generator linear congruential let y2 = uniform random numbers for i = 1 1 1000 title Linear Congruential Random Numbers uniform prob plot y2 move 50 8 just center text PPCC = ^ppcc . set random number generator multiplicative congruential let y3 = uniform random numbers for i = 1 1 1000 title Multiplicative Congruential Random Numbers uniform prob plot y3 move 50 8 just center text PPCC = ^ppcc . end of multiplot
+plot generated by sample program
+Date created: 5/31/2002 Last updated: 4/4/2003 Please email comments on this WWW page to alan.heckert@nist.gov.

@@ -1,0 +1,24 @@
+* Previous Table of Contents Next * Close Window _________________________________________________________________ NAEP Data Tool Tutorial Standard Graphic Presentations Flash version The NAEP Data Tool allows you to display data in both tabular and graphic form.
+The graphics options use scalable vector graphics technology (SVG) and require the use of an SVG viewer such as the Adobe SVG Viewer 3.0 (or above).
+The graphics options are currently available for the following types of data: * Single-year bar graphs for a particular state/jurisdiction; * Multiple-year line chart for a particular state/jurisdiction; * Single-year Cross-State comparisons (comparing one or more states to each other or the nation for a particular variable); * Multiple-year cross-state comparisons (comparing a variable between two or more states across years).
+To see either the single-year bar graphs or the multiple-year line chart, click on "Show Graphic" in the right-hand side above the table.
+screen shot of show graphics link
+Once you have selected the "Show Graphic" option, you will see a "Graphics Options" box at the top of your screen that will allow you to dynamically generate new graphics based on the following: * Data Type (Average Scale Score or Row Percentage) * Year (if applicable) * Subgroup (if applicable) * Display (color or grayscale).
+[Note: you can add/delete years or subgroups by selecting the "User Options" pull-down menu.] screen shot of graphic options
+To generate an SVG dynamic map of the United States that compares results of selected states/jurisdictions, you must perform the following steps: 1.
+Generate a table of data with desired variables.
+2.
+Add the states/jurisdictions you are interested in comparing by selecting the "User Options" pull-down menu.
+3.
+Once your data table has been generated, run a significance test using "Check Differences" within the "User Options" pull-down menu.
+4.
+Click on the "Show Graphic" option after your significance test results have been computed.
+This will give you your SVG map of the United States.
+Click on any of the pre-selected states/jurisdictions to make it the "focal" state/jurisdiction.
+Printing/Saving the SVG images
+You can easily cut and paste any of the SVG images into software packages such as Microsoft Word, Powerpoint or Excel.
+To do this, right click on the SVG image and select "Copy SVG."
+Then go to your desired application and select "Edit/Paste Special" and select "Bitmap."
+_________________________________________________________________
+* Previous Table of Contents Next *
+Close Window

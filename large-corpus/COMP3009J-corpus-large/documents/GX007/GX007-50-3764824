@@ -1,0 +1,175 @@
+SED navigation bar Using DATAPLOT with the Web Web Applications Increasingly Important Incorporating applications into the web is becoming increasingly important.
+There are several approaches to doing this, which will be discussed in the context of Dataplot.
+The approaches discussed are: 1.
+Generating Dataplot output for web applications 2.
+Integration with the NIST/SEMATECH e-Handbook of Statistical Methods 3.
+Using Dataplot with CGI scripts 4.
+Robert Lipman's Web Dataplot software 5.
+Downloading files for using Dataplot with the web
+Dataplot is not currently available as a browser plug-in and there are no current plans to do this.
+1.
+Generating Dataplot Output for Web Applications Output Can Be Either Text or Graphics The most basic use of Dataplot in web applications is the insertion of Dataplot output into web pages.
+The Dataplot output can consist of * Dataplot text output * Dataplot graphics
+Graphics Output The most common file formats for graphics in web browsers are: 1.
+GIF (graphics interchange format) 2.
+JPEG 3.
+PNG (Portable Network Graphics) 4.
+SVG (Scalable Vector Graphics)
+The GIF and JPEG formats are almost universally supported in web browsers.
+However, the GIF format uses a patented compression algorithm that requires the payment of a royalty by programs that generate GIF output.
+For this reason, free programs, such as Dataplot, will not support GIF directly.
+JPEG is an image format that was developed for video applications and is able to generate highly detailed graphics with small size through the use of "lossy" compression algorithms.
+Although JPEG is most useful for photographic type graphics, it can be used for statistical graphics as well.
+The PNG format was developed in response to frustration with the royalty issues of the GIF format.
+PNG was adopted by PERL, a popular utility for web development, several years ago and many other popular packages are now supporting PNG graphics.
+For this reason, most of the popular browsers now support PNG plug-ins.
+However, support for PNG in browsers is not quite as universl as GIF and JPEG.
+SVG is an XML based vector format.
+As XML gains acceptance in web development, we anticipate the increasing importance of SVG graphics for web pages.
+Given the available options for incorporating graphics into web pages, Dataplot provides the following options.
+1.
+On Unix, Dataplot can generate PNG and JPEG format graphics directly.
+The JPEG driver is not available on all Unix implementations.
+Also, these drivers use an external library (specifically, the GD library), so if your local implementation was built from the source (rather than being a downloaded executable), then check with your local implementor to see if the PNG/JPEG driver is available.
+We plan to port this driver to the Windows version of Dataplot.
+More information for the PNG/JPEG driver is available in the online Reference Manual.
+2.
+Dataplot supports a SVG driver on all platforms.
+More information for the SVG driver is available in the online Reference Manual.
+3.
+Another alternative is to generate a Postscript graph and then use one of the free or commercial image conversion programs to convert the Postscript graphic to GIF or JPEG.
+One advantage of this approach is that you can utilize the high quality typeset Postscript fonts.
+The disadvantage is that you have to go through an extra step in order to generate a web compatible format.
+Text Output The simplest way to add Dataplot text output to a web page is to do the following: 1. Use the CAPTURE command to an ASCII file.
+2.
+Within a web page, enclose the output in the CAPTURE file between a 
+The 8/2002 version of Dataplot added an option to generate Dataplot output in HTML format: CAPTURE HTML 
+The HTML option specifies that the CAPTURE output should be in HTML format.
+Note that most commands simply use a 
+Curently, the exceptions are the TABULATE and CROSS TABULATE commands which write the output using HTML table syntax.
+Note that an additional feature of the HTML option is that if DEVICE 2 is set to either PNG/JPEG or SVG, the graphics will be incorporated into the web page using the IMG tag.
+You can use the WEB command to view the generated HTML output from within the Dataplot session.
+For example, SKIP 25 READ RIPKEN.DAT Y X1 X2 ECHO ON CAPTURE HTML C:\TABLE.HTM TABULATE MEAN Y X1 CROSS TABULATE MEAN Y X1 X2 END OF CAPTURE WEB file://C:\TABLE.HTM
+In addition, if DEVICE 2 is set to PNG, JPEG, or SVG, Dataplot will incorporate the graphics into the web page using the IMG tag.
+For example, device 1 x11 . skip 25 read berger1.dat y x . line blank solid character x blank echo on capture html fit.htm set ipl1na data.png device 2 gd png title original data plot y x device 2 close fit y x set ipl1na pred.png device 2 gd png title predicted line plot y pred vs x device 2 close end of capture . web file:///home/heckert/dataplot/solaris/fit.htm
+NOTE: The following enhancements were made to the CAPTURE HTML command in the 1/2003 version of Dataplot.
+1.
+If DEVICE 2 is set to Postscript, Dataplot will automatically invoke Ghostscript to convert the Postscript file to JPEG format.
+It will also add the appropriate 
+This capability is supported under Windows and Unix.
+Enter HELP CAPTURE for details.
+2.
+The SET POSTSCRIPT CONVERT command can be used to specify one of several devices.
+When a Postscript device is closed, Ghostscript will automatically be invoked to convert the Postscript output to the specified format.
+PDF (Portable Document Format) is one of the supported devices.
+For PDF, the CAPTURE HTML will automatically put a link in the HTML page to the PDF file.
+PDF may be preferable to JPEG if you need to preserve higher image quality.
+Enter HELP POSTSCRIPT CONVERT for details.
+3.
+The SET HTML HEADER FILE and SET HTML FOOTER FILE comamnds can be used to specify files that will be used for the header and footer, respectively, of the generated HTML file.
+Enter HELP HTML HEADER FILE for details.
+2.
+Integration of Dataplot with the NIST/SEMATECH Engineering Statistics Handbook Engineering Statistics Handbook Dataplot has been integrated with the NIST/SEMATECH Engineering Statistics Handbook.
+The Handbook is a web based statistics handbook that has a number of case studies which can be run using Dataplot directly from the web pages.
+Steps in Executing Dataplot Macro When Invoked from Web When a Dataplot macro is invoked from the case study web page, the following steps occur.
+* A check is made to see if Dataplot is currently running.
+* If a Dataplot session is currently running, the macro is executed in the currently open session.
+The check for a currently open Dataplot is accomplished by the Tcl/Tk scripts that implement the Dataplot graphical interface.
+* If no Dataplot session is currently running, the Dataplot software is invoked and then the macro is executed.
+* In either case, the Dataplot session remains remains open (unless the macro explicitly closes Dataplot).
+This approach makes it possible to execute macros successively.
+This is quite useful in the context of the Handbook case studies.
+That is, the user can step through the case study in small, easily understood steps.
+Advantages and Disadvantages of Approach The advantages of this method are: * Dataplot and the web page are in separate windows.
+This can be an advantage if you want the user to be able to view explanatory text while also viewing the Dataplot output.
+* You can implement fairly involved macros in small, manageable steps.
+* If the Dataplot session is left open, the user can execute Dataplot commands independently of the web page.
+* Dataplot is run on the users local platform, not the web server.
+This can help minimize the load on the server.
+The primary disadvantage of this method is that Dataplot needs to be installed on the user's local platform.
+Two Basic Steps There are two basic steps in implementing this method.
+* A link to the macro needs to be incorporated in the web page.
+You can view the HTML source for the Dataplot case studies in the Handbook.
+For example, check the HTML source for one of the eda examples.
+The Dataplot macros are contained in files with a ".dp" extension.
+These macro files are stored with the other HTML files on the server.
+Any needed data files can be added to the data sets directory where the built-in Dataplot data sets are stored.
+* Both the web server and your browser need to be configured to know how to handle a ".dp" file.
+The link contains instructions for how to do this for the most common browsers and the most common platforms.
+Approach Useful for Tutorial Applications If you only need to run a single macro, you can simplify the above steps to run the command line version of Dataplot as well.
+In general, this approach is useful for tutorial type web pages.
+That is, you want to teach your audience how to perform a particular analysis using Dataplot.
+3.
+Using Dataplot with CGI Scripts Basic Approach You can install Dataplot on a server computer.
+An HTML form page will typically prompt the user for certain inputs.
+Once the form is submitted, a CGI script will run Dataplot on the server computer and then return either a graph or Dataplot output to the web page.
+CGI scripts are most commonly written in Perl, although they can also be written in C or other scripting or programming languages.
+We do not document the details of implementing this since there are many books on writing CGI scripts available.
+This approach has been used by at least one project at NIST for a production system.
+The CGI approach can be used with many different programs.
+There are no particular issues that you need to be aware of when using Dataplot this way.
+The fact that you can write command driven macros in ASCII files means that Dataplot is well suited for this approach.
+Advantages and Disadvantages of the CGI Approach The advantage of this method is: * The software does not need to be installed on the user's local system.
+The disadvantage of this method is: * For a heavily used site, running a number of Dataplot applications simultaneously can put a heavy load on the server.
+This approach is useful if you simply want to use Dataplot as a computation engine or to generate a specific type of plot dynamically.
+In this case, the end user may or may not care whether or not Dataplot was used for the computation.
+Active Server Pages (ASP) In a "web based computing" project in the NIST Statistical Engineering Division, we have used Active Server Pages to invoke Dataplot.
+This is a similar idea to CGI scripts.
+Basically, you have a web form that accepts certain parameters.
+Then ASP and VBSCRIPT are used to generate a Dataplot macro on the fly and Dataplot is invoked to run the macro and return the results to a web page.
+If you would like more information about this approach, contact Alan Heckert.
+4.
+Robert Lipman's Web Dataplot Web Dataplot can be Adapted for Local Applications Robert Lipman, currently of the NIST Building and Fire Research Laboratory, has written "Web Dataplot".
+This is a CGI script written in Tcl/CGI.
+We used to provide this to run a live Dataplot session from these web pages.
+We have removed it from the public web pages for firewall considerations.
+Internal users can still run web Dataplot.
+External users who would like to adapt this for use on their own sites should contact alan.heckert@nist.gov for more information.
+One possible application of the web Dataplot software would be as an online "problem solver".
+That is, if your site has a specific set of problems with a standard solution, you could modify the web Dataplot scripts to create forms and run macros that solve these particular problems.
+5.
+Downloading Files for Using Dataplot with the Web Downloadable Scripts Provide a Framework, Not A Finished Solution If you are interested in using Dataplot in a web application, we have included links to appropriate software to help.
+Note that you will need to modify the source provided to fit your own application.
+These sources are provided as a basic framework for developing your own web applications using Dataplot, not as ready to use scripts.
+This source is provided "asis" and we do not offer any additional support for them.
+If you want to adapt these to your own applications, you should have some basic web development experience (you should not need a lot, but should have a handle on the basic concepts).
+1.
+If you are interested in an approach similar to the NIST/SEMATECH Engineering Statistics Handbook, then you don't really need any additional software other than the user installing Dataplot on their local machine.
+The discussion above provided links to pages that discuss how to configure your browser on the most popular platforms (other platforms should be similar) and a link to a page that discusses configuring your web server for Dataplot macros.
+2.
+Probably the most common approach will be to write a CGI script.
+You can download a C program called "step1.c" and the corresponding HTML Form page called "step1.html" that initiates the call.
+The step1.c program also uses util1.c.
+These sources were provided by Dale Bentz of the NIST Building and Fire Research Laboratory.
+They are from a web project that uses Dataplot as an underlying computational engine.
+In this case, the end users do not know or care that the computations and graphs are being generated by Dataplot.
+You compile "step1.c" and "util1.c" to create an executable called "step1" that is stored in the appropriate "cgi-bin" directory.
+You will need to make changes to the C code and HTML form to adapt it to your specific application, but these sources provide the basic framework.
+Note that "step1.c" makes a call to the "convert" program.
+The convert program is a program that converts Dataplot graphs in Postscript format to "gif" format for web viewing.
+You will need to replace convert with whatever conversion utility you have available on your site (or have Dataplot generate PNG format graphs directly).
+The C program could also be easily replaced by a Perl script.
+Although I intend to provide an example of this, I haven't had time to put this together yet.
+NOTE 3/8/2001: I now have a Perl based example available for downloading.
+This is just a simple example that accepts some data from the user and generates a simple run sequence plot and returns a PNG file to the browser.
+You will need to modify it for your own applications, but it shows the basic steps involved.
+Dataplot has added support for PNG and JPEG graphics.
+This is based on the GD library of Mark Bouttel (this is the library used by Perl and numerous other software programs for PNG/JPEG graphics).
+I will be updating the Unix executables on the ftp site the week of March 13, 2001.
+Support for PNG and GIF on the PC executables will be added in a few weeks (hopefully).
+For Dataplot executables that do not support the PNG or JPEG graphics, you will need to add an extra step to convert Dataplot Postscript output to either GIF, JPEG, or PNG.
+The example includes a HTML form page, a Perl script to parse the form arguments, run Dataplot, and return a PNG format graph, and the sample Dataplot macro.
+3.
+Bob Lipman's web dataplot code requires the following: + You need Tcl/Tk and Expect (these are typically already downloaded and installed if you are running the GUI version of Dataplot).
++ In addition, it requires the Tcl/CGI library from Don Libes (the author of Expect).
++ A tar file of cgi scripts is available.
+This file should be untarred in your "cgi-bin" directory.
+The main script is "wdpi.cgi".
+The file "wdp.cgi" is the HTML file that initiates "wdpi.cgi".
+This can be installed as part of your web pages.
+This approach provides a bit slicker approach than the C program or Perl script provided above.
+The downside is that it requires more web knowledge and additional software installation.
+I would generally recommend starting with the C program (or Perl script).
+Then if you desire a more sophisticated approach you can try the web dataplot scripts.
+Date created: 6/5/2001 Last updated: 9/10/2002 Please email comments on this WWW page to sedwww@cam.nist.gov.
+[ Dataplot ]
