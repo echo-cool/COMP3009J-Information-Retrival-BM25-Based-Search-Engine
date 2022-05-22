@@ -460,21 +460,22 @@ def MAP(result: list, rel: dict):
 def b_pref(result: list, rel: dict):
     """
     Calculate the b-pref of the result.
+    This function is different from the other function in small corpus.
     :param result:
     :param rel:
     :return:
     """
     score = 0
-    r_count = len(rel)
+    r_count = 0
     n_count = 0
-    # for doc_id in rel:
-    #     if rel[doc_id] != 0:
-    #         r_count += 1
+    for doc_id in rel:
+        if rel[doc_id] != 0:
+            r_count += 1
     for doc_id in result:
-        # if doc_id in rel and not rel[doc_id]:
-        #     n_count += 1
-        if doc_id not in rel:
+        if doc_id in rel and not rel[doc_id]:
             n_count += 1
+        # if doc_id not in rel:
+        #     n_count += 1
         if doc_id in rel and rel[doc_id]:
             tmp_score = (1 - (n_count / r_count))
             if tmp_score < 0:
