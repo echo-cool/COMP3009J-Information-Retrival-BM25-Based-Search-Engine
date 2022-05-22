@@ -40,6 +40,8 @@ def get_files(path):
     files = []
     dirs = os.listdir(path)
     for item in dirs:
+        if item == ".DS_Store":
+            continue
         for file in os.listdir(path + item):
             files.append((path + item + "/" + file, file))  # build file path and file name, and add it to the list
     return files
