@@ -509,10 +509,10 @@ def NDCG(result: list, rel: dict):
         else:
             IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
     max_index = min(len(DCG), len(IDCG)) - 1
-    if max_index < 0:
-        max_index = 0
-    if max_index > 9:
-        max_index = 9
+    # if max_index < 0:
+    #     max_index = 0
+    # if max_index > 9:
+    #     max_index = 9
     return DCG[max_index] / IDCG[max_index]
 
 
