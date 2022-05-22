@@ -413,7 +413,8 @@ def Pat10(result: list, rel: dict):
     for doc_id in result[:10]:
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
-    return relevant_docs_count / 10
+    number_of_documents = min(len(result), 10)
+    return relevant_docs_count / number_of_documents
 
 
 def R_precision(result: list, rel: dict):
