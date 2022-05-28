@@ -3,7 +3,7 @@
 ## Personal Information
 
 | Name                 | Wang Yuyang |
-| -------------------- | ----------- |
+|----------------------|-------------|
 | UCD Student Number:  | 19206226    |
 | BJUT Student Number: | 19372316    |
 

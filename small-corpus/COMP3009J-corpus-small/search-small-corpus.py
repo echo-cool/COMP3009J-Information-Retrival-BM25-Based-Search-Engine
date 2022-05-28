@@ -1,9 +1,7 @@
-# File paths for the files to be processed
 import json
 import math
 import os
 import re
-# import pickle
 import time
 
 from files import porter
@@ -29,6 +27,8 @@ SAMPLE_STANDARD_QUERY_PATH = CORPUS_PATH + "files/queries.txt"  # Path to the sa
 RELEVANCE_JUDGEMENTS_PATH = CORPUS_PATH + "files/qrels.txt"  # Path to the relevance judgements file
 k = 1  # BM25 parameter k
 b = 0.75  # BM25 parameter b
+
+
 def get_files(path):
     """
     Get all the files in the path, for small corpus.
@@ -41,7 +41,6 @@ def get_files(path):
             continue
         files.append((path + "/" + file, file))  # build file path and file name, and add it to the list
     return files
-
 
 
 def clean_terms(terms_data: str) -> list:
@@ -64,6 +63,7 @@ def clean_terms(terms_data: str) -> list:
 class CachedStemmer(object):
     """
     A class to cache the stemmed terms.
+    Also provide functions to get the stemmed terms.
     """
 
     def __init__(self):
@@ -77,6 +77,10 @@ class CachedStemmer(object):
 
 
 class StopWordFilter(object):
+    """
+    A class to filter the stop words.
+    """
+
     def __init__(self, path):
         stopwords = {}  # Initialize the stopwords
         with open(path, 'r') as f:
@@ -116,6 +120,8 @@ stopwords_filter = StopWordFilter(STOPWORDS_PATH)  # Initialize the stopword fil
 def dump_index(BM25_Score, enableCompression=False):
     """
     Dumps the index to index.json.
+    By default, the index is not compressed, since compression will delay the loading time.
+    Compression will reduce the index file size by about 35%.
     :param BM25_Score:
     :param enableCompression:
     :return:
@@ -217,11 +223,8 @@ def build_index(path: str) -> dict:
     document_lengths_data = {}  # document_id -> length, the length of the document
     tf_data = {}  # document_id -> term -> frequency, the frequency of the term in the document
     idf_data = {}  # term -> idf, the inverse document frequency of the term
-    # term_index is a inverted index, it gives a mapping from term to document_id.
-    # this will be used to accelerate the search process.
     avg_doc_length_data = 0  # average document length
     files = get_files(path)
-
     number_of_documents = len(files)
     current_doc_id = 0
     for file_path, file in files:
@@ -308,13 +311,6 @@ def query(query_data: str, BM25_Score_data: dict, adaptive_result=False) -> list
                     similarity[doc_id] += sim
                 else:
                     similarity[doc_id] = sim
-    # for doc_id in tf_data:
-    #     sim = 0
-    #     for term in query_tf:
-    #         if term in tf_data[doc_id]:
-    #             sim += (idf_data[term] * tf_data[doc_id][term] * (k + 1) / (
-    #                     tf_data[doc_id][term] + k * (1 - b) + b * document_lengths_data[doc_id] / avg_doc_length_data))
-    #         similarity[doc_id] = sim
     sort = sorted(similarity.items(), key=lambda d: d[1], reverse=True)
     if adaptive_result:
         # if adaptive_result is True,
@@ -522,10 +518,9 @@ def NDCG(result: list, rel: dict):
         return DCG_score / IDCG_score
 
 
-
 def evaluate(result_file_name: str):
-    result = {}
-    rel = {}
+    result = {}  # To be load with query result
+    rel = {}  # To be load with relevance judgements
     with open(result_file_name, 'r', encoding='UTF-8') as f:
         # Read result file
         for line in f:
@@ -533,6 +528,7 @@ def evaluate(result_file_name: str):
             line = line.split(" ")
             query_id = line[0]
             doc_id = line[2]
+            # add to result dict
             if query_id not in result:
                 result[query_id] = [doc_id]
             else:
@@ -545,6 +541,7 @@ def evaluate(result_file_name: str):
             query_id = line[0]
             doc_id = line[2]
             score = int(line[3])
+            # add to rel dict
             if query_id not in rel:
                 rel[query_id] = {doc_id: score}
             else:
@@ -560,8 +557,10 @@ def evaluate(result_file_name: str):
     NDCG_score = 0
 
     for query_id in result.keys():
+        # get result and rel line
         result_line = result[query_id]
         rel_line = rel[query_id]
+        # calculate metrics
         precision_score += precision(result_line, rel_line)
         recall_score += recall(result_line, rel_line)
         Pat10_score += Pat10(result_line, rel_line)
@@ -578,6 +577,7 @@ def evaluate(result_file_name: str):
     MAP_score /= len(result)
     B_pref_score /= len(result)
     NDCG_score /= len(result)
+    # Print metrics
     print(f'Precision    ({precision_score})')
     print(f'Recall       ({recall_score})')
     print(f'Precision@10 ({Pat10_score})')
@@ -594,21 +594,23 @@ def auto_evaluate(BM25_Score: dict):
     :return:
     """
     start_time = time.process_time()
+    # run all the queries
     run_queries(BM25_Score)
     end_time = time.process_time()
-    print(f"Query cost: {end_time - start_time}")
+    print(f"Query cost: {end_time - start_time} s")
 
     start_time = time.process_time()
+    # evaluate the result
     evaluate(RESULT_FILE_NAME)
     end_time = time.process_time()
-    print(f"Evaluate cost: {end_time - start_time}")
+    print(f"Evaluate cost: {end_time - start_time} s")
 
 
 start_time = time.process_time()
 # build index
 BM25_Score = build_index(DOCUMENTS_PATH)
 end_time = time.process_time()
-print(f"Build or loading index cost: {end_time - start_time}")
+print(f"Build or loading index cost: {end_time - start_time} s")
 
 if mode == "manual":
     # manual mode, user can input queries
