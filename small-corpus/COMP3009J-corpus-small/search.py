@@ -18,7 +18,7 @@ mode = option_dict['option']  # mode = 'manual' or 'evaluation'
 
 # Defines the path to the files
 UCD_STUDENT_ID = "19206226"
-CORPUS_PATH = "COMP3009J-corpus-small/"  # Path to the corpus
+CORPUS_PATH = "./"  # Path to the corpus
 DOCUMENTS_PATH = CORPUS_PATH + "documents/"  # Path to the documents
 STOPWORDS_PATH = CORPUS_PATH + "files/stopwords.txt"  # Path to the stopwords
 RESULT_FILE_NAME = "output.txt"  # Name of the output file
@@ -160,7 +160,7 @@ def dump_index(BM25_Score, enableCompression=False):
             "compressID2RealData": compressID2RealData
         }
 
-    print("Dumping index...")
+    print("\nDumping index...")
     with open(INDEX_FILE_NAME, "w") as f:
         # write the data to the file
         json.dump(data, f)
@@ -265,7 +265,7 @@ def build_index(path: str) -> dict:
     # calculate the average document length
     avg_doc_length_data /= number_of_documents
     # calculate the BM25 score for each document
-    print("\nCalculating BM25 scores...")
+    # print("\nCalculating BM25 scores...")
     for doc_id in tf_data:
         for term in tf_data[doc_id]:
             part2 = math.log((number_of_documents - idf_data[term] + 0.5) / (idf_data[term] + 0.5), 2)
@@ -370,9 +370,6 @@ def run_queries(BM25_Score: dict):
 def precision(result: list, rel: dict):
     """
     Calculate the precision of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     correct = 0
     for doc_id in result:
@@ -384,9 +381,6 @@ def precision(result: list, rel: dict):
 def recall(result: list, rel: dict):
     """
     Calculate the recall of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     relevant_docs_count = 0
     for doc_id in result:
@@ -402,9 +396,6 @@ def recall(result: list, rel: dict):
 def Pat10(result: list, rel: dict):
     """
     Calculate the P@10 of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     relevant_docs_count = 0
     for doc_id in result[:10]:
@@ -418,9 +409,6 @@ def Pat10(result: list, rel: dict):
 def R_precision(result: list, rel: dict):
     """
     Calculate the R-precision of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     relevant_docs_count = 0
     rel_count = 0
@@ -437,13 +425,11 @@ def R_precision(result: list, rel: dict):
 def MAP(result: list, rel: dict):
     """
     Calculate the MAP of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     relevant_docs_count = 0
     rel_count = 0
     for doc_id in rel:
+        # 0 means non-relevant
         if rel[doc_id] != 0:
             rel_count += 1
     score = 0
@@ -451,8 +437,10 @@ def MAP(result: list, rel: dict):
         rank = index + 1
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
+            # Score for each item
             p = relevant_docs_count / rank
             score += p
+    # Average
     score /= rel_count
     return score
 
@@ -460,23 +448,28 @@ def MAP(result: list, rel: dict):
 def b_pref(result: list, rel: dict):
     """
     Calculate the b-pref of the result.
-    :param result:
-    :param rel:
-    :return:
+    This function is different in small/large corpus.
+    Because the small corpus does not have unjudged documents.
     """
     score = 0
+    # count of relevant documents
     r_count = len(rel)
+    # count of non-relevant documents
     n_count = 0
     # for doc_id in rel:
     #     if rel[doc_id] != 0:
     #         r_count += 1
     for doc_id in result:
+        # in small corpus: a doc is not in the rel means it is not relevant.
+        # in large corpus: a doc will have 0 score if it is not relevant.
         # if doc_id in rel and not rel[doc_id]:
         #     n_count += 1
         if doc_id not in rel:
             n_count += 1
         if doc_id in rel and rel[doc_id]:
+            # calculate score
             tmp_score = (1 - (n_count / r_count))
+            # the min score of b-pref is 0
             if tmp_score < 0:
                 score += 0
             else:
@@ -488,12 +481,10 @@ def b_pref(result: list, rel: dict):
 def NDCG(result: list, rel: dict):
     """
     Calculate the NDCG of the result.
-    :param result:
-    :param rel:
-    :return:
     """
     DCG = []
     IDCG = []
+    # calculate DCG and IDCG
     for index, doc_id in enumerate(result):
         rank = index + 1
         IG = rel.get(doc_id, 0)
@@ -624,7 +615,7 @@ if mode == "manual":
     query_id = 0
     while True:
         input_data = input("\nPlease input query.\n>>> ")
-        if input_data == "exit" or input_data == "quit":
+        if input_data.lower() == "exit" or input_data.lower() == "quit":
             break
         else:
             start_time = time.process_time()
