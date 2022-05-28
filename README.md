@@ -30,11 +30,11 @@ cd COMP3009J-corpus-small/
 and run the program:
 #### Automatic evaluation
 ```shell
-python search.py -m evaluation
+python search-small-corpus.py -m evaluation
 ```
 the output will be like:
 ```shell
-> python search.py -m evaluation     
+> python search-small-corpus.py -m evaluation     
 Loading index from file...
 Build or loading index cost: 0.05389000000000001
 Written to file: output.txt
@@ -51,11 +51,11 @@ Evaluate cost: 0.008191000000000004
 #### Input query manually
 input queries manually:
 ```shell
-python search.py -m manual
+python search-small-corpus.py -m manual
 ```
 the output will be like:
 ```shell
-> python search.py -m manual
+> python search-small-corpus.py -m manual
 Loading index from file...
 Build or loading index cost: 0.047557999999999996
 
@@ -99,11 +99,11 @@ cd COMP3009J-corpus-large/
 and run the program:
 #### Automatic evaluation
 ```shell
-python search.py -m evaluation
+python search-large-corpus.py -m evaluation
 ```
 the output will be like:
 ```shell
-> python search.py -m evaluation
+> python search-large-corpus.py -m evaluation
 Loading index from file...
 Build or loading index cost: 3.209099
 Written to file: output.txt
@@ -120,11 +120,11 @@ Evaluate cost: 0.030048999999999992
 #### Input query manually
 input queries manually:
 ```shell
-python search.py -m manual
+python search-large-corpus.py -m manual
 ```
 the output will be like:
 ```shell
-> python search.py -m manual
+> python search-large-corpus.py -m manual
 Loading index from file...
 Build or loading index cost: 3.28638
 
