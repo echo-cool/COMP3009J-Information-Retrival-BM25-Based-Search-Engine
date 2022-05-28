@@ -17,12 +17,15 @@
 
 ## Instructions
 I have attempted both of the small and large corpus, so there is a separated program for each of them.
-The program name for each of the corpus are the same -- `search.py`
+
+* The program for small corpus: `search-small-corpus.py`
+* The program for large corpus: `search-large-corpus.py`
+
 
 ### Small corpus
 For small corpus, please switch to the director using this commends:
 ```shell
-cd small-corpus/
+cd COMP3009J-corpus-small/
 ```
 and run the program:
 #### Automatic evaluation
@@ -91,7 +94,7 @@ Query 1: what similarity laws must be obeyed when constructing aeroelastic model
 
 For large corpus, please switch to the director using this commends:
 ```shell
-cd large-corpus/
+cd COMP3009J-corpus-large/
 ```
 and run the program:
 #### Automatic evaluation

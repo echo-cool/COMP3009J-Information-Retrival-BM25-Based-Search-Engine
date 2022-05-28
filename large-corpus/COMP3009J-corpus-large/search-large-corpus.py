@@ -6,7 +6,7 @@ import re
 # import pickle
 import time
 
-import porter
+from files import porter
 from optparse import OptionParser
 
 # Defines the OptionParser to parse the command line arguments
@@ -169,7 +169,7 @@ def dump_index(BM25_Score_data, enableCompression=False):
             "compressID2RealData": compressID2RealData
         }
 
-    print("Dumping index...")
+    print("\nDumping index...")
     with open(INDEX_FILE_NAME, "w") as f:
         # write the data to the file
         json.dump(data, f)
@@ -181,7 +181,7 @@ def load_index(enableCompression=False):
     :param enableCompression: False if the index is not compressed.
     :return: index_data
     """
-    if os.path.exists("../index.json"):
+    if os.path.exists("index.json"):
         # we have index.json file, so load it.
         print("Loading index from file...")
         data = json.load(open(INDEX_FILE_NAME, "r", encoding='utf8'))

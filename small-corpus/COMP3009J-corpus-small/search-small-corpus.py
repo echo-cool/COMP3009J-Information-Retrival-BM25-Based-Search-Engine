@@ -6,7 +6,7 @@ import re
 # import pickle
 import time
 
-import porter
+from files import porter
 from optparse import OptionParser
 
 # Defines the OptionParser to parse the command line arguments
