@@ -508,12 +508,26 @@ def NDCG(result: list, rel: dict):
             IDCG.append(IG / 1)
         else:
             IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
-    max_index = min(len(DCG), len(IDCG)) - 1
-    if max_index < 0:
-        max_index = 0
-    if max_index > 9:
-        max_index = 9
-    return DCG[max_index] / IDCG[max_index]
+    # Get the highest index we have in this two lists.
+    # if we have more than 10 element in both of these lists, then
+    # only use the 10-th element to calculate the NDCG.
+    # If the number of returned documents(e.g. 8) is < than relevance(e.g. 10).
+    # then we calculate the NDCG according to the min index of returned documents,
+    # e.g. DCG8/IDCG8
+    if len(DCG) < len(IDCG):
+        max_index = len(DCG) - 1
+        if max_index > 9:
+            max_index = 9
+        return DCG[max_index] / IDCG[max_index]
+    else:
+        # len(DCG) >= len(IDCG)
+        # if the number of returned documents(e.g. 8) is > than relevance(e.g. 6).
+        # then we use the last element in relevance to calculate the NDCG.
+        # since IDCG@6 = IDCG@8 do it doesn't really matter which to use.
+        IDCG_score = IDCG[:10][-1]
+        DCG_score = DCG[:10][-1]
+        return DCG_score / IDCG_score
+
 
 
 def evaluate(result_file_name: str):

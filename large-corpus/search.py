@@ -40,6 +40,7 @@ def get_files(path):
     files = []
     dirs = os.listdir(path)
     for item in dirs:
+        # to avoid macos auto generated file.
         if item == ".DS_Store":
             continue
         for file in os.listdir(path + item):
@@ -67,8 +68,8 @@ def clean_terms(terms_data: str) -> list:
 class CachedStemmer(object):
     """
     A class to cache the stemmed terms.
+    Also provide functions to get the stemmed terms.
     """
-
     def __init__(self):
         self.stemmer = porter.PorterStemmer()  # Initialize the stemmer
         self.cache = {}  # Initialize the cache
@@ -80,6 +81,9 @@ class CachedStemmer(object):
 
 
 class StopWordFilter(object):
+    """
+    A class to filter the stop words.
+    """
     def __init__(self, path):
         stopwords = {}  # Initialize the stopwords
         with open(path, 'r') as f:
@@ -113,12 +117,14 @@ def compare(str1, str2):
 
 
 cached_stemmer = CachedStemmer()  # Initialize the cached stemmer
-stopwords_filter = StopWordFilter(STOPWORDS_PATH)  # Initialize the stopword filter
+stopwords_filter = StopWordFilter(STOPWORDS_PATH)  # Initialize the stopwords filter
 
 
 def dump_index(BM25_Score_data, enableCompression=False):
     """
     Dumps the index to index.json.
+    By default, the index is not compressed, since compression will delay the loading time.
+    Compression will reduce the index file size by about 35%.
     :param BM25_Score_data:
     :param enableCompression:
     :return:
@@ -208,8 +214,9 @@ def build_index(path: str) -> dict:
     :param path:
     :return:
     """
-    # # try to load the index
+    # not using compression
     enableCompression = False
+    # # try to load the index
     saved_data = load_index(enableCompression=enableCompression)
     if saved_data is not None:
         # successfully loaded the index, so return it.
@@ -311,13 +318,6 @@ def query(query_data: str, BM25_Score_data: dict, adaptive_result=False) -> list
                     similarity[doc_id] += sim
                 else:
                     similarity[doc_id] = sim
-    # for doc_id in tf_data:
-    #     sim = 0
-    #     for term in query_tf:
-    #         if term in tf_data[doc_id]:
-    #             sim += (idf_data[term] * tf_data[doc_id][term] * (k + 1) / (
-    #                     tf_data[doc_id][term] + k * (1 - b) + b * document_lengths_data[doc_id] / avg_doc_length_data))
-    #         similarity[doc_id] = sim
     sort = sorted(similarity.items(), key=lambda d: d[1], reverse=True)
     if adaptive_result:
         # if adaptive_result is True,
@@ -329,7 +329,7 @@ def query(query_data: str, BM25_Score_data: dict, adaptive_result=False) -> list
             # standardize the scores
             item_tmp = (sort[i][0], (sort[i][1] - lowest_score) / (max_score - lowest_score))
             standardize_score.append(item_tmp)
-        # only return score >= 0.5
+        # only return score >= 0.7
         scoreThreshold = 0.7
         result = []
         for i in standardize_score:
@@ -340,8 +340,7 @@ def query(query_data: str, BM25_Score_data: dict, adaptive_result=False) -> list
         return result[:50]
     else:
         # if adaptive_result is False, return the top 15 documents
-        sort = sort[:15]
-        return sort
+        return sort[:15]
 
 
 def run_queries(BM25_Score: dict):
@@ -413,6 +412,7 @@ def Pat10(result: list, rel: dict):
     for doc_id in result[:10]:
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
+    # For P@N, if there are fewer than N results returned, then it will simply be the same as precision
     number_of_documents = min(len(result), 10)
     return relevant_docs_count / number_of_documents
 
@@ -432,6 +432,7 @@ def R_precision(result: list, rel: dict):
     for doc_id in result[:rel_count]:
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
+    # R-precision always divides by the number of relevant documents available.
     return relevant_docs_count / rel_count
 
 
@@ -487,38 +488,6 @@ def b_pref(result: list, rel: dict):
     return score
 
 
-# def NDCG(result: list, rel: dict):
-#     """
-#     Calculate the NDCG of the result.
-#     :param result:
-#     :param rel:
-#     :return:
-#     """
-#     DCG = []
-#     IDCG = []
-#     for index, doc_id in enumerate(result):
-#         rank = index + 1
-#         IG = rel.get(doc_id, 0)
-#         if index == 0:
-#             DCG.append(IG / 1)
-#         else:
-#             DCG.append(IG / math.log(rank, 2) + DCG[index - 1])
-#     # Sort rel by value
-#     rel = sorted(rel.values(), key=lambda x: x, reverse=True)
-#     for index, value in enumerate(rel):
-#         rank = index + 1
-#         IG = value
-#         if index == 0:
-#             IDCG.append(IG / 1)
-#         else:
-#             IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
-#     max_index = min(len(DCG), len(IDCG)) - 1
-#     if max_index < 0:
-#         max_index = 0
-#     if max_index > 9:
-#         max_index = 9
-#     return DCG[max_index] / IDCG[max_index]
-
 
 def NDCG(result: list, rel: dict):
     """
@@ -529,32 +498,41 @@ def NDCG(result: list, rel: dict):
     """
     DCG = []
     IDCG = []
-    # Sort rel by value
-    sorted_rel = sorted(rel.values(), key=lambda x: x, reverse=True)
-    for i in range(10):
-        rank = i + 1
-        if rank > len(result):
-            doc_score = 0
-        else:
-            doc_score = rel.get(result[i], 0)
-        IG = doc_score
-        if i == 0:
+    for index, doc_id in enumerate(result):
+        rank = index + 1
+        IG = rel.get(doc_id, 0)
+        if index == 0:
             DCG.append(IG / 1)
         else:
-            DCG.append(IG / math.log(rank, 2) + DCG[i - 1])
-
-        if rank > len(sorted_rel):
-            doc_score = 0
-        else:
-            doc_score = sorted_rel[i]
-        IG = doc_score
-        if i == 0:
+            DCG.append(IG / math.log(rank, 2) + DCG[index - 1])
+    # Sort rel by value
+    rel = sorted(rel.values(), key=lambda x: x, reverse=True)
+    for index, value in enumerate(rel):
+        rank = index + 1
+        IG = value
+        if index == 0:
             IDCG.append(IG / 1)
         else:
-            IDCG.append(IG / math.log(rank, 2) + IDCG[i - 1])
-    max_index = 9
-    # print(DCG, IDCG)
-    return DCG[max_index] / IDCG[max_index]
+            IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
+    # Get the highest index we have in this two lists.
+    # if we have more than 10 element in both of these lists, then
+    # only use the 10-th element to calculate the NDCG.
+    # If the number of returned documents(e.g. 8) is < than relevance(e.g. 10).
+    # then we calculate the NDCG according to the min index of returned documents,
+    # e.g. DCG8/IDCG8
+    if len(DCG) < len(IDCG):
+        max_index = len(DCG) - 1
+        if max_index > 9:
+            max_index = 9
+        return DCG[max_index] / IDCG[max_index]
+    else:
+        # len(DCG) >= len(IDCG)
+        # if the number of returned documents(e.g. 8) is > than relevance(e.g. 6).
+        # then we use the last element in relevance to calculate the NDCG.
+        # since IDCG@6 = IDCG@8 do it doesn't really matter which to use.
+        IDCG_score = IDCG[:10][-1]
+        DCG_score = DCG[:10][-1]
+        return DCG_score / IDCG_score
 
 
 def evaluate(result_file_name: str):
