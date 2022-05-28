@@ -410,6 +410,7 @@ def Pat10(result: list, rel: dict):
     for doc_id in result[:10]:
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
+    # For P@N, if there are fewer than N results returned, then it will simply be the same as precision
     number_of_documents = min(len(result), 10)
     return relevant_docs_count / number_of_documents
 
@@ -429,6 +430,7 @@ def R_precision(result: list, rel: dict):
     for doc_id in result[:rel_count]:
         if doc_id in rel and rel[doc_id]:
             relevant_docs_count += 1
+    # R-precision always divides by the number of relevant documents available.
     return relevant_docs_count / rel_count
 
 
