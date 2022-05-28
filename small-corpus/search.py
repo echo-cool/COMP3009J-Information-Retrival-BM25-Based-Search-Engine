@@ -263,7 +263,7 @@ def build_index(path: str) -> dict:
     # calculate the average document length
     avg_doc_length_data /= number_of_documents
     # calculate the BM25 score for each document
-    print("Calculating BM25 scores...")
+    print("\nCalculating BM25 scores...")
     for doc_id in tf_data:
         for term in tf_data[doc_id]:
             part2 = math.log((number_of_documents - idf_data[term] + 0.5) / (idf_data[term] + 0.5), 2)

@@ -483,6 +483,39 @@ def b_pref(result: list, rel: dict):
     return score
 
 
+# def NDCG(result: list, rel: dict):
+#     """
+#     Calculate the NDCG of the result.
+#     :param result:
+#     :param rel:
+#     :return:
+#     """
+#     DCG = []
+#     IDCG = []
+#     for index, doc_id in enumerate(result):
+#         rank = index + 1
+#         IG = rel.get(doc_id, 0)
+#         if index == 0:
+#             DCG.append(IG / 1)
+#         else:
+#             DCG.append(IG / math.log(rank, 2) + DCG[index - 1])
+#     # Sort rel by value
+#     rel = sorted(rel.values(), key=lambda x: x, reverse=True)
+#     for index, value in enumerate(rel):
+#         rank = index + 1
+#         IG = value
+#         if index == 0:
+#             IDCG.append(IG / 1)
+#         else:
+#             IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
+#     max_index = min(len(DCG), len(IDCG)) - 1
+#     if max_index < 0:
+#         max_index = 0
+#     if max_index > 9:
+#         max_index = 9
+#     return DCG[max_index] / IDCG[max_index]
+
+
 def NDCG(result: list, rel: dict):
     """
     Calculate the NDCG of the result.
@@ -492,27 +525,31 @@ def NDCG(result: list, rel: dict):
     """
     DCG = []
     IDCG = []
-    for index, doc_id in enumerate(result):
-        rank = index + 1
-        IG = rel.get(doc_id, 0)
-        if index == 0:
+    # Sort rel by value
+    sorted_rel = sorted(rel.values(), key=lambda x: x, reverse=True)
+    for i in range(10):
+        rank = i + 1
+        if rank > len(result):
+            doc_score = 0
+        else:
+            doc_score = rel.get(result[i], 0)
+        IG = doc_score
+        if i == 0:
             DCG.append(IG / 1)
         else:
-            DCG.append(IG / math.log(rank, 2) + DCG[index - 1])
-    # Sort rel by value
-    rel = sorted(rel.values(), key=lambda x: x, reverse=True)
-    for index, value in enumerate(rel):
-        rank = index + 1
-        IG = value
-        if index == 0:
+            DCG.append(IG / math.log(rank, 2) + DCG[i - 1])
+
+        if rank > len(sorted_rel):
+            doc_score = 0
+        else:
+            doc_score = sorted_rel[i]
+        IG = doc_score
+        if i == 0:
             IDCG.append(IG / 1)
         else:
-            IDCG.append(IG / math.log(rank, 2) + IDCG[index - 1])
-    max_index = min(len(DCG), len(IDCG)) - 1
-    if max_index < 0:
-        max_index = 0
-    if max_index > 9:
-        max_index = 9
+            IDCG.append(IG / math.log(rank, 2) + IDCG[i - 1])
+    max_index = 9
+    # print(DCG, IDCG)
     return DCG[max_index] / IDCG[max_index]
 
 
