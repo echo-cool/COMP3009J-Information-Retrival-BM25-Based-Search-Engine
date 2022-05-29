@@ -24,47 +24,54 @@ I have attempted both of the small and large corpus, so there is a separated pro
 
 Please copy the `search-small-corpus.py` to the small corpus folder and `search-large-corpus.py` to the large corpus folder.
 The structure of the corpus should as follows:
+
 ```
 COMP3009J-corpus-small/
-    documents/
-        ...
-    files/
-        porter.py
-        qrels.txt
-        queries.txt
-        stopwords.txt
-    search-small-corpus.py
+├──documents/
+│  ├── ...
+├──files/
+│  ├── porter.py
+│  ├── qrels.txt``
+│  ├── queries.txt
+│  ├── stopwords.txt
+├──search-small-corpus.py
 ```
 
 after running this program the index.json and output.txt should be generated.
+
 ```
 COMP3009J-corpus-small/
-    documents/
-        ...
-    files/
-        porter.py
-        qrels.txt
-        queries.txt
-        stopwords.txt
-    index.json
-    output.txt
-    search-small-corpus.py
+├──documents/
+│  ├── ...
+├──files/
+│  ├── porter.py
+│  ├── qrels.txt``
+│  ├── queries.txt
+│  ├── stopwords.txt
+├──index.json
+├──output.txt
+├──search-small-corpus.py
 ```
 
 Same for the large corpus.
 
 ### Small corpus
 For small corpus, please switch to the director using this commends:
-```shell
+
+```
 cd COMP3009J-corpus-small/
 ```
 and run the program:
+
 #### Automatic evaluation
-```shell
+
+```
 python search-small-corpus.py -m evaluation
 ```
+
 the output will be like:
-```shell
+
+```
 > python search-small-corpus.py -m evaluation     
 Loading index from file...
 Build or loading index cost: 0.05389000000000001
@@ -79,13 +86,18 @@ b_pref       (0.3315311255637636)
 NDCG_score   (0.3703139179229204)
 Evaluate cost: 0.008191000000000004
 ```
+
 #### Input query manually
+
 input queries manually:
-```shell
+
+```
 python search-small-corpus.py -m manual
 ```
+
 the output will be like:
-```shell
+
+```
 > python search-small-corpus.py -m manual
 Loading index from file...
 Build or loading index cost: 0.047557999999999996
@@ -93,8 +105,10 @@ Build or loading index cost: 0.047557999999999996
 Please input query.
 >>> 
 ```
+
 once you finished input, you can press enter and the program should display the result immediately:
-```shell
+
+```
 Please input query.
 >>> what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft
 Time <Query>: 0.0016260000000000024
@@ -124,16 +138,22 @@ Query 1: what similarity laws must be obeyed when constructing aeroelastic model
 ### Large corpus
 
 For large corpus, please switch to the director using this commends:
-```shell
+
+```
 cd COMP3009J-corpus-large/
 ```
+
 and run the program:
+
 #### Automatic evaluation
-```shell
+
+```
 python search-large-corpus.py -m evaluation
 ```
+
 the output will be like:
-```shell
+
+```
 > python search-large-corpus.py -m evaluation
 Loading index from file...
 Build or loading index cost: 3.209099
@@ -149,12 +169,16 @@ NDCG_score   (0.5564884484005923)
 Evaluate cost: 0.030048999999999992
 ```
 #### Input query manually
+
 input queries manually:
-```shell
+
+```
 python search-large-corpus.py -m manual
 ```
+
 the output will be like:
-```shell
+
+```
 > python search-large-corpus.py -m manual
 Loading index from file...
 Build or loading index cost: 3.28638
@@ -162,8 +186,10 @@ Build or loading index cost: 3.28638
 Please input query.
 >>> 
 ```
+
 once you finished input, you can press enter and the program should display the result immediately:
-```shell
+
+```
 Please input query.
 >>> describe history oil industry
 Time <Query>: 0.00796000000000019
