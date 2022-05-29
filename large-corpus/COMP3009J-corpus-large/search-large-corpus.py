@@ -601,20 +601,20 @@ def auto_evaluate(BM25_Score: dict):
     # run all the queries
     run_queries(BM25_Score)
     end_time = time.process_time()
-    print(f"Query cost: {end_time - start_time} s")
+    # print(f"Query cost: {end_time - start_time} s")
 
     start_time = time.process_time()
     # evaluate the result
     evaluate(RESULT_FILE_NAME)
     end_time = time.process_time()
-    print(f"Evaluate cost: {end_time - start_time} s")
+    # print(f"Evaluate cost: {end_time - start_time} s")
 
 
 start_time = time.process_time()
 # build index
 BM25_Score = build_index(DOCUMENTS_PATH)
 end_time = time.process_time()
-print(f"Build or loading index cost: {end_time - start_time} s")
+# print(f"Build or loading index cost: {end_time - start_time} s")
 
 if mode == "manual":
     # manual mode, user can input queries
@@ -627,7 +627,7 @@ if mode == "manual":
             start_time = time.process_time()
             sorted_result = query(input_data, BM25_Score, adaptive_result=False)
             end_time = time.process_time()
-            print(f"Time <Query>: {end_time - start_time}")
+            # print(f"Time <Query>: {end_time - start_time}s")
             query_id += 1
             print(f"Query {query_id}: {input_data}")
             line = "%10s %10s %30s %10s %20s %20s" % ("Query ID", "Q0", "Doc ID", "Ranking", "Score", "Student ID")
