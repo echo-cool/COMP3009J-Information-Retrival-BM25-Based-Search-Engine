@@ -11,16 +11,47 @@
 * Implemented BM25 model and Precision, Recall, Precision@10, R-Precision, MAP, b_pref, NDCG for evaluation.
 * Automatically evaluate the program and print the evaluation metrics.
 * Automatically build and dump the index to a file, no need to read the whole dataset a second time.
-* Allowing compression to reduce the index file(from 211 MB -> 155 MB for large corpus, but this will affect the speed of saving and loading, so by default this feature is not enabled.)
+* Allowing compression to reduce the index file(from 211 MB -> 155 MB for large corpus, but this will affect the speed of saving and loading, so by default this feature is not enabled. If you want to have a try, please change the `enableCompression` to `true` in `search-large-corpus.py`(This flag is in the `build_index` function).
 * Pre-calculated BM25 score, thus achieves a higher query performance.
-
+* The index file is saved in `index.json`
+* The standard query result is saved in `output.txt`
+* The stemming and stopwords removal is cached in memory(using `dict` which is the `HashMap` in Python), thus improves the performance.
 
 ## Instructions
 I have attempted both of the small and large corpus, so there is a separated program for each of them.
-
 * The program for small corpus: `search-small-corpus.py`
 * The program for large corpus: `search-large-corpus.py`
 
+Please copy the `search-small-corpus.py` to the small corpus folder and `search-large-corpus.py` to the large corpus folder.
+The structure of the corpus should as follows:
+```
+COMP3009J-corpus-small/
+    documents/
+        ...
+    files/
+        porter.py
+        qrels.txt
+        queries.txt
+        stopwords.txt
+    search-small-corpus.py
+```
+
+after running this program the index.json and output.txt should be generated.
+```
+COMP3009J-corpus-small/
+    documents/
+        ...
+    files/
+        porter.py
+        qrels.txt
+        queries.txt
+        stopwords.txt
+    index.json
+    output.txt
+    search-small-corpus.py
+```
+
+Same for the large corpus.
 
 ### Small corpus
 For small corpus, please switch to the director using this commends:
