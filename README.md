@@ -1,11 +1,5 @@
 # Information Retrieval Programming Assignment - BM25 Search Engine
 
-## Personal Information
-
-| Name                 | Wang Yuyang |
-|----------------------|-------------|
-| UCD Student Number:  | 19206226    |
-| BJUT Student Number: | 19372316    |
 
 ## Features
 * Implemented BM25 model and Precision, Recall, Precision@10, R-Precision, MAP, b_pref, NDCG for evaluation.
